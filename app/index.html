@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>PsycoTrain</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8F7F4; --card:#fff; --border:#E4E2DA;
+  --text:#1a1a18; --muted:#888; --sub:#3d3d3a;
+  --accent:#185FA5; --accentbg:#E6F1FB; --accentbdr:#85B7EB;
+  --green:#0F6E56; --greenbg:#E1F5EE; --greenbdr:#5DCAA5;
+  --red:#A32D2D; --redbg:#FCEBEB; --redbdr:#F09595;
+  --amber:#854F0B; --amberbg:#FAEEDA;
+}
+html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-text-size-adjust:100%}
+.container{max-width:760px;margin:0 auto;padding:14px 16px 90px}
+
+/* Home */
+.home h1{font-size:24px;font-weight:800;margin:6px 0 2px}
+.home .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.stats-row{display:flex;gap:8px;margin:10px 0 14px;flex-wrap:wrap}
+.stat-chip{flex:1;min-width:90px;background:var(--card);border:1px solid var(--border);padding:10px 12px;border-radius:12px;text-align:center}
+.stat-chip strong{display:block;font-size:18px;color:var(--accent)}
+.stat-chip .lbl{font-size:11px;color:var(--muted);margin-top:2px}
+
+.section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px}
+.section h3{font-size:13px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.chip-row{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:7px 12px;border-radius:999px;border:1.5px solid var(--border);background:var(--bg);font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip.dis{opacity:.4;cursor:not-allowed}
+.toggle-row{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--sub);font-weight:600}
+.toggle{position:relative;width:42px;height:24px;background:var(--border);border-radius:12px;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle.on{background:var(--accent)}
+.toggle.on::after{transform:translateX(18px)}
+
+.actions{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.btn{padding:14px;border-radius:12px;border:none;font-size:15px;font-weight:700;cursor:pointer;-webkit-tap-highlight-color:transparent;text-align:center}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:disabled{background:var(--muted);cursor:not-allowed}
+.btn-secondary{background:var(--card);color:var(--text);border:1.5px solid var(--border)}
+.btn-row{display:flex;gap:8px}
+.btn-row .btn{flex:1}
+.btn-small{padding:9px 14px;font-size:13px;font-weight:600}
+
+/* Practice */
+.hdr{position:sticky;top:0;z-index:10;background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--border);margin:-14px -16px 12px;padding-left:16px;padding-right:16px}
+.hdr-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hdr .progress{font-size:13px;color:var(--muted);font-weight:600}
+.hdr .exit{padding:6px 12px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);font-size:12px;font-weight:600;cursor:pointer;color:var(--sub)}
+.tmr{font-family:'Courier New',monospace;font-size:15px;font-weight:700;color:var(--green);background:var(--greenbg);padding:5px 11px;border-radius:8px}
+.tmr.warn{color:var(--amber);background:var(--amberbg)}
+.tmr.over{color:var(--red);background:var(--redbg)}
+.timecfg{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--sub);font-weight:600}
+.timecfg input{width:64px;padding:7px 8px;border:1.5px solid var(--border);border-radius:8px;background:var(--bg);font-family:inherit;font-size:14px;font-weight:600;text-align:center}
+.timetag{font-size:11px;color:var(--muted);margin-left:6px}
+.timetag.over{color:var(--amber)}
+.qmeta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:8px}
+.qref{background:#EEEDFE;padding:2px 9px;border-radius:20px;font-size:10px;color:#534AB7;font-weight:600;letter-spacing:.3px}
+.qfigs img{width:100%;max-width:100%;border-radius:10px;display:block;border:1px solid var(--border);margin-bottom:8px;background:#fff}
+.qtext{font-size:15px;font-weight:600;margin:10px 0 12px;line-height:1.45}
+.opt{display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border-radius:12px;border:2px solid var(--border);background:var(--card);margin-bottom:7px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .08s,border-color .15s,background .15s}
+.opt:active:not(.dis){transform:scale(.985)}
+.opt.sel{border-color:var(--accent);background:var(--accentbg)}
+.opt.ok{border-color:var(--green);background:var(--greenbg)}
+.opt.ko{border-color:var(--red);background:var(--redbg)}
+.opt.fd{opacity:.55}
+.opt.dis{cursor:default}
+.ol{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--bg);border:1.5px solid var(--border);font-weight:700;font-size:13px;flex-shrink:0;margin-top:1px}
+.opt.sel .ol{background:var(--accent);color:#fff;border-color:var(--accent)}
+.opt.ok .ol{background:var(--green);color:#fff;border-color:var(--green)}
+.opt.ko .ol{background:var(--red);color:#fff;border-color:var(--red)}
+.ot{font-size:14px;flex:1;line-height:1.4}
+.expl{padding:13px 14px;border-radius:12px;margin-top:12px;font-size:13px;line-height:1.55;white-space:pre-wrap}
+.expl.eok{background:var(--greenbg);border:1px solid var(--greenbdr);color:#0a4f3d}
+.expl.eko{background:var(--redbg);border:1px solid var(--redbdr);color:#7a1f1f}
+.expl strong{font-weight:700}
+
+.nav{display:flex;gap:8px;margin-top:14px}
+.nav .btn{flex:1}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transition:opacity .25s;z-index:100;pointer-events:none}
+.toast.show{opacity:.95}
+
+/* Empty state */
+.empty{text-align:center;padding:30px 16px;color:var(--muted)}
+.empty h2{font-size:18px;color:var(--text);margin-bottom:6px}
+
+@media(max-width:380px){
+  .container{padding:12px 12px 90px}
+  .qtext{font-size:14px}
+  .ot{font-size:13px}
+  .stat-chip{min-width:75px;padding:8px 8px}
+  .stat-chip strong{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="container" id="root"></div>
+<div class="toast" id="toast"></div>
+<input type="file" id="stats-file-input" accept=".json,application/json" style="display:none">
+
+<!-- Load the question database via a script tag (works from file:// — fetch() does not). -->
+<script src="./questions.js"></script>
+<script>
+'use strict';
+
+// ============================================================================
+// State and storage
+// ============================================================================
+const LS_STATS    = 'pt_stats_v1';
+const LS_SESSION  = 'pt_session_v1';
+const LS_SETTINGS = 'pt_settings_v1';
+
+let DB = null;       // {version, types, sources, questions: [...]}
+let MODE = 'home';   // 'home' | 'practice'
+let SESSION = null;  // see startPractice() for shape
+let TIMER_ID = null; // setInterval handle for the per-question ticker
+
+// ----- localStorage helpers -----
+function lsGet(k){ try{ const s=localStorage.getItem(k); return s?JSON.parse(s):null; }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ alert('Save failed: '+e.message); return false; } }
+function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
+
+function loadStats(){ return lsGet(LS_STATS) || {}; }
+function saveStats(s){ return lsSet(LS_STATS, s); }
+function loadSettings(){
+  const s = lsGet(LS_SETTINGS) || {};
+  return {
+    type: s.type ?? null,
+    source: s.source ?? null,
+    weakOnly: s.weakOnly ?? false,
+    targetSec: s.targetSec ?? 120,    // default 2 minutes per question
+  };
+}
+function saveSettings(s){ return lsSet(LS_SETTINGS, s); }
+function loadSession(){ return lsGet(LS_SESSION); }
+function saveSession(s){ return lsSet(LS_SESSION, s); }
+function clearSession(){ lsDel(LS_SESSION); }
+
+// ----- Per-question stats -----
+function qStat(qid){
+  return loadStats()[qid] || {
+    attempts:0, correct:0, correct_within_time:0,
+    last_correct:null, last_within_time:null,
+    last_time_ms:null, best_time_ms:null, last_ts:0
+  };
+}
+function recordAnswer(qid, isCorrect, timeMs, withinTime){
+  const s = loadStats();
+  const r = s[qid] || {
+    attempts:0, correct:0, correct_within_time:0,
+    last_correct:null, last_within_time:null,
+    last_time_ms:null, best_time_ms:null, last_ts:0
+  };
+  r.attempts++;
+  if(isCorrect){
+    r.correct++;
+    if(withinTime) r.correct_within_time = (r.correct_within_time||0) + 1;
+    if(timeMs != null && (r.best_time_ms == null || timeMs < r.best_time_ms)){
+      r.best_time_ms = timeMs;
+    }
+  }
+  r.last_correct = isCorrect;
+  r.last_within_time = withinTime;
+  r.last_time_ms = timeMs;
+  r.last_ts = Date.now();
+  s[qid] = r;
+  saveStats(s);
+}
+function fmtTime(ms){
+  if(ms == null) return '—';
+  const s = Math.round(ms / 1000);
+  const m = Math.floor(s / 60);
+  return `${m}:${String(s % 60).padStart(2,'0')}`;
+}
+
+// ============================================================================
+// Question selection (tiered priority)
+// ============================================================================
+function buildPool(filters){
+  let pool = DB.questions.slice();
+  if(filters.type) pool = pool.filter(q => q.type === filters.type);
+  if(filters.source) pool = pool.filter(q => q.source === filters.source);
+  if(filters.weakOnly){
+    const stats = loadStats();
+    pool = pool.filter(q => {
+      const s = stats[q.id];
+      if(!s || s.attempts === 0) return true;       // unseen counts as weak
+      return s.correct / s.attempts < 0.6;
+    });
+  }
+  return pool;
+}
+
+// Pick the next question id from the pool, applying tier priority:
+//   Tier 1: never seen → random
+//   Tier 2: last attempt was wrong → random
+//   Tier 3: oldest viewed first
+// `excludeIds` = set of qids already picked in this session (avoid immediate repeats)
+function pickNext(pool, excludeIds){
+  const stats = loadStats();
+  const candidates = pool.filter(q => !excludeIds.has(q.id));
+  if(candidates.length === 0) return null;
+
+  const t1 = [], t2 = [], t3 = [];
+  for(const q of candidates){
+    const s = stats[q.id];
+    if(!s || s.attempts === 0) t1.push(q);
+    else if(s.last_correct === false) t2.push(q);
+    else t3.push(q);
+  }
+  if(t1.length) return t1[Math.floor(Math.random()*t1.length)];
+  if(t2.length) return t2[Math.floor(Math.random()*t2.length)];
+  if(t3.length){
+    t3.sort((a,b) => (stats[a.id]?.last_ts||0) - (stats[b.id]?.last_ts||0));
+    return t3[0];
+  }
+  return null;
+}
+
+// ============================================================================
+// Stats sync (Option 2 — manual save + manual load via file picker)
+// ============================================================================
+function mergeStatsFromObject(remote){
+  if(!remote || typeof remote !== 'object'){
+    toast('Invalid stats file'); return;
+  }
+  const local = loadStats();
+  const merged = { ...local };
+  let updated = 0;
+  for(const qid in remote){
+    const lr = local[qid];
+    const rr = remote[qid];
+    if(!lr || (rr.last_ts||0) > (lr.last_ts||0)){
+      merged[qid] = rr;
+      updated++;
+    }
+  }
+  saveStats(merged);
+  toast(updated > 0 ? `Merged ${updated} record(s) from stats.json` : 'Stats already up to date');
+  render();
+}
+
+function pickStatsFile(){
+  const input = document.getElementById('stats-file-input');
+  input.value = '';
+  input.onchange = (ev) => {
+    const f = ev.target.files && ev.target.files[0];
+    if(!f) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try{
+        const obj = JSON.parse(reader.result);
+        mergeStatsFromObject(obj);
+      }catch(e){
+        toast('Could not parse: ' + e.message);
+      }
+    };
+    reader.readAsText(f);
+  };
+  input.click();
+}
+
+function downloadStats(){
+  const stats = loadStats();
+  const blob = new Blob([JSON.stringify(stats, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'stats.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  toast('Save stats.json into the app folder, overwriting any existing one');
+}
+
+// ============================================================================
+// UI
+// ============================================================================
+function $(html){ const d=document.createElement('div'); d.innerHTML=html.trim(); return d.firstChild; }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+function render(){
+  const root = document.getElementById('root');
+  root.innerHTML = '';
+  if(MODE === 'home') renderHome(root);
+  else if(MODE === 'practice') renderPractice(root);
+  window.scrollTo(0, 0);
+}
+
+// ----- Home -----
+function renderHome(root){
+  const settings = loadSettings();
+  const stats = loadStats();
+
+  // Aggregate stats
+  const total = DB.questions.length;
+  let attempted = 0, correct = 0, correctInTime = 0;
+  for(const q of DB.questions){
+    const s = stats[q.id];
+    if(s && s.attempts > 0){
+      attempted++;
+      if(s.last_correct) correct++;
+      if(s.last_correct && s.last_within_time) correctInTime++;
+    }
+  }
+  const accuracy = attempted > 0 ? Math.round(correct / attempted * 100) : 0;
+  const accuracyInTime = attempted > 0 ? Math.round(correctInTime / attempted * 100) : 0;
+
+  // How many in current filter?
+  const pool = buildPool(settings);
+
+  // Type / source counts
+  const typeCounts = {};
+  const sourceCounts = {};
+  for(const q of DB.questions){
+    typeCounts[q.type] = (typeCounts[q.type] || 0) + 1;
+    sourceCounts[q.source] = (sourceCounts[q.source] || 0) + 1;
+  }
+
+  const session = loadSession();
+
+  root.appendChild($(`
+    <div class="home">
+      <h1>PsycoTrain</h1>
+      <div class="sub">${total} questions across ${Object.keys(sourceCounts).length} source(s)</div>
+
+      <div class="stats-row">
+        <div class="stat-chip"><strong>${total}</strong><div class="lbl">Total</div></div>
+        <div class="stat-chip"><strong>${attempted}</strong><div class="lbl">Attempted</div></div>
+        <div class="stat-chip"><strong>${accuracy}%</strong><div class="lbl">Accuracy</div></div>
+        <div class="stat-chip"><strong>${accuracyInTime}%</strong><div class="lbl">In time</div></div>
+        <div class="stat-chip"><strong>${pool.length}</strong><div class="lbl">In filter</div></div>
+      </div>
+
+      <div class="section">
+        <h3>Type</h3>
+        <div class="chip-row" id="type-chips">
+          ${chipHtml('type-chip', null, 'All', settings.type === null)}
+          ${DB.types.filter(t => typeCounts[t]).map(t => chipHtml('type-chip', t, `${t} (${typeCounts[t]})`, settings.type === t)).join('')}
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Source</h3>
+        <div class="chip-row" id="source-chips">
+          ${chipHtml('source-chip', null, 'All', settings.source === null)}
+          ${DB.sources.map(s => chipHtml('source-chip', s, `${s} (${sourceCounts[s]})`, settings.source === s)).join('')}
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="toggle-row" id="weak-toggle">
+          <div class="toggle ${settings.weakOnly?'on':''}"></div>
+          <div>Weak only (unseen + accuracy &lt; 60%)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Target time per question</h3>
+        <div class="timecfg">
+          <input type="number" id="target-input" min="5" max="3600" step="5" value="${settings.targetSec}">
+          <span>seconds (${Math.floor(settings.targetSec/60)}:${String(settings.targetSec%60).padStart(2,'0')})</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        ${session ? '<button class="btn btn-primary" id="resume-btn">Resume session</button>' : ''}
+        <button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
+          Start practice ${pool.length === 0 ? '(no questions)' : ''}
+        </button>
+        <div class="btn-row">
+          <button class="btn btn-secondary btn-small" id="save-btn">⬇ Save stats.json</button>
+          <button class="btn btn-secondary btn-small" id="load-btn">↑ Load stats.json</button>
+        </div>
+      </div>
+    </div>
+  `));
+
+  // Wire up chip click handlers
+  root.querySelectorAll('#type-chips .chip').forEach(c => {
+    c.addEventListener('click', () => {
+      settings.type = c.dataset.value === '__null__' ? null : c.dataset.value;
+      saveSettings(settings);
+      render();
+    });
+  });
+  root.querySelectorAll('#source-chips .chip').forEach(c => {
+    c.addEventListener('click', () => {
+      settings.source = c.dataset.value === '__null__' ? null : c.dataset.value;
+      saveSettings(settings);
+      render();
+    });
+  });
+  root.querySelector('#weak-toggle').addEventListener('click', () => {
+    settings.weakOnly = !settings.weakOnly;
+    saveSettings(settings);
+    render();
+  });
+  const tIn = root.querySelector('#target-input');
+  tIn.addEventListener('change', () => {
+    let v = parseInt(tIn.value, 10);
+    if(!Number.isFinite(v) || v < 5) v = 5;
+    if(v > 3600) v = 3600;
+    settings.targetSec = v;
+    saveSettings(settings);
+    render();
+  });
+  root.querySelector('#start-btn')?.addEventListener('click', startPractice);
+  root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
+  root.querySelector('#save-btn').addEventListener('click', downloadStats);
+  root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
+}
+function chipHtml(cls, value, label, on){
+  return `<div class="chip ${cls} ${on?'on':''}" data-value="${value === null ? '__null__' : esc(value)}">${esc(label)}</div>`;
+}
+
+// ----- Practice -----
+function startPractice(){
+  const settings = loadSettings();
+  const pool = buildPool(settings);
+  if(pool.length === 0){ toast('No questions match the current filter'); return; }
+  SESSION = {
+    poolIds: pool.map(q => q.id),
+    picked: [],
+    currentQid: null,
+    picked_letter: null,
+    revealed: false,
+    answered_count: 0,
+    correct_count: 0,
+  };
+  advanceQuestion();
+}
+function resumePractice(){
+  const s = loadSession();
+  if(!s){ render(); return; }
+  SESSION = s;
+  // Reset the per-question timer on resume — the saved q_started_ms is stale
+  // (could be hours old). Only reset if not already revealed.
+  if(!SESSION.revealed) SESSION.q_started_ms = Date.now();
+  MODE = 'practice';
+  render();
+}
+function exitPractice(){
+  stopTimer();
+  if(SESSION && SESSION.picked.length > 1) saveSession(SESSION);
+  else clearSession();
+  SESSION = null;
+  MODE = 'home';
+  render();
+}
+function stopTimer(){
+  if(TIMER_ID){ clearInterval(TIMER_ID); TIMER_ID = null; }
+}
+function startTimer(){
+  stopTimer();
+  TIMER_ID = setInterval(() => {
+    const el = document.getElementById('timer');
+    if(!el || !SESSION || !SESSION.q_started_ms) return;
+    const elapsed = Date.now() - SESSION.q_started_ms;
+    const targetMs = (loadSettings().targetSec || 120) * 1000;
+    el.textContent = fmtTime(elapsed);
+    el.className = 'tmr';
+    if(elapsed > targetMs) el.className = 'tmr over';
+    else if(elapsed > targetMs * 0.8) el.className = 'tmr warn';
+  }, 500);
+}
+function advanceQuestion(){
+  const pool = DB.questions.filter(q => SESSION.poolIds.includes(q.id));
+  const excluded = new Set(SESSION.picked);
+  // Allow recycling once we've seen everything once in this session
+  let next = pickNext(pool, excluded);
+  if(!next && pool.length > 0){
+    SESSION.picked = [];          // recycle
+    next = pickNext(pool, new Set());
+  }
+  if(!next){ stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return; }
+  SESSION.currentQid = next.id;
+  SESSION.picked.push(next.id);
+  SESSION.picked_letter = null;
+  SESSION.revealed = false;
+  SESSION.q_started_ms = Date.now();
+  SESSION.q_elapsed_ms = null;
+  saveSession(SESSION);
+  MODE = 'practice';
+  render();
+}
+function pickAnswer(letter){
+  if(SESSION.revealed) return;
+  SESSION.picked_letter = letter;
+  render();
+}
+function submitAnswer(){
+  if(!SESSION.picked_letter || SESSION.revealed) return;
+  const q = DB.questions.find(x => x.id === SESSION.currentQid);
+  const isCorrect = SESSION.picked_letter === q.correct;
+  const elapsed = Date.now() - (SESSION.q_started_ms || Date.now());
+  const targetMs = (loadSettings().targetSec || 120) * 1000;
+  const withinTime = elapsed <= targetMs;
+  recordAnswer(q.id, isCorrect, elapsed, withinTime);
+  SESSION.revealed = true;
+  SESSION.q_elapsed_ms = elapsed;
+  SESSION.q_within_time = withinTime;
+  SESSION.answered_count++;
+  if(isCorrect) SESSION.correct_count++;
+  if(isCorrect && withinTime) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + 1;
+  stopTimer();
+  saveSession(SESSION);
+  render();
+}
+function renderPractice(root){
+  const q = DB.questions.find(x => x.id === SESSION.currentQid);
+  if(!q){ MODE='home'; render(); return; }
+  const stats = loadStats();
+  const qs = stats[q.id] || { attempts:0, correct:0 };
+  const settings = loadSettings();
+  const targetSec = settings.targetSec || 120;
+  const targetMs = targetSec * 1000;
+
+  const figsHtml = (q.figures || []).map(f =>
+    `<img class="qfig" src="${esc(f)}" alt="figure" loading="lazy">`
+  ).join('');
+
+  const optsHtml = q.options.map(o => {
+    let cls = 'opt';
+    if(SESSION.revealed){
+      cls += ' dis';
+      if(o.letter === q.correct) cls += ' ok';
+      else if(o.letter === SESSION.picked_letter) cls += ' ko';
+      else cls += ' fd';
+    } else if(o.letter === SESSION.picked_letter){
+      cls += ' sel';
+    }
+    return `<div class="${cls}" data-letter="${esc(o.letter)}">
+      <div class="ol">${esc(o.letter)}</div>
+      <div class="ot">${esc(o.text)}</div>
+    </div>`;
+  }).join('');
+
+  // Feedback with time info
+  let explHtml = '';
+  if(SESSION.revealed){
+    const ok = SESSION.picked_letter === q.correct;
+    const timeStr = fmtTime(SESSION.q_elapsed_ms);
+    const lateTag = !SESSION.q_within_time ? ` · over target (${fmtTime(targetMs)})` : '';
+    let head;
+    if(ok && SESSION.q_within_time) head = `✓ Correct in ${timeStr}`;
+    else if(ok) head = `✓ Correct, but late — ${timeStr}${lateTag}`;
+    else head = `✗ Incorrect — answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+    const expl = q.explanation ? `<br>${esc(q.explanation).replace(/\n/g, '<br>')}` : '';
+    explHtml = `<div class="expl ${ok ? 'eok' : 'eko'}"><strong>${head}</strong>${expl}</div>`;
+  }
+
+  // Per-question history label
+  let accStr = '';
+  if(qs.attempts > 0){
+    accStr = ` · ${qs.correct}/${qs.attempts}`;
+    if(qs.best_time_ms != null) accStr += ` · best ${fmtTime(qs.best_time_ms)}`;
+  }
+
+  // Initial timer display: 0:00 if not yet started, or current elapsed if revealed
+  let initialTimer;
+  if(SESSION.revealed){
+    initialTimer = fmtTime(SESSION.q_elapsed_ms);
+  } else {
+    const e = Date.now() - (SESSION.q_started_ms || Date.now());
+    initialTimer = fmtTime(e);
+  }
+  let timerCls = 'tmr';
+  if(SESSION.revealed){
+    if(!SESSION.q_within_time) timerCls = 'tmr over';
+  }
+
+  root.appendChild($(`
+    <div class="practice">
+      <div class="hdr">
+        <div class="hdr-row">
+          <div class="progress">Q ${SESSION.answered_count + (SESSION.revealed?0:1)} · ${SESSION.correct_count}/${SESSION.answered_count} correct</div>
+          <div class="${timerCls}" id="timer">${initialTimer}</div>
+          <button class="exit" id="exit-btn">Exit</button>
+        </div>
+      </div>
+      <div class="qmeta">
+        <span class="qref">${esc(q.book_ref || '')}</span>
+        <span>${esc(q.source)} · target ${fmtTime(targetMs)}${accStr}</span>
+      </div>
+      <div class="qfigs">${figsHtml}</div>
+      <div class="qtext">${esc(q.question || '')}</div>
+      <div class="opts">${optsHtml}</div>
+      ${explHtml}
+      <div class="nav">
+        ${!SESSION.revealed
+          ? `<button class="btn btn-primary" id="submit-btn" ${SESSION.picked_letter ? '' : 'disabled'}>Submit</button>`
+          : `<button class="btn btn-primary" id="next-btn">Next →</button>`}
+      </div>
+    </div>
+  `));
+
+  root.querySelectorAll('.opt').forEach(el => {
+    el.addEventListener('click', () => pickAnswer(el.dataset.letter));
+  });
+  root.querySelector('#exit-btn').addEventListener('click', exitPractice);
+  root.querySelector('#submit-btn')?.addEventListener('click', submitAnswer);
+  root.querySelector('#next-btn')?.addEventListener('click', advanceQuestion);
+
+  // Run the live ticker only while waiting for an answer
+  if(!SESSION.revealed) startTimer();
+  else stopTimer();
+}
+
+// ============================================================================
+// Init
+// ============================================================================
+function init(){
+  // questions.js sets window.QUESTIONS_DB synchronously via the <script> tag
+  if(!window.QUESTIONS_DB){
+    document.getElementById('root').innerHTML = `
+      <div class="empty">
+        <h2>Could not load questions.js</h2>
+        <p style="font-size:13px;margin-top:8px">
+          Make sure <code>index.html</code>, <code>questions.js</code> and the
+          <code>images/</code> folder are in the same directory.<br><br>
+          To regenerate questions.js after editing data, run
+          <code>python3 ingest/build_questions_json.py</code>.
+        </p>
+      </div>`;
+    return;
+  }
+  DB = window.QUESTIONS_DB;
+  render();
+}
+init();
+</script>
+</body>
+</html>
