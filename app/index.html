@@ -350,15 +350,18 @@ function toast(msg){
   toast._t = setTimeout(() => t.classList.remove('show'), 2400);
 }
 
-let PREV_MODE = null;
+let SCROLL_TARGET = 'top'; // 'top' | 'explanation' | 'none'
 function render(){
   const root = document.getElementById('root');
   root.innerHTML = '';
   if(MODE === 'home') renderHome(root);
   else if(MODE === 'practice') renderPractice(root);
-  // Only scroll to top when switching modes, not on submit/next within practice
-  if(MODE !== PREV_MODE) window.scrollTo(0, 0);
-  PREV_MODE = MODE;
+  if(SCROLL_TARGET === 'top') window.scrollTo(0, 0);
+  else if(SCROLL_TARGET === 'explanation'){
+    const el = root.querySelector('.expl') || root.querySelector('.nav');
+    if(el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  SCROLL_TARGET = 'none';
 }
 
 // ----- Home -----
@@ -557,6 +560,7 @@ function exitPractice(){
   else clearSession();
   SESSION = null;
   MODE = 'home';
+  SCROLL_TARGET = 'top';
   render();
 }
 function stopTimer(){
@@ -588,6 +592,7 @@ function advanceQuestion(){
     SESSION.q_elapsed_ms = null;
     saveSession(SESSION);
     MODE = 'practice';
+    SCROLL_TARGET = 'top';
     render();
     return;
   }
@@ -626,6 +631,7 @@ function advanceQuestion(){
   SESSION.q_elapsed_ms = null;
   saveSession(SESSION);
   MODE = 'practice';
+  SCROLL_TARGET = 'top';
   render();
 }
 function pickAnswer(letter){
@@ -683,6 +689,7 @@ function submitAnswer(){
   if(withinTime && credit > 0) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + credit;
   stopTimer();
   saveSession(SESSION);
+  SCROLL_TARGET = 'explanation';
   render();
 }
 function renderPractice(root){
