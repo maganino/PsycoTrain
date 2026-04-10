@@ -4483,10 +4483,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 1 · Réaction A",
       "set_id": "sjt_s01",
-      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation": "Vous êtes chef de projet au sein du service PMO d'une institution publique fédérale de 250 collaborateurs. Kevin, un nouveau collaborateur spécialisé en analyse de données, a rejoint votre équipe de projet il y a deux semaines. En raison de l'accord de télétravail en vigueur, Kevin travaille trois jours par semaine depuis son domicile. Vous remarquez que lors des réunions d'équipe en visioconférence, Kevin n'active jamais sa caméra et ne prend la parole que lorsqu'on lui pose directement une question. Par ailleurs, les deux premiers livrables qu'il a remis contiennent des erreurs qui montrent qu'il n'a pas bien compris les procédures internes de rapportage. D'autres membres de l'équipe vous ont fait part de leur inquiétude quant à son intégration.",
       "situation_title": "Le collègue silencieux en télétravail",
       "figures": [],
-      "question": "RÉACTION A : Vous lui envoyez un e-mail avec les liens vers la documentation interne et lui dites de vous contacter s'il a des questions.",
+      "question": "RÉACTION A : Vous rédigez un e-mail détaillé à Kevin avec les liens vers la documentation interne, les modèles de rapports et le guide des procédures. Vous lui précisez qu'il peut vous contacter par e-mail s'il a des questions.",
       "options": [
         {
           "letter": "A",
@@ -4510,7 +4510,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nDémarche active mais unilatérale. Vous fournissez de l'aide sans engager un vrai dialogue ni chercher à comprendre ses difficultés."
+      "explanation": "Score attendu : +/-\nDémarche active mais unilatérale et impersonnelle. Vous fournissez des ressources utiles sans engager un vrai dialogue ni chercher à comprendre les raisons de ses difficultés d'intégration."
     },
     {
       "id": "sjt_s01_rb",
@@ -4518,10 +4518,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 1 · Réaction B",
       "set_id": "sjt_s01",
-      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation": "Vous êtes chef de projet au sein du service PMO d'une institution publique fédérale de 250 collaborateurs. Kevin, un nouveau collaborateur spécialisé en analyse de données, a rejoint votre équipe de projet il y a deux semaines. En raison de l'accord de télétravail en vigueur, Kevin travaille trois jours par semaine depuis son domicile. Vous remarquez que lors des réunions d'équipe en visioconférence, Kevin n'active jamais sa caméra et ne prend la parole que lorsqu'on lui pose directement une question. Par ailleurs, les deux premiers livrables qu'il a remis contiennent des erreurs qui montrent qu'il n'a pas bien compris les procédures internes de rapportage. D'autres membres de l'équipe vous ont fait part de leur inquiétude quant à son intégration.",
       "situation_title": "Le collègue silencieux en télétravail",
       "figures": [],
-      "question": "RÉACTION B : Vous ne faites rien de particulier car il finira par s'adapter comme tout le monde.",
+      "question": "RÉACTION B : Vous estimez qu'il est normal qu'un nouveau collaborateur ait besoin de temps pour s'adapter. Chacun a un rythme différent et vous pensez qu'il finira par trouver ses marques tout seul, comme tous les autres avant lui.",
       "options": [
         {
           "letter": "A",
@@ -4545,7 +4545,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité totale face à un problème visible. Vous n'aidez pas un collègue en difficulté et ne contribuez pas à l'intégration dans l'équipe."
+      "explanation": "Score attendu : --\nPassivité totale face à un problème visible et signalé par l'équipe. Vous n'aidez pas un collègue en difficulté et ne contribuez pas à son intégration dans l'équipe."
     },
     {
       "id": "sjt_s01_rc",
@@ -4553,10 +4553,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 1 · Réaction C",
       "set_id": "sjt_s01",
-      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation": "Vous êtes chef de projet au sein du service PMO d'une institution publique fédérale de 250 collaborateurs. Kevin, un nouveau collaborateur spécialisé en analyse de données, a rejoint votre équipe de projet il y a deux semaines. En raison de l'accord de télétravail en vigueur, Kevin travaille trois jours par semaine depuis son domicile. Vous remarquez que lors des réunions d'équipe en visioconférence, Kevin n'active jamais sa caméra et ne prend la parole que lorsqu'on lui pose directement une question. Par ailleurs, les deux premiers livrables qu'il a remis contiennent des erreurs qui montrent qu'il n'a pas bien compris les procédures internes de rapportage. D'autres membres de l'équipe vous ont fait part de leur inquiétude quant à son intégration.",
       "situation_title": "Le collègue silencieux en télétravail",
       "figures": [],
-      "question": "RÉACTION C : Vous l'appelez pour un échange informel, lui demandez comment il se sent dans l'équipe et lui proposez de le guider pendant le premier mois avec des points réguliers.",
+      "question": "RÉACTION C : Vous appelez Kevin pour un échange informel et lui demandez comment il vit ses premières semaines, s'il se sent à l'aise dans l'équipe et s'il rencontre des difficultés particulières. Vous lui proposez de mettre en place un accompagnement hebdomadaire pendant son premier mois, avec des points réguliers où il pourra poser toutes ses questions.",
       "options": [
         {
           "letter": "A",
@@ -4580,7 +4580,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nDémarche proactive avec dialogue direct, empathie et solution structurée (mentorat avec suivi régulier). Encourage durablement la collaboration."
+      "explanation": "Score attendu : ++\nDémarche proactive avec dialogue direct, empathie et écoute. La solution est structurée (accompagnement hebdomadaire) et durable (premier mois). Vous encouragez activement la collaboration en montrant l'exemple."
     },
     {
       "id": "sjt_s01_rd",
@@ -4588,10 +4588,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 1 · Réaction D",
       "set_id": "sjt_s01",
-      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation": "Vous êtes chef de projet au sein du service PMO d'une institution publique fédérale de 250 collaborateurs. Kevin, un nouveau collaborateur spécialisé en analyse de données, a rejoint votre équipe de projet il y a deux semaines. En raison de l'accord de télétravail en vigueur, Kevin travaille trois jours par semaine depuis son domicile. Vous remarquez que lors des réunions d'équipe en visioconférence, Kevin n'active jamais sa caméra et ne prend la parole que lorsqu'on lui pose directement une question. Par ailleurs, les deux premiers livrables qu'il a remis contiennent des erreurs qui montrent qu'il n'a pas bien compris les procédures internes de rapportage. D'autres membres de l'équipe vous ont fait part de leur inquiétude quant à son intégration.",
       "situation_title": "Le collègue silencieux en télétravail",
       "figures": [],
-      "question": "RÉACTION D : Vous demandez à son responsable direct de lui fixer un entretien pour clarifier les procédures.",
+      "question": "RÉACTION D : Vous envoyez un message à la responsable d'équipe de Kevin pour l'informer de la situation et lui demander de planifier un entretien avec lui afin de clarifier les procédures et les attentes en matière de livrables.",
       "options": [
         {
           "letter": "A",
@@ -4615,7 +4615,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nEscalade sans dialogue direct. Vous déléguez le problème au lieu de prendre l'initiative de collaborer vous-même."
+      "explanation": "Score attendu : -\nEscalade vers la hiérarchie sans avoir d'abord tenté le dialogue direct avec Kevin. Vous déléguez le problème au lieu de prendre l'initiative de collaborer vous-même avec votre collègue."
     },
     {
       "id": "sjt_s02_ra",
@@ -4623,10 +4623,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 2 · Réaction A",
       "set_id": "sjt_s02",
-      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation": "Vous coordonnez un projet de digitalisation du traitement des dossiers au sein de votre institution. Ce projet implique une collaboration étroite entre le service informatique (IT), dirigé par Marc, et le service clientèle, dirigé par Nathalie. Après plusieurs semaines de travail, un désaccord majeur apparaît sur les priorités du planning : Marc insiste pour que l'équipe IT sécurise d'abord l'infrastructure technique avant tout déploiement, estimant que les risques de faille sont trop élevés. De son côté, Nathalie plaide pour un lancement rapide du nouveau portail en ligne, arguant que les citoyens attendent cette amélioration depuis plus d'un an. Les échanges par e-mail entre les deux services sont devenus de plus en plus secs et formels. La prochaine réunion de comité de pilotage est dans une semaine.",
       "situation_title": "Conflit de priorités entre services",
       "figures": [],
-      "question": "RÉACTION A : Vous organisez une réunion conjointe pour comprendre les contraintes de chacun et construire ensemble un planning qui intègre les deux priorités.",
+      "question": "RÉACTION A : Vous organisez une réunion de travail conjointe avec Marc et Nathalie. Vous leur demandez de présenter chacun leurs contraintes techniques et opérationnelles, puis vous proposez de construire ensemble un planning révisé qui intègre à la fois les exigences de sécurité et le calendrier de lancement du portail.",
       "options": [
         {
           "letter": "A",
@@ -4650,7 +4650,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties, co-construction d'une solution et mise en place d'un cadre structuré (planning commun)."
+      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties concernées, co-construction d'une solution commune et mise en place d'un cadre structuré (planning révisé). Vous facilitez la collaboration transversale."
     },
     {
       "id": "sjt_s02_rb",
@@ -4658,10 +4658,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 2 · Réaction B",
       "set_id": "sjt_s02",
-      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation": "Vous coordonnez un projet de digitalisation du traitement des dossiers au sein de votre institution. Ce projet implique une collaboration étroite entre le service informatique (IT), dirigé par Marc, et le service clientèle, dirigé par Nathalie. Après plusieurs semaines de travail, un désaccord majeur apparaît sur les priorités du planning : Marc insiste pour que l'équipe IT sécurise d'abord l'infrastructure technique avant tout déploiement, estimant que les risques de faille sont trop élevés. De son côté, Nathalie plaide pour un lancement rapide du nouveau portail en ligne, arguant que les citoyens attendent cette amélioration depuis plus d'un an. Les échanges par e-mail entre les deux services sont devenus de plus en plus secs et formels. La prochaine réunion de comité de pilotage est dans une semaine.",
       "situation_title": "Conflit de priorités entre services",
       "figures": [],
-      "question": "RÉACTION B : Vous décidez vous-même de l'ordre des priorités et communiquez votre décision aux deux services par e-mail.",
+      "question": "RÉACTION B : En tant que coordinateur du projet, vous analysez les deux positions et décidez vous-même de l'ordre des priorités. Vous envoyez un e-mail aux deux chefs de service pour leur communiquer votre décision et le planning mis à jour.",
       "options": [
         {
           "letter": "A",
@@ -4685,7 +4685,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nVous imposez une décision sans consulter ni impliquer les parties concernées. Aucune collaboration ni dialogue."
+      "explanation": "Score attendu : --\nVous imposez une décision sans consulter ni impliquer les parties concernées dans la réflexion. Aucune collaboration ni dialogue. Marc et Nathalie risquent de ne pas adhérer à cette décision unilatérale."
     },
     {
       "id": "sjt_s02_rc",
@@ -4693,10 +4693,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 2 · Réaction C",
       "set_id": "sjt_s02",
-      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation": "Vous coordonnez un projet de digitalisation du traitement des dossiers au sein de votre institution. Ce projet implique une collaboration étroite entre le service informatique (IT), dirigé par Marc, et le service clientèle, dirigé par Nathalie. Après plusieurs semaines de travail, un désaccord majeur apparaît sur les priorités du planning : Marc insiste pour que l'équipe IT sécurise d'abord l'infrastructure technique avant tout déploiement, estimant que les risques de faille sont trop élevés. De son côté, Nathalie plaide pour un lancement rapide du nouveau portail en ligne, arguant que les citoyens attendent cette amélioration depuis plus d'un an. Les échanges par e-mail entre les deux services sont devenus de plus en plus secs et formels. La prochaine réunion de comité de pilotage est dans une semaine.",
       "situation_title": "Conflit de priorités entre services",
       "figures": [],
-      "question": "RÉACTION C : Vous envoyez un e-mail aux deux chefs de service en leur demandant de trouver un accord entre eux avant la prochaine réunion de projet.",
+      "question": "RÉACTION C : Vous envoyez un e-mail à Marc et Nathalie en leur expliquant que ce désaccord doit être résolu avant le comité de pilotage. Vous leur demandez de trouver un terrain d'entente entre eux et de vous communiquer leur proposition commune.",
       "options": [
         {
           "letter": "A",
@@ -4720,7 +4720,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous vous déchargez de votre rôle de facilitateur. Pas de dialogue direct, pas de facilitation active de la collaboration."
+      "explanation": "Score attendu : -\nVous vous déchargez de votre rôle de facilitateur et de coordinateur de projet. Pas de dialogue direct de votre part, pas de facilitation active de la collaboration entre les services."
     },
     {
       "id": "sjt_s02_rd",
@@ -4728,10 +4728,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 2 · Réaction D",
       "set_id": "sjt_s02",
-      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation": "Vous coordonnez un projet de digitalisation du traitement des dossiers au sein de votre institution. Ce projet implique une collaboration étroite entre le service informatique (IT), dirigé par Marc, et le service clientèle, dirigé par Nathalie. Après plusieurs semaines de travail, un désaccord majeur apparaît sur les priorités du planning : Marc insiste pour que l'équipe IT sécurise d'abord l'infrastructure technique avant tout déploiement, estimant que les risques de faille sont trop élevés. De son côté, Nathalie plaide pour un lancement rapide du nouveau portail en ligne, arguant que les citoyens attendent cette amélioration depuis plus d'un an. Les échanges par e-mail entre les deux services sont devenus de plus en plus secs et formels. La prochaine réunion de comité de pilotage est dans une semaine.",
       "situation_title": "Conflit de priorités entre services",
       "figures": [],
-      "question": "RÉACTION D : Vous appelez séparément chaque chef de service pour comprendre leurs contraintes, puis vous proposez un compromis lors de la prochaine réunion d'équipe.",
+      "question": "RÉACTION D : Vous appelez séparément Marc et Nathalie pour comprendre en détail les contraintes de chacun. Sur la base de ces échanges, vous élaborez une proposition de compromis que vous présentez lors de la prochaine réunion d'équipe pour discussion et validation.",
       "options": [
         {
           "letter": "A",
@@ -4755,7 +4755,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nDémarche active avec dialogue et empathie. Cependant, les deux services ne co-construisent pas directement ensemble — vous servez d'intermédiaire."
+      "explanation": "Score attendu : +\nDémarche active avec dialogue et empathie envers les deux parties. Cependant, Marc et Nathalie ne co-construisent pas directement ensemble : vous servez d'intermédiaire, ce qui limite la vraie collaboration entre les services."
     },
     {
       "id": "sjt_s03_ra",
@@ -4763,10 +4763,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 3 · Réaction A",
       "set_id": "sjt_s03",
-      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
-      "situation_title": "La collègue qui ne partage pas",
+      "situation": "Vous travaillez dans un service de gestion de projets composé de huit personnes. Votre collègue Sophie possède une expertise technique rare dans le domaine de l'analyse des risques financiers. Elle répond toujours de manière professionnelle lorsque vous ou d'autres collègues la sollicitez directement, mais elle ne prend jamais l'initiative de partager ses connaissances avec le reste de l'équipe. Résultat : les mêmes questions lui sont posées régulièrement par différentes personnes, ce qui crée une dépendance problématique. Deux collègues se sont récemment plaints auprès de vous que l'absence de documentation partagée ralentit considérablement leur travail. Sophie, de son côté, se dit débordée par les sollicitations constantes.",
+      "situation_title": "La collègue qui ne partage pas ses connaissances",
       "figures": [],
-      "question": "RÉACTION A : Vous proposez à l'équipe de créer un espace de documentation partagé et suggérez à Sophie d'y contribuer. Vous commencez vous-même par y déposer vos propres connaissances pour montrer l'exemple.",
+      "question": "RÉACTION A : Vous proposez à toute l'équipe de créer un espace de documentation partagé sur la plateforme collaborative de l'institution. Vous commencez vous-même par y déposer vos propres méthodes de travail et fiches pratiques, puis vous suggérez à Sophie d'y ajouter progressivement ses analyses et procédures, en lui montrant que cela réduira à terme les sollicitations qu'elle reçoit.",
       "options": [
         {
           "letter": "A",
@@ -4790,7 +4790,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue avec l'équipe, co-construction d'un outil partagé, durable et structuré. Vous montrez l'exemple (indicateur clé du niveau 2)."
+      "explanation": "Score attendu : ++\nActif, dialogue avec l'équipe, co-construction d'un outil partagé, solution durable et structurée. Vous montrez l'exemple en contribuant en premier (indicateur clé du niveau 2 « Collaborer »), et vous motivez Sophie en montrant le bénéfice pour elle."
     },
     {
       "id": "sjt_s03_rb",
@@ -4798,10 +4798,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 3 · Réaction B",
       "set_id": "sjt_s03",
-      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
-      "situation_title": "La collègue qui ne partage pas",
+      "situation": "Vous travaillez dans un service de gestion de projets composé de huit personnes. Votre collègue Sophie possède une expertise technique rare dans le domaine de l'analyse des risques financiers. Elle répond toujours de manière professionnelle lorsque vous ou d'autres collègues la sollicitez directement, mais elle ne prend jamais l'initiative de partager ses connaissances avec le reste de l'équipe. Résultat : les mêmes questions lui sont posées régulièrement par différentes personnes, ce qui crée une dépendance problématique. Deux collègues se sont récemment plaints auprès de vous que l'absence de documentation partagée ralentit considérablement leur travail. Sophie, de son côté, se dit débordée par les sollicitations constantes.",
+      "situation_title": "La collègue qui ne partage pas ses connaissances",
       "figures": [],
-      "question": "RÉACTION B : Vous en parlez directement à Sophie, lui expliquez l'impact sur l'équipe et lui demandez si elle serait d'accord pour organiser de courtes sessions de partage de connaissances.",
+      "question": "RÉACTION B : Vous prenez un moment pour discuter directement avec Sophie. Vous lui expliquez l'impact de la situation sur le reste de l'équipe et lui demandez si elle serait d'accord pour organiser deux ou trois sessions de transfert de connaissances sur les sujets les plus demandés.",
       "options": [
         {
           "letter": "A",
@@ -4825,7 +4825,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif avec dialogue direct et approche collaborative. Mais la solution reste ponctuelle et dépend de l'acceptation de Sophie."
+      "explanation": "Score attendu : +\nActif, dialogue direct et respectueux, approche collaborative. Mais la solution reste ponctuelle (quelques sessions) et dépend de l'acceptation individuelle de Sophie. Pas de cadre structuré durable."
     },
     {
       "id": "sjt_s03_rc",
@@ -4833,10 +4833,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 3 · Réaction C",
       "set_id": "sjt_s03",
-      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
-      "situation_title": "La collègue qui ne partage pas",
+      "situation": "Vous travaillez dans un service de gestion de projets composé de huit personnes. Votre collègue Sophie possède une expertise technique rare dans le domaine de l'analyse des risques financiers. Elle répond toujours de manière professionnelle lorsque vous ou d'autres collègues la sollicitez directement, mais elle ne prend jamais l'initiative de partager ses connaissances avec le reste de l'équipe. Résultat : les mêmes questions lui sont posées régulièrement par différentes personnes, ce qui crée une dépendance problématique. Deux collègues se sont récemment plaints auprès de vous que l'absence de documentation partagée ralentit considérablement leur travail. Sophie, de son côté, se dit débordée par les sollicitations constantes.",
+      "situation_title": "La collègue qui ne partage pas ses connaissances",
       "figures": [],
-      "question": "RÉACTION C : Vous signalez le problème à votre responsable et lui demandez d'intervenir auprès de Sophie.",
+      "question": "RÉACTION C : Vous envoyez un e-mail à votre responsable de service pour signaler le problème de dépendance envers Sophie et lui demander d'intervenir pour mettre en place un système de partage de connaissances dans l'équipe.",
       "options": [
         {
           "letter": "A",
@@ -4860,7 +4860,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nEscalade sans avoir d'abord tenté le dialogue direct avec Sophie. Vous ne prenez pas l'initiative de résoudre le problème collaborativement."
+      "explanation": "Score attendu : -\nEscalade vers la hiérarchie sans avoir d'abord tenté de dialoguer directement avec Sophie ou de proposer une solution à l'équipe. Vous ne prenez pas l'initiative de résoudre le problème collaborativement."
     },
     {
       "id": "sjt_s03_rd",
@@ -4868,10 +4868,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 3 · Réaction D",
       "set_id": "sjt_s03",
-      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
-      "situation_title": "La collègue qui ne partage pas",
+      "situation": "Vous travaillez dans un service de gestion de projets composé de huit personnes. Votre collègue Sophie possède une expertise technique rare dans le domaine de l'analyse des risques financiers. Elle répond toujours de manière professionnelle lorsque vous ou d'autres collègues la sollicitez directement, mais elle ne prend jamais l'initiative de partager ses connaissances avec le reste de l'équipe. Résultat : les mêmes questions lui sont posées régulièrement par différentes personnes, ce qui crée une dépendance problématique. Deux collègues se sont récemment plaints auprès de vous que l'absence de documentation partagée ralentit considérablement leur travail. Sophie, de son côté, se dit débordée par les sollicitations constantes.",
+      "situation_title": "La collègue qui ne partage pas ses connaissances",
       "figures": [],
-      "question": "RÉACTION D : Vous compilez vous-même les informations que Sophie vous a partagées et les envoyez à toute l'équipe par e-mail.",
+      "question": "RÉACTION D : Vous rassemblez les informations que Sophie vous a partagées au fil du temps et vous les compilez dans un document synthétique que vous envoyez par e-mail à toute l'équipe, en espérant que cela allège la pression sur Sophie.",
       "options": [
         {
           "letter": "A",
@@ -4895,7 +4895,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif et utile à court terme, mais unilatéral. Ne résout pas la cause du problème et ne stimule pas Sophie à collaborer davantage."
+      "explanation": "Score attendu : +/-\nDémarche active et utile à court terme, mais unilatérale. Vous ne résolvez pas la cause du problème et vous ne stimulez pas Sophie ni l'équipe à collaborer davantage dans le partage de connaissances."
     },
     {
       "id": "sjt_s04_ra",
@@ -4903,10 +4903,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 4 · Réaction A",
       "set_id": "sjt_s04",
-      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation": "Vous êtes chef de projet pour un programme de modernisation des processus internes. Lors du comité de pilotage trimestriel, auquel assistent les représentants de la direction et un partenaire externe (le bureau de consultance DataVision), le consultant principal critique vivement la qualité du dernier rapport d'analyse livré par votre équipe. Il estime que les données sont incomplètes et que les recommandations manquent de rigueur. Votre collaborateur Marc, qui a rédigé la majeure partie du rapport, est présent à la réunion. Il est visiblement touché par ces critiques formulées devant tout le comité. Le directeur général vous demande de réagir.",
       "situation_title": "Critique en comité de pilotage",
       "figures": [],
-      "question": "RÉACTION A : Vous remerciez le partenaire pour son retour, puis proposez de planifier une réunion de travail avec lui et Marc pour identifier ensemble les points à améliorer et définir les priorités de révision.",
+      "question": "RÉACTION A : Vous remerciez le consultant pour son retour et reconnaissez que certains points peuvent effectivement être améliorés. Vous proposez de planifier une réunion de travail dédiée avec le consultant et Marc dans la semaine qui suit, afin d'identifier ensemble les points précis à améliorer et de définir un plan d'action pour la révision du rapport.",
       "options": [
         {
           "letter": "A",
@@ -4930,7 +4930,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct, co-construction avec toutes les parties prenantes, et mise en place d'un cadre structuré pour la révision."
+      "explanation": "Score attendu : ++\nActif, dialogue direct avec toutes les parties prenantes, co-construction d'un plan d'amélioration, et cadre structuré (réunion dédiée avec plan d'action). Vous transformez la critique en opportunité de collaboration."
     },
     {
       "id": "sjt_s04_rb",
@@ -4938,10 +4938,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 4 · Réaction B",
       "set_id": "sjt_s04",
-      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation": "Vous êtes chef de projet pour un programme de modernisation des processus internes. Lors du comité de pilotage trimestriel, auquel assistent les représentants de la direction et un partenaire externe (le bureau de consultance DataVision), le consultant principal critique vivement la qualité du dernier rapport d'analyse livré par votre équipe. Il estime que les données sont incomplètes et que les recommandations manquent de rigueur. Votre collaborateur Marc, qui a rédigé la majeure partie du rapport, est présent à la réunion. Il est visiblement touché par ces critiques formulées devant tout le comité. Le directeur général vous demande de réagir.",
       "situation_title": "Critique en comité de pilotage",
       "figures": [],
-      "question": "RÉACTION B : Vous défendez publiquement le travail de Marc et demandez au partenaire de formuler ses critiques par écrit pour une prochaine discussion.",
+      "question": "RÉACTION B : Vous prenez la défense de Marc en soulignant publiquement la charge de travail importante de l'équipe et le manque de données fournies par le partenaire. Vous demandez au consultant de vous transmettre ses remarques par écrit pour pouvoir les traiter formellement.",
       "options": [
         {
           "letter": "A",
@@ -4965,7 +4965,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nBien que vous souteniez votre collègue, vous bloquez le dialogue constructif en réunion. Le report par écrit freine la collaboration."
+      "explanation": "Score attendu : -\nBien que vous souteniez votre collègue, vous créez une dynamique de confrontation qui bloque le dialogue constructif. Le renvoi à l'écrit retarde la résolution et freine la collaboration."
     },
     {
       "id": "sjt_s04_rc",
@@ -4973,10 +4973,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 4 · Réaction C",
       "set_id": "sjt_s04",
-      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation": "Vous êtes chef de projet pour un programme de modernisation des processus internes. Lors du comité de pilotage trimestriel, auquel assistent les représentants de la direction et un partenaire externe (le bureau de consultance DataVision), le consultant principal critique vivement la qualité du dernier rapport d'analyse livré par votre équipe. Il estime que les données sont incomplètes et que les recommandations manquent de rigueur. Votre collaborateur Marc, qui a rédigé la majeure partie du rapport, est présent à la réunion. Il est visiblement touché par ces critiques formulées devant tout le comité. Le directeur général vous demande de réagir.",
       "situation_title": "Critique en comité de pilotage",
       "figures": [],
-      "question": "RÉACTION C : Vous acceptez les critiques sans discussion et promettez de tout refaire dans la semaine.",
+      "question": "RÉACTION C : Vous acceptez intégralement les critiques du consultant sans les discuter et vous vous engagez à refaire le rapport complet dans les dix jours. Vous ne souhaitez pas prolonger le débat en public.",
       "options": [
         {
           "letter": "A",
@@ -5000,7 +5000,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nSoumission passive. Aucune évaluation critique, aucun dialogue, aucune implication de Marc. Vous ne défendez ni votre équipe ni la qualité du travail."
+      "explanation": "Score attendu : --\nSoumission passive. Aucune évaluation critique du feedback, aucun dialogue constructif, aucune implication de Marc dans la discussion. Vous ne défendez ni la qualité du travail de votre équipe ni le processus collaboratif."
     },
     {
       "id": "sjt_s04_rd",
@@ -5008,10 +5008,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 4 · Réaction D",
       "set_id": "sjt_s04",
-      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation": "Vous êtes chef de projet pour un programme de modernisation des processus internes. Lors du comité de pilotage trimestriel, auquel assistent les représentants de la direction et un partenaire externe (le bureau de consultance DataVision), le consultant principal critique vivement la qualité du dernier rapport d'analyse livré par votre équipe. Il estime que les données sont incomplètes et que les recommandations manquent de rigueur. Votre collaborateur Marc, qui a rédigé la majeure partie du rapport, est présent à la réunion. Il est visiblement touché par ces critiques formulées devant tout le comité. Le directeur général vous demande de réagir.",
       "situation_title": "Critique en comité de pilotage",
       "figures": [],
-      "question": "RÉACTION D : Après la réunion, vous discutez avec Marc pour comprendre ce qui s'est passé et le rassurer, puis vous contactez le partenaire pour clarifier ses attentes précises.",
+      "question": "RÉACTION D : Après la réunion du comité, vous prenez Marc à part pour discuter de la situation et comprendre son point de vue. Vous le rassurez sur la qualité de son travail, puis vous contactez le consultant par téléphone pour clarifier ses attentes précises et convenir des ajustements nécessaires.",
       "options": [
         {
           "letter": "A",
@@ -5035,7 +5035,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, dialogue avec les deux parties, empathique. Mais les échanges sont séquentiels — pas de co-construction directe entre Marc et le partenaire."
+      "explanation": "Score attendu : +\nActif, dialogue avec les deux parties, approche empathique envers Marc. Cependant, les échanges sont séquentiels et séparés : Marc et le consultant ne co-construisent pas ensemble la solution."
     },
     {
       "id": "sjt_s05_ra",
@@ -5043,10 +5043,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 5 · Réaction A",
       "set_id": "sjt_s05",
-      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
-      "situation_title": "Résistance au nouvel outil",
+      "situation": "Votre institution a décidé de migrer vers un nouvel outil de gestion de projet en remplacement des fichiers Excel partagés utilisés depuis des années. La direction a demandé à tous les services de l'adopter d'ici la fin du trimestre. Dans votre service, plusieurs collègues expérimentés — dont Jean-Pierre (25 ans d'ancienneté) et Françoise (18 ans d'ancienneté) — résistent ouvertement au changement. Ils continuent d'utiliser Excel et déclarent lors de la réunion d'équipe que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps de suivre une formation en plus de leur charge de travail habituelle ». D'autres collègues, plus jeunes, utilisent déjà le nouvel outil mais n'osent pas contredire leurs aînés.",
+      "situation_title": "Résistance au nouvel outil de gestion de projet",
       "figures": [],
-      "question": "RÉACTION A : Vous proposez d'organiser des sessions de formation courtes et pratiques, et vous vous portez volontaire pour être la personne de référence dans votre service.",
+      "question": "RÉACTION A : Vous proposez à l'équipe d'organiser des ateliers pratiques de 30 minutes, deux fois par semaine, durant lesquels chacun peut poser ses questions et s'exercer sur des cas concrets. Vous vous portez volontaire pour animer ces sessions et être la personne de référence pour l'outil dans votre service, en encourageant aussi les collègues plus jeunes à partager leurs astuces.",
       "options": [
         {
           "letter": "A",
@@ -5070,7 +5070,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue, collaboratif, et structuré et durable (sessions + rôle de référent). Vous montrez l'exemple et facilitez la transition."
+      "explanation": "Score attendu : ++\nActif, dialogue, collaboratif (jeunes et expérimentés apprennent ensemble), et structuré et durable (sessions régulières + rôle de référent). Vous montrez l'exemple et créez un cadre d'entraide."
     },
     {
       "id": "sjt_s05_rb",
@@ -5078,10 +5078,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 5 · Réaction B",
       "set_id": "sjt_s05",
-      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
-      "situation_title": "Résistance au nouvel outil",
+      "situation": "Votre institution a décidé de migrer vers un nouvel outil de gestion de projet en remplacement des fichiers Excel partagés utilisés depuis des années. La direction a demandé à tous les services de l'adopter d'ici la fin du trimestre. Dans votre service, plusieurs collègues expérimentés — dont Jean-Pierre (25 ans d'ancienneté) et Françoise (18 ans d'ancienneté) — résistent ouvertement au changement. Ils continuent d'utiliser Excel et déclarent lors de la réunion d'équipe que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps de suivre une formation en plus de leur charge de travail habituelle ». D'autres collègues, plus jeunes, utilisent déjà le nouvel outil mais n'osent pas contredire leurs aînés.",
+      "situation_title": "Résistance au nouvel outil de gestion de projet",
       "figures": [],
-      "question": "RÉACTION B : Vous demandez à la direction de rendre l'utilisation du nouvel outil obligatoire et de fixer une date limite.",
+      "question": "RÉACTION B : Vous rédigez un e-mail à la direction pour leur signaler la résistance dans votre service et demander qu'ils rappellent à Jean-Pierre et Françoise l'obligation d'utiliser le nouvel outil, avec une date limite ferme.",
       "options": [
         {
           "letter": "A",
@@ -5105,7 +5105,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nEscalade vers la hiérarchie avec une approche coercitive. Pas de dialogue ni de collaboration avec les collègues concernés."
+      "explanation": "Score attendu : -\nEscalade vers la hiérarchie avec une approche coercitive. Pas de dialogue direct avec les collègues concernés, pas de tentative de comprendre leurs difficultés ni de faciliter leur transition."
     },
     {
       "id": "sjt_s05_rc",
@@ -5113,10 +5113,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 5 · Réaction C",
       "set_id": "sjt_s05",
-      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
-      "situation_title": "Résistance au nouvel outil",
+      "situation": "Votre institution a décidé de migrer vers un nouvel outil de gestion de projet en remplacement des fichiers Excel partagés utilisés depuis des années. La direction a demandé à tous les services de l'adopter d'ici la fin du trimestre. Dans votre service, plusieurs collègues expérimentés — dont Jean-Pierre (25 ans d'ancienneté) et Françoise (18 ans d'ancienneté) — résistent ouvertement au changement. Ils continuent d'utiliser Excel et déclarent lors de la réunion d'équipe que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps de suivre une formation en plus de leur charge de travail habituelle ». D'autres collègues, plus jeunes, utilisent déjà le nouvel outil mais n'osent pas contredire leurs aînés.",
+      "situation_title": "Résistance au nouvel outil de gestion de projet",
       "figures": [],
-      "question": "RÉACTION C : Vous comprenez leur frustration et ne les forcez pas. Chacun avancera à son rythme.",
+      "question": "RÉACTION C : Vous comprenez la frustration de Jean-Pierre et Françoise. Après tout, ils ont des années d'expérience avec l'ancien système et le changement est difficile pour tout le monde. Vous décidez de ne pas insister et de laisser chacun avancer à son propre rythme.",
       "options": [
         {
           "letter": "A",
@@ -5140,7 +5140,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité totale. Le problème ne se résoudra pas tout seul et freine la transition de toute l'équipe."
+      "explanation": "Score attendu : --\nPassivité totale. Le problème de non-adoption ne se résoudra pas tout seul et crée une fracture dans l'équipe entre ceux qui utilisent le nouvel outil et ceux qui restent sur Excel."
     },
     {
       "id": "sjt_s05_rd",
@@ -5148,10 +5148,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 5 · Réaction D",
       "set_id": "sjt_s05",
-      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
-      "situation_title": "Résistance au nouvel outil",
+      "situation": "Votre institution a décidé de migrer vers un nouvel outil de gestion de projet en remplacement des fichiers Excel partagés utilisés depuis des années. La direction a demandé à tous les services de l'adopter d'ici la fin du trimestre. Dans votre service, plusieurs collègues expérimentés — dont Jean-Pierre (25 ans d'ancienneté) et Françoise (18 ans d'ancienneté) — résistent ouvertement au changement. Ils continuent d'utiliser Excel et déclarent lors de la réunion d'équipe que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps de suivre une formation en plus de leur charge de travail habituelle ». D'autres collègues, plus jeunes, utilisent déjà le nouvel outil mais n'osent pas contredire leurs aînés.",
+      "situation_title": "Résistance au nouvel outil de gestion de projet",
       "figures": [],
-      "question": "RÉACTION D : Vous créez un guide rapide et le partagez avec les collègues réticents, en leur proposant de leur montrer individuellement comment l'outil peut simplifier leurs tâches quotidiennes.",
+      "question": "RÉACTION D : Vous créez un guide pratique « Premiers pas en 10 minutes » et le partagez avec Jean-Pierre et Françoise. Vous leur proposez également de passer à leur bureau individuellement pour leur montrer comment l'outil peut simplifier le suivi de leurs projets actuels.",
       "options": [
         {
           "letter": "A",
@@ -5175,7 +5175,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, aide concrète et personnalisée. Mais l'approche reste individuelle — pas de dynamique collective ni de cadre structuré."
+      "explanation": "Score attendu : +\nActif, aide concrète et personnalisée avec dialogue direct. Mais l'approche reste individuelle : vous n'impliquez pas l'ensemble de l'équipe et ne créez pas de dynamique collective d'apprentissage durable."
     },
     {
       "id": "sjt_s06_ra",
@@ -5183,10 +5183,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 6 · Réaction A",
       "set_id": "sjt_s06",
-      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
-      "situation_title": "Désaccord méthodologique",
+      "situation": "Vous dirigez une équipe projet chargée de mener une étude sur la qualité des données dans votre institution. Deux membres de votre équipe, Ahmed et Laura, sont en désaccord profond sur la méthodologie à suivre. Ahmed, statisticien de formation, insiste pour une approche purement quantitative basée sur des indicateurs chiffrés et des analyses automatisées. Laura, qui a un profil en sciences sociales, défend une approche qualitative incluant des entretiens avec les utilisateurs des données. Lors de la dernière réunion d'équipe, le débat entre eux est devenu tendu : Ahmed a qualifié l'approche de Laura de « trop subjective » et Laura a répliqué que les chiffres d'Ahmed « ne capturaient pas la réalité du terrain ». Les trois autres membres de l'équipe se sont tus pendant toute la discussion.",
+      "situation_title": "Désaccord méthodologique dans l'équipe",
       "figures": [],
-      "question": "RÉACTION A : Vous organisez un atelier de travail où Ahmed et Laura présentent chacun leur approche, puis l'équipe entière évalue ensemble les avantages et inconvénients pour aboutir à une décision commune.",
+      "question": "RÉACTION A : Vous organisez un atelier de travail dédié au choix méthodologique. Vous demandez à Ahmed et Laura de préparer chacun une présentation de 10 minutes de leur approche, avec ses avantages et ses limites. Ensuite, vous invitez l'ensemble de l'équipe à évaluer ensemble les deux options et à proposer éventuellement une approche mixte qui combine les forces des deux méthodes.",
       "options": [
         {
           "letter": "A",
@@ -5210,7 +5210,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties, co-construction collective avec toute l'équipe, cadre structuré (atelier). Résout le conflit durablement."
+      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties en conflit, co-construction collective avec toute l'équipe impliquée, cadre structuré (atelier formel). Résout le conflit durablement et restaure la parole des membres silencieux."
     },
     {
       "id": "sjt_s06_rb",
@@ -5218,10 +5218,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 6 · Réaction B",
       "set_id": "sjt_s06",
-      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
-      "situation_title": "Désaccord méthodologique",
+      "situation": "Vous dirigez une équipe projet chargée de mener une étude sur la qualité des données dans votre institution. Deux membres de votre équipe, Ahmed et Laura, sont en désaccord profond sur la méthodologie à suivre. Ahmed, statisticien de formation, insiste pour une approche purement quantitative basée sur des indicateurs chiffrés et des analyses automatisées. Laura, qui a un profil en sciences sociales, défend une approche qualitative incluant des entretiens avec les utilisateurs des données. Lors de la dernière réunion d'équipe, le débat entre eux est devenu tendu : Ahmed a qualifié l'approche de Laura de « trop subjective » et Laura a répliqué que les chiffres d'Ahmed « ne capturaient pas la réalité du terrain ». Les trois autres membres de l'équipe se sont tus pendant toute la discussion.",
+      "situation_title": "Désaccord méthodologique dans l'équipe",
       "figures": [],
-      "question": "RÉACTION B : Vous prenez Ahmed et Laura à part séparément pour écouter leurs arguments, puis vous tranchez en faveur de l'approche qui vous semble la plus adaptée.",
+      "question": "RÉACTION B : Vous prenez Ahmed et Laura à part individuellement pour écouter chacun leurs arguments en détail. Après avoir analysé les deux positions, vous décidez de retenir l'approche qui vous semble la plus adaptée aux objectifs de l'étude et vous communiquez votre décision à l'équipe.",
       "options": [
         {
           "letter": "A",
@@ -5245,7 +5245,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif avec écoute, mais la décision est unilatérale. Ahmed ou Laura peut se sentir non entendu(e), le conflit n'est pas résolu collaborativement."
+      "explanation": "Score attendu : +/-\nActif avec écoute des deux parties, mais la décision finale est unilatérale. Ahmed ou Laura risque de se sentir ignoré(e), et les autres membres de l'équipe restent exclus de la réflexion. Le conflit sous-jacent n'est pas résolu."
     },
     {
       "id": "sjt_s06_rc",
@@ -5253,10 +5253,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 6 · Réaction C",
       "set_id": "sjt_s06",
-      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
-      "situation_title": "Désaccord méthodologique",
+      "situation": "Vous dirigez une équipe projet chargée de mener une étude sur la qualité des données dans votre institution. Deux membres de votre équipe, Ahmed et Laura, sont en désaccord profond sur la méthodologie à suivre. Ahmed, statisticien de formation, insiste pour une approche purement quantitative basée sur des indicateurs chiffrés et des analyses automatisées. Laura, qui a un profil en sciences sociales, défend une approche qualitative incluant des entretiens avec les utilisateurs des données. Lors de la dernière réunion d'équipe, le débat entre eux est devenu tendu : Ahmed a qualifié l'approche de Laura de « trop subjective » et Laura a répliqué que les chiffres d'Ahmed « ne capturaient pas la réalité du terrain ». Les trois autres membres de l'équipe se sont tus pendant toute la discussion.",
+      "situation_title": "Désaccord méthodologique dans l'équipe",
       "figures": [],
-      "question": "RÉACTION C : Vous laissez le conflit se résoudre de lui-même car Ahmed et Laura sont des professionnels compétents qui trouveront un terrain d'entente.",
+      "question": "RÉACTION C : Vous estimez que ce type de désaccord fait partie de la vie d'une équipe et qu'Ahmed et Laura, en tant que professionnels compétents, finiront par trouver un terrain d'entente. Vous décidez de ne pas intervenir et de laisser la situation évoluer naturellement.",
       "options": [
         {
           "letter": "A",
@@ -5280,7 +5280,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité face à un conflit qui s'aggrave et paralyse l'équipe. Les autres membres n'osent plus s'exprimer — la collaboration est bloquée."
+      "explanation": "Score attendu : --\nPassivité face à un conflit qui s'aggrave et qui paralyse l'équipe. Les autres membres n'osent plus s'exprimer — la dynamique de collaboration est complètement bloquée."
     },
     {
       "id": "sjt_s06_rd",
@@ -5288,10 +5288,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 6 · Réaction D",
       "set_id": "sjt_s06",
-      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
-      "situation_title": "Désaccord méthodologique",
+      "situation": "Vous dirigez une équipe projet chargée de mener une étude sur la qualité des données dans votre institution. Deux membres de votre équipe, Ahmed et Laura, sont en désaccord profond sur la méthodologie à suivre. Ahmed, statisticien de formation, insiste pour une approche purement quantitative basée sur des indicateurs chiffrés et des analyses automatisées. Laura, qui a un profil en sciences sociales, défend une approche qualitative incluant des entretiens avec les utilisateurs des données. Lors de la dernière réunion d'équipe, le débat entre eux est devenu tendu : Ahmed a qualifié l'approche de Laura de « trop subjective » et Laura a répliqué que les chiffres d'Ahmed « ne capturaient pas la réalité du terrain ». Les trois autres membres de l'équipe se sont tus pendant toute la discussion.",
+      "situation_title": "Désaccord méthodologique dans l'équipe",
       "figures": [],
-      "question": "RÉACTION D : Vous envoyez un e-mail à toute l'équipe en proposant un vote anonyme sur la méthodologie à adopter.",
+      "question": "RÉACTION D : Vous envoyez un e-mail à l'ensemble de l'équipe en proposant un vote anonyme sur la méthodologie à adopter. Vous joignez un document comparatif objectif des deux approches pour aider chacun à se forger une opinion.",
       "options": [
         {
           "letter": "A",
@@ -5315,7 +5315,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nÉvite le dialogue direct. Un vote ne résout pas le conflit sous-jacent et risque de diviser davantage l'équipe."
+      "explanation": "Score attendu : -\nÉvite le dialogue direct et le travail de médiation. Un vote ne résout pas le conflit interpersonnel entre Ahmed et Laura et risque de créer des « gagnants » et des « perdants » dans l'équipe."
     },
     {
       "id": "sjt_s07_ra",
@@ -5323,10 +5323,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 7 · Réaction A",
       "set_id": "sjt_s07",
-      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
-      "situation_title": "Décisions sans les télétravailleurs",
+      "situation": "Votre service fonctionne en mode hybride depuis deux ans : chacun est libre de télétravailler jusqu'à trois jours par semaine. Depuis quelques mois, vous remarquez un phénomène récurrent : les collègues présents au bureau le mardi et le jeudi — les jours de présence les plus fréquentés — profitent des pauses café et des discussions de couloir pour prendre des décisions informelles sur l'avancement des projets, la répartition des tâches, ou même l'organisation d'événements d'équipe. Votre collègue Sandra, qui télétravaille le mardi et le jeudi pour des raisons familiales, vous envoie un message découragé : « Je découvre les décisions après coup. J'ai l'impression de ne plus faire partie de l'équipe. Hier, mon travail sur le dossier X a été réattribué sans que personne ne m'en parle. »",
+      "situation_title": "Décisions prises sans les télétravailleurs",
       "figures": [],
-      "question": "RÉACTION A : Vous proposez à l'équipe d'instaurer une règle : toute décision importante est discutée lors des réunions hebdomadaires où tout le monde est connecté, et documentée sur la plateforme collaborative.",
+      "question": "RÉACTION A : Vous abordez le sujet lors de la prochaine réunion d'équipe en présentant le problème de manière factuelle. Vous proposez à l'équipe d'adopter ensemble une nouvelle règle : toute décision importante concernant les projets ou la répartition des tâches doit être discutée lors des réunions hebdomadaires (où tous sont connectés) et documentée sur l'espace collaboratif commun. Vous demandez l'avis de chacun sur cette proposition.",
       "options": [
         {
           "letter": "A",
@@ -5350,7 +5350,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue avec l'équipe, co-construction d'une nouvelle règle de fonctionnement, cadre structuré et durable qui protège l'inclusion."
+      "explanation": "Score attendu : ++\nActif, dialogue avec toute l'équipe, co-construction d'une nouvelle règle de fonctionnement inclusif, cadre structuré et durable qui protège l'équité en contexte hybride."
     },
     {
       "id": "sjt_s07_rb",
@@ -5358,10 +5358,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 7 · Réaction B",
       "set_id": "sjt_s07",
-      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
-      "situation_title": "Décisions sans les télétravailleurs",
+      "situation": "Votre service fonctionne en mode hybride depuis deux ans : chacun est libre de télétravailler jusqu'à trois jours par semaine. Depuis quelques mois, vous remarquez un phénomène récurrent : les collègues présents au bureau le mardi et le jeudi — les jours de présence les plus fréquentés — profitent des pauses café et des discussions de couloir pour prendre des décisions informelles sur l'avancement des projets, la répartition des tâches, ou même l'organisation d'événements d'équipe. Votre collègue Sandra, qui télétravaille le mardi et le jeudi pour des raisons familiales, vous envoie un message découragé : « Je découvre les décisions après coup. J'ai l'impression de ne plus faire partie de l'équipe. Hier, mon travail sur le dossier X a été réattribué sans que personne ne m'en parle. »",
+      "situation_title": "Décisions prises sans les télétravailleurs",
       "figures": [],
-      "question": "RÉACTION B : Vous envoyez un e-mail récapitulatif après chaque journée au bureau pour tenir les télétravailleurs informés des discussions.",
+      "question": "RÉACTION B : Vous prenez l'initiative d'envoyer chaque soir un e-mail récapitulatif aux collègues qui n'étaient pas au bureau, résumant les discussions et décisions prises dans la journée.",
       "options": [
         {
           "letter": "A",
@@ -5385,7 +5385,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif et utile, mais unilatéral et palliatif. Ne change pas le processus décisionnel qui exclut les télétravailleurs."
+      "explanation": "Score attendu : +/-\nActif et bien intentionné, mais la solution est unilatérale et palliatif. Vous ne changez pas le processus décisionnel qui exclut les télétravailleurs. De plus, cette charge de travail supplémentaire n'est pas viable à long terme."
     },
     {
       "id": "sjt_s07_rc",
@@ -5393,10 +5393,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 7 · Réaction C",
       "set_id": "sjt_s07",
-      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
-      "situation_title": "Décisions sans les télétravailleurs",
+      "situation": "Votre service fonctionne en mode hybride depuis deux ans : chacun est libre de télétravailler jusqu'à trois jours par semaine. Depuis quelques mois, vous remarquez un phénomène récurrent : les collègues présents au bureau le mardi et le jeudi — les jours de présence les plus fréquentés — profitent des pauses café et des discussions de couloir pour prendre des décisions informelles sur l'avancement des projets, la répartition des tâches, ou même l'organisation d'événements d'équipe. Votre collègue Sandra, qui télétravaille le mardi et le jeudi pour des raisons familiales, vous envoie un message découragé : « Je découvre les décisions après coup. J'ai l'impression de ne plus faire partie de l'équipe. Hier, mon travail sur le dossier X a été réattribué sans que personne ne m'en parle. »",
+      "situation_title": "Décisions prises sans les télétravailleurs",
       "figures": [],
-      "question": "RÉACTION C : Vous dites au collègue de venir plus souvent au bureau s'il veut être au courant des décisions.",
+      "question": "RÉACTION C : Vous répondez à Sandra qu'elle devrait essayer de venir plus souvent au bureau le mardi ou le jeudi si elle veut être au courant des décisions importantes. Après tout, c'est le choix de chacun d'organiser son télétravail.",
       "options": [
         {
           "letter": "A",
@@ -5420,7 +5420,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nRejette la responsabilité sur le collègue, aucune empathie, nie le problème structurel. Va à l'encontre de la collaboration en contexte hybride."
+      "explanation": "Score attendu : --\nRejette la responsabilité sur Sandra, aucune empathie, nie le problème structurel. Va directement à l'encontre de la collaboration en contexte de travail hybride et de l'inclusion de tous les membres."
     },
     {
       "id": "sjt_s07_rd",
@@ -5428,10 +5428,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 7 · Réaction D",
       "set_id": "sjt_s07",
-      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
-      "situation_title": "Décisions sans les télétravailleurs",
+      "situation": "Votre service fonctionne en mode hybride depuis deux ans : chacun est libre de télétravailler jusqu'à trois jours par semaine. Depuis quelques mois, vous remarquez un phénomène récurrent : les collègues présents au bureau le mardi et le jeudi — les jours de présence les plus fréquentés — profitent des pauses café et des discussions de couloir pour prendre des décisions informelles sur l'avancement des projets, la répartition des tâches, ou même l'organisation d'événements d'équipe. Votre collègue Sandra, qui télétravaille le mardi et le jeudi pour des raisons familiales, vous envoie un message découragé : « Je découvre les décisions après coup. J'ai l'impression de ne plus faire partie de l'équipe. Hier, mon travail sur le dossier X a été réattribué sans que personne ne m'en parle. »",
+      "situation_title": "Décisions prises sans les télétravailleurs",
       "figures": [],
-      "question": "RÉACTION D : Vous en discutez avec votre responsable pour qu'il rappelle les bonnes pratiques du travail hybride à toute l'équipe.",
+      "question": "RÉACTION D : Vous envoyez un message à votre responsable d'équipe pour lui signaler le problème et lui demander de rappeler à l'équipe les bonnes pratiques du travail hybride lors de la prochaine réunion.",
       "options": [
         {
           "letter": "A",
@@ -5455,7 +5455,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nEscalade sans initiative directe. Vous auriez pu prendre l'initiative de proposer une solution à l'équipe vous-même."
+      "explanation": "Score attendu : -\nEscalade sans prise d'initiative directe. En tant que membre de l'équipe, vous auriez pu aborder le sujet vous-même et proposer une solution collaborative au groupe."
     },
     {
       "id": "sjt_s08_ra",
@@ -5463,10 +5463,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 8 · Réaction A",
       "set_id": "sjt_s08",
-      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
-      "situation_title": "Premier projet transversal",
+      "situation": "La direction générale vous désigne comme chef de projet pour un nouveau programme de modernisation des processus qui nécessite la collaboration de quatre services : le service IT, le service juridique, le service des ressources humaines et le service communication. Ces services n'ont jamais travaillé ensemble de manière structurée. Lors de la première réunion de lancement que vous organisez, chaque représentant de service prend la parole principalement pour défendre les intérêts et les contraintes de son propre service. Le représentant IT parle de limitations techniques, le juridique de conformité réglementaire, les RH de gestion du changement, et la communication de planning de diffusion. Personne ne semble s'intéresser à l'objectif global du projet ni aux interdépendances entre les services. La réunion tourne en rond.",
+      "situation_title": "Premier projet transversal avec quatre services",
       "figures": [],
-      "question": "RÉACTION A : Vous reformulez clairement l'objectif commun du projet, puis invitez chaque service à identifier comment il peut contribuer. Vous proposez de co-construire ensemble une charte de projet avec des rôles, responsabilités et règles de fonctionnement.",
+      "question": "RÉACTION A : Vous interrompez poliment la discussion et reformulez clairement l'objectif commun du programme en le reliant aux enjeux stratégiques de l'institution. Vous invitez ensuite chaque service à identifier non seulement ses contraintes mais aussi sa contribution spécifique à l'objectif commun. Vous proposez de co-construire ensemble, séance tenante, une charte de projet définissant la vision, les rôles, les responsabilités et les règles de collaboration.",
       "options": [
         {
           "letter": "A",
@@ -5490,7 +5490,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue, co-construction collective, cadre structuré et durable (charte). Recentre sur l'objectif commun et crée une base de collaboration."
+      "explanation": "Score attendu : ++\nActif, dialogue, co-construction collective en temps réel, cadre structuré et durable (charte de projet). Recentre l'équipe sur l'objectif commun et crée les bases d'une collaboration transversale."
     },
     {
       "id": "sjt_s08_rb",
@@ -5498,10 +5498,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 8 · Réaction B",
       "set_id": "sjt_s08",
-      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
-      "situation_title": "Premier projet transversal",
+      "situation": "La direction générale vous désigne comme chef de projet pour un nouveau programme de modernisation des processus qui nécessite la collaboration de quatre services : le service IT, le service juridique, le service des ressources humaines et le service communication. Ces services n'ont jamais travaillé ensemble de manière structurée. Lors de la première réunion de lancement que vous organisez, chaque représentant de service prend la parole principalement pour défendre les intérêts et les contraintes de son propre service. Le représentant IT parle de limitations techniques, le juridique de conformité réglementaire, les RH de gestion du changement, et la communication de planning de diffusion. Personne ne semble s'intéresser à l'objectif global du projet ni aux interdépendances entre les services. La réunion tourne en rond.",
+      "situation_title": "Premier projet transversal avec quatre services",
       "figures": [],
-      "question": "RÉACTION B : Vous préparez vous-même un plan de projet détaillé avec les rôles de chacun et le présentez à la prochaine réunion pour validation.",
+      "question": "RÉACTION B : Vous prenez note des préoccupations de chaque service lors de la réunion, puis vous travaillez seul(e) pendant la semaine suivante pour élaborer un plan de projet détaillé avec les rôles de chacun, un planning intégré et un tableau des responsabilités. Vous présentez ce plan à la prochaine réunion pour validation.",
       "options": [
         {
           "letter": "A",
@@ -5525,7 +5525,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif, mais unilatéral. Les services ne sont pas impliqués dans la construction du plan et risquent de ne pas s'y reconnaître."
+      "explanation": "Score attendu : +/-\nActif et structuré, mais l'élaboration est unilatérale. Les services ne sont pas impliqués dans la construction du plan et risquent de ne pas s'y reconnaître ni de s'y engager pleinement."
     },
     {
       "id": "sjt_s08_rc",
@@ -5533,10 +5533,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 8 · Réaction C",
       "set_id": "sjt_s08",
-      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
-      "situation_title": "Premier projet transversal",
+      "situation": "La direction générale vous désigne comme chef de projet pour un nouveau programme de modernisation des processus qui nécessite la collaboration de quatre services : le service IT, le service juridique, le service des ressources humaines et le service communication. Ces services n'ont jamais travaillé ensemble de manière structurée. Lors de la première réunion de lancement que vous organisez, chaque représentant de service prend la parole principalement pour défendre les intérêts et les contraintes de son propre service. Le représentant IT parle de limitations techniques, le juridique de conformité réglementaire, les RH de gestion du changement, et la communication de planning de diffusion. Personne ne semble s'intéresser à l'objectif global du projet ni aux interdépendances entre les services. La réunion tourne en rond.",
+      "situation_title": "Premier projet transversal avec quatre services",
       "figures": [],
-      "question": "RÉACTION C : Vous reportez la prochaine réunion en attendant que les esprits se calment et que chacun ait eu le temps de réfléchir.",
+      "question": "RÉACTION C : Vous constatez que la réunion ne mène nulle part et décidez de la clôturer plus tôt que prévu. Vous reportez la prochaine réunion de deux semaines en espérant que chacun aura eu le temps de réfléchir et que les esprits se seront calmés.",
       "options": [
         {
           "letter": "A",
@@ -5560,7 +5560,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité et évitement. Reporter ne résout rien — les tensions risquent de s'aggraver sans cadre de collaboration."
+      "explanation": "Score attendu : --\nPassivité et évitement. Reporter sans action concrète ne résout rien : les tensions et les postures défensives risquent de s'aggraver dans l'intervalle."
     },
     {
       "id": "sjt_s08_rd",
@@ -5568,10 +5568,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 8 · Réaction D",
       "set_id": "sjt_s08",
-      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
-      "situation_title": "Premier projet transversal",
+      "situation": "La direction générale vous désigne comme chef de projet pour un nouveau programme de modernisation des processus qui nécessite la collaboration de quatre services : le service IT, le service juridique, le service des ressources humaines et le service communication. Ces services n'ont jamais travaillé ensemble de manière structurée. Lors de la première réunion de lancement que vous organisez, chaque représentant de service prend la parole principalement pour défendre les intérêts et les contraintes de son propre service. Le représentant IT parle de limitations techniques, le juridique de conformité réglementaire, les RH de gestion du changement, et la communication de planning de diffusion. Personne ne semble s'intéresser à l'objectif global du projet ni aux interdépendances entre les services. La réunion tourne en rond.",
+      "situation_title": "Premier projet transversal avec quatre services",
       "figures": [],
-      "question": "RÉACTION D : Vous organisez des rencontres bilatérales avec chaque chef de service pour comprendre leurs besoins et contraintes, puis vous proposez un compromis à la réunion suivante.",
+      "question": "RÉACTION D : Après la réunion, vous organisez des rencontres bilatérales avec chaque chef de service pour comprendre en profondeur leurs besoins, contraintes et attentes vis-à-vis du projet. Sur la base de ces échanges, vous élaborez une proposition de compromis que vous soumettez à la réunion plénière suivante.",
       "options": [
         {
           "letter": "A",
@@ -5595,7 +5595,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, dialogue, cherche à comprendre. Mais les services ne co-construisent pas directement ensemble — vous restez l'intermédiaire."
+      "explanation": "Score attendu : +\nActif, dialogue approfondi avec chaque partie, cherche à comprendre. Mais les services ne co-construisent pas directement ensemble — vous restez l'intermédiaire, ce qui ne crée pas de dynamique de collaboration transversale."
     },
     {
       "id": "sjt_s09_ra",
@@ -5603,10 +5603,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 9 · Réaction A",
       "set_id": "sjt_s09",
-      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
-      "situation_title": "Collègue en surcharge",
+      "situation": "Votre collègue Thomas, avec qui vous collaborez régulièrement sur des projets transversaux, semble de plus en plus débordé depuis plusieurs semaines. Il arrive systématiquement avant tout le monde, reste après les heures de bureau, et a annulé sa participation aux trois dernières réunions d'équipe hebdomadaires en invoquant un « agenda trop chargé ». Lorsque vous le croisez à la machine à café et lui demandez comment il va, il répond avec un sourire crispé : « Ça va, j'ai juste beaucoup de travail en ce moment. » Vous n'êtes pas le seul à avoir remarqué : deux autres collègues vous en ont parlé séparément. Personne n'a encore pris d'initiative pour l'aider. Par ailleurs, les livrables de Thomas sur votre projet commun commencent à prendre du retard.",
+      "situation_title": "Collègue en surcharge visible",
       "figures": [],
-      "question": "RÉACTION A : Vous invitez Thomas à prendre un café, vous l'écoutez sans juger, et vous lui proposez d'aborder ensemble la question de la répartition des tâches lors de la prochaine réunion d'équipe.",
+      "question": "RÉACTION A : Vous invitez Thomas à prendre un café en dehors du bureau ou à faire une promenade à midi. Vous créez un espace de confiance pour l'écouter sans le juger et comprendre sa situation réelle. Ensuite, vous lui proposez d'aborder ensemble la question de la répartition des tâches lors de la prochaine réunion d'équipe, en présentant cela comme un ajustement collectif et non comme un aveu de faiblesse.",
       "options": [
         {
           "letter": "A",
@@ -5630,7 +5630,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct et empathique, solution collaborative (redistribution en équipe), et cadre structuré (réunion d'équipe)."
+      "explanation": "Score attendu : ++\nActif, dialogue direct dans un cadre empathique et non-menaçant, solution collaborative (redistribution en équipe), et cadre structuré (réunion d'équipe). Vous prenez soin du lien humain tout en visant une solution durable."
     },
     {
       "id": "sjt_s09_rb",
@@ -5638,10 +5638,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 9 · Réaction B",
       "set_id": "sjt_s09",
-      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
-      "situation_title": "Collègue en surcharge",
+      "situation": "Votre collègue Thomas, avec qui vous collaborez régulièrement sur des projets transversaux, semble de plus en plus débordé depuis plusieurs semaines. Il arrive systématiquement avant tout le monde, reste après les heures de bureau, et a annulé sa participation aux trois dernières réunions d'équipe hebdomadaires en invoquant un « agenda trop chargé ». Lorsque vous le croisez à la machine à café et lui demandez comment il va, il répond avec un sourire crispé : « Ça va, j'ai juste beaucoup de travail en ce moment. » Vous n'êtes pas le seul à avoir remarqué : deux autres collègues vous en ont parlé séparément. Personne n'a encore pris d'initiative pour l'aider. Par ailleurs, les livrables de Thomas sur votre projet commun commencent à prendre du retard.",
+      "situation_title": "Collègue en surcharge visible",
       "figures": [],
-      "question": "RÉACTION B : Vous informez votre responsable que Thomas est en surcharge et qu'il faudrait intervenir.",
+      "question": "RÉACTION B : Vous envoyez un message à votre responsable commun pour l'informer que Thomas semble en surcharge et que cela commence à impacter les délais du projet. Vous lui suggérez d'organiser un entretien avec Thomas pour évaluer sa charge de travail.",
       "options": [
         {
           "letter": "A",
@@ -5665,7 +5665,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nEscalade sans avoir d'abord proposé votre aide directement à Thomas. Vous ne prenez pas l'initiative de collaborer."
+      "explanation": "Score attendu : -\nEscalade vers la hiérarchie sans avoir d'abord proposé votre aide directement à Thomas. Vous ne prenez pas l'initiative de collaborer ni de montrer de solidarité envers votre collègue."
     },
     {
       "id": "sjt_s09_rc",
@@ -5673,10 +5673,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 9 · Réaction C",
       "set_id": "sjt_s09",
-      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
-      "situation_title": "Collègue en surcharge",
+      "situation": "Votre collègue Thomas, avec qui vous collaborez régulièrement sur des projets transversaux, semble de plus en plus débordé depuis plusieurs semaines. Il arrive systématiquement avant tout le monde, reste après les heures de bureau, et a annulé sa participation aux trois dernières réunions d'équipe hebdomadaires en invoquant un « agenda trop chargé ». Lorsque vous le croisez à la machine à café et lui demandez comment il va, il répond avec un sourire crispé : « Ça va, j'ai juste beaucoup de travail en ce moment. » Vous n'êtes pas le seul à avoir remarqué : deux autres collègues vous en ont parlé séparément. Personne n'a encore pris d'initiative pour l'aider. Par ailleurs, les livrables de Thomas sur votre projet commun commencent à prendre du retard.",
+      "situation_title": "Collègue en surcharge visible",
       "figures": [],
-      "question": "RÉACTION C : Vous respectez sa réponse et n'insistez pas — chacun gère sa charge de travail comme il l'entend.",
+      "question": "RÉACTION C : Vous respectez la réponse de Thomas lorsqu'il dit que « ça va ». Chacun gère sa charge de travail comme il l'entend et ce n'est pas votre rôle de vous mêler de l'organisation de son travail. Vous attendez qu'il demande de l'aide s'il en a besoin.",
       "options": [
         {
           "letter": "A",
@@ -5700,7 +5700,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité face à un collègue en difficulté visible. Ne pas agir alors que le problème est connu va à l'encontre de la collaboration."
+      "explanation": "Score attendu : --\nPassivité face à un collègue en difficulté visible, signalée par plusieurs personnes. Ne pas agir va à l'encontre de la collaboration et de la solidarité au sein de l'équipe."
     },
     {
       "id": "sjt_s09_rd",
@@ -5708,10 +5708,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 9 · Réaction D",
       "set_id": "sjt_s09",
-      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
-      "situation_title": "Collègue en surcharge",
+      "situation": "Votre collègue Thomas, avec qui vous collaborez régulièrement sur des projets transversaux, semble de plus en plus débordé depuis plusieurs semaines. Il arrive systématiquement avant tout le monde, reste après les heures de bureau, et a annulé sa participation aux trois dernières réunions d'équipe hebdomadaires en invoquant un « agenda trop chargé ». Lorsque vous le croisez à la machine à café et lui demandez comment il va, il répond avec un sourire crispé : « Ça va, j'ai juste beaucoup de travail en ce moment. » Vous n'êtes pas le seul à avoir remarqué : deux autres collègues vous en ont parlé séparément. Personne n'a encore pris d'initiative pour l'aider. Par ailleurs, les livrables de Thomas sur votre projet commun commencent à prendre du retard.",
+      "situation_title": "Collègue en surcharge visible",
       "figures": [],
-      "question": "RÉACTION D : Vous proposez spontanément de l'aider sur une de ses tâches urgentes pour alléger sa charge cette semaine.",
+      "question": "RÉACTION D : Vous proposez spontanément à Thomas de prendre en charge une des tâches de votre projet commun qui est dans son assiette, pour alléger sa charge cette semaine. Vous réorganisez votre propre planning en conséquence.",
       "options": [
         {
           "letter": "A",
@@ -5735,7 +5735,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, solidaire et empathique. Mais la solution est ponctuelle et ne s'attaque pas à la cause structurelle de la surcharge."
+      "explanation": "Score attendu : +\nActif, solidaire et empathique. L'aide est concrète et immédiate. Mais la solution est ponctuelle et ne s'attaque pas à la cause structurelle de la surcharge. Le problème risque de se reproduire."
     },
     {
       "id": "sjt_s10_ra",
@@ -5743,10 +5743,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 10 · Réaction A",
       "set_id": "sjt_s10",
-      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation": "Le projet de mise en conformité réglementaire que vous avez piloté pendant neuf mois vient de se clôturer avec succès : les objectifs ont été atteints dans les délais et le budget a été respecté. Cependant, le parcours n'a pas été sans embûches : il y a eu des problèmes de communication avec le prestataire externe au troisième mois, un changement de périmètre imposé par la direction au cinquième mois, et des tensions entre deux membres de l'équipe qui ont nécessité votre intervention. Votre responsable vous demande de réaliser un bilan de projet. Lorsque vous annoncez à l'équipe (composée de six personnes) votre intention d'organiser un retour d'expérience, plusieurs réagissent : « On a déjà la tête dans le nouveau projet », « Le projet est terminé, pas besoin de revenir dessus » et « Ça va juste être une réunion de plus pour rien ».",
       "situation_title": "Retour d'expérience de fin de projet",
       "figures": [],
-      "question": "RÉACTION A : Vous organisez une session de retour d'expérience structurée. Vous expliquez d'abord son utilité, puis invitez chacun à partager ce qui a fonctionné et ce qui pourrait être amélioré. Vous documentez les leçons apprises pour les futurs projets.",
+      "question": "RÉACTION A : Vous organisez une session de retour d'expérience d'une heure, en expliquant d'abord à l'équipe pourquoi cet exercice est précieux : ce n'est pas un audit ni une recherche de coupables, mais une occasion collective d'apprendre de ce qui a fonctionné et de ce qui peut être amélioré. Vous structurez la session en deux temps (points positifs puis axes d'amélioration) et vous documentez les leçons apprises dans un format accessible qui sera partagé avec les autres chefs de projet de l'institution.",
       "options": [
         {
           "letter": "A",
@@ -5770,7 +5770,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue, participation collective, cadre structuré et durable (documentation des leçons). Encourage le partage de connaissances."
+      "explanation": "Score attendu : ++\nActif, dialogue, participation collective structurée, cadre durable (documentation des leçons partagée à l'échelle de l'institution). Vous encouragez le partage de connaissances et la collaboration au-delà de votre propre équipe."
     },
     {
       "id": "sjt_s10_rb",
@@ -5778,10 +5778,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 10 · Réaction B",
       "set_id": "sjt_s10",
-      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation": "Le projet de mise en conformité réglementaire que vous avez piloté pendant neuf mois vient de se clôturer avec succès : les objectifs ont été atteints dans les délais et le budget a été respecté. Cependant, le parcours n'a pas été sans embûches : il y a eu des problèmes de communication avec le prestataire externe au troisième mois, un changement de périmètre imposé par la direction au cinquième mois, et des tensions entre deux membres de l'équipe qui ont nécessité votre intervention. Votre responsable vous demande de réaliser un bilan de projet. Lorsque vous annoncez à l'équipe (composée de six personnes) votre intention d'organiser un retour d'expérience, plusieurs réagissent : « On a déjà la tête dans le nouveau projet », « Le projet est terminé, pas besoin de revenir dessus » et « Ça va juste être une réunion de plus pour rien ».",
       "situation_title": "Retour d'expérience de fin de projet",
       "figures": [],
-      "question": "RÉACTION B : Vous rédigez vous-même le bilan sur base de vos observations et le partagez avec l'équipe pour commentaires par e-mail.",
+      "question": "RÉACTION B : Face à la résistance de l'équipe, vous rédigez vous-même le bilan du projet sur la base de vos propres observations et notes de suivi. Vous le partagez ensuite avec l'équipe par e-mail en leur demandant de vous envoyer leurs commentaires éventuels dans la semaine.",
       "options": [
         {
           "letter": "A",
@@ -5805,7 +5805,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif mais unilatéral. Les collègues ne sont pas impliqués dans la réflexion collective — le partage de perspectives est limité."
+      "explanation": "Score attendu : +/-\nActif mais unilatéral. Vos collègues ne sont pas impliqués dans la réflexion collective : le bilan reflète uniquement votre perspective de chef de projet. Le partage par e-mail ne stimule pas un vrai dialogue."
     },
     {
       "id": "sjt_s10_rc",
@@ -5813,10 +5813,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 10 · Réaction C",
       "set_id": "sjt_s10",
-      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation": "Le projet de mise en conformité réglementaire que vous avez piloté pendant neuf mois vient de se clôturer avec succès : les objectifs ont été atteints dans les délais et le budget a été respecté. Cependant, le parcours n'a pas été sans embûches : il y a eu des problèmes de communication avec le prestataire externe au troisième mois, un changement de périmètre imposé par la direction au cinquième mois, et des tensions entre deux membres de l'équipe qui ont nécessité votre intervention. Votre responsable vous demande de réaliser un bilan de projet. Lorsque vous annoncez à l'équipe (composée de six personnes) votre intention d'organiser un retour d'expérience, plusieurs réagissent : « On a déjà la tête dans le nouveau projet », « Le projet est terminé, pas besoin de revenir dessus » et « Ça va juste être une réunion de plus pour rien ».",
       "situation_title": "Retour d'expérience de fin de projet",
       "figures": [],
-      "question": "RÉACTION C : Vous laissez tomber le retour d'expérience puisque l'équipe n'est pas motivée. Vous informez votre responsable que le timing ne s'y prête pas.",
+      "question": "RÉACTION C : Vous constatez que l'équipe n'est vraiment pas motivée pour un retour d'expérience. Vous ne voulez pas forcer les choses et décidez de laisser tomber. Vous informez votre responsable que le timing ne s'y prête pas et que l'équipe est déjà concentrée sur le prochain projet.",
       "options": [
         {
           "letter": "A",
@@ -5840,7 +5840,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nPassivité. Renoncer à un retour d'expérience fait perdre une opportunité d'apprentissage collectif et de partage de bonnes pratiques."
+      "explanation": "Score attendu : --\nPassivité. Renoncer au retour d'expérience fait perdre une opportunité précieuse d'apprentissage collectif et de partage de bonnes pratiques. Les mêmes erreurs risquent de se reproduire."
     },
     {
       "id": "sjt_s10_rd",
@@ -5848,10 +5848,10 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT",
       "book_ref": "Situation 10 · Réaction D",
       "set_id": "sjt_s10",
-      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation": "Le projet de mise en conformité réglementaire que vous avez piloté pendant neuf mois vient de se clôturer avec succès : les objectifs ont été atteints dans les délais et le budget a été respecté. Cependant, le parcours n'a pas été sans embûches : il y a eu des problèmes de communication avec le prestataire externe au troisième mois, un changement de périmètre imposé par la direction au cinquième mois, et des tensions entre deux membres de l'équipe qui ont nécessité votre intervention. Votre responsable vous demande de réaliser un bilan de projet. Lorsque vous annoncez à l'équipe (composée de six personnes) votre intention d'organiser un retour d'expérience, plusieurs réagissent : « On a déjà la tête dans le nouveau projet », « Le projet est terminé, pas besoin de revenir dessus » et « Ça va juste être une réunion de plus pour rien ».",
       "situation_title": "Retour d'expérience de fin de projet",
       "figures": [],
-      "question": "RÉACTION D : Vous envoyez un questionnaire en ligne à chaque membre de l'équipe pour recueillir anonymement les retours, puis vous compilez les résultats.",
+      "question": "RÉACTION D : Vous envoyez un questionnaire en ligne anonyme à chaque membre de l'équipe, avec des questions ciblées sur les différentes phases du projet. Vous compilez les résultats et en faites une synthèse que vous partagez avec l'équipe et votre responsable.",
       "options": [
         {
           "letter": "A",
@@ -5875,7 +5875,7 @@ window.QUESTIONS_DB = {
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, implique les autres et peut encourager l'expression de ceux qui n'osent pas parler. Mais pas de dialogue direct ni de co-construction collective."
+      "explanation": "Score attendu : +\nActif, implique tous les membres et l'anonymat peut encourager la franchise. Mais il n'y a pas de dialogue direct ni de co-construction collective des enseignements. L'exercice reste individuel et ne crée pas de dynamique d'apprentissage partagé."
     },
     {
       "id": "bosa_num_q1",
@@ -5884,7 +5884,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q1",
       "set_id": null,
       "figures": [],
-      "question": "Si un projet dispose d'un budget de 240 000 € réparti également sur 8 mois, quel est le budget mensuel ?",
+      "question": "Le service PMO de votre institution lance un nouveau projet de modernisation dont le budget total s'élève à 240 000 €. Ce budget doit être réparti de manière égale sur les 8 mois de durée du projet. Quel est le montant du budget mensuel disponible ?",
       "options": [
         {
           "letter": "A",
@@ -5917,7 +5917,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q2",
       "set_id": null,
       "figures": [],
-      "question": "Un service public compte 180 employés. Si 20% travaillent à temps partiel, combien travaillent à temps plein ?",
+      "question": "L'Office National des Statistiques emploie 180 personnes au total. Une enquête interne révèle que 20% du personnel travaille selon un régime à temps partiel. Combien d'employés de cet office travaillent à temps plein ?",
       "options": [
         {
           "letter": "A",
@@ -5950,7 +5950,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q3",
       "set_id": null,
       "figures": [],
-      "question": "Si 3 collaborateurs peuvent traiter 45 dossiers en une semaine, combien de dossiers 5 collaborateurs peuvent-ils traiter dans le même délai (au même rythme) ?",
+      "question": "Dans le cadre d'un projet de mise à jour des données, une équipe de 3 collaborateurs parvient à traiter 45 dossiers en une semaine. La direction décide de renforcer l'équipe en portant son effectif à 5 collaborateurs. En supposant que chaque collaborateur travaille au même rythme, combien de dossiers l'équipe renforcée pourra-t-elle traiter en une semaine ?",
       "options": [
         {
           "letter": "A",
@@ -6016,7 +6016,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q5",
       "set_id": null,
       "figures": [],
-      "question": "Le projet Alpha coûte 125 000 € et dure 6 mois. Le projet Beta coûte 180 000 € et dure 9 mois. Quel projet a le coût mensuel le plus bas ?",
+      "question": "Dans le cadre de l'évaluation budgétaire annuelle, deux projets sont comparés. Le projet Alpha, visant la digitalisation des formulaires, a un coût total estimé à 125 000 € pour une durée de 6 mois. Le projet Beta, portant sur la refonte du site internet, est estimé à 180 000 € pour une durée de 9 mois. En termes de coût mensuel, quel projet représente la charge financière la plus basse par mois ?",
       "options": [
         {
           "letter": "A",
@@ -6049,7 +6049,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q6",
       "set_id": null,
       "figures": [],
-      "question": "Le nombre de réclamations traitées par un service est passé de 1 250 au premier trimestre à 1 450 au deuxième trimestre. Quel est le pourcentage d'augmentation ?",
+      "question": "Le service des réclamations d'une institution publique a traité 1 250 dossiers au cours du premier trimestre de l'année. Au deuxième trimestre, suite à une modification de la réglementation, le nombre de dossiers traités a atteint 1 450. Quel est le pourcentage d'augmentation du nombre de réclamations traitées entre le premier et le deuxième trimestre ?",
       "options": [
         {
           "letter": "A",
@@ -6082,7 +6082,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q7",
       "set_id": null,
       "figures": [],
-      "question": "Un projet est planifié sur 12 mois avec un budget total de 360 000 €. Après 4 mois, 40% du budget a été dépensé. Si les dépenses continuent au même rythme mensuel, de combien le projet dépassera-t-il son budget à la fin des 12 mois ?",
+      "question": "Un projet de transformation numérique est planifié sur une durée de 12 mois avec un budget total approuvé de 360 000 €. Lors du comité de pilotage du quatrième mois, le rapport financier révèle que 40% du budget total a déjà été consommé. Si le rythme mensuel de dépenses reste constant jusqu'à la fin du projet, de combien le projet dépassera-t-il son enveloppe budgétaire initiale à l'issue des 12 mois ?",
       "options": [
         {
           "letter": "A",
@@ -6182,7 +6182,7 @@ window.QUESTIONS_DB = {
       "book_ref": "BOSA Num Q10",
       "set_id": null,
       "figures": [],
-      "question": "Un service traite 800 dossiers par mois. Suite à une réorganisation, la productivité augmente de 15%. Suite à une deuxième optimisation, la productivité augmente encore de 10% par rapport au nouveau niveau. Combien de dossiers le service traite-t-il maintenant par mois ?",
+      "question": "Le service de traitement des demandes d'une institution traite actuellement 800 dossiers par mois. Suite à une première réorganisation interne (redistribution des tâches et simplification des procédures), la productivité du service augmente de 15%. Quelques mois plus tard, une deuxième mesure d'optimisation (introduction d'un outil de tri automatique) entraîne une nouvelle augmentation de la productivité de 10% par rapport au niveau atteint après la première mesure. Combien de dossiers le service traite-t-il désormais par mois ?",
       "options": [
         {
           "letter": "A",
