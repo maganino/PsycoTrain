@@ -579,7 +579,8 @@ function startTimer(){
     const elapsed = Date.now() - SESSION.q_started_ms;
     const targetMs = effectiveTargetMs();
     const pct = Math.max(0, 100 - (elapsed / targetMs * 100));
-    el.textContent = fmtTime(elapsed);
+    const remaining = Math.max(0, targetMs - elapsed);
+    el.textContent = remaining > 0 ? fmtTime(remaining) : '-' + fmtTime(elapsed - targetMs);
     el.className = 'tmr';
     if(elapsed > targetMs) el.className = 'tmr over';
     else if(elapsed > targetMs * 0.8) el.className = 'tmr warn';
@@ -780,13 +781,15 @@ function renderPractice(root){
     if(qs.best_time_ms != null) accStr += ` · best ${fmtTime(qs.best_time_ms)}`;
   }
 
-  // Initial timer display: 0:00 if not yet started, or current elapsed if revealed
+  // Timer display: countdown from target, or frozen remaining on reveal
   let initialTimer;
   if(SESSION.revealed){
-    initialTimer = fmtTime(SESSION.q_elapsed_ms);
+    const rem = Math.max(0, targetMs - SESSION.q_elapsed_ms);
+    initialTimer = rem > 0 ? fmtTime(rem) : '-' + fmtTime(SESSION.q_elapsed_ms - targetMs);
   } else {
     const e = Date.now() - (SESSION.q_started_ms || Date.now());
-    initialTimer = fmtTime(e);
+    const rem = Math.max(0, targetMs - e);
+    initialTimer = rem > 0 ? fmtTime(rem) : '-' + fmtTime(e - targetMs);
   }
   let timerCls = 'tmr';
   let barPct, barCls;
