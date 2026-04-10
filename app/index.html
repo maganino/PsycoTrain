@@ -86,7 +86,10 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .ot{font-size:14px;flex:1;line-height:1.4}
 .expl{padding:13px 14px;border-radius:12px;margin-top:12px;font-size:13px;line-height:1.55;white-space:pre-wrap}
 .expl.eok{background:var(--greenbg);border:1px solid var(--greenbdr);color:#0a4f3d}
+.expl.epartial{background:var(--amberbg);border:1px solid #E0B860;color:#6B4A0A}
 .expl.eko{background:var(--redbg);border:1px solid var(--redbdr);color:#7a1f1f}
+.opt.partial{border-color:#E0B860;background:var(--amberbg)}
+.opt.partial .ol{background:#BA7517;color:#fff;border-color:#BA7517}
 .expl strong{font-weight:700}
 
 .nav{display:flex;gap:8px;margin-top:14px}
@@ -495,11 +498,13 @@ function startPractice(){
   SESSION = {
     poolIds: pool.map(q => q.id),
     picked: [],
+    sjt_queue: [],
     currentQid: null,
     picked_letter: null,
     revealed: false,
     answered_count: 0,
     correct_count: 0,
+    correct_in_time_count: 0,
   };
   advanceQuestion();
 }
@@ -538,17 +543,47 @@ function startTimer(){
   }, 500);
 }
 function advanceQuestion(){
+  // SJT: if there's a queued reaction from the current situation, show it next
+  if(SESSION.sjt_queue && SESSION.sjt_queue.length > 0){
+    const nextId = SESSION.sjt_queue.shift();
+    SESSION.currentQid = nextId;
+    SESSION.picked.push(nextId);
+    SESSION.picked_letter = null;
+    SESSION.revealed = false;
+    SESSION.q_started_ms = Date.now();
+    SESSION.q_elapsed_ms = null;
+    saveSession(SESSION);
+    MODE = 'practice';
+    render();
+    return;
+  }
+
   const pool = DB.questions.filter(q => SESSION.poolIds.includes(q.id));
   const excluded = new Set(SESSION.picked);
   // Allow recycling once we've seen everything once in this session
   let next = pickNext(pool, excluded);
   if(!next && pool.length > 0){
     SESSION.picked = [];          // recycle
+    SESSION.sjt_queue = [];       // clear SJT queue too
     next = pickNext(pool, new Set());
   }
   if(!next){ stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return; }
+
+  // SJT: queue all reactions of this situation in order (A→B→C→D)
+  if(next.type === 'sjt' && next.set_id){
+    const siblings = pool
+      .filter(q => q.set_id === next.set_id && !excluded.has(q.id))
+      .sort((a,b) => a.id.localeCompare(b.id));  // sort by id ensures A,B,C,D order
+    // First one is shown now, rest go into the queue
+    next = siblings[0];
+    SESSION.sjt_queue = siblings.slice(1).map(q => q.id);
+    // Mark all as picked so they won't be re-selected by pickNext
+    for(const s of siblings){ SESSION.picked.push(s.id); }
+  } else {
+    SESSION.picked.push(next.id);
+  }
+
   SESSION.currentQid = next.id;
-  SESSION.picked.push(next.id);
   SESSION.picked_letter = null;
   SESSION.revealed = false;
   SESSION.q_started_ms = Date.now();
@@ -562,19 +597,45 @@ function pickAnswer(letter){
   SESSION.picked_letter = letter;
   render();
 }
+// SJT partial scoring: exact = 1, ±1 neighbor = 0.5, else = 0
+const SJT_SCALE = ['A','B','C','D','E'];  // -- - +/- + ++
+function sjtScore(picked, correct){
+  const pi = SJT_SCALE.indexOf(picked);
+  const ci = SJT_SCALE.indexOf(correct);
+  if(pi < 0 || ci < 0) return 0;
+  const dist = Math.abs(pi - ci);
+  if(dist === 0) return 1;
+  if(dist === 1) return 0.5;
+  return 0;
+}
+
 function submitAnswer(){
   if(!SESSION.picked_letter || SESSION.revealed) return;
   const q = DB.questions.find(x => x.id === SESSION.currentQid);
-  const isCorrect = SESSION.picked_letter === q.correct;
   const elapsed = Date.now() - (SESSION.q_started_ms || Date.now());
   const targetMs = (loadSettings().targetSec || 120) * 1000;
   const withinTime = elapsed <= targetMs;
+
+  // SJT uses partial scoring; other types use exact match
+  let isCorrect;
+  let sjtPts = null;
+  if(q.type === 'sjt'){
+    sjtPts = sjtScore(SESSION.picked_letter, q.correct);
+    isCorrect = sjtPts >= 1;  // only exact match counts as "correct" for stats
+  } else {
+    isCorrect = SESSION.picked_letter === q.correct;
+  }
+
   recordAnswer(q.id, isCorrect, elapsed, withinTime);
   SESSION.revealed = true;
   SESSION.q_elapsed_ms = elapsed;
   SESSION.q_within_time = withinTime;
+  SESSION.q_sjt_pts = sjtPts;
   SESSION.answered_count++;
   if(isCorrect) SESSION.correct_count++;
+  if(sjtPts === 0.5){
+    SESSION.partial_count = (SESSION.partial_count||0) + 1;
+  }
   if(isCorrect && withinTime) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + 1;
   stopTimer();
   saveSession(SESSION);
@@ -607,7 +668,11 @@ function renderPractice(root){
     if(SESSION.revealed){
       cls += ' dis';
       if(o.letter === q.correct) cls += ' ok';
-      else if(o.letter === SESSION.picked_letter) cls += ' ko';
+      else if(o.letter === SESSION.picked_letter){
+        // SJT: neighbor answer gets amber (partial), not red
+        if(q.type === 'sjt' && SESSION.q_sjt_pts === 0.5) cls += ' partial';
+        else cls += ' ko';
+      }
       else cls += ' fd';
     } else if(o.letter === SESSION.picked_letter){
       cls += ' sel';
@@ -624,12 +689,26 @@ function renderPractice(root){
     const ok = SESSION.picked_letter === q.correct;
     const timeStr = fmtTime(SESSION.q_elapsed_ms);
     const lateTag = !SESSION.q_within_time ? ` · over target (${fmtTime(targetMs)})` : '';
-    let head;
-    if(ok && SESSION.q_within_time) head = `✓ Correct in ${timeStr}`;
-    else if(ok) head = `✓ Correct, but late — ${timeStr}${lateTag}`;
-    else head = `✗ Incorrect — answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+    let head, explCls;
+    if(q.type === 'sjt'){
+      const pts = SESSION.q_sjt_pts;
+      if(pts >= 1){
+        head = `✓ Exact — 1 pt · ${timeStr}${lateTag}`;
+        explCls = 'eok';
+      } else if(pts === 0.5){
+        head = `~ Voisin — 0.5 pt · answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+        explCls = 'epartial';
+      } else {
+        head = `✗ Incorrect — 0 pt · answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+        explCls = 'eko';
+      }
+    } else {
+      if(ok && SESSION.q_within_time){ head = `✓ Correct in ${timeStr}`; explCls = 'eok'; }
+      else if(ok){ head = `✓ Correct, but late — ${timeStr}${lateTag}`; explCls = 'eok'; }
+      else { head = `✗ Incorrect — answer: ${esc(q.correct)} · ${timeStr}${lateTag}`; explCls = 'eko'; }
+    }
     const expl = q.explanation ? `<br>${esc(q.explanation).replace(/\n/g, '<br>')}` : '';
-    explHtml = `<div class="expl ${ok ? 'eok' : 'eko'}"><strong>${head}</strong>${expl}</div>`;
+    explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${expl}</div>`;
   }
 
   // Per-question history label
@@ -656,7 +735,7 @@ function renderPractice(root){
     <div class="practice">
       <div class="hdr">
         <div class="hdr-row">
-          <div class="progress">Q ${SESSION.answered_count + (SESSION.revealed?0:1)} · ${SESSION.correct_count}/${SESSION.answered_count} correct</div>
+          <div class="progress">Q${SESSION.answered_count + (SESSION.revealed?0:1)} · ${SESSION.correct_count}/${SESSION.answered_count} ✓ · ${SESSION.correct_in_time_count||0}/${SESSION.answered_count} ⏱${SESSION.partial_count ? ` · ${SESSION.partial_count} ~` : ''}</div>
           <div class="${timerCls}" id="timer">${initialTimer}</div>
           <button class="exit" id="exit-btn">Exit</button>
         </div>
