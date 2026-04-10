@@ -1,12 +1,13 @@
 window.QUESTIONS_DB = {
-  "version": "1.0",
+  "version": "2.0",
   "types": [
     "numerical",
-    "verbal",
-    "abstract",
-    "logical"
+    "numerical_bosa",
+    "sjt"
   ],
   "sources": [
+    "BOSA_Num",
+    "BOSA_SJT",
     "Baneth24",
     "NUM5"
   ],
@@ -4475,6 +4476,4716 @@ window.QUESTIONS_DB = {
       ],
       "correct": "D",
       "explanation": "Share of fishers aged 44 and under in Levonia in 2016: 100% - 64% = 36% \nShare of fishers aged 44 and under in Levonia in 2018: 100% - 62% = 38% \nNumber of fishers aged 44 and under in Levonia in 2016: 0.36 x 2 596 700 = 934 812 \nNumber of fishers aged 44 and under in Levonia in 2018: 0.38 x 2 658 100 = 1 010 078\n% change: (1 010 078 – 934 812) / 934 812 = + 8.1%\nIn 2016, 64% of fishers in Levonia were over the age of 44. Two years later, this proportion\nwas 62%. How did the number of fishers aged 44 and under change in Levonia from 2016 to\n2018?\n2015\n2016\n2017\n2018\nMuravia\n1 524 000  \n1 586 050\n1 605 400  \n1 628 250  \nVenalia\n850 450 \n875 200  \n885 500  \n898 600  \nZogland\n625 780 \n637 650  \n639 450  \n642 800  \nLevonia\n2 542 300 \n2 596 700  \n2 627 500  \n2 658 100  \nNumber of fishers"
+    },
+    {
+      "id": "sjt_s01_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 1 · Réaction A",
+      "set_id": "sjt_s01",
+      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation_title": "Le collègue silencieux en télétravail",
+      "figures": [],
+      "question": "RÉACTION A : Vous lui envoyez un e-mail avec les liens vers la documentation interne et lui dites de vous contacter s'il a des questions.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nDémarche active mais unilatérale. Vous fournissez de l'aide sans engager un vrai dialogue ni chercher à comprendre ses difficultés."
+    },
+    {
+      "id": "sjt_s01_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 1 · Réaction B",
+      "set_id": "sjt_s01",
+      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation_title": "Le collègue silencieux en télétravail",
+      "figures": [],
+      "question": "RÉACTION B : Vous ne faites rien de particulier car il finira par s'adapter comme tout le monde.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité totale face à un problème visible. Vous n'aidez pas un collègue en difficulté et ne contribuez pas à l'intégration dans l'équipe."
+    },
+    {
+      "id": "sjt_s01_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 1 · Réaction C",
+      "set_id": "sjt_s01",
+      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation_title": "Le collègue silencieux en télétravail",
+      "figures": [],
+      "question": "RÉACTION C : Vous l'appelez pour un échange informel, lui demandez comment il se sent dans l'équipe et lui proposez de le guider pendant le premier mois avec des points réguliers.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nDémarche proactive avec dialogue direct, empathie et solution structurée (mentorat avec suivi régulier). Encourage durablement la collaboration."
+    },
+    {
+      "id": "sjt_s01_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 1 · Réaction D",
+      "set_id": "sjt_s01",
+      "situation": "Vous êtes chef de projet dans une institution publique. Un nouveau collaborateur a rejoint votre équipe il y a deux semaines. Il travaille principalement en télétravail et vous remarquez qu'il n'ose pas poser de questions lors des réunions en visioconférence. Ses premiers livrables montrent qu'il n'a pas bien compris certaines procédures internes.",
+      "situation_title": "Le collègue silencieux en télétravail",
+      "figures": [],
+      "question": "RÉACTION D : Vous demandez à son responsable direct de lui fixer un entretien pour clarifier les procédures.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nEscalade sans dialogue direct. Vous déléguez le problème au lieu de prendre l'initiative de collaborer vous-même."
+    },
+    {
+      "id": "sjt_s02_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 2 · Réaction A",
+      "set_id": "sjt_s02",
+      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation_title": "Conflit de priorités entre services",
+      "figures": [],
+      "question": "RÉACTION A : Vous organisez une réunion conjointe pour comprendre les contraintes de chacun et construire ensemble un planning qui intègre les deux priorités.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties, co-construction d'une solution et mise en place d'un cadre structuré (planning commun)."
+    },
+    {
+      "id": "sjt_s02_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 2 · Réaction B",
+      "set_id": "sjt_s02",
+      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation_title": "Conflit de priorités entre services",
+      "figures": [],
+      "question": "RÉACTION B : Vous décidez vous-même de l'ordre des priorités et communiquez votre décision aux deux services par e-mail.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nVous imposez une décision sans consulter ni impliquer les parties concernées. Aucune collaboration ni dialogue."
+    },
+    {
+      "id": "sjt_s02_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 2 · Réaction C",
+      "set_id": "sjt_s02",
+      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation_title": "Conflit de priorités entre services",
+      "figures": [],
+      "question": "RÉACTION C : Vous envoyez un e-mail aux deux chefs de service en leur demandant de trouver un accord entre eux avant la prochaine réunion de projet.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nVous vous déchargez de votre rôle de facilitateur. Pas de dialogue direct, pas de facilitation active de la collaboration."
+    },
+    {
+      "id": "sjt_s02_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 2 · Réaction D",
+      "set_id": "sjt_s02",
+      "situation": "Vous coordonnez un projet de digitalisation qui implique le service informatique et le service clientèle. Les deux services ne sont pas d'accord sur les priorités : l'IT veut d'abord sécuriser l'infrastructure, tandis que le service clientèle veut lancer rapidement le nouveau portail en ligne. Les échanges par e-mail deviennent de plus en plus tendus.",
+      "situation_title": "Conflit de priorités entre services",
+      "figures": [],
+      "question": "RÉACTION D : Vous appelez séparément chaque chef de service pour comprendre leurs contraintes, puis vous proposez un compromis lors de la prochaine réunion d'équipe.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nDémarche active avec dialogue et empathie. Cependant, les deux services ne co-construisent pas directement ensemble — vous servez d'intermédiaire."
+    },
+    {
+      "id": "sjt_s03_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 3 · Réaction A",
+      "set_id": "sjt_s03",
+      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
+      "situation_title": "La collègue qui ne partage pas",
+      "figures": [],
+      "question": "RÉACTION A : Vous proposez à l'équipe de créer un espace de documentation partagé et suggérez à Sophie d'y contribuer. Vous commencez vous-même par y déposer vos propres connaissances pour montrer l'exemple.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue avec l'équipe, co-construction d'un outil partagé, durable et structuré. Vous montrez l'exemple (indicateur clé du niveau 2)."
+    },
+    {
+      "id": "sjt_s03_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 3 · Réaction B",
+      "set_id": "sjt_s03",
+      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
+      "situation_title": "La collègue qui ne partage pas",
+      "figures": [],
+      "question": "RÉACTION B : Vous en parlez directement à Sophie, lui expliquez l'impact sur l'équipe et lui demandez si elle serait d'accord pour organiser de courtes sessions de partage de connaissances.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif avec dialogue direct et approche collaborative. Mais la solution reste ponctuelle et dépend de l'acceptation de Sophie."
+    },
+    {
+      "id": "sjt_s03_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 3 · Réaction C",
+      "set_id": "sjt_s03",
+      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
+      "situation_title": "La collègue qui ne partage pas",
+      "figures": [],
+      "question": "RÉACTION C : Vous signalez le problème à votre responsable et lui demandez d'intervenir auprès de Sophie.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nEscalade sans avoir d'abord tenté le dialogue direct avec Sophie. Vous ne prenez pas l'initiative de résoudre le problème collaborativement."
+    },
+    {
+      "id": "sjt_s03_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 3 · Réaction D",
+      "set_id": "sjt_s03",
+      "situation": "Votre collègue Sophie est experte dans un domaine technique essentiel pour le projet. Elle répond toujours à vos questions quand vous la sollicitez, mais elle ne partage jamais spontanément ses connaissances avec le reste de l'équipe. Plusieurs membres se plaignent de devoir toujours lui demander les mêmes informations.",
+      "situation_title": "La collègue qui ne partage pas",
+      "figures": [],
+      "question": "RÉACTION D : Vous compilez vous-même les informations que Sophie vous a partagées et les envoyez à toute l'équipe par e-mail.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nActif et utile à court terme, mais unilatéral. Ne résout pas la cause du problème et ne stimule pas Sophie à collaborer davantage."
+    },
+    {
+      "id": "sjt_s04_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 4 · Réaction A",
+      "set_id": "sjt_s04",
+      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation_title": "Critique en comité de pilotage",
+      "figures": [],
+      "question": "RÉACTION A : Vous remerciez le partenaire pour son retour, puis proposez de planifier une réunion de travail avec lui et Marc pour identifier ensemble les points à améliorer et définir les priorités de révision.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue direct, co-construction avec toutes les parties prenantes, et mise en place d'un cadre structuré pour la révision."
+    },
+    {
+      "id": "sjt_s04_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 4 · Réaction B",
+      "set_id": "sjt_s04",
+      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation_title": "Critique en comité de pilotage",
+      "figures": [],
+      "question": "RÉACTION B : Vous défendez publiquement le travail de Marc et demandez au partenaire de formuler ses critiques par écrit pour une prochaine discussion.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nBien que vous souteniez votre collègue, vous bloquez le dialogue constructif en réunion. Le report par écrit freine la collaboration."
+    },
+    {
+      "id": "sjt_s04_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 4 · Réaction C",
+      "set_id": "sjt_s04",
+      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation_title": "Critique en comité de pilotage",
+      "figures": [],
+      "question": "RÉACTION C : Vous acceptez les critiques sans discussion et promettez de tout refaire dans la semaine.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nSoumission passive. Aucune évaluation critique, aucun dialogue, aucune implication de Marc. Vous ne défendez ni votre équipe ni la qualité du travail."
+    },
+    {
+      "id": "sjt_s04_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 4 · Réaction D",
+      "set_id": "sjt_s04",
+      "situation": "Lors d'un comité de pilotage, un partenaire externe critique vivement la qualité du dernier livrable de votre équipe. Votre collaborateur Marc, qui a rédigé le document, est présent et visiblement affecté. Le partenaire demande une révision complète du document.",
+      "situation_title": "Critique en comité de pilotage",
+      "figures": [],
+      "question": "RÉACTION D : Après la réunion, vous discutez avec Marc pour comprendre ce qui s'est passé et le rassurer, puis vous contactez le partenaire pour clarifier ses attentes précises.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif, dialogue avec les deux parties, empathique. Mais les échanges sont séquentiels — pas de co-construction directe entre Marc et le partenaire."
+    },
+    {
+      "id": "sjt_s05_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 5 · Réaction A",
+      "set_id": "sjt_s05",
+      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
+      "situation_title": "Résistance au nouvel outil",
+      "figures": [],
+      "question": "RÉACTION A : Vous proposez d'organiser des sessions de formation courtes et pratiques, et vous vous portez volontaire pour être la personne de référence dans votre service.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue, collaboratif, et structuré et durable (sessions + rôle de référent). Vous montrez l'exemple et facilitez la transition."
+    },
+    {
+      "id": "sjt_s05_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 5 · Réaction B",
+      "set_id": "sjt_s05",
+      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
+      "situation_title": "Résistance au nouvel outil",
+      "figures": [],
+      "question": "RÉACTION B : Vous demandez à la direction de rendre l'utilisation du nouvel outil obligatoire et de fixer une date limite.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nEscalade vers la hiérarchie avec une approche coercitive. Pas de dialogue ni de collaboration avec les collègues concernés."
+    },
+    {
+      "id": "sjt_s05_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 5 · Réaction C",
+      "set_id": "sjt_s05",
+      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
+      "situation_title": "Résistance au nouvel outil",
+      "figures": [],
+      "question": "RÉACTION C : Vous comprenez leur frustration et ne les forcez pas. Chacun avancera à son rythme.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité totale. Le problème ne se résoudra pas tout seul et freine la transition de toute l'équipe."
+    },
+    {
+      "id": "sjt_s05_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 5 · Réaction D",
+      "set_id": "sjt_s05",
+      "situation": "Votre institution migre vers un nouvel outil de gestion de projet. Plusieurs collègues expérimentés résistent au changement et continuent d'utiliser l'ancien système. Ils disent que le nouvel outil est « inutilement compliqué » et qu'ils « n'ont pas le temps d'apprendre ».",
+      "situation_title": "Résistance au nouvel outil",
+      "figures": [],
+      "question": "RÉACTION D : Vous créez un guide rapide et le partagez avec les collègues réticents, en leur proposant de leur montrer individuellement comment l'outil peut simplifier leurs tâches quotidiennes.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif, aide concrète et personnalisée. Mais l'approche reste individuelle — pas de dynamique collective ni de cadre structuré."
+    },
+    {
+      "id": "sjt_s06_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 6 · Réaction A",
+      "set_id": "sjt_s06",
+      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
+      "situation_title": "Désaccord méthodologique",
+      "figures": [],
+      "question": "RÉACTION A : Vous organisez un atelier de travail où Ahmed et Laura présentent chacun leur approche, puis l'équipe entière évalue ensemble les avantages et inconvénients pour aboutir à une décision commune.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties, co-construction collective avec toute l'équipe, cadre structuré (atelier). Résout le conflit durablement."
+    },
+    {
+      "id": "sjt_s06_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 6 · Réaction B",
+      "set_id": "sjt_s06",
+      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
+      "situation_title": "Désaccord méthodologique",
+      "figures": [],
+      "question": "RÉACTION B : Vous prenez Ahmed et Laura à part séparément pour écouter leurs arguments, puis vous tranchez en faveur de l'approche qui vous semble la plus adaptée.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nActif avec écoute, mais la décision est unilatérale. Ahmed ou Laura peut se sentir non entendu(e), le conflit n'est pas résolu collaborativement."
+    },
+    {
+      "id": "sjt_s06_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 6 · Réaction C",
+      "set_id": "sjt_s06",
+      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
+      "situation_title": "Désaccord méthodologique",
+      "figures": [],
+      "question": "RÉACTION C : Vous laissez le conflit se résoudre de lui-même car Ahmed et Laura sont des professionnels compétents qui trouveront un terrain d'entente.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité face à un conflit qui s'aggrave et paralyse l'équipe. Les autres membres n'osent plus s'exprimer — la collaboration est bloquée."
+    },
+    {
+      "id": "sjt_s06_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 6 · Réaction D",
+      "set_id": "sjt_s06",
+      "situation": "Deux membres de votre équipe projet, Ahmed et Laura, sont en désaccord sur la méthodologie à suivre pour analyser les données du projet. Ahmed préfère une approche quantitative, Laura une approche qualitative. La tension est palpable lors des réunions et les autres membres de l'équipe n'osent plus donner leur avis.",
+      "situation_title": "Désaccord méthodologique",
+      "figures": [],
+      "question": "RÉACTION D : Vous envoyez un e-mail à toute l'équipe en proposant un vote anonyme sur la méthodologie à adopter.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nÉvite le dialogue direct. Un vote ne résout pas le conflit sous-jacent et risque de diviser davantage l'équipe."
+    },
+    {
+      "id": "sjt_s07_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 7 · Réaction A",
+      "set_id": "sjt_s07",
+      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
+      "situation_title": "Décisions sans les télétravailleurs",
+      "figures": [],
+      "question": "RÉACTION A : Vous proposez à l'équipe d'instaurer une règle : toute décision importante est discutée lors des réunions hebdomadaires où tout le monde est connecté, et documentée sur la plateforme collaborative.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue avec l'équipe, co-construction d'une nouvelle règle de fonctionnement, cadre structuré et durable qui protège l'inclusion."
+    },
+    {
+      "id": "sjt_s07_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 7 · Réaction B",
+      "set_id": "sjt_s07",
+      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
+      "situation_title": "Décisions sans les télétravailleurs",
+      "figures": [],
+      "question": "RÉACTION B : Vous envoyez un e-mail récapitulatif après chaque journée au bureau pour tenir les télétravailleurs informés des discussions.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nActif et utile, mais unilatéral et palliatif. Ne change pas le processus décisionnel qui exclut les télétravailleurs."
+    },
+    {
+      "id": "sjt_s07_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 7 · Réaction C",
+      "set_id": "sjt_s07",
+      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
+      "situation_title": "Décisions sans les télétravailleurs",
+      "figures": [],
+      "question": "RÉACTION C : Vous dites au collègue de venir plus souvent au bureau s'il veut être au courant des décisions.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nRejette la responsabilité sur le collègue, aucune empathie, nie le problème structurel. Va à l'encontre de la collaboration en contexte hybride."
+    },
+    {
+      "id": "sjt_s07_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 7 · Réaction D",
+      "set_id": "sjt_s07",
+      "situation": "Votre équipe fonctionne en mode hybride. Vous remarquez que les décisions importantes sont souvent prises de manière informelle entre les collègues présents au bureau, sans inclure ceux qui télétravaillent ce jour-là. Un collègue en télétravail vous dit qu'il se sent mis à l'écart.",
+      "situation_title": "Décisions sans les télétravailleurs",
+      "figures": [],
+      "question": "RÉACTION D : Vous en discutez avec votre responsable pour qu'il rappelle les bonnes pratiques du travail hybride à toute l'équipe.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nEscalade sans initiative directe. Vous auriez pu prendre l'initiative de proposer une solution à l'équipe vous-même."
+    },
+    {
+      "id": "sjt_s08_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 8 · Réaction A",
+      "set_id": "sjt_s08",
+      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
+      "situation_title": "Premier projet transversal",
+      "figures": [],
+      "question": "RÉACTION A : Vous reformulez clairement l'objectif commun du projet, puis invitez chaque service à identifier comment il peut contribuer. Vous proposez de co-construire ensemble une charte de projet avec des rôles, responsabilités et règles de fonctionnement.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue, co-construction collective, cadre structuré et durable (charte). Recentre sur l'objectif commun et crée une base de collaboration."
+    },
+    {
+      "id": "sjt_s08_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 8 · Réaction B",
+      "set_id": "sjt_s08",
+      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
+      "situation_title": "Premier projet transversal",
+      "figures": [],
+      "question": "RÉACTION B : Vous préparez vous-même un plan de projet détaillé avec les rôles de chacun et le présentez à la prochaine réunion pour validation.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nActif, mais unilatéral. Les services ne sont pas impliqués dans la construction du plan et risquent de ne pas s'y reconnaître."
+    },
+    {
+      "id": "sjt_s08_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 8 · Réaction C",
+      "set_id": "sjt_s08",
+      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
+      "situation_title": "Premier projet transversal",
+      "figures": [],
+      "question": "RÉACTION C : Vous reportez la prochaine réunion en attendant que les esprits se calment et que chacun ait eu le temps de réfléchir.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité et évitement. Reporter ne résout rien — les tensions risquent de s'aggraver sans cadre de collaboration."
+    },
+    {
+      "id": "sjt_s08_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 8 · Réaction D",
+      "set_id": "sjt_s08",
+      "situation": "Vous êtes désigné pour piloter un nouveau projet qui nécessite la collaboration de quatre services différents qui n'ont jamais travaillé ensemble. Lors de la première réunion, chaque représentant défend uniquement les intérêts de son service et personne ne semble voir l'objectif commun du projet.",
+      "situation_title": "Premier projet transversal",
+      "figures": [],
+      "question": "RÉACTION D : Vous organisez des rencontres bilatérales avec chaque chef de service pour comprendre leurs besoins et contraintes, puis vous proposez un compromis à la réunion suivante.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif, dialogue, cherche à comprendre. Mais les services ne co-construisent pas directement ensemble — vous restez l'intermédiaire."
+    },
+    {
+      "id": "sjt_s09_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 9 · Réaction A",
+      "set_id": "sjt_s09",
+      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
+      "situation_title": "Collègue en surcharge",
+      "figures": [],
+      "question": "RÉACTION A : Vous invitez Thomas à prendre un café, vous l'écoutez sans juger, et vous lui proposez d'aborder ensemble la question de la répartition des tâches lors de la prochaine réunion d'équipe.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue direct et empathique, solution collaborative (redistribution en équipe), et cadre structuré (réunion d'équipe)."
+    },
+    {
+      "id": "sjt_s09_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 9 · Réaction B",
+      "set_id": "sjt_s09",
+      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
+      "situation_title": "Collègue en surcharge",
+      "figures": [],
+      "question": "RÉACTION B : Vous informez votre responsable que Thomas est en surcharge et qu'il faudrait intervenir.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Score attendu : -\nEscalade sans avoir d'abord proposé votre aide directement à Thomas. Vous ne prenez pas l'initiative de collaborer."
+    },
+    {
+      "id": "sjt_s09_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 9 · Réaction C",
+      "set_id": "sjt_s09",
+      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
+      "situation_title": "Collègue en surcharge",
+      "figures": [],
+      "question": "RÉACTION C : Vous respectez sa réponse et n'insistez pas — chacun gère sa charge de travail comme il l'entend.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité face à un collègue en difficulté visible. Ne pas agir alors que le problème est connu va à l'encontre de la collaboration."
+    },
+    {
+      "id": "sjt_s09_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 9 · Réaction D",
+      "set_id": "sjt_s09",
+      "situation": "Votre collègue Thomas semble débordé : il arrive tôt, part tard, et a annulé sa participation à plusieurs réunions d'équipe. Quand vous lui demandez comment il va, il répond « ça va, j'ai juste beaucoup de travail ». D'autres collègues ont remarqué la situation mais personne n'agit.",
+      "situation_title": "Collègue en surcharge",
+      "figures": [],
+      "question": "RÉACTION D : Vous proposez spontanément de l'aider sur une de ses tâches urgentes pour alléger sa charge cette semaine.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif, solidaire et empathique. Mais la solution est ponctuelle et ne s'attaque pas à la cause structurelle de la surcharge."
+    },
+    {
+      "id": "sjt_s10_ra",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 10 · Réaction A",
+      "set_id": "sjt_s10",
+      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation_title": "Retour d'expérience de fin de projet",
+      "figures": [],
+      "question": "RÉACTION A : Vous organisez une session de retour d'expérience structurée. Vous expliquez d'abord son utilité, puis invitez chacun à partager ce qui a fonctionné et ce qui pourrait être amélioré. Vous documentez les leçons apprises pour les futurs projets.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "E",
+      "explanation": "Score attendu : ++\nActif, dialogue, participation collective, cadre structuré et durable (documentation des leçons). Encourage le partage de connaissances."
+    },
+    {
+      "id": "sjt_s10_rb",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 10 · Réaction B",
+      "set_id": "sjt_s10",
+      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation_title": "Retour d'expérience de fin de projet",
+      "figures": [],
+      "question": "RÉACTION B : Vous rédigez vous-même le bilan sur base de vos observations et le partagez avec l'équipe pour commentaires par e-mail.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nActif mais unilatéral. Les collègues ne sont pas impliqués dans la réflexion collective — le partage de perspectives est limité."
+    },
+    {
+      "id": "sjt_s10_rc",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 10 · Réaction C",
+      "set_id": "sjt_s10",
+      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation_title": "Retour d'expérience de fin de projet",
+      "figures": [],
+      "question": "RÉACTION C : Vous laissez tomber le retour d'expérience puisque l'équipe n'est pas motivée. Vous informez votre responsable que le timing ne s'y prête pas.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Score attendu : --\nPassivité. Renoncer à un retour d'expérience fait perdre une opportunité d'apprentissage collectif et de partage de bonnes pratiques."
+    },
+    {
+      "id": "sjt_s10_rd",
+      "type": "sjt",
+      "source": "BOSA_SJT",
+      "book_ref": "Situation 10 · Réaction D",
+      "set_id": "sjt_s10",
+      "situation": "Votre projet vient de se terminer avec succès. Certains aspects se sont très bien passés, d'autres moins. Votre responsable vous demande de faire un bilan. Plusieurs membres de l'équipe semblent pressés de passer au projet suivant et ne voient pas l'intérêt d'un retour d'expérience.",
+      "situation_title": "Retour d'expérience de fin de projet",
+      "figures": [],
+      "question": "RÉACTION D : Vous envoyez un questionnaire en ligne à chaque membre de l'équipe pour recueillir anonymement les retours, puis vous compilez les résultats.",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Score attendu : +\nActif, implique les autres et peut encourager l'expression de ceux qui n'osent pas parler. Mais pas de dialogue direct ni de co-construction collective."
+    },
+    {
+      "id": "bosa_num_q1",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q1",
+      "set_id": null,
+      "figures": [],
+      "question": "Si un projet dispose d'un budget de 240 000 € réparti également sur 8 mois, quel est le budget mensuel ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "28 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "30 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "32 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "34 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "36 000 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "240 000 ÷ 8 = 30 000 €."
+    },
+    {
+      "id": "bosa_num_q2",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q2",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service public compte 180 employés. Si 20% travaillent à temps partiel, combien travaillent à temps plein ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "36"
+        },
+        {
+          "letter": "B",
+          "text": "124"
+        },
+        {
+          "letter": "C",
+          "text": "136"
+        },
+        {
+          "letter": "D",
+          "text": "144"
+        },
+        {
+          "letter": "E",
+          "text": "150"
+        }
+      ],
+      "correct": "D",
+      "explanation": "20% à temps partiel → 80% à temps plein. 180 × 0,80 = 144."
+    },
+    {
+      "id": "bosa_num_q3",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q3",
+      "set_id": null,
+      "figures": [],
+      "question": "Si 3 collaborateurs peuvent traiter 45 dossiers en une semaine, combien de dossiers 5 collaborateurs peuvent-ils traiter dans le même délai (au même rythme) ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "60"
+        },
+        {
+          "letter": "B",
+          "text": "65"
+        },
+        {
+          "letter": "C",
+          "text": "70"
+        },
+        {
+          "letter": "D",
+          "text": "75"
+        },
+        {
+          "letter": "E",
+          "text": "80"
+        }
+      ],
+      "correct": "D",
+      "explanation": "45 ÷ 3 = 15 dossiers par collaborateur par semaine. 15 × 5 = 75."
+    },
+    {
+      "id": "bosa_num_q4",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q4",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n3, 6, 12, 24, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "30"
+        },
+        {
+          "letter": "B",
+          "text": "36"
+        },
+        {
+          "letter": "C",
+          "text": "42"
+        },
+        {
+          "letter": "D",
+          "text": "48"
+        },
+        {
+          "letter": "E",
+          "text": "54"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Chaque terme est multiplié par 2 : 3→6→12→24→48."
+    },
+    {
+      "id": "bosa_num_q5",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q5",
+      "set_id": null,
+      "figures": [],
+      "question": "Le projet Alpha coûte 125 000 € et dure 6 mois. Le projet Beta coûte 180 000 € et dure 9 mois. Quel projet a le coût mensuel le plus bas ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Projet Alpha (20 833 €/mois)"
+        },
+        {
+          "letter": "B",
+          "text": "Projet Beta (20 000 €/mois)"
+        },
+        {
+          "letter": "C",
+          "text": "Les deux projets ont le même coût mensuel"
+        },
+        {
+          "letter": "D",
+          "text": "On ne peut pas le déterminer avec ces informations"
+        },
+        {
+          "letter": "E",
+          "text": "Projet Alpha (25 000 €/mois)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Alpha : 125 000 ÷ 6 = 20 833 €/mois. Beta : 180 000 ÷ 9 = 20 000 €/mois. Beta a le coût mensuel le plus bas."
+    },
+    {
+      "id": "bosa_num_q6",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q6",
+      "set_id": null,
+      "figures": [],
+      "question": "Le nombre de réclamations traitées par un service est passé de 1 250 au premier trimestre à 1 450 au deuxième trimestre. Quel est le pourcentage d'augmentation ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "12,0%"
+        },
+        {
+          "letter": "B",
+          "text": "13,8%"
+        },
+        {
+          "letter": "C",
+          "text": "16,0%"
+        },
+        {
+          "letter": "D",
+          "text": "18,2%"
+        },
+        {
+          "letter": "E",
+          "text": "20,0%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Augmentation = 1 450 − 1 250 = 200. Pourcentage = (200 ÷ 1 250) × 100 = 16,0%."
+    },
+    {
+      "id": "bosa_num_q7",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q7",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet est planifié sur 12 mois avec un budget total de 360 000 €. Après 4 mois, 40% du budget a été dépensé. Si les dépenses continuent au même rythme mensuel, de combien le projet dépassera-t-il son budget à la fin des 12 mois ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0 € (dans le budget)"
+        },
+        {
+          "letter": "B",
+          "text": "36 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "72 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "108 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "144 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "40% de 360 000 = 144 000 € dépensés en 4 mois → 36 000 €/mois.\nSur 12 mois : 36 000 × 12 = 432 000 €.\nDépassement : 432 000 − 360 000 = 72 000 €."
+    },
+    {
+      "id": "bosa_num_q8",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q8",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n2, 5, 11, 23, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "35"
+        },
+        {
+          "letter": "B",
+          "text": "42"
+        },
+        {
+          "letter": "C",
+          "text": "47"
+        },
+        {
+          "letter": "D",
+          "text": "53"
+        },
+        {
+          "letter": "E",
+          "text": "59"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Règle : ×2 puis +1. 2→5 (×2+1), 5→11 (×2+1), 11→23 (×2+1), 23→47 (×2+1)."
+    },
+    {
+      "id": "bosa_num_q9",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q9",
+      "set_id": null,
+      "figures": [],
+      "question": "Le tableau suivant montre les heures prestées par projet au cours de deux trimestres :\n\nProjet    |  T1  |  T2\nAlpha     | 450  | 520\nBeta      | 380  | 410\nGamma     | 290  | 350\n\nQuel projet a connu la plus forte augmentation en pourcentage entre T1 et T2 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Alpha"
+        },
+        {
+          "letter": "B",
+          "text": "Beta"
+        },
+        {
+          "letter": "C",
+          "text": "Gamma"
+        },
+        {
+          "letter": "D",
+          "text": "Alpha et Beta ex-aequo"
+        },
+        {
+          "letter": "E",
+          "text": "Les trois sont identiques"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Alpha : (520−450) ÷ 450 = 15,6%\nBeta : (410−380) ÷ 380 = 7,9%\nGamma : (350−290) ÷ 290 = 20,7%\nGamma a la plus forte augmentation.",
+      "question_html": "<p>Le tableau suivant montre les heures prestées par projet au cours de deux trimestres :</p><table class='q-table'><tr><th>Projet</th><th>T1</th><th>T2</th></tr><tr><td>Alpha</td><td>450</td><td>520</td></tr><tr><td>Beta</td><td>380</td><td>410</td></tr><tr><td>Gamma</td><td>290</td><td>350</td></tr></table><p>Quel projet a connu la plus forte augmentation en pourcentage entre T1 et T2 ?</p>"
+    },
+    {
+      "id": "bosa_num_q10",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q10",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service traite 800 dossiers par mois. Suite à une réorganisation, la productivité augmente de 15%. Suite à une deuxième optimisation, la productivité augmente encore de 10% par rapport au nouveau niveau. Combien de dossiers le service traite-t-il maintenant par mois ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "920"
+        },
+        {
+          "letter": "B",
+          "text": "1 000"
+        },
+        {
+          "letter": "C",
+          "text": "1 012"
+        },
+        {
+          "letter": "D",
+          "text": "1 020"
+        },
+        {
+          "letter": "E",
+          "text": "1 100"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Première augmentation : 800 × 1,15 = 920.\nDeuxième augmentation : 920 × 1,10 = 1 012.\nAttention : les pourcentages ne s'additionnent pas (15% + 10% ≠ 25% de 800)."
+    },
+    {
+      "id": "bosa_num_q11",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q11",
+      "set_id": null,
+      "figures": [],
+      "question": "Un département dispose de 96 000 € pour former ses 12 collaborateurs. Quel montant peut être consacré à chaque formation individuelle ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "7 200 €"
+        },
+        {
+          "letter": "B",
+          "text": "8 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "8 400 €"
+        },
+        {
+          "letter": "D",
+          "text": "9 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "9 600 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "96 000 ÷ 12 = 8 000 € par collaborateur."
+    },
+    {
+      "id": "bosa_num_q12",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q12",
+      "set_id": null,
+      "figures": [],
+      "question": "Sur 450 dossiers reçus, 18% ont été jugés incomplets. Combien de dossiers sont complets ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "369"
+        },
+        {
+          "letter": "B",
+          "text": "378"
+        },
+        {
+          "letter": "C",
+          "text": "381"
+        },
+        {
+          "letter": "D",
+          "text": "396"
+        },
+        {
+          "letter": "E",
+          "text": "405"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Dossiers incomplets : 450 × 0,18 = 81. Complets : 450 − 81 = 369."
+    },
+    {
+      "id": "bosa_num_q13",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q13",
+      "set_id": null,
+      "figures": [],
+      "question": "Une imprimante produit 240 pages en 8 minutes. Combien de pages produit-elle en 15 minutes au même rythme ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "360"
+        },
+        {
+          "letter": "B",
+          "text": "400"
+        },
+        {
+          "letter": "C",
+          "text": "420"
+        },
+        {
+          "letter": "D",
+          "text": "450"
+        },
+        {
+          "letter": "E",
+          "text": "480"
+        }
+      ],
+      "correct": "D",
+      "explanation": "240 ÷ 8 = 30 pages/minute. 30 × 15 = 450 pages."
+    },
+    {
+      "id": "bosa_num_q14",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q14",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n5, 10, 20, 40, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "60"
+        },
+        {
+          "letter": "B",
+          "text": "70"
+        },
+        {
+          "letter": "C",
+          "text": "80"
+        },
+        {
+          "letter": "D",
+          "text": "90"
+        },
+        {
+          "letter": "E",
+          "text": "100"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Chaque terme est multiplié par 2 : 5→10→20→40→80."
+    },
+    {
+      "id": "bosa_num_q15",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q15",
+      "set_id": null,
+      "figures": [],
+      "question": "Multiplier par 0,1 revient à diviser par combien ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0,1"
+        },
+        {
+          "letter": "B",
+          "text": "1"
+        },
+        {
+          "letter": "C",
+          "text": "5"
+        },
+        {
+          "letter": "D",
+          "text": "10"
+        },
+        {
+          "letter": "E",
+          "text": "100"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Multiplier par 0,1 = diviser par 10. Exemple : 50 × 0,1 = 5 = 50 ÷ 10."
+    },
+    {
+      "id": "bosa_num_q16",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q16",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet avait un budget initial de 200 000 €. Après révision, le budget est augmenté à 250 000 €. Quel est le pourcentage d'augmentation ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "20%"
+        },
+        {
+          "letter": "B",
+          "text": "25%"
+        },
+        {
+          "letter": "C",
+          "text": "30%"
+        },
+        {
+          "letter": "D",
+          "text": "50%"
+        },
+        {
+          "letter": "E",
+          "text": "125%"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Augmentation = 50 000. Pourcentage = (50 000 ÷ 200 000) × 100 = 25%."
+    },
+    {
+      "id": "bosa_num_q17",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q17",
+      "set_id": null,
+      "figures": [],
+      "question": "Si P = 12, Q = 15 et R = 18, laquelle de ces expressions a la plus grande valeur ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "P + Q"
+        },
+        {
+          "letter": "B",
+          "text": "Q + R"
+        },
+        {
+          "letter": "C",
+          "text": "P × 3"
+        },
+        {
+          "letter": "D",
+          "text": "R × 2"
+        },
+        {
+          "letter": "E",
+          "text": "P + Q + R"
+        }
+      ],
+      "correct": "E",
+      "explanation": "P+Q = 27, Q+R = 33, P×3 = 36, R×2 = 36, P+Q+R = 45. La somme des trois est la plus grande."
+    },
+    {
+      "id": "bosa_num_q18",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q18",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n1, 4, 9, 16, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "20"
+        },
+        {
+          "letter": "B",
+          "text": "23"
+        },
+        {
+          "letter": "C",
+          "text": "25"
+        },
+        {
+          "letter": "D",
+          "text": "28"
+        },
+        {
+          "letter": "E",
+          "text": "32"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Ce sont les carrés parfaits : 1², 2², 3², 4², 5² = 25."
+    },
+    {
+      "id": "bosa_num_q19",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q19",
+      "set_id": null,
+      "figures": [],
+      "question": "(a + 5) × 3 = 36. Quelle est la valeur de a ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "5"
+        },
+        {
+          "letter": "B",
+          "text": "7"
+        },
+        {
+          "letter": "C",
+          "text": "9"
+        },
+        {
+          "letter": "D",
+          "text": "11"
+        },
+        {
+          "letter": "E",
+          "text": "12"
+        }
+      ],
+      "correct": "B",
+      "explanation": "(a + 5) × 3 = 36 → a + 5 = 12 → a = 7."
+    },
+    {
+      "id": "bosa_num_q20",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q20",
+      "set_id": null,
+      "figures": [],
+      "question": "Pour réaliser un sondage, on doit interroger 5% de la population d'une ville de 84 000 habitants. Combien de personnes doivent être interrogées ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "420"
+        },
+        {
+          "letter": "B",
+          "text": "840"
+        },
+        {
+          "letter": "C",
+          "text": "4 200"
+        },
+        {
+          "letter": "D",
+          "text": "8 400"
+        },
+        {
+          "letter": "E",
+          "text": "42 000"
+        }
+      ],
+      "correct": "C",
+      "explanation": "84 000 × 0,05 = 4 200 personnes."
+    },
+    {
+      "id": "bosa_num_q21",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q21",
+      "set_id": null,
+      "figures": [],
+      "question": "Un fonctionnaire travaille 7h36 par jour. Combien de minutes cela représente-t-il ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "436"
+        },
+        {
+          "letter": "B",
+          "text": "446"
+        },
+        {
+          "letter": "C",
+          "text": "456"
+        },
+        {
+          "letter": "D",
+          "text": "466"
+        },
+        {
+          "letter": "E",
+          "text": "476"
+        }
+      ],
+      "correct": "C",
+      "explanation": "7 heures = 420 minutes + 36 minutes = 456 minutes."
+    },
+    {
+      "id": "bosa_num_q22",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q22",
+      "set_id": null,
+      "figures": [],
+      "question": "Budget annuel par service (en milliers d'euros) :\n\nService     | 2024  | 2025\nRH          | 320   | 340\nIT          | 510   | 490\nComm.       | 180   | 220\nJuridique   | 240   | 260\n\nQuel service a le budget total le plus élevé sur les deux années combinées ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "RH"
+        },
+        {
+          "letter": "B",
+          "text": "IT"
+        },
+        {
+          "letter": "C",
+          "text": "Communication"
+        },
+        {
+          "letter": "D",
+          "text": "Juridique"
+        },
+        {
+          "letter": "E",
+          "text": "RH et IT ex-aequo"
+        }
+      ],
+      "correct": "B",
+      "explanation": "RH : 320+340 = 660. IT : 510+490 = 1 000. Comm : 180+220 = 400. Juridique : 240+260 = 500. IT a le total le plus élevé.",
+      "question_html": "<p>Budget annuel par service (en milliers d'euros) :</p><table class='q-table'><tr><th>Service</th><th>2024</th><th>2025</th></tr><tr><td>RH</td><td>320</td><td>340</td></tr><tr><td>IT</td><td>510</td><td>490</td></tr><tr><td>Comm.</td><td>180</td><td>220</td></tr><tr><td>Juridique</td><td>240</td><td>260</td></tr></table><p>Quel service a le budget total le plus élevé sur les deux années combinées ?</p>"
+    },
+    {
+      "id": "bosa_num_q23",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q23",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet a reçu les évaluations suivantes de 5 parties prenantes : 7, 8, 6, 9 et 5. Quelle est la moyenne des évaluations ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "6,5"
+        },
+        {
+          "letter": "B",
+          "text": "7"
+        },
+        {
+          "letter": "C",
+          "text": "7,2"
+        },
+        {
+          "letter": "D",
+          "text": "7,5"
+        },
+        {
+          "letter": "E",
+          "text": "8"
+        }
+      ],
+      "correct": "B",
+      "explanation": "(7 + 8 + 6 + 9 + 5) = 35. Moyenne = 35 ÷ 5 = 7."
+    },
+    {
+      "id": "bosa_num_q24",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q24",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service a un taux d'absentéisme de 4,5%. S'il compte 200 collaborateurs, combien sont absents en moyenne ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "7"
+        },
+        {
+          "letter": "B",
+          "text": "9"
+        },
+        {
+          "letter": "C",
+          "text": "11"
+        },
+        {
+          "letter": "D",
+          "text": "13"
+        },
+        {
+          "letter": "E",
+          "text": "15"
+        }
+      ],
+      "correct": "B",
+      "explanation": "200 × 0,045 = 9 personnes absentes en moyenne."
+    },
+    {
+      "id": "bosa_num_q25",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q25",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n2, 6, 18, 54, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "108"
+        },
+        {
+          "letter": "B",
+          "text": "126"
+        },
+        {
+          "letter": "C",
+          "text": "162"
+        },
+        {
+          "letter": "D",
+          "text": "180"
+        },
+        {
+          "letter": "E",
+          "text": "216"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Chaque terme est multiplié par 3 : 2→6→18→54→162."
+    },
+    {
+      "id": "bosa_num_q26",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q26",
+      "set_id": null,
+      "figures": [],
+      "question": "Un bureau de 45 m² doit accueillir des postes de travail de 6 m² chacun. Combien de postes peut-on installer au maximum ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "6"
+        },
+        {
+          "letter": "B",
+          "text": "7"
+        },
+        {
+          "letter": "C",
+          "text": "8"
+        },
+        {
+          "letter": "D",
+          "text": "9"
+        },
+        {
+          "letter": "E",
+          "text": "10"
+        }
+      ],
+      "correct": "B",
+      "explanation": "45 ÷ 6 = 7,5. On ne peut installer que des postes complets : 7 postes."
+    },
+    {
+      "id": "bosa_num_q27",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q27",
+      "set_id": null,
+      "figures": [],
+      "question": "Pour un sondage, le ratio hommes/femmes doit être de 3:2. Si 120 hommes participent, combien de femmes faut-il ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "60"
+        },
+        {
+          "letter": "B",
+          "text": "72"
+        },
+        {
+          "letter": "C",
+          "text": "80"
+        },
+        {
+          "letter": "D",
+          "text": "90"
+        },
+        {
+          "letter": "E",
+          "text": "100"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Ratio 3:2. Si 3 parts = 120, alors 1 part = 40. 2 parts = 80 femmes."
+    },
+    {
+      "id": "bosa_num_q28",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q28",
+      "set_id": null,
+      "figures": [],
+      "question": "Si 2x − 8 = 12, quelle est la valeur de x ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "2"
+        },
+        {
+          "letter": "B",
+          "text": "6"
+        },
+        {
+          "letter": "C",
+          "text": "8"
+        },
+        {
+          "letter": "D",
+          "text": "10"
+        },
+        {
+          "letter": "E",
+          "text": "12"
+        }
+      ],
+      "correct": "D",
+      "explanation": "2x − 8 = 12 → 2x = 20 → x = 10."
+    },
+    {
+      "id": "bosa_num_q29",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q29",
+      "set_id": null,
+      "figures": [],
+      "question": "Trois fournisseurs proposent un service d'impression :\n- Fournisseur X : 0,08 € par page\n- Fournisseur Y : forfait de 40 € pour 600 pages\n- Fournisseur Z : 0,065 € par page\n\nPour une commande de 600 pages, quel fournisseur est le moins cher ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Fournisseur X"
+        },
+        {
+          "letter": "B",
+          "text": "Fournisseur Y"
+        },
+        {
+          "letter": "C",
+          "text": "Fournisseur Z"
+        },
+        {
+          "letter": "D",
+          "text": "Fournisseurs Y et Z ex-aequo"
+        },
+        {
+          "letter": "E",
+          "text": "Les trois sont identiques"
+        }
+      ],
+      "correct": "C",
+      "explanation": "X : 600 × 0,08 = 48 €. Y : 40 €. Z : 600 × 0,065 = 39 €. Fournisseur Z est le moins cher."
+    },
+    {
+      "id": "bosa_num_q30",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q30",
+      "set_id": null,
+      "figures": [],
+      "question": "Un produit coûte 85 €. Après une réduction de 20%, quel est le nouveau prix ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "65 €"
+        },
+        {
+          "letter": "B",
+          "text": "68 €"
+        },
+        {
+          "letter": "C",
+          "text": "70 €"
+        },
+        {
+          "letter": "D",
+          "text": "72 €"
+        },
+        {
+          "letter": "E",
+          "text": "75 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Réduction : 85 × 0,20 = 17 €. Nouveau prix : 85 − 17 = 68 €."
+    },
+    {
+      "id": "bosa_num_q31",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q31",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n100, 90, 81, 73, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "63"
+        },
+        {
+          "letter": "B",
+          "text": "64"
+        },
+        {
+          "letter": "C",
+          "text": "65"
+        },
+        {
+          "letter": "D",
+          "text": "66"
+        },
+        {
+          "letter": "E",
+          "text": "67"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Les écarts diminuent de 1 : −10, −9, −8, −7. Donc 73 − 7 = 66."
+    },
+    {
+      "id": "bosa_num_q32",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q32",
+      "set_id": null,
+      "figures": [],
+      "question": "Un train part à 9h47 et arrive à 11h23. Quelle est la durée du trajet ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "1h24"
+        },
+        {
+          "letter": "B",
+          "text": "1h36"
+        },
+        {
+          "letter": "C",
+          "text": "1h46"
+        },
+        {
+          "letter": "D",
+          "text": "2h24"
+        },
+        {
+          "letter": "E",
+          "text": "2h36"
+        }
+      ],
+      "correct": "B",
+      "explanation": "De 9h47 à 11h23 : de 9h47 à 10h00 = 13 min, de 10h00 à 11h23 = 1h23. Total = 1h36."
+    },
+    {
+      "id": "bosa_num_q33",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q33",
+      "set_id": null,
+      "figures": [],
+      "question": "Une photocopieuse utilise 3 cartouches pour 9 000 copies. Combien de cartouches faut-il pour 15 000 copies ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "4"
+        },
+        {
+          "letter": "B",
+          "text": "5"
+        },
+        {
+          "letter": "C",
+          "text": "6"
+        },
+        {
+          "letter": "D",
+          "text": "7"
+        },
+        {
+          "letter": "E",
+          "text": "8"
+        }
+      ],
+      "correct": "B",
+      "explanation": "1 cartouche = 3 000 copies. 15 000 ÷ 3 000 = 5 cartouches."
+    },
+    {
+      "id": "bosa_num_q34",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q34",
+      "set_id": null,
+      "figures": [],
+      "question": "Satisfaction des usagers par canal (score sur 10) :\n\nCanal      | 2023 | 2024\nGuichet    | 7,2  | 7,5\nTéléphone  | 6,8  | 7,1\nE-mail     | 5,9  | 6,4\nEn ligne   | 6,1  | 7,0\n\nQuel canal a connu la plus grande amélioration entre 2023 et 2024 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Guichet"
+        },
+        {
+          "letter": "B",
+          "text": "Téléphone"
+        },
+        {
+          "letter": "C",
+          "text": "E-mail"
+        },
+        {
+          "letter": "D",
+          "text": "En ligne"
+        },
+        {
+          "letter": "E",
+          "text": "E-mail et En ligne ex-aequo"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Guichet : +0,3. Téléphone : +0,3. E-mail : +0,5. En ligne : +0,9. Le canal En ligne a la plus grande amélioration.",
+      "question_html": "<p>Satisfaction des usagers par canal (score sur 10) :</p><table class='q-table'><tr><th>Canal</th><th>2023</th><th>2024</th></tr><tr><td>Guichet</td><td>7,2</td><td>7,5</td></tr><tr><td>Téléphone</td><td>6,8</td><td>7,1</td></tr><tr><td>E-mail</td><td>5,9</td><td>6,4</td></tr><tr><td>En ligne</td><td>6,1</td><td>7,0</td></tr></table><p>Quel canal a connu la plus grande amélioration entre 2023 et 2024 ?</p>"
+    },
+    {
+      "id": "bosa_num_q35",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q35",
+      "set_id": null,
+      "figures": [],
+      "question": "Les durées de traitement de 4 dossiers sont : 12 jours, 8 jours, 15 jours et 9 jours. Quelle est la durée moyenne ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10 jours"
+        },
+        {
+          "letter": "B",
+          "text": "10,5 jours"
+        },
+        {
+          "letter": "C",
+          "text": "11 jours"
+        },
+        {
+          "letter": "D",
+          "text": "11,5 jours"
+        },
+        {
+          "letter": "E",
+          "text": "12 jours"
+        }
+      ],
+      "correct": "C",
+      "explanation": "(12 + 8 + 15 + 9) = 44. Moyenne = 44 ÷ 4 = 11 jours."
+    },
+    {
+      "id": "bosa_num_q36",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q36",
+      "set_id": null,
+      "figures": [],
+      "question": "Un employé gagne 3 250 € brut par mois. Après déduction de 13,07% de cotisations sociales, quel est son salaire imposable ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "2 750,23 €"
+        },
+        {
+          "letter": "B",
+          "text": "2 825,23 €"
+        },
+        {
+          "letter": "C",
+          "text": "2 825,72 €"
+        },
+        {
+          "letter": "D",
+          "text": "2 834,50 €"
+        },
+        {
+          "letter": "E",
+          "text": "2 850,00 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Cotisations : 3 250 × 0,1307 = 424,775 ≈ 424,78 €. Imposable : 3 250 − 424,78 = 2 825,23 €."
+    },
+    {
+      "id": "bosa_num_q37",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q37",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n1, 1, 2, 3, 5, 8, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "11"
+        },
+        {
+          "letter": "B",
+          "text": "12"
+        },
+        {
+          "letter": "C",
+          "text": "13"
+        },
+        {
+          "letter": "D",
+          "text": "14"
+        },
+        {
+          "letter": "E",
+          "text": "15"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Suite de Fibonacci : chaque terme est la somme des deux précédents. 5 + 8 = 13."
+    },
+    {
+      "id": "bosa_num_q38",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q38",
+      "set_id": null,
+      "figures": [],
+      "question": "Si A = 3/4, B = 0,8 et C = 7/10, lequel est le plus grand ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A"
+        },
+        {
+          "letter": "B",
+          "text": "B"
+        },
+        {
+          "letter": "C",
+          "text": "C"
+        },
+        {
+          "letter": "D",
+          "text": "A et B sont égaux"
+        },
+        {
+          "letter": "E",
+          "text": "Les trois sont égaux"
+        }
+      ],
+      "correct": "B",
+      "explanation": "A = 3/4 = 0,75. B = 0,8. C = 7/10 = 0,70. B (0,8) est le plus grand."
+    },
+    {
+      "id": "bosa_num_q39",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q39",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service doit numériser 12 000 documents. Après 3 semaines, 4 500 ont été numérisés. Au même rythme, combien de semaines supplémentaires faudra-t-il pour terminer ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "4"
+        },
+        {
+          "letter": "B",
+          "text": "5"
+        },
+        {
+          "letter": "C",
+          "text": "6"
+        },
+        {
+          "letter": "D",
+          "text": "7"
+        },
+        {
+          "letter": "E",
+          "text": "8"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Rythme : 4 500 ÷ 3 = 1 500 par semaine. Restant : 12 000 − 4 500 = 7 500. Semaines : 7 500 ÷ 1 500 = 5."
+    },
+    {
+      "id": "bosa_num_q40",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q40",
+      "set_id": null,
+      "figures": [],
+      "question": "Le périmètre d'un rectangle est de 56 cm. Si la largeur est de 10 cm, quelle est la longueur ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "14 cm"
+        },
+        {
+          "letter": "B",
+          "text": "16 cm"
+        },
+        {
+          "letter": "C",
+          "text": "18 cm"
+        },
+        {
+          "letter": "D",
+          "text": "20 cm"
+        },
+        {
+          "letter": "E",
+          "text": "22 cm"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Périmètre = 2 × (L + l). 56 = 2 × (L + 10) → 28 = L + 10 → L = 18 cm."
+    },
+    {
+      "id": "bosa_num_q41",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q41",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service a traité 840 dossiers en janvier. En février, il en a traité 966. Quelle est l'augmentation en pourcentage ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10%"
+        },
+        {
+          "letter": "B",
+          "text": "12%"
+        },
+        {
+          "letter": "C",
+          "text": "15%"
+        },
+        {
+          "letter": "D",
+          "text": "18%"
+        },
+        {
+          "letter": "E",
+          "text": "20%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Augmentation = 966 − 840 = 126. Pourcentage = (126 ÷ 840) × 100 = 15%."
+    },
+    {
+      "id": "bosa_num_q42",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q42",
+      "set_id": null,
+      "figures": [],
+      "question": "Diviser par 0,5 revient à multiplier par combien ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "0,2"
+        },
+        {
+          "letter": "B",
+          "text": "0,5"
+        },
+        {
+          "letter": "C",
+          "text": "1"
+        },
+        {
+          "letter": "D",
+          "text": "2"
+        },
+        {
+          "letter": "E",
+          "text": "5"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Diviser par 0,5 = multiplier par 2. Exemple : 10 ÷ 0,5 = 20 = 10 × 2."
+    },
+    {
+      "id": "bosa_num_q43",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q43",
+      "set_id": null,
+      "figures": [],
+      "question": "Nombre de projets par statut et par département :\n\nDépartement | En cours | Terminé | En attente\nIT          | 8        | 12      | 3\nRH          | 4        | 6       | 2\nFinance     | 5        | 9       | 1\n\nQuel est le nombre total de projets terminés ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "21"
+        },
+        {
+          "letter": "B",
+          "text": "25"
+        },
+        {
+          "letter": "C",
+          "text": "27"
+        },
+        {
+          "letter": "D",
+          "text": "30"
+        },
+        {
+          "letter": "E",
+          "text": "33"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Projets terminés : 12 + 6 + 9 = 27.",
+      "question_html": "<p>Nombre de projets par statut et par département :</p><table class='q-table'><tr><th>Département</th><th>En cours</th><th>Terminé</th><th>En attente</th></tr><tr><td>IT</td><td>8</td><td>12</td><td>3</td></tr><tr><td>RH</td><td>4</td><td>6</td><td>2</td></tr><tr><td>Finance</td><td>5</td><td>9</td><td>1</td></tr></table><p>Quel est le nombre total de projets terminés ?</p>"
+    },
+    {
+      "id": "bosa_num_q44",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q44",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n64, 32, 16, 8, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "2"
+        },
+        {
+          "letter": "B",
+          "text": "3"
+        },
+        {
+          "letter": "C",
+          "text": "4"
+        },
+        {
+          "letter": "D",
+          "text": "6"
+        },
+        {
+          "letter": "E",
+          "text": "0"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Chaque terme est divisé par 2 : 64→32→16→8→4."
+    },
+    {
+      "id": "bosa_num_q45",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q45",
+      "set_id": null,
+      "figures": [],
+      "question": "Un employé peut choisir entre deux formules de remboursement de transport :\n- Formule A : 80% d'un abonnement à 75 €/mois\n- Formule B : forfait fixe de 55 €/mois\n\nQuelle formule est la plus avantageuse pour l'employé ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Formule A (60 €/mois)"
+        },
+        {
+          "letter": "B",
+          "text": "Formule B (55 €/mois)"
+        },
+        {
+          "letter": "C",
+          "text": "Les deux sont identiques"
+        },
+        {
+          "letter": "D",
+          "text": "Formule A (65 €/mois)"
+        },
+        {
+          "letter": "E",
+          "text": "On ne peut pas déterminer"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Formule A : 75 × 0,80 = 60 €. Formule B : 55 €. L'employé reçoit plus avec la formule A."
+    },
+    {
+      "id": "bosa_num_q46",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q46",
+      "set_id": null,
+      "figures": [],
+      "question": "Un bâtiment consomme 45 000 kWh par an. Après rénovation, la consommation baisse de 12%. Quelle est la nouvelle consommation annuelle ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "36 000 kWh"
+        },
+        {
+          "letter": "B",
+          "text": "38 400 kWh"
+        },
+        {
+          "letter": "C",
+          "text": "39 600 kWh"
+        },
+        {
+          "letter": "D",
+          "text": "40 500 kWh"
+        },
+        {
+          "letter": "E",
+          "text": "41 200 kWh"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Réduction : 45 000 × 0,12 = 5 400. Nouvelle consommation : 45 000 − 5 400 = 39 600 kWh."
+    },
+    {
+      "id": "bosa_num_q47",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q47",
+      "set_id": null,
+      "figures": [],
+      "question": "Un fonctionnaire preste 38 heures par semaine sur 5 jours. Il travaille 230 jours par an. Combien d'heures preste-t-il par an ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "1 634,4"
+        },
+        {
+          "letter": "B",
+          "text": "1 710,4"
+        },
+        {
+          "letter": "C",
+          "text": "1 748,0"
+        },
+        {
+          "letter": "D",
+          "text": "1 824,0"
+        },
+        {
+          "letter": "E",
+          "text": "1 900,0"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Heures/jour = 38 ÷ 5 = 7,6. Heures/an = 7,6 × 230 = 1 748,0."
+    },
+    {
+      "id": "bosa_num_q48",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q48",
+      "set_id": null,
+      "figures": [],
+      "question": "Le temps d'attente moyen au guichet est de 12 minutes. Si 5 personnes attendent respectivement 8, 14, 10, 18 et x minutes, quelle est la valeur de x ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "8"
+        },
+        {
+          "letter": "B",
+          "text": "10"
+        },
+        {
+          "letter": "C",
+          "text": "12"
+        },
+        {
+          "letter": "D",
+          "text": "14"
+        },
+        {
+          "letter": "E",
+          "text": "16"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Moyenne = 12 → total = 60. Somme connue = 8+14+10+18 = 50. x = 60 − 50 = 10."
+    },
+    {
+      "id": "bosa_num_q49",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q49",
+      "set_id": null,
+      "figures": [],
+      "question": "Sur une carte à l'échelle 1:25 000, une distance mesure 8 cm. Quelle est la distance réelle ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "200 m"
+        },
+        {
+          "letter": "B",
+          "text": "2 km"
+        },
+        {
+          "letter": "C",
+          "text": "20 km"
+        },
+        {
+          "letter": "D",
+          "text": "0,2 km"
+        },
+        {
+          "letter": "E",
+          "text": "25 km"
+        }
+      ],
+      "correct": "B",
+      "explanation": "8 cm × 25 000 = 200 000 cm = 2 000 m = 2 km."
+    },
+    {
+      "id": "bosa_num_q50",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q50",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n3, 7, 15, 31, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "47"
+        },
+        {
+          "letter": "B",
+          "text": "55"
+        },
+        {
+          "letter": "C",
+          "text": "62"
+        },
+        {
+          "letter": "D",
+          "text": "63"
+        },
+        {
+          "letter": "E",
+          "text": "65"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Règle : ×2 puis +1. 3→7 (×2+1), 7→15 (×2+1), 15→31 (×2+1), 31→63 (×2+1)."
+    },
+    {
+      "id": "bosa_num_q51",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q51",
+      "set_id": null,
+      "figures": [],
+      "question": "Le budget d'un projet est passé de 180 000 € à 153 000 €. Quel est le pourcentage de diminution ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "12%"
+        },
+        {
+          "letter": "B",
+          "text": "15%"
+        },
+        {
+          "letter": "C",
+          "text": "17%"
+        },
+        {
+          "letter": "D",
+          "text": "18%"
+        },
+        {
+          "letter": "E",
+          "text": "20%"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Diminution = 180 000 − 153 000 = 27 000. Pourcentage = (27 000 ÷ 180 000) × 100 = 15%."
+    },
+    {
+      "id": "bosa_num_q52",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q52",
+      "set_id": null,
+      "figures": [],
+      "question": "Un article coûte 200 €. Il est d'abord soldé de 30%, puis une remise supplémentaire de 10% est appliquée sur le prix soldé. Quel est le prix final ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "120 €"
+        },
+        {
+          "letter": "B",
+          "text": "126 €"
+        },
+        {
+          "letter": "C",
+          "text": "130 €"
+        },
+        {
+          "letter": "D",
+          "text": "132 €"
+        },
+        {
+          "letter": "E",
+          "text": "140 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Après −30% : 200 × 0,70 = 140 €. Après −10% : 140 × 0,90 = 126 €.\nAttention : −30% puis −10% ≠ −40%."
+    },
+    {
+      "id": "bosa_num_q53",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q53",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service emploie 8 personnes à 3 500 €/mois et 4 personnes à 4 200 €/mois. Quel est le coût salarial mensuel total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "42 800 €"
+        },
+        {
+          "letter": "B",
+          "text": "44 800 €"
+        },
+        {
+          "letter": "C",
+          "text": "46 200 €"
+        },
+        {
+          "letter": "D",
+          "text": "48 600 €"
+        },
+        {
+          "letter": "E",
+          "text": "50 400 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "(8 × 3 500) + (4 × 4 200) = 28 000 + 16 800 = 44 800 €."
+    },
+    {
+      "id": "bosa_num_q54",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q54",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n1, 3, 7, 15, 31, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "47"
+        },
+        {
+          "letter": "B",
+          "text": "55"
+        },
+        {
+          "letter": "C",
+          "text": "62"
+        },
+        {
+          "letter": "D",
+          "text": "63"
+        },
+        {
+          "letter": "E",
+          "text": "65"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Chaque terme = précédent × 2 + 1. 31 × 2 + 1 = 63. Ou : 2ⁿ − 1 (1, 3, 7, 15, 31, 63)."
+    },
+    {
+      "id": "bosa_num_q55",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q55",
+      "set_id": null,
+      "figures": [],
+      "question": "Répartition du personnel par niveau et par régime :\n\nNiveau | Temps plein | Temps partiel\nA     | 45          | 8\nB     | 72          | 15\nC     | 38          | 22\nD     | 25          | 10\n\nQuel pourcentage du personnel total travaille à temps partiel ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "19,4%"
+        },
+        {
+          "letter": "B",
+          "text": "21,5%"
+        },
+        {
+          "letter": "C",
+          "text": "23,4%"
+        },
+        {
+          "letter": "D",
+          "text": "25,0%"
+        },
+        {
+          "letter": "E",
+          "text": "27,3%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Temps partiel total : 8+15+22+10 = 55. Total : (45+72+38+25)+(8+15+22+10) = 180+55 = 235.\nPourcentage = (55 ÷ 235) × 100 ≈ 23,4%.",
+      "question_html": "<p>Répartition du personnel par niveau et par régime :</p><table class='q-table'><tr><th>Niveau</th><th>Temps plein</th><th>Temps partiel</th></tr><tr><td>A</td><td>45</td><td>8</td></tr><tr><td>B</td><td>72</td><td>15</td></tr><tr><td>C</td><td>38</td><td>22</td></tr><tr><td>D</td><td>25</td><td>10</td></tr></table><p>Quel pourcentage du personnel total travaille à temps partiel ?</p>"
+    },
+    {
+      "id": "bosa_num_q56",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q56",
+      "set_id": null,
+      "figures": [],
+      "question": "Un consultant externe facture 850 €/jour. Si un projet nécessite 3 consultants pendant 4 jours par semaine sur 6 semaines, quel est le coût total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "51 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "57 600 €"
+        },
+        {
+          "letter": "C",
+          "text": "61 200 €"
+        },
+        {
+          "letter": "D",
+          "text": "68 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "72 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Jours totaux = 3 × 4 × 6 = 72 jours-consultant. Coût = 72 × 850 = 61 200 €."
+    },
+    {
+      "id": "bosa_num_q57",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q57",
+      "set_id": null,
+      "figures": [],
+      "question": "Le nombre de visiteurs d'un site web est passé de 45 000 à 54 000 en un mois. Si cette croissance mensuelle se maintient, combien de visiteurs le site aura-t-il dans deux mois (depuis le niveau initial) ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "63 000"
+        },
+        {
+          "letter": "B",
+          "text": "64 800"
+        },
+        {
+          "letter": "C",
+          "text": "66 000"
+        },
+        {
+          "letter": "D",
+          "text": "68 400"
+        },
+        {
+          "letter": "E",
+          "text": "72 000"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Croissance = (54 000 − 45 000) ÷ 45 000 = 20%. Mois 2 : 54 000 × 1,20 = 64 800."
+    },
+    {
+      "id": "bosa_num_q58",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q58",
+      "set_id": null,
+      "figures": [],
+      "question": "Dans un service, le ratio entre les postes budgétaires et les postes effectivement occupés est de 5:4. Si le service a 60 postes budgétaires, combien sont vacants ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "8"
+        },
+        {
+          "letter": "B",
+          "text": "10"
+        },
+        {
+          "letter": "C",
+          "text": "12"
+        },
+        {
+          "letter": "D",
+          "text": "15"
+        },
+        {
+          "letter": "E",
+          "text": "20"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Ratio 5:4 → pour 5 postes budgétaires, 4 sont occupés. 60 × (4/5) = 48 occupés. Vacants : 60 − 48 = 12."
+    },
+    {
+      "id": "bosa_num_q59",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q59",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n2, 3, 5, 9, 17, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "25"
+        },
+        {
+          "letter": "B",
+          "text": "29"
+        },
+        {
+          "letter": "C",
+          "text": "31"
+        },
+        {
+          "letter": "D",
+          "text": "33"
+        },
+        {
+          "letter": "E",
+          "text": "35"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Les écarts doublent : +1, +2, +4, +8, +16. Donc 17 + 16 = 33."
+    },
+    {
+      "id": "bosa_num_q60",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q60",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet a 3 phases :\n- Phase 1 : 3 mois, coût mensuel 12 000 €\n- Phase 2 : 5 mois, coût mensuel 18 000 €\n- Phase 3 : 2 mois, coût mensuel 8 000 €\n\nQuel est le coût total du projet ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "126 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "138 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "142 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "148 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "152 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Phase 1 : 3 × 12 000 = 36 000. Phase 2 : 5 × 18 000 = 90 000. Phase 3 : 2 × 8 000 = 16 000.\nTotal = 36 000 + 90 000 + 16 000 = 142 000 €."
+    },
+    {
+      "id": "bosa_num_q61",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q61",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet obtient les scores suivants lors de l'évaluation :\n- Qualité (coeff. 3) : 8/10\n- Délais (coeff. 2) : 6/10\n- Budget (coeff. 1) : 9/10\n\nQuelle est la note moyenne pondérée ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "7,0"
+        },
+        {
+          "letter": "B",
+          "text": "7,5"
+        },
+        {
+          "letter": "C",
+          "text": "7,7"
+        },
+        {
+          "letter": "D",
+          "text": "8,0"
+        },
+        {
+          "letter": "E",
+          "text": "8,2"
+        }
+      ],
+      "correct": "B",
+      "explanation": "(8×3 + 6×2 + 9×1) ÷ (3+2+1) = (24 + 12 + 9) ÷ 6 = 45 ÷ 6 = 7,5."
+    },
+    {
+      "id": "bosa_num_q62",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q62",
+      "set_id": null,
+      "figures": [],
+      "question": "Temps de réponse moyen aux demandes (en jours ouvrables) :\n\nType de demande    | T1   | T2   | T3   | T4\nInformation        | 2,1  | 1,8  | 1,5  | 1,3\nRéclamation        | 5,4  | 5,0  | 4,8  | 4,2\nDemande technique  | 8,2  | 7,5  | 7,0  | 6,8\n\nQuel type de demande a connu la plus forte réduction en pourcentage entre T1 et T4 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Information"
+        },
+        {
+          "letter": "B",
+          "text": "Réclamation"
+        },
+        {
+          "letter": "C",
+          "text": "Demande technique"
+        },
+        {
+          "letter": "D",
+          "text": "Information et Réclamation ex-aequo"
+        },
+        {
+          "letter": "E",
+          "text": "Les trois sont identiques"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Information : (2,1−1,3)/2,1 = 38,1%. Réclamation : (5,4−4,2)/5,4 = 22,2%. Technique : (8,2−6,8)/8,2 = 17,1%.\nInformation a la plus forte réduction en pourcentage.",
+      "question_html": "<p>Temps de réponse moyen aux demandes (en jours ouvrables) :</p><table class='q-table'><tr><th>Type de demande</th><th>T1</th><th>T2</th><th>T3</th><th>T4</th></tr><tr><td>Information</td><td>2,1</td><td>1,8</td><td>1,5</td><td>1,3</td></tr><tr><td>Réclamation</td><td>5,4</td><td>5,0</td><td>4,8</td><td>4,2</td></tr><tr><td>Demande technique</td><td>8,2</td><td>7,5</td><td>7,0</td><td>6,8</td></tr></table><p>Quel type de demande a connu la plus forte réduction en pourcentage entre T1 et T4 ?</p>"
+    },
+    {
+      "id": "bosa_num_q63",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q63",
+      "set_id": null,
+      "figures": [],
+      "question": "Un investissement de 10 000 € croît de 8% la première année, puis perd 5% la deuxième année. Quelle est sa valeur après 2 ans ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10 260 €"
+        },
+        {
+          "letter": "B",
+          "text": "10 300 €"
+        },
+        {
+          "letter": "C",
+          "text": "10 340 €"
+        },
+        {
+          "letter": "D",
+          "text": "10 400 €"
+        },
+        {
+          "letter": "E",
+          "text": "10 500 €"
+        }
+      ],
+      "correct": "A",
+      "explanation": "An 1 : 10 000 × 1,08 = 10 800. An 2 : 10 800 × 0,95 = 10 260 €."
+    },
+    {
+      "id": "bosa_num_q64",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q64",
+      "set_id": null,
+      "figures": [],
+      "question": "Un bureau commande 15 ordinateurs à 1 200 € pièce et 15 écrans à 350 € pièce. La livraison coûte 2% du montant total. Quel est le coût total avec livraison ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "23 250 €"
+        },
+        {
+          "letter": "B",
+          "text": "23 460 €"
+        },
+        {
+          "letter": "C",
+          "text": "23 715 €"
+        },
+        {
+          "letter": "D",
+          "text": "24 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "24 225 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Ordinateurs : 15 × 1 200 = 18 000. Écrans : 15 × 350 = 5 250. Sous-total = 23 250.\nLivraison : 23 250 × 0,02 = 465. Total = 23 250 + 465 = 23 715 €."
+    },
+    {
+      "id": "bosa_num_q65",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q65",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n4, 5, 7, 10, 14, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "17"
+        },
+        {
+          "letter": "B",
+          "text": "18"
+        },
+        {
+          "letter": "C",
+          "text": "19"
+        },
+        {
+          "letter": "D",
+          "text": "20"
+        },
+        {
+          "letter": "E",
+          "text": "21"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Les écarts augmentent de 1 : +1, +2, +3, +4, +5. Donc 14 + 5 = 19."
+    },
+    {
+      "id": "bosa_num_q66",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q66",
+      "set_id": null,
+      "figures": [],
+      "question": "Un prix a augmenté de 25%. Pour revenir au prix initial, de quel pourcentage faut-il le réduire ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "15%"
+        },
+        {
+          "letter": "B",
+          "text": "20%"
+        },
+        {
+          "letter": "C",
+          "text": "25%"
+        },
+        {
+          "letter": "D",
+          "text": "30%"
+        },
+        {
+          "letter": "E",
+          "text": "33%"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Si prix initial = 100, après +25% = 125. Pour revenir à 100 : (125−100)/125 = 25/125 = 20%."
+    },
+    {
+      "id": "bosa_num_q67",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q67",
+      "set_id": null,
+      "figures": [],
+      "question": "Un mélange contient de l'eau et du concentré dans un ratio de 7:3. Si on a 2,1 litres de concentré, combien de litres d'eau faut-il ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "4,2 L"
+        },
+        {
+          "letter": "B",
+          "text": "4,9 L"
+        },
+        {
+          "letter": "C",
+          "text": "5,6 L"
+        },
+        {
+          "letter": "D",
+          "text": "6,3 L"
+        },
+        {
+          "letter": "E",
+          "text": "7,0 L"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Ratio eau:concentré = 7:3. Si 3 parts = 2,1 L, 1 part = 0,7 L. Eau = 7 × 0,7 = 4,9 L."
+    },
+    {
+      "id": "bosa_num_q68",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q68",
+      "set_id": null,
+      "figures": [],
+      "question": "Un département dépense 15 000 €/mois en personnel et 8 000 €/mois en fonctionnement. On prévoit une hausse de 3% sur le personnel et de 5% sur le fonctionnement l'année prochaine. Quel sera le budget mensuel total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "23 550 €"
+        },
+        {
+          "letter": "B",
+          "text": "23 750 €"
+        },
+        {
+          "letter": "C",
+          "text": "23 850 €"
+        },
+        {
+          "letter": "D",
+          "text": "24 100 €"
+        },
+        {
+          "letter": "E",
+          "text": "24 350 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Personnel : 15 000 × 1,03 = 15 450. Fonctionnement : 8 000 × 1,05 = 8 400. Total = 23 850 €."
+    },
+    {
+      "id": "bosa_num_q69",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q69",
+      "set_id": null,
+      "figures": [],
+      "question": "Coût par ETP (équivalent temps plein) par service :\n\nService  | ETP  | Budget (k€)\nIT       | 25   | 1 875\nRH       | 12   | 780\nComm.    | 8    | 640\nLogist.  | 18   | 1 080\n\nQuel service a le coût par ETP le plus élevé ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "IT"
+        },
+        {
+          "letter": "B",
+          "text": "RH"
+        },
+        {
+          "letter": "C",
+          "text": "Communication"
+        },
+        {
+          "letter": "D",
+          "text": "Logistique"
+        },
+        {
+          "letter": "E",
+          "text": "IT et Communication ex-aequo"
+        }
+      ],
+      "correct": "C",
+      "explanation": "IT : 1 875/25 = 75 k€. RH : 780/12 = 65 k€. Comm : 640/8 = 80 k€. Logist : 1 080/18 = 60 k€.\nCommunication a le coût par ETP le plus élevé.",
+      "question_html": "<p>Coût par ETP (équivalent temps plein) par service :</p><table class='q-table'><tr><th>Service</th><th>ETP</th><th>Budget (k€)</th></tr><tr><td>IT</td><td>25</td><td>1 875</td></tr><tr><td>RH</td><td>12</td><td>780</td></tr><tr><td>Comm.</td><td>8</td><td>640</td></tr><tr><td>Logist.</td><td>18</td><td>1 080</td></tr></table><p>Quel service a le coût par ETP le plus élevé ?</p>"
+    },
+    {
+      "id": "bosa_num_q70",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q70",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n1, 2, 6, 24, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "48"
+        },
+        {
+          "letter": "B",
+          "text": "72"
+        },
+        {
+          "letter": "C",
+          "text": "96"
+        },
+        {
+          "letter": "D",
+          "text": "120"
+        },
+        {
+          "letter": "E",
+          "text": "144"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Ce sont les factorielles : 1!, 2!, 3!, 4!, 5! = 120. (×1, ×2, ×3, ×4, ×5)"
+    },
+    {
+      "id": "bosa_num_q71",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q71",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet emploie 2 seniors à 600 €/jour et 3 juniors à 350 €/jour. L'équipe travaille 4 jours par semaine pendant 8 semaines. Quel est le coût total en personnel ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "68 800 €"
+        },
+        {
+          "letter": "B",
+          "text": "72 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "72 400 €"
+        },
+        {
+          "letter": "D",
+          "text": "76 800 €"
+        },
+        {
+          "letter": "E",
+          "text": "80 000 €"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Coût/jour : (2×600)+(3×350) = 1200+1050 = 2 150 €/jour.\nJours totaux : 4 × 8 = 32 jours. Total : 2 150 × 32 = 68 800 €."
+    },
+    {
+      "id": "bosa_num_q72",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q72",
+      "set_id": null,
+      "figures": [],
+      "question": "Un magasin augmente ses prix de 10% puis accorde une remise de 10% sur le nouveau prix. Le prix final est-il égal, supérieur ou inférieur au prix initial ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Égal au prix initial"
+        },
+        {
+          "letter": "B",
+          "text": "Inférieur de 1%"
+        },
+        {
+          "letter": "C",
+          "text": "Inférieur de 2%"
+        },
+        {
+          "letter": "D",
+          "text": "Supérieur de 1%"
+        },
+        {
+          "letter": "E",
+          "text": "Supérieur de 2%"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Si prix = 100 : +10% → 110. −10% → 110 × 0,9 = 99. Résultat : inférieur de 1% au prix initial."
+    },
+    {
+      "id": "bosa_num_q73",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q73",
+      "set_id": null,
+      "figures": [],
+      "question": "Trois projets ont les caractéristiques suivantes :\n- Projet A : ROI de 15%, investissement 200 000 €\n- Projet B : ROI de 12%, investissement 350 000 €\n- Projet C : ROI de 20%, investissement 150 000 €\n\nQuel projet génère le retour le plus élevé en valeur absolue ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Projet A"
+        },
+        {
+          "letter": "B",
+          "text": "Projet B"
+        },
+        {
+          "letter": "C",
+          "text": "Projet C"
+        },
+        {
+          "letter": "D",
+          "text": "Projets A et B ex-aequo"
+        },
+        {
+          "letter": "E",
+          "text": "Projets A et C ex-aequo"
+        }
+      ],
+      "correct": "B",
+      "explanation": "A : 200 000 × 0,15 = 30 000. B : 350 000 × 0,12 = 42 000. C : 150 000 × 0,20 = 30 000.\nProjet B génère le retour le plus élevé en valeur absolue."
+    },
+    {
+      "id": "bosa_num_q74",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q74",
+      "set_id": null,
+      "figures": [],
+      "question": "Un département recrute 3 profils A à 4 800 €/mois et 5 profils B à 3 400 €/mois. Quel est le salaire moyen dans l'équipe ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "3 800 €"
+        },
+        {
+          "letter": "B",
+          "text": "3 925 €"
+        },
+        {
+          "letter": "C",
+          "text": "4 100 €"
+        },
+        {
+          "letter": "D",
+          "text": "4 225 €"
+        },
+        {
+          "letter": "E",
+          "text": "4 400 €"
+        }
+      ],
+      "correct": "B",
+      "explanation": "(3 × 4 800 + 5 × 3 400) ÷ 8 = (14 400 + 17 000) ÷ 8 = 31 400 ÷ 8 = 3 925 €."
+    },
+    {
+      "id": "bosa_num_q75",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q75",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n8, 6, 9, 7, 10, 8, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "6"
+        },
+        {
+          "letter": "B",
+          "text": "9"
+        },
+        {
+          "letter": "C",
+          "text": "10"
+        },
+        {
+          "letter": "D",
+          "text": "11"
+        },
+        {
+          "letter": "E",
+          "text": "12"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Deux séries alternées : 8, 9, 10, 11... (positions impaires, +1) et 6, 7, 8... (positions paires, +1). Le prochain est 11."
+    },
+    {
+      "id": "bosa_num_q76",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q76",
+      "set_id": null,
+      "figures": [],
+      "question": "En 2023, une institution a reçu 12 400 demandes. En 2024, elle en a reçu 14 880. Si la même croissance se maintient, combien de demandes recevra-t-elle en 2025 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "16 800"
+        },
+        {
+          "letter": "B",
+          "text": "17 360"
+        },
+        {
+          "letter": "C",
+          "text": "17 856"
+        },
+        {
+          "letter": "D",
+          "text": "18 200"
+        },
+        {
+          "letter": "E",
+          "text": "18 600"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Croissance 2023→2024 : (14 880−12 400)/12 400 = 20%. En 2025 : 14 880 × 1,20 = 17 856."
+    },
+    {
+      "id": "bosa_num_q77",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q77",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service de 20 personnes travaille 228 jours/an. Le taux d'absentéisme est de 6%. Combien de jours-personnes effectifs le service preste-t-il par an ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "4 012"
+        },
+        {
+          "letter": "B",
+          "text": "4 150"
+        },
+        {
+          "letter": "C",
+          "text": "4 286,4"
+        },
+        {
+          "letter": "D",
+          "text": "4 320"
+        },
+        {
+          "letter": "E",
+          "text": "4 560"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Jours théoriques : 20 × 228 = 4 560. Effectifs : 4 560 × (1 − 0,06) = 4 560 × 0,94 = 4 286,4."
+    },
+    {
+      "id": "bosa_num_q78",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q78",
+      "set_id": null,
+      "figures": [],
+      "question": "Le budget d'un projet se répartit comme suit : 60% personnel, 25% fonctionnement, 15% investissement. Si le poste investissement représente 45 000 €, quel est le budget total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "250 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "275 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "300 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "325 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "350 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "15% du total = 45 000 €. Total = 45 000 ÷ 0,15 = 300 000 €."
+    },
+    {
+      "id": "bosa_num_q79",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q79",
+      "set_id": null,
+      "figures": [],
+      "question": "Taux de satisfaction des projets livrés (%) :\n\nAnnée | <50% | 50-75% | >75%\n2022  | 5    | 12     | 8\n2023  | 3    | 10     | 15\n2024  | 2    | 8      | 22\n\nQuel est le pourcentage de projets avec un taux de satisfaction supérieur à 75% en 2024 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "62,5%"
+        },
+        {
+          "letter": "B",
+          "text": "66,7%"
+        },
+        {
+          "letter": "C",
+          "text": "68,8%"
+        },
+        {
+          "letter": "D",
+          "text": "71,4%"
+        },
+        {
+          "letter": "E",
+          "text": "73,3%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Total projets 2024 : 2+8+22 = 32. Projets >75% : 22. Pourcentage = 22/32 = 68,75% ≈ 68,8%.",
+      "question_html": "<p>Taux de satisfaction des projets livrés (%) :</p><table class='q-table'><tr><th>Année</th><th>&lt;50%</th><th>50-75%</th><th>&gt;75%</th></tr><tr><td>2022</td><td>5</td><td>12</td><td>8</td></tr><tr><td>2023</td><td>3</td><td>10</td><td>15</td></tr><tr><td>2024</td><td>2</td><td>8</td><td>22</td></tr></table><p>Quel est le pourcentage de projets avec un taux de satisfaction supérieur à 75% en 2024 ?</p>"
+    },
+    {
+      "id": "bosa_num_q80",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q80",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service a un budget annuel de 480 000 €. Il doit réaliser des économies de 3% par an pendant 3 ans. Quel sera son budget la troisième année ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "428 652 €"
+        },
+        {
+          "letter": "B",
+          "text": "432 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "436 800 €"
+        },
+        {
+          "letter": "D",
+          "text": "437 683 €"
+        },
+        {
+          "letter": "E",
+          "text": "440 000 €"
+        }
+      ],
+      "correct": "D",
+      "explanation": "An 1 : 480 000 × 0,97 = 465 600. An 2 : 465 600 × 0,97 = 451 632. An 3 : 451 632 × 0,97 ≈ 437 683 €."
+    },
+    {
+      "id": "bosa_num_q81",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q81",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n0, 1, 1, 2, 4, 7, 13, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "20"
+        },
+        {
+          "letter": "B",
+          "text": "22"
+        },
+        {
+          "letter": "C",
+          "text": "24"
+        },
+        {
+          "letter": "D",
+          "text": "26"
+        },
+        {
+          "letter": "E",
+          "text": "28"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Chaque terme est la somme des 3 précédents : 0+1+1=2, 1+1+2=4, 1+2+4=7, 2+4+7=13, 4+7+13=24."
+    },
+    {
+      "id": "bosa_num_q82",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q82",
+      "set_id": null,
+      "figures": [],
+      "question": "Un appel d'offres reçoit 3 propositions :\n- Offre A : 95 000 € avec un délai de 6 mois\n- Offre B : 82 000 € avec un délai de 8 mois\n- Offre C : 110 000 € avec un délai de 5 mois\n\nQuel est le coût mensuel moyen de l'offre la plus économique au mois ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "10 250 €"
+        },
+        {
+          "letter": "B",
+          "text": "12 500 €"
+        },
+        {
+          "letter": "C",
+          "text": "15 833 €"
+        },
+        {
+          "letter": "D",
+          "text": "18 333 €"
+        },
+        {
+          "letter": "E",
+          "text": "22 000 €"
+        }
+      ],
+      "correct": "A",
+      "explanation": "A : 95 000/6 = 15 833. B : 82 000/8 = 10 250. C : 110 000/5 = 22 000. Offre B est la moins chère/mois = 10 250 €."
+    },
+    {
+      "id": "bosa_num_q83",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q83",
+      "set_id": null,
+      "figures": [],
+      "question": "La population d'une commune croît de 2% par an. Si elle compte 50 000 habitants aujourd'hui, combien en aura-t-elle dans 3 ans ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "52 020"
+        },
+        {
+          "letter": "B",
+          "text": "53 000"
+        },
+        {
+          "letter": "C",
+          "text": "53 060"
+        },
+        {
+          "letter": "D",
+          "text": "53 060,4"
+        },
+        {
+          "letter": "E",
+          "text": "53 100"
+        }
+      ],
+      "correct": "D",
+      "explanation": "An 1 : 50 000 × 1,02 = 51 000. An 2 : 51 000 × 1,02 = 52 020. An 3 : 52 020 × 1,02 = 53 060,4."
+    },
+    {
+      "id": "bosa_num_q84",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q84",
+      "set_id": null,
+      "figures": [],
+      "question": "Un employé peut choisir entre :\n- Option A : salaire de 3 000 € + prime annuelle de 2 400 €\n- Option B : salaire de 3 250 € sans prime\n\nSur une année, quelle option rapporte le plus ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Option A rapporte 600 € de plus"
+        },
+        {
+          "letter": "B",
+          "text": "Option A rapporte 400 € de plus"
+        },
+        {
+          "letter": "C",
+          "text": "Les deux sont identiques"
+        },
+        {
+          "letter": "D",
+          "text": "Option B rapporte 400 € de plus"
+        },
+        {
+          "letter": "E",
+          "text": "Option B rapporte 600 € de plus"
+        }
+      ],
+      "correct": "E",
+      "explanation": "A : (3 000 × 12) + 2 400 = 38 400 €/an. B : 3 250 × 12 = 39 000 €/an. B rapporte 600 € de plus."
+    },
+    {
+      "id": "bosa_num_q85",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q85",
+      "set_id": null,
+      "figures": [],
+      "question": "Le taux de réussite d'un examen est passé de 72% à 81%. De combien de points de pourcentage le taux a-t-il augmenté, et quel est le pourcentage d'augmentation relative ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "+9 points, +12,5%"
+        },
+        {
+          "letter": "B",
+          "text": "+9 points, +9%"
+        },
+        {
+          "letter": "C",
+          "text": "+9 points, +11,1%"
+        },
+        {
+          "letter": "D",
+          "text": "+11,1 points, +9%"
+        },
+        {
+          "letter": "E",
+          "text": "+12,5 points, +9%"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Points de pourcentage : 81 − 72 = 9. Augmentation relative : 9/72 × 100 = 12,5%."
+    },
+    {
+      "id": "bosa_num_q86",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q86",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n2, 3, 5, 7, 11, 13, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "15"
+        },
+        {
+          "letter": "B",
+          "text": "17"
+        },
+        {
+          "letter": "C",
+          "text": "19"
+        },
+        {
+          "letter": "D",
+          "text": "21"
+        },
+        {
+          "letter": "E",
+          "text": "23"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Ce sont les nombres premiers consécutifs : 2, 3, 5, 7, 11, 13, 17."
+    },
+    {
+      "id": "bosa_num_q87",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q87",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet utilise 3 types de ressources dans un rapport de 2:3:5. Si la ressource de type C (la plus importante) représente 75 000 €, quel est le coût total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "120 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "135 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "150 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "175 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "200 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Total parts = 2+3+5 = 10. Type C = 5 parts = 75 000 → 1 part = 15 000. Total = 10 × 15 000 = 150 000 €."
+    },
+    {
+      "id": "bosa_num_q88",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q88",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service traite 150 dossiers/jour avec 10 agents. 3 agents partent en congé et ne sont pas remplacés. Combien de jours faudra-t-il aux agents restants pour traiter 735 dossiers ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "5"
+        },
+        {
+          "letter": "B",
+          "text": "6"
+        },
+        {
+          "letter": "C",
+          "text": "7"
+        },
+        {
+          "letter": "D",
+          "text": "8"
+        },
+        {
+          "letter": "E",
+          "text": "9"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Productivité/agent = 150/10 = 15 dossiers/jour. Avec 7 agents : 7×15 = 105/jour. Jours = 735 ÷ 105 = 7."
+    },
+    {
+      "id": "bosa_num_q89",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q89",
+      "set_id": null,
+      "figures": [],
+      "question": "Évolution du nombre de plaintes par canal :\n\nCanal    | 2022 | 2023 | 2024\nCourrier | 320  | 280  | 210\nE-mail   | 450  | 520  | 630\nEn ligne | 180  | 310  | 480\nTotal    | 950  | 1110 | 1320\n\nQuel canal représente la plus grande part du total en 2024 ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Courrier (15,9%)"
+        },
+        {
+          "letter": "B",
+          "text": "E-mail (47,7%)"
+        },
+        {
+          "letter": "C",
+          "text": "En ligne (36,4%)"
+        },
+        {
+          "letter": "D",
+          "text": "E-mail et En ligne ex-aequo"
+        },
+        {
+          "letter": "E",
+          "text": "On ne peut pas le déterminer"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Courrier : 210/1320 = 15,9%. E-mail : 630/1320 = 47,7%. En ligne : 480/1320 = 36,4%. E-mail est le plus grand.",
+      "question_html": "<p>Évolution du nombre de plaintes par canal :</p><table class='q-table'><tr><th>Canal</th><th>2022</th><th>2023</th><th>2024</th></tr><tr><td>Courrier</td><td>320</td><td>280</td><td>210</td></tr><tr><td>E-mail</td><td>450</td><td>520</td><td>630</td></tr><tr><td>En ligne</td><td>180</td><td>310</td><td>480</td></tr><tr><td><strong>Total</strong></td><td><strong>950</strong></td><td><strong>1110</strong></td><td><strong>1320</strong></td></tr></table><p>Quel canal représente la plus grande part du total en 2024 ?</p>"
+    },
+    {
+      "id": "bosa_num_q90",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q90",
+      "set_id": null,
+      "figures": [],
+      "question": "Un projet prévu à 250 000 € a subi deux dépassements successifs : +8% au premier trimestre, puis +5% (sur le nouveau montant) au deuxième trimestre. Quel est le budget actuel ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "278 500 €"
+        },
+        {
+          "letter": "B",
+          "text": "280 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "282 500 €"
+        },
+        {
+          "letter": "D",
+          "text": "283 500 €"
+        },
+        {
+          "letter": "E",
+          "text": "285 000 €"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Après +8% : 250 000 × 1,08 = 270 000. Après +5% : 270 000 × 1,05 = 283 500 €."
+    },
+    {
+      "id": "bosa_num_q91",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q91",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n1, 4, 10, 22, 46, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "82"
+        },
+        {
+          "letter": "B",
+          "text": "88"
+        },
+        {
+          "letter": "C",
+          "text": "92"
+        },
+        {
+          "letter": "D",
+          "text": "94"
+        },
+        {
+          "letter": "E",
+          "text": "96"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Chaque terme = précédent × 2 + 2. 1→4 (×2+2), 4→10 (×2+2), 10→22 (×2+2), 22→46 (×2+2), 46→94 (×2+2)."
+    },
+    {
+      "id": "bosa_num_q92",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q92",
+      "set_id": null,
+      "figures": [],
+      "question": "Trois contrats de maintenance sont proposés :\n- Contrat X : 500 €/mois + 50 € par intervention\n- Contrat Y : 900 €/mois, interventions illimitées\n- Contrat Z : 200 €/mois + 120 € par intervention\n\nÀ partir de combien d'interventions par mois le contrat Y devient-il le plus avantageux ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "6"
+        },
+        {
+          "letter": "B",
+          "text": "7"
+        },
+        {
+          "letter": "C",
+          "text": "8"
+        },
+        {
+          "letter": "D",
+          "text": "9"
+        },
+        {
+          "letter": "E",
+          "text": "10"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Y = 900. X = 500+50n → 900 quand n=8 (X=900). Z = 200+120n → 900 quand n≈5,8.\nPour n=8 : X=900, Z=1 160, Y=900. Pour n=9 : X=950, Z=1 280, Y=900. Y est le meilleur à partir de 9 interventions."
+    },
+    {
+      "id": "bosa_num_q93",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q93",
+      "set_id": null,
+      "figures": [],
+      "question": "Le taux de satisfaction d'un service était de 60%. Après une première mesure d'amélioration, il augmente de 20% (relatif). Après une deuxième mesure, il augmente encore de 10% (relatif). Quel est le taux de satisfaction actuel ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "72%"
+        },
+        {
+          "letter": "B",
+          "text": "78%"
+        },
+        {
+          "letter": "C",
+          "text": "79,2%"
+        },
+        {
+          "letter": "D",
+          "text": "84%"
+        },
+        {
+          "letter": "E",
+          "text": "90%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Après +20% : 60% × 1,20 = 72%. Après +10% : 72% × 1,10 = 79,2%."
+    },
+    {
+      "id": "bosa_num_q94",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q94",
+      "set_id": null,
+      "figures": [],
+      "question": "Un chef de projet évalue 4 risques avec leur probabilité et impact :\n- R1 : probabilité 30%, impact 50 000 €\n- R2 : probabilité 60%, impact 20 000 €\n- R3 : probabilité 10%, impact 100 000 €\n- R4 : probabilité 80%, impact 5 000 €\n\nQuel est le risque avec la valeur monétaire attendue la plus élevée ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "R1 (15 000 €)"
+        },
+        {
+          "letter": "B",
+          "text": "R2 (12 000 €)"
+        },
+        {
+          "letter": "C",
+          "text": "R3 (10 000 €)"
+        },
+        {
+          "letter": "D",
+          "text": "R4 (4 000 €)"
+        },
+        {
+          "letter": "E",
+          "text": "R1 et R2 ex-aequo"
+        }
+      ],
+      "correct": "A",
+      "explanation": "R1 : 0,30×50 000=15 000. R2 : 0,60×20 000=12 000. R3 : 0,10×100 000=10 000. R4 : 0,80×5 000=4 000.\nR1 a la valeur attendue la plus élevée."
+    },
+    {
+      "id": "bosa_num_q95",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q95",
+      "set_id": null,
+      "figures": [],
+      "question": "Un datacenter consomme 2 400 kWh/jour. Le tarif est de 0,25 €/kWh entre 6h et 22h (heures pleines) et 0,15 €/kWh entre 22h et 6h (heures creuses). Si la consommation est répartie uniformément, quel est le coût journalier ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "480 €"
+        },
+        {
+          "letter": "B",
+          "text": "500 €"
+        },
+        {
+          "letter": "C",
+          "text": "520 €"
+        },
+        {
+          "letter": "D",
+          "text": "540 €"
+        },
+        {
+          "letter": "E",
+          "text": "560 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Consommation/heure = 2 400/24 = 100 kWh. Heures pleines (16h) : 1 600 × 0,25 = 400 €. Creuses (8h) : 800 × 0,15 = 120 €. Total = 520 €."
+    },
+    {
+      "id": "bosa_num_q96",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q96",
+      "set_id": null,
+      "figures": [],
+      "question": "Quel nombre complète cette série ?\n3, 4, 6, 10, 18, __",
+      "options": [
+        {
+          "letter": "A",
+          "text": "26"
+        },
+        {
+          "letter": "B",
+          "text": "30"
+        },
+        {
+          "letter": "C",
+          "text": "34"
+        },
+        {
+          "letter": "D",
+          "text": "36"
+        },
+        {
+          "letter": "E",
+          "text": "42"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Les écarts doublent : +1, +2, +4, +8, +16. Donc 18 + 16 = 34."
+    },
+    {
+      "id": "bosa_num_q97",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q97",
+      "set_id": null,
+      "figures": [],
+      "question": "Trois équipes se partagent un budget de 180 000 € proportionnellement à leur effectif : Équipe A (6 pers.), Équipe B (9 pers.), Équipe C (3 pers.). Combien reçoit l'équipe B ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "60 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "72 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "80 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "90 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "100 000 €"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Total effectif = 6+9+3 = 18. Part de B = 9/18 = 1/2. Budget B = 180 000 × 0,5 = 90 000 €."
+    },
+    {
+      "id": "bosa_num_q98",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q98",
+      "set_id": null,
+      "figures": [],
+      "question": "Indicateurs de performance par trimestre :\n\nIndicateur      | Q1    | Q2    | Q3    | Q4\nDossiers reçus  | 1 200 | 1 350 | 1 100 | 1 500\nDossiers traités| 1 100 | 1 200 | 1 150 | 1 400\nDélai moyen (j) | 8,5   | 9,2   | 7,8   | 8,0\n\nQuel trimestre a le meilleur ratio dossiers traités / dossiers reçus ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Q1 (91,7%)"
+        },
+        {
+          "letter": "B",
+          "text": "Q2 (88,9%)"
+        },
+        {
+          "letter": "C",
+          "text": "Q3 (104,5%)"
+        },
+        {
+          "letter": "D",
+          "text": "Q4 (93,3%)"
+        },
+        {
+          "letter": "E",
+          "text": "Q1 et Q4 ex-aequo"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Q1: 1100/1200=91,7%. Q2: 1200/1350=88,9%. Q3: 1150/1100=104,5% (plus traités que reçus). Q4: 1400/1500=93,3%.\nQ3 a le meilleur ratio — il a même traité plus que reçu (rattrapage de retard).",
+      "question_html": "<p>Indicateurs de performance par trimestre :</p><table class='q-table'><tr><th>Indicateur</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr><tr><td>Dossiers reçus</td><td>1 200</td><td>1 350</td><td>1 100</td><td>1 500</td></tr><tr><td>Dossiers traités</td><td>1 100</td><td>1 200</td><td>1 150</td><td>1 400</td></tr><tr><td>Délai moyen (j)</td><td>8,5</td><td>9,2</td><td>7,8</td><td>8,0</td></tr></table><p>Quel trimestre a le meilleur ratio dossiers traités / dossiers reçus ?</p>"
+    },
+    {
+      "id": "bosa_num_q99",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q99",
+      "set_id": null,
+      "figures": [],
+      "question": "Un service prévoit de digitaliser 5 000 dossiers. La numérisation coûte 2,50 € par dossier. L'indexation coûte 1,80 € par dossier. Le contrôle qualité coûte 0,70 € par dossier. Si 8% des dossiers nécessitent un retraitement complet (les 3 étapes), quel est le coût total ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "25 000 €"
+        },
+        {
+          "letter": "B",
+          "text": "26 000 €"
+        },
+        {
+          "letter": "C",
+          "text": "27 000 €"
+        },
+        {
+          "letter": "D",
+          "text": "28 000 €"
+        },
+        {
+          "letter": "E",
+          "text": "29 000 €"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Coût/dossier = 2,50+1,80+0,70 = 5,00 €. Coût initial : 5 000 × 5 = 25 000 €.\nRetraitement : 5 000 × 0,08 = 400 dossiers × 5 = 2 000 €. Total = 25 000 + 2 000 = 27 000 €."
+    },
+    {
+      "id": "bosa_num_q100",
+      "type": "numerical_bosa",
+      "source": "BOSA_Num",
+      "book_ref": "BOSA Num Q100",
+      "set_id": null,
+      "figures": [],
+      "question": "Un chef de projet doit planifier une formation. Le coût total est : frais fixes de 2 000 € + 150 € par participant. Le budget disponible est de 5 000 €. Quel est le nombre maximum de participants ?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "18"
+        },
+        {
+          "letter": "B",
+          "text": "20"
+        },
+        {
+          "letter": "C",
+          "text": "22"
+        },
+        {
+          "letter": "D",
+          "text": "25"
+        },
+        {
+          "letter": "E",
+          "text": "33"
+        }
+      ],
+      "correct": "B",
+      "explanation": "2 000 + 150n ≤ 5 000 → 150n ≤ 3 000 → n ≤ 20. Maximum : 20 participants."
     }
   ]
 };
