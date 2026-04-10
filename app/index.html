@@ -662,10 +662,12 @@ function submitAnswer(){
   SESSION.q_within_time = withinTime;
   SESSION.q_sjt_pts = sjtPts;
   SESSION.answered_count++;
-  // SJT: partial (0.5) counts as half credit in session totals
+  // Credit: SJT partial = 0.5, SJT exact = 1, other correct = 1, else 0
   const credit = (sjtPts != null) ? sjtPts : (isCorrect ? 1 : 0);
+  // Always add credit to correct count (even if over time)
   SESSION.correct_count = (SESSION.correct_count||0) + credit;
-  if(withinTime) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + credit;
+  // Only add credit to in-time if within time
+  if(withinTime && credit > 0) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + credit;
   stopTimer();
   saveSession(SESSION);
   render();
