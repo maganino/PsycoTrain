@@ -350,12 +350,15 @@ function toast(msg){
   toast._t = setTimeout(() => t.classList.remove('show'), 2400);
 }
 
+let PREV_MODE = null;
 function render(){
   const root = document.getElementById('root');
   root.innerHTML = '';
   if(MODE === 'home') renderHome(root);
   else if(MODE === 'practice') renderPractice(root);
-  window.scrollTo(0, 0);
+  // Only scroll to top when switching modes, not on submit/next within practice
+  if(MODE !== PREV_MODE) window.scrollTo(0, 0);
+  PREV_MODE = MODE;
 }
 
 // ----- Home -----
