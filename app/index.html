@@ -565,7 +565,7 @@ function startTimer(){
     const el = document.getElementById('timer');
     if(!el || !SESSION || !SESSION.q_started_ms) return;
     const elapsed = Date.now() - SESSION.q_started_ms;
-    const targetMs = (loadSettings().targetSec || 120) * 1000;
+    const targetMs = effectiveTargetMs();
     el.textContent = fmtTime(elapsed);
     el.className = 'tmr';
     if(elapsed > targetMs) el.className = 'tmr over';
@@ -580,6 +580,7 @@ function advanceQuestion(){
     SESSION.picked.push(nextId);
     SESSION.picked_letter = null;
     SESSION.revealed = false;
+    SESSION.sjt_first_reaction = false;  // B/C/D → normal time
     SESSION.q_started_ms = Date.now();
     SESSION.q_elapsed_ms = null;
     saveSession(SESSION);
@@ -609,8 +610,10 @@ function advanceQuestion(){
     SESSION.sjt_queue = siblings.slice(1).map(q => q.id);
     // Mark all as picked so they won't be re-selected by pickNext
     for(const s of siblings){ SESSION.picked.push(s.id); }
+    SESSION.sjt_first_reaction = true;  // Reaction A → double time for reading situation
   } else {
     SESSION.picked.push(next.id);
+    SESSION.sjt_first_reaction = false;
   }
 
   SESSION.currentQid = next.id;
@@ -627,6 +630,13 @@ function pickAnswer(letter){
   SESSION.picked_letter = letter;
   render();
 }
+// Effective target time: SJT first reaction (A) gets 2x for reading the situation
+function effectiveTargetMs(){
+  const base = (loadSettings().targetSec || 120) * 1000;
+  if(SESSION && SESSION.sjt_first_reaction) return base * 2;
+  return base;
+}
+
 // SJT partial scoring: exact = 1, ±1 neighbor = 0.5, else = 0
 const SJT_SCALE = ['A','B','C','D','E'];  // -- - +/- + ++
 function sjtScore(picked, correct){
@@ -643,7 +653,7 @@ function submitAnswer(){
   if(!SESSION.picked_letter || SESSION.revealed) return;
   const q = DB.questions.find(x => x.id === SESSION.currentQid);
   const elapsed = Date.now() - (SESSION.q_started_ms || Date.now());
-  const targetMs = (loadSettings().targetSec || 120) * 1000;
+  const targetMs = effectiveTargetMs();
   const withinTime = elapsed <= targetMs;
 
   // SJT uses partial scoring; other types use exact match
@@ -678,8 +688,7 @@ function renderPractice(root){
   const stats = loadStats();
   const qs = stats[q.id] || { attempts:0, correct:0 };
   const settings = loadSettings();
-  const targetSec = settings.targetSec || 120;
-  const targetMs = targetSec * 1000;
+  const targetMs = effectiveTargetMs();
 
   // SJT situation context
   let situationHtml = '';
