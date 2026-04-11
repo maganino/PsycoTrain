@@ -76,6 +76,16 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 /* SJT situation box */
 .sjt-situation{font-size:14px;line-height:1.65;color:var(--sub);padding:14px 16px;background:var(--card);border-radius:12px;border-left:3.5px solid #534AB7;margin-bottom:14px}
 .sjt-situation .sjt-title{font-weight:700;font-size:13px;color:#534AB7;margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
+/* SJT compact score row */
+.sjt-scores{display:flex;gap:8px;justify-content:center;margin:14px 0}
+.sjt-btn{flex:1;max-width:80px;padding:12px 6px;border-radius:10px;border:2px solid var(--border);background:var(--card);font-size:15px;font-weight:700;text-align:center;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s,background .15s,transform .08s;color:var(--sub)}
+.sjt-btn:active:not(.dis){transform:scale(.95)}
+.sjt-btn.sel{border-color:var(--accent);background:var(--accentbg);color:var(--accent)}
+.sjt-btn.ok{border-color:var(--green);background:var(--greenbg);color:var(--green)}
+.sjt-btn.ko{border-color:var(--red);background:var(--redbg);color:var(--red)}
+.sjt-btn.partial{border-color:#E0B860;background:var(--amberbg);color:var(--amber)}
+.sjt-btn.fd{opacity:.4}
+.sjt-btn.dis{cursor:default}
 .opt{display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border-radius:12px;border:2px solid var(--border);background:var(--card);margin-bottom:7px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .08s,border-color .15s,background .15s}
 .opt:active:not(.dis){transform:scale(.985)}
 .opt.sel{border-color:var(--accent);background:var(--accentbg)}
@@ -726,25 +736,42 @@ function renderPractice(root){
     `<img class="qfig" src="${esc(f)}" alt="figure" loading="lazy">`
   ).join('');
 
-  const optsHtml = q.options.map(o => {
-    let cls = 'opt';
-    if(SESSION.revealed){
-      cls += ' dis';
-      if(o.letter === q.correct) cls += ' ok';
-      else if(o.letter === SESSION.picked_letter){
-        // SJT: neighbor answer gets amber (partial), not red
-        if(q.type === 'sjt' && SESSION.q_sjt_pts === 0.5) cls += ' partial';
-        else cls += ' ko';
+  // SJT: compact horizontal score buttons; others: vertical option cards
+  const SJT_LABELS = {'A':'--','B':'-','C':'+/-','D':'+','E':'++'};
+  let optsHtml;
+  if(q.type === 'sjt'){
+    optsHtml = `<div class="sjt-scores">${q.options.map(o => {
+      let cls = 'sjt-btn';
+      if(SESSION.revealed){
+        cls += ' dis';
+        if(o.letter === q.correct) cls += ' ok';
+        else if(o.letter === SESSION.picked_letter){
+          if(SESSION.q_sjt_pts === 0.5) cls += ' partial';
+          else cls += ' ko';
+        }
+        else cls += ' fd';
+      } else if(o.letter === SESSION.picked_letter){
+        cls += ' sel';
       }
-      else cls += ' fd';
-    } else if(o.letter === SESSION.picked_letter){
-      cls += ' sel';
-    }
-    return `<div class="${cls}" data-letter="${esc(o.letter)}">
-      <div class="ol">${esc(o.letter)}</div>
-      <div class="ot">${esc(o.text)}</div>
-    </div>`;
-  }).join('');
+      return `<div class="${cls}" data-letter="${esc(o.letter)}">${SJT_LABELS[o.letter] || esc(o.text)}</div>`;
+    }).join('')}</div>`;
+  } else {
+    optsHtml = q.options.map(o => {
+      let cls = 'opt';
+      if(SESSION.revealed){
+        cls += ' dis';
+        if(o.letter === q.correct) cls += ' ok';
+        else if(o.letter === SESSION.picked_letter) cls += ' ko';
+        else cls += ' fd';
+      } else if(o.letter === SESSION.picked_letter){
+        cls += ' sel';
+      }
+      return `<div class="${cls}" data-letter="${esc(o.letter)}">
+        <div class="ol">${esc(o.letter)}</div>
+        <div class="ot">${esc(o.text)}</div>
+      </div>`;
+    }).join('');
+  }
 
   // Feedback with time info
   let explHtml = '';
@@ -832,7 +859,7 @@ function renderPractice(root){
     </div>
   `));
 
-  root.querySelectorAll('.opt').forEach(el => {
+  root.querySelectorAll('.opt, .sjt-btn').forEach(el => {
     el.addEventListener('click', () => pickAnswer(el.dataset.letter));
   });
   root.querySelector('#exit-btn').addEventListener('click', exitPractice);
