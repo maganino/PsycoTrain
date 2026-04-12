@@ -131,10 +131,35 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
   .stat-chip{min-width:75px;padding:8px 8px}
   .stat-chip strong{font-size:16px}
 }
+/* Lock screen */
+#lockscreen{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center}
+#lockscreen.hidden{display:none}
+.lock-box{text-align:center;padding:24px;max-width:320px;width:100%}
+.lock-box h1{font-size:22px;font-weight:800;margin-bottom:4px}
+.lock-box .lock-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.lock-box input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;background:var(--card);font-family:inherit;text-align:center}
+.lock-box input:focus{outline:none;border-color:var(--accent)}
+.lock-box button{width:100%;margin-top:10px;padding:13px;border-radius:10px;border:none;background:var(--text);color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.lock-box .lock-err{color:var(--red);font-size:13px;margin-top:10px;min-height:18px}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.lock-box.shake{animation:shake .4s}
 </style>
 </head>
 <body>
-<div class="container" id="root"></div>
+
+<!-- Lock screen -->
+<div id="lockscreen">
+  <div class="lock-box" id="lockbox">
+    <h1>PsycoTrain</h1>
+    <p class="lock-sub">Enter password to continue</p>
+    <input type="password" id="lock-pw" placeholder="Password" autocomplete="off" autofocus>
+    <button id="lock-btn">Unlock</button>
+    <p class="lock-err" id="lock-err"></p>
+  </div>
+</div>
+
+<!-- App (hidden until unlocked) -->
+<div class="container" id="root" style="display:none"></div>
 <div class="toast" id="toast"></div>
 <input type="file" id="stats-file-input" accept=".json,application/json" style="display:none">
 
@@ -142,6 +167,46 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 <script src="./questions.js"></script>
 <script>
 'use strict';
+
+// ============================================================================
+// Lock screen
+// ============================================================================
+const PASS_HASH = '162b1bde7a3dd8cbaa3bb5c2e266774e3ce7ee4b8408521b019b3d226ca493de';
+const LS_UNLOCK = 'pt_unlocked';
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function unlockApp() {
+  document.getElementById('lockscreen').classList.add('hidden');
+  document.getElementById('root').style.display = '';
+  sessionStorage.setItem(LS_UNLOCK, '1');
+}
+
+async function tryUnlock() {
+  const pw = document.getElementById('lock-pw').value;
+  if (!pw) return;
+  const hash = await sha256(pw);
+  if (hash === PASS_HASH) {
+    unlockApp();
+  } else {
+    document.getElementById('lock-err').textContent = 'Wrong password';
+    const box = document.getElementById('lockbox');
+    box.classList.remove('shake');
+    void box.offsetWidth;
+    box.classList.add('shake');
+  }
+}
+
+// Auto-unlock if already authenticated this session
+if (sessionStorage.getItem(LS_UNLOCK) === '1') {
+  unlockApp();
+}
+
+document.getElementById('lock-btn').addEventListener('click', tryUnlock);
+document.getElementById('lock-pw').addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
 
 // ============================================================================
 // State and storage
