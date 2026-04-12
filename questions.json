@@ -3350,8 +3350,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nDémarche active mais unilatérale et impersonnelle. Vous fournissez des ressources utiles, mais un e-mail ne crée pas de véritable dialogue. Kevin, qui semble timide, n'osera probablement pas solliciter de l'aide par écrit."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale testée : Collaborer (Niveau 2) — encourager la collaboration en contexte hybride.\nCette réaction montre une initiative concrète : vous identifiez un besoin et fournissez des ressources utiles (documentation, modèles). Cependant, l'approche reste impersonnelle et unilatérale — un e-mail ne crée pas de véritable dialogue avec un collaborateur qui montre des signes de retrait social. Pourquoi +/- et non + : il manque l'écoute active et le contact humain direct ; vous envoyez des informations sans chercher à comprendre ce que vit Kevin. Pourquoi +/- et non - : l'envoi de ressources ciblées est tout de même un geste proactif qui peut aider Kevin à progresser sur les aspects techniques, même si cela ne traite pas le problème d'intégration relationnelle signalé par Claire."
     },
     {
       "id": "sjt_s01_rb",
@@ -3384,8 +3384,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nPassivité totale face à un problème visible et signalé par une collègue. L'intégration de Kevin se détériore et vous ne prenez aucune initiative pour encourager sa participation dans l'équipe."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence principale testée : Guider (Niveau 1) — veiller à l'intégration et donner le bon exemple.\nCette réaction est une passivité totale face à des signaux d'alerte multiples et convergents : caméra éteinte, silence en réunion, livrables défaillants, alerte directe d'une collègue. En tant que chef de projet, vous avez la responsabilité d'accompagner l'intégration de vos collaborateurs. Pourquoi -- et non - : vous ne prenez strictement aucune initiative alors que le problème est visible, documenté et signalé par un tiers. Attendre que Kevin « vienne vers vous » ignore le fait qu'un collaborateur en difficulté d'intégration, manifestement réservé, ne fera probablement jamais cette démarche de lui-même. Cette inaction risque d'aggraver l'isolement de Kevin et de compromettre les livrables du projet."
     },
     {
       "id": "sjt_s01_rc",
@@ -3418,8 +3418,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nDémarche proactive avec dialogue direct, écoute et empathie. La solution est structurée (point hebdomadaire) et durable (premier mois). Vous impliquez également Claire, créant un réseau de soutien collaboratif. Vous montrez l'exemple en tant que facilitateur de la collaboration."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence principale testée : Collaborer (Niveau 2) — encourager la collaboration et collaborer en contexte hybride.\nCette réaction coche tous les indicateurs d'une collaboration exemplaire : dialogue direct et informel (appel en visio), écoute active (vous commencez par demander comment il vit ses premières semaines), solution structurée et durable (point hebdomadaire pendant un mois), et mobilisation du réseau d'équipe (Claire comme marraine). Pourquoi ++ et non + : contrairement à une simple aide ponctuelle, vous combinez empathie, structure temporelle, et implication d'un tiers pour créer un véritable dispositif d'intégration. Vous montrez l'exemple en tant que chef de projet en prenant l'initiative du contact humain, tout en responsabilisant Kevin par une proposition co-construite (« si tu es d'accord »)."
     },
     {
       "id": "sjt_s01_rd",
@@ -3452,8 +3452,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nEscalade vers les RH sans avoir d'abord tenté le dialogue direct avec Kevin. Vous déléguez le problème au lieu de prendre vous-même l'initiative de collaborer. Un entretien RH formel risque de braquer Kevin plutôt que de l'aider."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale testée : Guider (Niveau 1) — veiller aux rôles et responsabilités, accompagner l'intégration.\nCette réaction délègue à la RH un problème que vous devriez d'abord traiter vous-même en tant que chef de projet direct de Kevin. L'escalade est prématurée : vous n'avez pas encore tenté de dialoguer avec Kevin ni de comprendre ses difficultés. Pourquoi - et non -- : il y a tout de même une prise de conscience du problème et une volonté d'agir, ce qui est mieux que l'inaction totale. Pourquoi - et non +/- : un entretien RH formel après seulement deux semaines risque d'intimider Kevin et de formaliser excessivement une situation qui pourrait se résoudre par un accompagnement bienveillant de proximité. Vous manquez votre rôle de facilitateur direct."
     },
     {
       "id": "sjt_s02_ra",
@@ -3486,8 +3486,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct entre les parties concernées, co-construction d'un compromis structuré. Vous facilitez la collaboration en recentrant sur l'objectif commun et en proposant un cadre concret (déploiement progressif)."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence : Collaborer (Niveau 2). Vous prenez l'initiative de réunir Marc et Nathalie pour un dialogue direct, ce qui est positif. La recherche de compromis structuré montre un bon sens de la coordination. Pourquoi + et non ++ : vous les contactez séparément d'abord, ce qui peut créer un biais. Un chef de projet au Niveau 2 de collaboration réunirait directement les deux parties ensemble pour favoriser la co-construction en temps réel plutôt que de pré-négocier."
     },
     {
       "id": "sjt_s02_rb",
@@ -3520,8 +3520,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nDécision unilatérale imposée sans consultation ni dialogue. Nathalie et son service ne sont pas entendus. Ce type de communication autoritaire par e-mail aggravera le conflit au lieu de le résoudre."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence : Collaborer (Niveau 2). Vous prenez une décision unilatérale sans aucune consultation, imposant votre choix à deux professionnels en conflit. Cette approche nie complètement le principe de co-construction et de dialogue. Pourquoi -- et non - : au-delà de l'absence de collaboration, vous travaillez « chez vous le soir » pour trancher seul, ce qui exclut activement les parties concernées et risque de générer du ressentiment durable entre Marc, Nathalie et vous."
     },
     {
       "id": "sjt_s02_rc",
@@ -3554,8 +3554,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nVous vous déchargez de votre rôle de coordinateur et de facilitateur. Étant donné les tensions actuelles entre Marc et Nathalie, leur demander de résoudre seuls le conflit est irréaliste et risque d'aggraver la situation."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale testée : Guider (Niveau 1) — rappeler les objectifs communs et veiller à la collaboration.\nEn tant que coordinateur du projet, vous abdiquiez votre rôle de facilitateur en demandant à Marc et Nathalie de résoudre seuls un conflit qui a déjà dégénéré (Marc a quitté la salle, les e-mails sont « secs et formels »). Leur demander une « proposition commune » sans accompagnement est irréaliste. Pourquoi - et non -- : vous reconnaissez au moins l'urgence de la situation et fixez un délai, ce qui montre un minimum de conscience du problème. Pourquoi - et non +/- : vous n'apportez aucune valeur ajoutée en tant que médiateur. Vu l'intensité du conflit, cette approche risque soit d'échouer complètement, soit de produire un compromis bancal sans véritable adhésion."
     },
     {
       "id": "sjt_s02_rd",
@@ -3588,8 +3588,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nDémarche active avec dialogue et empathie envers les deux parties. Vous cherchez à comprendre avant de proposer. Cependant, Marc et Nathalie ne co-construisent pas directement ensemble : vous servez d'intermédiaire, ce qui limite la vraie collaboration entre les services."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale testée : Penser de manière critique (Niveau 2) — évaluer les informations et formuler des recommandations.\nCette réaction montre de réelles qualités : écoute active des deux parties, recherche de compréhension approfondie, et élaboration d'un compromis basé sur des éléments concrets. Vous faites preuve d'empathie et de rigueur analytique en consultant chacun séparément. Pourquoi + et non ++ : Marc et Nathalie ne se parlent pas directement et ne co-construisent pas ensemble la solution. Vous restez l'intermédiaire, ce qui limite l'appropriation du compromis par les deux parties. Pourquoi + et non +/- : la démarche est néanmoins active, structurée, et la proposition est soumise à l'avis de l'équipe lors de la réunion suivante."
     },
     {
       "id": "sjt_s03_ra",
@@ -3622,8 +3622,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nActif, dialogue avec toute l'équipe, co-construction d'un outil partagé, solution durable et structurée. Vous montrez l'exemple en contribuant en premier (indicateur clé de « Encourager la collaboration »), vous motivez Sophie en montrant le bénéfice pour elle, et vous impliquez tout le monde."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence principale testée : Collaborer (Niveau 2) — montrer l'exemple et encourager l'ouverture.\nCette réaction est la plus complète : vous proposez une solution collective en réunion d'équipe, vous montrez l'exemple en vous engageant à documenter vos propres méthodes en premier, vous motivez Sophie en soulignant le bénéfice pour elle (réduction des sollicitations), et vous impliquez Antoine et Fatima. Pourquoi ++ et non + : contrairement à une approche individuelle ciblant uniquement Sophie, vous créez une dynamique d'équipe où le partage de connaissances devient une responsabilité partagée. Le fait de commencer par votre propre contribution est un indicateur clé de la compétence « montrer l'exemple » et désamorce toute impression de pression ciblée sur Sophie."
     },
     {
       "id": "sjt_s03_rb",
@@ -3656,8 +3656,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nActif, dialogue direct et respectueux, approche collaborative et empathique. Mais la solution reste ponctuelle (quelques sessions) et dépend de l'acceptation individuelle de Sophie. Pas de cadre structuré à long terme pour l'ensemble de l'équipe."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale testée : Collaborer (Niveau 2) — donner/recevoir du feedback de manière adéquate.\nCette réaction est positive : dialogue direct et respectueux avec Sophie, approche empathique qui reconnaît sa charge, et proposition concrète de sessions de transfert avec offre d'aide à la préparation. Vous valorisez son expertise. Pourquoi + et non ++ : la solution reste centrée sur Sophie seule et dépend de son acceptation individuelle. Vous ne créez pas de cadre collectif impliquant toute l'équipe dans le partage de connaissances. Les sessions sont ponctuelles (« deux ou trois ») et non structurelles. Pourquoi + et non +/- : le dialogue est authentique, l'offre d'aide est concrète, et vous montrez du respect pour l'expertise de Sophie tout en abordant le problème."
     },
     {
       "id": "sjt_s03_rc",
@@ -3690,8 +3690,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nEscalade vers la hiérarchie sans avoir d'abord tenté de dialoguer avec Sophie ou de proposer une solution collaborative à l'équipe. Imposer un système de documentation par la hiérarchie risque d'être mal vécu par Sophie."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale testée : Guider (Niveau 1) — planifier des actions d'apprentissage et veiller aux responsabilités.\nVous escaladez directement vers la hiérarchie sans avoir d'abord tenté le dialogue avec Sophie ni proposé une solution collaborative à l'équipe. Demander au responsable d'« imposer » un système de documentation risque d'être mal vécu par Sophie, qui se sentira visée et contrainte. Pourquoi - et non -- : vous identifiez correctement le risque de dépendance critique, ce qui montre une bonne analyse de la situation. Pourquoi - et non +/- : l'approche coercitive par la hiérarchie, sans tentative préalable de dialogue ni de co-construction, est contraire aux principes de collaboration et risque de détériorer la relation avec Sophie."
     },
     {
       "id": "sjt_s03_rd",
@@ -3724,8 +3724,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nDémarche active et utile à court terme, mais entièrement unilatérale. Vous ne consultez ni Sophie ni l'équipe. Le document risque d'être incomplet et vous ne créez pas de dynamique collective de partage de connaissances."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale testée : Penser de manière critique (Niveau 2) — identifier les éléments essentiels et formuler des recommandations.\nVous prenez une initiative concrète en compilant un document utile à partir de vos propres échanges avec Sophie. Cela démontre un esprit analytique et une volonté de résoudre le problème de dépendance. Pourquoi +/- et non + : l'action est entièrement unilatérale — vous ne consultez ni Sophie (dont l'expertise pourrait corriger des imprécisions) ni l'équipe. Le document risque d'être incomplet ou inexact, et vous ne créez aucune dynamique collective de partage. Pourquoi +/- et non - : vous agissez concrètement pour réduire la dépendance et offrez une ressource pratique à l'équipe, ce qui a une valeur réelle même si la méthode n'est pas collaborative."
     },
     {
       "id": "sjt_s04_ra",
@@ -3758,8 +3758,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nActif, vous gardez votre calme, vous recadrez la discussion de manière constructive, et vous proposez un cadre structuré (réunion dédiée) qui implique directement les deux parties (Marc et Patrick) dans la co-construction de la solution."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence principale testée : Collaborer (Niveau 2) — régler les désaccords et donner/recevoir du feedback.\nVous gardez votre calme sous pression, vous recadrez la critique de manière constructive en demandant des éléments précis plutôt que des généralités, et vous proposez un cadre structuré (réunion dédiée) impliquant directement Marc et Patrick dans la co-construction de la solution. Pourquoi ++ et non + : vous ne vous contentez pas de désamorcer la situation — vous valorisez Marc (« meilleure connaissance du dossier »), vous reconnaissez implicitement que des améliorations sont possibles, et vous proposez un plan d'action concret avec calendrier. C'est une réponse de chef de projet qui protège son équipe tout en restant ouvert au feedback."
     },
     {
       "id": "sjt_s04_rb",
@@ -3792,8 +3792,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nVous défendez votre équipe, ce qui est positif, mais vous le faites de manière confrontationnelle en renvoyant la responsabilité vers le partenaire. Le renvoi à l'écrit retarde la résolution et bloque le dialogue constructif."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale testée : Guider (Niveau 1) — donner le bon exemple et protéger l'équipe.\nCette réaction a des éléments positifs : vous défendez votre équipe et vous pointez un fait pertinent (DataVision devait fournir certaines données). Cependant, le ton est défensif et confrontationnel, et le renvoi à l'écrit retarde la résolution au lieu de la faciliter. Pourquoi +/- et non + : renvoyer la responsabilité sur le partenaire devant la direction crée une dynamique accusatoire qui nuit à la collaboration future. Pourquoi +/- et non - : défendre le travail de son équipe face à une critique publique excessive est une réaction compréhensible et partiellement justifiée. Le problème est dans la méthode (confrontation publique) plutôt que dans l'intention."
     },
     {
       "id": "sjt_s04_rc",
@@ -3827,7 +3827,7 @@
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nSoumission passive sans aucune évaluation critique du feedback. Vous ne défendez ni la qualité du travail de Marc, ni le processus collaboratif. Accepter sans discussion démoralise votre équipe et donne carte blanche aux critiques futures."
+      "explanation": "Score attendu : --\nCompétence principale testée : Penser de manière critique (Niveau 2) — évaluer les informations et vérifier la crédibilité.\nVous acceptez intégralement la critique de Patrick sans aucune évaluation critique de sa validité. Vous ne cherchez pas à distinguer ce qui est fondé de ce qui est excessif, et vous ne défendez pas le travail de Marc. Pourquoi -- et non - : cette soumission totale (« Vous avez raison ») démoralise publiquement votre équipe, donne carte blanche aux critiques futures du consultant, et vous engagez à « reprendre intégralement » un rapport sans savoir si c'est justifié. C'est un échec sur les compétences Penser critique et Guider simultanément. Marc, qui a travaillé trois semaines, voit son effort balayé sans défense de votre part."
     },
     {
       "id": "sjt_s04_rd",
@@ -3860,8 +3860,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nActif, empathique envers Marc, dialogue avec les deux parties. Cependant, les échanges sont séquentiels : Marc et Patrick ne co-construisent pas ensemble la solution. Vous jouez l'intermédiaire plutôt que de faciliter la collaboration directe."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale testée : Guider (Niveau 1) — donner du feedback constructif et veiller au bien-être de l'équipe.\nCette réaction montre de l'empathie envers Marc et une démarche active de résolution : vous reconnaissez son travail, vous analysez ensemble les critiques, et vous clarifiez les attentes avec Patrick. C'est un bon exercice de leadership bienveillant. Pourquoi + et non ++ : vous n'avez pas réagi pendant le comité lui-même (Marc reste sans défense publiquement), et les échanges séquentiels avec Marc puis Patrick ne permettent pas une co-construction directe entre les deux. Pourquoi + et non +/- : la combinaison de soutien émotionnel à Marc et de clarification factuelle avec Patrick constitue une démarche active et structurée, même si elle manque d'immédiateté."
     },
     {
       "id": "sjt_s05_ra",
@@ -3895,7 +3895,7 @@
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, empathique, dialogue collectif, solution structurée (ateliers réguliers) et durable (rôle de référent). Vous créez une dynamique d'entraide en impliquant les jeunes collègues et en montrant l'exemple. Vous transformez la résistance en opportunité de collaboration."
+      "explanation": "Score attendu : ++\nCompétence principale testée : Faire preuve d'agilité (Niveau 2) — intégrer les nouvelles technologies et prendre l'initiative.\nCette réaction est la plus complète : empathie envers les résistances (« je comprends que le changement est difficile »), solution structurée (ateliers pratiques réguliers sur des cas réels), engagement personnel (rôle de référent), et mobilisation des early adopters (Karim, Leila) pour un apprentissage par les pairs. Pourquoi ++ et non + : vous combinez accompagnement individuel (cas pratiques personnels), dynamique collective (entraide entre collègues), et structure durable (ateliers bihebdomadaires, rôle de référent). Vous transformez la résistance en opportunité de collaboration intergénérationnelle."
     },
     {
       "id": "sjt_s05_rb",
@@ -3928,8 +3928,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nEscalade vers la hiérarchie avec une approche coercitive et punitive. Aucun dialogue direct avec les collègues concernés, aucune tentative de comprendre leurs difficultés réelles ni de les accompagner dans la transition."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence : Guider (Niveau 1). Vous escaladez vers la hiérarchie avec une approche coercitive et punitive, sans avoir tenté le moindre dialogue avec les collègues concernés. Demander des sanctions plutôt que d'accompagner le changement est à l'opposé du rôle de guide. Pourquoi -- et non - : vous ne cherchez pas seulement à éviter le problème, vous proposez activement des mesures punitives qui détruiront la confiance au sein de l'équipe et compromettront toute adoption future de l'outil."
     },
     {
       "id": "sjt_s05_rc",
@@ -3962,8 +3962,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nPassivité totale face à un problème concret qui affecte toute l'équipe (double système). Le problème ne se résoudra pas tout seul et crée une fracture entre les collègues."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence principale testée : Faire preuve d'agilité (Niveau 2) — être alerte aux changements et participer activement.\nCette réaction est une inaction totale face à une consigne claire de votre responsable (« trouver une solution pour que tout le monde soit sur le même outil »). Vous ignorez le problème concret du double système qui pénalise les collègues déjà migrés, et vous contrevenez à une obligation institutionnelle. Pourquoi -- et non - : non seulement vous ne faites rien, mais vous rationalisez l'inaction en niant le problème (« chacun a le droit de travailler avec les outils qui lui conviennent »), ce qui est faux dans ce contexte de décision institutionnelle. Vous manquez à votre responsabilité de chef de projet et vous laissez se creuser le fossé dans l'équipe."
     },
     {
       "id": "sjt_s05_rd",
@@ -3997,7 +3997,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, dialogue direct, aide concrète et personnalisée en partant des besoins de chacun. Mais l'approche reste individuelle : vous n'impliquez pas l'ensemble de l'équipe et ne créez pas de dynamique collective d'apprentissage durable."
+      "explanation": "Score attendu : +\nCompétence principale testée : Faire preuve d'agilité (Niveau 2) — intégrer les nouvelles technologies et ajuster sa méthode.\nCette réaction est proactive et bien pensée : dialogue direct, aide concrète et personnalisée en partant des outils familiers de chacun (tableau de suivi budgétaire de Jean-Pierre). L'approche est empathique (« je comprends que tu es à l'aise ») et démontre la valeur ajoutée de l'outil (« partage automatique »). Pourquoi + et non ++ : l'approche reste strictement individuelle — vous n'impliquez pas l'ensemble de l'équipe et ne créez pas de dynamique collective d'apprentissage entre jeunes et expérimentés. La solution manque de structure durable. Pourquoi + et non +/- : le dialogue direct, l'empathie et la démonstration concrète sur les cas d'usage réels de chacun sont des approches efficaces et respectueuses."
     },
     {
       "id": "sjt_s06_ra",
@@ -4030,8 +4030,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nActif, dialogue direct entre toutes les parties, co-construction collective. Vous recentrez le débat de manière positive (complémentarité au lieu d'opposition), vous redonnez la parole aux membres silencieux et vous mettez en place un cadre structuré (atelier formel)."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence principale : Collaborer (Niveau 2) — encourager la collaboration et régler les désaccords.\nCette réaction est très appropriée car elle combine plusieurs leviers essentiels : vous recadrez le débat de manière constructive en valorisant la complémentarité plutôt que l'opposition, vous créez un espace structuré (atelier d'une demi-journée) pour un dialogue équitable, et vous redonnez la parole aux trois membres silencieux (Karim, Leila, Thomas) en les invitant explicitement à réagir. La co-construction d'une méthodologie mixte validée par tous favorise l'adhésion collective et résout le conflit à la racine. Pourquoi ++ et non + : contrairement à une approche partielle, vous adressez simultanément le conflit interpersonnel, l'exclusion des membres silencieux et le blocage méthodologique, tout en impliquant l'ensemble de l'équipe dans la décision."
     },
     {
       "id": "sjt_s06_rb",
@@ -4064,8 +4064,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nActif avec écoute des deux parties, mais la décision finale est unilatérale. Laura peut se sentir dévalorisée, et les trois autres membres restent exclus de la réflexion. Le conflit interpersonnel n'est pas résolu, il est juste tranché par autorité."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale : Guider (Niveau 1) — veiller aux rôles et responsabilités, rappeler les objectifs communs.\nCette réaction présente des éléments positifs : vous écoutez les deux parties individuellement et vous prenez une décision claire qui fait avancer le projet. Cependant, la décision reste unilatérale et peut être perçue comme un arbitrage en faveur d'Ahmed, ce qui risque de dévaloriser Laura et de nourrir du ressentiment. Les trois autres membres de l'équipe restent totalement exclus du processus de réflexion, ce qui ne résout pas le problème de leur silence. Pourquoi +/- et non + : l'écoute individuelle est un bon point, mais l'absence de co-construction collective et le risque de fracturer davantage l'équipe en imposant une décision empêchent de considérer cette réaction comme véritablement appropriée."
     },
     {
       "id": "sjt_s06_rc",
@@ -4098,8 +4098,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nPassivité face à un conflit qui s'aggrave et qui a déjà paralysé la parole de trois membres de l'équipe. La collaboration est bloquée et le projet prend du retard."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence principale : Guider (Niveau 1) — régler les désaccords et donner du feedback constructif.\nCette réaction est très inappropriée car elle ignore délibérément un conflit qui a déjà dégénéré et qui paralyse trois membres de l'équipe. Karim vous a explicitement signalé que l'ambiance est pesante et que personne n'ose plus s'exprimer — ce sont des signaux d'alarme que vous choisissez de négliger. En tant que chef de projet, laisser le conflit s'envenimer met en péril à la fois la cohésion d'équipe et les résultats du projet stratégique. Pourquoi -- et non - : au-delà de la simple passivité, vous rationalisez votre inaction en supposant que la pression du calendrier résoudra le problème, alors que les faits montrent le contraire — le conflit s'aggrave et l'équipe se désagrège."
     },
     {
       "id": "sjt_s06_rd",
@@ -4132,8 +4132,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nÉvite le dialogue direct et la médiation. Un vote crée un rapport de force (3 contre 2) qui ne résout pas le conflit interpersonnel entre Ahmed et Laura et risque de fracturer davantage l'équipe."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale : Collaborer (Niveau 2) — régler les désaccords et encourager l'ouverture.\nCette réaction est inappropriée car un vote anonyme transforme un désaccord méthodologique en un rapport de force (3 contre 2) qui ne résout pas le conflit interpersonnel entre Ahmed et Laura. Le document comparatif est une bonne initiative, mais le mécanisme de vote évite le dialogue direct et la médiation qui sont nécessaires dans cette situation. Les membres silencieux pourraient voter sous influence sans avoir pu développer leur propre réflexion. Pourquoi - et non -- : le fait de fournir un document comparatif objectif et de donner un délai de réflexion montre une certaine rigueur, ce qui évite d'être totalement nuisible, mais le mécanisme choisi risque de fracturer l'équipe davantage."
     },
     {
       "id": "sjt_s07_ra",
@@ -4167,7 +4167,7 @@
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue avec toute l'équipe, co-construction de nouvelles règles de fonctionnement, cadre structuré et durable. Vous protégez l'anonymat de Sandra tout en abordant le problème structurel qui affecte plusieurs personnes."
+      "explanation": "Score attendu : ++\nCompétence principale : Collaborer (Niveau 2) — collaborer en contexte hybride et encourager l'ouverture.\nCette réaction est très appropriée car elle aborde le problème de manière structurelle plutôt qu'individuelle. Vous protégez l'anonymat de Sandra tout en traitant un dysfonctionnement qui affecte plusieurs personnes. La co-construction de nouvelles règles avec toute l'équipe garantit l'adhésion collective et crée un cadre durable. La proposition concrète (décisions en réunion hebdomadaire + documentation sur Teams) est à la fois réaliste et pérenne. Pourquoi ++ et non + : vous ne vous contentez pas de résoudre le cas de Sandra — vous transformez le fonctionnement de l'équipe pour que l'inclusion en mode hybride devienne systématique, en impliquant chacun dans la définition des nouvelles pratiques."
     },
     {
       "id": "sjt_s07_rb",
@@ -4201,7 +4201,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, empathique et bien intentionné, mais la solution est individuelle (ne concerne que Sandra), unilatérale (une charge supplémentaire pour vous) et palliative (ne change pas le processus décisionnel qui exclut les télétravailleurs)."
+      "explanation": "Score attendu : +\nCompétence principale : Collaborer (Niveau 2) — collaborer en contexte hybride.\nCette réaction va dans la bonne direction : vous faites preuve d'empathie en reconnaissant la frustration de Sandra et vous proposez une action concrète immédiate. Cependant, la solution reste individuelle (elle ne concerne que Sandra), palliative (informer a posteriori plutôt que changer le processus décisionnel) et non durable (vous vous imposez une charge supplémentaire qui dépend de votre disponibilité personnelle). Pourquoi + et non ++ : la solution ne traite pas le problème structurel — les deux autres collègues en télétravail restent exclus, et les décisions informelles continueront à être prises sans les absents."
     },
     {
       "id": "sjt_s07_rc",
@@ -4234,8 +4234,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nVous rejetez la responsabilité sur Sandra, ignorez ses contraintes familiales et niez le problème structurel. Cette réponse va à l'encontre de l'inclusion et de la collaboration en contexte hybride."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence principale : Collaborer (Niveau 2) — collaborer en contexte hybride et encourager l'ouverture.\nCette réaction est très inappropriée car vous rejetez la responsabilité sur Sandra en lui demandant de changer ses jours de présence, tout en ignorant ses contraintes familiales clairement établies (garde d'enfants). Vous normalisez un dysfonctionnement organisationnel (« le mode hybride implique qu'on ne peut pas être au courant de tout ») au lieu de le corriger. Ce faisant, vous niez le problème structurel qui affecte plusieurs collègues et risquez de pousser Sandra vers la mutation qu'elle a mentionnée. Pourquoi -- et non - : au-delà de l'inaction, cette réponse est activement nuisible — elle culpabilise la victime du dysfonctionnement et va directement à l'encontre des principes d'inclusion et de collaboration en contexte hybride."
     },
     {
       "id": "sjt_s07_rd",
@@ -4268,8 +4268,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nEscalade sans prise d'initiative directe. En tant que collègue impliqué dans les projets, vous pourriez aborder le sujet vous-même et proposer des solutions à l'équipe au lieu de déléguer vers la hiérarchie."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale : Guider (Niveau 1) — mobiliser l'équipe et rappeler les objectifs communs.\nCette réaction a le mérite d'identifier correctement le problème structurel et de proposer des solutions formelles (bonnes pratiques, règles de prise de décision). Cependant, en tant que responsable de l'équipe, vous déléguez la résolution à votre propre hiérarchie au lieu de prendre l'initiative vous-même. Cela envoie un signal de passivité et retarde la mise en place de solutions concrètes. Pourquoi +/- et non + : la bonne analyse du problème est contrebalancée par l'absence d'initiative directe — vous avez les moyens d'agir vous-même mais vous choisissez de remonter le problème, ce qui est insuffisant pour un chef de projet."
     },
     {
       "id": "sjt_s08_ra",
@@ -4302,8 +4302,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif, vous recentrez sur l'objectif commun, vous proposez un exercice concret de co-construction en temps réel qui force les interactions entre services. Le cadre est structuré (charte de projet) et les interdépendances sont rendues visibles."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence : Guider (Niveau 1). Vous recentrez la discussion sur l'objectif commun et proposez un exercice collaboratif concret. C'est une bonne intervention de facilitation. Pourquoi + et non ++ : l'exercice de co-construction en séance, avec des participants déjà en posture défensive, risque de reproduire les mêmes dynamiques de territoire. Une approche en deux temps (recueillir d'abord les besoins, puis co-construire) serait plus efficace."
     },
     {
       "id": "sjt_s08_rb",
@@ -4336,8 +4336,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nActif et structuré, mais l'élaboration est entièrement unilatérale. Les quatre services n'ont pas collaboré entre eux. Le plan reflète votre compréhension, pas une vision partagée. Les participants risquent de « valider » poliment sans s'engager réellement."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale : Être orienté résultats (Niveau 3) — déterminer les activités et veiller aux objectifs.\nCette réaction montre du professionnalisme et de la rigueur : vous prenez en compte les contraintes de chaque service et vous produisez un plan structuré avec un outil adapté (RACI). Le projet avance concrètement grâce à votre travail. Cependant, l'élaboration unilatérale ne crée pas la dynamique de collaboration transversale nécessaire pour un programme de deux ans impliquant quatre services qui n'ont jamais travaillé ensemble. Pourquoi + et non ++ : le plan reflète votre compréhension, pas une vision partagée. Les participants risquent de « valider » poliment sans véritable engagement, ce qui pose un problème d'adhésion sur la durée du programme."
     },
     {
       "id": "sjt_s08_rc",
@@ -4370,8 +4370,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nPassivité et évitement. Reporter sans action concrète ne résoudra rien : les participants reviendront avec les mêmes postures défensives. Le temps perdu retarde le démarrage du programme et envoie un signal négatif à la direction."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale : Être orienté résultats (Niveau 3) — déterminer les activités et adapter le planning.\nCette réaction est inappropriée car reporter la réunion sans action concrète ne résoudra pas le problème de fond : les participants reviendront avec les mêmes postures défensives. Vous constatez que la dynamique est mauvaise mais vous n'utilisez pas votre rôle de chef de projet pour la corriger. Le délai de deux semaines retarde le démarrage d'un programme ambitieux et envoie un signal négatif à la direction générale qui vous a désigné. Pourquoi - et non -- : vous faites au moins preuve de lucidité en reconnaissant que la dynamique ne fonctionne pas, et clôturer une réunion improductive n'est pas en soi destructeur — mais l'absence totale d'action corrective est insuffisante."
     },
     {
       "id": "sjt_s08_rd",
@@ -4404,8 +4404,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nActif, dialogue approfondi avec chaque partie, bonne compréhension des enjeux. Mais les quatre services ne co-construisent pas directement entre eux : vous restez l'intermédiaire central, ce qui ne crée pas de dynamique de collaboration transversale."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale : Penser de manière critique (Niveau 2) — combiner différentes stratégies et identifier les éléments essentiels.\nCette réaction est appropriée car les rencontres bilatérales approfondies vous permettent de comprendre les besoins réels de chaque service, d'identifier les convergences et les risques, et de préparer un cadre de collaboration éclairé. La synthèse présentée en plénière crée une base concrète pour la discussion collective. C'est une démarche méthodique qui compense l'échec de la première réunion. Pourquoi + et non ++ : vous restez l'intermédiaire central entre les services, qui ne co-construisent pas directement entre eux. Pour un programme de deux ans, il faudrait aussi créer des interactions directes entre les quatre représentants."
     },
     {
       "id": "sjt_s09_ra",
@@ -4438,8 +4438,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif, dialogue direct dans un cadre non menaçant, empathie sincère (partage de votre propre vulnérabilité), et solution collaborative inscrite dans un cadre structuré (réunion d'équipe). Vous protégez la dignité de Thomas en présentant l'ajustement comme collectif."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence principale : Collaborer (Niveau 2) — donner/recevoir du feedback de manière adéquate et encourager l'ouverture.\nCette réaction est très appropriée car elle combine plusieurs dimensions essentielles : un cadre informel et non menaçant (déjeuner dehors), une approche empathique basée sur votre propre vulnérabilité (partage de votre expérience personnelle), et une solution structurelle inscrite dans un cadre collectif (point sur la charge de travail en réunion d'équipe). Vous protégez la dignité de Thomas en présentant l'ajustement comme une initiative d'équipe, pas comme une aide ciblée. Pourquoi ++ et non + : contrairement à une aide ponctuelle, vous articulez dialogue personnel et solution collective durable, tout en normalisant la demande d'aide — ce qui peut bénéficier à l'ensemble de l'équipe."
     },
     {
       "id": "sjt_s09_rb",
@@ -4473,7 +4473,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nEscalade vers la hiérarchie sans avoir d'abord proposé votre aide directement à Thomas. Vous parlez de Thomas à son chef sans l'en informer, ce qui peut être perçu comme une délation. Vous ne montrez aucune solidarité directe."
+      "explanation": "Score attendu : +/-\nCompétence principale : Collaborer (Niveau 2) — donner du feedback de manière adéquate.\nCette réaction a le mérite de signaler un risque réel à la hiérarchie, qui a les leviers pour agir sur la charge de travail. Cependant, vous escaladez sans avoir d'abord proposé votre aide directement à Thomas — vous parlez de lui à son chef sans l'en informer, ce qui peut être perçu comme une forme de délation. Cette approche ne montre aucune solidarité directe et risque de fragiliser votre relation avec Thomas s'il l'apprend. Pourquoi +/- et non - : l'alerte à la hiérarchie est en soi légitime face à un risque de burn-out, et le contenu du message reste factuel et bienveillant. Mais l'absence de démarche directe préalable auprès de Thomas est un manque important."
     },
     {
       "id": "sjt_s09_rc",
@@ -4506,8 +4506,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nPassivité face à de multiples signaux d'alerte, confirmés par d'autres collègues. Prendre les mots de Thomas au pied de la lettre alors que tous les signes non verbaux et comportementaux indiquent le contraire est un manque de solidarité."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence principale : Collaborer (Niveau 2) — encourager l'ouverture et donner du feedback adéquat.\nCette réaction est très inappropriée car vous ignorez délibérément de multiples signaux d'alarme convergents : horaires excessifs, annulation systématique des réunions, retards sur les livrables, et alertes de deux collègues dont l'un évoque explicitement le burn-out. Prendre les mots de Thomas au pied de la lettre alors que tout son comportement indique le contraire est un manque flagrant de solidarité et d'esprit critique. Pourquoi -- et non - : ce n'est pas simplement de la passivité — vous rationalisez activement votre inaction (« chacun gère sa charge », « je ne veux pas être intrusif ») face à une situation qui se dégrade visiblement, ce qui risque de contribuer à un burn-out évitable."
     },
     {
       "id": "sjt_s09_rd",
@@ -4541,7 +4541,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, solidaire, aide concrète et formulée avec respect (vous proposez, vous n'imposez pas). Mais la solution est ponctuelle (une tâche, cette semaine) et ne s'attaque pas à la cause structurelle de la surcharge."
+      "explanation": "Score attendu : +\nCompétence principale : Collaborer (Niveau 2) — encourager la collaboration et donner du feedback adéquat.\nCette réaction est appropriée car elle offre une aide concrète et immédiate, formulée avec respect et sans jugement. Vous proposez sans imposer, vous justifiez votre offre par votre maîtrise du dossier (ce qui rassure Thomas sur la qualité), et vous lui laissez le choix d'accepter ou non. Cette approche préserve son autonomie et sa dignité professionnelle. Pourquoi + et non ++ : la solution est ponctuelle (une tâche, cette semaine) et ne s'attaque pas à la cause structurelle de la surcharge. Elle n'ouvre pas non plus de dialogue sur le bien-être de Thomas ni ne propose de mécanisme collectif."
     },
     {
       "id": "sjt_s10_ra",
@@ -4575,7 +4575,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif, dialogue, vous prenez le temps d'expliquer le « pourquoi » de manière convaincante. La session est structurée (deux temps), limitée dans la durée (une heure), et les résultats sont durables (documentation partagée à l'échelle de l'institution). Vous encouragez le partage collectif de connaissances."
+      "explanation": "Score attendu : +\nCompétence : Guider (Niveau 1). Vous expliquez le « pourquoi » du retour d'expérience avec pédagogie et empathie, ce qui répond au besoin de mobiliser l'équipe. La session structurée avec animation est un bon format. Pourquoi + et non ++ : vous maintenez le format classique malgré la résistance unanime de l'équipe. Un chef de projet agile adapterait le format (par exemple un questionnaire court suivi d'une discussion ciblée) pour répondre aux réticences tout en atteignant l'objectif."
     },
     {
       "id": "sjt_s10_rb",
@@ -4608,8 +4608,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif mais unilatéral. Le bilan reflète uniquement votre perspective de chef de projet. Les membres de l'équipe ne sont pas impliqués dans la réflexion collective et le feedback par e-mail ne stimule pas un vrai dialogue ni un apprentissage partagé."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence principale : Être orienté résultats (Niveau 3) — assumer la responsabilité et déterminer les activités.\nCette réaction a le mérite de produire un livrable concret malgré la résistance, et vous ouvrez la porte aux corrections de l'équipe. Cependant, le bilan reflète uniquement votre perspective de chef de projet — les membres de l'équipe ne sont pas impliqués dans la réflexion collective et n'ont vécu aucun processus d'apprentissage partagé. Le feedback par e-mail ne stimule pas un vrai dialogue et il est peu probable que des commentaires substantiels arrivent. Pourquoi +/- et non + : vous contournez la résistance au lieu de la surmonter, et le résultat (un document unilatéral avec une invitation passive à commenter) ne crée ni adhésion ni apprentissage collectif."
     },
     {
       "id": "sjt_s10_rc",
@@ -4642,8 +4642,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nPassivité face à la résistance. Renoncer au retour d'expérience fait perdre une opportunité précieuse d'apprentissage collectif. Les mêmes erreurs (communication avec les prestataires, gestion des changements de périmètre) risquent de se reproduire."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence principale : Faire preuve d'agilité (Niveau 2) — persévérer face aux difficultés et ne pas abandonner.\nCette réaction est inappropriée car vous renoncez au retour d'expérience à la première résistance, alors que votre responsable vous l'a explicitement demandé. Vous faites perdre à l'organisation une opportunité précieuse d'apprentissage : les mêmes erreurs (communication prestataire, gestion du changement de périmètre, conflits de répartition) risquent de se reproduire dans les futurs projets. Pourquoi - et non -- : vous ne causez pas de dommage actif — vous informez votre responsable et proposez au moins un résumé personnel. Mais l'abandon face à une résistance surmontable montre un manque de persévérance et de leadership."
     },
     {
       "id": "sjt_s10_rd",
@@ -4676,8 +4676,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nActif, implique tous les membres et l'anonymat peut encourager l'honnêteté. Le format court (10 min) respecte la contrainte de temps de l'équipe. Mais il n'y a pas de dialogue direct ni de co-construction collective. L'apprentissage reste individuel."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence principale : Faire preuve d'agilité (Niveau 2) — ajuster sa méthode et prendre l'initiative.\nCette réaction est appropriée car vous adaptez votre méthode face à la résistance : le questionnaire anonyme en 10 minutes respecte la contrainte de temps exprimée par l'équipe, et l'anonymat peut encourager des retours plus honnêtes sur les difficultés rencontrées. Les questions ciblées sur les phases clés du projet montrent une démarche réfléchie. C'est une solution pragmatique qui permet de collecter des retours malgré les réticences. Pourquoi + et non ++ : il n'y a pas de dialogue direct ni de co-construction collective — l'apprentissage reste individuel et la synthèse que vous produisez ne bénéficie pas d'un échange en groupe qui enrichirait les perspectives de chacun."
     },
     {
       "id": "sjt_s11_ra",
@@ -4710,8 +4710,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nVous reconnaissez l'expertise d'Éric (pas de confrontation), vous expliquez votre besoin avec des arguments concrets, et vous proposez un compromis structuré en invitant sa contribution. C'est de la co-construction respectueuse."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (Niveau 2) — encourager la collaboration et régler les désaccords.\nCette réaction est exemplaire : vous reconnaissez l'expertise d'Éric sans le braquer, vous argumentez votre besoin en vous appuyant sur les interdépendances concrètes du projet, et vous proposez un compromis structuré (point hebdomadaire court, répartition des décisions) tout en invitant Éric à co-construire le cadre. C'est un dialogue ouvert, respectueux et orienté solution. Pourquoi ++ et non + : la réaction combine empathie, argumentation factuelle, proposition concrète ET co-construction (« Qu'en penses-tu ? »), là où un simple + ne couvrirait qu'une partie de ces éléments."
     },
     {
       "id": "sjt_s11_rb",
@@ -4745,7 +4745,7 @@
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nSoumission passive. Vous renoncez à défendre une organisation de travail que vous estimez nécessaire. Accepter sans discussion un cadre qui ne favorise pas la collaboration posera des problèmes plus tard quand les interdépendances se manifesteront."
+      "explanation": "Score attendu : --\nCompétence : Collaborer (Niveau 2). Vous renoncez complètement à défendre votre point de vue et votre organisation de travail face à Éric. Cette soumission passive abandonne votre responsabilité de co-pilote du projet. Pourquoi -- et non - : vous ne faites pas seulement preuve de passivité, vous rationalisez votre abdication (« il a plus d'expérience ») et vous renoncez à tout suivi régulier, ce qui compromet activement la coordination du projet sur six mois."
     },
     {
       "id": "sjt_s11_rc",
@@ -4778,8 +4778,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nVous exprimez votre désaccord mais vous escaladez immédiatement vers la hiérarchie au lieu de chercher un terrain d'entente directement avec Éric. Cela commence la relation de co-pilotage sur une base de confrontation."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence testée : Collaborer (Niveau 2) — régler les désaccords entre collègues.\nVous exprimez clairement votre désaccord, ce qui est positif, mais vous escaladez immédiatement vers le responsable hiérarchique sans avoir tenté de trouver un terrain d'entente avec Éric. En tant que co-pilote du projet, vous devriez d'abord chercher à résoudre ce différend en direct. Cette escalade prématurée lance la relation de travail sur une base de confrontation et peut braquer Éric. Pourquoi - et non -- : vous identifiez correctement le problème (point mensuel insuffisant) et vous agissez plutôt que de rester passif. Le recours au responsable n'est pas absurde, il est simplement prématuré."
     },
     {
       "id": "sjt_s11_rd",
@@ -4813,7 +4813,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nVous acceptez partiellement et proposez un ajustement raisonnable. C'est un bon début de négociation. Mais vous ne co-construisez pas véritablement le cadre de travail : vous acceptez le principe d'Éric et proposez un ajustement unilatéral."
+      "explanation": "Score attendu : +\nCompétence testée : Collaborer (Niveau 2) — encourager la collaboration et négocier.\nVous acceptez la répartition des rôles proposée par Éric (ce qui est raisonnable) et vous proposez un ajustement concret sur la fréquence des points (bihebdomadaire au lieu de mensuel). L'envoi d'un planning montre une orientation résultats et une prise d'initiative appréciables. Pourquoi + et non ++ : vous ne co-construisez pas véritablement le cadre — vous acceptez le principe d'Éric et proposez un ajustement unilatéral sans ouvrir la discussion sur les décisions conjointes. La question des interdépendances stratégiques n'est pas abordée."
     },
     {
       "id": "sjt_s12_ra",
@@ -4846,8 +4846,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif, vous mettez en relation directe deux experts qui ne se connaissent pas, vous créez un cadre de dialogue structuré (appel dédié) avec un objectif clair (position commune). C'est de la collaboration transversale."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence : Collaborer (Niveau 2). Vous mettez en relation directe les deux experts et proposez un cadre de dialogue structuré, ce qui encourage la collaboration transversale. Pourquoi + et non ++ : le format par e-mail ne favorise pas un vrai échange entre David et Fatima. Un appel ou une réunion tripartite permettrait une confrontation directe et constructive des analyses juridiques, avec votre facilitation en temps réel."
     },
     {
       "id": "sjt_s12_rb",
@@ -4880,8 +4880,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nVous décidez seul(e) sur un sujet juridique sans expertise, sans impliquer les deux spécialistes, et vous masquez la divergence au comité. C'est l'opposé de la collaboration et cela expose le projet à un risque juridique."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (Niveau 2) — vérifier la crédibilité des sources et évaluer causes/conséquences.\nVous décidez seul(e) sur un sujet juridique complexe sans expertise suffisante, sans impliquer les deux spécialistes, et surtout vous masquez la divergence au comité de pilotage. Cela expose le projet à un risque juridique majeur et prive le comité d'une information essentielle à la prise de décision. Pourquoi -- et non - : le fait de cacher volontairement la divergence au comité est activement nuisible. Ce n'est pas seulement un manque de collaboration, c'est un manquement à la transparence et à la responsabilité attendues d'un Chef de Projet."
     },
     {
       "id": "sjt_s12_rc",
@@ -4915,7 +4915,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nVous créez une dynamique d'opposition (« elle dit le contraire de toi ») au lieu de faciliter un dialogue constructif. David peut se sentir remis en question et Fatima n'est pas incluse dans l'échange."
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (Niveau 2) — encourager l'ouverture et le dialogue.\nVous cherchez à clarifier la contradiction, ce qui est positif. Cependant, la formulation « dit le contraire de ce que tu m'avais indiqué » crée une dynamique d'opposition plutôt que de dialogue constructif. David peut se sentir remis en question et mis sur la défensive. De plus, Fatima n'est pas incluse dans l'échange, ce qui empêche une confrontation directe des analyses. Pourquoi +/- et non + : l'intention est bonne mais la méthode est maladroite — vous ne créez pas les conditions d'un dialogue tripartite et le ton peut braquer David."
     },
     {
       "id": "sjt_s12_rd",
@@ -4948,8 +4948,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif, dialogue avec les deux experts, analyse rigoureuse. Mais David et Fatima ne confrontent pas directement leurs analyses. Vous êtes l'intermédiaire, ce qui limite la collaboration entre eux et peut mener à des incompréhensions."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (Niveau 2) — combiner différentes stratégies de recherche et formuler des recommandations.\nVous adoptez une démarche rigoureuse : appel individuel avec chaque expert, approfondissement des deux analyses, synthèse structurée et transparence devant le comité (les deux positions sont présentées). C'est une approche méthodique et honnête. Pourquoi + et non ++ : David et Fatima ne confrontent jamais directement leurs analyses. Vous restez l'intermédiaire, ce qui limite la collaboration transversale et peut mener à des incompréhensions que seul un échange direct entre experts pourrait résoudre."
     },
     {
       "id": "sjt_s13_ra",
@@ -4982,8 +4982,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nVous valorisez chaque contribution, vous abordez le problème de manière constructive et non accusatoire, et vous proposez une solution structurée pour l'avenir. L'équipe co-construit la nouvelle pratique ensemble."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Guider (Niveau 1) — donner du feedback constructif et rappeler les objectifs communs.\nVous valorisez explicitement chaque contribution individuelle, vous abordez le problème de manière non accusatoire (pas de blâme envers Nadia), et vous proposez une solution structurée et préventive (slide de contribution) en invitant l'équipe à co-construire la nouvelle pratique. Le cadre informel (café) favorise l'ouverture. Pourquoi ++ et non + : cette réaction combine reconnaissance individuelle, feedback collectif non culpabilisant, solution concrète pour l'avenir ET co-construction (« Qu'en pensez-vous ? »). C'est la réponse la plus complète au problème."
     },
     {
       "id": "sjt_s13_rb",
@@ -5017,7 +5017,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nDialogue direct avec Nadia, ce qui est bien. Mais la discussion est bilatérale : Sarah et Mourad ne sont pas impliqués. Vous gérez le symptôme (le langage de Nadia) mais ne créez pas de dynamique collective pour prévenir le problème."
+      "explanation": "Score attendu : +\nCompétence testée : Guider (Niveau 1) — donner du feedback constructif.\nVous abordez le problème directement avec Nadia en privé, ce qui est une bonne pratique de feedback. Vous identifiez clairement le comportement problématique (usage du « je ») et son impact sur l'équipe. C'est un acte de leadership approprié qui respecte Nadia en ne l'exposant pas publiquement. Pourquoi + et non ++ : la discussion reste bilatérale — Sarah et Mourad ne sont pas impliqués dans la résolution et ne savent pas que vous avez agi. Vous gérez le symptôme (le langage de Nadia) mais ne créez pas de dynamique collective préventive pour l'avenir."
     },
     {
       "id": "sjt_s13_rc",
@@ -5050,8 +5050,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nPassivité face à un problème qui affecte la cohésion de l'équipe. Sarah et Mourad se sentent invisibilisés, ce qui minera leur motivation et leur volonté de collaborer sur les prochains projets."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence testée : Guider (Niveau 1) — veiller aux rôles/responsabilités et donner le bon exemple.\nVous choisissez l'inaction face à un problème qui affecte visiblement la cohésion de votre équipe. Sarah est blessée, Mourad est mécontent — ces signaux sont clairs. Minimiser la situation en la réduisant à « une question de forme » démontre un manque de lecture des dynamiques d'équipe. Espérer que le directeur « saura reconnaître » le travail collectif est naïf, surtout après qu'il a félicité Nadia personnellement. Pourquoi - et non -- : l'inaction n'est pas activement nuisible — elle ne détruit pas la confiance ni n'aggrave la situation. Mais elle manque une opportunité importante de leadership."
     },
     {
       "id": "sjt_s13_rd",
@@ -5084,8 +5084,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif et vous rétablissez la vérité auprès de la direction. Mais vous ne résolvez pas le problème au sein de l'équipe : Sarah et Mourad ne savent pas que vous avez agi, et Nadia n'est pas consciente de l'impact de son comportement."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (Niveau 2) — encourager l'ouverture et la reconnaissance.\nVous rétablissez la vérité auprès de la direction en valorisant les contributions de chacun, ce qui est positif et courageux. L'e-mail est factuel et non accusatoire envers Nadia. Cependant, cette action ne résout pas le problème interne : Sarah et Mourad ne savent pas que vous avez agi, et Nadia n'est pas consciente de l'impact de son comportement. Pourquoi +/- et non + : bien que l'initiative soit louable côté direction, l'absence de dialogue au sein de l'équipe laisse les tensions intactes et ne prévient pas la récidive."
     },
     {
       "id": "sjt_s14_ra",
@@ -5118,8 +5118,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nVous montrez l'exemple en partageant votre vulnérabilité et en accueillant le feedback de manière constructive. Vous proposez de co-construire un cadre de décision avec l'équipe. C'est un acte fort d'encouragement à la collaboration et au feedback ouvert."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (Niveau 2) — encourager l'ouverture et donner/recevoir du feedback.\nVous montrez l'exemple en partageant votre vulnérabilité devant l'équipe, vous accueillez le feedback de manière constructive sans vous justifier, et vous proposez de co-construire un cadre de décision clair (quelles décisions sont collectives vs autonomes). C'est un acte fort qui encourage la culture du feedback ouvert dans l'équipe. Pourquoi ++ et non + : la réaction va au-delà de la simple prise de conscience — elle transforme un feedback individuel en opportunité collective d'amélioration, avec une proposition concrète de co-construction du cadre décisionnel."
     },
     {
       "id": "sjt_s14_rb",
@@ -5152,8 +5152,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nBonne intention de changement, mais la démarche reste individuelle et silencieuse. Vos collègues ne sauront pas que vous avez entendu le message et ne verront pas nécessairement de changement immédiat. Pas de dialogue ni de co-construction."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Faire preuve d'agilité (Niveau 2) — ajuster sa méthode de travail.\nVous prenez le feedback au sérieux et vous avez l'intention sincère de changer votre comportement, ce qui est positif. Cela montre une capacité de remise en question personnelle. Cependant, la démarche reste entièrement individuelle et silencieuse. Vos collègues ne sauront pas que vous avez entendu le message et ne verront pas nécessairement de changement immédiat. Sans dialogue, il n'y a ni co-construction ni renforcement de la confiance. Pourquoi +/- et non - : l'intention de changement est réelle et le feedback n'est pas rejeté. Mais sans action visible ni dialogue, l'impact reste très limité."
     },
     {
       "id": "sjt_s14_rc",
@@ -5186,8 +5186,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nRejet défensif d'un feedback constructif. Vous manquez une opportunité d'améliorer votre collaboration avec l'équipe et vous envoyez le signal que le feedback n'est pas le bienvenu."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (Niveau 2) — voir un échec/critique comme opportunité d'apprentissage.\nVous rejetez de manière défensive un feedback constructif et légitime (que vous reconnaissez vous-même comme fondé dans la situation). Vous décrédibilisez le processus de feedback 360° en critiquant l'anonymat, et vous décidez d'ignorer complètement le retour. Cela démontre une rigidité incompatible avec le niveau d'agilité attendu d'un Chef de Projet A2. Pourquoi -- et non - : ce n'est pas simplement un manque d'action — c'est un rejet actif du feedback qui envoie le signal que les retours ne sont pas les bienvenus et ferme la porte à toute amélioration."
     },
     {
       "id": "sjt_s14_rd",
@@ -5220,8 +5220,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nDialogue direct pour valider le feedback, démarche d'écoute et de remise en question. Mais la conversation reste bilatérale : le reste de l'équipe n'est pas impliqué et ne bénéficie pas de cette réflexion."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Collaborer (Niveau 2) — donner/recevoir du feedback de manière adéquate.\nVous cherchez à valider le feedback en engageant un dialogue direct et honnête avec un collègue de confiance. La démarche d'écoute et de remise en question est appréciable et montre une réelle ouverture au changement. Demander « Est-ce que tu as observé ça aussi ? » est une question courageuse qui démontre de la maturité professionnelle. Pourquoi + et non ++ : la conversation reste bilatérale avec un seul collègue. Le reste de l'équipe n'est pas impliqué et ne bénéficie pas de cette réflexion. Il n'y a pas de co-construction d'un nouveau cadre de décision collectif."
     },
     {
       "id": "sjt_s15_ra",
@@ -5254,8 +5254,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nVous abordez le problème directement avec Alexandre, vous reconnaissez la valeur de sa proposition, et vous proposez un cadre collaboratif (réunion d'équipe) pour que la décision soit co-construite. Vous rétablissez le circuit de communication tout en restant constructif."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Guider (Niveau 1) — veiller aux rôles/responsabilités et donner du feedback constructif.\nVous abordez le problème directement avec Alexandre, vous reconnaissez la valeur de sa proposition (pas de rejet), et vous recadrez le processus de manière constructive en expliquant pourquoi la consultation de l'équipe est nécessaire. Vous proposez un cadre collaboratif (réunion avec Léa et les autres) pour enrichir la proposition avant sa présentation formelle. Pourquoi ++ et non + : la réaction combine feedback direct et respectueux, rétablissement du circuit de communication, valorisation de la contribution d'Alexandre ET inclusion de l'équipe dans la co-construction. Tous les aspects de la situation sont traités."
     },
     {
       "id": "sjt_s15_rb",
@@ -5288,8 +5288,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nVous recadrez formellement mais de manière unilatérale et autoritaire, par e-mail. Alexandre peut se sentir désavoué publiquement et la relation de collaboration avec le prestataire risque d'être endommagée."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Être orienté résultats (Niveau 3) — veiller aux objectifs et assumer la responsabilité.\nVous rétablissez le processus de gouvernance du projet, ce qui est votre responsabilité en tant que Chef de Projet. Le rappel des règles de validation est légitime et nécessaire. Cependant, la forme est problématique : un e-mail formel avec le directeur IT en copie désavoue publiquement Alexandre sans lui avoir d'abord parlé en direct. Le ton est autoritaire et unilatéral, ce qui risque de détériorer la relation de collaboration avec le prestataire. Pourquoi +/- et non - : le fond est correct (le processus doit être respecté) mais la méthode manque de diplomatie et de dialogue préalable."
     },
     {
       "id": "sjt_s15_rc",
@@ -5322,8 +5322,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nPassivité qui valide un comportement problématique. Votre équipe se sent court-circuitée et le prestataire continuera à contourner le processus de décision collaborative."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence testée : Guider (Niveau 1) — veiller aux rôles/responsabilités et donner le bon exemple.\nVous choisissez l'inaction totale face à un problème récurrent (c'est la deuxième fois) qui affecte directement votre équipe. Léa a explicitement exprimé sa frustration et vous n'y répondez pas. En ne recadrant pas Alexandre, vous validez implicitement le contournement du processus de décision et vous abandonnez votre rôle de Chef de Projet. Pourquoi -- et non - : ce n'est pas un simple manque d'initiative — c'est un abandon de responsabilité qui nuit à la confiance de votre équipe envers vous et qui permet à un schéma problématique de se perpétuer."
     },
     {
       "id": "sjt_s15_rd",
@@ -5356,8 +5356,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nVous impliquez votre équipe (bon), mais vous excluez Alexandre de la réflexion et vous répondez de manière parallèle plutôt que collaborative. Le message implicite est compétitif plutôt que coopératif."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (Niveau 2) — encourager la collaboration et l'ouverture.\nVous impliquez votre équipe dans l'évaluation de la proposition, ce qui est positif et répond au besoin exprimé par Léa de ne pas être « figurante ». La contre-proposition enrichie montre une orientation résultats. Cependant, vous excluez Alexandre de la réflexion, ce qui reproduit exactement le problème que vous lui reprochez : prendre des décisions sans impliquer toutes les parties prenantes. Le message est compétitif plutôt que coopératif. Pourquoi +/- et non + : les éléments positifs (implication de l'équipe, enrichissement technique) sont contrebalancés par l'exclusion d'Alexandre et l'absence de dialogue direct sur le processus."
     },
     {
       "id": "sjt_s16_ra",
@@ -5390,8 +5390,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nVous reconnaissez le problème ouvertement, vous invitez l'équipe à co-construire un nouveau format, et vous interpellez spécifiquement les personnes silencieuses. C'est un acte fort d'encouragement à la collaboration et au dialogue."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (Niveau 2) — encourager l'ouverture et régler les désaccords. Cette réaction est exemplaire : vous reconnaissez ouvertement le dysfonctionnement, vous invitez l'équipe à co-construire un nouveau format (sujets, fréquence, interactivité), et vous sollicitez nommément les personnes concernées (Karim, Rachid, Nadia) pour libérer la parole. Pourquoi ++ et non + : vous ne vous contentez pas de constater le problème — vous proposez un dialogue transparent en réunion, ce qui demande du courage managérial, et vous impliquez collectivement l'équipe dans la solution plutôt que de décider seul(e). Le seul risque mineur est de mettre Nadia en lumière devant le groupe, mais l'approche globale reste fortement alignée avec les attendus de collaboration et de guidance."
     },
     {
       "id": "sjt_s16_rb",
@@ -5424,8 +5424,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nPassivité face à un dysfonctionnement clair. La réunion a perdu toute valeur et les collègues l'ont exprimé (même si indirectement). Ne rien changer est un gaspillage de temps pour tout le monde."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence : Penser de manière critique (Niveau 2). Vous ignorez délibérément les signaux évidents de dysfonctionnement (écrans éteints, silence, format inadapté) et continuez un format qui gaspille le temps de huit personnes chaque semaine. Pourquoi -- et non - : il ne s'agit pas d'une simple inaction — vous avez les données pour constater l'échec et vous choisissez activement de perpétuer un format inefficace, ce qui nuit à la productivité et à l'engagement de toute l'équipe."
     },
     {
       "id": "sjt_s16_rc",
@@ -5459,7 +5459,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous imposez une obligation de participation par e-mail, sans chercher à comprendre pourquoi l'équipe ne participe plus. Forcer la parole sans traiter la cause (format inadapté, sentiment que les décisions sont déjà prises) ne fonctionnera pas."
+      "explanation": "Score attendu : -\nCompétence testée : Guider (Niveau 1) — donner du feedback constructif et mobiliser l'équipe. L'e-mail impose une obligation de participation (« préparer au moins un point ») sans chercher à comprendre les causes du désengagement. Or Rachid a explicitement formulé le problème : format répétitif et sentiment que les décisions sont déjà prises. Forcer la parole ne traite pas la cause. Pourquoi - et non -- : l'intention de réagir est présente et vous reconnaissez au moins la baisse de participation, ce qui est mieux que l'inaction totale. Mais l'approche directive par e-mail, sans dialogue ni remise en question du format, ne résoudra pas le problème et risque même de braquer l'équipe."
     },
     {
       "id": "sjt_s16_rd",
@@ -5492,8 +5492,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif, vous cherchez à comprendre le problème. L'anonymat peut libérer la parole. Mais le sondage reste un échange indirect : un dialogue ouvert en réunion serait plus courageux et plus collaboratif."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (Niveau 2) — combiner des stratégies de recherche et évaluer les causes. Le sondage anonyme est une démarche pertinente : il permet de recueillir des avis francs sans pression sociale, et les trois questions couvrent bien le diagnostic (forces, faiblesses, alternatives). Vous analysez les résultats avant de proposer un nouveau format, ce qui est méthodique. Pourquoi + et non ++ : le sondage reste un échange indirect et unilatéral — vous recueillez des avis mais sans créer de vrai dialogue collectif. Un atelier de co-construction en réunion (comme dans la réaction A) serait plus courageux et plus collaboratif. L'approche est bonne mais manque la dimension de dialogue ouvert en équipe."
     },
     {
       "id": "sjt_s17_ra",
@@ -5526,8 +5526,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif, dialogue, co-construction d'un mode de fonctionnement commun, cadre structuré (atelier). Vous impliquez les deux équipes de manière symétrique et vous proposez un co-animateur de l'autre équipe pour montrer la parité."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence : Collaborer (Niveau 2). L'atelier d'intégration co-animé avec le responsable de l'autre équipe est une excellente initiative structurelle. Le format symétrique montre du respect pour les deux équipes. Pourquoi + et non ++ : proposer directement un atelier formel peut intimider des collègues qui ne se connaissent pas encore. Des contacts informels préalables (déjeuners, cafés) faciliteraient l'atelier. L'initiative est structurée mais manque l'étape relationnelle préalable."
     },
     {
       "id": "sjt_s17_rb",
@@ -5560,8 +5560,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif et empathique, bonne initiative pour créer des liens informels. Mais l'approche est individuelle et ne crée pas de cadre structuré pour l'intégration de l'ensemble des deux équipes."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Collaborer (Niveau 2) — encourager l'ouverture et collaborer en contexte hybride. Inviter individuellement des membres de l'autre équipe à déjeuner est une initiative positive qui montre de l'empathie et une volonté de briser les silos. Les questions sur leurs projets et méthodes témoignent d'un intérêt sincère. Pourquoi + et non ++ : l'approche reste individuelle et informelle — elle ne crée pas de cadre structuré pour l'intégration de l'ensemble des douze personnes. Les déjeuners informels sont un bon complément mais ne suffisent pas à définir de nouvelles règles de fonctionnement communes. L'initiative va dans la bonne direction mais manque d'envergure collective."
     },
     {
       "id": "sjt_s17_rc",
@@ -5594,8 +5594,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nPassivité. Les recherches montrent que des groupes qui ne se connaissent pas ne fusionnent pas naturellement sans intervention. Les deux clans vont se cristalliser."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence : Faire preuve d'agilité (Niveau 2). Vous attendez passivement que la fusion se fasse d'elle-même, ignorant les recherches qui montrent que des groupes qui ne se connaissent pas ne fusionnent pas naturellement. Pourquoi -- et non - : dans un contexte de réorganisation avec des tensions visibles, la passivité n'est pas neutre — elle laisse s'installer des clans, des malentendus et des résistances qui deviendront de plus en plus difficiles à résoudre. Vous manquez à votre responsabilité d'agent du changement."
     },
     {
       "id": "sjt_s17_rd",
@@ -5629,7 +5629,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nActif et informatif, mais un e-mail ne crée pas de vrai dialogue ni de dynamique relationnelle. C'est une étape utile mais insuffisante pour construire la collaboration."
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (Niveau 2) — collaborer en contexte hybride. Envoyer un e-mail de présentation avec les projets en cours est une initiative utile pour créer de la transparence et donner une vue d'ensemble. C'est un premier pas vers la connaissance mutuelle. Pourquoi +/- et non + : un e-mail reste un échange indirect et formel qui ne crée pas de véritable dynamique relationnelle. Il informe mais ne rapproche pas les personnes. De plus, demander à l'autre équipe « de faire de même » est une injonction sans co-construction. Pour une situation de fusion avec tensions latentes, il faudrait un dialogue plus direct et un cadre d'échange plus interactif."
     },
     {
       "id": "sjt_s18_ra",
@@ -5663,7 +5663,7 @@
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nVous assumez la responsabilité collective, vous ne cherchez pas de bouc émissaire, et vous proposez une solution immédiate (erratum) ET structurée (checklist). Vous impliquez David et Leila dans la solution."
+      "explanation": "Score attendu : ++\nCompétence testée : Être orienté résultats (Niveau 3) — assumer la responsabilité et adapter le planning. Cette réaction est exemplaire à plusieurs niveaux : vous assumez la responsabilité collective sans chercher de bouc émissaire, vous proposez une action corrective immédiate (erratum le matin même) ET une mesure préventive structurelle (checklist de vérification à quatre yeux). Pourquoi ++ et non + : vous combinez trois éléments essentiels — la responsabilité partagée qui préserve la cohésion d'équipe, l'action rapide qui limite les dégâts, et l'apprentissage organisationnel qui prévient la récurrence. Vous impliquez David et Leila dans la solution plutôt que de les mettre en accusation, ce qui est parfaitement aligné avec la compétence de collaboration."
     },
     {
       "id": "sjt_s18_rb",
@@ -5697,7 +5697,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous rejetez la responsabilité sur Leila, alors que la chaîne de vérification (incluant votre relecture) a failli. Ce n'est pas collaboratif et cela mine la confiance au sein de l'équipe."
+      "explanation": "Score attendu : -\nCompétence testée : Collaborer (Niveau 2) — donner/recevoir du feedback de manière adéquate. Vous désignez Leila comme responsable devant votre hiérarchie, alors que l'erreur résulte d'une chaîne de vérification défaillante dont vous faites partie (relecture). C'est une rupture du principe de responsabilité collective qui mine la confiance au sein de l'équipe. Pourquoi - et non -- : vous identifiez tout de même la cause technique (mise en forme) et vous proposez une correction, ce qui montre une volonté de résoudre le problème. Mais rejeter la faute sur une collègue en occultant votre propre défaillance de relecture est un manquement sérieux au leadership et à la collaboration. Cette approche risque de créer un climat de méfiance durable dans l'équipe."
     },
     {
       "id": "sjt_s18_rc",
@@ -5731,7 +5731,7 @@
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nVous masquez l'erreur au lieu de la traiter avec transparence. Cela nuit à la crédibilité de l'équipe si l'erreur est découverte ultérieurement et empêche tout apprentissage collectif."
+      "explanation": "Score attendu : --\nCompétence testée : Être orienté résultats (Niveau 3) — assumer la responsabilité. Minimiser une erreur qui a faussé toutes les conclusions d'un chapitre et tenter de la masquer sous couvert d'une « mise à jour mineure » est un manquement grave à la transparence et à l'intégrité professionnelle. L'erreur a été envoyée à la direction ET à un partenaire externe. Pourquoi -- et non - : au-delà de la passivité, vous prenez un risque actif — si le partenaire a lu et utilisé les données erronées, la correction discrète pourrait être découverte et gravement nuire à la crédibilité de l'institution. Vous empêchez également tout apprentissage collectif en cachant l'erreur à l'équipe. Cette réaction cumule manque de transparence, prise de risque irresponsable et absence totale de responsabilité."
     },
     {
       "id": "sjt_s18_rd",
@@ -5765,7 +5765,7 @@
         }
       ],
       "correct": "D",
-      "explanation": "Score attendu : +\nActif et responsable, vous résolvez le problème immédiat. Mais vous agissez seul(e) sans impliquer David et Leila dans la correction ni dans la réflexion pour prévenir de futures erreurs."
+      "explanation": "Score attendu : +\nCompétence testée : Être orienté résultats (Niveau 3) — déterminer les activités et assumer la responsabilité. Vous agissez rapidement et avec transparence : correction du tableau, communication honnête avec la direction et le partenaire, information de David et Leila. C'est une réaction responsable et orientée résultats. Pourquoi + et non ++ : vous agissez seul(e) sans impliquer David et Leila dans la correction ni dans la réflexion préventive. L'équipe est simplement informée après coup, ce qui rate l'occasion d'un apprentissage collectif et d'une co-construction de processus de vérification. Le problème immédiat est résolu, mais pas la cause systémique."
     },
     {
       "id": "sjt_s19_ra",
@@ -5799,7 +5799,7 @@
         }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nVous reconnaissez la légitimité de la préoccupation de Bruno tout en respectant la décision de la direction. Vous proposez une démarche collaborative et constructive qui implique toute l'équipe dans la recherche de solutions pratiques."
+      "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (Niveau 2) — participer au changement et prendre l'initiative. Cette réaction est un modèle de gestion du changement : vous validez la légitimité de la préoccupation de Bruno (et de l'équipe) tout en respectant le cadre réglementaire imposé. Vous proposez une démarche constructive avec un atelier collectif pour optimiser l'intégration du nouveau format. Pourquoi ++ et non + : vous allez au-delà de la simple conformité en proposant aussi de remonter d'éventuelles simplifications au SPF, ce qui montre un esprit critique constructif. Vous jouez un rôle de médiateur entre la direction et l'équipe, en transformant une opposition stérile en démarche collaborative. C'est exactement le niveau d'agilité et de collaboration attendu d'un chef de projet A2."
     },
     {
       "id": "sjt_s19_rb",
@@ -5832,8 +5832,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nDialogue direct avec Bruno, conseil pragmatique. Mais vous ne proposez rien de constructif pour répondre à la préoccupation partagée par toute l'équipe. Vous gérez la relation Bruno-directeur mais pas le problème de fond."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (Niveau 2) — donner du feedback de manière adéquate. Vous allez voir Bruno en privé, ce qui est positif, et vous reconnaissez qu'il a raison sur le fond. Cependant, votre conseil se limite à « faire profil bas » et se conformer, sans proposer de voie constructive pour adresser la préoccupation légitime partagée par toute l'équipe. Pourquoi +/- et non + : le feedback à Bruno est pragmatique mais incomplet — vous gérez la relation Bruno-directeur mais vous ignorez le problème de fond que plusieurs collègues partagent en privé. En tant que chef de projet, se contenter de conseiller la soumission sans chercher de solution constructive est insuffisant. Vous ratez l'occasion de jouer un rôle de facilitateur du changement."
     },
     {
       "id": "sjt_s19_rc",
@@ -5867,7 +5867,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nPassivité alors que vous pourriez jouer un rôle de facilitateur. Le malaise dans l'équipe ne se dissipera pas tout seul et l'adhésion au nouveau format sera faible sans accompagnement."
+      "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (Niveau 2) — participer au changement et prendre l'initiative. Ne rien faire face à une tension palpable entre un collègue respecté et la direction, alors que toute l'équipe partage le malaise, est une posture passive inappropriée pour un chef de projet. Vous vous réfugiez derrière une justification (« ce n'est pas mon rôle ») pour éviter l'inconfort. Pourquoi - et non -- : vous ne faites rien de nuisible en soi — vous n'envenimez pas le conflit, vous ne prenez pas parti publiquement contre Bruno ou contre le directeur. Mais votre inaction laisse le malaise s'installer et l'adhésion au nouveau format sera très faible sans facilitation. Un chef de projet A2 est attendu en tant que facilitateur, pas en tant que spectateur."
     },
     {
       "id": "sjt_s19_rd",
@@ -5901,7 +5901,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nVous conformez mais sans chercher à faciliter la transition ni à impliquer l'équipe dans l'adaptation. Ce manque de dialogue et de collaboration ne résout pas les frustrations légitimes de l'équipe."
+      "explanation": "Score attendu : +/-\nCompétence testée : Guider (Niveau 1) — rappeler les objectifs communs et donner le bon exemple. Vous montrez l'exemple en appliquant rapidement le nouveau format et vous encouragez votre équipe à suivre. C'est conforme et pragmatique — vous acceptez le changement sans résistance inutile. Pourquoi +/- et non + : l'approche « C'est comme ça, on n'a pas le choix » est autoritaire et ne reconnaît pas les préoccupations légitimes de l'équipe. Vous ne proposez aucun accompagnement pour faciliter la transition, aucune recherche d'optimisation, aucun espace de dialogue. La conformité sans facilitation ne crée pas d'adhésion et risque de générer une résistance passive."
     },
     {
       "id": "sjt_s20_ra",
@@ -5934,8 +5934,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nActif, dialogue, vous illustrez le problème avec des faits, et vous proposez une co-construction (choix des usages prioritaires ensemble) avec un système d'entraide structuré (binômes). Vous encouragez la collaboration et le volontariat."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Guider (Niveau 1) — mobiliser l'équipe et planifier des actions d'apprentissage. Cette réaction combine tous les éléments d'une conduite du changement réussie : vous illustrez le problème avec des faits concrets (l'incident du document budgétaire), vous impliquez l'équipe dans le choix des priorités de migration, et vous proposez un dispositif d'entraide structuré (binômes) avec du volontariat. Pourquoi ++ et non + : vous ne vous contentez pas de signaler le problème ni d'imposer une solution — vous co-construisez la démarche avec l'équipe en combinant diagnostic factuel, priorisation collective et accompagnement par les pairs. Le ton non directif (« Je ne veux pas imposer ») crée un espace sécurisant qui favorise l'adhésion plutôt que la résistance."
     },
     {
       "id": "sjt_s20_rb",
@@ -5969,7 +5969,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nCommunication unilatérale et directive par e-mail. Vous ne cherchez pas à comprendre pourquoi les collègues n'utilisent pas la plateforme et vous n'offrez aucun accompagnement. L'injonction seule ne changera pas les habitudes."
+      "explanation": "Score attendu : +/-\nCompétence testée : Guider (Niveau 1) — rappeler les objectifs communs et veiller aux responsabilités. Rappeler que la plateforme est l'outil officiel et fixer un délai de migration montre une volonté d'action et une prise de responsabilité. Le rappel de la règle est nécessaire. Pourquoi +/- et non + : la communication est unilatérale et directive — un e-mail d'injonction sans chercher à comprendre les freins (manque de formation, ergonomie, habitudes) ni offrir d'accompagnement. L'expérience montre que les injonctions seules ne changent pas les habitudes durablement. Il y a un élément positif (rappel du cadre, fixation d'une échéance) mais un défaut majeur (absence totale de dialogue et d'accompagnement)."
     },
     {
       "id": "sjt_s20_rc",
@@ -6003,7 +6003,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nPassivité qui entérine le double système. En dupliquant vous-même, vous compensez au lieu de résoudre le problème. La situation ne s'améliorera pas d'elle-même."
+      "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (Niveau 2) — prendre l'initiative et persévérer face aux difficultés. Continuer seul(e) en dupliquant les documents aux deux endroits est une posture passive qui entérine le dysfonctionnement au lieu de le résoudre. Pire, la duplication augmente le risque d'erreurs de versioning — exactement le problème qui a déjà causé l'incident du document budgétaire. Pourquoi - et non -- : vous utilisez tout de même la plateforme et vous ne sabotez pas la transition. Mais en compensant silencieusement par la duplication, vous masquez le problème et repoussez indéfiniment sa résolution. Un chef de projet A2 est attendu comme moteur du changement, pas comme palliatif individuel d'un dysfonctionnement collectif."
     },
     {
       "id": "sjt_s20_rd",
@@ -6036,8 +6036,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nActif, vous impliquez les early adopters et créez un support utile. Mais l'initiative reste portée par un petit groupe et ne crée pas de dynamique d'équipe ni de cadre structurel pour la transition."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Guider (Niveau 1) — planifier des actions d'apprentissage et donner le bon exemple. Créer un guide pratique avec les early adopters et proposer des démonstrations individuelles est une initiative concrète et bienveillante qui facilite l'adoption. Le guide « 5 étapes » abaisse la barrière d'entrée et les démonstrations personnalisées répondent aux besoins individuels. Pourquoi + et non ++ : l'initiative reste portée par le petit groupe des trois utilisateurs sans impliquer l'ensemble de l'équipe dans le diagnostic et la priorisation. Il manque un cadre collectif (comme une réunion d'équipe pour discuter des freins et des priorités) et un engagement de l'ensemble du service. L'accompagnement est bon mais la mobilisation collective est absente."
     },
     {
       "id": "sjt_s21_ra",
@@ -6070,8 +6070,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nVous soutenez Sarah en privé et vous abordez le problème collectivement de manière factuelle et non accusatoire. Le tableau partagé est un outil de co-construction qui rend visible la charge de chacun et permet une redistribution concertée."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (niveau 2) — encourager la collaboration et régler les désaccords. Cette réaction est exemplaire car elle combine un soutien immédiat et privé à Sarah avec une initiative collective transparente et non accusatoire. Le tableau partagé des tâches est un outil de co-construction qui rend le déséquilibre visible objectivement et permet une redistribution concertée. Pourquoi ++ et non + : la réaction ne se limite pas à un dialogue bilatéral — elle crée un cadre structurel collectif qui implique toute l'équipe dans la solution, protège Sarah sans pointer du doigt Vincent et Amélie, et adresse la cause profonde (absence de visibilité sur la charge) plutôt que le symptôme."
     },
     {
       "id": "sjt_s21_rb",
@@ -6104,8 +6104,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif, dialogue direct. Mais la redistribution est décidée par vous seul(e), sans impliquer toute l'équipe dans la réflexion. Vincent et Amélie peuvent se sentir accusés, et Sarah et Mourad ne sont pas consultés sur ce qui les soulagerait vraiment."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Guider (niveau 1) — veiller aux rôles et responsabilités. Vous prenez une initiative concrète en allant voir Vincent et Amélie pour rééquilibrer la charge, ce qui montre du leadership et une volonté de résoudre le problème rapidement. Le dialogue direct est positif. Pourquoi + et non ++ : la redistribution est décidée par vous seul(e), sans impliquer toute l'équipe dans la réflexion. Vincent et Amélie peuvent se sentir accusés dans un échange bilatéral, et Sarah et Mourad ne sont pas consultés sur ce qui les soulagerait vraiment. Il manque la dimension collective et co-constructive qui caractériserait une réaction très appropriée."
     },
     {
       "id": "sjt_s21_rc",
@@ -6138,8 +6138,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nVous minimisez la détresse de Sarah et vous ne prenez aucune action pour résoudre le déséquilibre. Encourager à « tenir le coup » face à une situation structurellement injuste est le contraire de la collaboration."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence testée : Collaborer (niveau 2) — donner/recevoir du feedback de manière adéquate. Vous minimisez la détresse de Sarah en la réduisant à une phase temporaire, alors que le déséquilibre est structurel et dure depuis plusieurs semaines. Encourager à « tenir le coup » face à une injustice ne résout rien et ignore le signal d'alarme d'un possible arrêt maladie. Pourquoi - et non -- : il y a tout de même une forme d'empathie (« je comprends que c'est dur ») et vous répondez au message de Sarah, ce qui est mieux que l'ignorer complètement. Mais l'absence totale d'action corrective et la banalisation du problème rendent cette réaction inappropriée."
     },
     {
       "id": "sjt_s21_rd",
@@ -6172,8 +6172,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nEscalade sans avoir d'abord essayé de résoudre le problème au niveau de l'équipe. Vous partagez l'information confidentielle de Sarah avec la hiérarchie sans son accord, et vous ne prenez pas d'initiative collaborative."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Être orienté résultats (niveau 3) — assumer la responsabilité. Signaler le problème au responsable montre que vous prenez la situation au sérieux et que vous cherchez une solution. Cependant, vous escaladez sans avoir d'abord essayé de résoudre le problème au niveau de l'équipe, et vous partagez l'information confidentielle de Sarah (risque d'arrêt maladie) sans son accord. Pourquoi +/- et non - : l'escalade hiérarchique n'est pas intrinsèquement mauvaise et peut être nécessaire quand un chef de projet n'a pas l'autorité formelle de redistribuer les tâches. Mais le faire sans dialogue d'équipe préalable et sans l'accord de Sarah sur le partage d'informations sensibles limite fortement la valeur de cette démarche."
     },
     {
       "id": "sjt_s22_ra",
@@ -6206,8 +6206,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nVous abordez le problème collectivement, vous incluez Paul sans l'humilier, et vous invitez l'équipe à co-construire un processus qui fonctionne pour tous. Vous cherchez les causes (obstacles) plutôt que de blâmer."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (niveau 2) — régler les désaccords et encourager l'ouverture. Vous abordez le problème collectivement en réunissant tous les contributeurs, vous incluez Paul sans l'humilier publiquement, et vous invitez l'équipe à co-construire un processus qui fonctionne pour tous. Vous cherchez les causes (obstacles, réalisme du délai) plutôt que de blâmer. Pourquoi ++ et non + : après deux tentatives individuelles infructueuses avec Paul, passer à une approche collective est exactement l'escalade proportionnée nécessaire. L'inclusion de toute l'équipe légitime le processus et adresse aussi la frustration des trois collègues ponctuels, tout en donnant à Paul un espace pour expliquer ses difficultés."
     },
     {
       "id": "sjt_s22_rb",
@@ -6240,8 +6240,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nDialogue direct avec Paul, fermeté sur le problème. Mais l'approche est unilatérale et menaçante. Vous ne cherchez pas à comprendre la cause du problème et la menace d'escalade ne favorise pas la collaboration."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Guider (niveau 1) — donner du feedback constructif. Vous confrontez Paul directement et posez un cadre clair avec un délai précis, ce qui montre de la fermeté et une orientation résultats. Le rappel factuel des trois retards est pertinent. Pourquoi +/- et non + : l'approche est unilatérale et contient une menace d'escalade hiérarchique qui ne favorise pas la collaboration. Vous ne cherchez pas à comprendre la cause profonde du retard récurrent et vous n'impliquez pas les autres collègues frustrés dans la recherche de solution. Pourquoi +/- et non - : après deux tentatives douces sans résultat, une certaine fermeté est justifiée et le message reste factuel et professionnel."
     },
     {
       "id": "sjt_s22_rc",
@@ -6275,7 +6275,7 @@
         }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nVous compensez systématiquement le manquement de Paul au détriment de votre propre bien-être. Ce silence renforce le comportement de Paul et frustre les collègues qui respectent les délais."
+      "explanation": "Score attendu : --\nCompétence testée : Être orienté résultats (niveau 3) — assumer la responsabilité. Vous compensez systématiquement le manquement de Paul en travaillant vous-même le week-end, ce qui est un évitement total du problème. Ce silence renforce le comportement de Paul trimestre après trimestre et frustre profondément les trois collègues qui respectent les délais. Pourquoi -- et non - : cette réaction est activement nuisible car elle institutionnalise l'injustice. Elle détruit votre propre bien-être, démotive les collègues ponctuels (« pourquoi faire l'effort ? »), et empêche Paul de prendre conscience du problème. C'est l'inverse de toute forme de leadership."
     },
     {
       "id": "sjt_s22_rd",
@@ -6308,8 +6308,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "C",
-      "explanation": "Score attendu : +/-\nEscalade directe sans avoir tenté une approche collective. Un dialogue d'équipe pourrait résoudre le problème sans intervention hiérarchique."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence testée : Collaborer (niveau 2) — régler les désaccords. Vous escaladez directement vers la hiérarchie sans avoir tenté une approche collective avec l'équipe. Bien que deux discussions individuelles aient déjà eu lieu, un dialogue d'équipe structuré pourrait résoudre le problème sans intervention hiérarchique et aurait l'avantage d'impliquer les collègues frustrés. Pourquoi - et non -- : signaler un problème récurrent à son responsable n'est pas en soi nuisible, surtout après deux tentatives individuelles. Mais sauter l'étape collective pour aller directement à la hiérarchie montre un manque d'initiative collaborative et ne résout pas la dynamique d'équipe sous-jacente."
     },
     {
       "id": "sjt_s23_ra",
@@ -6342,8 +6342,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "B",
-      "explanation": "Score attendu : -\nVous protégez l'espace de parole de Yasmine, vous valorisez l'expérience de Jean-Marc, et vous proposez un échange constructif qui combine les deux perspectives. Vous encouragez la diversité des idées et la collaboration intergénérationnelle."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (niveau 2) — encourager l'ouverture et régler les désaccords. Vous intervenez au bon moment (en réunion, quand l'idée est étouffée), vous protégez l'espace de parole de Yasmine tout en valorisant l'expérience de Jean-Marc, et vous proposez un échange constructif qui combine les deux perspectives. Pourquoi ++ et non + : la réaction est complète — elle adresse à la fois le comportement problématique (l'interruption), l'inclusion de la nouvelle collègue, la valorisation de l'expérience, et la pensée critique (les conditions ont peut-être changé en cinq ans). Elle encourage la diversité des idées et la collaboration intergénérationnelle en temps réel."
     },
     {
       "id": "sjt_s23_rb",
@@ -6377,7 +6377,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nVous soutenez Yasmine en privé, ce qui est bien. Mais vous n'intervenez pas au moment où c'est nécessaire (en réunion) et vous ne changez pas la dynamique de groupe qui étouffe les nouvelles idées."
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (niveau 2) — donner/recevoir du feedback de manière adéquate. Vous soutenez Yasmine en privé après la réunion, ce qui est une démarche bienveillante qui peut lui redonner confiance. L'encouragement à développer son idée est positif. Pourquoi +/- et non + : vous n'intervenez pas au moment où c'est le plus nécessaire (pendant la réunion) et vous ne changez pas la dynamique de groupe qui étouffe les nouvelles idées. Le commentaire « il est comme ça » normalise le comportement de Jean-Marc au lieu de le remettre en question. Yasmine reste seule face au défi de reproposer son idée dans un environnement hostile."
     },
     {
       "id": "sjt_s23_rc",
@@ -6411,7 +6411,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous acceptez sans esprit critique l'argument d'autorité de Jean-Marc et vous ne défendez pas un climat de dialogue ouvert. Yasmine et d'autres jeunes collègues n'oseront plus proposer d'idées."
+      "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (niveau 2) — évaluer la crédibilité des informations. Vous acceptez sans esprit critique l'argument d'autorité de Jean-Marc (« il a plus d'expérience, donc il a raison ») sans considérer que la technologie évolue et que le contexte de cinq ans plus tôt n'est plus nécessairement pertinent. Vous ne défendez pas un climat de dialogue ouvert. Pourquoi - et non -- : vous ne participez pas activement à étouffer l'idée de Yasmine, vous restez passif. C'est un manque de pensée critique et de courage, mais ce n'est pas activement nuisible comme le serait un renforcement explicite de la position de Jean-Marc ou une dévalorisation de Yasmine."
     },
     {
       "id": "sjt_s23_rd",
@@ -6444,8 +6444,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nActif, vous relancez l'idée et proposez un cadre. Mais c'est par e-mail (pas de dialogue en direct) et vous imposez la collaboration entre Yasmine et Jean-Marc sans avoir d'abord obtenu leur accord. Mettre Yasmine en binôme avec la personne qui l'a rabrouée peut être délicat."
+      "correct": "D",
+      "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (niveau 2) — intégrer les nouvelles technologies et prendre l'initiative. Vous relancez l'idée après la réunion et proposez un cadre concret (mini-étude de faisabilité de 2-3 jours), ce qui montre de l'initiative et une orientation résultats. L'e-mail à toute l'équipe rend la démarche transparente. Pourquoi + et non ++ : la communication par e-mail plutôt qu'en réunion ne permet pas le dialogue en direct. De plus, vous imposez la collaboration entre Yasmine et Jean-Marc sans avoir obtenu leur accord préalable, ce qui est délicat vu que Jean-Marc vient de rabrouer publiquement Yasmine. Il aurait été préférable de discuter d'abord avec chacun individuellement."
     },
     {
       "id": "sjt_s24_ra",
@@ -6478,8 +6478,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nVous impliquez toute l'équipe dans l'analyse et la solution, vous valorisez la transparence, et vous structurez la démarche (diagnostic + plan correctif). C'est de la co-construction face à l'adversité."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Être orienté résultats (niveau 3) — évaluer l'impact des changements et adapter le planning. Vous impliquez toute l'équipe dans l'analyse et la solution, vous valorisez la transparence (en soutenant Leila), et vous structurez la démarche en deux temps : diagnostic des causes, puis plan correctif. Vous transformez un échec en opportunité d'apprentissage collectif. Pourquoi ++ et non + : la réaction combine plusieurs compétences de manière exemplaire — pensée critique (identifier les causes), collaboration (co-construction du bilan), agilité (voir l'échec comme opportunité), et orientation résultats (plan d'action concret pour le comité). Elle adresse aussi le moral de l'équipe en donnant un cadre positif et constructif."
     },
     {
       "id": "sjt_s24_rb",
@@ -6512,8 +6512,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nVous choisissez l'opacité plutôt que la transparence. Masquer les problèmes ne les résout pas et risque de nuire à la crédibilité de l'équipe si les vrais chiffres émergent par une autre voie."
+      "correct": "A",
+      "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (niveau 2) — vérifier la crédibilité et formuler des recommandations. Vous choisissez délibérément l'opacité plutôt que la transparence en maquillant les résultats. Masquer les problèmes ne les résout pas et prive le comité de pilotage des informations nécessaires pour prendre de bonnes décisions sur la suite du projet. Pourquoi -- et non - : cette réaction est activement nuisible car elle compromet l'intégrité professionnelle de toute l'équipe. Si les vrais chiffres émergent par une autre voie (par exemple via le service RH), la crédibilité de l'équipe sera durablement endommagée. De plus, sans diagnostic honnête, les mêmes erreurs se reproduiront lors du déploiement élargi."
     },
     {
       "id": "sjt_s24_rc",
@@ -6546,8 +6546,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "A",
-      "explanation": "Score attendu : --\nTransparent et rigoureux, mais unilatéral. L'équipe n'est pas impliquée dans l'analyse ni dans les recommandations. Envoyer pour relecture la veille ne laisse pas de place au dialogue."
+      "correct": "C",
+      "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (niveau 2) — encourager la collaboration. Vous faites preuve de transparence et de rigueur en présentant les résultats tels qu'ils sont, accompagnés d'une analyse et de recommandations. C'est une démarche professionnelle et honnête. Pourquoi +/- et non + : le travail est entièrement unilatéral — vous rédigez seul(e) le bilan sans impliquer l'équipe dans l'analyse ni dans les recommandations. Envoyer le document la veille du comité pour « relecture » ne laisse aucune place au dialogue réel ni à la co-construction. L'équipe démoralisée aurait bénéficié d'être associée à la démarche plutôt que mise devant le fait accompli."
     },
     {
       "id": "sjt_s24_rd",
@@ -6581,7 +6581,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous créez une compétition entre deux approches au lieu de favoriser le dialogue et la co-construction. Vous reportez votre décision au lieu de prendre position et d'impliquer toute l'équipe."
+      "explanation": "Score attendu : -\nCompétence testée : Guider (niveau 1) — rappeler les objectifs communs et donner le bon exemple. Vous créez une compétition entre deux approches contradictoires au lieu de favoriser le dialogue d'équipe et de prendre position sur la question de la transparence. Demander deux versions (optimiste vs transparente) suggère que masquer les résultats est une option légitime, ce qui est problématique. Pourquoi - et non -- : vous impliquez au moins Karim et Leila dans le processus et vous n'avez pas encore pris de décision définitive. Mais reporter votre prise de position au lieu de trancher clairement en faveur de la transparence et d'impliquer toute l'équipe montre un manque de leadership."
     },
     {
       "id": "sjt_s25_ra",
@@ -6614,8 +6614,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "D",
-      "explanation": "Score attendu : +\nVous accueillez la frustration, vous impliquez l'équipe dans la recherche de solutions (co-construction du planning), vous proposez de négocier avec la direction pour protéger l'équipe, et vous structurez la réponse."
+      "correct": "E",
+      "explanation": "Score attendu : ++\nCompétence testée : Être orienté résultats (niveau 3) — déterminer échéances, adapter le planning, assumer la responsabilité. Vous accueillez la frustration de l'équipe avec empathie, vous impliquez tout le monde dans la recherche de solutions (co-construction du planning ajusté), et vous proposez de négocier avec la direction pour protéger l'équipe (72h au lieu de 48h). La réponse est structurée et pragmatique. Pourquoi ++ et non + : la réaction est complète et combine toutes les dimensions attendues d'un chef de projet — gestion des émotions, analyse collective des priorités, répartition équitable de l'effort, et négociation proactive avec la hiérarchie. C'est un modèle de gestion de conflit entre priorités concurrentes."
     },
     {
       "id": "sjt_s25_rb",
@@ -6649,7 +6649,7 @@
         }
       ],
       "correct": "B",
-      "explanation": "Score attendu : -\nVous protégez votre projet mais vous ne collaborez pas avec la direction pour trouver une solution. Refuser une demande ministérielle urgente sans proposer d'alternative est problématique et nuit à l'image de votre équipe."
+      "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (niveau 2) — être alerte aux changements et ajuster sa méthode. Vous protégez votre projet en cours, ce qui est compréhensible, mais vous refusez catégoriquement une demande ministérielle urgente sans proposer d'alternative ni chercher de compromis. Ce manque de flexibilité nuit à l'image de votre équipe auprès de la direction. Pourquoi - et non -- : le refus n'est pas irrationnel — vous avez un argument légitime (phase critique). Mais ne pas proposer d'alternative (aide partielle, délai négocié, autre équipe identifiée) montre un manque d'agilité et de collaboration avec la hiérarchie qui est problématique pour un chef de projet de niveau A2."
     },
     {
       "id": "sjt_s25_rc",
@@ -6682,8 +6682,8 @@
           "text": "Très approprié (++)"
         }
       ],
-      "correct": "E",
-      "explanation": "Score attendu : ++\nVous résolvez le problème immédiat mais de manière unilatérale. Vous imposez la charge à deux personnes sans consultation et sans ajuster le planning global. Sarah et Mourad supportent toute la pression."
+      "correct": "B",
+      "explanation": "Score attendu : -\nCompétence testée : Collaborer (niveau 2) — encourager la collaboration et régler les désaccords. Vous désignez unilatéralement Sarah et Mourad sans consultation et sans tenir compte de leurs compétences ou de leur charge actuelle. Le « désolé, faites au mieux » n'est ni un encadrement ni un soutien — c'est une délégation sans accompagnement qui impose toute la pression sur deux personnes. Pourquoi - et non -- : vous répondez au moins à la demande urgente et vous prenez une décision, ce qui montre une certaine orientation résultats. Mais l'absence de consultation, d'ajustement du planning global et d'accompagnement en fait une réaction clairement inappropriée qui ne correspond pas au niveau de collaboration attendu d'un chef de projet."
     },
     {
       "id": "sjt_s25_rd",
@@ -6717,7 +6717,7 @@
         }
       ],
       "correct": "C",
-      "explanation": "Score attendu : +/-\nSacrifice personnel louable qui protège l'équipe. Mais vous ne collaborez pas avec l'équipe pour trouver une solution partagée, et ce type de comportement n'est pas durable."
+      "explanation": "Score attendu : +/-\nCompétence testée : Guider (niveau 1) — donner le bon exemple. Votre sacrifice personnel est louable et protège effectivement l'équipe de toute perturbation. Prendre sur soi montre un sens des responsabilités et un engagement fort envers le projet et l'équipe. Pourquoi +/- et non + : vous ne collaborez pas avec l'équipe pour trouver une solution partagée et vous ne négociez pas avec la direction pour adapter les conditions. Ce type de comportement héroïque n'est pas durable et prive l'équipe d'une opportunité de s'organiser collectivement. De plus, en tant que chef de projet, votre absence de deux jours sur le pilotage peut créer d'autres problèmes non anticipés."
     }
   ]
 }
