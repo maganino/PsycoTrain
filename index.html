@@ -225,6 +225,9 @@ function lsGet(k){ try{ const s=localStorage.getItem(k); return s?JSON.parse(s):
 function lsSet(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e){ alert('Save failed: '+e.message); return false; } }
 function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
 
+// Fisher-Yates shuffle (returns new array)
+function shuffle(arr){ const a = [...arr]; for(let i = a.length-1; i > 0; i--){ const j = Math.random()*i+1|0; [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
 function loadStats(){ return lsGet(LS_STATS) || {}; }
 function saveStats(s){ return lsSet(LS_STATS, s); }
 // Default target times per question type (in seconds)
@@ -696,11 +699,11 @@ function advanceQuestion(){
   }
   if(!next){ stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return; }
 
-  // SJT: queue all reactions of this situation in order (A→B→C→D)
+  // SJT: queue all reactions of this situation in shuffled order
   if(next.type === 'sjt' && next.set_id){
-    const siblings = pool
-      .filter(q => q.set_id === next.set_id && !excluded.has(q.id))
-      .sort((a,b) => a.id.localeCompare(b.id));  // sort by id ensures A,B,C,D order
+    const siblings = shuffle(
+      pool.filter(q => q.set_id === next.set_id && !excluded.has(q.id))
+    );
     // First one is shown now, rest go into the queue
     next = siblings[0];
     SESSION.sjt_queue = siblings.slice(1).map(q => q.id);
@@ -791,10 +794,7 @@ function renderPractice(root){
   // SJT situation context
   let situationHtml = '';
   if(q.type === 'sjt' && q.situation){
-    situationHtml = `<div class="sjt-situation">
-      ${q.situation_title ? `<div class="sjt-title">${esc(q.situation_title)}</div>` : ''}
-      ${esc(q.situation)}
-    </div>`;
+    situationHtml = `<div class="sjt-situation">${esc(q.situation)}</div>`;
   }
 
   const figsHtml = (q.figures || []).map(f =>
@@ -821,7 +821,13 @@ function renderPractice(root){
       return `<div class="${cls}" data-letter="${esc(o.letter)}">${SJT_LABELS[o.letter] || esc(o.text)}</div>`;
     }).join('')}</div>`;
   } else {
-    optsHtml = q.options.map(o => {
+    // Shuffle numerical options; persist order in session so it's stable across re-renders
+    if(!SESSION.shuffledOpts || SESSION.shuffledOpts.qid !== q.id){
+      SESSION.shuffledOpts = { qid: q.id, order: shuffle(q.options) };
+    }
+    const displayOpts = SESSION.shuffledOpts.order;
+    const letters = 'ABCDE';
+    optsHtml = displayOpts.map((o, i) => {
       let cls = 'opt';
       if(SESSION.revealed){
         cls += ' dis';
@@ -832,7 +838,7 @@ function renderPractice(root){
         cls += ' sel';
       }
       return `<div class="${cls}" data-letter="${esc(o.letter)}">
-        <div class="ol">${esc(o.letter)}</div>
+        <div class="ol">${letters[i]}</div>
         <div class="ot">${esc(o.text)}</div>
       </div>`;
     }).join('');
@@ -851,16 +857,18 @@ function renderPractice(root){
         head = `✓ Exact — 1 pt · ${timeStr}${lateTag}`;
         explCls = 'eok';
       } else if(pts === 0.5){
-        head = `~ Voisin — 0.5 pt · answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+        head = `~ Voisin — 0.5 pt · answer: ${SJT_LABELS[q.correct]} · ${timeStr}${lateTag}`;
         explCls = 'epartial';
       } else {
-        head = `✗ Incorrect — 0 pt · answer: ${esc(q.correct)} · ${timeStr}${lateTag}`;
+        head = `✗ Incorrect — 0 pt · answer: ${SJT_LABELS[q.correct]} · ${timeStr}${lateTag}`;
         explCls = 'eko';
       }
     } else {
+      const correctOpt = q.options.find(o => o.letter === q.correct);
+      const correctText = correctOpt ? correctOpt.text : q.correct;
       if(ok && SESSION.q_within_time){ head = `✓ Correct in ${timeStr}`; explCls = 'eok'; }
       else if(ok){ head = `✓ Correct, but late — ${timeStr}${lateTag}`; explCls = 'eok'; }
-      else { head = `✗ Incorrect — answer: ${esc(q.correct)} · ${timeStr}${lateTag}`; explCls = 'eko'; }
+      else { head = `✗ Incorrect — answer: ${esc(correctText)} · ${timeStr}${lateTag}`; explCls = 'eko'; }
     }
     const expl = q.explanation ? `<br>${esc(q.explanation).replace(/\n/g, '<br>')}` : '';
     explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${expl}</div>`;
