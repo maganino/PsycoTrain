@@ -2,5 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# Proprietary content — keep local only
+ingest/
+
 # User-generated stats — never commit personal progress
 app/stats.json
