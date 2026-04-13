@@ -226,7 +226,7 @@ function lsSet(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); return true
 function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
 
 // Fisher-Yates shuffle (returns new array)
-function shuffle(arr){ const a = [...arr]; for(let i = a.length-1; i > 0; i--){ const j = Math.random()*i+1|0; [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function shuffle(arr){ const a = [...arr]; for(let i = a.length-1; i > 0; i--){ const j = Math.random()*(i+1)|0; [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
 function loadStats(){ return lsGet(LS_STATS) || {}; }
 function saveStats(s){ return lsSet(LS_STATS, s); }
@@ -699,17 +699,17 @@ function advanceQuestion(){
   }
   if(!next){ stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return; }
 
-  // SJT: queue all reactions of this situation in shuffled order
+  // SJT: queue all reactions of this situation in data order (pre-balanced in JSON)
   if(next.type === 'sjt' && next.set_id){
-    const siblings = shuffle(
-      pool.filter(q => q.set_id === next.set_id && !excluded.has(q.id))
-    );
+    const siblings = pool
+      .filter(q => q.set_id === next.set_id && !excluded.has(q.id))
+      .sort((a,b) => a.id.localeCompare(b.id));
     // First one is shown now, rest go into the queue
     next = siblings[0];
     SESSION.sjt_queue = siblings.slice(1).map(q => q.id);
     // Mark all as picked so they won't be re-selected by pickNext
     for(const s of siblings){ SESSION.picked.push(s.id); }
-    SESSION.sjt_first_reaction = true;  // Reaction A → double time for reading situation
+    SESSION.sjt_first_reaction = true;  // Reaction 1 → double time for reading situation
   } else {
     SESSION.picked.push(next.id);
     SESSION.sjt_first_reaction = false;
@@ -963,6 +963,22 @@ function init(){
     return;
   }
   DB = window.QUESTIONS_DB;
+
+  // One-time seed: mark old SJT (S01-S25) as "seen" so new scenarios get priority
+  const SEED_KEY = 'pt_sjt_seed_v1';
+  if(!localStorage.getItem(SEED_KEY)){
+    const stats = loadStats();
+    DB.questions.forEach(q => {
+      if(q.type !== 'sjt') return;
+      const num = parseInt((q.set_id||'').replace('sjt_s',''), 10);
+      if(num >= 1 && num <= 25 && !stats[q.id]){
+        stats[q.id] = { attempts: 1, correct: 1, last_correct: true, last_ts: Date.now() };
+      }
+    });
+    saveStats(stats);
+    localStorage.setItem(SEED_KEY, '1');
+  }
+
   render();
 }
 init();
