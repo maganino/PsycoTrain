@@ -143,6 +143,41 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .lock-box .lock-err{color:var(--red);font-size:13px;margin-top:10px;min-height:18px}
 @keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
 .lock-box.shake{animation:shake .4s}
+
+/* Guide page */
+.guide{max-width:700px;margin:0 auto}
+.guide h1{font-size:22px;font-weight:800;margin:6px 0 4px}
+.guide .back-btn{padding:6px 12px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);font-size:12px;font-weight:600;cursor:pointer;color:var(--sub);margin-bottom:12px;display:inline-block}
+.guide h2{font-size:16px;font-weight:700;color:var(--accent);margin:18px 0 8px;padding-bottom:4px;border-bottom:1.5px solid var(--border)}
+.guide h3{font-size:14px;font-weight:700;color:var(--sub);margin:14px 0 6px}
+.guide p,.guide li{font-size:14px;line-height:1.6;color:var(--sub)}
+.guide ul{padding-left:18px;margin:6px 0}
+.guide li{margin-bottom:4px}
+.guide .score-tag{display:inline-block;padding:2px 10px;border-radius:8px;font-size:12px;font-weight:700;margin-right:4px}
+.guide .score-pp{background:var(--greenbg);color:var(--green);border:1px solid var(--greenbdr)}
+.guide .score-p{background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7}
+.guide .score-n{background:var(--amberbg);color:var(--amber);border:1px solid #e0b860}
+.guide .score-m{background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.guide .score-mm{background:var(--redbg);color:var(--red);border:1px solid var(--redbdr)}
+.flow{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin:12px 0;overflow-x:auto}
+.flow-step{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:10px 12px;border-radius:10px;border-left:3.5px solid var(--accent);background:var(--bg)}
+.flow-step.red{border-left-color:var(--red)}
+.flow-step.green{border-left-color:var(--green)}
+.flow-step.amber{border-left-color:var(--amber)}
+.flow-num{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.flow-step.red .flow-num{background:var(--red)}
+.flow-step.green .flow-num{background:var(--green)}
+.flow-step.amber .flow-num{background:var(--amber)}
+.flow-body{flex:1;font-size:13px;line-height:1.55}
+.flow-body strong{color:var(--text)}
+.flow-arrow{text-align:center;color:var(--muted);font-size:18px;margin:2px 0}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.comp-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+.comp-card h4{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+.comp-card ul{padding-left:14px;margin:0}
+.comp-card li{font-size:12px;line-height:1.5;color:var(--sub);margin-bottom:2px}
+.comp-card.primary{border-color:var(--accentbdr);background:var(--accentbg)}
+@media(max-width:500px){.comp-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -437,6 +472,7 @@ function render(){
   const root = document.getElementById('root');
   root.innerHTML = '';
   if(MODE === 'home') renderHome(root);
+  else if(MODE === 'guide') renderGuide(root);
   else if(MODE === 'practice') renderPractice(root);
   if(SCROLL_TARGET === 'top') window.scrollTo(0, 0);
   else if(SCROLL_TARGET === 'explanation'){
@@ -553,6 +589,7 @@ function renderHome(root){
         <button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
           Start practice ${pool.length === 0 ? '(no questions)' : ''}
         </button>
+        <button class="btn btn-secondary" id="guide-btn">Guide SJT : Comment noter les reactions ?</button>
         <div class="btn-row">
           <button class="btn btn-secondary btn-small" id="save-btn">⬇ Save stats</button>
           <button class="btn btn-secondary btn-small" id="load-btn">↑ Load stats</button>
@@ -597,6 +634,7 @@ function renderHome(root){
   });
   root.querySelector('#start-btn')?.addEventListener('click', startPractice);
   root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
+  root.querySelector('#guide-btn').addEventListener('click', () => { MODE='guide'; SCROLL_TARGET='top'; render(); });
   root.querySelector('#save-btn').addEventListener('click', downloadStats);
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
   root.querySelector('#reset-all-btn').addEventListener('click', resetAllStats);
@@ -606,6 +644,205 @@ function renderHome(root){
 }
 function chipHtml(cls, value, label, on){
   return `<div class="chip ${cls} ${on?'on':''}" data-value="${value === null ? '__null__' : esc(value)}">${esc(label)}</div>`;
+}
+
+// ----- Guide -----
+function renderGuide(root){
+  root.appendChild($(`
+    <div class="guide">
+      <button class="back-btn" id="guide-back">Retour</button>
+      <h1>Guide SJT : Comment noter les reactions ?</h1>
+      <p>Le SJT (Situational Judgment Test) BOSA evalue votre jugement professionnel a travers des mises en situation realistes. Pour chaque reaction, vous attribuez un score sur une echelle de 5 points.</p>
+
+      <h2>Echelle de notation</h2>
+      <div class="section">
+        <p><span class="score-tag score-pp">E &mdash; Tres approprie (++)</span> Reaction exemplaire qui coche toutes les cases : collaboration, analyse, action concrete, respect des personnes.</p>
+        <p style="margin-top:8px"><span class="score-tag score-p">D &mdash; Approprie (+)</span> Bonne reaction mais incomplete sur un aspect (manque de suivi, approche partielle, un acteur oublie).</p>
+        <p style="margin-top:8px"><span class="score-tag score-n">C &mdash; Neutre (+/-)</span> Intention correcte mais execution insuffisante, ou action utile avec un defaut significatif.</p>
+        <p style="margin-top:8px"><span class="score-tag score-m">B &mdash; Inapproprie (-)</span> Action contreproductive mais pas dommageable : passivite partielle, escalade prematuree, approche unilaterale.</p>
+        <p style="margin-top:8px"><span class="score-tag score-mm">A &mdash; Tres inapproprie (--)</span> Absence d'action, faute grave, ou comportement nuisible : ignorer le probleme, cacher des informations, court-circuiter les collegues.</p>
+      </div>
+
+      <h2>Arbre de decision</h2>
+      <p>Suivez ces etapes dans l'ordre pour determiner le score. Chaque question filtre vers le bon niveau.</p>
+
+      <div class="flow">
+        <div class="flow-step red">
+          <div class="flow-num">1</div>
+          <div class="flow-body">
+            <strong>La reaction montre-t-elle une passivite totale, une faute d'integrite ou un comportement nuisible ?</strong><br>
+            Exemples : ignorer des signaux d'alerte, cacher des donnees, prendre une decision unilaterale sans consultation, refuser toute action.<br>
+            <strong>Oui &rarr;</strong> <span class="score-tag score-mm">-- Tres inapproprie</span><br>
+            <strong>Non &rarr;</strong> Passez a l'etape 2
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-body">
+            <strong>La reaction implique-t-elle un dialogue ou une collaboration avec les personnes concernees ?</strong><br>
+            Cherchez : ecoute active, consultation, implication des parties prenantes, co-construction.<br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-m">- Inapproprie</span> (action unilaterale, escalade prematuree, delegation sans engagement)<br>
+            <strong>Oui &rarr;</strong> Passez a l'etape 3
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+
+        <div class="flow-step amber">
+          <div class="flow-num">3</div>
+          <div class="flow-body">
+            <strong>La collaboration est-elle constructive ET la reaction traite-t-elle la cause profonde ?</strong><br>
+            Verifiez : dialogue respectueux, feedback adequat, prise en compte de tous les acteurs, resolution structurelle (pas juste un pansement).<br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-n">+/- Neutre</span> (bonne intention, execution superficielle ou incomplete)<br>
+            <strong>Oui &rarr;</strong> Passez a l'etape 4
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+
+        <div class="flow-step green">
+          <div class="flow-num">4</div>
+          <div class="flow-body">
+            <strong>La reaction combine-t-elle TOUTES ces dimensions ?</strong><br>
+            <ul style="margin:6px 0 4px;padding-left:16px">
+              <li><strong>Collaborer</strong> : dialogue, inclusion, co-construction</li>
+              <li><strong>Analyser</strong> : verification des faits, evaluation des causes</li>
+              <li><strong>Agir</strong> : solution concrete, suivi, engagement personnel</li>
+              <li><strong>Anticiper</strong> : consequences, durabilite, apprentissage</li>
+            </ul>
+            <strong>Pas toutes &rarr;</strong> <span class="score-tag score-p">+ Approprie</span> (bonne reaction, mais un aspect manque)<br>
+            <strong>Oui, toutes &rarr;</strong> <span class="score-tag score-pp">++ Tres approprie</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Les signaux cles par score</h2>
+      <div class="section">
+        <h3><span class="score-tag score-pp">++</span> Signaux d'une reaction exemplaire</h3>
+        <ul>
+          <li>Dialogue direct et respectueux avec toutes les parties</li>
+          <li>Verification des faits avant de conclure</li>
+          <li>Solution concrete avec plan d'action et suivi</li>
+          <li>Prise en compte des emotions ET des faits</li>
+          <li>Engagement personnel (montrer l'exemple)</li>
+          <li>Vision a long terme (prevention, apprentissage, durabilite)</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-p">+</span> Ce qui manque par rapport au ++</h3>
+        <ul>
+          <li>Un acteur oublie (on consulte A mais pas B)</li>
+          <li>Pas de suivi ou de plan d'action concret</li>
+          <li>Bonne analyse mais sans co-construction de la solution</li>
+          <li>Action correcte mais pas d'anticipation des consequences</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-n">+/-</span> La zone grise</h3>
+        <ul>
+          <li>Bonne intention mais canal inapproprie (e-mail au lieu de dialogue)</li>
+          <li>Action utile mais qui ne traite pas la cause profonde</li>
+          <li>Initiative individuelle la ou une approche collective etait necessaire</li>
+          <li>Feedback donne mais de maniere maladroite ou au mauvais moment</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-m">-</span> Les pieges courants</h3>
+        <ul>
+          <li>Escalader vers la hierarchie sans avoir tente le dialogue</li>
+          <li>Deleguer un probleme qui releve de votre responsabilite</li>
+          <li>Agir seul(e) sans consulter les personnes concernees</li>
+          <li>Imposer une solution sans ecouter les objections</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-mm">--</span> Les lignes rouges</h3>
+        <ul>
+          <li>Passivite totale face a un probleme evident</li>
+          <li>Cacher ou manipuler des informations</li>
+          <li>Decision unilaterale sans aucune consultation</li>
+          <li>Rejeter la faute sur autrui / refuser ses responsabilites</li>
+          <li>Ignorer les besoins d'apprentissage d'un collegue</li>
+        </ul>
+      </div>
+
+      <h2>Competences evaluees</h2>
+      <p>Chaque situation teste <strong>Collaborer</strong> (competence principale) croisee avec une ou plusieurs competences secondaires. Demandez-vous toujours :</p>
+
+      <div class="comp-grid">
+        <div class="comp-card primary">
+          <h4>Collaborer (Niv. 2)</h4>
+          <ul>
+            <li>Montrer l'exemple</li>
+            <li>Ouverture aux idees/cultures</li>
+            <li>Travail hybride efficace</li>
+            <li>Regler les desaccords</li>
+            <li>Feedback adequat et respectueux</li>
+            <li>Plateformes digitales</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Penser critique (Niv. 2)</h4>
+          <ul>
+            <li>Croiser les sources d'info</li>
+            <li>Identifier les elements sous-jacents</li>
+            <li>Evaluer causes et consequences</li>
+            <li>Verifier la credibilite des sources</li>
+            <li>Recommandations fondees</li>
+            <li>Anticiper les consequences</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Guider (Niv. 1)</h4>
+          <ul>
+            <li>Responsabiliser les membres</li>
+            <li>Rappeler les objectifs communs</li>
+            <li>Donner le bon exemple</li>
+            <li>Feedback constructif + ameliorations</li>
+            <li>Planifier l'apprentissage</li>
+            <li>Expliquer les changements</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Oriente resultats (Niv. 3)</h4>
+          <ul>
+            <li>Echeances et moyens</li>
+            <li>Objectifs dans les delais</li>
+            <li>Impact des changements</li>
+            <li>Adapter le planning</li>
+            <li>Risques calcules</li>
+            <li>Assumer ses decisions</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Agilite (Niv. 2)</h4>
+          <ul>
+            <li>Vigilance aux changements</li>
+            <li>Integrer les technologies</li>
+            <li>Perseverer face aux difficultes</li>
+            <li>Echec = opportunite</li>
+            <li>Ajuster sa methode</li>
+            <li>Initiative hors fonction</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Gerer des projets</h4>
+          <ul>
+            <li>Principes et outils PM</li>
+            <li>Autonomie sur cas complexes</li>
+            <li>Planification et suivi</li>
+            <li>Gestion des parties prenantes</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Strategie pendant l'examen</h2>
+      <div class="section">
+        <ul>
+          <li><strong>Lisez la situation en entier</strong> avant de regarder les reactions. Identifiez : qui sont les acteurs ? quel est le probleme ? quelles competences sont en jeu ?</li>
+          <li><strong>Evaluez chaque reaction independamment</strong> : ne comparez pas les reactions entre elles, notez chacune sur l'echelle absolue.</li>
+          <li><strong>Cherchez le dialogue</strong> : dans presque tous les cas, la reaction ++ implique une forme de collaboration directe et respectueuse.</li>
+          <li><strong>Mefiez-vous de l'action « facile »</strong> : envoyer un e-mail, deleguer, ne rien faire &mdash; ces reactions sont rarement ++.</li>
+          <li><strong>Le ++ agit ET anticipe</strong> : il ne se contente pas de resoudre le probleme immediat, il pense aux consequences et a la prevention.</li>
+          <li><strong>Temps cible : ~55 secondes par reaction</strong>. Lisez la situation une fois attentivement (~2 min), puis notez les 4 reactions (~1 min chacune).</li>
+        </ul>
+      </div>
+    </div>
+  `));
+
+  root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
 }
 
 // ----- Practice -----
@@ -964,19 +1201,17 @@ function init(){
   }
   DB = window.QUESTIONS_DB;
 
-  // One-time seed: mark old SJT (S01-S25) as "seen" so new scenarios get priority
-  const SEED_KEY = 'pt_sjt_seed_v1';
-  if(!localStorage.getItem(SEED_KEY)){
+  // One-time cleanup: purge stats for removed old SJT questions
+  const CLEANUP_KEY = 'pt_sjt_cleanup_v2';
+  if(!localStorage.getItem(CLEANUP_KEY)){
     const stats = loadStats();
-    DB.questions.forEach(q => {
-      if(q.type !== 'sjt') return;
-      const num = parseInt((q.set_id||'').replace('sjt_s',''), 10);
-      if(num >= 1 && num <= 25 && !stats[q.id]){
-        stats[q.id] = { attempts: 1, correct: 1, last_correct: true, last_ts: Date.now() };
-      }
-    });
-    saveStats(stats);
-    localStorage.setItem(SEED_KEY, '1');
+    const validIds = new Set(DB.questions.map(q => q.id));
+    let purged = 0;
+    for(const id of Object.keys(stats)){
+      if(!validIds.has(id)){ delete stats[id]; purged++; }
+    }
+    if(purged) saveStats(stats);
+    localStorage.setItem(CLEANUP_KEY, '1');
   }
 
   render();
