@@ -6729,14 +6729,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous partez du principe que les données de Bruxelles sont les plus fiables car elles proviennent du service budget central. Vous intégrez ces chiffres dans la présentation du comité de pilotage sans vérifier l'écart avec Liège, estimant qu'il s'agit probablement d'une erreur de saisie de leur côté. Vous envoyez la présentation finalisée à votre directeur pour validation.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C3) — travailler en mode hybride et Penser de manière critique (P1, P2) — rechercher et identifier l'information pertinente. Vous ignorez complètement la contradiction sans investigation et vous excluez la sous-équipe liégeoise du processus de vérification. Ce manque de rigueur analytique combiné à l'absence de collaboration risque de présenter des données erronées au comité de pilotage, ce qui pourrait avoir des conséquences graves sur les décisions stratégiques."
+      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C3) — travailler en mode hybride et Penser de manière critique (P1, P2) — rechercher et identifier l'information pertinente. Vous ignorez complètement la contradiction sans investigation et vous excluez la sous-équipe liégeoise du processus de vérification. Ce manque de rigueur analytique combiné à l'absence de collaboration risque de présenter des données erronées au comité de pilotage, ce qui pourrait avoir des conséquences graves sur les décisions stratégiques. Pourquoi -- et non - : la réaction ne montre aucune tentative de vérification ni de dialogue avec Liège. Un simple e-mail de clarification, même maladroit, aurait mérité un -. Ici, l'absence totale de réaction face à une incohérence flagrante, combinée au choix arbitraire d'une source, constitue un manquement grave à la pensée critique et à la collaboration hybride."
     },
     {
       "id": "sjt_s26_r2",
@@ -6748,14 +6763,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous organisez immédiatement une séance de travail en visioconférence réunissant les référents financiers des deux sous-équipes. Ensemble, vous croisez les sources de données, identifiez les hypothèses divergentes et reconstituez un tableau de bord consolidé. Vous documentez les écarts expliqués et préparez une note de synthèse transparente pour le comité de pilotage.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C3) — travailler efficacement en mode hybride et Penser de manière critique (P1, P2) — rechercher et croiser l'information. Vous mobilisez les deux sous-équipes dans une démarche collaborative de vérification croisée, ce qui permet d'identifier la source de l'écart tout en renforçant la cohésion entre les sites. La documentation transparente pour le comité de pilotage démontre une rigueur analytique exemplaire et un leadership collaboratif adapté au contexte distribué."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C3) — travailler efficacement en mode hybride et Penser de manière critique (P1, P2) — rechercher et croiser l'information. Vous mobilisez les deux sous-équipes dans une démarche collaborative de vérification croisée, ce qui permet d'identifier la source de l'écart tout en renforçant la cohésion entre les sites. La documentation transparente pour le comité de pilotage démontre une rigueur analytique exemplaire et un leadership collaboratif adapté au contexte distribué. Pourquoi ++ et non + : ce qui distingue cette réaction d'un simple + est la combinaison de la démarche collaborative (impliquer les deux sites), de la rigueur analytique (vérification croisée des sources) et de la transparence (documentation de l'écart pour le comité). Un + aurait été attribué si vous aviez vérifié seul(e) ou sans impliquer activement l'équipe liégeoise."
     },
     {
       "id": "sjt_s26_r3",
@@ -6767,11 +6797,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous envoyez un e-mail aux deux sous-équipes en leur demandant de vérifier leurs chiffres respectifs et de vous revenir avec une explication de l'écart avant vendredi. Vous précisez que la présentation au comité de pilotage ne peut pas contenir de données contradictoires et que vous attendez une version réconciliée. Vous ne proposez pas de méthode de travail commune.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "C",
       "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (C3) — travailler en mode hybride et Penser de manière critique (P2) — identifier les informations pertinentes. Vous identifiez correctement le problème et fixez un délai, ce qui montre une certaine orientation résultats. Pourquoi +/- et non + : vous déléguez la résolution sans faciliter la collaboration entre les deux sites ni proposer de méthodologie de réconciliation. Chaque sous-équipe risque de travailler en silo pour défendre ses propres chiffres, ce qui ne résoudra pas nécessairement l'écart."
@@ -6786,11 +6831,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous décidez de mener vous-même une analyse approfondie des deux jeux de données le soir même. Vous comparez les tableaux ligne par ligne, identifiez les écarts méthodologiques et préparez un rapport détaillé que vous partagez le lendemain avec les deux sous-équipes. Vous ne les avez pas consultées pendant votre analyse car vous vouliez un regard neutre et indépendant.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "B",
       "explanation": "Score attendu : -\nCompétence testée : Collaborer (C3) — travailler en mode hybride et Penser de manière critique (P1) — rechercher l'information. Votre analyse est rigoureuse et vous identifiez effectivement les écarts, ce qui montre de bonnes compétences analytiques. Pourquoi - et non +/- : en excluant les deux sous-équipes de l'analyse, vous manquez l'occasion de comprendre le contexte derrière les chiffres et vous risquez de mal interpréter certaines données. De plus, cette approche solitaire ne renforce pas la collaboration entre les sites et peut être perçue comme un manque de confiance."
@@ -6805,11 +6865,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous contactez les deux directeurs séparément pour comprendre leurs méthodologies respectives. Vous constatez que la directrice RH mesure l'absentéisme en jours calendrier tandis que le directeur des opérations le mesure en équivalents temps plein. Vous proposez au comité une note expliquant les deux perspectives sans trancher ni formuler de recommandation claire sur la méthodologie à retenir.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Collaborer (C4) — gérer les désaccords et Penser de manière critique (P4) — vérifier la crédibilité des sources. Vous menez une investigation sérieuse en contactant les deux parties et identifiez correctement la source de la divergence méthodologique. Pourquoi + et non ++ : bien que l'analyse soit solide, vous ne formulez pas de recommandation claire pour le comité de direction, ce qui est précisément ce que votre directeur vous a demandé. Un chef de projet doit pouvoir prendre position après analyse."
@@ -6824,14 +6899,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous estimez que le directeur des opérations, plus proche du terrain, dispose probablement de données plus fiables. Vous intégrez ses chiffres dans votre note au comité de direction en mentionnant simplement qu'il existe « une légère divergence avec les données RH ». Vous ne creusez pas davantage car le délai est serré et votre directeur attend votre recommandation rapidement.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (P4) — vérifier la crédibilité des sources et Collaborer (C4) — gérer les désaccords. Vous choisissez arbitrairement une source sans vérification, sur base d'un a priori (« plus proche du terrain »), et vous minimisez la divergence dans votre note. Présenter des données non vérifiées au comité de direction est une faute professionnelle grave pour un chef de projet, car cela peut conduire à des décisions stratégiques basées sur des informations erronées."
+      "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (P4) — vérifier la crédibilité des sources et Collaborer (C4) — gérer les désaccords. Vous choisissez arbitrairement une source sans vérification, sur base d'un a priori (« plus proche du terrain »), et vous minimisez la divergence dans votre note. Présenter des données non vérifiées au comité de direction est une faute professionnelle grave pour un chef de projet, car cela peut conduire à des décisions stratégiques basées sur des informations erronées. Pourquoi -- et non - : un - aurait été attribué si vous aviez au moins tenté une vérification minimale avant de choisir une source. Ici, vous combinez trois fautes : choix arbitraire sans vérification, minimisation de la divergence, et présentation de données potentiellement erronées au comité de direction. La gravité des conséquences potentielles justifie le score le plus bas."
     },
     {
       "id": "sjt_s27_r3",
@@ -6843,11 +6933,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous demandez à un collègue du service statistique de recalculer l'absentéisme avec une méthodologie standardisée. En parallèle, vous informez les deux directeurs que vous allez présenter au comité une analyse indépendante. Vous ne les invitez pas à contribuer à cette analyse ni à valider les résultats avant la présentation au comité de direction.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "B",
       "explanation": "Score attendu : -\nCompétence testée : Collaborer (C4) — gérer les désaccords et Penser de manière critique (P5) — formuler des recommandations. L'initiative de recourir à un tiers neutre et à une méthodologie standardisée est pertinente. Pourquoi - et non +/- : en excluant les deux directeurs du processus d'analyse, vous risquez de créer un conflit supplémentaire et de miner la crédibilité de votre recommandation. Les parties prenantes doivent pouvoir contribuer à la validation pour que la recommandation soit acceptée."
@@ -6862,14 +6967,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous vérifiez les deux jeux de données et identifiez que la divergence provient de définitions différentes de l'absentéisme. Vous réunissez les deux directeurs pour présenter votre analyse et co-construire une méthodologie commune. Vous rédigez une recommandation claire pour le comité, validée par les deux parties, avec une proposition d'harmonisation des indicateurs.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C4) — gérer les désaccords et Penser de manière critique (P4, P5) — vérifier la crédibilité et formuler des recommandations. Vous combinez rigueur analytique et collaboration en vérifiant les données, en réunissant les parties prenantes et en co-construisant une solution. La recommandation claire avec proposition d'harmonisation répond parfaitement à la demande de votre directeur tout en résolvant le conflit de manière durable et constructive."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C4) — gérer les désaccords et Penser de manière critique (P4, P5) — vérifier la crédibilité et formuler des recommandations. Vous combinez rigueur analytique et collaboration en vérifiant les données, en réunissant les parties prenantes et en co-construisant une solution. La recommandation claire avec proposition d'harmonisation répond parfaitement à la demande de votre directeur tout en résolvant le conflit de manière durable et constructive. Pourquoi ++ et non + : ce qui élève cette réaction au-dessus du + est la combinaison de la vérification rigoureuse des données, de la réunion collaborative des parties prenantes, et de la proposition proactive d'harmonisation durable. Un + aurait été attribué si vous aviez vérifié et recommandé sans impliquer les deux directeurs dans la co-construction de la solution."
     },
     {
       "id": "sjt_s28_r1",
@@ -6881,14 +7001,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous présentez les résultats de manière transparente à l'équipe, en montrant les données et la méthodologie utilisée. Vous expliquez les conséquences concrètes pour les dossiers complexes et vous proposez d'explorer ensemble des alternatives, comme une automatisation partielle ciblant uniquement les dossiers simples. Vous invitez chaque membre à réagir et à partager ses idées.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C5) — donner et recevoir du feedback et Penser de manière critique (P3, P6) — évaluer et anticiper les conséquences. Vous faites preuve de courage en présentant des résultats qui contredisent les attentes, tout en adoptant une approche collaborative. La proposition d'alternative montre que vous ne vous contentez pas de critiquer mais que vous orientez l'équipe vers des solutions, ce qui est essentiel pour maintenir la motivation après une telle annonce."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C5) — donner et recevoir du feedback et Penser de manière critique (P3, P6) — évaluer et anticiper les conséquences. Vous faites preuve de courage en présentant des résultats qui contredisent les attentes, tout en adoptant une approche collaborative. La proposition d'alternative montre que vous ne vous contentez pas de critiquer mais que vous orientez l'équipe vers des solutions, ce qui est essentiel pour maintenir la motivation après une telle annonce. Pourquoi ++ et non + : un + aurait été attribué si vous aviez présenté les résultats honnêtement mais sans proposer d'alternative ni structurer la discussion. Ce qui distingue le ++ est la combinaison du courage (présenter des résultats contraires aux attentes), de l'anticipation (proposer une solution alternative), et de la posture collaborative (inviter le débat plutôt qu'imposer)."
     },
     {
       "id": "sjt_s28_r2",
@@ -6900,11 +7035,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous envoyez votre analyse par e-mail au sponsor du projet avant la réunion, en lui suggérant de reporter la présentation le temps d'approfondir les résultats. Vous préférez éviter de confronter l'équipe à cette mauvaise nouvelle en réunion et souhaitez d'abord avoir le soutien du sponsor pour annoncer un changement de direction. Vous ne partagez pas encore l'analyse avec les autres membres.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "C",
       "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (C5) — donner et recevoir du feedback et Penser de manière critique (P6) — évaluer les conséquences. Informer le sponsor en amont est une démarche prudente qui montre du sens politique. Pourquoi +/- et non + : en reportant la présentation et en excluant l'équipe, vous retardez un feedback essentiel et vous créez une dynamique de rétention d'information. L'équipe a le droit de connaître les résultats pour pouvoir réorienter son travail rapidement."
@@ -6919,14 +7069,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous décidez de ne pas mentionner les résultats négatifs lors de la réunion. Vous présentez uniquement les gains d'efficacité observés sur les dossiers simples et omettez l'impact sur les dossiers complexes. Vous vous dites que l'équipe trouvera bien une solution technique pour résoudre ce problème plus tard, une fois le système en production. L'essentiel est de ne pas démotiver le groupe.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C5) — donner du feedback honnête et Penser de manière critique (P3, P6) — évaluer et anticiper les conséquences. Cacher des résultats d'analyse est une faute grave qui compromet l'intégrité du projet et la confiance de l'équipe. Reporter le problème à la phase de production ne fera qu'amplifier les conséquences négatives (coûts de correction, retards, perte de crédibilité). Un chef de projet a l'obligation de transparence envers son équipe et ses parties prenantes."
+      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C5) — donner du feedback honnête et Penser de manière critique (P3, P6) — évaluer et anticiper les conséquences. Cacher des résultats d'analyse est une faute grave qui compromet l'intégrité du projet et la confiance de l'équipe. Reporter le problème à la phase de production ne fera qu'amplifier les conséquences négatives (coûts de correction, retards, perte de crédibilité). Un chef de projet a l'obligation de transparence envers son équipe et ses parties prenantes. Pourquoi -- et non - : dissimuler des données d'analyse n'est pas simplement maladroit, c'est une faute d'intégrité. Un - serait attribué si vous aviez présenté les résultats de manière biaisée mais sans les cacher. Ici, le choix délibéré de ne rien montrer compromet le projet, la confiance de l'équipe et votre crédibilité professionnelle de manière fondamentale."
     },
     {
       "id": "sjt_s28_r4",
@@ -6938,11 +7103,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous présentez les résultats en mettant en avant les points positifs (gains sur les dossiers simples) et négatifs (surcoût sur les complexes). Vous proposez de poursuivre l'automatisation pour les dossiers simples tout en lançant une étude complémentaire pour les cas complexes, mais vous ne sollicitez pas l'avis de l'équipe et vous présentez cette proposition comme une décision déjà prise.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Collaborer (C5) — donner du feedback et Penser de manière critique (P6) — évaluer les conséquences. Vous faites preuve de transparence en présentant les résultats complets et vous proposez une solution pragmatique et nuancée. Pourquoi + et non ++ : en présentant votre proposition comme une décision déjà prise sans solliciter l'avis de l'équipe, vous manquez l'opportunité de co-construire la solution et vous risquez de réduire l'adhésion du groupe à la nouvelle orientation."
@@ -6957,11 +7137,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous renvoyez le brouillon à Aïcha avec des annotations détaillées dans les marges, pointant chaque erreur méthodologique. Vous lui indiquez les pages du guide méthodologique de l'institution qu'elle devrait consulter et lui demandez de corriger le rapport avant de vous le resoumettre. Vous ne proposez pas de temps d'échange mais vous restez disponible si elle a des questions par e-mail.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "B",
       "explanation": "Score attendu : -\nCompétence testée : Collaborer (C1) — montrer l'exemple et Guider (G3, G5) — donner le bon exemple et favoriser l'apprentissage. Vous identifiez les erreurs et fournissez des références, ce qui montre un souci de rigueur. Pourquoi - et non +/- : pour une junior de 4 mois, des annotations écrites sans échange direct sont insuffisantes pour un apprentissage réel. Le feedback uniquement par e-mail ne permet pas de vérifier la compréhension ni de transmettre le raisonnement derrière la bonne méthodologie."
@@ -6976,11 +7171,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous planifiez une séance de travail d'une heure avec Aïcha. Vous valorisez la qualité de son analyse des risques individuels, puis vous lui montrez la différence entre les deux types de matrices en appliquant votre méthode sur un exemple tiré de son rapport. Vous la laissez ensuite remanier le document en autonomie en vous proposant pour une relecture finale.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Guider (G3) — donner le bon exemple par la démonstration et Collaborer (C1) — montrer l'exemple. Vous valorisez les points forts d'Aïcha, vous démontrez la bonne approche par l'exemple concret et vous favorisez son autonomie. Pourquoi + et non ++ : cette réaction est très proche de l'idéal mais pourrait être renforcée en vérifiant explicitement sa compréhension de la méthodologie et en l'encourageant à poser des questions pendant la séance de travail."
@@ -6995,14 +7205,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous planifiez une séance de travail avec Aïcha où vous soulignez ses bonnes analyses. Vous expliquez la distinction entre matrices qualitatives et quantitatives en reprenant un risque de son rapport comme cas pratique. Vous vérifiez sa compréhension en lui demandant d'appliquer la méthode sur un second risque devant vous, puis vous la laissez finaliser le rapport en autonomie avec une relecture.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C1) — montrer l'exemple et Guider (G3, G5) — donner le bon exemple et favoriser l'apprentissage. Vous combinez valorisation des compétences, démonstration pratique, vérification de la compréhension et autonomie encadrée. Cette approche pédagogique complète permet à Aïcha d'apprendre durablement tout en garantissant la qualité du livrable. C'est un modèle d'accompagnement pour un collaborateur junior."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C1) — montrer l'exemple et Guider (G3, G5) — donner le bon exemple et favoriser l'apprentissage. Vous combinez valorisation des compétences, démonstration pratique, vérification de la compréhension et autonomie encadrée. Cette approche pédagogique complète permet à Aïcha d'apprendre durablement tout en garantissant la qualité du livrable. C'est un modèle d'accompagnement pour un collaborateur junior. Pourquoi ++ et non + : un + aurait été attribué si vous aviez corrigé la méthodologie en expliquant l'erreur, mais sans démonstration pratique ni suivi de l'autonomie. Le ++ récompense l'approche pédagogique complète : valoriser d'abord les forces, montrer concrètement la bonne méthode sur un exemple, vérifier la compréhension, puis laisser Aïcha reprendre en autonomie."
     },
     {
       "id": "sjt_s29_r4",
@@ -7014,14 +7239,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vu l'urgence du délai, vous récupérez le rapport et réécrivez vous-même la partie méthodologique en conservant les analyses d'Aïcha. Vous lui envoyez la version corrigée en lui disant que le délai ne permettait pas de faire autrement et qu'elle pourra étudier vos corrections pour la prochaine fois. Vous soumettez le rapport au comité sous le nom d'Aïcha pour ne pas la décrédibiliser.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Guider (G5) — favoriser l'apprentissage et Collaborer (C1) — montrer l'exemple. En réécrivant le rapport vous-même, vous privez Aïcha de toute opportunité d'apprentissage sur son premier livrable. Même si le délai est court (trois jours, pas demain), il reste suffisant pour un accompagnement. Cette approche crée une dépendance, mine la confiance d'Aïcha en ses capacités et envoie le message que face à la pression, on court-circuite le développement des juniors."
+      "explanation": "Score attendu : --\nCompétence testée : Guider (G5) — favoriser l'apprentissage et Collaborer (C1) — montrer l'exemple. En réécrivant le rapport vous-même, vous privez Aïcha de toute opportunité d'apprentissage sur son premier livrable. Même si le délai est court (trois jours, pas demain), il reste suffisant pour un accompagnement. Cette approche crée une dépendance, mine la confiance d'Aïcha en ses capacités et envoie le message que face à la pression, on court-circuite le développement des juniors. Pourquoi -- et non - : un - aurait été attribué si vous aviez réécrit le rapport en expliquant vos corrections pour qu'Aïcha apprenne en comparant les versions. Ici, vous supprimez toute dimension d'apprentissage en la court-circuitant complètement, trois jours avant l'échéance, sans même tenter un accompagnement rapide. C'est le contraire exact de ce que \"guider\" signifie."
     },
     {
       "id": "sjt_s30_r1",
@@ -7033,11 +7273,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous estimez que forcer l'adoption de MS Project Online dans l'urgence créerait plus de problèmes qu'elle n'en résoudrait. Vous proposez de centraliser les informations via un tableur partagé sur le réseau commun et d'abandonner temporairement l'outil digital le temps de passer l'audit. Vous prévoyez de reprendre la migration vers MS Project Online après l'audit, quand la pression sera retombée.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "C",
       "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux et Orienté résultats (R2) — respecter les délais. Le pragmatisme de la solution (tableur partagé) est compréhensible vu l'urgence et évite les conflits de versions. Pourquoi +/- et non + : cette approche reporte le problème d'adoption de l'outil digital au lieu de le résoudre, et un simple tableur partagé peut ne pas satisfaire les exigences de traçabilité de l'audit. De plus, l'expérience montre que « après l'audit » signifie souvent « jamais »."
@@ -7052,14 +7307,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous renoncez complètement à MS Project Online et revenez à une coordination par e-mail avec des comptes rendus hebdomadaires. Chacun continue de gérer ses tâches dans son propre tableur et vous consolidez manuellement les informations chaque semaine. Vous estimez que c'est la méthode la plus rapide pour avancer et que l'important est de respecter l'échéance de l'audit.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux collaboratifs et Orienté résultats (R1) — planifier efficacement. Vous abandonnez tout effort de collaboration digitale et revenez à des pratiques qui sont précisément la cause du problème (tableurs individuels, consolidation manuelle). La coordination par e-mail ne garantit aucune traçabilité pour l'audit et aggrave les risques de conflits de versions. Cette régression est d'autant plus grave que le sponsor exige explicitement la traçabilité."
+      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux collaboratifs et Orienté résultats (R1) — planifier efficacement. Vous abandonnez tout effort de collaboration digitale et revenez à des pratiques qui sont précisément la cause du problème (tableurs individuels, consolidation manuelle). La coordination par e-mail ne garantit aucune traçabilité pour l'audit et aggrave les risques de conflits de versions. Cette régression est d'autant plus grave que le sponsor exige explicitement la traçabilité. Pourquoi -- et non - : un - aurait été attribué si vous aviez temporairement simplifié l'outil tout en maintenant un plan de montée en compétence. Ici, vous abandonnez complètement l'outil collaboratif et revenez aux pratiques qui causaient les problèmes, ce qui compromet la traçabilité exigée par le sponsor pour l'audit RGPD. C'est une régression totale."
     },
     {
       "id": "sjt_s30_r3",
@@ -7071,14 +7341,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous organisez une séance de replanification collaborative dans MS Project Online avec toute l'équipe. Pour les membres moins à l'aise, vous prévoyez une session pratique de 90 minutes le lendemain sur les fonctionnalités essentielles. Vous définissez ensemble les jalons critiques du nouveau planning et attribuez un « binôme digital » à chaque personne en difficulté pour les premières semaines.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux et Orienté résultats (R1, R2) — planifier et respecter les délais. Vous abordez simultanément les deux problèmes : la replanification urgente et le déficit de compétences digitales. La session pratique ciblée et le système de binômes montrent un accompagnement pragmatique adapté au contexte d'urgence. La co-construction des jalons garantit l'adhésion de l'équipe au nouveau planning."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux et Orienté résultats (R1, R2) — planifier et respecter les délais. Vous abordez simultanément les deux problèmes : la replanification urgente et le déficit de compétences digitales. La session pratique ciblée et le système de binômes montrent un accompagnement pragmatique adapté au contexte d'urgence. La co-construction des jalons garantit l'adhésion de l'équipe au nouveau planning. Pourquoi ++ et non + : un + aurait été attribué si vous aviez replanifié efficacement sans traiter le problème de compétences digitales. Le ++ récompense l'approche simultanée : replanification collaborative avec jalons clairs ET accompagnement pragmatique (session ciblée, binômes) qui traite la cause racine du retard tout en respectant l'urgence du calendrier."
     },
     {
       "id": "sjt_s30_r4",
@@ -7090,11 +7375,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous imposez l'utilisation exclusive de MS Project Online à toute l'équipe dès lundi en interdisant les tableurs personnels. Vous replanifiez vous-même le projet dans l'outil et vous assignez les tâches à chacun. Vous envoyez un tutoriel vidéo en ligne et vous indiquez que toute question peut être posée par e-mail. Vous estimez que dans l'urgence, il faut trancher et que les gens s'adapteront.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Collaborer (C6) — utiliser les outils digitaux et Orienté résultats (R2) — respecter les délais. Vous prenez une décision claire en faveur de l'outil partagé, ce qui est nécessaire pour la traçabilité exigée par le sponsor. Pourquoi + et non ++ : l'imposition unilatérale sans accompagnement personnalisé risque de braquer les membres en difficulté et de ralentir la productivité à court terme. Un tutoriel vidéo générique ne remplace pas un accompagnement pratique adapté au contexte du projet."
@@ -7109,14 +7409,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous réalisez une analyse d'impact du changement de périmètre et proposez une approche phasée : implémenter l'authentification à deux facteurs sur les modules critiques (données personnelles) dans le planning actuel, et planifier le reste dans une version ultérieure. Vous présentez cette analyse aux deux camps avec un tableau risques/bénéfices clair et sollicitez leur accord.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C4) — gérer les désaccords et Orienté résultats (R3, R5) — évaluer l'impact des changements et prendre des risques calculés. Vous proposez un compromis structuré basé sur une analyse factuelle qui répond aux préoccupations sécuritaires tout en protégeant l'échéance. L'approche phasée avec priorisation par criticité démontre une excellente gestion du changement de périmètre et la consultation des deux parties favorise l'adhésion collective."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C4) — gérer les désaccords et Orienté résultats (R3, R5) — évaluer l'impact des changements et prendre des risques calculés. Vous proposez un compromis structuré basé sur une analyse factuelle qui répond aux préoccupations sécuritaires tout en protégeant l'échéance. L'approche phasée avec priorisation par criticité démontre une excellente gestion du changement de périmètre et la consultation des deux parties favorise l'adhésion collective. Pourquoi ++ et non + : un + aurait été attribué si vous aviez proposé un compromis raisonnable sans l'appuyer sur une analyse d'impact structurée. Le ++ récompense la combinaison de l'analyse factuelle (matrice criticité), du compromis créatif (approche phasée), de la consultation des deux camps et de la prise de risque calculée assumée devant le sponsor."
     },
     {
       "id": "sjt_s31_r2",
@@ -7128,11 +7443,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous acceptez intégralement la demande de l'équipe sécurité et intégrez l'authentification à deux facteurs sur tous les modules dans le planning actuel. Vous informez le sponsor que l'échéance sera décalée de 8 semaines car la sécurité est non négociable. Vous ne proposez pas d'alternative ni de priorisation et vous ne consultez pas l'équipe projet sur la faisabilité de cette extension.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "B",
       "explanation": "Score attendu : -\nCompétence testée : Collaborer (C4) — gérer les désaccords et Orienté résultats (R3) — évaluer l'impact des changements. Prendre la sécurité au sérieux est louable et vous ne minimisez pas le risque. Pourquoi - et non +/- : vous acceptez le changement de périmètre intégralement sans analyse d'impact, sans proposer d'alternative et sans consulter ni le sponsor ni l'équipe. Imposer unilatéralement un délai de 8 semaines supplémentaires sans exploration de compromis ne correspond pas à la gestion de projet attendue d'un chef de projet."
@@ -7147,11 +7477,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous organisez une réunion avec le sponsor et le responsable sécurité pour comprendre les contraintes de chacun. Vous préparez trois scénarios chiffrés (intégration totale, partielle, report complet) avec leurs implications en délai, coût et risque. Vous laissez la décision finale au sponsor après avoir présenté votre recommandation argumentée en faveur de l'approche la plus équilibrée.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Orienté résultats (R3, R5) — évaluer l'impact et prendre des risques calculés et Collaborer (C4) — gérer les désaccords. Vous adoptez une approche structurée avec des scénarios chiffrés et vous impliquez les décideurs clés. Pourquoi + et non ++ : en limitant la réunion au sponsor et au responsable sécurité, vous n'incluez pas l'équipe projet dont l'adhésion est essentielle pour la mise en œuvre. De plus, déléguer la décision finale au sponsor alors que vous avez l'expertise terrain montre une légère insuffisance de leadership."
@@ -7166,14 +7511,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous refusez la demande de l'équipe sécurité en arguant que le périmètre a été validé en début de projet et qu'un changement à mi-parcours est inacceptable. Vous informez votre sponsor que vous maintiendrez l'échéance initiale et que la question de la sécurité pourra être traitée dans un projet séparé ultérieurement. Vous ne réalisez pas d'analyse d'impact et vous ignorez la menace d'escalade.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C4) — gérer les désaccords et Orienté résultats (R5) — prendre des risques calculés. Refuser une exigence de sécurité sans analyse d'impact est irresponsable, surtout dans un projet d'infrastructure IT où les vulnérabilités peuvent avoir des conséquences graves. Ignorer la menace d'escalade ne fera qu'aggraver le conflit et compromettre votre crédibilité. Un chef de projet doit évaluer objectivement toute demande de changement, même si elle perturbe le planning."
+      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C4) — gérer les désaccords et Orienté résultats (R5) — prendre des risques calculés. Refuser une exigence de sécurité sans analyse d'impact est irresponsable, surtout dans un projet d'infrastructure IT où les vulnérabilités peuvent avoir des conséquences graves. Ignorer la menace d'escalade ne fera qu'aggraver le conflit et compromettre votre crédibilité. Un chef de projet doit évaluer objectivement toute demande de changement, même si elle perturbe le planning. Pourquoi -- et non - : un - aurait été attribué si vous aviez refusé la demande mais en proposant une alternative ou en demandant un délai pour analyser l'impact. Ici, vous rejetez une exigence de sécurité sans aucune analyse, ignorez une menace d'escalade légitime et risquez d'exposer l'infrastructure à des vulnérabilités connues. L'absence totale de considération pour le risque sécuritaire est rédhibitoire."
     },
     {
       "id": "sjt_s32_r1",
@@ -7185,14 +7545,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous rejetez l'offre du collègue européen en expliquant que chaque pays a ses propres spécificités et que leur approche ne serait pas transposable au contexte belge. Vous demandez à l'équipe de reprendre le développement des composants depuis le début en suivant les nouvelles spécifications, sans chercher à récupérer le travail existant. Vous fixez un nouveau planning serré.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A1) — être vigilant aux changements. Vous refusez une opportunité d'apprentissage externe sans analyse, ce qui montre un manque d'ouverture flagrant. Demander à l'équipe de tout recommencer sans évaluer ce qui est récupérable gaspille des ressources et aggrave la démoralisation. Un chef de projet doit exploiter toutes les sources d'information disponibles pour optimiser la réponse à un changement imposé."
+      "explanation": "Score attendu : --\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A1) — être vigilant aux changements. Vous refusez une opportunité d'apprentissage externe sans analyse, ce qui montre un manque d'ouverture flagrant. Demander à l'équipe de tout recommencer sans évaluer ce qui est récupérable gaspille des ressources et aggrave la démoralisation. Un chef de projet doit exploiter toutes les sources d'information disponibles pour optimiser la réponse à un changement imposé. Pourquoi -- et non - : un - aurait été attribué si vous aviez décliné l'aide du collègue européen mais proposé votre propre plan d'adaptation. Ici, vous combinez le refus d'une ressource gratuite, l'absence d'évaluation de ce qui est récupérable et une directive démoralisante (\"tout recommencer\"). Ce triple manquement — fermeture, gaspillage, leadership négatif — justifie le score le plus bas."
     },
     {
       "id": "sjt_s32_r2",
@@ -7204,11 +7579,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous acceptez l'offre du collègue européen et organisez un appel exploratoire pour comprendre leur approche. En parallèle, vous demandez à l'équipe de réaliser un inventaire des composants existants pour identifier ceux qui sont récupérables. Vous ne prenez pas le temps de reconnaître la frustration de l'équipe ni de recadrer le contexte positivement avant de lancer ces actions opérationnelles.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A1) — être vigilant aux changements. Vous exploitez l'opportunité de collaboration internationale et vous lancez un inventaire pragmatique des composants récupérables. Pourquoi + et non ++ : en négligeant l'aspect humain (la démoralisation de l'équipe), vous risquez un désengagement qui compromettra la qualité du travail de refonte. La gestion du changement nécessite autant d'attention aux émotions qu'aux actions opérationnelles."
@@ -7223,11 +7613,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous réunissez l'équipe et reconnaissez la frustration légitime du groupe et le travail accompli. Vous rappelez que la conformité à l'accessibilité est une obligation légale mais aussi une amélioration pour les citoyens. Vous proposez de reporter toute action d'une semaine pour laisser le temps à chacun de digérer la nouvelle. Vous mentionnez l'offre du collègue européen sans y donner suite.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "C",
       "explanation": "Score attendu : +/-\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A3) — faire preuve de persévérance. Vous gérez bien l'aspect émotionnel en reconnaissant la frustration et en recadrant positivement le contexte. Pourquoi +/- et non + : reporter toute action d'une semaine dans un contexte d'urgence réglementaire est un luxe que le projet ne peut probablement pas se permettre. De plus, mentionner l'offre du collègue sans y donner suite immédiatement fait perdre un temps précieux dans la recherche de solutions."
@@ -7242,14 +7647,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous réunissez l'équipe et reconnaissez leur frustration et la valeur du travail accompli. Vous recadrez la situation : la conformité rend le service plus inclusif pour les citoyens. Vous organisez une session avec le collègue européen pour bénéficier de son retour d'expérience, puis lancez avec l'équipe un inventaire des composants récupérables pour construire un plan de refonte réaliste.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A1, A3) — être vigilant et persévérer. Vous combinez parfaitement la gestion des émotions (reconnaissance de la frustration), l'ouverture à l'apprentissage externe (session avec le collègue européen) et l'action pragmatique (inventaire des composants). Cette approche complète transforme une contrainte en opportunité tout en maintenant la motivation et la dynamique de l'équipe."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C2) — faire preuve d'ouverture et Agilité (A1, A3) — être vigilant et persévérer. Vous combinez parfaitement la gestion des émotions (reconnaissance de la frustration), l'ouverture à l'apprentissage externe (session avec le collègue européen) et l'action pragmatique (inventaire des composants). Cette approche complète transforme une contrainte en opportunité tout en maintenant la motivation et la dynamique de l'équipe. Pourquoi ++ et non + : un + aurait été attribué si vous aviez organisé la session avec le collègue européen sans la dimension de gestion émotionnelle ni l'inventaire technique. Le ++ récompense l'approche complète : reconnaissance des émotions de l'équipe, ouverture à l'apprentissage international, action pragmatique immédiate et recadrage positif de la contrainte."
     },
     {
       "id": "sjt_s33_r1",
@@ -7261,11 +7681,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION A : Vous documentez précisément votre constat en rassemblant les éléments factuels accessibles (montants, objets des contrats, fournisseurs concernés). Vous rédigez une note de synthèse et proposez à votre directeur d'organiser une réunion de coordination inter-services. Vous vous portez volontaire pour faciliter cette réunion en apportant votre expertise en gestion de projet et en marchés publics IT.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Collaborer (C1) — montrer l'exemple et Agilité (A6) — prendre des initiatives hors de sa fonction. Vous documentez rigoureusement le constat, vous passez par la voie hiérarchique appropriée et vous proposez votre aide concrète. Pourquoi + et non ++ : bien que l'approche soit solide, passer uniquement par votre propre directeur peut ralentir le processus. Une prise de contact informelle avec les responsables des autres services en parallèle aurait démontré davantage d'initiative et de capacité à créer des ponts transversaux."
@@ -7280,14 +7715,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION B : Vous documentez le constat avec des éléments factuels et contactez informellement les chefs de projet des trois autres services pour vérifier votre analyse. Après confirmation, vous rédigez une proposition de mutualisation chiffrée et organisez, avec l'accord de votre directeur, une réunion inter-services. Vous proposez de piloter un groupe de travail pour explorer la consolidation des contrats.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "E",
-      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C1) — montrer l'exemple et Agilité (A6) — prendre des initiatives hors de sa fonction. Vous combinez rigueur analytique (documentation, chiffrage), collaboration transversale (contact informel avec les autres services), respect hiérarchique (accord du directeur) et leadership proactif (proposition de piloter le groupe de travail). Cette approche complète démontre une capacité exceptionnelle à dépasser son mandat de manière constructive et à créer de la valeur pour l'institution."
+      "explanation": "Score attendu : ++\nCompétence testée : Collaborer (C1) — montrer l'exemple et Agilité (A6) — prendre des initiatives hors de sa fonction. Vous combinez rigueur analytique (documentation, chiffrage), collaboration transversale (contact informel avec les autres services), respect hiérarchique (accord du directeur) et leadership proactif (proposition de piloter le groupe de travail). Cette approche complète démontre une capacité exceptionnelle à dépasser son mandat de manière constructive et à créer de la valeur pour l'institution. Pourquoi ++ et non + : un + aurait été attribué si vous aviez documenté le constat et proposé une réunion sans vous engager à piloter. Le ++ récompense l'initiative complète : analyse chiffrée, démarche collaborative informelle avec les autres services, validation hiérarchique et engagement personnel à coordonner, tout en restant dans un cadre respectueux des mandats de chacun."
     },
     {
       "id": "sjt_s33_r3",
@@ -7299,14 +7749,29 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION C : Vous considérez que la gestion des marchés publics des autres services ne relève pas de votre responsabilité. Chaque service a son propre budget et ses propres procédures d'achat. Vous vous concentrez sur votre projet et vous assurez que votre propre contrat IT est bien négocié. Vous ne signalez pas la situation car vous estimez que ce n'est pas votre rôle de surveiller les dépenses des autres.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "A",
-      "explanation": "Score attendu : --\nCompétence testée : Agilité (A6) — prendre des initiatives au-delà de sa fonction et Collaborer (C1) — montrer l'exemple. Ignorer un gaspillage budgétaire significatif sous prétexte que cela dépasse votre mandat est contraire à l'esprit de service public et au devoir de bonne gestion. Dans un contexte de restrictions budgétaires où le secrétaire général appelle à l'efficience, cette passivité est particulièrement inappropriée et démontre un manque total d'initiative et de sens des responsabilités institutionnelles."
+      "explanation": "Score attendu : --\nCompétence testée : Agilité (A6) — prendre des initiatives au-delà de sa fonction et Collaborer (C1) — montrer l'exemple. Ignorer un gaspillage budgétaire significatif sous prétexte que cela dépasse votre mandat est contraire à l'esprit de service public et au devoir de bonne gestion. Dans un contexte de restrictions budgétaires où le secrétaire général appelle à l'efficience, cette passivité est particulièrement inappropriée et démontre un manque total d'initiative et de sens des responsabilités institutionnelles. Pourquoi -- et non - : un - aurait été attribué si vous aviez au moins signalé le problème à votre hiérarchie sans vous engager davantage. Ici, l'absence totale de réaction face à un gaspillage visible et documentable est incompatible avec le devoir de bonne gestion des deniers publics et le niveau d'initiative attendu d'un chef de projet de niveau A2."
     },
     {
       "id": "sjt_s33_r4",
@@ -7318,11 +7783,26 @@ window.QUESTIONS_DB = {
       "figures": [],
       "question": "RÉACTION D : Vous mentionnez votre observation lors d'une conversation informelle avec votre directeur, en suggérant qu'il pourrait être utile que quelqu'un examine la consolidation des contrats IT. Vous ne documentez pas le constat formellement et ne proposez pas de solution concrète ni de vous impliquer personnellement. Vous estimez avoir fait votre devoir en remontant l'information à votre hiérarchie.",
       "options": [
-        {"letter": "A", "text": "Très inapproprié (--)"},
-        {"letter": "B", "text": "Inapproprié (-)"},
-        {"letter": "C", "text": "Neutre (+/-)"},
-        {"letter": "D", "text": "Approprié (+)"},
-        {"letter": "E", "text": "Très approprié (++)"}
+        {
+          "letter": "A",
+          "text": "Très inapproprié (--)"
+        },
+        {
+          "letter": "B",
+          "text": "Inapproprié (-)"
+        },
+        {
+          "letter": "C",
+          "text": "Neutre (+/-)"
+        },
+        {
+          "letter": "D",
+          "text": "Approprié (+)"
+        },
+        {
+          "letter": "E",
+          "text": "Très approprié (++)"
+        }
       ],
       "correct": "B",
       "explanation": "Score attendu : -\nCompétence testée : Agilité (A6) — prendre des initiatives hors de sa fonction et Collaborer (C1) — montrer l'exemple. Vous remontez l'information à votre hiérarchie, ce qui est un minimum acceptable. Pourquoi - et non +/- : la démarche est trop passive pour un chef de projet de niveau A2. L'absence de documentation formelle, de proposition concrète et d'engagement personnel rend peu probable que le constat débouche sur une action corrective. Un signal faible non documenté dans une conversation informelle risque de se perdre."
