@@ -342,7 +342,8 @@ function qStat(qid){
     last_time_ms:null, best_time_ms:null, last_ts:0
   };
 }
-function recordAnswer(qid, isCorrect, timeMs, withinTime){
+// score: 0..1 (SJT can be 0 / 0.5 / 1, others are 0 or 1)
+function recordAnswer(qid, score, timeMs, withinTime){
   const s = loadStats();
   const r = s[qid] || {
     attempts:0, correct:0, correct_within_time:0,
@@ -350,19 +351,25 @@ function recordAnswer(qid, isCorrect, timeMs, withinTime){
     last_time_ms:null, best_time_ms:null, last_ts:0
   };
   r.attempts++;
-  if(isCorrect){
-    r.correct++;
-    if(withinTime) r.correct_within_time = (r.correct_within_time||0) + 1;
-    if(timeMs != null && (r.best_time_ms == null || timeMs < r.best_time_ms)){
-      r.best_time_ms = timeMs;
-    }
+  // Accumulate fractional score (neighbor match on SJT = 0.5)
+  r.correct = (r.correct || 0) + score;
+  if(withinTime) r.correct_within_time = (r.correct_within_time || 0) + score;
+  if(score > 0 && timeMs != null && (r.best_time_ms == null || timeMs < r.best_time_ms)){
+    r.best_time_ms = timeMs;
   }
-  r.last_correct = isCorrect;
+  r.last_score = score;                // 0, 0.5, or 1
+  r.last_correct = score >= 1;         // boolean, used by pickNext tiering
   r.last_within_time = withinTime;
   r.last_time_ms = timeMs;
   r.last_ts = Date.now();
   s[qid] = r;
   saveStats(s);
+}
+// Normalize a stats entry to a numeric score (backward-compat for old boolean-only entries)
+function statScore(s){
+  if(!s || s.attempts === 0) return 0;
+  if(typeof s.last_score === 'number') return s.last_score;
+  return s.last_correct ? 1 : 0;
 }
 function fmtTime(ms){
   if(ms == null) return '—';
@@ -533,19 +540,20 @@ function renderHome(root){
   const settings = loadSettings();
   const stats = loadStats();
 
-  // Aggregate stats — global
+  // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5)
   const total = DB.questions.length;
-  let attempted = 0, correct = 0, correctInTime = 0;
+  let attempted = 0, scoreSum = 0, scoreInTimeSum = 0;
   for(const q of DB.questions){
     const s = stats[q.id];
     if(s && s.attempts > 0){
       attempted++;
-      if(s.last_correct) correct++;
-      if(s.last_correct && s.last_within_time) correctInTime++;
+      const sc = statScore(s);
+      scoreSum += sc;
+      if(s.last_within_time) scoreInTimeSum += sc;
     }
   }
-  const accuracy = attempted > 0 ? Math.round(correct / attempted * 100) : 0;
-  const accuracyInTime = attempted > 0 ? Math.round(correctInTime / attempted * 100) : 0;
+  const accuracy = attempted > 0 ? Math.round(scoreSum / attempted * 100) : 0;
+  const accuracyInTime = attempted > 0 ? Math.round(scoreInTimeSum / attempted * 100) : 0;
 
   // How many in current filter?
   const pool = buildPool(settings);
@@ -553,17 +561,18 @@ function renderHome(root){
   // Type / source counts + per-type stats
   const typeCounts = {};
   const sourceCounts = {};
-  const typeStats = {};  // {type: {total, attempted, correct, correctInTime}}
+  const typeStats = {};  // {type: {total, attempted, scoreSum, scoreInTimeSum}}
   for(const q of DB.questions){
     typeCounts[q.type] = (typeCounts[q.type] || 0) + 1;
     sourceCounts[q.source] = (sourceCounts[q.source] || 0) + 1;
-    if(!typeStats[q.type]) typeStats[q.type] = {total:0, attempted:0, correct:0, correctInTime:0};
+    if(!typeStats[q.type]) typeStats[q.type] = {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
     typeStats[q.type].total++;
     const s = stats[q.id];
     if(s && s.attempts > 0){
       typeStats[q.type].attempted++;
-      if(s.last_correct) typeStats[q.type].correct++;
-      if(s.last_correct && s.last_within_time) typeStats[q.type].correctInTime++;
+      const sc = statScore(s);
+      typeStats[q.type].scoreSum += sc;
+      if(s.last_within_time) typeStats[q.type].scoreInTimeSum += sc;
     }
   }
 
@@ -584,8 +593,8 @@ function renderHome(root){
 
       ${DB.types.filter(t => typeCounts[t]).map(t => {
         const ts = typeStats[t];
-        const tAcc = ts.attempted > 0 ? Math.round(ts.correct / ts.attempted * 100) : 0;
-        const tAccTime = ts.attempted > 0 ? Math.round(ts.correctInTime / ts.attempted * 100) : 0;
+        const tAcc = ts.attempted > 0 ? Math.round(ts.scoreSum / ts.attempted * 100) : 0;
+        const tAccTime = ts.attempted > 0 ? Math.round(ts.scoreInTimeSum / ts.attempted * 100) : 0;
         return `<div class="section type-stats-section">
           <div class="hdr-row">
             <h3>${typeLabel(t)}</h3>
@@ -1172,17 +1181,20 @@ function submitAnswer(){
   const targetMs = effectiveTargetMs();
   const withinTime = elapsed <= targetMs;
 
-  // SJT uses partial scoring; other types use exact match
+  // SJT uses partial scoring (0 / 0.5 / 1); other types are 0 or 1
   let isCorrect;
   let sjtPts = null;
+  let score;
   if(q.type === 'sjt'){
     sjtPts = sjtScore(SESSION.picked_letter, q.correct);
-    isCorrect = sjtPts >= 1;  // only exact match counts as "correct" for stats
+    score = sjtPts;
+    isCorrect = sjtPts >= 1;  // only exact match counts as "correct" for pickNext tiering
   } else {
     isCorrect = SESSION.picked_letter === q.correct;
+    score = isCorrect ? 1 : 0;
   }
 
-  recordAnswer(q.id, isCorrect, elapsed, withinTime);
+  recordAnswer(q.id, score, elapsed, withinTime);
   SESSION.revealed = true;
   SESSION.q_elapsed_ms = elapsed;
   SESSION.q_within_time = withinTime;
@@ -1290,10 +1302,11 @@ function renderPractice(root){
     explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${expl}</div>`;
   }
 
-  // Per-question history label
+  // Per-question history label (correct can be fractional for SJT partial credit)
   let accStr = '';
   if(qs.attempts > 0){
-    accStr = ` · ${qs.correct}/${qs.attempts}`;
+    const correctDisp = Number.isInteger(qs.correct) ? qs.correct : qs.correct.toFixed(1);
+    accStr = ` · ${correctDisp}/${qs.attempts}`;
     if(qs.best_time_ms != null) accStr += ` · best ${fmtTime(qs.best_time_ms)}`;
   }
 
