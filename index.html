@@ -178,6 +178,52 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .comp-card li{font-size:12px;line-height:1.5;color:var(--sub);margin-bottom:2px}
 .comp-card.primary{border-color:var(--accentbdr);background:var(--accentbg)}
 @media(max-width:500px){.comp-grid{grid-template-columns:1fr}}
+
+/* Quick decision flowchart (visual) */
+.qflow{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 12px;margin:12px 0}
+.qflow-row{display:flex;justify-content:center;align-items:stretch;gap:8px;margin-bottom:6px}
+.qflow-q{flex:1;max-width:280px;background:var(--accentbg);border:2px solid var(--accentbdr);border-radius:12px;padding:12px 10px;text-align:center}
+.qflow-q .acr{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.6px;margin-bottom:2px}
+.qflow-q .ttl{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.qflow-q .hint{font-size:11px;color:var(--muted);line-height:1.35}
+.qflow-fail{flex:0 0 90px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:11px;color:var(--muted);font-weight:600}
+.qflow-fail .arr{font-size:18px;color:var(--muted);margin-bottom:2px}
+.qflow-fail .badge{display:inline-block;padding:4px 10px;border-radius:8px;font-size:13px;font-weight:800;border:2px solid}
+.qflow-fail .badge.mm{background:var(--redbg);color:var(--red);border-color:var(--redbdr)}
+.qflow-fail .badge.m{background:#fff3e0;color:#e65100;border-color:#ffcc80}
+.qflow-fail .badge.n{background:var(--amberbg);color:var(--amber);border-color:#e0b860}
+.qflow-fail .badge.p{background:#e8f5e9;color:#2e7d32;border-color:#a5d6a7}
+.qflow-fail .badge.pp{background:var(--greenbg);color:var(--green);border-color:var(--greenbdr)}
+.qflow-down{text-align:center;color:var(--accent);font-size:22px;font-weight:700;margin:2px 0;line-height:1}
+.qflow-final{text-align:center;margin-top:8px}
+.qflow-final .badge{display:inline-block;padding:8px 18px;border-radius:10px;font-size:16px;font-weight:800;background:var(--greenbg);color:var(--green);border:2px solid var(--greenbdr)}
+@media(max-width:500px){
+  .qflow-row{flex-direction:column;align-items:center}
+  .qflow-fail{flex:0 0 auto;flex-direction:row;gap:8px;margin-top:4px}
+  .qflow-fail .arr{transform:rotate(90deg);margin:0}
+}
+
+/* Worked examples */
+.ex-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;border-left:4px solid var(--border)}
+.ex-card.pp{border-left-color:var(--green)}
+.ex-card.p{border-left-color:#2e7d32}
+.ex-card.n{border-left-color:var(--amber)}
+.ex-card.m{border-left-color:#e65100}
+.ex-card.mm{border-left-color:var(--red)}
+.ex-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.ex-head .badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:12px;font-weight:800}
+.ex-head .badge.pp{background:var(--greenbg);color:var(--green)}
+.ex-head .badge.p{background:#e8f5e9;color:#2e7d32}
+.ex-head .badge.n{background:var(--amberbg);color:var(--amber)}
+.ex-head .badge.m{background:#fff3e0;color:#e65100}
+.ex-head .badge.mm{background:var(--redbg);color:var(--red)}
+.ex-head .label{font-size:13px;font-weight:700;color:var(--text)}
+.ex-sit{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;line-height:1.5}
+.ex-react{font-size:13px;line-height:1.55;color:var(--sub);padding:8px 10px;background:var(--bg);border-radius:8px;margin-bottom:8px}
+.ex-why{font-size:12px;line-height:1.55;color:var(--sub)}
+.ex-why strong{color:var(--text)}
+.ex-signals{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.ex-signals span{font-size:11px;padding:2px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--border);color:var(--sub)}
 </style>
 </head>
 <body>
@@ -713,6 +759,139 @@ function renderGuide(root){
             <strong>Pas toutes &rarr;</strong> <span class="score-tag score-p">+ Approprie</span> (bonne reaction, mais un aspect manque)<br>
             <strong>Oui, toutes &rarr;</strong> <span class="score-tag score-pp">++ Tres approprie</span>
           </div>
+        </div>
+      </div>
+
+      <h2>Flowchart visuel rapide</h2>
+      <p>Pour decider en quelques secondes pendant l'examen. Lisez chaque case du haut vers le bas : si la reponse est NON, sortez avec le score a droite ; si OUI, descendez.</p>
+
+      <div class="qflow">
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">PASS ?</div>
+            <div class="ttl">Passivite ou faute grave ?</div>
+            <div class="hint">Ignorer, cacher, decider seul, refuser, mentir</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; OUI</div>
+            <div class="badge mm">--</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; NON</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">DIAL ?</div>
+            <div class="ttl">Dialogue avec les acteurs ?</div>
+            <div class="hint">Ecoute, consultation, parties prenantes impliquees</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge m">-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">CAUSE ?</div>
+            <div class="ttl">Traite la cause profonde ?</div>
+            <div class="hint">Pas un pansement, pas superficiel, pas juste un canal</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge n">+/-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">4D ?</div>
+            <div class="ttl">4 dimensions cochees ?</div>
+            <div class="hint">Collaborer + Analyser + Agir + Anticiper</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge p">+</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-final">
+          <div class="badge">++ Tres approprie</div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--muted);margin-top:4px"><strong>Memo :</strong> PASS &rarr; DIAL &rarr; CAUSE &rarr; 4D. Le premier NON donne le score.</p>
+
+      <h2>Exemples concrets : meme situation, 5 scores</h2>
+      <p>Voici des reactions reelles tirees du SJT pour montrer comment le meme contexte produit des scores tres differents selon l'approche choisie.</p>
+
+      <div class="ex-sit" style="font-size:13px;font-style:normal;color:var(--sub);background:#EEEDFE;padding:12px 14px;border-radius:10px;border-left:3px solid #534AB7;margin:10px 0">
+        <strong>Situation (S01) :</strong> Votre equipe est repartie entre Bruxelles et Liege. Lors d'une revue hybride, vous constatez que les donnees financieres de Bruxelles contredisent les rapports de progres de Liege. La presentation au comite de pilotage est dans une semaine.
+      </div>
+
+      <div class="ex-card pp">
+        <div class="ex-head">
+          <span class="badge pp">++ Tres approprie</span>
+          <span class="label">Cas exemplaire : collaboration + analyse + action + anticipation</span>
+        </div>
+        <div class="ex-react">"Vous organisez immediatement une seance de travail en visioconference reunissant les referents financiers des deux sous-equipes. Ensemble, vous croisez les sources, identifiez les hypotheses divergentes et reconstituez un tableau consolide. Vous documentez la methodologie pour le comite."</div>
+        <div class="ex-why"><strong>Pourquoi ++ :</strong> action immediate (Agir), implication des deux sites (Collaborer), verification croisee des donnees (Analyser), documentation pour eviter la recidive (Anticiper). Les 4 dimensions sont cochees.</div>
+        <div class="ex-signals">
+          <span>PASS ? NON</span><span>DIAL ? OUI</span><span>CAUSE ? OUI</span><span>4D ? OUI</span>
+        </div>
+      </div>
+
+      <div class="ex-card p">
+        <div class="ex-head">
+          <span class="badge p">+ Approprie</span>
+          <span class="label">Bonne approche, mais une dimension manque</span>
+        </div>
+        <div class="ex-sit" style="background:#EEEDFE;font-style:normal">
+          <strong>Variante (S02) :</strong> Deux directeurs fournissent des KPI contradictoires (RH dit -15% absenteisme, Operations dit +8%).
+        </div>
+        <div class="ex-react">"Vous contactez les deux directeurs separement pour comprendre leurs methodologies. Vous identifiez que la divergence vient de definitions differentes (jours calendrier vs equivalents temps plein). Vous redigez une note avec les deux chiffres expliques."</div>
+        <div class="ex-why"><strong>Pourquoi + et non ++ :</strong> excellente investigation (Analyser) et identification de la cause (CAUSE OK), mais vous ne reunissez jamais les deux directeurs ensemble pour qu'ils s'accordent. Il manque la co-construction (4D incomplet : Collaborer partiel).</div>
+        <div class="ex-signals">
+          <span>PASS ? NON</span><span>DIAL ? OUI (mais separe)</span><span>CAUSE ? OUI</span><span>4D ? NON (Collaborer partiel)</span>
+        </div>
+      </div>
+
+      <div class="ex-card n">
+        <div class="ex-head">
+          <span class="badge n">+/- Neutre</span>
+          <span class="label">Bonne intention, execution superficielle</span>
+        </div>
+        <div class="ex-react">"Vous envoyez un e-mail aux deux sous-equipes en leur demandant de verifier leurs chiffres et de vous revenir avec une explication avant vendredi, en precisant que la presentation au comite ne peut pas contenir de donnees contradictoires."</div>
+        <div class="ex-why"><strong>Pourquoi +/- :</strong> vous identifiez le probleme et fixez un delai (intention OK), mais l'e-mail n'est pas un canal adapte pour resoudre une divergence de fond. Vous ne creez pas l'espace de dialogue necessaire et vous deleguez la resolution sans facilitation. La cause profonde n'est pas adressee.</div>
+        <div class="ex-signals">
+          <span>PASS ? NON</span><span>DIAL ? OUI (faible)</span><span>CAUSE ? NON</span>
+        </div>
+      </div>
+
+      <div class="ex-card m">
+        <div class="ex-head">
+          <span class="badge m">- Inapproprie</span>
+          <span class="label">Action competente mais unilaterale</span>
+        </div>
+        <div class="ex-react">"Vous menez vous-meme une analyse approfondie le soir meme. Vous comparez les tableaux ligne par ligne, identifiez les ecarts methodologiques et preparez un rapport detaille que vous partagez le lendemain avec les deux equipes en leur demandant de valider vos conclusions."</div>
+        <div class="ex-why"><strong>Pourquoi - et non +/- :</strong> votre analyse est rigoureuse (Analyser OK), mais vous excluez completement les deux sous-equipes du processus. En mode hybride, court-circuiter les collegues sur leurs propres donnees est contraire a la collaboration attendue. DIAL est NON.</div>
+        <div class="ex-signals">
+          <span>PASS ? NON</span><span>DIAL ? NON</span>
+        </div>
+      </div>
+
+      <div class="ex-card mm">
+        <div class="ex-head">
+          <span class="badge mm">-- Tres inapproprie</span>
+          <span class="label">Faute grave : choix arbitraire sans verification</span>
+        </div>
+        <div class="ex-react">"Vous partez du principe que les donnees de Bruxelles sont les plus fiables car elles proviennent du service budget central. Vous integrez ces chiffres dans la presentation au comite sans verifier l'ecart avec Liege, estimant que la sous-equipe liegeoise a probablement fait une erreur."</div>
+        <div class="ex-why"><strong>Pourquoi -- et non - :</strong> triple manquement : (1) aucune verification d'une contradiction flagrante, (2) exclusion totale d'une sous-equipe sur base d'un a priori, (3) presentation potentielle de donnees erronees au plus haut niveau. C'est une faute d'integrite professionnelle qui peut avoir des consequences graves.</div>
+        <div class="ex-signals">
+          <span>PASS ? OUI (passivite + a priori)</span>
         </div>
       </div>
 
