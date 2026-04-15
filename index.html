@@ -1155,10 +1155,17 @@ function pickAnswer(letter){
   SESSION.picked_letter = letter;
   render();
 }
-// Effective target time: SJT first reaction (A) gets 2x for reading the situation
+// Effective target time:
+//   - SJT: 90s for the first reaction of a situation (reading time), 40s for r2/r3/r4.
+//     If a question carries its own `target_sec`, that value wins.
+//   - Non-SJT: user-configurable default from settings.
 function effectiveTargetMs(){
+  const q = DB && SESSION ? DB.questions.find(x => x.id === SESSION.currentQid) : null;
+  if(q && q.type === 'sjt'){
+    if(typeof q.target_sec === 'number') return q.target_sec * 1000;
+    return (SESSION.sjt_first_reaction ? 90 : 40) * 1000;
+  }
   const base = (loadSettings().targetSec || 120) * 1000;
-  if(SESSION && SESSION.sjt_first_reaction) return base * 2;
   return base;
 }
 
