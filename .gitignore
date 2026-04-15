@@ -4,6 +4,8 @@ __pycache__/
 
 # Proprietary content — keep local only
 ingest/
+data/*.pdf
+data/*.docx
 
 # User-generated stats — never commit personal progress
 app/stats.json
