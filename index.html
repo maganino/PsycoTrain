@@ -297,7 +297,8 @@ const LS_SESSION  = 'pt_session_v1';
 const LS_SETTINGS = 'pt_settings_v1';
 
 let DB = null;       // {version, types, sources, questions: [...]}
-let MODE = 'home';   // 'home' | 'practice'
+let MODE = 'home';   // 'home' | 'guide' | 'practice'
+let GUIDE_KEY = null;// active playlist key when MODE === 'guide' (drives which tips page)
 let SESSION = null;  // see startPractice() for shape
 let TIMER_ID = null; // setInterval handle for the per-question ticker
 
@@ -322,11 +323,14 @@ function defaultTargetForType(type){
 }
 function loadSettings(){
   const s = lsGet(LS_SETTINGS) || {};
+  // Migration: old layouts stored `type` + `source` separately. A saved source
+  // is a playlist key, so promote it. `type` alone (no source) is dropped.
+  let playlist = s.playlist ?? null;
+  if(playlist == null && s.source) playlist = s.source;
   return {
-    type: s.type ?? null,
-    source: s.source ?? null,
+    playlist,
     weakOnly: s.weakOnly ?? false,
-    targetSec: s.targetSec ?? 120,    // overridden by type default when type selected
+    targetSec: s.targetSec ?? 120,   // only affects non-SJT; SJT uses per-question target_sec
   };
 }
 function saveSettings(s){ return lsSet(LS_SETTINGS, s); }
@@ -383,8 +387,7 @@ function fmtTime(ms){
 // ============================================================================
 function buildPool(filters){
   let pool = DB.questions.slice();
-  if(filters.type) pool = pool.filter(q => q.type === filters.type);
-  if(filters.source) pool = pool.filter(q => q.source === filters.source);
+  if(filters.playlist) pool = pool.filter(q => q.source === filters.playlist);
   if(filters.weakOnly){
     const stats = loadStats();
     pool = pool.filter(q => {
@@ -465,11 +468,12 @@ function pickStatsFile(){
   input.click();
 }
 
-function resetStatsForType(type){
-  const label = typeLabel(type);
+function resetStatsForPlaylist(key){
+  const p = playlistByKey(key);
+  const label = p ? p.label : key;
   if(!confirm(`Reset all stats for "${label}"? This cannot be undone.`)) return;
   const stats = loadStats();
-  const ids = DB.questions.filter(q => q.type === type).map(q => q.id);
+  const ids = DB.questions.filter(q => q.source === key).map(q => q.id);
   for(const id of ids) delete stats[id];
   saveStats(stats);
   clearSession();
@@ -510,6 +514,16 @@ const TYPE_LABELS = {
   'logical': 'Logical',
 };
 function typeLabel(t){ return TYPE_LABELS[t] || t; }
+
+// Playlists: one user-facing option per source. `type` is still used internally
+// (scoring, per-question timing fallback) but no longer exposed as a filter.
+const PLAYLISTS = [
+  { key: 'BOSA_Num',         label: 'Raisonnement numérique',        type: 'numerical_bosa' },
+  { key: 'BOSA_SJT',         label: 'SJT — Collaborer',              type: 'sjt' },
+  { key: 'BOSA_SJT_BA_CRIT', label: 'SJT BA — Penser critique (PC2)',type: 'sjt' },
+  { key: 'BOSA_SJT_BA_AGIL', label: 'SJT BA — Agilité (AG2)',        type: 'sjt' },
+];
+function playlistByKey(k){ return PLAYLISTS.find(p => p.key === k) || null; }
 function $(html){ const d=document.createElement('div'); d.innerHTML=html.trim(); return d.firstChild; }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function toast(msg){
@@ -558,22 +572,44 @@ function renderHome(root){
   // How many in current filter?
   const pool = buildPool(settings);
 
-  // Type / source counts + per-type stats
-  const typeCounts = {};
+  // Per-source counts and stats (one entry per playlist key).
   const sourceCounts = {};
-  const typeStats = {};  // {type: {total, attempted, scoreSum, scoreInTimeSum}}
+  const sourceStats = {};
   for(const q of DB.questions){
-    typeCounts[q.type] = (typeCounts[q.type] || 0) + 1;
     sourceCounts[q.source] = (sourceCounts[q.source] || 0) + 1;
-    if(!typeStats[q.type]) typeStats[q.type] = {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
-    typeStats[q.type].total++;
+    if(!sourceStats[q.source]) sourceStats[q.source] = {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
+    sourceStats[q.source].total++;
     const s = stats[q.id];
     if(s && s.attempts > 0){
-      typeStats[q.type].attempted++;
+      sourceStats[q.source].attempted++;
       const sc = statScore(s);
-      typeStats[q.type].scoreSum += sc;
-      if(s.last_within_time) typeStats[q.type].scoreInTimeSum += sc;
+      sourceStats[q.source].scoreSum += sc;
+      if(s.last_within_time) sourceStats[q.source].scoreInTimeSum += sc;
     }
+  }
+
+  const activePlaylist = settings.playlist ? playlistByKey(settings.playlist) : null;
+
+  // Per-playlist card (only when a specific playlist is selected).
+  let playlistCardHtml = '';
+  if(activePlaylist){
+    const ss = sourceStats[activePlaylist.key] || {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
+    const pAcc = ss.attempted > 0 ? Math.round(ss.scoreSum / ss.attempted * 100) : 0;
+    const pAccTime = ss.attempted > 0 ? Math.round(ss.scoreInTimeSum / ss.attempted * 100) : 0;
+    const hasGuide = activePlaylist.type === 'sjt';
+    playlistCardHtml = `
+      <div class="section type-stats-section">
+        <div class="hdr-row">
+          <h3>${esc(activePlaylist.label)}</h3>
+          ${ss.attempted > 0 ? `<button class="btn-reset" data-reset-playlist="${esc(activePlaylist.key)}">Reset</button>` : ''}
+        </div>
+        <div class="stats-row">
+          <div class="stat-chip"><strong>${ss.attempted}/${ss.total}</strong><div class="lbl">Done</div></div>
+          <div class="stat-chip"><strong>${pAcc}%</strong><div class="lbl">Accuracy</div></div>
+          <div class="stat-chip"><strong>${pAccTime}%</strong><div class="lbl">In time</div></div>
+        </div>
+        ${hasGuide ? `<button class="btn btn-secondary" id="playlist-guide-btn" style="margin-top:12px;width:100%">Comment réussir ce test ?</button>` : ''}
+      </div>`;
   }
 
   const session = loadSession();
@@ -581,48 +617,26 @@ function renderHome(root){
   root.appendChild($(`
     <div class="home">
       <h1>PsycoTrain</h1>
-      <div class="sub">${total} questions across ${Object.keys(sourceCounts).length} source(s)</div>
+      <div class="sub">${total} questions · ${PLAYLISTS.filter(p => sourceCounts[p.key]).length} playlists</div>
 
       <div class="stats-row">
         <div class="stat-chip"><strong>${total}</strong><div class="lbl">Total</div></div>
         <div class="stat-chip"><strong>${attempted}</strong><div class="lbl">Attempted</div></div>
         <div class="stat-chip"><strong>${accuracy}%</strong><div class="lbl">Accuracy</div></div>
         <div class="stat-chip"><strong>${accuracyInTime}%</strong><div class="lbl">In time</div></div>
-        <div class="stat-chip"><strong>${pool.length}</strong><div class="lbl">In filter</div></div>
-      </div>
-
-      ${DB.types.filter(t => typeCounts[t]).map(t => {
-        const ts = typeStats[t];
-        const tAcc = ts.attempted > 0 ? Math.round(ts.scoreSum / ts.attempted * 100) : 0;
-        const tAccTime = ts.attempted > 0 ? Math.round(ts.scoreInTimeSum / ts.attempted * 100) : 0;
-        return `<div class="section type-stats-section">
-          <div class="hdr-row">
-            <h3>${typeLabel(t)}</h3>
-            ${ts.attempted > 0 ? `<button class="btn-reset" data-reset-type="${esc(t)}">Reset</button>` : ''}
-          </div>
-          <div class="stats-row">
-            <div class="stat-chip"><strong>${ts.attempted}/${ts.total}</strong><div class="lbl">Done</div></div>
-            <div class="stat-chip"><strong>${tAcc}%</strong><div class="lbl">Accuracy</div></div>
-            <div class="stat-chip"><strong>${tAccTime}%</strong><div class="lbl">In time</div></div>
-          </div>
-        </div>`;
-      }).join('')}
-
-      <div class="section">
-        <h3>Type</h3>
-        <div class="chip-row" id="type-chips">
-          ${chipHtml('type-chip', null, 'All', settings.type === null)}
-          ${DB.types.filter(t => typeCounts[t]).map(t => chipHtml('type-chip', t, `${typeLabel(t)} (${typeCounts[t]})`, settings.type === t)).join('')}
-        </div>
       </div>
 
       <div class="section">
-        <h3>Source</h3>
-        <div class="chip-row" id="source-chips">
-          ${chipHtml('source-chip', null, 'All', settings.source === null)}
-          ${DB.sources.map(s => chipHtml('source-chip', s, `${s} (${sourceCounts[s]})`, settings.source === s)).join('')}
+        <h3>Playlist</h3>
+        <div class="chip-row" id="playlist-chips">
+          ${chipHtml('playlist-chip', null, 'All', settings.playlist === null)}
+          ${PLAYLISTS.filter(p => sourceCounts[p.key]).map(p =>
+            chipHtml('playlist-chip', p.key, `${p.label} (${sourceCounts[p.key]})`, settings.playlist === p.key)
+          ).join('')}
         </div>
       </div>
+
+      ${playlistCardHtml}
 
       <div class="section">
         <div class="toggle-row" id="weak-toggle">
@@ -637,6 +651,7 @@ function renderHome(root){
           <input type="number" id="target-input" min="5" max="3600" step="5" value="${settings.targetSec}">
           <span>seconds (${Math.floor(settings.targetSec/60)}:${String(settings.targetSec%60).padStart(2,'0')})</span>
         </div>
+        <div class="sub" style="font-size:11px;margin-top:4px">SJT uses its own per-question timing (90s / 40s) — this setting only affects numerical.</div>
       </div>
 
       <div class="actions">
@@ -644,7 +659,6 @@ function renderHome(root){
         <button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
           Start practice ${pool.length === 0 ? '(no questions)' : ''}
         </button>
-        <button class="btn btn-secondary" id="guide-btn">Guide SJT : Comment noter les reactions ?</button>
         <div class="btn-row">
           <button class="btn btn-secondary btn-small" id="save-btn">⬇ Save stats</button>
           <button class="btn btn-secondary btn-small" id="load-btn">↑ Load stats</button>
@@ -655,20 +669,18 @@ function renderHome(root){
   `));
 
   // Wire up chip click handlers
-  root.querySelectorAll('#type-chips .chip').forEach(c => {
+  root.querySelectorAll('#playlist-chips .chip').forEach(c => {
     c.addEventListener('click', () => {
-      const newType = c.dataset.value === '__null__' ? null : c.dataset.value;
-      settings.type = newType;
-      // Auto-set target time when switching type
-      if(newType) settings.targetSec = defaultTargetForType(newType);
-      else settings.targetSec = 120;
-      saveSettings(settings);
-      render();
-    });
-  });
-  root.querySelectorAll('#source-chips .chip').forEach(c => {
-    c.addEventListener('click', () => {
-      settings.source = c.dataset.value === '__null__' ? null : c.dataset.value;
+      const newKey = c.dataset.value === '__null__' ? null : c.dataset.value;
+      settings.playlist = newKey;
+      // Adjust default target time when switching: non-SJT playlists benefit
+      // from a type-tailored default; SJT ignores it (per-question override).
+      if(newKey){
+        const p = playlistByKey(newKey);
+        if(p && p.type !== 'sjt') settings.targetSec = defaultTargetForType(p.type);
+      } else {
+        settings.targetSec = 120;
+      }
       saveSettings(settings);
       render();
     });
@@ -689,12 +701,17 @@ function renderHome(root){
   });
   root.querySelector('#start-btn')?.addEventListener('click', startPractice);
   root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
-  root.querySelector('#guide-btn').addEventListener('click', () => { MODE='guide'; SCROLL_TARGET='top'; render(); });
+  root.querySelector('#playlist-guide-btn')?.addEventListener('click', () => {
+    GUIDE_KEY = settings.playlist;
+    MODE = 'guide';
+    SCROLL_TARGET = 'top';
+    render();
+  });
   root.querySelector('#save-btn').addEventListener('click', downloadStats);
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
   root.querySelector('#reset-all-btn').addEventListener('click', resetAllStats);
-  root.querySelectorAll('[data-reset-type]').forEach(b => {
-    b.addEventListener('click', () => resetStatsForType(b.dataset.resetType));
+  root.querySelectorAll('[data-reset-playlist]').forEach(b => {
+    b.addEventListener('click', () => resetStatsForPlaylist(b.dataset.resetPlaylist));
   });
 }
 function chipHtml(cls, value, label, on){
@@ -702,11 +719,18 @@ function chipHtml(cls, value, label, on){
 }
 
 // ----- Guide -----
+// Dispatches to the right tips page based on GUIDE_KEY (the playlist the user
+// opened the guide from). Falls back to the Collaborer guide.
 function renderGuide(root){
+  if(GUIDE_KEY === 'BOSA_SJT_BA_CRIT') return renderGuideCritical(root);
+  if(GUIDE_KEY === 'BOSA_SJT_BA_AGIL') return renderGuideAgility(root);
+  return renderGuideCollaborer(root);
+}
+function renderGuideCollaborer(root){
   root.appendChild($(`
     <div class="guide">
       <button class="back-btn" id="guide-back">Retour</button>
-      <h1>Guide SJT : Comment noter les reactions ?</h1>
+      <h1>SJT Collaborer — Comment réussir ce test</h1>
       <p>Le SJT (Situational Judgment Test) BOSA evalue votre jugement professionnel a travers des mises en situation realistes. Pour chaque reaction, vous attribuez un score sur une echelle de 5 points.</p>
 
       <h2>Echelle de notation</h2>
@@ -1030,6 +1054,262 @@ function renderGuide(root){
     </div>
   `));
 
+  root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
+}
+
+// ---- PC2 guide (Penser de manière critique, niveau 2) ----
+// Source: Cartes de compétences BOSA, cluster « Réfléchir et Créer ». N2 =
+// « Évaluer des informations complexes et arriver à une conclusion ».
+function renderGuideCritical(root){
+  root.appendChild($(`
+    <div class="guide">
+      <button class="back-btn" id="guide-back">Retour</button>
+      <h1>SJT BA — Penser critique (PC2) : comment réussir ce test</h1>
+      <p>Ces situations évaluent votre capacité à <strong>évaluer des informations complexes et arriver à une conclusion</strong> (PC2, niveau 2 de la carte BOSA). Pour chaque réaction, notez sur l'échelle à 5 points en mesurant à quel point la réaction mobilise les comportements attendus.</p>
+
+      <h2>Les 6 comportements attendus (N2)</h2>
+      <div class="section">
+        <ul>
+          <li><strong>Croiser les sources</strong> : combiner plusieurs stratégies de recherche pour trouver l'information pertinente ou manquante.</li>
+          <li><strong>Élément sous-jacents</strong> : identifier tous les éléments essentiels et sous-jacents d'une situation.</li>
+          <li><strong>Causes &amp; conséquences</strong> : évaluer causes, conséquences et liens avant de conclure.</li>
+          <li><strong>Crédibilité &amp; fiabilité</strong> : vérifier la fiabilité d'informations incomplètes ou contradictoires.</li>
+          <li><strong>Recommandation fondée</strong> : formuler des recommandations sur base de vos conclusions.</li>
+          <li><strong>Anticipation</strong> : réfléchir aux conséquences de vos conclusions et recommandations.</li>
+        </ul>
+      </div>
+
+      <h2>Échelle de notation</h2>
+      <div class="section">
+        <p><span class="score-tag score-pp">E &mdash; Très approprié (++)</span> Triangule plusieurs sources, chiffre l'impact, propose une recommandation motivée, anticipe les conséquences.</p>
+        <p style="margin-top:8px"><span class="score-tag score-p">D &mdash; Approprié (+)</span> Analyse correcte sur 2–3 dimensions mais manque un élément (impact non chiffré, recommandation sans arbitrage, ou pas d'anticipation).</p>
+        <p style="margin-top:8px"><span class="score-tag score-n">C &mdash; Neutre (+/-)</span> Détecte le problème, remonte l'alerte, mais ne va pas au bout : pas d'analyse des causes, pas de recommandation, renvoi à la hiérarchie.</p>
+        <p style="margin-top:8px"><span class="score-tag score-m">B &mdash; Inapproprié (-)</span> Choisit une source par défaut (autorité, données de prod) sans la croiser ; raisonnement monopoint.</p>
+        <p style="margin-top:8px"><span class="score-tag score-mm">A &mdash; Très inapproprié (--)</span> Ignore délibérément des sources contradictoires, fabrique une réponse (« moyenne », « note de bas de page ») pour clore le débat, minimise l'information gênante.</p>
+      </div>
+
+      <h2>Arbre de décision (PC2)</h2>
+      <div class="flow">
+        <div class="flow-step red">
+          <div class="flow-num">1</div>
+          <div class="flow-body">
+            <strong>La réaction ignore-t-elle consciemment une source contradictoire ?</strong><br>
+            Signaux : « on prend la plus simple », moyenne arbitraire, refus d'ouvrir la circulaire, dissimulation.<br>
+            <strong>Oui &rarr;</strong> <span class="score-tag score-mm">-- Très inapproprié</span><br>
+            <strong>Non &rarr;</strong> Étape 2
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-body">
+            <strong>Au moins deux sources sont-elles croisées ?</strong><br>
+            Croiser = comparer des sources de nature différente (mémoire, données, texte réglementaire, comportement système).<br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-m">- Inapproprié</span><br>
+            <strong>Oui &rarr;</strong> Étape 3
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step amber">
+          <div class="flow-num">3</div>
+          <div class="flow-body">
+            <strong>Une recommandation motivée est-elle formulée (pas juste un signalement) ?</strong><br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-n">+/- Neutre</span> (détection OK, mais la valeur ajoutée du BA n'apparaît pas).<br>
+            <strong>Oui &rarr;</strong> Étape 4
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step green">
+          <div class="flow-num">4</div>
+          <div class="flow-body">
+            <strong>La réaction combine TROIS de ces quatre éléments ?</strong>
+            <ul style="margin:6px 0 4px;padding-left:16px">
+              <li><strong>Triangulation documentée</strong> (tableau, comparatif)</li>
+              <li><strong>Chiffrage d'impact</strong> (nb de cas, €, délai)</li>
+              <li><strong>Recommandation explicite</strong> avec mécanisme de validation</li>
+              <li><strong>Anticipation</strong> (conséquences, re-planning, durabilité)</li>
+            </ul>
+            <strong>Trois max &rarr;</strong> <span class="score-tag score-p">+ Approprié</span><br>
+            <strong>Les quatre &rarr;</strong> <span class="score-tag score-pp">++ Très approprié</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Signaux par score (PC2)</h2>
+      <div class="section">
+        <h3><span class="score-tag score-pp">++</span> Signaux exemplaires</h3>
+        <ul>
+          <li>« Je fais un tableau à trois colonnes : source A, source B, texte réglementaire »</li>
+          <li>Chiffrage concret : « sur les 1 847 cas », « +2,5 M€ de périmètre »</li>
+          <li>Propose une réunion d'arbitrage 30–45 min avec les bons acteurs</li>
+          <li>Sépare proprement conformité passée / modèle futur, ou décision / re-planning</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-p">+</span> Ce qui manque au ++</h3>
+        <ul>
+          <li>Analyse solide mais pas de recommandation actionnable</li>
+          <li>Pas de chiffrage d'impact (qualitatif seul)</li>
+          <li>Pas d'anticipation des conséquences du scénario retenu</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-n">+/-</span> Zone grise</h3>
+        <ul>
+          <li>Alerte remontée, mais sans matière pour décider (« je te laisse arbitrer »)</li>
+          <li>Propose de « re-vérifier » sans citer le texte précis ni documenter l'écart</li>
+          <li>Analyse partielle, renvoi implicite à la hiérarchie</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-m">-</span> Pièges courants</h3>
+        <ul>
+          <li>Choisir la source « officielle » sans expliquer pourquoi les autres divergent</li>
+          <li>« Les données de prod ne mentent pas » — confondre exécuté et réglementaire</li>
+          <li>Corriger silencieusement sans alerter le business owner</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-mm">--</span> Lignes rouges</h3>
+        <ul>
+          <li>Moyenne arbitraire de sources incohérentes présentée comme fiable</li>
+          <li>Refus de principe de croiser les sources (« je modélise, je n'interprète pas »)</li>
+          <li>Minimisation volontaire d'une information contraire</li>
+        </ul>
+      </div>
+
+      <h2>Stratégie pendant l'examen</h2>
+      <div class="section">
+        <ul>
+          <li><strong>Listez les sources de la situation</strong> (souvent 3) avant de lire les réactions : savoir combien il faut croiser.</li>
+          <li><strong>Cherchez la triangulation</strong> : une réaction qui n'en nomme qu'une seule est rarement au-dessus de +/-.</li>
+          <li><strong>Chiffrage = forte présomption de ++</strong> (nb de cas, € impact, délai). Absence de chiffrage = plafond à +.</li>
+          <li><strong>Séparer conformité passée et décision future</strong> est un signal ++ fréquent à l'ONVA.</li>
+          <li><strong>Temps cible : 90 s pour la première réaction (lecture), 40 s pour les suivantes.</strong></li>
+        </ul>
+      </div>
+    </div>
+  `));
+  root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
+}
+
+// ---- AG2 guide (Faire preuve d'agilité, niveau 2) ----
+// Source: Cartes de compétences BOSA, cluster « Se connaître et Progresser ».
+// N2 = « Participer au changement ».
+function renderGuideAgility(root){
+  root.appendChild($(`
+    <div class="guide">
+      <button class="back-btn" id="guide-back">Retour</button>
+      <h1>SJT BA — Agilité (AG2) : comment réussir ce test</h1>
+      <p>Ces situations évaluent votre capacité à <strong>participer au changement</strong> (AG2, niveau 2 de la carte BOSA) : intégrer de nouvelles priorités, outils ou méthodes sans casser vos engagements en cours, tout en entraînant l'équipe.</p>
+
+      <h2>Les 6 comportements attendus (N2)</h2>
+      <div class="section">
+        <ul>
+          <li><strong>Vigilance</strong> : être alerte aux changements dans votre domaine d'expertise.</li>
+          <li><strong>Nouvelles technologies</strong> : les intégrer dans votre méthode de travail.</li>
+          <li><strong>Persévérance</strong> : face aux difficultés qui se présentent.</li>
+          <li><strong>Échec = apprentissage</strong> : voir dans un échec une opportunité.</li>
+          <li><strong>Ajuster sa méthode</strong> : quand priorités et besoins changent.</li>
+          <li><strong>Initiative hors fonction</strong> : prendre l'initiative d'activités qui ne font pas partie de votre fonction.</li>
+        </ul>
+      </div>
+
+      <h2>Échelle de notation</h2>
+      <div class="section">
+        <p><span class="score-tag score-pp">E &mdash; Très approprié (++)</span> Accepte le changement, <em>protège</em> les engagements en cours via un re-planning transparent, prend une initiative hors mandat et crée un effet d'entraînement sur l'équipe.</p>
+        <p style="margin-top:8px"><span class="score-tag score-p">D &mdash; Approprié (+)</span> Adoption sincère du changement avec replanification, mais sans dimension collective ni capitalisation méthode.</p>
+        <p style="margin-top:8px"><span class="score-tag score-n">C &mdash; Neutre (+/-)</span> Ouverture au changement mais exécution hybride : livrable incohérent, ou acceptation « en parallèle » sans arbitrage ni time-box.</p>
+        <p style="margin-top:8px"><span class="score-tag score-m">B &mdash; Inapproprié (-)</span> Accepte ou adopte impulsivement : casse un engagement existant, sacrifie le livrable en cours sans négociation, ou absorbe silencieusement un surcroît au détriment des parties prenantes.</p>
+        <p style="margin-top:8px"><span class="score-tag score-mm">A &mdash; Très inapproprié (--)</span> Refus frontal du changement ; défense verrouillée du périmètre (« ce n'est pas mon mandat »), alignement sur la résistance ambiante, ignorance du signal donné à l'équipe.</p>
+      </div>
+
+      <h2>Arbre de décision (AG2)</h2>
+      <div class="flow">
+        <div class="flow-step red">
+          <div class="flow-num">1</div>
+          <div class="flow-body">
+            <strong>La réaction refuse le changement ou s'aligne sur la résistance ?</strong><br>
+            Signaux : « pas mon mandat », « ça sera annulé comme la dernière fois », « on dit non proprement ».<br>
+            <strong>Oui &rarr;</strong> <span class="score-tag score-mm">-- Très inapproprié</span><br>
+            <strong>Non &rarr;</strong> Étape 2
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-body">
+            <strong>Le changement est-il accepté sans casser un engagement existant ?</strong><br>
+            Casser = laisser tomber le livrable en cours, ne pas prévenir les parties prenantes impactées.<br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-m">- Inapproprié</span> (adoption impulsive ou acceptation silencieuse).<br>
+            <strong>Oui &rarr;</strong> Étape 3
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step amber">
+          <div class="flow-num">3</div>
+          <div class="flow-body">
+            <strong>La replanification est-elle explicite et time-boxée ?</strong><br>
+            Re-prioriser = annoncer le nouveau plan, le délai, qui est prévenu.<br>
+            <strong>Non &rarr;</strong> <span class="score-tag score-n">+/- Neutre</span> (intention agile, méthode absente).<br>
+            <strong>Oui &rarr;</strong> Étape 4
+          </div>
+        </div>
+        <div class="flow-arrow">&darr;</div>
+        <div class="flow-step green">
+          <div class="flow-num">4</div>
+          <div class="flow-body">
+            <strong>La réaction combine TROIS de ces quatre éléments ?</strong>
+            <ul style="margin:6px 0 4px;padding-left:16px">
+              <li><strong>Protection du livrable critique</strong> en cours (re-planning transparent)</li>
+              <li><strong>Investissement explicite</strong> dans la nouvelle méthode/techno (formation, pilote)</li>
+              <li><strong>Initiative hors mandat</strong> (se propose volontaire, prend un chantier adjacent)</li>
+              <li><strong>Effet d'équipe</strong> (retour d'expérience, documentation, entraînement des collègues)</li>
+            </ul>
+            <strong>Trois max &rarr;</strong> <span class="score-tag score-p">+ Approprié</span><br>
+            <strong>Les quatre &rarr;</strong> <span class="score-tag score-pp">++ Très approprié</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>Signaux par score (AG2)</h2>
+      <div class="section">
+        <h3><span class="score-tag score-pp">++</span> Signaux exemplaires</h3>
+        <ul>
+          <li>« Je termine le livrable critique comme prévu, je bloque les 2 jours de formation, je me propose pilote »</li>
+          <li>Time-box explicite : « 2 jours », « vendredi midi »</li>
+          <li>Prévient nommément les parties prenantes impactées (« je préviens l'équipe QA »)</li>
+          <li>Transforme l'événement en ressource pour l'équipe (REX court, doc méthode réutilisable)</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-p">+</span> Ce qui manque au ++</h3>
+        <ul>
+          <li>Adoption personnelle réussie mais aucun effet d'entraînement ni capitalisation</li>
+          <li>Replanification OK mais pas d'initiative hors mandat</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-n">+/-</span> Zone grise</h3>
+        <ul>
+          <li>Veut « tenir les deux en parallèle » sans arbitrage ni time-box</li>
+          <li>Livrable hybride (moitié ancien outil, moitié nouveau) qui transfère le coût à l'IT</li>
+          <li>Bonne intention mais méthode absente</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-m">-</span> Pièges courants</h3>
+        <ul>
+          <li>« Je reprends tout cette semaine, tant pis pour le sprint » (adoption impulsive)</li>
+          <li>Acceptation silencieuse d'un surcroît de travail qui bloque 5 personnes</li>
+          <li>Escalade systématique à la hiérarchie au premier arbitrage</li>
+        </ul>
+        <h3 style="margin-top:12px"><span class="score-tag score-mm">--</span> Lignes rouges</h3>
+        <ul>
+          <li>Refus de principe (« on dit non proprement », « pas mon mandat »)</li>
+          <li>Alignement explicite sur la résistance ambiante en présence de juniors ou d'équipe</li>
+          <li>Défense verrouillée du périmètre comme règle, sans alternative proposée</li>
+        </ul>
+      </div>
+
+      <h2>Stratégie pendant l'examen</h2>
+      <div class="section">
+        <ul>
+          <li><strong>Identifier l'engagement déjà pris</strong> dans la situation : une ++ le protège explicitement, une - le sacrifie.</li>
+          <li><strong>Chercher la time-box</strong> : « 2 jours », « vendredi midi », « cette semaine » — son absence plafonne à +/-.</li>
+          <li><strong>L'initiative hors mandat</strong> (se proposer pilote, REX à l'équipe, doc méthode) est le marqueur le plus discriminant du ++.</li>
+          <li><strong>Attention au rôle-modèle</strong> : si la situation mentionne la visibilité du protagoniste, une réaction qui ignore ce signal plafonne au + même si elle est personnellement bonne.</li>
+          <li><strong>Temps cible : 90 s pour la première réaction (lecture), 40 s pour les suivantes.</strong></li>
+        </ul>
+      </div>
+    </div>
+  `));
   root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
 }
 
