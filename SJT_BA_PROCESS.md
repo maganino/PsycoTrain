@@ -73,7 +73,7 @@ mais médiocre en Communiquer ne mérite pas ++).
   "source": "BOSA_SJT_BA_CRIT",
   "book_ref": "BA · Critical · Situation 1 · Réaction A",
   "set_id": "sjt_crit_s01",
-  "target_sec": 120,                 // 120 pour r1 (lecture situation), 40 pour r2..r4
+  "target_sec": 90,                  // 90 pour r1 (lecture situation), 40 pour r2..r4
   "competence_primary": "PC2",       // code compétence + niveau
   "competence_secondary": ["CO2"],   // facultatif
   "situation": "...",                // 200–300 mots (contextualisé ONVA)
@@ -86,7 +86,7 @@ mais médiocre en Communiquer ne mérite pas ++).
 ```
 
 Champs **nouveaux** par rapport au lot précédent :
-- `target_sec` : temps cible par question (120 s pour r1, 40 s pour r2/r3/r4). L'UI doit
+- `target_sec` : temps cible par question (90 s pour r1, 40 s pour r2/r3/r4). L'UI doit
   respecter cet override quand il est présent.
 - `competence_primary` / `competence_secondary` : codes BOSA pour permettre le filtrage
   et l'analyse par compétence dans le dashboard.
@@ -97,11 +97,11 @@ Champs **nouveaux** par rapport au lot précédent :
 
 ## 5. Temps par question
 
-- **r1 = 120 s** : la première réaction inclut la lecture de la situation (300–400 mots).
+- **r1 = 90 s** : la première réaction inclut la lecture de la situation (200–300 mots).
 - **r2, r3, r4 = 40 s** : la situation est déjà lue ; seule la réaction (≤250 mots) est
   à évaluer.
 
-Total d'un ensemble de 100 questions : 25 × (120 + 3 × 40) = **25 × 240 = 6000 s ≈ 100 min**.
+Total d'un ensemble de 100 questions : 25 × (90 + 3 × 40) = **25 × 210 = 5250 s ≈ 88 min**.
 Proche du format BOSA réel (≈1 h 45 pour SJT + raisonnement abstrait).
 
 ---

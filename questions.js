@@ -6727,7 +6727,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 1 · Réaction 1",
       "set_id": "sjt_crit_s01",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2",
@@ -6887,7 +6887,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 2 · Réaction 1",
       "set_id": "sjt_crit_s02",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2",
@@ -7047,7 +7047,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 1 · Réaction 1",
       "set_id": "sjt_agil_s01",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2",
@@ -7207,7 +7207,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 2 · Réaction 1",
       "set_id": "sjt_agil_s02",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2",
@@ -7367,7 +7367,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 3 · Réaction 1",
       "set_id": "sjt_crit_s03",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -7523,7 +7523,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 4 · Réaction 1",
       "set_id": "sjt_crit_s04",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2",
@@ -7683,7 +7683,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 5 · Réaction 1",
       "set_id": "sjt_crit_s05",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "CO2",
       "competence_secondary": [
         "PC2"
@@ -7839,7 +7839,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 6 · Réaction 1",
       "set_id": "sjt_crit_s06",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CL2"
@@ -7995,7 +7995,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 7 · Réaction 1",
       "set_id": "sjt_crit_s07",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -8151,7 +8151,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 8 · Réaction 1",
       "set_id": "sjt_crit_s08",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2"
@@ -8307,7 +8307,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 9 · Réaction 1",
       "set_id": "sjt_crit_s09",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2",
@@ -8467,7 +8467,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 10 · Réaction 1",
       "set_id": "sjt_crit_s10",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "SO2",
       "competence_secondary": [
         "PC2"
@@ -8623,7 +8623,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 11 · Réaction 1",
       "set_id": "sjt_crit_s11",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -8779,7 +8779,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 12 · Réaction 1",
       "set_id": "sjt_crit_s12",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CL2"
@@ -8935,7 +8935,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 13 · Réaction 1",
       "set_id": "sjt_crit_s13",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "AG2"
@@ -9091,7 +9091,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 14 · Réaction 1",
       "set_id": "sjt_crit_s14",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2"
@@ -9247,7 +9247,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 15 · Réaction 1",
       "set_id": "sjt_crit_s15",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "CL2",
       "competence_secondary": [
         "PC2",
@@ -9407,7 +9407,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 16 · Réaction 1",
       "set_id": "sjt_crit_s16",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -9563,7 +9563,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 17 · Réaction 1",
       "set_id": "sjt_crit_s17",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2"
@@ -9719,7 +9719,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 18 · Réaction 1",
       "set_id": "sjt_crit_s18",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "AG2"
@@ -9875,7 +9875,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 19 · Réaction 1",
       "set_id": "sjt_crit_s19",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -10031,7 +10031,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 20 · Réaction 1",
       "set_id": "sjt_crit_s20",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -10187,7 +10187,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 21 · Réaction 1",
       "set_id": "sjt_crit_s21",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CO2"
@@ -10343,7 +10343,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 22 · Réaction 1",
       "set_id": "sjt_crit_s22",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2"
@@ -10499,7 +10499,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 23 · Réaction 1",
       "set_id": "sjt_crit_s23",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "CL2"
@@ -10655,7 +10655,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 24 · Réaction 1",
       "set_id": "sjt_crit_s24",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "SO2",
@@ -10815,7 +10815,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_CRIT",
       "book_ref": "BA · Critical · Situation 25 · Réaction 1",
       "set_id": "sjt_crit_s25",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "SO2",
       "competence_secondary": [
         "PC2",
@@ -10975,7 +10975,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 3 · Réaction 1",
       "set_id": "sjt_agil_s03",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -11131,7 +11131,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 4 · Réaction 1",
       "set_id": "sjt_agil_s04",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -11287,7 +11287,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 5 · Réaction 1",
       "set_id": "sjt_agil_s05",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "CO2",
       "competence_secondary": [
         "AG2"
@@ -11443,7 +11443,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 6 · Réaction 1",
       "set_id": "sjt_agil_s06",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -11599,7 +11599,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 7 · Réaction 1",
       "set_id": "sjt_agil_s07",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -11755,7 +11755,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 8 · Réaction 1",
       "set_id": "sjt_agil_s08",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "CO2"
@@ -11911,7 +11911,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 9 · Réaction 1",
       "set_id": "sjt_agil_s09",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -12067,7 +12067,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 10 · Réaction 1",
       "set_id": "sjt_agil_s10",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "SO2",
       "competence_secondary": [
         "AG2"
@@ -12223,7 +12223,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 11 · Réaction 1",
       "set_id": "sjt_agil_s11",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "CL2"
@@ -12379,7 +12379,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 12 · Réaction 1",
       "set_id": "sjt_agil_s12",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -12535,7 +12535,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 13 · Réaction 1",
       "set_id": "sjt_agil_s13",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "CO2"
@@ -12691,7 +12691,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 14 · Réaction 1",
       "set_id": "sjt_agil_s14",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -12847,7 +12847,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 15 · Réaction 1",
       "set_id": "sjt_agil_s15",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "CL2",
       "competence_secondary": [
         "AG2",
@@ -13007,7 +13007,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 16 · Réaction 1",
       "set_id": "sjt_agil_s16",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -13163,7 +13163,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 17 · Réaction 1",
       "set_id": "sjt_agil_s17",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -13319,7 +13319,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 18 · Réaction 1",
       "set_id": "sjt_agil_s18",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "CO2"
@@ -13475,7 +13475,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 19 · Réaction 1",
       "set_id": "sjt_agil_s19",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -13631,7 +13631,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 20 · Réaction 1",
       "set_id": "sjt_agil_s20",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "PC2",
       "competence_secondary": [
         "AG2"
@@ -13787,7 +13787,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 21 · Réaction 1",
       "set_id": "sjt_agil_s21",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "CO2"
@@ -13943,7 +13943,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 22 · Réaction 1",
       "set_id": "sjt_agil_s22",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "PC2"
@@ -14099,7 +14099,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 23 · Réaction 1",
       "set_id": "sjt_agil_s23",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2"
@@ -14255,7 +14255,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 24 · Réaction 1",
       "set_id": "sjt_agil_s24",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "AG2",
       "competence_secondary": [
         "SO2",
@@ -14415,7 +14415,7 @@ window.QUESTIONS_DB = {
       "source": "BOSA_SJT_BA_AGIL",
       "book_ref": "BA · Agility · Situation 25 · Réaction 1",
       "set_id": "sjt_agil_s25",
-      "target_sec": 120,
+      "target_sec": 90,
       "competence_primary": "CL2",
       "competence_secondary": [
         "AG2",
