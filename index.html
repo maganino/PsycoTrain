@@ -237,6 +237,48 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
   .qflow-fail .arr{transform:rotate(90deg);margin:0}
 }
 
+/* New SJT per-scenario view: situation + N reactions rated together, submit at end */
+.sjt-scn-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px 14px;background:var(--card);border:1.5px solid var(--border);border-radius:12px}
+.sjt-scn-header .lbl{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;flex:1}
+.sjt-scn-header .progress{font-size:12px;font-weight:600;color:var(--sub)}
+.sjt-scn-header .rem{font-family:'Courier New',monospace;font-size:20px;font-weight:800;color:var(--accent)}
+.sjt-scn-header.warn{background:var(--amberbg);border-color:#e0b860}
+.sjt-scn-header.warn .lbl,.sjt-scn-header.warn .rem{color:var(--amber)}
+.sjt-scn-header.over{background:var(--redbg);border-color:var(--redbdr)}
+.sjt-scn-header.over .lbl,.sjt-scn-header.over .rem{color:var(--red)}
+
+.sjt-reaction{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px}
+.sjt-reaction-hdr{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sjt-reaction-hdr .num{width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.sjt-reaction-hdr .lbl{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.3px;flex:1}
+.sjt-reaction-hdr .status{font-size:11px;color:var(--muted);font-weight:600}
+.sjt-reaction-hdr .status.rated{color:var(--green)}
+.sjt-reaction-hdr .status.rated.late{color:var(--amber)}
+.sjt-reaction-text{font-size:14px;line-height:1.55;color:var(--sub);padding:10px 12px;background:var(--bg);border-radius:8px;margin-bottom:10px}
+
+.sjt-reaction .sjt-scores{margin:0}
+.sjt-reaction-reveal{margin-top:10px;padding:10px 12px;border-radius:8px;font-size:12.5px;line-height:1.55}
+.sjt-reaction-reveal.eok{background:var(--greenbg);border:1px solid var(--greenbdr);color:#0a4f3d}
+.sjt-reaction-reveal.epartial{background:var(--amberbg);border:1px solid #e0b860;color:#6b4a0a}
+.sjt-reaction-reveal.eko{background:var(--redbg);border:1px solid var(--redbdr);color:#7a1f1f}
+.sjt-reaction-reveal .rhead{font-weight:700;margin-bottom:4px}
+.sjt-reaction-reveal .rbody{font-size:12px;line-height:1.55}
+.sjt-reaction-reveal .rbody strong{font-weight:700}
+
+.sjt-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.sjt-tags .tag{background:var(--accentbg);color:var(--accent);padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+
+.sjt-scn-submit{display:flex;gap:8px;margin-top:14px}
+.sjt-scn-submit .btn{flex:1}
+.sjt-scn-total{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;text-align:center}
+.sjt-scn-total .big{font-size:24px;font-weight:800;color:var(--accent);line-height:1}
+.sjt-scn-total .sub{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* Sub-behaviour stats (SJT playlist card) */
+.subb-stats{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.subb-stats h4{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin:0 0 6px}
+.subb-stats .empty{font-size:12px;color:var(--muted);font-style:italic}
+
 /* Worked examples */
 .ex-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;border-left:4px solid var(--border)}
 .ex-card.pp{border-left-color:var(--green)}
@@ -689,6 +731,25 @@ const TYPE_LABELS = {
   'logical': 'Logical',
   'mcq': 'MCQ',
 };
+// BOSA SJT sub-behaviour slugs → human labels (Penser critique N2 & Agilité N2).
+// Tags are attached at reaction level (in the data). Used by the SJT drill filter
+// and the weakest-first dashboard. Extend as new competencies get tagged.
+const SUBB_LABELS = {
+  // PC2 · Penser de manière critique · N2
+  'pc_sources':     'PC · Croiser sources',
+  'pc_elements':    'PC · Éléments sous-jacents',
+  'pc_causes':      'PC · Causes / conséquences',
+  'pc_credibility': 'PC · Crédibilité / fiabilité',
+  'pc_recommend':   'PC · Recommandation fondée',
+  'pc_anticipate':  'PC · Anticiper conséquences',
+  // AG2 · Faire preuve d'agilité · N2
+  'ag_vigilance':   'AG · Vigilance / alerte',
+  'ag_tech':        'AG · Nouvelles technologies',
+  'ag_persevere':   'AG · Persévérer',
+  'ag_learn':       'AG · Échec = apprentissage',
+  'ag_adjust':      'AG · Ajuster la méthode',
+  'ag_initiative':  'AG · Initiative hors fonction',
+};
 // EPSO MCQ topic slugs → human labels
 const TOPIC_LABELS = {
   'eu_regulation':      'EU regulation',
@@ -878,6 +939,69 @@ function renderHome(root){
     </div>`;
   }
 
+  // SJT section — sub-behaviour drill + weakest-first stats (only when an SJT playlist is selected).
+  // Tags live on reactions (q.sub_behaviors array). If no tags in the data yet, the section
+  // shows a friendly "no tags yet" hint rather than hiding entirely.
+  let sjtSectionHtml = '';
+  if(isSjt){
+    const playlistQs = DB.questions.filter(q => q.source === activePlaylist.key);
+    // Aggregate per sub-behaviour: count reactions tagged and user attempts/score on them.
+    const bySub = {};
+    let anyTags = false;
+    for(const q of playlistQs){
+      const tags = Array.isArray(q.sub_behaviors) ? q.sub_behaviors : [];
+      if(tags.length > 0) anyTags = true;
+      for(const t of tags){
+        if(!bySub[t]) bySub[t] = { n: 0, attempted: 0, scoreSum: 0 };
+        bySub[t].n++;
+        const s = stats[q.id];
+        if(s && s.attempts > 0){
+          bySub[t].attempted++;
+          bySub[t].scoreSum += statScore(s);
+        }
+      }
+    }
+    const subRows = Object.keys(bySub)
+      .filter(t => bySub[t].attempted > 0)
+      .sort((a, b) => (bySub[a].scoreSum / bySub[a].attempted) - (bySub[b].scoreSum / bySub[b].attempted))
+      .map(t => {
+        const { n, attempted, scoreSum } = bySub[t];
+        const acc = Math.round(scoreSum / attempted * 100);
+        const label = SUBB_LABELS[t] || t;
+        const barCls = acc < 50 ? 'low' : (acc < 75 ? 'med' : '');
+        return `<div class="topic-row" data-drill-topic="${esc(t)}">
+          <div class="tr-name">${esc(label)}</div>
+          <div class="tr-score">${attempted}/${n} · ${acc}%</div>
+          <div class="tr-bar"><div class="${barCls}" style="width:${acc}%"></div></div>
+        </div>`;
+      }).join('');
+
+    // Dropdown options: only sub-behaviours actually present in the pool (or all PC/AG if none tagged yet).
+    const availableTags = Object.keys(bySub);
+    const dropdownTags = availableTags.length ? availableTags : Object.keys(SUBB_LABELS);
+    const dropdownOpts = dropdownTags.map(t =>
+      `<option value="${esc(t)}">${esc(SUBB_LABELS[t] || t)}</option>`
+    ).join('');
+
+    const emptyHint = anyTags
+      ? '<div class="empty">Drill a scenario to populate this list — weakest first.</div>'
+      : '<div class="empty">Sub-behaviour tags will appear once scenarios are tagged.</div>';
+
+    sjtSectionHtml = `<div class="mcq-section">
+      <div class="drill-pick" style="display:flex">
+        <select id="sjt-drill-topic" ${availableTags.length ? '' : 'disabled'}>
+          <option value="">Drill all sub-behaviours</option>
+          ${dropdownOpts}
+        </select>
+        <button class="btn btn-primary btn-small" id="sjt-start-drill-btn" ${availableTags.length ? '' : 'disabled'}>Start drill</button>
+      </div>
+      <div class="subb-stats">
+        <h4>Your sub-behaviours · weakest first · tap to drill</h4>
+        ${subRows || emptyHint}
+      </div>
+    </div>`;
+  }
+
   const session = loadSession();
   const visiblePlaylists = PLAYLISTS.filter(p => sourceCounts[p.key]);
 
@@ -926,6 +1050,7 @@ function renderHome(root){
       </div>
 
       ${mcqSectionHtml}
+      ${sjtSectionHtml}
 
       <!-- Start / Resume side by side. For MCQ, mode buttons already act as Start. -->
       ${(session || !isMcq) ? `
@@ -1014,7 +1139,13 @@ function renderHome(root){
     if(!topic) return;
     startPractice({ mode: 'topic_drill', drillTopic: topic });
   });
-  // Per-topic dashboard rows → quick-start a topic drill
+  // SJT sub-behaviour drill (mirrors MCQ drill button but filters by q.sub_behaviors).
+  root.querySelector('#sjt-start-drill-btn')?.addEventListener('click', () => {
+    const topic = root.querySelector('#sjt-drill-topic')?.value;
+    if(!topic) { startPractice(); return; }  // empty → all sub-behaviours
+    startPractice({ mode: 'topic_drill', drillTopic: topic });
+  });
+  // Per-topic dashboard rows → quick-start a topic drill (works for both MCQ topics and SJT sub-behaviours).
   root.querySelectorAll('.topic-row[data-drill-topic]').forEach(r => {
     r.addEventListener('click', () => {
       startPractice({ mode: 'topic_drill', drillTopic: r.dataset.drillTopic });
@@ -2604,8 +2735,15 @@ function startPractice(opts){
   const drillTopic = opts && opts.drillTopic;
 
   if(mode === 'topic_drill' && drillTopic){
-    pool = pool.filter(q => q.topic === drillTopic);
-    if(pool.length === 0){ toast(`No questions found for topic "${drillTopic}"`); return; }
+    // Match either an MCQ topic slug (q.topic) OR an SJT sub-behaviour tag
+    // (q.sub_behaviors array). Sub-behaviours live at reaction level, so if any
+    // reaction of a scenario has the tag, that reaction is in pool — and its
+    // siblings will be pulled in by advanceQuestion's set_id grouping.
+    pool = pool.filter(q =>
+      q.topic === drillTopic ||
+      (Array.isArray(q.sub_behaviors) && q.sub_behaviors.includes(drillTopic))
+    );
+    if(pool.length === 0){ toast(`No questions found for "${drillTopic}"`); return; }
   }
 
   if(pool.length === 0){ toast('No questions match the current filter'); return; }
@@ -2652,6 +2790,17 @@ function resumePractice(){
   // Reset the per-question timer on resume — the saved q_started_ms is stale
   // (could be hours old). Only reset if not already revealed.
   if(!SESSION.revealed) SESSION.q_started_ms = Date.now();
+  // SJT scenario: if there's one in progress and not revealed, give the user a
+  // fresh scenario timer on resume (training rather than strict exam fidelity).
+  // Existing ratings with their set_at_ms <= old deadline still count as in-time
+  // via the snapshot already taken; any new ratings after resume are evaluated
+  // against the new deadline.
+  if(SESSION.sjt_scenario && !SESSION.sjt_scenario.revealed){
+    const sc = SESSION.sjt_scenario;
+    sc.started_ms = Date.now();
+    sc.deadline_ms = Date.now() + (sc.duration_sec || SJT_SCENARIO_DURATION_SEC) * 1000;
+    // Preserve snapshot_at_expiry if the timer had already expired before the pause.
+  }
   MODE = 'practice';
   render();
 }
@@ -2667,6 +2816,30 @@ function exitPractice(){
 function stopTimer(){
   if(TIMER_ID){ clearInterval(TIMER_ID); TIMER_ID = null; }
 }
+// Scenario-level SJT timer. Ticks the remaining time in the header and, at deadline,
+// freezes a snapshot of whatever was rated so far for "in time" credit. Does NOT auto-submit
+// (per spec) — the user can keep rating or re-rating, the snapshot is already locked.
+function startSjtTimer(){
+  stopTimer();
+  TIMER_ID = setInterval(() => {
+    const sc = SESSION && SESSION.sjt_scenario;
+    if(!sc || sc.revealed){ stopTimer(); return; }
+    const rem = sc.deadline_ms - Date.now();
+    const el = document.getElementById('sjt-scn-rem');
+    const hdr = document.getElementById('sjt-scn-header');
+    if(el) el.textContent = fmtTime(Math.max(0, rem));
+    if(hdr){
+      hdr.classList.remove('warn', 'over');
+      if(rem <= 0) hdr.classList.add('over');
+      else if(rem < 30 * 1000) hdr.classList.add('warn');
+    }
+    // Freeze the in-time snapshot at the deadline and persist.
+    if(rem <= 0 && !sc.snapshot_at_expiry){
+      takeSjtSnapshot();
+    }
+  }, 500);
+}
+
 function startTimer(){
   stopTimer();
   TIMER_ID = setInterval(() => {
@@ -2708,6 +2881,111 @@ function startTimer(){
     }
   }, 500);
 }
+// SJT scenario defaults — real exam pacing (120s reading + 40s per extra reaction).
+// For a 5-reaction scenario that is ~280s; we use 240s (4 min) as a slightly tighter default,
+// rounded to a clean number. Can be extended per-scenario via target_sec on the question.
+const SJT_SCENARIO_DURATION_SEC = 240;
+
+// Start the grouped per-scenario SJT flow: situation at top, all reactions rated together,
+// single scenario timer, reveal (with sub-behaviour tags) only after submit.
+function startSjtScenario(siblings){
+  const first = siblings[0];
+  // Mark all siblings as picked so pickNext won't re-offer them until the scenario is done
+  for(const s of siblings){ SESSION.picked.push(s.id); }
+  // Allow a scenario to carry its own duration via the first reaction's target_sec
+  // (interpreted as the scenario total, not per-reaction, in the new flow).
+  const durationSec = typeof first.scenario_sec === 'number'
+    ? first.scenario_sec
+    : SJT_SCENARIO_DURATION_SEC;
+  const now = Date.now();
+  SESSION.sjt_scenario = {
+    set_id: first.set_id,
+    reaction_ids: siblings.map(s => s.id),
+    started_ms: now,
+    duration_sec: durationSec,
+    deadline_ms: now + durationSec * 1000,
+    ratings: {},              // { reactionId: { letter, set_at_ms } }
+    snapshot_at_expiry: null, // { reactionId: letter }  — frozen at timer expiry
+    revealed: false,
+  };
+  // Keep currentQid for legacy consumers; renderPractice branches on sjt_scenario first.
+  SESSION.currentQid = first.id;
+  SESSION.picked_letter = null;
+  SESSION.revealed = false;
+  saveSession(SESSION);
+  MODE = 'practice';
+  SCROLL_TARGET = 'top';
+  render();
+}
+
+function pickSjtRating(reactionId, letter){
+  const sc = SESSION && SESSION.sjt_scenario;
+  if(!sc || sc.revealed) return;
+  if(!sc.reaction_ids.includes(reactionId)) return;
+  const now = Date.now();
+  const prev = sc.ratings[reactionId];
+  // Toggle-off if clicking the same letter again
+  if(prev && prev.letter === letter){
+    delete sc.ratings[reactionId];
+  } else {
+    sc.ratings[reactionId] = { letter, set_at_ms: now };
+  }
+  saveSession(SESSION);
+  render();
+}
+
+// Snapshot of what was rated at deadline time — frozen, used for "in time" credit.
+function takeSjtSnapshot(){
+  const sc = SESSION && SESSION.sjt_scenario;
+  if(!sc || sc.snapshot_at_expiry) return;
+  const snap = {};
+  for(const [rid, v] of Object.entries(sc.ratings)){
+    // A rating counts as in-time if it was set on or before the deadline.
+    if(v && typeof v.set_at_ms === 'number' && v.set_at_ms <= sc.deadline_ms){
+      snap[rid] = v.letter;
+    }
+  }
+  sc.snapshot_at_expiry = snap;
+  saveSession(SESSION);
+}
+
+function submitSjtScenario(){
+  const sc = SESSION && SESSION.sjt_scenario;
+  if(!sc || sc.revealed) return;
+  // If timer hasn't hit 0 yet, "in time" = everything currently rated.
+  if(!sc.snapshot_at_expiry){
+    const snap = {};
+    for(const [rid, v] of Object.entries(sc.ratings)){
+      if(v && v.letter) snap[rid] = v.letter;
+    }
+    sc.snapshot_at_expiry = snap;
+  }
+
+  // Per-reaction stats: final score from current rating, in-time score from snapshot.
+  for(const rid of sc.reaction_ids){
+    const q = DB.questions.find(x => x.id === rid);
+    if(!q) continue;
+    const final = sc.ratings[rid];
+    const inTimeLetter = sc.snapshot_at_expiry[rid];
+    const finalScore = final ? sjtScore(final.letter, q.correct) : 0;
+    const inTimeScore = inTimeLetter ? sjtScore(inTimeLetter, q.correct) : 0;
+    const withinTime = !!inTimeLetter;
+    const elapsed = final ? Math.max(0, final.set_at_ms - sc.started_ms) : (sc.duration_sec * 1000);
+    recordAnswer(rid, finalScore, elapsed, withinTime);
+    SESSION.answered_count = (SESSION.answered_count || 0) + 1;
+    SESSION.correct_count = (SESSION.correct_count || 0) + finalScore;
+    // correct_in_time_count uses the in-time rating score (not the final) so that
+    // re-rating late doesn't erode what you'd earned in time.
+    if(withinTime) SESSION.correct_in_time_count = (SESSION.correct_in_time_count || 0) + inTimeScore;
+  }
+
+  sc.revealed = true;
+  stopTimer();
+  saveSession(SESSION);
+  SCROLL_TARGET = 'top';
+  render();
+}
+
 function advanceQuestion(){
   // Timed exam: stop at target count or when deadline is reached
   if(SESSION.mode === 'timed_exam'){
@@ -2722,21 +3000,9 @@ function advanceQuestion(){
     }
   }
 
-  // SJT: if there's a queued reaction from the current situation, show it next
-  if(SESSION.sjt_queue && SESSION.sjt_queue.length > 0){
-    const nextId = SESSION.sjt_queue.shift();
-    SESSION.currentQid = nextId;
-    SESSION.picked.push(nextId);
-    SESSION.picked_letter = null;
-    SESSION.revealed = false;
-    SESSION.sjt_first_reaction = false;  // B/C/D → normal time
-    SESSION.q_started_ms = Date.now();
-    SESSION.q_elapsed_ms = null;
-    saveSession(SESSION);
-    MODE = 'practice';
-    SCROLL_TARGET = 'top';
-    render();
-    return;
+  // Finished an SJT scenario — clear it before picking the next.
+  if(SESSION.sjt_scenario){
+    SESSION.sjt_scenario = null;
   }
 
   const pool = DB.questions.filter(q => SESSION.poolIds.includes(q.id));
@@ -2746,7 +3012,6 @@ function advanceQuestion(){
   let next = pickNext(pool, excluded);
   if(!next && pool.length > 0 && SESSION.mode !== 'timed_exam'){
     SESSION.picked = [];          // recycle
-    SESSION.sjt_queue = [];       // clear SJT queue too
     next = pickNext(pool, new Set());
   }
   if(!next){
@@ -2760,22 +3025,17 @@ function advanceQuestion(){
     stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return;
   }
 
-  // SJT: queue all reactions of this situation in data order (pre-balanced in JSON)
+  // SJT: show all reactions of the situation together in the new per-scenario flow.
   if(next.type === 'sjt' && next.set_id){
-    const siblings = pool
-      .filter(q => q.set_id === next.set_id && !excluded.has(q.id))
+    const siblings = DB.questions
+      .filter(q => q.set_id === next.set_id)  // all siblings, not just pool — same scenario
       .sort((a,b) => a.id.localeCompare(b.id));
-    // First one is shown now, rest go into the queue
-    next = siblings[0];
-    SESSION.sjt_queue = siblings.slice(1).map(q => q.id);
-    // Mark all as picked so they won't be re-selected by pickNext
-    for(const s of siblings){ SESSION.picked.push(s.id); }
-    SESSION.sjt_first_reaction = true;  // Reaction 1 → double time for reading situation
-  } else {
-    SESSION.picked.push(next.id);
-    SESSION.sjt_first_reaction = false;
+    startSjtScenario(siblings);
+    return;
   }
 
+  // Non-SJT: single-question flow (numerical, mcq).
+  SESSION.picked.push(next.id);
   SESSION.currentQid = next.id;
   SESSION.picked_letter = null;
   SESSION.revealed = false;
@@ -2872,7 +3132,176 @@ function submitAnswer(){
   SCROLL_TARGET = 'explanation';
   render();
 }
+// New SJT per-scenario renderer. Shows the situation once, then all N reactions with
+// independent A–E rating rows, a single scenario timer, and a Submit-all button.
+// Tags + expected-score badges + explanations are hidden until submit — so earlier
+// reactions don't leak signal for later ones.
+function renderSjtScenario(root){
+  const sc = SESSION.sjt_scenario;
+  const reactions = sc.reaction_ids.map(id => DB.questions.find(q => q.id === id)).filter(Boolean);
+  if(reactions.length === 0){ MODE = 'home'; render(); return; }
+  const first = reactions[0];
+  const SJT_LABELS = {'A':'--','B':'-','C':'+/-','D':'+','E':'++'};
+  const revealed = !!sc.revealed;
+
+  // Compute remaining time and banner state.
+  const now = Date.now();
+  const remainingMs = Math.max(0, sc.deadline_ms - now);
+  const expired = remainingMs <= 0;
+  let hdrCls = 'sjt-scn-header';
+  if(expired) hdrCls += ' over';
+  else if(remainingMs < 30 * 1000) hdrCls += ' warn';
+
+  const ratedCount = Object.keys(sc.ratings).length;
+  const total = reactions.length;
+
+  // --- Per-reaction card HTML ---
+  const cardsHtml = reactions.map((q, i) => {
+    const letter = sc.ratings[q.id] ? sc.ratings[q.id].letter : null;
+    const setAt = sc.ratings[q.id] ? sc.ratings[q.id].set_at_ms : null;
+    const ratedInTime = setAt != null && setAt <= sc.deadline_ms;
+    const statusHtml = letter
+      ? `<span class="status rated${ratedInTime ? '' : ' late'}">${ratedInTime ? 'Rated' : 'Rated (late)'} · ${esc(SJT_LABELS[letter] || letter)}</span>`
+      : `<span class="status">Not rated</span>`;
+
+    // Rating buttons A–E
+    const btnHtml = ['A','B','C','D','E'].map(L => {
+      let cls = 'sjt-btn';
+      if(revealed){
+        cls += ' dis';
+        if(L === q.correct) cls += ' ok';
+        else if(L === letter){
+          const pts = sjtScore(letter, q.correct);
+          cls += pts === 0.5 ? ' partial' : ' ko';
+        }
+        else cls += ' fd';
+      } else if(L === letter){
+        cls += ' sel';
+      }
+      return `<div class="${cls}" data-reaction="${esc(q.id)}" data-letter="${L}">${SJT_LABELS[L]}</div>`;
+    }).join('');
+
+    // Reveal body (explanation + correct + user score)
+    let revealHtml = '';
+    if(revealed){
+      const finalLetter = letter;
+      const finalPts = finalLetter ? sjtScore(finalLetter, q.correct) : 0;
+      let cls, head;
+      if(!finalLetter){
+        cls = 'eko';
+        head = `Not rated · correct answer: ${SJT_LABELS[q.correct]}`;
+      } else if(finalPts >= 1){
+        cls = 'eok';
+        head = `✓ Exact — 1 pt · answer: ${SJT_LABELS[q.correct]}`;
+      } else if(finalPts === 0.5){
+        cls = 'epartial';
+        head = `~ Voisin — 0.5 pt · answer: ${SJT_LABELS[q.correct]}`;
+      } else {
+        cls = 'eko';
+        head = `✗ Incorrect — 0 pt · answer: ${SJT_LABELS[q.correct]}`;
+      }
+      // Per-reaction sub-behaviour tags (only available after submit).
+      const tags = (q.sub_behaviors || []).map(t =>
+        `<span class="tag">${esc(SUBB_LABELS[t] || t)}</span>`
+      ).join('');
+      const tagsHtml = tags ? `<div class="sjt-tags">${tags}</div>` : '';
+      const expl = q.explanation
+        ? `<div class="rbody">${esc(q.explanation).replace(/\n/g, '<br>')}</div>`
+        : '';
+      revealHtml = `<div class="sjt-reaction-reveal ${cls}">
+        <div class="rhead">${head}</div>
+        ${expl}
+        ${tagsHtml}
+      </div>`;
+    }
+
+    return `<div class="sjt-reaction" data-rid="${esc(q.id)}">
+      <div class="sjt-reaction-hdr">
+        <div class="num">${i + 1}</div>
+        <div class="lbl">Réaction ${i + 1} / ${total}</div>
+        ${statusHtml}
+      </div>
+      <div class="sjt-reaction-text">${esc((q.question || '').replace(/^RÉACTION\s+\d+\s*:\s*/i, ''))}</div>
+      <div class="sjt-scores">${btnHtml}</div>
+      ${revealHtml}
+    </div>`;
+  }).join('');
+
+  // --- Scenario total (post-submit) ---
+  let totalHtml = '';
+  if(revealed){
+    let finalSum = 0, inTimeSum = 0, ratedN = 0, inTimeN = 0;
+    for(const q of reactions){
+      const finalLetter = sc.ratings[q.id] ? sc.ratings[q.id].letter : null;
+      const inTimeLetter = sc.snapshot_at_expiry ? sc.snapshot_at_expiry[q.id] : null;
+      if(finalLetter){ finalSum += sjtScore(finalLetter, q.correct); ratedN++; }
+      if(inTimeLetter){ inTimeSum += sjtScore(inTimeLetter, q.correct); inTimeN++; }
+    }
+    const finalDisp = Number.isInteger(finalSum) ? finalSum : finalSum.toFixed(1);
+    const inTimeDisp = Number.isInteger(inTimeSum) ? inTimeSum : inTimeSum.toFixed(1);
+    totalHtml = `<div class="sjt-scn-total">
+      <div class="big">${finalDisp} / ${total}</div>
+      <div class="sub">Final · ${ratedN}/${total} rated · In time: ${inTimeDisp}/${total} (${inTimeN} in time)</div>
+    </div>`;
+  }
+
+  // --- Submit button state ---
+  const canSubmit = ratedCount > 0 && !revealed;
+  const allRated = ratedCount === total;
+  const submitLbl = revealed ? 'Next scenario →' : (allRated ? 'Submit all' : `Submit (${ratedCount}/${total} rated)`);
+
+  root.appendChild($(`
+    <div class="practice">
+      <div class="hdr">
+        <div class="hdr-row">
+          <div class="progress">Scenario · ${ratedCount}/${total} rated · ${Number.isInteger(SESSION.correct_count||0)?(SESSION.correct_count||0):(SESSION.correct_count||0).toFixed(1)}/${SESSION.answered_count||0} ✓</div>
+          <button class="exit" id="exit-btn">Exit</button>
+        </div>
+      </div>
+
+      <div class="${hdrCls}" id="sjt-scn-header">
+        <div>
+          <div class="lbl">SJT Scenario</div>
+          <div class="progress" style="font-size:12px;color:var(--sub);margin-top:2px">${esc(first.book_ref ? first.book_ref.replace(/ · Réaction.*$/, '') : sc.set_id)}</div>
+        </div>
+        <div>
+          <div class="lbl" style="text-align:right">${revealed ? 'Finished' : (expired ? 'Time up' : 'Time left')}</div>
+          <div class="rem" id="sjt-scn-rem">${revealed ? '—' : fmtTime(remainingMs)}</div>
+        </div>
+      </div>
+
+      ${first.situation ? `<div class="sjt-situation"><div class="sjt-title">Situation</div>${esc(first.situation)}</div>` : ''}
+
+      ${totalHtml}
+
+      ${cardsHtml}
+
+      <div class="sjt-scn-submit">
+        ${revealed
+          ? `<button class="btn btn-primary" id="sjt-next-btn">Next scenario →</button>`
+          : `<button class="btn btn-primary" id="sjt-submit-btn" ${canSubmit ? '' : 'disabled'}>${submitLbl}</button>`}
+      </div>
+    </div>
+  `));
+
+  // Rating button clicks
+  root.querySelectorAll('.sjt-btn[data-reaction]').forEach(el => {
+    el.addEventListener('click', () => pickSjtRating(el.dataset.reaction, el.dataset.letter));
+  });
+  root.querySelector('#exit-btn').addEventListener('click', exitPractice);
+  root.querySelector('#sjt-submit-btn')?.addEventListener('click', submitSjtScenario);
+  root.querySelector('#sjt-next-btn')?.addEventListener('click', advanceQuestion);
+
+  // Keep the scenario timer ticking only while not revealed.
+  if(!revealed) startSjtTimer();
+  else stopTimer();
+}
+
 function renderPractice(root){
+  // SJT scenarios use the new grouped UI (all reactions on one page).
+  if(SESSION && SESSION.sjt_scenario){
+    return renderSjtScenario(root);
+  }
   const q = DB.questions.find(x => x.id === SESSION.currentQid);
   if(!q){ MODE='home'; render(); return; }
   const stats = loadStats();
