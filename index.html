@@ -224,6 +224,128 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .ex-why strong{color:var(--text)}
 .ex-signals{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 .ex-signals span{font-size:11px;padding:2px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--border);color:var(--sub)}
+
+/* ========= EPSO (MCQ) ========= */
+/* Difficulty + topic tags */
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase}
+.tag.easy{background:var(--greenbg);color:var(--green)}
+.tag.medium{background:var(--amberbg);color:var(--amber)}
+.tag.hard{background:var(--redbg);color:var(--red)}
+.tag.topic{background:var(--accentbg);color:var(--accent)}
+
+/* Mode selection row on home */
+.mode-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+.mode-btn{padding:12px 8px;border-radius:12px;border:1.5px solid var(--border);background:var(--card);cursor:pointer;text-align:center;transition:border-color .15s,background .15s}
+.mode-btn:hover{border-color:var(--accent)}
+.mode-btn .emoji{font-size:18px;display:block;margin-bottom:3px}
+.mode-btn .title{font-size:13px;font-weight:700;color:var(--text);display:block}
+.mode-btn .sub{font-size:11px;color:var(--muted);display:block;margin-top:2px;line-height:1.3}
+@media(max-width:500px){.mode-grid{grid-template-columns:1fr}}
+.drill-pick{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.drill-pick select{padding:9px 10px;border:1.5px solid var(--border);border-radius:10px;background:var(--card);font-family:inherit;font-size:13px;font-weight:600;color:var(--text);flex:1;min-width:180px}
+
+/* MCQ per-option explanations on reveal */
+.mcq-expls{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.mcq-expl{border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:10px 12px;background:var(--card);font-size:13px;line-height:1.5}
+.mcq-expl .lead{font-weight:700;margin-right:6px}
+.mcq-expl.ok{border-left-color:var(--green);background:var(--greenbg)}
+.mcq-expl.ok .lead{color:var(--green)}
+.mcq-expl.ko{border-left-color:var(--red);background:var(--redbg)}
+.mcq-expl.ko .lead{color:var(--red)}
+.mcq-expl.neutral{border-left-color:var(--border)}
+.mcq-expl .txt{color:var(--sub)}
+
+/* Global exam timer banner (timed mode) */
+.exam-banner{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--accentbg);border:1.5px solid var(--accentbdr);border-radius:12px;padding:10px 14px;margin-bottom:10px}
+.exam-banner .lbl{font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.exam-banner .rem{font-family:'Courier New',monospace;font-size:22px;font-weight:800;color:var(--accent)}
+.exam-banner.warn{background:var(--amberbg);border-color:#e0b860}
+.exam-banner.warn .lbl,.exam-banner.warn .rem{color:var(--amber)}
+.exam-banner.over{background:var(--redbg);border-color:var(--redbdr)}
+.exam-banner.over .lbl,.exam-banner.over .rem{color:var(--red)}
+
+/* Results screen */
+.results{max-width:700px;margin:0 auto}
+.results h1{font-size:22px;font-weight:800;margin:6px 0 4px}
+.results .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
+.res-score{text-align:center;padding:22px 16px;background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px}
+.res-score .big{font-size:44px;font-weight:800;color:var(--accent);line-height:1}
+.res-score .pct{font-size:14px;color:var(--muted);margin-top:4px}
+.res-score .pass{display:inline-block;margin-top:10px;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700}
+.res-score .pass.ok{background:var(--greenbg);color:var(--green)}
+.res-score .pass.ko{background:var(--redbg);color:var(--red)}
+.res-topic-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.res-topic-row:last-child{border-bottom:0}
+.res-topic-row .tname{color:var(--sub);font-weight:600}
+.res-topic-row .tscore{font-family:'Courier New',monospace;font-weight:700;color:var(--text)}
+.res-topic-bar{grid-column:1/-1;height:5px;background:var(--border);border-radius:3px;overflow:hidden;margin-top:4px}
+.res-topic-bar div{height:100%;background:var(--green)}
+.res-topic-bar div.low{background:var(--red)}
+.res-topic-bar div.med{background:var(--amber)}
+.res-review{margin-top:16px}
+.res-review h3{font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.res-item{background:var(--card);border:1px solid var(--border);border-left:3.5px solid var(--red);border-radius:10px;padding:11px 13px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.res-item .q{font-weight:700;color:var(--text);margin-bottom:4px}
+.res-item .ans{font-size:12px;color:var(--muted);margin-bottom:4px}
+.res-item .exp{color:var(--sub);font-size:12px;line-height:1.5}
+
+/* Content Explorer */
+.explorer{max-width:760px;margin:0 auto}
+.explorer h1{font-size:22px;font-weight:800;margin:6px 0 4px}
+.explorer .intro{font-size:13px;color:var(--muted);margin-bottom:10px}
+.tabs{display:flex;gap:4px;margin:10px 0 14px;border-bottom:1.5px solid var(--border);overflow-x:auto}
+.tab{padding:9px 14px;font-size:13px;font-weight:700;color:var(--sub);cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;margin-bottom:-1.5px}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-body{display:none}
+.tab-body.active{display:block}
+
+/* Tab: Timeline */
+.timeline{position:relative;padding-left:28px;margin:6px 0}
+.timeline::before{content:'';position:absolute;left:9px;top:4px;bottom:4px;width:2px;background:var(--accent);opacity:.25}
+.tl-card{position:relative;background:var(--card);border:1px solid var(--border);border-left:3.5px solid var(--accent);border-radius:10px;padding:10px 12px;margin-bottom:10px;cursor:pointer;transition:transform .08s,border-color .15s}
+.tl-card:hover{border-left-color:var(--text)}
+.tl-card::before{content:'';position:absolute;left:-24px;top:14px;width:11px;height:11px;border-radius:50%;background:var(--accent);border:2.5px solid var(--bg)}
+.tl-card .tl-year{font-family:'Courier New',monospace;font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.5px}
+.tl-card .tl-name{font-size:14px;font-weight:700;color:var(--text);margin:2px 0 4px}
+.tl-card .tl-tag{font-size:11px;color:var(--muted)}
+.tl-card .tl-body{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-size:12.5px;line-height:1.55;color:var(--sub)}
+.tl-card.open .tl-body{display:block}
+.tl-card .tl-body dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin-top:4px}
+.tl-card .tl-body dt{font-weight:700;color:var(--text);font-size:11.5px}
+.tl-card .tl-body dd{color:var(--sub);font-size:12px}
+
+/* Tab: 11 Duties wheel */
+.duty-wheel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:6px 0}
+.duty-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 12px;cursor:pointer;transition:border-color .15s,transform .08s}
+.duty-card:hover{border-color:var(--accent)}
+.duty-card.hub{background:var(--accentbg);border-color:var(--accentbdr);grid-column:2;grid-row:2;text-align:center}
+.duty-card.hub .dc-title{color:var(--accent)}
+.duty-card .dc-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
+.duty-card .dc-key{font-size:11px;color:var(--muted);line-height:1.4}
+.duty-card .dc-body{display:none;margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);font-size:12px;line-height:1.5;color:var(--sub)}
+.duty-card.open .dc-body{display:block}
+.duty-card.open{border-color:var(--accent)}
+@media(max-width:500px){.duty-wheel{grid-template-columns:1fr 1fr}.duty-card.hub{grid-column:1/-1;grid-row:auto}}
+
+/* Tab: Frameworks */
+.fw-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0}
+.fw-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 12px}
+.fw-card h4{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.fw-card .desc{font-size:11.5px;color:var(--muted);margin-bottom:5px;line-height:1.4}
+.fw-card ul{padding-left:15px;margin:0}
+.fw-card li{font-size:12px;line-height:1.5;color:var(--sub);margin-bottom:2px}
+@media(max-width:500px){.fw-grid{grid-template-columns:1fr}}
+
+/* Tab: Traps */
+.trap-row{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.trap-row .trap-head{background:var(--accentbg);padding:8px 12px;font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--accentbdr)}
+.trap-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.trap-body > div{padding:10px 12px;font-size:12.5px;line-height:1.5;color:var(--sub)}
+.trap-body > div:first-child{border-right:1px solid var(--border)}
+.trap-body h5{font-size:12.5px;font-weight:700;color:var(--text);margin-bottom:4px}
+.trap-body ul{padding-left:14px;margin:3px 0 0}
+.trap-body li{margin-bottom:2px;font-size:12px}
+@media(max-width:500px){.trap-body{grid-template-columns:1fr}.trap-body > div:first-child{border-right:0;border-bottom:1px solid var(--border)}}
 </style>
 </head>
 <body>
@@ -512,6 +634,23 @@ const TYPE_LABELS = {
   'verbal': 'Verbal',
   'abstract': 'Abstract',
   'logical': 'Logical',
+  'mcq': 'MCQ',
+};
+// EPSO MCQ topic slugs → human labels
+const TOPIC_LABELS = {
+  'eu_regulation':      'EU regulation',
+  'framework':          'Framework',
+  'data_architecture':  'Data architecture',
+  'data_governance':    'Data governance',
+  'data_policy':        'Data policy',
+  'data_engineering':   'Data engineering',
+  'data_platforms':     'Data platforms',
+  'bi_reporting':       'BI & reporting',
+  'master_data':        'Master & reference',
+  'metadata_taxonomy':  'Metadata & taxonomy',
+  'data_quality':       'Data quality',
+  'data_security':      'Data security',
+  'advanced_analytics': 'Advanced analytics',
 };
 function typeLabel(t){ return TYPE_LABELS[t] || t; }
 
@@ -522,6 +661,7 @@ const PLAYLISTS = [
   { key: 'BOSA_SJT',         label: 'SJT — Collaborer',              type: 'sjt' },
   { key: 'BOSA_SJT_BA_CRIT', label: 'SJT BA — Penser critique (PC2)',type: 'sjt' },
   { key: 'BOSA_SJT_BA_AGIL', label: 'SJT BA — Agilité (AG2)',        type: 'sjt' },
+  { key: 'EPSO_AD426_DATA',  label: 'EPSO AD/426/25 — Data MCQ',     type: 'mcq' },
 ];
 function playlistByKey(k){ return PLAYLISTS.find(p => p.key === k) || null; }
 function $(html){ const d=document.createElement('div'); d.innerHTML=html.trim(); return d.firstChild; }
@@ -541,6 +681,7 @@ function render(){
   if(MODE === 'home') renderHome(root);
   else if(MODE === 'guide') renderGuide(root);
   else if(MODE === 'practice') renderPractice(root);
+  else if(MODE === 'results') renderResults(root);
   if(SCROLL_TARGET === 'top') window.scrollTo(0, 0);
   else if(SCROLL_TARGET === 'explanation'){
     const el = root.querySelector('.expl') || root.querySelector('.nav');
@@ -596,7 +737,48 @@ function renderHome(root){
     const ss = sourceStats[activePlaylist.key] || {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
     const pAcc = ss.attempted > 0 ? Math.round(ss.scoreSum / ss.attempted * 100) : 0;
     const pAccTime = ss.attempted > 0 ? Math.round(ss.scoreInTimeSum / ss.attempted * 100) : 0;
-    const hasGuide = activePlaylist.type === 'sjt';
+    const isSjt = activePlaylist.type === 'sjt';
+    const isMcq = activePlaylist.type === 'mcq';
+    const guideLabel = isMcq ? 'Content Explorer' : 'Comment réussir ce test ?';
+
+    // MCQ mode selector (Timed / Free / Topic drill)
+    const mcqModeHtml = isMcq ? `
+      <div class="mode-grid">
+        <div class="mode-btn" data-mcq-mode="timed_exam">
+          <span class="emoji">⚡</span>
+          <span class="title">Timed Exam</span>
+          <span class="sub">30 Qs · 40 min</span>
+        </div>
+        <div class="mode-btn" data-mcq-mode="free_study">
+          <span class="emoji">📚</span>
+          <span class="title">Free Study</span>
+          <span class="sub">Unlimited · immediate feedback</span>
+        </div>
+        <div class="mode-btn" data-mcq-mode="topic_drill">
+          <span class="emoji">🎯</span>
+          <span class="title">Topic Drill</span>
+          <span class="sub">Focus on one area</span>
+        </div>
+      </div>
+      <div id="drill-pick-box" class="drill-pick" style="display:none">
+        <select id="drill-topic">
+          <option value="eu_regulation">EU regulations</option>
+          <option value="framework">Frameworks / acronyms</option>
+          <option value="data_architecture">Duty · Data architecture</option>
+          <option value="data_governance">Duty · Data governance</option>
+          <option value="data_policy">Duty · Data policies &amp; strategy</option>
+          <option value="data_engineering">Duty · Data engineering</option>
+          <option value="data_platforms">Duty · Data platforms</option>
+          <option value="bi_reporting">Duty · BI &amp; reporting</option>
+          <option value="master_data">Duty · Master &amp; reference data</option>
+          <option value="metadata_taxonomy">Duty · Metadata &amp; taxonomy</option>
+          <option value="data_quality">Duty · Data quality</option>
+          <option value="data_security">Duty · Data security &amp; privacy</option>
+          <option value="advanced_analytics">Duty · Advanced analytics &amp; AI prep</option>
+        </select>
+        <button class="btn btn-primary btn-small" id="start-drill-btn">Start drill</button>
+      </div>` : '';
+
     playlistCardHtml = `
       <div class="section type-stats-section">
         <div class="hdr-row">
@@ -608,7 +790,8 @@ function renderHome(root){
           <div class="stat-chip"><strong>${pAcc}%</strong><div class="lbl">Accuracy</div></div>
           <div class="stat-chip"><strong>${pAccTime}%</strong><div class="lbl">In time</div></div>
         </div>
-        ${hasGuide ? `<button class="btn btn-secondary" id="playlist-guide-btn" style="margin-top:12px;width:100%">Comment réussir ce test ?</button>` : ''}
+        ${(isSjt || isMcq) ? `<button class="btn btn-secondary" id="playlist-guide-btn" style="margin-top:12px;width:100%">${guideLabel}</button>` : ''}
+        ${mcqModeHtml}
       </div>`;
   }
 
@@ -656,9 +839,9 @@ function renderHome(root){
 
       <div class="actions">
         ${session ? '<button class="btn btn-primary" id="resume-btn">Resume session</button>' : ''}
-        <button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
+        ${activePlaylist && activePlaylist.type === 'mcq' ? '' : `<button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
           Start practice ${pool.length === 0 ? '(no questions)' : ''}
-        </button>
+        </button>`}
         <div class="btn-row">
           <button class="btn btn-secondary btn-small" id="save-btn">⬇ Save stats</button>
           <button class="btn btn-secondary btn-small" id="load-btn">↑ Load stats</button>
@@ -699,13 +882,30 @@ function renderHome(root){
     saveSettings(settings);
     render();
   });
-  root.querySelector('#start-btn')?.addEventListener('click', startPractice);
+  root.querySelector('#start-btn')?.addEventListener('click', () => startPractice());
   root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
   root.querySelector('#playlist-guide-btn')?.addEventListener('click', () => {
     GUIDE_KEY = settings.playlist;
     MODE = 'guide';
     SCROLL_TARGET = 'top';
     render();
+  });
+  // MCQ mode buttons: Timed Exam / Free Study / Topic Drill
+  root.querySelectorAll('.mode-btn[data-mcq-mode]').forEach(b => {
+    b.addEventListener('click', () => {
+      const m = b.dataset.mcqMode;
+      if(m === 'topic_drill'){
+        const box = root.querySelector('#drill-pick-box');
+        if(box) box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+        return;
+      }
+      startPractice({ mode: m });
+    });
+  });
+  root.querySelector('#start-drill-btn')?.addEventListener('click', () => {
+    const topic = root.querySelector('#drill-topic')?.value;
+    if(!topic) return;
+    startPractice({ mode: 'topic_drill', drillTopic: topic });
   });
   root.querySelector('#save-btn').addEventListener('click', downloadStats);
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
@@ -724,6 +924,7 @@ function chipHtml(cls, value, label, on){
 function renderGuide(root){
   if(GUIDE_KEY === 'BOSA_SJT_BA_CRIT') return renderGuideCritical(root);
   if(GUIDE_KEY === 'BOSA_SJT_BA_AGIL') return renderGuideAgility(root);
+  if(GUIDE_KEY === 'EPSO_AD426_DATA') return renderEpsoExplorer(root);
   return renderGuideCollaborer(root);
 }
 function renderGuideCollaborer(root){
@@ -1719,13 +1920,546 @@ function renderGuideAgility(root){
   root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
 }
 
+// ---- EPSO AD/426/25 · Data Management Content Explorer ----
+// Four tabs: Timeline (EU regs), Duties (11-duties wheel), Frameworks, Traps.
+// Static content, static+visual (no mini-quizzes) — designed for fast recall.
+function renderEpsoExplorer(root){
+  root.appendChild($(`
+    <div class="explorer">
+      <button class="back-btn" id="guide-back">← Back</button>
+      <h1>EPSO AD/426/25 · Data Management — Content Explorer</h1>
+      <p class="intro">Interactive map of what the 29 Apr 2026 exam covers. Click any card to expand.</p>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="timeline">Timeline</div>
+        <div class="tab" data-tab="duties">11 Duties</div>
+        <div class="tab" data-tab="frameworks">Frameworks</div>
+        <div class="tab" data-tab="traps">Traps</div>
+      </div>
+
+      <!-- TAB 1 · EU REGULATION TIMELINE -->
+      <div class="tab-body active" data-body="timeline">
+        <div class="timeline">
+
+          <div class="tl-card" data-open>
+            <div class="tl-year">2016</div>
+            <div class="tl-name">GDPR · Regulation (EU) 2016/679</div>
+            <div class="tl-tag">Personal data · horizontal · excl. EU institutions</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>27 Apr 2016</dd>
+                <dt>Applicable</dt><dd>25 May 2018</dd>
+                <dt>Scope</dt><dd>Processing of personal data in the Union, both public and private sector. <strong>Does not</strong> apply to EU institutions.</dd>
+                <dt>Mechanisms</dt><dd>Lawful basis (Art 6); data-subject rights (Art 15–22); DPIA for high-risk (Art 35); DPO (Art 37); breach notification 72 h (Art 33); fines up to €20M or 4% global turnover.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2018</div>
+            <div class="tl-name">Regulation (EU) 2018/1725</div>
+            <div class="tl-tag">GDPR for EU institutions · EDPS as supervisor</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>23 Oct 2018</dd>
+                <dt>Applicable</dt><dd>11 Dec 2018</dd>
+                <dt>Scope</dt><dd>Mirrors GDPR for <strong>EU institutions, bodies, offices, agencies</strong>. Supervisor: EDPS (European Data Protection Supervisor).</dd>
+                <dt>Key trap</dt><dd>If the question targets the Commission / Parliament / any EU body — this regulation applies, not GDPR.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2019</div>
+            <div class="tl-name">Open Data Directive · (EU) 2019/1024</div>
+            <div class="tl-tag">PSI reuse · High-Value Datasets · free by default</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>20 Jun 2019</dd>
+                <dt>Transposition</dt><dd>17 Jul 2021</dd>
+                <dt>Scope</dt><dd>Reuse of public sector information + publicly funded research data. Replaces PSI Directive 2003/98/EC.</dd>
+                <dt>Mechanisms</dt><dd>High-Value Datasets list via Implementing Reg. 2023/138 (6 thematic categories: geospatial, earth obs. &amp; env., meteorology, statistics, companies, mobility); machine-readable + API access; free of charge as default.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Feb 2020</div>
+            <div class="tl-name">European Strategy for Data · COM(2020) 66</div>
+            <div class="tl-tag">Policy foundation for DGA / Data Act / AI Act</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Type</dt><dd>Commission Communication (not legally binding).</dd>
+                <dt>Vision</dt><dd>A single market for data — the Union as a leading data-agile economy.</dd>
+                <dt>Instruments launched</dt><dd>Common European Data Spaces, subsequent DGA, Data Act, AI Act; SME &amp; skills investments.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2022</div>
+            <div class="tl-name">Data Governance Act · Reg (EU) 2022/868</div>
+            <div class="tl-tag">4 pillars · horizontal data-sharing enabler</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>30 May 2022</dd>
+                <dt>Applicable</dt><dd>24 Sep 2023</dd>
+                <dt>Pillar 1</dt><dd>Reuse of protected public-sector data (health, statistics, IP-protected, confidential commercial).</dd>
+                <dt>Pillar 2</dt><dd>Data intermediation services — neutral third parties, notification regime (Ch III).</dd>
+                <dt>Pillar 3</dt><dd>Data altruism (Ch IV) + standardised European Data Altruism Consent Form.</dd>
+                <dt>Pillar 4</dt><dd>European Data Innovation Board (EDIB) — expert body advising the Commission.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2023</div>
+            <div class="tl-name">Data Act · Reg (EU) 2023/2854</div>
+            <div class="tl-tag">IoT data rights · cloud switching · B2B/B2C/B2G</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>13 Dec 2023</dd>
+                <dt>Applicable</dt><dd>12 Sep 2025</dd>
+                <dt>Ch II</dt><dd>Access to IoT-product-generated data for the user.</dd>
+                <dt>Ch III</dt><dd>B2B data-sharing obligations on FRAND terms.</dd>
+                <dt>Ch V</dt><dd>B2G access for exceptional public need.</dd>
+                <dt>Ch VI</dt><dd>Cloud / edge provider switching rights; no switching fees by 2027.</dd>
+                <dt>Ch VIII</dt><dd>Data-space interoperability + essential requirements for smart contracts.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2024 · Mar</div>
+            <div class="tl-name">Interoperable Europe Act · Reg (EU) 2024/903</div>
+            <div class="tl-tag">Cross-border public services · EIF as reference</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>13 Mar 2024</dd>
+                <dt>Applicable</dt><dd>12 Jul 2024</dd>
+                <dt>Scope</dt><dd>Cross-border interoperability of public services delivered in/by the Union.</dd>
+                <dt>Mechanisms</dt><dd>Interoperable Europe Board (governance); mandatory interoperability assessments (Art 3); Interoperable Europe Portal (shared solutions); GovTech pilots; regulatory sandboxes; EIF (legal / organisational / semantic / technical) as reference framework.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2024 · Jun</div>
+            <div class="tl-name">AI Act · Reg (EU) 2024/1689</div>
+            <div class="tl-tag">Risk pyramid · GPAI · Art 10 data governance</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>13 Jun 2024</dd>
+                <dt>Applicable</dt><dd>Staggered: prohibited practices Feb 2025; GPAI Aug 2025; high-risk general Aug 2026; embedded high-risk Aug 2027.</dd>
+                <dt>Risk pyramid</dt><dd>Unacceptable (Art 5 — banned) · High-risk (Annex I + III, conformity assessment) · Limited (transparency obligations) · Minimal (voluntary).</dd>
+                <dt>Art 10</dt><dd>Data governance for training / validation / testing sets used by high-risk AI: relevance, representativeness, bias detection + correction, data provenance, design choices documented.</dd>
+                <dt>GPAI</dt><dd>General-purpose AI models — Ch V obligations (transparency, copyright, systemic-risk tier for very capable models).</dd>
+                <dt>Authority</dt><dd>EU AI Office (centralised).</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2025 · Feb</div>
+            <div class="tl-name">EHDS · Reg (EU) 2025/327</div>
+            <div class="tl-tag">First operational European Data Space · health</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Adopted</dt><dd>11 Feb 2025</dd>
+                <dt>Applicable</dt><dd>First obligations from 26 Mar 2027 (staggered).</dd>
+                <dt>Primary use</dt><dd>Citizens' rights over their electronic health data, cross-border access.</dd>
+                <dt>Secondary use</dt><dd>Research, innovation, policy-making — via Health Data Access Bodies (HDABs).</dd>
+                <dt>Why it matters</dt><dd>First of the 14 Common European Data Spaces to become a binding regulation.</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">2025 · Nov</div>
+            <div class="tl-name">Data Union Strategy · COM(2025) 835</div>
+            <div class="tl-tag">Consolidation of the 2020 Strategy</div>
+            <div class="tl-body">
+              <dl>
+                <dt>Type</dt><dd>Commission Communication (not legally binding).</dd>
+                <dt>Purpose</dt><dd>Successor policy framework to the 2020 European Strategy for Data; consolidates DGA / Data Act / AI Act foundations into a unified "Data Union".</dd>
+                <dt>Focus</dt><dd>Operationalising Common European Data Spaces, simplifying existing rules (digital omnibus), maturing the ecosystem.</dd>
+                <dt>Read the full text</dt><dd><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52025DC0835" target="_blank" rel="noopener" style="color:var(--accent)">EUR-Lex · COM(2025) 835</a></dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section" style="margin-top:16px">
+          <h3>14 Common European Data Spaces</h3>
+          <div style="font-size:12.5px;color:var(--sub);line-height:1.7">
+            Agriculture · Cultural heritage · Energy · Finance · Green Deal · <strong>Health (EHDS — first!)</strong> · Industry &amp; manufacturing · Language · Media · Mobility · Public administration · Research &amp; innovation · Skills · Tourism
+            <br><span style="color:var(--muted)">+ Data Spaces Support Centre (DSSC) · Simpl (open-source cloud-to-edge middleware)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2 · 11 DUTIES WHEEL -->
+      <div class="tab-body" data-body="duties">
+        <p class="intro">The job profile lists <strong>11 typical duties</strong>. Data Governance sits at the hub — it binds the other 10 through policy, roles and compliance.</p>
+        <div class="duty-wheel">
+
+          <div class="duty-card" data-open>
+            <div class="dc-title">1 · Data architecture &amp; interoperability</div>
+            <div class="dc-key">Reference architectures · EIF 4 layers · AI-enabled cloud</div>
+            <div class="dc-body">Semantic interoperability, ontologies, building blocks. EU anchor: EIF (Legal / Organisational / Semantic / Technical). Interoperable Europe Act frames the public-sector version.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">2 · Data policies &amp; strategy</div>
+            <div class="dc-key">Lifecycle · EU strategies · data spaces</div>
+            <div class="dc-body">Policy drafting, data lifecycle governance. EU anchors: European Strategy for Data (Feb 2020), Data Union Strategy (Nov 2025), 14 Common European Data Spaces.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">3 · Data engineering &amp; integration</div>
+            <div class="dc-key">ETL · ELT · APIs · Kafka · Airflow</div>
+            <div class="dc-body">Batch (ETL — transform before load) vs modern (ELT — load then transform). APIs: REST, GraphQL. Real-time: Kafka. Orchestration: Airflow (DAGs).</div>
+          </div>
+
+          <div class="duty-card hub">
+            <div class="dc-title">HUB · Data governance &amp; compliance</div>
+            <div class="dc-key">Policies · roles · EU law · maturity · audits</div>
+            <div class="dc-body">DAMA-DMBOK puts this at the centre. Roles: Owner, Steward, Custodian, Controller, Processor, DPO, CDO. EU anchors: GDPR (2016/679) for member states · Reg 2018/1725 for EU institutions.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">4 · Data platforms</div>
+            <div class="dc-key">Warehouse · Lake · Lakehouse · big data · mining</div>
+            <div class="dc-body">Warehouse = schema-on-write, structured. Lake = schema-on-read, raw. Lakehouse = lake storage + warehouse semantics (Delta, Iceberg). Big data: volume/velocity/variety.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">5 · BI &amp; reporting</div>
+            <div class="dc-key">Dashboards · self-service · KPIs · predictive</div>
+            <div class="dc-body">Descriptive (what happened) → diagnostic (why) → predictive (what will happen) → prescriptive (what to do). KPIs tied to objectives, self-service tools reduce IT bottleneck.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">6 · Master &amp; reference data (MDM)</div>
+            <div class="dc-key">Glossaries · IATE · EuroVoc · multilingual</div>
+            <div class="dc-body">Master data: the golden record (Customer, Product). Reference data: controlled code lists. EU-specific: <strong>IATE</strong> (terminology), <strong>EuroVoc</strong> (thesaurus), multilingual SKOS thesauri.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">7 · Metadata &amp; taxonomy</div>
+            <div class="dc-key">DCAT-AP · SKOS · RDF/OWL/SPARQL · 5-star · Dublin Core</div>
+            <div class="dc-body">EU portal: <strong>data.europa.eu</strong>. Schemas: DCAT-AP (catalogue), SKOS (thesauri), Dublin Core (15 core elements). Stack: RDF (triples) · OWL (ontology) · SPARQL (query). 5-star Open Data by Tim Berners-Lee.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">8 · Data quality</div>
+            <div class="dc-key">Profiling · cleansing · ISO 8000 · ISO/IEC 25012</div>
+            <div class="dc-body">ISO 8000: data quality framework, especially master data. ISO/IEC 25012: 15 quality characteristics (accuracy, completeness, consistency, credibility, currentness, etc.).</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">9 · Data security &amp; privacy</div>
+            <div class="dc-key">RBAC/ABAC · encryption · DPIA · anon vs pseudo · CIA</div>
+            <div class="dc-body">CIA: Confidentiality / Integrity / Availability. DPIA: GDPR Art 35. <strong>Anonymisation</strong> irreversible (out of GDPR), <strong>pseudonymisation</strong> reversible with a key (still in GDPR). Privacy by design &amp; by default = GDPR Art 25.</div>
+          </div>
+
+          <div class="duty-card">
+            <div class="dc-title">10 · Advanced analytics &amp; AI prep</div>
+            <div class="dc-key">Feature engineering · labelling · AI Act Art 10</div>
+            <div class="dc-body">Feature engineering, data labelling, augmentation. EU anchor: AI Act Art 10 — data-governance obligations for high-risk AI training / validation / test datasets (relevance, representativeness, bias correction, provenance).</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 3 · FRAMEWORKS CHEATSHEET -->
+      <div class="tab-body" data-body="frameworks">
+        <div class="fw-grid">
+
+          <div class="fw-card">
+            <h4>DAMA-DMBOK</h4>
+            <div class="desc">Data Management Body of Knowledge — 11 Knowledge Areas.</div>
+            <ul>
+              <li><strong>Data Governance (hub)</strong></li>
+              <li>Data Architecture · Data Modeling &amp; Design</li>
+              <li>Data Storage &amp; Operations · Data Security</li>
+              <li>Data Integration &amp; Interoperability</li>
+              <li>Document &amp; Content Mgmt</li>
+              <li>Reference &amp; Master Data · Metadata</li>
+              <li>Data Warehousing &amp; BI · Data Quality</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>FAIR principles</h4>
+            <div class="desc">Guiding scientific-data stewardship.</div>
+            <ul>
+              <li><strong>F</strong>indable — persistent ID, rich metadata, indexed</li>
+              <li><strong>A</strong>ccessible — standardised open protocol, authentication where needed</li>
+              <li><strong>I</strong>nteroperable — formal language, shared vocabularies, references</li>
+              <li><strong>R</strong>eusable — clear license, provenance, community standards</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>EIF · 4 layers</h4>
+            <div class="desc">European Interoperability Framework — public-sector interop.</div>
+            <ul>
+              <li><strong>Legal</strong> — aligned legal frameworks</li>
+              <li><strong>Organisational</strong> — business processes &amp; responsibilities</li>
+              <li><strong>Semantic</strong> — meaning of exchanged data preserved</li>
+              <li><strong>Technical</strong> — systems, applications, infrastructure</li>
+              <li><em>+ Integrated Public Service Governance (overarching)</em></li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>DCAT-AP · SKOS · RDF</h4>
+            <div class="desc">EU open-data metadata stack.</div>
+            <ul>
+              <li><strong>DCAT-AP</strong> — EU catalogue schema; powers data.europa.eu</li>
+              <li>Extensions: StatDCAT-AP · GeoDCAT-AP · HVD profile</li>
+              <li><strong>SKOS</strong> — Simple Knowledge Organization System (thesauri)</li>
+              <li><strong>RDF / OWL / SPARQL</strong> — triples / ontology / query</li>
+              <li><strong>Dublin Core</strong> — 15 core metadata elements</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>5-star Open Data</h4>
+            <div class="desc">Tim Berners-Lee's deployment scheme.</div>
+            <ul>
+              <li>★ on web, open license</li>
+              <li>★★ machine-readable structured data</li>
+              <li>★★★ non-proprietary format (CSV &gt; Excel)</li>
+              <li>★★★★ URIs to identify things</li>
+              <li>★★★★★ linked to other data (LOD)</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>CIA triad</h4>
+            <div class="desc">Core security objectives.</div>
+            <ul>
+              <li><strong>C</strong>onfidentiality — only authorised can access</li>
+              <li><strong>I</strong>ntegrity — data not altered improperly</li>
+              <li><strong>A</strong>vailability — accessible when needed</li>
+              <li>+ often extended: Authenticity · Non-repudiation</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>Roles cheatsheet</h4>
+            <div class="desc">Who does what — the exam loves these.</div>
+            <ul>
+              <li><strong>Data Owner</strong> — accountable, sets policy</li>
+              <li><strong>Data Steward</strong> — executes policy, quality, definitions</li>
+              <li><strong>Data Custodian</strong> — IT-operational (storage, backup)</li>
+              <li><strong>Controller</strong> (GDPR) — determines purpose &amp; means</li>
+              <li><strong>Processor</strong> (GDPR) — acts on controller's behalf</li>
+              <li><strong>DPO</strong> — advises on GDPR compliance</li>
+              <li><strong>CDO</strong> — org-level data strategy</li>
+            </ul>
+          </div>
+
+          <div class="fw-card">
+            <h4>ISO quality standards</h4>
+            <div class="desc">Reference models for data quality.</div>
+            <ul>
+              <li><strong>ISO 8000</strong> — data quality, esp. master data</li>
+              <li><strong>ISO/IEC 25012</strong> — 15 characteristics (accuracy, completeness, consistency, credibility, currentness, accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 4 · TRAPS -->
+      <div class="tab-body" data-body="traps">
+        <p class="intro">The four confusions most likely to cost points.</p>
+
+        <div class="trap-row">
+          <div class="trap-head">GDPR (2016/679) vs Regulation 2018/1725</div>
+          <div class="trap-body">
+            <div>
+              <h5>GDPR — 2016/679</h5>
+              <ul>
+                <li>Applies to Member-State public + private sector</li>
+                <li><strong>Excludes EU institutions</strong></li>
+                <li>Supervisor: national DPA + EDPB</li>
+                <li>Fines up to 4% global turnover</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Reg 2018/1725</h5>
+              <ul>
+                <li>Applies to <strong>EU institutions, bodies, offices, agencies</strong></li>
+                <li>Mirrors GDPR obligations</li>
+                <li>Supervisor: <strong>EDPS</strong> (European Data Protection Supervisor)</li>
+                <li>Question mentions "Commission", "Parliament", "ECB" → 2018/1725</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="trap-row">
+          <div class="trap-head">DGA (2022/868) vs Data Act (2023/2854)</div>
+          <div class="trap-body">
+            <div>
+              <h5>DGA — horizontal enabler</h5>
+              <ul>
+                <li>4 pillars: protected PSI reuse · intermediation services · altruism · EDIB</li>
+                <li>Creates <strong>mechanisms &amp; roles</strong> for data sharing</li>
+                <li>Target: confidential / IP-protected / personal public-sector data</li>
+                <li>Keyword: "data intermediary", "altruism", "EDIB"</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Data Act — specific rights</h5>
+              <ul>
+                <li>IoT-generated data access for users (Ch II)</li>
+                <li>B2B FRAND sharing (Ch III) + B2G exceptional need (Ch V)</li>
+                <li>Cloud / edge switching rights (Ch VI)</li>
+                <li>Keyword: "IoT", "connected product", "cloud switching", "smart contract"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="trap-row">
+          <div class="trap-head">Anonymisation vs Pseudonymisation</div>
+          <div class="trap-body">
+            <div>
+              <h5>Anonymisation</h5>
+              <ul>
+                <li><strong>Irreversible</strong> — no way back to the data subject</li>
+                <li>Data is no longer personal — <strong>outside GDPR scope</strong></li>
+                <li>Requires removing/altering all identifiers + limiting re-identification risk</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Pseudonymisation</h5>
+              <ul>
+                <li><strong>Reversible</strong> with a separate key (kept secure)</li>
+                <li>Data is <strong>still personal</strong> — GDPR still applies</li>
+                <li>A safeguard / risk-reduction measure (GDPR Art 4(5), Art 25, Art 32)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="trap-row">
+          <div class="trap-head">Open Data Directive vs DGA scope</div>
+          <div class="trap-body">
+            <div>
+              <h5>Open Data Dir. — 2019/1024</h5>
+              <ul>
+                <li>Covers <strong>open / non-sensitive</strong> public sector information</li>
+                <li>Principle: free of charge, machine-readable, open by default</li>
+                <li>HVD: categories in Implementing Reg 2023/138</li>
+              </ul>
+            </div>
+            <div>
+              <h5>DGA — 2022/868</h5>
+              <ul>
+                <li>Covers <strong>protected</strong> public-sector data (confidential, IP, personal)</li>
+                <li>Establishes conditions, not default openness</li>
+                <li>Complements Open Data Dir., does not replace it</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="trap-row">
+          <div class="trap-head">Warehouse vs Lake vs Lakehouse</div>
+          <div class="trap-body">
+            <div>
+              <h5>Warehouse</h5>
+              <ul>
+                <li>Schema-on-<strong>write</strong> · structured data</li>
+                <li>Optimised for BI / reporting · curated</li>
+                <li>Costly for unstructured / raw data</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Lake (and Lakehouse)</h5>
+              <ul>
+                <li>Lake: schema-on-<strong>read</strong>, raw, cheap, any format</li>
+                <li>Lakehouse: adds ACID + warehouse semantics on lake storage (Delta / Iceberg / Hudi)</li>
+                <li>Lakehouse = one platform for BI + ML</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `));
+
+  root.querySelector('#guide-back').addEventListener('click', () => { MODE='home'; SCROLL_TARGET='top'; render(); });
+
+  // Tab switcher
+  root.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => {
+      const tab = t.dataset.tab;
+      root.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.tab === tab));
+      root.querySelectorAll('.tab-body').forEach(b => b.classList.toggle('active', b.dataset.body === tab));
+      window.scrollTo(0, 0);
+    });
+  });
+
+  // Open/close on cards
+  root.querySelectorAll('.tl-card, .duty-card').forEach(c => {
+    c.addEventListener('click', () => c.classList.toggle('open'));
+    // If the card has [data-open], start open
+    if(c.hasAttribute('data-open')) c.classList.add('open');
+  });
+}
+
 // ----- Practice -----
-function startPractice(){
+// Exam constants (EPSO AD/426/25 — Data MCQ)
+const MCQ_EXAM_TOTAL = 30;
+const MCQ_EXAM_DURATION_MS = 40 * 60 * 1000;
+
+// opts: { mode: 'free_study'|'timed_exam'|'topic_drill', drillTopic: 'eu_regulation'|... }
+function startPractice(opts){
   const settings = loadSettings();
-  const pool = buildPool(settings);
+  let pool = buildPool(settings);
+  const mode = (opts && opts.mode) || 'free_study';
+  const drillTopic = opts && opts.drillTopic;
+
+  if(mode === 'topic_drill' && drillTopic){
+    pool = pool.filter(q => q.topic === drillTopic);
+    if(pool.length === 0){ toast(`No questions found for topic "${drillTopic}"`); return; }
+  }
+
   if(pool.length === 0){ toast('No questions match the current filter'); return; }
+
+  // Timed exam: pick 30 random questions, lock the pool, set a global deadline
+  let poolIds;
+  let exam_deadline_ms = null;
+  let exam_target_count = null;
+  if(mode === 'timed_exam'){
+    const shuffled = pool.slice();
+    for(let i = shuffled.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    exam_target_count = Math.min(MCQ_EXAM_TOTAL, shuffled.length);
+    poolIds = shuffled.slice(0, exam_target_count).map(q => q.id);
+    exam_deadline_ms = Date.now() + MCQ_EXAM_DURATION_MS;
+  } else {
+    poolIds = pool.map(q => q.id);
+  }
+
   SESSION = {
-    poolIds: pool.map(q => q.id),
+    mode,
+    drillTopic: drillTopic || null,
+    exam_deadline_ms,
+    exam_target_count,
+    exam_answers: [],          // for timed_exam results screen
+    poolIds,
     picked: [],
     sjt_queue: [],
     currentQid: null,
@@ -1779,9 +2513,41 @@ function startTimer(){
       if(pct <= 0) bar.className = 'time-bar over';
       else if(pct < 20) bar.className = 'time-bar warn';
     }
+
+    // Timed exam: also update the global deadline banner + auto-end on expiry
+    if(SESSION.mode === 'timed_exam' && SESSION.exam_deadline_ms){
+      const rem = SESSION.exam_deadline_ms - Date.now();
+      const banner = document.getElementById('exam-banner');
+      const examTimerEl = document.getElementById('exam-timer');
+      if(examTimerEl) examTimerEl.textContent = fmtTime(Math.max(0, rem));
+      if(banner){
+        banner.classList.remove('warn', 'over');
+        if(rem <= 0) banner.classList.add('over');
+        else if(rem < 5 * 60 * 1000) banner.classList.add('warn');
+      }
+      if(rem <= 0){
+        stopTimer();
+        MODE = 'results';
+        SCROLL_TARGET = 'top';
+        render();
+      }
+    }
   }, 500);
 }
 function advanceQuestion(){
+  // Timed exam: stop at target count or when deadline is reached
+  if(SESSION.mode === 'timed_exam'){
+    const done = SESSION.answered_count >= (SESSION.exam_target_count || MCQ_EXAM_TOTAL);
+    const expired = SESSION.exam_deadline_ms && Date.now() >= SESSION.exam_deadline_ms;
+    if(done || expired){
+      stopTimer();
+      MODE = 'results';
+      SCROLL_TARGET = 'top';
+      render();
+      return;
+    }
+  }
+
   // SJT: if there's a queued reaction from the current situation, show it next
   if(SESSION.sjt_queue && SESSION.sjt_queue.length > 0){
     const nextId = SESSION.sjt_queue.shift();
@@ -1802,13 +2568,23 @@ function advanceQuestion(){
   const pool = DB.questions.filter(q => SESSION.poolIds.includes(q.id));
   const excluded = new Set(SESSION.picked);
   // Allow recycling once we've seen everything once in this session
+  // (Except timed exam: ran through a fixed pool; when exhausted, end.)
   let next = pickNext(pool, excluded);
-  if(!next && pool.length > 0){
+  if(!next && pool.length > 0 && SESSION.mode !== 'timed_exam'){
     SESSION.picked = [];          // recycle
     SESSION.sjt_queue = [];       // clear SJT queue too
     next = pickNext(pool, new Set());
   }
-  if(!next){ stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return; }
+  if(!next){
+    if(SESSION.mode === 'timed_exam'){
+      stopTimer();
+      MODE = 'results';
+      SCROLL_TARGET = 'top';
+      render();
+      return;
+    }
+    stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return;
+  }
 
   // SJT: queue all reactions of this situation in data order (pre-balanced in JSON)
   if(next.type === 'sjt' && next.set_id){
@@ -1850,6 +2626,10 @@ function effectiveTargetMs(){
   if(q && q.type === 'sjt'){
     if(typeof q.target_sec === 'number') return q.target_sec * 1000;
     return (SESSION.sjt_first_reaction ? 90 : 40) * 1000;
+  }
+  if(q && q.type === 'mcq'){
+    if(typeof q.target_sec === 'number') return q.target_sec * 1000;
+    return 80 * 1000;  // default 40min / 30Q = 80s per question
   }
   const base = (loadSettings().targetSec || 120) * 1000;
   return base;
@@ -1899,6 +2679,20 @@ function submitAnswer(){
   SESSION.correct_count = (SESSION.correct_count||0) + credit;
   // Only add credit to in-time if within time
   if(withinTime && credit > 0) SESSION.correct_in_time_count = (SESSION.correct_in_time_count||0) + credit;
+
+  // Timed exam: keep a lightweight answer trail for the results screen
+  if(SESSION.mode === 'timed_exam'){
+    SESSION.exam_answers = SESSION.exam_answers || [];
+    SESSION.exam_answers.push({
+      qid: q.id,
+      picked: SESSION.picked_letter,
+      correct: q.correct,
+      isCorrect,
+      topic: q.topic || null,
+      elapsed,
+    });
+  }
+
   stopTimer();
   saveSession(SESSION);
   SCROLL_TARGET = 'explanation';
@@ -1991,8 +2785,26 @@ function renderPractice(root){
       else if(ok){ head = `✓ Correct, but late — ${timeStr}${lateTag}`; explCls = 'eok'; }
       else { head = `✗ Incorrect — answer: ${esc(correctText)} · ${timeStr}${lateTag}`; explCls = 'eko'; }
     }
+
+    // MCQ: show per-option explanations (one block per option)
+    let perOptHtml = '';
+    if(q.type === 'mcq' && q.explanations){
+      const blocks = q.options.map(o => {
+        const letter = o.letter;
+        const txt = q.explanations[letter] || '';
+        const isRight = letter === q.correct;
+        const isPicked = letter === SESSION.picked_letter;
+        const cls = isRight ? 'ok' : (isPicked ? 'ko' : 'neutral');
+        const badge = isRight ? '✓' : (isPicked ? '✗' : '·');
+        return `<div class="mcq-expl ${cls}"><span class="lead">${badge} ${esc(letter)}</span><span class="txt">${esc(txt)}</span></div>`;
+      }).join('');
+      perOptHtml = `<div class="mcq-expls">${blocks}</div>`;
+    }
+
     const expl = q.explanation ? `<br>${esc(q.explanation).replace(/\n/g, '<br>')}` : '';
-    explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${expl}</div>`;
+    // For MCQ, skip the old single-blob explanation (we show per-option blocks instead)
+    const explBody = q.type === 'mcq' ? '' : expl;
+    explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${explBody}</div>${perOptHtml}`;
   }
 
   // Per-question history label (correct can be fractional for SJT partial credit)
@@ -2024,6 +2836,31 @@ function renderPractice(root){
     barCls = barPct < 20 ? 'warn' : barPct <= 0 ? 'over' : '';
   }
 
+  // Timed exam: global deadline banner
+  let examBannerHtml = '';
+  if(SESSION.mode === 'timed_exam' && SESSION.exam_deadline_ms){
+    const rem = Math.max(0, SESSION.exam_deadline_ms - Date.now());
+    const cls = rem <= 0 ? 'over' : (rem < 5 * 60 * 1000 ? 'warn' : '');
+    const done = SESSION.answered_count;
+    const target = SESSION.exam_target_count || MCQ_EXAM_TOTAL;
+    examBannerHtml = `<div class="exam-banner ${cls}" id="exam-banner">
+      <div><div class="lbl">Timed exam</div><div style="font-size:13px;color:var(--sub);margin-top:2px">Q ${done + (SESSION.revealed?0:1)} of ${target}</div></div>
+      <div><div class="lbl" style="text-align:right">Remaining</div><div class="rem" id="exam-timer">${fmtTime(rem)}</div></div>
+    </div>`;
+  }
+
+  // Topic + difficulty tags (MCQ)
+  let tagsHtml = '';
+  if(q.type === 'mcq'){
+    const diff = (q.difficulty || '').toLowerCase();
+    const topic = q.topic || '';
+    const topicLabel = TOPIC_LABELS[topic] || topic.replace(/_/g, ' ');
+    tagsHtml = `<div style="display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap">
+      ${topic ? `<span class="tag topic">${esc(topicLabel)}</span>` : ''}
+      ${diff ? `<span class="tag ${esc(diff)}">${esc(diff)}</span>` : ''}
+    </div>`;
+  }
+
   root.appendChild($(`
     <div class="practice">
       <div class="hdr">
@@ -2034,6 +2871,8 @@ function renderPractice(root){
         </div>
         <div class="time-bar-wrap"><div class="time-bar ${barCls}" id="time-bar" style="width:${barPct}%"></div></div>
       </div>
+      ${examBannerHtml}
+      ${tagsHtml}
       <div class="qmeta">
         <span class="qref">${esc(q.book_ref || '')}</span>
         <span>${esc(q.source)} · target ${fmtTime(targetMs)}${accStr}</span>
@@ -2064,6 +2903,90 @@ function renderPractice(root){
   // Run the live ticker only while waiting for an answer
   if(!SESSION.revealed) startTimer();
   else stopTimer();
+}
+
+// ----- Results (timed exam end) -----
+function renderResults(root){
+  if(!SESSION){ MODE='home'; render(); return; }
+  const answers = SESSION.exam_answers || [];
+  const total = answers.length;
+  const target = SESSION.exam_target_count || MCQ_EXAM_TOTAL;
+  const correct = answers.filter(a => a.isCorrect).length;
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+  const pass = correct >= 15;  // EPSO AD/426/25: 15/30 threshold
+  const totalTime = answers.reduce((s, a) => s + (a.elapsed || 0), 0);
+
+  // By-topic breakdown
+  const byTopic = {};
+  for(const a of answers){
+    const t = a.topic || 'unknown';
+    if(!byTopic[t]) byTopic[t] = { ok: 0, n: 0 };
+    byTopic[t].n++;
+    if(a.isCorrect) byTopic[t].ok++;
+  }
+  const topicRows = Object.keys(byTopic).sort().map(t => {
+    const { ok, n } = byTopic[t];
+    const p = Math.round(ok / n * 100);
+    const barCls = p < 50 ? 'low' : (p < 75 ? 'med' : '');
+    return `<div class="res-topic-row">
+      <div class="tname">${esc(TOPIC_LABELS[t] || t)}</div>
+      <div class="tscore">${ok}/${n} · ${p}%</div>
+      <div class="res-topic-bar"><div class="${barCls}" style="width:${p}%"></div></div>
+    </div>`;
+  }).join('');
+
+  // Wrong-answer review
+  const wrongs = answers.filter(a => !a.isCorrect);
+  const wrongsHtml = wrongs.map(a => {
+    const q = DB.questions.find(x => x.id === a.qid);
+    if(!q) return '';
+    const correctOpt = q.options.find(o => o.letter === q.correct);
+    const pickedOpt = q.options.find(o => o.letter === a.picked);
+    const correctText = correctOpt ? correctOpt.text : q.correct;
+    const pickedText = pickedOpt ? pickedOpt.text : (a.picked || '—');
+    const why = (q.explanations && q.explanations[q.correct]) || q.explanation || '';
+    return `<div class="res-item">
+      <div class="q">${esc(q.question || '')}</div>
+      <div class="ans">Your pick: <strong>${esc(a.picked || '—')}</strong> ${esc(pickedText)} · Correct: <strong>${esc(q.correct)}</strong> ${esc(correctText)}</div>
+      <div class="exp">${esc(why)}</div>
+    </div>`;
+  }).join('');
+
+  const expired = SESSION.exam_deadline_ms && Date.now() >= SESSION.exam_deadline_ms && total < target;
+  const missedNote = expired ? ` · time ran out (${total}/${target} answered)` : '';
+
+  root.appendChild($(`
+    <div class="results">
+      <button class="back-btn" id="results-back">← Back to home</button>
+      <h1>Exam results</h1>
+      <div class="sub">EPSO AD/426/25 · timed mode · ${fmtTime(totalTime)} used${missedNote}</div>
+
+      <div class="res-score">
+        <div class="big">${correct}/${target}</div>
+        <div class="pct">${pct}% correct</div>
+        <div class="pass ${pass ? 'ok' : 'ko'}">${pass ? '✓ Pass threshold (≥ 15/30)' : '✗ Below pass threshold (15/30)'}</div>
+      </div>
+
+      <div class="section">
+        <h3>Accuracy by topic</h3>
+        ${topicRows || '<div style="font-size:13px;color:var(--muted)">No answers recorded.</div>'}
+      </div>
+
+      ${wrongs.length ? `<div class="res-review">
+        <h3>Review · wrong answers (${wrongs.length})</h3>
+        ${wrongsHtml}
+      </div>` : ''}
+    </div>
+  `));
+
+  root.querySelector('#results-back').addEventListener('click', () => {
+    // Persist stats (already recorded per-question); clear session.
+    clearSession();
+    SESSION = null;
+    MODE = 'home';
+    SCROLL_TARGET = 'top';
+    render();
+  });
 }
 
 // ============================================================================
