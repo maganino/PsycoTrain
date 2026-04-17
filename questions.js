@@ -7498,7 +7498,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_sources",
         "pc_credibility",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Vincent est Business Analyst à l'ONVA (Office National des Vacances Annuelles) depuis quatre mois. Sa cheffe de projet, Karine, vient de lui confier le processus P-ART-04, qui calcule au prorata les jours de vacances et le pécule dus aux artistes et techniciens du spectacle. Ces travailleurs enchaînent souvent plusieurs contrats courts sur une même année, et la règle est une des plus délicates de l'Office : elle concerne 45 000 ayants droit.\n\nKarine attend un modèle BPMN As-Is et une note de recommandations pour la fin du mois, en vue du projet qui doit remplacer la chaîne Access / Excel / macros VBA par une application web. Le livrable est bloquant : IT et Juridique ont aligné leur planning sur son modèle, et le comité de direction attend la validation.\n\nVincent dispose de trois sources qui se contredisent. D'abord Paul, analyste tenure depuis quinze ans, lui a expliqué en une heure, de mémoire, que le prorata se calcule en divisant les jours prestés par 312, avec un arrondi fixe au dixième supérieur, sans exception. Paul est la référence interne et n'apprécie pas qu'on remette en cause ses explications.\n\nEnsuite, la base Access de production contient une table `ARTIST_PRORATA_EXCEPTIONS` avec 1 847 enregistrements où le diviseur est 260 ou 286 selon des codes NACE, avec un arrondi différent. Aucune documentation n'accompagne ces codes.\n\nEnfin, parmi 42 tickets GLPI récents, treize ont été résolus par un calcul différent de celui de Paul, avec le commentaire « traitement réglementaire particulier — voir circulaire 2019/14 ». Cette circulaire n'est pas indexée dans la GED officielle. Un collègue la transmet à Vincent depuis son disque local : elle décrit un régime transitoire censé s'appliquer jusqu'en 2021, apparemment encore utilisé.\n\nCe matin, en stand-up, la pression devient explicite. Karine rappelle le délai et ajoute : « Surtout, ne complique pas, on a besoin d'un modèle lisible, pas d'une thèse. » Paul renchérit en visio : « La règle est celle que je t'ai donnée. Les développeurs feront les exceptions plus tard. »\n\nEn fin de stand-up, Karine se tourne vers Vincent et lui demande : « Vincent, sur quelle règle de prorata tu pars pour ton BPMN As-Is ? »\n\nVincent lui répond :",
       "figures": [],
@@ -7543,7 +7544,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_sources",
         "pc_credibility",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Vincent est Business Analyst à l'ONVA (Office National des Vacances Annuelles) depuis quatre mois. Sa cheffe de projet, Karine, vient de lui confier le processus P-ART-04, qui calcule au prorata les jours de vacances et le pécule dus aux artistes et techniciens du spectacle. Ces travailleurs enchaînent souvent plusieurs contrats courts sur une même année, et la règle est une des plus délicates de l'Office : elle concerne 45 000 ayants droit.\n\nKarine attend un modèle BPMN As-Is et une note de recommandations pour la fin du mois, en vue du projet qui doit remplacer la chaîne Access / Excel / macros VBA par une application web. Le livrable est bloquant : IT et Juridique ont aligné leur planning sur son modèle, et le comité de direction attend la validation.\n\nVincent dispose de trois sources qui se contredisent. D'abord Paul, analyste tenure depuis quinze ans, lui a expliqué en une heure, de mémoire, que le prorata se calcule en divisant les jours prestés par 312, avec un arrondi fixe au dixième supérieur, sans exception. Paul est la référence interne et n'apprécie pas qu'on remette en cause ses explications.\n\nEnsuite, la base Access de production contient une table `ARTIST_PRORATA_EXCEPTIONS` avec 1 847 enregistrements où le diviseur est 260 ou 286 selon des codes NACE, avec un arrondi différent. Aucune documentation n'accompagne ces codes.\n\nEnfin, parmi 42 tickets GLPI récents, treize ont été résolus par un calcul différent de celui de Paul, avec le commentaire « traitement réglementaire particulier — voir circulaire 2019/14 ». Cette circulaire n'est pas indexée dans la GED officielle. Un collègue la transmet à Vincent depuis son disque local : elle décrit un régime transitoire censé s'appliquer jusqu'en 2021, apparemment encore utilisé.\n\nCe matin, en stand-up, la pression devient explicite. Karine rappelle le délai et ajoute : « Surtout, ne complique pas, on a besoin d'un modèle lisible, pas d'une thèse. » Paul renchérit en visio : « La règle est celle que je t'ai donnée. Les développeurs feront les exceptions plus tard. »\n\nEn fin de stand-up, Karine se tourne vers Vincent et lui demande : « Vincent, sur quelle règle de prorata tu pars pour ton BPMN As-Is ? »\n\nVincent lui répond :",
       "figures": [],
@@ -7588,7 +7590,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_sources",
         "pc_credibility",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Vincent est Business Analyst à l'ONVA (Office National des Vacances Annuelles) depuis quatre mois. Sa cheffe de projet, Karine, vient de lui confier le processus P-ART-04, qui calcule au prorata les jours de vacances et le pécule dus aux artistes et techniciens du spectacle. Ces travailleurs enchaînent souvent plusieurs contrats courts sur une même année, et la règle est une des plus délicates de l'Office : elle concerne 45 000 ayants droit.\n\nKarine attend un modèle BPMN As-Is et une note de recommandations pour la fin du mois, en vue du projet qui doit remplacer la chaîne Access / Excel / macros VBA par une application web. Le livrable est bloquant : IT et Juridique ont aligné leur planning sur son modèle, et le comité de direction attend la validation.\n\nVincent dispose de trois sources qui se contredisent. D'abord Paul, analyste tenure depuis quinze ans, lui a expliqué en une heure, de mémoire, que le prorata se calcule en divisant les jours prestés par 312, avec un arrondi fixe au dixième supérieur, sans exception. Paul est la référence interne et n'apprécie pas qu'on remette en cause ses explications.\n\nEnsuite, la base Access de production contient une table `ARTIST_PRORATA_EXCEPTIONS` avec 1 847 enregistrements où le diviseur est 260 ou 286 selon des codes NACE, avec un arrondi différent. Aucune documentation n'accompagne ces codes.\n\nEnfin, parmi 42 tickets GLPI récents, treize ont été résolus par un calcul différent de celui de Paul, avec le commentaire « traitement réglementaire particulier — voir circulaire 2019/14 ». Cette circulaire n'est pas indexée dans la GED officielle. Un collègue la transmet à Vincent depuis son disque local : elle décrit un régime transitoire censé s'appliquer jusqu'en 2021, apparemment encore utilisé.\n\nCe matin, en stand-up, la pression devient explicite. Karine rappelle le délai et ajoute : « Surtout, ne complique pas, on a besoin d'un modèle lisible, pas d'une thèse. » Paul renchérit en visio : « La règle est celle que je t'ai donnée. Les développeurs feront les exceptions plus tard. »\n\nEn fin de stand-up, Karine se tourne vers Vincent et lui demande : « Vincent, sur quelle règle de prorata tu pars pour ton BPMN As-Is ? »\n\nVincent lui répond :",
       "figures": [],
@@ -7633,7 +7636,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_sources",
         "pc_credibility",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Vincent est Business Analyst à l'ONVA (Office National des Vacances Annuelles) depuis quatre mois. Sa cheffe de projet, Karine, vient de lui confier le processus P-ART-04, qui calcule au prorata les jours de vacances et le pécule dus aux artistes et techniciens du spectacle. Ces travailleurs enchaînent souvent plusieurs contrats courts sur une même année, et la règle est une des plus délicates de l'Office : elle concerne 45 000 ayants droit.\n\nKarine attend un modèle BPMN As-Is et une note de recommandations pour la fin du mois, en vue du projet qui doit remplacer la chaîne Access / Excel / macros VBA par une application web. Le livrable est bloquant : IT et Juridique ont aligné leur planning sur son modèle, et le comité de direction attend la validation.\n\nVincent dispose de trois sources qui se contredisent. D'abord Paul, analyste tenure depuis quinze ans, lui a expliqué en une heure, de mémoire, que le prorata se calcule en divisant les jours prestés par 312, avec un arrondi fixe au dixième supérieur, sans exception. Paul est la référence interne et n'apprécie pas qu'on remette en cause ses explications.\n\nEnsuite, la base Access de production contient une table `ARTIST_PRORATA_EXCEPTIONS` avec 1 847 enregistrements où le diviseur est 260 ou 286 selon des codes NACE, avec un arrondi différent. Aucune documentation n'accompagne ces codes.\n\nEnfin, parmi 42 tickets GLPI récents, treize ont été résolus par un calcul différent de celui de Paul, avec le commentaire « traitement réglementaire particulier — voir circulaire 2019/14 ». Cette circulaire n'est pas indexée dans la GED officielle. Un collègue la transmet à Vincent depuis son disque local : elle décrit un régime transitoire censé s'appliquer jusqu'en 2021, apparemment encore utilisé.\n\nCe matin, en stand-up, la pression devient explicite. Karine rappelle le délai et ajoute : « Surtout, ne complique pas, on a besoin d'un modèle lisible, pas d'une thèse. » Paul renchérit en visio : « La règle est celle que je t'ai donnée. Les développeurs feront les exceptions plus tard. »\n\nEn fin de stand-up, Karine se tourne vers Vincent et lui demande : « Vincent, sur quelle règle de prorata tu pars pour ton BPMN As-Is ? »\n\nVincent lui répond :",
       "figures": [],
@@ -7678,6 +7682,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_sources",
+        "pc_anticipate",
         "pc_elements"
       ],
       "situation": "Claire est Business Analyst à l'ONVA depuis un an et travaille sur le périmètre « comptes dormants » : les dossiers d'ayants droit qui n'ont jamais réclamé leur pécule et basculent, passé un certain délai, dans un processus de clôture comptable. Le sujet est sensible parce qu'il croise droit social, prescription et intérêts de l'ayant droit.\n\nLa semaine dernière, une circulaire ministérielle (2026/03) a modifié les règles. Le business owner du processus, Rachid, lui a envoyé une note d'une page : « À partir du 01/07/2026, un compte est considéré comme dormant après 48 mois d'inactivité (au lieu de 36), et la clôture peut être lancée par simple décision du gestionnaire. » Il demande un BPMN To-Be et un set de use cases pour le sprint planning jeudi prochain. Juridique a déjà annoncé au ministère que l'ONVA serait prêt pour le 01/07.\n\nPar réflexe, Claire ouvre le texte intégral de la circulaire. Elle repère deux points que le résumé ne mentionne pas. D'abord, l'article 4 §2 précise que le délai de 48 mois ne s'applique qu'aux comptes de l'ayant droit lui-même ; s'il existe des héritiers identifiés dans les registres de l'état civil, le délai reste de 36 mois avec notification obligatoire avant clôture. Ensuite, une disposition transitoire impose une validation croisée par un deuxième gestionnaire pendant les six premiers mois d'application.\n\nEn consultant les macros VBA de l'outil `DORMANT_V3` actuellement en production, Claire réalise un troisième problème : l'outil ne distingue pas non plus le cas des héritiers et clôture depuis deux ans certains comptes à 36 mois sans notification. Si son interprétation est correcte, l'ONVA est potentiellement en situation de non-conformité sur un volume non négligeable de dossiers passés — ce que ni Rachid ni Juridique ne semblent avoir tracé.\n\nLe sprint est jeudi. Rachid est respecté, pressé, et Claire n'a pas envie de passer pour la BA qui complique tout. En début d'après-midi, son tech lead Loïc passe à son bureau : « Tu pars sur le résumé de Rachid pour le BPMN comptes dormants, ou tu vois autre chose ? On fige quoi avant jeudi ? »\n\nClaire lui répond :",
@@ -7723,6 +7728,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_sources",
+        "pc_anticipate",
         "pc_elements"
       ],
       "situation": "Claire est Business Analyst à l'ONVA depuis un an et travaille sur le périmètre « comptes dormants » : les dossiers d'ayants droit qui n'ont jamais réclamé leur pécule et basculent, passé un certain délai, dans un processus de clôture comptable. Le sujet est sensible parce qu'il croise droit social, prescription et intérêts de l'ayant droit.\n\nLa semaine dernière, une circulaire ministérielle (2026/03) a modifié les règles. Le business owner du processus, Rachid, lui a envoyé une note d'une page : « À partir du 01/07/2026, un compte est considéré comme dormant après 48 mois d'inactivité (au lieu de 36), et la clôture peut être lancée par simple décision du gestionnaire. » Il demande un BPMN To-Be et un set de use cases pour le sprint planning jeudi prochain. Juridique a déjà annoncé au ministère que l'ONVA serait prêt pour le 01/07.\n\nPar réflexe, Claire ouvre le texte intégral de la circulaire. Elle repère deux points que le résumé ne mentionne pas. D'abord, l'article 4 §2 précise que le délai de 48 mois ne s'applique qu'aux comptes de l'ayant droit lui-même ; s'il existe des héritiers identifiés dans les registres de l'état civil, le délai reste de 36 mois avec notification obligatoire avant clôture. Ensuite, une disposition transitoire impose une validation croisée par un deuxième gestionnaire pendant les six premiers mois d'application.\n\nEn consultant les macros VBA de l'outil `DORMANT_V3` actuellement en production, Claire réalise un troisième problème : l'outil ne distingue pas non plus le cas des héritiers et clôture depuis deux ans certains comptes à 36 mois sans notification. Si son interprétation est correcte, l'ONVA est potentiellement en situation de non-conformité sur un volume non négligeable de dossiers passés — ce que ni Rachid ni Juridique ne semblent avoir tracé.\n\nLe sprint est jeudi. Rachid est respecté, pressé, et Claire n'a pas envie de passer pour la BA qui complique tout. En début d'après-midi, son tech lead Loïc passe à son bureau : « Tu pars sur le résumé de Rachid pour le BPMN comptes dormants, ou tu vois autre chose ? On fige quoi avant jeudi ? »\n\nClaire lui répond :",
@@ -7768,6 +7774,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_sources",
+        "pc_anticipate",
         "pc_elements"
       ],
       "situation": "Claire est Business Analyst à l'ONVA depuis un an et travaille sur le périmètre « comptes dormants » : les dossiers d'ayants droit qui n'ont jamais réclamé leur pécule et basculent, passé un certain délai, dans un processus de clôture comptable. Le sujet est sensible parce qu'il croise droit social, prescription et intérêts de l'ayant droit.\n\nLa semaine dernière, une circulaire ministérielle (2026/03) a modifié les règles. Le business owner du processus, Rachid, lui a envoyé une note d'une page : « À partir du 01/07/2026, un compte est considéré comme dormant après 48 mois d'inactivité (au lieu de 36), et la clôture peut être lancée par simple décision du gestionnaire. » Il demande un BPMN To-Be et un set de use cases pour le sprint planning jeudi prochain. Juridique a déjà annoncé au ministère que l'ONVA serait prêt pour le 01/07.\n\nPar réflexe, Claire ouvre le texte intégral de la circulaire. Elle repère deux points que le résumé ne mentionne pas. D'abord, l'article 4 §2 précise que le délai de 48 mois ne s'applique qu'aux comptes de l'ayant droit lui-même ; s'il existe des héritiers identifiés dans les registres de l'état civil, le délai reste de 36 mois avec notification obligatoire avant clôture. Ensuite, une disposition transitoire impose une validation croisée par un deuxième gestionnaire pendant les six premiers mois d'application.\n\nEn consultant les macros VBA de l'outil `DORMANT_V3` actuellement en production, Claire réalise un troisième problème : l'outil ne distingue pas non plus le cas des héritiers et clôture depuis deux ans certains comptes à 36 mois sans notification. Si son interprétation est correcte, l'ONVA est potentiellement en situation de non-conformité sur un volume non négligeable de dossiers passés — ce que ni Rachid ni Juridique ne semblent avoir tracé.\n\nLe sprint est jeudi. Rachid est respecté, pressé, et Claire n'a pas envie de passer pour la BA qui complique tout. En début d'après-midi, son tech lead Loïc passe à son bureau : « Tu pars sur le résumé de Rachid pour le BPMN comptes dormants, ou tu vois autre chose ? On fige quoi avant jeudi ? »\n\nClaire lui répond :",
@@ -7813,6 +7820,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_sources",
+        "pc_anticipate",
         "pc_elements"
       ],
       "situation": "Claire est Business Analyst à l'ONVA depuis un an et travaille sur le périmètre « comptes dormants » : les dossiers d'ayants droit qui n'ont jamais réclamé leur pécule et basculent, passé un certain délai, dans un processus de clôture comptable. Le sujet est sensible parce qu'il croise droit social, prescription et intérêts de l'ayant droit.\n\nLa semaine dernière, une circulaire ministérielle (2026/03) a modifié les règles. Le business owner du processus, Rachid, lui a envoyé une note d'une page : « À partir du 01/07/2026, un compte est considéré comme dormant après 48 mois d'inactivité (au lieu de 36), et la clôture peut être lancée par simple décision du gestionnaire. » Il demande un BPMN To-Be et un set de use cases pour le sprint planning jeudi prochain. Juridique a déjà annoncé au ministère que l'ONVA serait prêt pour le 01/07.\n\nPar réflexe, Claire ouvre le texte intégral de la circulaire. Elle repère deux points que le résumé ne mentionne pas. D'abord, l'article 4 §2 précise que le délai de 48 mois ne s'applique qu'aux comptes de l'ayant droit lui-même ; s'il existe des héritiers identifiés dans les registres de l'état civil, le délai reste de 36 mois avec notification obligatoire avant clôture. Ensuite, une disposition transitoire impose une validation croisée par un deuxième gestionnaire pendant les six premiers mois d'application.\n\nEn consultant les macros VBA de l'outil `DORMANT_V3` actuellement en production, Claire réalise un troisième problème : l'outil ne distingue pas non plus le cas des héritiers et clôture depuis deux ans certains comptes à 36 mois sans notification. Si son interprétation est correcte, l'ONVA est potentiellement en situation de non-conformité sur un volume non négligeable de dossiers passés — ce que ni Rachid ni Juridique ne semblent avoir tracé.\n\nLe sprint est jeudi. Rachid est respecté, pressé, et Claire n'a pas envie de passer pour la BA qui complique tout. En début d'après-midi, son tech lead Loïc passe à son bureau : « Tu pars sur le résumé de Rachid pour le BPMN comptes dormants, ou tu vois autre chose ? On fige quoi avant jeudi ? »\n\nClaire lui répond :",
@@ -8215,9 +8223,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_recommend",
         "pc_sources",
-        "pc_causes"
+        "pc_recommend",
+        "pc_causes",
+        "pc_credibility"
       ],
       "situation": "Léa est Business Analyst à l'ONVA depuis huit mois. Elle travaille sur le périmètre « travailleurs intermittents du spectacle » et prépare un rapport de réconciliation entre les paiements de pécule exécutés par l'Office et les déclarations trimestrielles remontées par l'ONSS. Le comité de direction attend ce rapport lundi prochain : il servira de base à la négociation budgétaire avec le SPF Finances.\n\nTrois sources sont censées converger. Le tableau de bord interne `PECULE_DASH` affiche un montant total payé de 142,8 M€ sur 2025. L'export ONSS reçu la semaine dernière annonce 144,1 M€ de cotisations déclarées comme « pécule artistes ». Un troisième fichier, issu de la comptabilité générale de l'Office, donne 141,6 M€ — utilisé chaque année pour la clôture.\n\nLes trois chiffres diffèrent de 1 à 1,8 %, soit 1 à 2,5 M€. Le chef de service, Pierre, survole les chiffres et lui dit : « Prends la moyenne des trois, c'est dans la marge. Le cabinet ne regardera pas au million près. » Léa a pourtant déjà vu, lors d'un précédent audit, que l'écart entre `PECULE_DASH` et la comptabilité tenait à des régularisations tardives passées hors système, et que l'écart ONSS venait d'un périmètre différent (intermittents hors spectacle inclus côté ONSS). Elle n'a pas le temps de refaire une analyse complète, mais elle a accès aux trois extractions détaillées.\n\nÀ 16 h, Pierre repasse devant son bureau : « Alors Léa, tu pars sur quel chiffre pour le rapport ? »\n\nLéa lui répond :",
       "figures": [],
@@ -8259,9 +8268,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_recommend",
         "pc_sources",
-        "pc_causes"
+        "pc_recommend",
+        "pc_causes",
+        "pc_credibility"
       ],
       "situation": "Léa est Business Analyst à l'ONVA depuis huit mois. Elle travaille sur le périmètre « travailleurs intermittents du spectacle » et prépare un rapport de réconciliation entre les paiements de pécule exécutés par l'Office et les déclarations trimestrielles remontées par l'ONSS. Le comité de direction attend ce rapport lundi prochain : il servira de base à la négociation budgétaire avec le SPF Finances.\n\nTrois sources sont censées converger. Le tableau de bord interne `PECULE_DASH` affiche un montant total payé de 142,8 M€ sur 2025. L'export ONSS reçu la semaine dernière annonce 144,1 M€ de cotisations déclarées comme « pécule artistes ». Un troisième fichier, issu de la comptabilité générale de l'Office, donne 141,6 M€ — utilisé chaque année pour la clôture.\n\nLes trois chiffres diffèrent de 1 à 1,8 %, soit 1 à 2,5 M€. Le chef de service, Pierre, survole les chiffres et lui dit : « Prends la moyenne des trois, c'est dans la marge. Le cabinet ne regardera pas au million près. » Léa a pourtant déjà vu, lors d'un précédent audit, que l'écart entre `PECULE_DASH` et la comptabilité tenait à des régularisations tardives passées hors système, et que l'écart ONSS venait d'un périmètre différent (intermittents hors spectacle inclus côté ONSS). Elle n'a pas le temps de refaire une analyse complète, mais elle a accès aux trois extractions détaillées.\n\nÀ 16 h, Pierre repasse devant son bureau : « Alors Léa, tu pars sur quel chiffre pour le rapport ? »\n\nLéa lui répond :",
       "figures": [],
@@ -8303,9 +8313,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_recommend",
         "pc_sources",
-        "pc_causes"
+        "pc_recommend",
+        "pc_causes",
+        "pc_credibility"
       ],
       "situation": "Léa est Business Analyst à l'ONVA depuis huit mois. Elle travaille sur le périmètre « travailleurs intermittents du spectacle » et prépare un rapport de réconciliation entre les paiements de pécule exécutés par l'Office et les déclarations trimestrielles remontées par l'ONSS. Le comité de direction attend ce rapport lundi prochain : il servira de base à la négociation budgétaire avec le SPF Finances.\n\nTrois sources sont censées converger. Le tableau de bord interne `PECULE_DASH` affiche un montant total payé de 142,8 M€ sur 2025. L'export ONSS reçu la semaine dernière annonce 144,1 M€ de cotisations déclarées comme « pécule artistes ». Un troisième fichier, issu de la comptabilité générale de l'Office, donne 141,6 M€ — utilisé chaque année pour la clôture.\n\nLes trois chiffres diffèrent de 1 à 1,8 %, soit 1 à 2,5 M€. Le chef de service, Pierre, survole les chiffres et lui dit : « Prends la moyenne des trois, c'est dans la marge. Le cabinet ne regardera pas au million près. » Léa a pourtant déjà vu, lors d'un précédent audit, que l'écart entre `PECULE_DASH` et la comptabilité tenait à des régularisations tardives passées hors système, et que l'écart ONSS venait d'un périmètre différent (intermittents hors spectacle inclus côté ONSS). Elle n'a pas le temps de refaire une analyse complète, mais elle a accès aux trois extractions détaillées.\n\nÀ 16 h, Pierre repasse devant son bureau : « Alors Léa, tu pars sur quel chiffre pour le rapport ? »\n\nLéa lui répond :",
       "figures": [],
@@ -8347,9 +8358,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_recommend",
         "pc_sources",
-        "pc_causes"
+        "pc_recommend",
+        "pc_causes",
+        "pc_credibility"
       ],
       "situation": "Léa est Business Analyst à l'ONVA depuis huit mois. Elle travaille sur le périmètre « travailleurs intermittents du spectacle » et prépare un rapport de réconciliation entre les paiements de pécule exécutés par l'Office et les déclarations trimestrielles remontées par l'ONSS. Le comité de direction attend ce rapport lundi prochain : il servira de base à la négociation budgétaire avec le SPF Finances.\n\nTrois sources sont censées converger. Le tableau de bord interne `PECULE_DASH` affiche un montant total payé de 142,8 M€ sur 2025. L'export ONSS reçu la semaine dernière annonce 144,1 M€ de cotisations déclarées comme « pécule artistes ». Un troisième fichier, issu de la comptabilité générale de l'Office, donne 141,6 M€ — utilisé chaque année pour la clôture.\n\nLes trois chiffres diffèrent de 1 à 1,8 %, soit 1 à 2,5 M€. Le chef de service, Pierre, survole les chiffres et lui dit : « Prends la moyenne des trois, c'est dans la marge. Le cabinet ne regardera pas au million près. » Léa a pourtant déjà vu, lors d'un précédent audit, que l'écart entre `PECULE_DASH` et la comptabilité tenait à des régularisations tardives passées hors système, et que l'écart ONSS venait d'un périmètre différent (intermittents hors spectacle inclus côté ONSS). Elle n'a pas le temps de refaire une analyse complète, mais elle a accès aux trois extractions détaillées.\n\nÀ 16 h, Pierre repasse devant son bureau : « Alors Léa, tu pars sur quel chiffre pour le rapport ? »\n\nLéa lui répond :",
       "figures": [],
@@ -8394,6 +8406,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_anticipate",
+        "pc_recommend",
         "pc_sources"
       ],
       "situation": "Marwan est Business Analyst à l'ONVA depuis deux ans. Il mène l'audit du processus `CALCUL_SUPPL_MAL` qui calcule le supplément de pécule lié aux jours d'incapacité de travail assimilés à des jours prestés. Depuis six mois, le service support reçoit des plaintes sporadiques d'ayants droit qui affirment que leur pécule est inférieur au montant attendu. Le directeur des opérations, Vincent D., veut savoir si l'Office a un bug systémique ou seulement des cas isolés.\n\nMarwan a trois éléments. D'abord, une requête SQL lancée sur la base de production : sur 128 000 calculs 2025, 312 dossiers présentent un écart négatif supérieur à 50 € par rapport à un recalcul manuel simplifié — soit 0,24 %. Ensuite, le service support a ouvert 47 tickets GLPI comparables en six mois, tous clos avec un geste commercial. Enfin, un développeur, Ibrahim, lui confie qu'une règle d'arrondi a été modifiée lors d'un patch en janvier « pour aligner sur la comptabilité », sans test de non-régression documenté.\n\nLe comité de pilotage est dans cinq jours. Vincent D. préférerait une conclusion rassurante : un audit externe est annoncé pour le trimestre suivant, et un bug reconnu maintenant compliquerait les choses. Il glisse à Marwan : « 0,24 %, franchement, c'est du bruit. Non ? »\n\nLe matin du comité, Vincent D. l'attrape dans le couloir : « Marwan, ta conclusion, c'est quoi ? Bug ou pas bug ? »\n\nMarwan lui répond :",
@@ -8439,6 +8452,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_anticipate",
+        "pc_recommend",
         "pc_sources"
       ],
       "situation": "Marwan est Business Analyst à l'ONVA depuis deux ans. Il mène l'audit du processus `CALCUL_SUPPL_MAL` qui calcule le supplément de pécule lié aux jours d'incapacité de travail assimilés à des jours prestés. Depuis six mois, le service support reçoit des plaintes sporadiques d'ayants droit qui affirment que leur pécule est inférieur au montant attendu. Le directeur des opérations, Vincent D., veut savoir si l'Office a un bug systémique ou seulement des cas isolés.\n\nMarwan a trois éléments. D'abord, une requête SQL lancée sur la base de production : sur 128 000 calculs 2025, 312 dossiers présentent un écart négatif supérieur à 50 € par rapport à un recalcul manuel simplifié — soit 0,24 %. Ensuite, le service support a ouvert 47 tickets GLPI comparables en six mois, tous clos avec un geste commercial. Enfin, un développeur, Ibrahim, lui confie qu'une règle d'arrondi a été modifiée lors d'un patch en janvier « pour aligner sur la comptabilité », sans test de non-régression documenté.\n\nLe comité de pilotage est dans cinq jours. Vincent D. préférerait une conclusion rassurante : un audit externe est annoncé pour le trimestre suivant, et un bug reconnu maintenant compliquerait les choses. Il glisse à Marwan : « 0,24 %, franchement, c'est du bruit. Non ? »\n\nLe matin du comité, Vincent D. l'attrape dans le couloir : « Marwan, ta conclusion, c'est quoi ? Bug ou pas bug ? »\n\nMarwan lui répond :",
@@ -8484,6 +8498,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_anticipate",
+        "pc_recommend",
         "pc_sources"
       ],
       "situation": "Marwan est Business Analyst à l'ONVA depuis deux ans. Il mène l'audit du processus `CALCUL_SUPPL_MAL` qui calcule le supplément de pécule lié aux jours d'incapacité de travail assimilés à des jours prestés. Depuis six mois, le service support reçoit des plaintes sporadiques d'ayants droit qui affirment que leur pécule est inférieur au montant attendu. Le directeur des opérations, Vincent D., veut savoir si l'Office a un bug systémique ou seulement des cas isolés.\n\nMarwan a trois éléments. D'abord, une requête SQL lancée sur la base de production : sur 128 000 calculs 2025, 312 dossiers présentent un écart négatif supérieur à 50 € par rapport à un recalcul manuel simplifié — soit 0,24 %. Ensuite, le service support a ouvert 47 tickets GLPI comparables en six mois, tous clos avec un geste commercial. Enfin, un développeur, Ibrahim, lui confie qu'une règle d'arrondi a été modifiée lors d'un patch en janvier « pour aligner sur la comptabilité », sans test de non-régression documenté.\n\nLe comité de pilotage est dans cinq jours. Vincent D. préférerait une conclusion rassurante : un audit externe est annoncé pour le trimestre suivant, et un bug reconnu maintenant compliquerait les choses. Il glisse à Marwan : « 0,24 %, franchement, c'est du bruit. Non ? »\n\nLe matin du comité, Vincent D. l'attrape dans le couloir : « Marwan, ta conclusion, c'est quoi ? Bug ou pas bug ? »\n\nMarwan lui répond :",
@@ -8529,6 +8544,7 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_credibility",
         "pc_anticipate",
+        "pc_recommend",
         "pc_sources"
       ],
       "situation": "Marwan est Business Analyst à l'ONVA depuis deux ans. Il mène l'audit du processus `CALCUL_SUPPL_MAL` qui calcule le supplément de pécule lié aux jours d'incapacité de travail assimilés à des jours prestés. Depuis six mois, le service support reçoit des plaintes sporadiques d'ayants droit qui affirment que leur pécule est inférieur au montant attendu. Le directeur des opérations, Vincent D., veut savoir si l'Office a un bug systémique ou seulement des cas isolés.\n\nMarwan a trois éléments. D'abord, une requête SQL lancée sur la base de production : sur 128 000 calculs 2025, 312 dossiers présentent un écart négatif supérieur à 50 € par rapport à un recalcul manuel simplifié — soit 0,24 %. Ensuite, le service support a ouvert 47 tickets GLPI comparables en six mois, tous clos avec un geste commercial. Enfin, un développeur, Ibrahim, lui confie qu'une règle d'arrondi a été modifiée lors d'un patch en janvier « pour aligner sur la comptabilité », sans test de non-régression documenté.\n\nLe comité de pilotage est dans cinq jours. Vincent D. préférerait une conclusion rassurante : un audit externe est annoncé pour le trimestre suivant, et un bug reconnu maintenant compliquerait les choses. Il glisse à Marwan : « 0,24 %, franchement, c'est du bruit. Non ? »\n\nLe matin du comité, Vincent D. l'attrape dans le couloir : « Marwan, ta conclusion, c'est quoi ? Bug ou pas bug ? »\n\nMarwan lui répond :",
@@ -8731,6 +8747,7 @@ window.QUESTIONS_DB = {
         "CL2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_credibility",
         "pc_elements",
         "pc_anticipate"
@@ -8775,6 +8792,7 @@ window.QUESTIONS_DB = {
         "CL2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_credibility",
         "pc_elements",
         "pc_anticipate"
@@ -8819,6 +8837,7 @@ window.QUESTIONS_DB = {
         "CL2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_credibility",
         "pc_elements",
         "pc_anticipate"
@@ -8863,6 +8882,7 @@ window.QUESTIONS_DB = {
         "CL2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_credibility",
         "pc_elements",
         "pc_anticipate"
@@ -8907,7 +8927,9 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_elements"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Inès est Business Analyst à l'ONVA depuis six mois. Elle prépare la recette fonctionnelle de la nouvelle application `PECULE_NEW`, qui doit remplacer les macros Access sur le calcul du pécule ordinaire. La mise en production est prévue dans trois semaines, après dix-huit mois de projet. L'équipe QA a livré son rapport de tests : 96 % des 4 200 cas de test passent au vert.\n\nLe chef de projet, Hervé, est enthousiaste : « 96 %, c'est plus que le seuil contractuel de 95 %. On peut déclencher la bascule. » Il prépare la communication au comité de pilotage prévu dans quatre jours.\n\nInès examine les 4 % restants — 168 cas KO. Elle les croise avec la typologie des dossiers. Trois observations émergent. D'abord, 132 des 168 cas KO concernent un sous-scénario spécifique : les travailleurs ayant changé d'employeur au cours du 4e trimestre avec un chevauchement d'au moins un jour. Ensuite, ce sous-scénario représente, dans la production réelle 2024, environ 3 700 dossiers par an — soit 2,8 % du volume, mais un impact financier moyen de 340 € par dossier. Enfin, un test manuel rapide sur cinq dossiers réels montre un écart systématique : l'application sous-évalue le pécule d'environ 12 % dans ce cas.\n\nLa règle contractuelle dit « 95 % de cas de test passés », mais ne segmente pas par impact. Techniquement, Hervé a raison. Pratiquement, la mise en prod entraînerait 3 700 paiements annuels sous-évalués.\n\nEn fin de journée, Hervé passe à son bureau : « Inès, tu valides la bascule ? J'aimerais bloquer la com demain matin. »\n\nInès lui répond :",
       "figures": [],
@@ -8949,7 +8971,9 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_elements"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Inès est Business Analyst à l'ONVA depuis six mois. Elle prépare la recette fonctionnelle de la nouvelle application `PECULE_NEW`, qui doit remplacer les macros Access sur le calcul du pécule ordinaire. La mise en production est prévue dans trois semaines, après dix-huit mois de projet. L'équipe QA a livré son rapport de tests : 96 % des 4 200 cas de test passent au vert.\n\nLe chef de projet, Hervé, est enthousiaste : « 96 %, c'est plus que le seuil contractuel de 95 %. On peut déclencher la bascule. » Il prépare la communication au comité de pilotage prévu dans quatre jours.\n\nInès examine les 4 % restants — 168 cas KO. Elle les croise avec la typologie des dossiers. Trois observations émergent. D'abord, 132 des 168 cas KO concernent un sous-scénario spécifique : les travailleurs ayant changé d'employeur au cours du 4e trimestre avec un chevauchement d'au moins un jour. Ensuite, ce sous-scénario représente, dans la production réelle 2024, environ 3 700 dossiers par an — soit 2,8 % du volume, mais un impact financier moyen de 340 € par dossier. Enfin, un test manuel rapide sur cinq dossiers réels montre un écart systématique : l'application sous-évalue le pécule d'environ 12 % dans ce cas.\n\nLa règle contractuelle dit « 95 % de cas de test passés », mais ne segmente pas par impact. Techniquement, Hervé a raison. Pratiquement, la mise en prod entraînerait 3 700 paiements annuels sous-évalués.\n\nEn fin de journée, Hervé passe à son bureau : « Inès, tu valides la bascule ? J'aimerais bloquer la com demain matin. »\n\nInès lui répond :",
       "figures": [],
@@ -8991,7 +9015,9 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_elements"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Inès est Business Analyst à l'ONVA depuis six mois. Elle prépare la recette fonctionnelle de la nouvelle application `PECULE_NEW`, qui doit remplacer les macros Access sur le calcul du pécule ordinaire. La mise en production est prévue dans trois semaines, après dix-huit mois de projet. L'équipe QA a livré son rapport de tests : 96 % des 4 200 cas de test passent au vert.\n\nLe chef de projet, Hervé, est enthousiaste : « 96 %, c'est plus que le seuil contractuel de 95 %. On peut déclencher la bascule. » Il prépare la communication au comité de pilotage prévu dans quatre jours.\n\nInès examine les 4 % restants — 168 cas KO. Elle les croise avec la typologie des dossiers. Trois observations émergent. D'abord, 132 des 168 cas KO concernent un sous-scénario spécifique : les travailleurs ayant changé d'employeur au cours du 4e trimestre avec un chevauchement d'au moins un jour. Ensuite, ce sous-scénario représente, dans la production réelle 2024, environ 3 700 dossiers par an — soit 2,8 % du volume, mais un impact financier moyen de 340 € par dossier. Enfin, un test manuel rapide sur cinq dossiers réels montre un écart systématique : l'application sous-évalue le pécule d'environ 12 % dans ce cas.\n\nLa règle contractuelle dit « 95 % de cas de test passés », mais ne segmente pas par impact. Techniquement, Hervé a raison. Pratiquement, la mise en prod entraînerait 3 700 paiements annuels sous-évalués.\n\nEn fin de journée, Hervé passe à son bureau : « Inès, tu valides la bascule ? J'aimerais bloquer la com demain matin. »\n\nInès lui répond :",
       "figures": [],
@@ -9033,7 +9059,9 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "pc_elements"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Inès est Business Analyst à l'ONVA depuis six mois. Elle prépare la recette fonctionnelle de la nouvelle application `PECULE_NEW`, qui doit remplacer les macros Access sur le calcul du pécule ordinaire. La mise en production est prévue dans trois semaines, après dix-huit mois de projet. L'équipe QA a livré son rapport de tests : 96 % des 4 200 cas de test passent au vert.\n\nLe chef de projet, Hervé, est enthousiaste : « 96 %, c'est plus que le seuil contractuel de 95 %. On peut déclencher la bascule. » Il prépare la communication au comité de pilotage prévu dans quatre jours.\n\nInès examine les 4 % restants — 168 cas KO. Elle les croise avec la typologie des dossiers. Trois observations émergent. D'abord, 132 des 168 cas KO concernent un sous-scénario spécifique : les travailleurs ayant changé d'employeur au cours du 4e trimestre avec un chevauchement d'au moins un jour. Ensuite, ce sous-scénario représente, dans la production réelle 2024, environ 3 700 dossiers par an — soit 2,8 % du volume, mais un impact financier moyen de 340 € par dossier. Enfin, un test manuel rapide sur cinq dossiers réels montre un écart systématique : l'application sous-évalue le pécule d'environ 12 % dans ce cas.\n\nLa règle contractuelle dit « 95 % de cas de test passés », mais ne segmente pas par impact. Techniquement, Hervé a raison. Pratiquement, la mise en prod entraînerait 3 700 paiements annuels sous-évalués.\n\nEn fin de journée, Hervé passe à son bureau : « Inès, tu valides la bascule ? J'aimerais bloquer la com demain matin. »\n\nInès lui répond :",
       "figures": [],
@@ -9075,9 +9103,10 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_recommend",
-        "pc_elements"
+        "pc_credibility",
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Bastien est Business Analyst à l'ONVA depuis un an. Il accompagne un projet pilote de reconnaissance automatique des pièces justificatives via un outil d'OCR intelligent, proposé par un fournisseur externe pour remplacer le tri manuel des gestionnaires. Le fournisseur affiche un taux de reconnaissance annoncé à 94 % sur « documents standards ».\n\nAprès deux mois de pilote sur 3 500 pièces, l'équipe fournisseur remet son rapport : 91,7 % de reconnaissance correcte, « en ligne avec les engagements ». Le comité d'achat est dans deux semaines ; un contrat de 380 k€/an est en jeu. Bastien a accès aux logs détaillés du pilote.\n\nIl remarque trois choses. D'abord, sur les 3 500 pièces, 2 800 étaient des attestations employeur type A (format standard PDF), avec 97 % de reconnaissance. Les 700 autres — attestations manuscrites, scans photo, formulaires anciens — ont eu seulement 71 % de reconnaissance. Or la répartition réelle du flux de production est plus défavorable : d'après une extraction GLPI sur 2024, environ 35 % des pièces traitées sont non-standards. Ensuite, les 8,3 % d'erreurs du pilote ne sont pas toutes équivalentes : 40 % sont des faux positifs (document mal classé, risque de mauvais paiement), 60 % des refus qu'un humain doit retraiter. Enfin, le contrat prévoit un bonus/malus sur le taux global, sans segmentation par type de pièce.\n\nSa cheffe, Estelle, lui demande : « Bastien, tu me dis si on signe ou pas. Le comité est dans deux semaines. »\n\nBastien lui répond :",
       "figures": [],
@@ -9119,9 +9148,10 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_recommend",
-        "pc_elements"
+        "pc_credibility",
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Bastien est Business Analyst à l'ONVA depuis un an. Il accompagne un projet pilote de reconnaissance automatique des pièces justificatives via un outil d'OCR intelligent, proposé par un fournisseur externe pour remplacer le tri manuel des gestionnaires. Le fournisseur affiche un taux de reconnaissance annoncé à 94 % sur « documents standards ».\n\nAprès deux mois de pilote sur 3 500 pièces, l'équipe fournisseur remet son rapport : 91,7 % de reconnaissance correcte, « en ligne avec les engagements ». Le comité d'achat est dans deux semaines ; un contrat de 380 k€/an est en jeu. Bastien a accès aux logs détaillés du pilote.\n\nIl remarque trois choses. D'abord, sur les 3 500 pièces, 2 800 étaient des attestations employeur type A (format standard PDF), avec 97 % de reconnaissance. Les 700 autres — attestations manuscrites, scans photo, formulaires anciens — ont eu seulement 71 % de reconnaissance. Or la répartition réelle du flux de production est plus défavorable : d'après une extraction GLPI sur 2024, environ 35 % des pièces traitées sont non-standards. Ensuite, les 8,3 % d'erreurs du pilote ne sont pas toutes équivalentes : 40 % sont des faux positifs (document mal classé, risque de mauvais paiement), 60 % des refus qu'un humain doit retraiter. Enfin, le contrat prévoit un bonus/malus sur le taux global, sans segmentation par type de pièce.\n\nSa cheffe, Estelle, lui demande : « Bastien, tu me dis si on signe ou pas. Le comité est dans deux semaines. »\n\nBastien lui répond :",
       "figures": [],
@@ -9163,9 +9193,10 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_recommend",
-        "pc_elements"
+        "pc_credibility",
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Bastien est Business Analyst à l'ONVA depuis un an. Il accompagne un projet pilote de reconnaissance automatique des pièces justificatives via un outil d'OCR intelligent, proposé par un fournisseur externe pour remplacer le tri manuel des gestionnaires. Le fournisseur affiche un taux de reconnaissance annoncé à 94 % sur « documents standards ».\n\nAprès deux mois de pilote sur 3 500 pièces, l'équipe fournisseur remet son rapport : 91,7 % de reconnaissance correcte, « en ligne avec les engagements ». Le comité d'achat est dans deux semaines ; un contrat de 380 k€/an est en jeu. Bastien a accès aux logs détaillés du pilote.\n\nIl remarque trois choses. D'abord, sur les 3 500 pièces, 2 800 étaient des attestations employeur type A (format standard PDF), avec 97 % de reconnaissance. Les 700 autres — attestations manuscrites, scans photo, formulaires anciens — ont eu seulement 71 % de reconnaissance. Or la répartition réelle du flux de production est plus défavorable : d'après une extraction GLPI sur 2024, environ 35 % des pièces traitées sont non-standards. Ensuite, les 8,3 % d'erreurs du pilote ne sont pas toutes équivalentes : 40 % sont des faux positifs (document mal classé, risque de mauvais paiement), 60 % des refus qu'un humain doit retraiter. Enfin, le contrat prévoit un bonus/malus sur le taux global, sans segmentation par type de pièce.\n\nSa cheffe, Estelle, lui demande : « Bastien, tu me dis si on signe ou pas. Le comité est dans deux semaines. »\n\nBastien lui répond :",
       "figures": [],
@@ -9207,9 +9238,10 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_recommend",
-        "pc_elements"
+        "pc_credibility",
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Bastien est Business Analyst à l'ONVA depuis un an. Il accompagne un projet pilote de reconnaissance automatique des pièces justificatives via un outil d'OCR intelligent, proposé par un fournisseur externe pour remplacer le tri manuel des gestionnaires. Le fournisseur affiche un taux de reconnaissance annoncé à 94 % sur « documents standards ».\n\nAprès deux mois de pilote sur 3 500 pièces, l'équipe fournisseur remet son rapport : 91,7 % de reconnaissance correcte, « en ligne avec les engagements ». Le comité d'achat est dans deux semaines ; un contrat de 380 k€/an est en jeu. Bastien a accès aux logs détaillés du pilote.\n\nIl remarque trois choses. D'abord, sur les 3 500 pièces, 2 800 étaient des attestations employeur type A (format standard PDF), avec 97 % de reconnaissance. Les 700 autres — attestations manuscrites, scans photo, formulaires anciens — ont eu seulement 71 % de reconnaissance. Or la répartition réelle du flux de production est plus défavorable : d'après une extraction GLPI sur 2024, environ 35 % des pièces traitées sont non-standards. Ensuite, les 8,3 % d'erreurs du pilote ne sont pas toutes équivalentes : 40 % sont des faux positifs (document mal classé, risque de mauvais paiement), 60 % des refus qu'un humain doit retraiter. Enfin, le contrat prévoit un bonus/malus sur le taux global, sans segmentation par type de pièce.\n\nSa cheffe, Estelle, lui demande : « Bastien, tu me dis si on signe ou pas. Le comité est dans deux semaines. »\n\nBastien lui répond :",
       "figures": [],
@@ -9253,8 +9285,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_recommend",
         "pc_credibility",
-        "pc_elements"
+        "pc_sources"
       ],
       "situation": "Camille est Business Analyst à l'ONVA depuis quatre ans. Elle cadre une évolution du processus de contrôle anti-fraude sur les déclarations de pécule. L'équipe data a proposé un nouveau règle : tout dossier avec un montant annuel > 8 500 € et un employeur récemment inscrit au registre ONSS (< 18 mois) est flaggé pour contrôle approfondi. Simulée sur 2024, la règle aurait flaggé 2 100 dossiers supplémentaires, dont 380 auraient été confirmés en fraude avérée — un gain estimé de 420 k€.\n\nEn lisant la simulation, Camille remarque deux choses. D'abord, sur les 2 100 dossiers flaggés, 1 720 ne seraient pas des fraudes : leur seul « défaut » est d'avoir un employeur jeune et un montant élevé. Parmi eux, la simulation montre une sur-représentation de certains secteurs (HORECA, construction, aide à domicile) et de travailleurs avec des noms d'origine non-belge — des profils déjà statistiquement sur-contrôlés. Ensuite, le contrôle approfondi allonge le délai de paiement d'environ six semaines, pendant lesquelles le travailleur n'a pas son pécule.\n\nLa cheffe du service contrôle, Isabelle, est favorable : « 420 k€ de gain, c'est un argument béton pour le comité. » Le délégué syndical, informé par un canal informel, a déjà exprimé une inquiétude sur « le profilage indirect ». Le DPO n'a pas été consulté. La décision est attendue jeudi.\n\nMardi soir, Isabelle glisse à Camille : « Tu me rédiges la note favorable pour jeudi ? »\n\nCamille lui répond :",
       "figures": [],
@@ -9298,8 +9331,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_recommend",
         "pc_credibility",
-        "pc_elements"
+        "pc_sources"
       ],
       "situation": "Camille est Business Analyst à l'ONVA depuis quatre ans. Elle cadre une évolution du processus de contrôle anti-fraude sur les déclarations de pécule. L'équipe data a proposé un nouveau règle : tout dossier avec un montant annuel > 8 500 € et un employeur récemment inscrit au registre ONSS (< 18 mois) est flaggé pour contrôle approfondi. Simulée sur 2024, la règle aurait flaggé 2 100 dossiers supplémentaires, dont 380 auraient été confirmés en fraude avérée — un gain estimé de 420 k€.\n\nEn lisant la simulation, Camille remarque deux choses. D'abord, sur les 2 100 dossiers flaggés, 1 720 ne seraient pas des fraudes : leur seul « défaut » est d'avoir un employeur jeune et un montant élevé. Parmi eux, la simulation montre une sur-représentation de certains secteurs (HORECA, construction, aide à domicile) et de travailleurs avec des noms d'origine non-belge — des profils déjà statistiquement sur-contrôlés. Ensuite, le contrôle approfondi allonge le délai de paiement d'environ six semaines, pendant lesquelles le travailleur n'a pas son pécule.\n\nLa cheffe du service contrôle, Isabelle, est favorable : « 420 k€ de gain, c'est un argument béton pour le comité. » Le délégué syndical, informé par un canal informel, a déjà exprimé une inquiétude sur « le profilage indirect ». Le DPO n'a pas été consulté. La décision est attendue jeudi.\n\nMardi soir, Isabelle glisse à Camille : « Tu me rédiges la note favorable pour jeudi ? »\n\nCamille lui répond :",
       "figures": [],
@@ -9343,8 +9377,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_recommend",
         "pc_credibility",
-        "pc_elements"
+        "pc_sources"
       ],
       "situation": "Camille est Business Analyst à l'ONVA depuis quatre ans. Elle cadre une évolution du processus de contrôle anti-fraude sur les déclarations de pécule. L'équipe data a proposé un nouveau règle : tout dossier avec un montant annuel > 8 500 € et un employeur récemment inscrit au registre ONSS (< 18 mois) est flaggé pour contrôle approfondi. Simulée sur 2024, la règle aurait flaggé 2 100 dossiers supplémentaires, dont 380 auraient été confirmés en fraude avérée — un gain estimé de 420 k€.\n\nEn lisant la simulation, Camille remarque deux choses. D'abord, sur les 2 100 dossiers flaggés, 1 720 ne seraient pas des fraudes : leur seul « défaut » est d'avoir un employeur jeune et un montant élevé. Parmi eux, la simulation montre une sur-représentation de certains secteurs (HORECA, construction, aide à domicile) et de travailleurs avec des noms d'origine non-belge — des profils déjà statistiquement sur-contrôlés. Ensuite, le contrôle approfondi allonge le délai de paiement d'environ six semaines, pendant lesquelles le travailleur n'a pas son pécule.\n\nLa cheffe du service contrôle, Isabelle, est favorable : « 420 k€ de gain, c'est un argument béton pour le comité. » Le délégué syndical, informé par un canal informel, a déjà exprimé une inquiétude sur « le profilage indirect ». Le DPO n'a pas été consulté. La décision est attendue jeudi.\n\nMardi soir, Isabelle glisse à Camille : « Tu me rédiges la note favorable pour jeudi ? »\n\nCamille lui répond :",
       "figures": [],
@@ -9388,8 +9423,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_recommend",
         "pc_credibility",
-        "pc_elements"
+        "pc_sources"
       ],
       "situation": "Camille est Business Analyst à l'ONVA depuis quatre ans. Elle cadre une évolution du processus de contrôle anti-fraude sur les déclarations de pécule. L'équipe data a proposé un nouveau règle : tout dossier avec un montant annuel > 8 500 € et un employeur récemment inscrit au registre ONSS (< 18 mois) est flaggé pour contrôle approfondi. Simulée sur 2024, la règle aurait flaggé 2 100 dossiers supplémentaires, dont 380 auraient été confirmés en fraude avérée — un gain estimé de 420 k€.\n\nEn lisant la simulation, Camille remarque deux choses. D'abord, sur les 2 100 dossiers flaggés, 1 720 ne seraient pas des fraudes : leur seul « défaut » est d'avoir un employeur jeune et un montant élevé. Parmi eux, la simulation montre une sur-représentation de certains secteurs (HORECA, construction, aide à domicile) et de travailleurs avec des noms d'origine non-belge — des profils déjà statistiquement sur-contrôlés. Ensuite, le contrôle approfondi allonge le délai de paiement d'environ six semaines, pendant lesquelles le travailleur n'a pas son pécule.\n\nLa cheffe du service contrôle, Isabelle, est favorable : « 420 k€ de gain, c'est un argument béton pour le comité. » Le délégué syndical, informé par un canal informel, a déjà exprimé une inquiétude sur « le profilage indirect ». Le DPO n'a pas été consulté. La décision est attendue jeudi.\n\nMardi soir, Isabelle glisse à Camille : « Tu me rédiges la note favorable pour jeudi ? »\n\nCamille lui répond :",
       "figures": [],
@@ -9592,8 +9628,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_sources",
         "pc_credibility",
-        "pc_sources"
+        "pc_recommend"
       ],
       "situation": "Élodie est Business Analyst à l'ONVA depuis deux ans. Elle intervient sur un incident de production : depuis mardi, environ 1 % des dossiers clôturés affichent un montant de pécule à zéro euro, alors que les montants calculés en coulisses sont corrects. Le service support reçoit une quarantaine d'appels par jour d'ayants droit inquiets.\n\nTrois hypothèses circulent. Le tech lead, Abdel, pointe un patch de formatage monétaire déployé vendredi dernier : « C'est sûrement ça, on annule le patch et on voit. » La data analyste, Virginie, montre un pic d'incohérences concentré sur les dossiers dont le pécule est inférieur à 50 €, et évoque un éventuel filtre de masquage mal calibré. Un gestionnaire, Marc, rappelle qu'une opération batch de nettoyage d'archives a tourné dimanche soir — peut-être un effet de bord.\n\nLe comité de crise est à 15 h. Le directeur opérationnel veut une décision claire : rollback du patch ? Rollback du batch d'archives ? Correction du filtre ? Un mauvais choix allongerait l'incident de plusieurs jours et produirait une crise de communication.\n\nÉlodie a accès aux logs applicatifs, à la base de production en lecture, et aux tickets GLPI. Elle a 75 minutes avant le comité.\n\nLoïc, son chef de projet, passe : « Élodie, à 15 h il faut une réponse. Qu'est-ce que tu fais de ton quart d'heure ? »\n\nÉlodie lui répond :",
       "figures": [],
@@ -9636,8 +9673,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_sources",
         "pc_credibility",
-        "pc_sources"
+        "pc_recommend"
       ],
       "situation": "Élodie est Business Analyst à l'ONVA depuis deux ans. Elle intervient sur un incident de production : depuis mardi, environ 1 % des dossiers clôturés affichent un montant de pécule à zéro euro, alors que les montants calculés en coulisses sont corrects. Le service support reçoit une quarantaine d'appels par jour d'ayants droit inquiets.\n\nTrois hypothèses circulent. Le tech lead, Abdel, pointe un patch de formatage monétaire déployé vendredi dernier : « C'est sûrement ça, on annule le patch et on voit. » La data analyste, Virginie, montre un pic d'incohérences concentré sur les dossiers dont le pécule est inférieur à 50 €, et évoque un éventuel filtre de masquage mal calibré. Un gestionnaire, Marc, rappelle qu'une opération batch de nettoyage d'archives a tourné dimanche soir — peut-être un effet de bord.\n\nLe comité de crise est à 15 h. Le directeur opérationnel veut une décision claire : rollback du patch ? Rollback du batch d'archives ? Correction du filtre ? Un mauvais choix allongerait l'incident de plusieurs jours et produirait une crise de communication.\n\nÉlodie a accès aux logs applicatifs, à la base de production en lecture, et aux tickets GLPI. Elle a 75 minutes avant le comité.\n\nLoïc, son chef de projet, passe : « Élodie, à 15 h il faut une réponse. Qu'est-ce que tu fais de ton quart d'heure ? »\n\nÉlodie lui répond :",
       "figures": [],
@@ -9680,8 +9718,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_sources",
         "pc_credibility",
-        "pc_sources"
+        "pc_recommend"
       ],
       "situation": "Élodie est Business Analyst à l'ONVA depuis deux ans. Elle intervient sur un incident de production : depuis mardi, environ 1 % des dossiers clôturés affichent un montant de pécule à zéro euro, alors que les montants calculés en coulisses sont corrects. Le service support reçoit une quarantaine d'appels par jour d'ayants droit inquiets.\n\nTrois hypothèses circulent. Le tech lead, Abdel, pointe un patch de formatage monétaire déployé vendredi dernier : « C'est sûrement ça, on annule le patch et on voit. » La data analyste, Virginie, montre un pic d'incohérences concentré sur les dossiers dont le pécule est inférieur à 50 €, et évoque un éventuel filtre de masquage mal calibré. Un gestionnaire, Marc, rappelle qu'une opération batch de nettoyage d'archives a tourné dimanche soir — peut-être un effet de bord.\n\nLe comité de crise est à 15 h. Le directeur opérationnel veut une décision claire : rollback du patch ? Rollback du batch d'archives ? Correction du filtre ? Un mauvais choix allongerait l'incident de plusieurs jours et produirait une crise de communication.\n\nÉlodie a accès aux logs applicatifs, à la base de production en lecture, et aux tickets GLPI. Elle a 75 minutes avant le comité.\n\nLoïc, son chef de projet, passe : « Élodie, à 15 h il faut une réponse. Qu'est-ce que tu fais de ton quart d'heure ? »\n\nÉlodie lui répond :",
       "figures": [],
@@ -9724,8 +9763,9 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_sources",
         "pc_credibility",
-        "pc_sources"
+        "pc_recommend"
       ],
       "situation": "Élodie est Business Analyst à l'ONVA depuis deux ans. Elle intervient sur un incident de production : depuis mardi, environ 1 % des dossiers clôturés affichent un montant de pécule à zéro euro, alors que les montants calculés en coulisses sont corrects. Le service support reçoit une quarantaine d'appels par jour d'ayants droit inquiets.\n\nTrois hypothèses circulent. Le tech lead, Abdel, pointe un patch de formatage monétaire déployé vendredi dernier : « C'est sûrement ça, on annule le patch et on voit. » La data analyste, Virginie, montre un pic d'incohérences concentré sur les dossiers dont le pécule est inférieur à 50 €, et évoque un éventuel filtre de masquage mal calibré. Un gestionnaire, Marc, rappelle qu'une opération batch de nettoyage d'archives a tourné dimanche soir — peut-être un effet de bord.\n\nLe comité de crise est à 15 h. Le directeur opérationnel veut une décision claire : rollback du patch ? Rollback du batch d'archives ? Correction du filtre ? Un mauvais choix allongerait l'incident de plusieurs jours et produirait une crise de communication.\n\nÉlodie a accès aux logs applicatifs, à la base de production en lecture, et aux tickets GLPI. Elle a 75 minutes avant le comité.\n\nLoïc, son chef de projet, passe : « Élodie, à 15 h il faut une réponse. Qu'est-ce que tu fais de ton quart d'heure ? »\n\nÉlodie lui répond :",
       "figures": [],
@@ -9941,7 +9981,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_anticipate",
         "pc_credibility",
-        "pc_recommend"
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Margot est Business Analyst à l'ONVA depuis onze mois. Elle analyse la possibilité d'automatiser partiellement le traitement des demandes de rectification de pécule après clôture annuelle, via une règle métier inscrite dans le moteur de workflow. Le service opérations traite environ 9 200 demandes de ce type par an, avec un backlog chronique et un délai moyen de 42 jours.\n\nLe cabinet conseil mandaté il y a six mois a remis un benchmark : « une administration belge comparable a automatisé 60 % de ce type de demandes et réduit le délai à 12 jours ». Le directeur général, séduit, pousse pour démarrer vite. Sa feuille de route : appel d'offres en avril, POC en juin, pilote en septembre, généralisation en décembre.\n\nMargot, en creusant le benchmark, trouve trois choses. D'abord, l'administration citée en référence traite un volume dix fois supérieur, avec une équipe data de 18 personnes ; l'ONVA en a 2. Ensuite, les 60 % automatisés là-bas concernent un type de demande plus simple (rectification d'adresse), pas de pécule. Enfin, un pilote similaire tenté en 2022 à l'ONVA s'était arrêté après six mois : 17 % seulement de cas automatisables, le reste remontait en exception avec une perte de confiance des gestionnaires. Le rapport de ce pilote 2022 est archivé sur le serveur mais personne ne l'a rouvert.\n\nLa cheffe de projet, Anouk, vient la voir : « Margot, tu rédiges le cahier des charges de l'appel d'offres pour la semaine prochaine ? »\n\nMargot lui répond :",
       "figures": [],
@@ -9985,7 +10026,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_anticipate",
         "pc_credibility",
-        "pc_recommend"
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Margot est Business Analyst à l'ONVA depuis onze mois. Elle analyse la possibilité d'automatiser partiellement le traitement des demandes de rectification de pécule après clôture annuelle, via une règle métier inscrite dans le moteur de workflow. Le service opérations traite environ 9 200 demandes de ce type par an, avec un backlog chronique et un délai moyen de 42 jours.\n\nLe cabinet conseil mandaté il y a six mois a remis un benchmark : « une administration belge comparable a automatisé 60 % de ce type de demandes et réduit le délai à 12 jours ». Le directeur général, séduit, pousse pour démarrer vite. Sa feuille de route : appel d'offres en avril, POC en juin, pilote en septembre, généralisation en décembre.\n\nMargot, en creusant le benchmark, trouve trois choses. D'abord, l'administration citée en référence traite un volume dix fois supérieur, avec une équipe data de 18 personnes ; l'ONVA en a 2. Ensuite, les 60 % automatisés là-bas concernent un type de demande plus simple (rectification d'adresse), pas de pécule. Enfin, un pilote similaire tenté en 2022 à l'ONVA s'était arrêté après six mois : 17 % seulement de cas automatisables, le reste remontait en exception avec une perte de confiance des gestionnaires. Le rapport de ce pilote 2022 est archivé sur le serveur mais personne ne l'a rouvert.\n\nLa cheffe de projet, Anouk, vient la voir : « Margot, tu rédiges le cahier des charges de l'appel d'offres pour la semaine prochaine ? »\n\nMargot lui répond :",
       "figures": [],
@@ -10029,7 +10071,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_anticipate",
         "pc_credibility",
-        "pc_recommend"
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Margot est Business Analyst à l'ONVA depuis onze mois. Elle analyse la possibilité d'automatiser partiellement le traitement des demandes de rectification de pécule après clôture annuelle, via une règle métier inscrite dans le moteur de workflow. Le service opérations traite environ 9 200 demandes de ce type par an, avec un backlog chronique et un délai moyen de 42 jours.\n\nLe cabinet conseil mandaté il y a six mois a remis un benchmark : « une administration belge comparable a automatisé 60 % de ce type de demandes et réduit le délai à 12 jours ». Le directeur général, séduit, pousse pour démarrer vite. Sa feuille de route : appel d'offres en avril, POC en juin, pilote en septembre, généralisation en décembre.\n\nMargot, en creusant le benchmark, trouve trois choses. D'abord, l'administration citée en référence traite un volume dix fois supérieur, avec une équipe data de 18 personnes ; l'ONVA en a 2. Ensuite, les 60 % automatisés là-bas concernent un type de demande plus simple (rectification d'adresse), pas de pécule. Enfin, un pilote similaire tenté en 2022 à l'ONVA s'était arrêté après six mois : 17 % seulement de cas automatisables, le reste remontait en exception avec une perte de confiance des gestionnaires. Le rapport de ce pilote 2022 est archivé sur le serveur mais personne ne l'a rouvert.\n\nLa cheffe de projet, Anouk, vient la voir : « Margot, tu rédiges le cahier des charges de l'appel d'offres pour la semaine prochaine ? »\n\nMargot lui répond :",
       "figures": [],
@@ -10073,7 +10116,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_anticipate",
         "pc_credibility",
-        "pc_recommend"
+        "pc_recommend",
+        "pc_sources"
       ],
       "situation": "Margot est Business Analyst à l'ONVA depuis onze mois. Elle analyse la possibilité d'automatiser partiellement le traitement des demandes de rectification de pécule après clôture annuelle, via une règle métier inscrite dans le moteur de workflow. Le service opérations traite environ 9 200 demandes de ce type par an, avec un backlog chronique et un délai moyen de 42 jours.\n\nLe cabinet conseil mandaté il y a six mois a remis un benchmark : « une administration belge comparable a automatisé 60 % de ce type de demandes et réduit le délai à 12 jours ». Le directeur général, séduit, pousse pour démarrer vite. Sa feuille de route : appel d'offres en avril, POC en juin, pilote en septembre, généralisation en décembre.\n\nMargot, en creusant le benchmark, trouve trois choses. D'abord, l'administration citée en référence traite un volume dix fois supérieur, avec une équipe data de 18 personnes ; l'ONVA en a 2. Ensuite, les 60 % automatisés là-bas concernent un type de demande plus simple (rectification d'adresse), pas de pécule. Enfin, un pilote similaire tenté en 2022 à l'ONVA s'était arrêté après six mois : 17 % seulement de cas automatisables, le reste remontait en exception avec une perte de confiance des gestionnaires. Le rapport de ce pilote 2022 est archivé sur le serveur mais personne ne l'a rouvert.\n\nLa cheffe de projet, Anouk, vient la voir : « Margot, tu rédiges le cahier des charges de l'appel d'offres pour la semaine prochaine ? »\n\nMargot lui répond :",
       "figures": [],
@@ -10115,9 +10159,9 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_elements",
+        "pc_anticipate",
         "pc_credibility",
-        "pc_anticipate"
+        "pc_elements"
       ],
       "situation": "Romain est Business Analyst à l'ONVA depuis trois ans. Il est sollicité par le service juridique pour qualifier un doute réglementaire. Une nouvelle instruction SPF Sécurité Sociale (IS-2026-11) précise le mode de calcul du pécule pour les jours d'assimilation liés au congé de paternité prolongé, en vigueur au 1er janvier.\n\nÀ première lecture, l'instruction semble claire : les jours de congé de paternité prolongé > 10 jours sont intégralement assimilés, avec un coefficient 1,0. La juriste, Florence, a rédigé une note en conséquence.\n\nRomain, qui a suivi trois instructions précédentes dans ce domaine, relit et coince sur l'alinéa 3 de l'article 2 : « Par dérogation, les jours pris en fractionnement ne donnent lieu à assimilation que s'ils sont précédés d'un minimum de 5 jours consécutifs. » Cette dérogation n'est pas mentionnée dans la note de Florence. Par ailleurs, Romain sait qu'une FAQ du SPF, publiée il y a deux semaines, contredit partiellement la dérogation en indiquant que « tous les jours sont assimilés, le minimum de 5 jours est une recommandation non contraignante ». La FAQ n'a pas de valeur normative formelle mais est largement citée par les employeurs.\n\nLa note de Florence sera diffusée mercredi aux 62 gestionnaires comme instruction opérationnelle. Une fois diffusée, elle sera difficile à corriger sans perte de confiance.\n\nMardi matin, Florence passe : « Romain, j'ai tenu compte de ton expertise sur les calculs. Tu valides ma note avant que je la diffuse demain ? »\n\nRomain lui répond :",
       "figures": [],
@@ -10159,9 +10203,9 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_elements",
+        "pc_anticipate",
         "pc_credibility",
-        "pc_anticipate"
+        "pc_elements"
       ],
       "situation": "Romain est Business Analyst à l'ONVA depuis trois ans. Il est sollicité par le service juridique pour qualifier un doute réglementaire. Une nouvelle instruction SPF Sécurité Sociale (IS-2026-11) précise le mode de calcul du pécule pour les jours d'assimilation liés au congé de paternité prolongé, en vigueur au 1er janvier.\n\nÀ première lecture, l'instruction semble claire : les jours de congé de paternité prolongé > 10 jours sont intégralement assimilés, avec un coefficient 1,0. La juriste, Florence, a rédigé une note en conséquence.\n\nRomain, qui a suivi trois instructions précédentes dans ce domaine, relit et coince sur l'alinéa 3 de l'article 2 : « Par dérogation, les jours pris en fractionnement ne donnent lieu à assimilation que s'ils sont précédés d'un minimum de 5 jours consécutifs. » Cette dérogation n'est pas mentionnée dans la note de Florence. Par ailleurs, Romain sait qu'une FAQ du SPF, publiée il y a deux semaines, contredit partiellement la dérogation en indiquant que « tous les jours sont assimilés, le minimum de 5 jours est une recommandation non contraignante ». La FAQ n'a pas de valeur normative formelle mais est largement citée par les employeurs.\n\nLa note de Florence sera diffusée mercredi aux 62 gestionnaires comme instruction opérationnelle. Une fois diffusée, elle sera difficile à corriger sans perte de confiance.\n\nMardi matin, Florence passe : « Romain, j'ai tenu compte de ton expertise sur les calculs. Tu valides ma note avant que je la diffuse demain ? »\n\nRomain lui répond :",
       "figures": [],
@@ -10203,9 +10247,9 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_elements",
+        "pc_anticipate",
         "pc_credibility",
-        "pc_anticipate"
+        "pc_elements"
       ],
       "situation": "Romain est Business Analyst à l'ONVA depuis trois ans. Il est sollicité par le service juridique pour qualifier un doute réglementaire. Une nouvelle instruction SPF Sécurité Sociale (IS-2026-11) précise le mode de calcul du pécule pour les jours d'assimilation liés au congé de paternité prolongé, en vigueur au 1er janvier.\n\nÀ première lecture, l'instruction semble claire : les jours de congé de paternité prolongé > 10 jours sont intégralement assimilés, avec un coefficient 1,0. La juriste, Florence, a rédigé une note en conséquence.\n\nRomain, qui a suivi trois instructions précédentes dans ce domaine, relit et coince sur l'alinéa 3 de l'article 2 : « Par dérogation, les jours pris en fractionnement ne donnent lieu à assimilation que s'ils sont précédés d'un minimum de 5 jours consécutifs. » Cette dérogation n'est pas mentionnée dans la note de Florence. Par ailleurs, Romain sait qu'une FAQ du SPF, publiée il y a deux semaines, contredit partiellement la dérogation en indiquant que « tous les jours sont assimilés, le minimum de 5 jours est une recommandation non contraignante ». La FAQ n'a pas de valeur normative formelle mais est largement citée par les employeurs.\n\nLa note de Florence sera diffusée mercredi aux 62 gestionnaires comme instruction opérationnelle. Une fois diffusée, elle sera difficile à corriger sans perte de confiance.\n\nMardi matin, Florence passe : « Romain, j'ai tenu compte de ton expertise sur les calculs. Tu valides ma note avant que je la diffuse demain ? »\n\nRomain lui répond :",
       "figures": [],
@@ -10247,9 +10291,9 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_elements",
+        "pc_anticipate",
         "pc_credibility",
-        "pc_anticipate"
+        "pc_elements"
       ],
       "situation": "Romain est Business Analyst à l'ONVA depuis trois ans. Il est sollicité par le service juridique pour qualifier un doute réglementaire. Une nouvelle instruction SPF Sécurité Sociale (IS-2026-11) précise le mode de calcul du pécule pour les jours d'assimilation liés au congé de paternité prolongé, en vigueur au 1er janvier.\n\nÀ première lecture, l'instruction semble claire : les jours de congé de paternité prolongé > 10 jours sont intégralement assimilés, avec un coefficient 1,0. La juriste, Florence, a rédigé une note en conséquence.\n\nRomain, qui a suivi trois instructions précédentes dans ce domaine, relit et coince sur l'alinéa 3 de l'article 2 : « Par dérogation, les jours pris en fractionnement ne donnent lieu à assimilation que s'ils sont précédés d'un minimum de 5 jours consécutifs. » Cette dérogation n'est pas mentionnée dans la note de Florence. Par ailleurs, Romain sait qu'une FAQ du SPF, publiée il y a deux semaines, contredit partiellement la dérogation en indiquant que « tous les jours sont assimilés, le minimum de 5 jours est une recommandation non contraignante ». La FAQ n'a pas de valeur normative formelle mais est largement citée par les employeurs.\n\nLa note de Florence sera diffusée mercredi aux 62 gestionnaires comme instruction opérationnelle. Une fois diffusée, elle sera difficile à corriger sans perte de confiance.\n\nMardi matin, Florence passe : « Romain, j'ai tenu compte de ton expertise sur les calculs. Tu valides ma note avant que je la diffuse demain ? »\n\nRomain lui répond :",
       "figures": [],
@@ -10456,6 +10500,7 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_causes",
         "pc_elements"
       ],
       "situation": "Théo est Business Analyst à l'ONVA depuis un an. Il analyse les pistes d'amélioration d'un reporting mensuel envoyé au comité de direction : le « tableau de bord pécule artistes », qui agrège 18 indicateurs sur le processus P-ART-04. Depuis six mois, deux indicateurs oscillent fortement sans explication claire : le délai moyen de traitement (qui varie de 8 à 21 jours) et le taux de correction (qui oscille entre 4 % et 17 %).\n\nLe comité, agacé, demande un mode « alerte seuil » : toute valeur hors fourchette déclencherait un mail automatique. La proposition technique semble simple : figer les seuils à ±20 % de la moyenne historique.\n\nThéo, avant de rédiger les specs, regarde de plus près. Les oscillations du délai corrèlent à 0,78 avec le volume mensuel de dossiers (plus de dossiers = délai qui monte). Les oscillations du taux de correction corrèlent avec les arrivées de nouveaux gestionnaires : chaque recrutement génère un pic à 3 mois. Autrement dit, les « anomalies » sont largement explicables. Un seuil ±20 % produirait 40 à 60 alertes par an, dont 80 % explicables à l'avance — typique d'une alerte qui finit ignorée.\n\nPar ailleurs, la règle actuelle de calcul du taux de correction inclut les corrections d'initiative (gestionnaire qui corrige un oubli avant contrôle), ce qui gonfle artificiellement l'indicateur. La vraie « erreur métier » serait probablement deux fois plus basse.\n\nSa cheffe, Valérie, lui demande : « Théo, tu me boucles les specs de l'alerte pour jeudi ? »\n\nThéo lui répond :",
@@ -10499,6 +10544,7 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_causes",
         "pc_elements"
       ],
       "situation": "Théo est Business Analyst à l'ONVA depuis un an. Il analyse les pistes d'amélioration d'un reporting mensuel envoyé au comité de direction : le « tableau de bord pécule artistes », qui agrège 18 indicateurs sur le processus P-ART-04. Depuis six mois, deux indicateurs oscillent fortement sans explication claire : le délai moyen de traitement (qui varie de 8 à 21 jours) et le taux de correction (qui oscille entre 4 % et 17 %).\n\nLe comité, agacé, demande un mode « alerte seuil » : toute valeur hors fourchette déclencherait un mail automatique. La proposition technique semble simple : figer les seuils à ±20 % de la moyenne historique.\n\nThéo, avant de rédiger les specs, regarde de plus près. Les oscillations du délai corrèlent à 0,78 avec le volume mensuel de dossiers (plus de dossiers = délai qui monte). Les oscillations du taux de correction corrèlent avec les arrivées de nouveaux gestionnaires : chaque recrutement génère un pic à 3 mois. Autrement dit, les « anomalies » sont largement explicables. Un seuil ±20 % produirait 40 à 60 alertes par an, dont 80 % explicables à l'avance — typique d'une alerte qui finit ignorée.\n\nPar ailleurs, la règle actuelle de calcul du taux de correction inclut les corrections d'initiative (gestionnaire qui corrige un oubli avant contrôle), ce qui gonfle artificiellement l'indicateur. La vraie « erreur métier » serait probablement deux fois plus basse.\n\nSa cheffe, Valérie, lui demande : « Théo, tu me boucles les specs de l'alerte pour jeudi ? »\n\nThéo lui répond :",
@@ -10542,6 +10588,7 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_causes",
         "pc_elements"
       ],
       "situation": "Théo est Business Analyst à l'ONVA depuis un an. Il analyse les pistes d'amélioration d'un reporting mensuel envoyé au comité de direction : le « tableau de bord pécule artistes », qui agrège 18 indicateurs sur le processus P-ART-04. Depuis six mois, deux indicateurs oscillent fortement sans explication claire : le délai moyen de traitement (qui varie de 8 à 21 jours) et le taux de correction (qui oscille entre 4 % et 17 %).\n\nLe comité, agacé, demande un mode « alerte seuil » : toute valeur hors fourchette déclencherait un mail automatique. La proposition technique semble simple : figer les seuils à ±20 % de la moyenne historique.\n\nThéo, avant de rédiger les specs, regarde de plus près. Les oscillations du délai corrèlent à 0,78 avec le volume mensuel de dossiers (plus de dossiers = délai qui monte). Les oscillations du taux de correction corrèlent avec les arrivées de nouveaux gestionnaires : chaque recrutement génère un pic à 3 mois. Autrement dit, les « anomalies » sont largement explicables. Un seuil ±20 % produirait 40 à 60 alertes par an, dont 80 % explicables à l'avance — typique d'une alerte qui finit ignorée.\n\nPar ailleurs, la règle actuelle de calcul du taux de correction inclut les corrections d'initiative (gestionnaire qui corrige un oubli avant contrôle), ce qui gonfle artificiellement l'indicateur. La vraie « erreur métier » serait probablement deux fois plus basse.\n\nSa cheffe, Valérie, lui demande : « Théo, tu me boucles les specs de l'alerte pour jeudi ? »\n\nThéo lui répond :",
@@ -10585,6 +10632,7 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_causes",
         "pc_elements"
       ],
       "situation": "Théo est Business Analyst à l'ONVA depuis un an. Il analyse les pistes d'amélioration d'un reporting mensuel envoyé au comité de direction : le « tableau de bord pécule artistes », qui agrège 18 indicateurs sur le processus P-ART-04. Depuis six mois, deux indicateurs oscillent fortement sans explication claire : le délai moyen de traitement (qui varie de 8 à 21 jours) et le taux de correction (qui oscille entre 4 % et 17 %).\n\nLe comité, agacé, demande un mode « alerte seuil » : toute valeur hors fourchette déclencherait un mail automatique. La proposition technique semble simple : figer les seuils à ±20 % de la moyenne historique.\n\nThéo, avant de rédiger les specs, regarde de plus près. Les oscillations du délai corrèlent à 0,78 avec le volume mensuel de dossiers (plus de dossiers = délai qui monte). Les oscillations du taux de correction corrèlent avec les arrivées de nouveaux gestionnaires : chaque recrutement génère un pic à 3 mois. Autrement dit, les « anomalies » sont largement explicables. Un seuil ±20 % produirait 40 à 60 alertes par an, dont 80 % explicables à l'avance — typique d'une alerte qui finit ignorée.\n\nPar ailleurs, la règle actuelle de calcul du taux de correction inclut les corrections d'initiative (gestionnaire qui corrige un oubli avant contrôle), ce qui gonfle artificiellement l'indicateur. La vraie « erreur métier » serait probablement deux fois plus basse.\n\nSa cheffe, Valérie, lui demande : « Théo, tu me boucles les specs de l'alerte pour jeudi ? »\n\nThéo lui répond :",
@@ -10627,7 +10675,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility"
+        "pc_credibility",
+        "pc_anticipate"
       ],
       "situation": "Florence est Business Analyst à l'ONVA depuis quatre ans. Elle accompagne un audit interne commandé par le comité de direction : vérifier la correcte application de la circulaire sur le télétravail (60 % max, 2 jours fixes au bureau) au sein du département Modernisation. L'auditeur, Marc (service audit interne), a compilé les pointages badge et les connexions VPN sur six mois pour les 34 collaborateurs du département.\n\nSon rapport provisoire est alarmiste : « 48 % des collaborateurs ne respectent pas la règle des 2 jours fixes au bureau. » Il veut publier cette conclusion auprès du comité la semaine prochaine.\n\nFlorence, en regardant les données source, identifie des biais. D'abord, 6 collaborateurs sont des juniors en mission chez des parties prenantes externes (ONSS, SPF Finances) : leurs pointages badge ONVA sont structurellement bas, ce qui ne traduit pas un écart à la règle. Ensuite, 4 collaborateurs ont connu une période d'incapacité documentée (3 à 6 semaines). Enfin, la règle des « 2 jours fixes » a été officiellement assouplie en mars par une note interne permettant des aménagements individuels pour contraintes familiales : 8 collaborateurs en ont bénéficié officiellement.\n\nEn excluant ces trois catégories (18 personnes sur 34), le taux de « non-respect » retombe à 14 % des personnes concernées — et l'essentiel de ce 14 % correspond à des dépassements d'une journée, non systématiques.\n\nL'auditeur est expérimenté mais tient fermement à son 48 %. Le comité est sensible au sujet.\n\nMarc passe voir Florence avant la publication : « Florence, tu as regardé mes chiffres ? Rien à signaler ? »\n\nFlorence lui répond :",
       "figures": [],
@@ -10669,7 +10718,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility"
+        "pc_credibility",
+        "pc_anticipate"
       ],
       "situation": "Florence est Business Analyst à l'ONVA depuis quatre ans. Elle accompagne un audit interne commandé par le comité de direction : vérifier la correcte application de la circulaire sur le télétravail (60 % max, 2 jours fixes au bureau) au sein du département Modernisation. L'auditeur, Marc (service audit interne), a compilé les pointages badge et les connexions VPN sur six mois pour les 34 collaborateurs du département.\n\nSon rapport provisoire est alarmiste : « 48 % des collaborateurs ne respectent pas la règle des 2 jours fixes au bureau. » Il veut publier cette conclusion auprès du comité la semaine prochaine.\n\nFlorence, en regardant les données source, identifie des biais. D'abord, 6 collaborateurs sont des juniors en mission chez des parties prenantes externes (ONSS, SPF Finances) : leurs pointages badge ONVA sont structurellement bas, ce qui ne traduit pas un écart à la règle. Ensuite, 4 collaborateurs ont connu une période d'incapacité documentée (3 à 6 semaines). Enfin, la règle des « 2 jours fixes » a été officiellement assouplie en mars par une note interne permettant des aménagements individuels pour contraintes familiales : 8 collaborateurs en ont bénéficié officiellement.\n\nEn excluant ces trois catégories (18 personnes sur 34), le taux de « non-respect » retombe à 14 % des personnes concernées — et l'essentiel de ce 14 % correspond à des dépassements d'une journée, non systématiques.\n\nL'auditeur est expérimenté mais tient fermement à son 48 %. Le comité est sensible au sujet.\n\nMarc passe voir Florence avant la publication : « Florence, tu as regardé mes chiffres ? Rien à signaler ? »\n\nFlorence lui répond :",
       "figures": [],
@@ -10711,7 +10761,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility"
+        "pc_credibility",
+        "pc_anticipate"
       ],
       "situation": "Florence est Business Analyst à l'ONVA depuis quatre ans. Elle accompagne un audit interne commandé par le comité de direction : vérifier la correcte application de la circulaire sur le télétravail (60 % max, 2 jours fixes au bureau) au sein du département Modernisation. L'auditeur, Marc (service audit interne), a compilé les pointages badge et les connexions VPN sur six mois pour les 34 collaborateurs du département.\n\nSon rapport provisoire est alarmiste : « 48 % des collaborateurs ne respectent pas la règle des 2 jours fixes au bureau. » Il veut publier cette conclusion auprès du comité la semaine prochaine.\n\nFlorence, en regardant les données source, identifie des biais. D'abord, 6 collaborateurs sont des juniors en mission chez des parties prenantes externes (ONSS, SPF Finances) : leurs pointages badge ONVA sont structurellement bas, ce qui ne traduit pas un écart à la règle. Ensuite, 4 collaborateurs ont connu une période d'incapacité documentée (3 à 6 semaines). Enfin, la règle des « 2 jours fixes » a été officiellement assouplie en mars par une note interne permettant des aménagements individuels pour contraintes familiales : 8 collaborateurs en ont bénéficié officiellement.\n\nEn excluant ces trois catégories (18 personnes sur 34), le taux de « non-respect » retombe à 14 % des personnes concernées — et l'essentiel de ce 14 % correspond à des dépassements d'une journée, non systématiques.\n\nL'auditeur est expérimenté mais tient fermement à son 48 %. Le comité est sensible au sujet.\n\nMarc passe voir Florence avant la publication : « Florence, tu as regardé mes chiffres ? Rien à signaler ? »\n\nFlorence lui répond :",
       "figures": [],
@@ -10753,7 +10804,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "pc_credibility"
+        "pc_credibility",
+        "pc_anticipate"
       ],
       "situation": "Florence est Business Analyst à l'ONVA depuis quatre ans. Elle accompagne un audit interne commandé par le comité de direction : vérifier la correcte application de la circulaire sur le télétravail (60 % max, 2 jours fixes au bureau) au sein du département Modernisation. L'auditeur, Marc (service audit interne), a compilé les pointages badge et les connexions VPN sur six mois pour les 34 collaborateurs du département.\n\nSon rapport provisoire est alarmiste : « 48 % des collaborateurs ne respectent pas la règle des 2 jours fixes au bureau. » Il veut publier cette conclusion auprès du comité la semaine prochaine.\n\nFlorence, en regardant les données source, identifie des biais. D'abord, 6 collaborateurs sont des juniors en mission chez des parties prenantes externes (ONSS, SPF Finances) : leurs pointages badge ONVA sont structurellement bas, ce qui ne traduit pas un écart à la règle. Ensuite, 4 collaborateurs ont connu une période d'incapacité documentée (3 à 6 semaines). Enfin, la règle des « 2 jours fixes » a été officiellement assouplie en mars par une note interne permettant des aménagements individuels pour contraintes familiales : 8 collaborateurs en ont bénéficié officiellement.\n\nEn excluant ces trois catégories (18 personnes sur 34), le taux de « non-respect » retombe à 14 % des personnes concernées — et l'essentiel de ce 14 % correspond à des dépassements d'une journée, non systématiques.\n\nL'auditeur est expérimenté mais tient fermement à son 48 %. Le comité est sensible au sujet.\n\nMarc passe voir Florence avant la publication : « Florence, tu as regardé mes chiffres ? Rien à signaler ? »\n\nFlorence lui répond :",
       "figures": [],
@@ -10797,7 +10849,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_elements",
         "pc_anticipate",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Mehdi est Business Analyst à l'ONVA depuis deux ans. Il travaille sur la migration des données de l'ancien système Access `CALC_HIST` vers la nouvelle base SQL `PECULE_NEW`. La bascule est prévue dans cinq semaines. L'équipe data a livré un rapport : « 99,2 % des 3,4 M d'enregistrements ont migré sans erreur. Les 0,8 % restants (27 000 enregistrements) sont en exception, à traiter manuellement. »\n\nMehdi examine les exceptions. Elles se répartissent en quatre familles. Famille A (12 000 cas) : dates antérieures à 2005, format non standardisé — récupérables par une règle simple. Famille B (8 500 cas) : montants négatifs (régularisations en défaveur de l'ayant droit) qui sont rejetés par la contrainte d'intégrité de la nouvelle base, alors qu'ils sont valides. Famille C (5 200 cas) : doublons réels — deux enregistrements pour le même paiement — qu'il faut réconcilier. Famille D (1 300 cas) : dossiers avec pièces justificatives manquantes, à renvoyer au service juridique.\n\nLe chef de projet, Denis, ne connaît pas cette typologie : il a seulement lu « 99,2 % OK ». Il communique au comité que « la migration est techniquement prête ». Les trois semaines prochaines sont dédiées au test de recette, mais aucune provision n'a été faite pour traiter les 27 000 exceptions. Famille B en particulier bloquera les paiements 2025 si elle n'est pas résolue avant bascule — c'est une contrainte réglementaire.\n\nLundi, Denis passe à son bureau : « Mehdi, rien à signaler côté migration ? Je maintiens mon « go » pour le comité ? »\n\nMehdi lui répond :",
       "figures": [],
@@ -10841,7 +10894,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_elements",
         "pc_anticipate",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Mehdi est Business Analyst à l'ONVA depuis deux ans. Il travaille sur la migration des données de l'ancien système Access `CALC_HIST` vers la nouvelle base SQL `PECULE_NEW`. La bascule est prévue dans cinq semaines. L'équipe data a livré un rapport : « 99,2 % des 3,4 M d'enregistrements ont migré sans erreur. Les 0,8 % restants (27 000 enregistrements) sont en exception, à traiter manuellement. »\n\nMehdi examine les exceptions. Elles se répartissent en quatre familles. Famille A (12 000 cas) : dates antérieures à 2005, format non standardisé — récupérables par une règle simple. Famille B (8 500 cas) : montants négatifs (régularisations en défaveur de l'ayant droit) qui sont rejetés par la contrainte d'intégrité de la nouvelle base, alors qu'ils sont valides. Famille C (5 200 cas) : doublons réels — deux enregistrements pour le même paiement — qu'il faut réconcilier. Famille D (1 300 cas) : dossiers avec pièces justificatives manquantes, à renvoyer au service juridique.\n\nLe chef de projet, Denis, ne connaît pas cette typologie : il a seulement lu « 99,2 % OK ». Il communique au comité que « la migration est techniquement prête ». Les trois semaines prochaines sont dédiées au test de recette, mais aucune provision n'a été faite pour traiter les 27 000 exceptions. Famille B en particulier bloquera les paiements 2025 si elle n'est pas résolue avant bascule — c'est une contrainte réglementaire.\n\nLundi, Denis passe à son bureau : « Mehdi, rien à signaler côté migration ? Je maintiens mon « go » pour le comité ? »\n\nMehdi lui répond :",
       "figures": [],
@@ -10885,7 +10939,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_elements",
         "pc_anticipate",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Mehdi est Business Analyst à l'ONVA depuis deux ans. Il travaille sur la migration des données de l'ancien système Access `CALC_HIST` vers la nouvelle base SQL `PECULE_NEW`. La bascule est prévue dans cinq semaines. L'équipe data a livré un rapport : « 99,2 % des 3,4 M d'enregistrements ont migré sans erreur. Les 0,8 % restants (27 000 enregistrements) sont en exception, à traiter manuellement. »\n\nMehdi examine les exceptions. Elles se répartissent en quatre familles. Famille A (12 000 cas) : dates antérieures à 2005, format non standardisé — récupérables par une règle simple. Famille B (8 500 cas) : montants négatifs (régularisations en défaveur de l'ayant droit) qui sont rejetés par la contrainte d'intégrité de la nouvelle base, alors qu'ils sont valides. Famille C (5 200 cas) : doublons réels — deux enregistrements pour le même paiement — qu'il faut réconcilier. Famille D (1 300 cas) : dossiers avec pièces justificatives manquantes, à renvoyer au service juridique.\n\nLe chef de projet, Denis, ne connaît pas cette typologie : il a seulement lu « 99,2 % OK ». Il communique au comité que « la migration est techniquement prête ». Les trois semaines prochaines sont dédiées au test de recette, mais aucune provision n'a été faite pour traiter les 27 000 exceptions. Famille B en particulier bloquera les paiements 2025 si elle n'est pas résolue avant bascule — c'est une contrainte réglementaire.\n\nLundi, Denis passe à son bureau : « Mehdi, rien à signaler côté migration ? Je maintiens mon « go » pour le comité ? »\n\nMehdi lui répond :",
       "figures": [],
@@ -10929,7 +10984,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "pc_elements",
         "pc_anticipate",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ],
       "situation": "Mehdi est Business Analyst à l'ONVA depuis deux ans. Il travaille sur la migration des données de l'ancien système Access `CALC_HIST` vers la nouvelle base SQL `PECULE_NEW`. La bascule est prévue dans cinq semaines. L'équipe data a livré un rapport : « 99,2 % des 3,4 M d'enregistrements ont migré sans erreur. Les 0,8 % restants (27 000 enregistrements) sont en exception, à traiter manuellement. »\n\nMehdi examine les exceptions. Elles se répartissent en quatre familles. Famille A (12 000 cas) : dates antérieures à 2005, format non standardisé — récupérables par une règle simple. Famille B (8 500 cas) : montants négatifs (régularisations en défaveur de l'ayant droit) qui sont rejetés par la contrainte d'intégrité de la nouvelle base, alors qu'ils sont valides. Famille C (5 200 cas) : doublons réels — deux enregistrements pour le même paiement — qu'il faut réconcilier. Famille D (1 300 cas) : dossiers avec pièces justificatives manquantes, à renvoyer au service juridique.\n\nLe chef de projet, Denis, ne connaît pas cette typologie : il a seulement lu « 99,2 % OK ». Il communique au comité que « la migration est techniquement prête ». Les trois semaines prochaines sont dédiées au test de recette, mais aucune provision n'a été faite pour traiter les 27 000 exceptions. Famille B en particulier bloquera les paiements 2025 si elle n'est pas résolue avant bascule — c'est une contrainte réglementaire.\n\nLundi, Denis passe à son bureau : « Mehdi, rien à signaler côté migration ? Je maintiens mon « go » pour le comité ? »\n\nMehdi lui répond :",
       "figures": [],
@@ -10972,7 +11028,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_elements"
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Adèle est Business Analyst à l'ONVA depuis un an. Elle conduit la phase de préparation à la recette utilisateur (UAT) d'un nouveau module de calcul de majoration pour jours fériés. Douze utilisateurs-testeurs (gestionnaires, juristes, contrôleurs) doivent valider 180 scénarios sur deux semaines.\n\nLa semaine dernière, la campagne UAT s'est terminée : 162 scénarios passés, 18 en anomalie. Le rapport automatique généré par l'outil de test dit : « 90 % des scénarios sont validés. La campagne peut être considérée comme réussie. »\n\nAdèle lit les 18 anomalies en détail. Cinq sont des anomalies d'affichage mineures (libellés, formats). Sept sont des écarts de calcul réels mais marginaux (arrondis au centime). Six sont des « anomalies bloquantes selon le juridique » : un scénario où la majoration pour un 1er mai est calculée différemment selon l'ordre dans lequel les jours fériés apparaissent dans le mois — ce qui est juridiquement inacceptable (la loi ne dépend pas de l'ordre).\n\nLes six anomalies bloquantes ont toutes été remontées par le même testeur, Fabien, juriste respecté mais réputé pointilleux. Trois autres testeurs ont rencontré les mêmes scénarios et les ont marqués « OK » — par inattention ou par validation superficielle.\n\nLe chef de projet, Sébastien, regarde le dashboard : « 90 %, on est bons. On passe à la mise en prod. Adèle, tu me valides le go / no-go ? »\n\nAdèle lui répond :",
       "figures": [],
@@ -11015,7 +11072,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_elements"
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Adèle est Business Analyst à l'ONVA depuis un an. Elle conduit la phase de préparation à la recette utilisateur (UAT) d'un nouveau module de calcul de majoration pour jours fériés. Douze utilisateurs-testeurs (gestionnaires, juristes, contrôleurs) doivent valider 180 scénarios sur deux semaines.\n\nLa semaine dernière, la campagne UAT s'est terminée : 162 scénarios passés, 18 en anomalie. Le rapport automatique généré par l'outil de test dit : « 90 % des scénarios sont validés. La campagne peut être considérée comme réussie. »\n\nAdèle lit les 18 anomalies en détail. Cinq sont des anomalies d'affichage mineures (libellés, formats). Sept sont des écarts de calcul réels mais marginaux (arrondis au centime). Six sont des « anomalies bloquantes selon le juridique » : un scénario où la majoration pour un 1er mai est calculée différemment selon l'ordre dans lequel les jours fériés apparaissent dans le mois — ce qui est juridiquement inacceptable (la loi ne dépend pas de l'ordre).\n\nLes six anomalies bloquantes ont toutes été remontées par le même testeur, Fabien, juriste respecté mais réputé pointilleux. Trois autres testeurs ont rencontré les mêmes scénarios et les ont marqués « OK » — par inattention ou par validation superficielle.\n\nLe chef de projet, Sébastien, regarde le dashboard : « 90 %, on est bons. On passe à la mise en prod. Adèle, tu me valides le go / no-go ? »\n\nAdèle lui répond :",
       "figures": [],
@@ -11058,7 +11116,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_elements"
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Adèle est Business Analyst à l'ONVA depuis un an. Elle conduit la phase de préparation à la recette utilisateur (UAT) d'un nouveau module de calcul de majoration pour jours fériés. Douze utilisateurs-testeurs (gestionnaires, juristes, contrôleurs) doivent valider 180 scénarios sur deux semaines.\n\nLa semaine dernière, la campagne UAT s'est terminée : 162 scénarios passés, 18 en anomalie. Le rapport automatique généré par l'outil de test dit : « 90 % des scénarios sont validés. La campagne peut être considérée comme réussie. »\n\nAdèle lit les 18 anomalies en détail. Cinq sont des anomalies d'affichage mineures (libellés, formats). Sept sont des écarts de calcul réels mais marginaux (arrondis au centime). Six sont des « anomalies bloquantes selon le juridique » : un scénario où la majoration pour un 1er mai est calculée différemment selon l'ordre dans lequel les jours fériés apparaissent dans le mois — ce qui est juridiquement inacceptable (la loi ne dépend pas de l'ordre).\n\nLes six anomalies bloquantes ont toutes été remontées par le même testeur, Fabien, juriste respecté mais réputé pointilleux. Trois autres testeurs ont rencontré les mêmes scénarios et les ont marqués « OK » — par inattention ou par validation superficielle.\n\nLe chef de projet, Sébastien, regarde le dashboard : « 90 %, on est bons. On passe à la mise en prod. Adèle, tu me valides le go / no-go ? »\n\nAdèle lui répond :",
       "figures": [],
@@ -11101,7 +11160,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_elements"
+        "pc_elements",
+        "pc_anticipate"
       ],
       "situation": "Adèle est Business Analyst à l'ONVA depuis un an. Elle conduit la phase de préparation à la recette utilisateur (UAT) d'un nouveau module de calcul de majoration pour jours fériés. Douze utilisateurs-testeurs (gestionnaires, juristes, contrôleurs) doivent valider 180 scénarios sur deux semaines.\n\nLa semaine dernière, la campagne UAT s'est terminée : 162 scénarios passés, 18 en anomalie. Le rapport automatique généré par l'outil de test dit : « 90 % des scénarios sont validés. La campagne peut être considérée comme réussie. »\n\nAdèle lit les 18 anomalies en détail. Cinq sont des anomalies d'affichage mineures (libellés, formats). Sept sont des écarts de calcul réels mais marginaux (arrondis au centime). Six sont des « anomalies bloquantes selon le juridique » : un scénario où la majoration pour un 1er mai est calculée différemment selon l'ordre dans lequel les jours fériés apparaissent dans le mois — ce qui est juridiquement inacceptable (la loi ne dépend pas de l'ordre).\n\nLes six anomalies bloquantes ont toutes été remontées par le même testeur, Fabien, juriste respecté mais réputé pointilleux. Trois autres testeurs ont rencontré les mêmes scénarios et les ont marqués « OK » — par inattention ou par validation superficielle.\n\nLe chef de projet, Sébastien, regarde le dashboard : « 90 %, on est bons. On passe à la mise en prod. Adèle, tu me valides le go / no-go ? »\n\nAdèle lui répond :",
       "figures": [],
@@ -11145,7 +11205,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "ag_initiative",
         "ag_adjust",
-        "ag_learn"
+        "ag_learn",
+        "ag_tech"
       ],
       "situation": "Gaspard est Business Analyst à l'ONVA depuis deux ans et demi. Il travaille sur la modernisation de la chaîne de contrôle documentaire. Jusqu'ici, l'ONVA utilise une méthode interne manuelle pour valider les pièces justificatives : tout BA a une check-list Excel de 40 points par type de document, qu'il remplit à chaque dossier d'audit.\n\nUn nouveau produit interne, `DOC_CHECK_AI`, développé par la cellule innovation de la BOSA, est proposé aux administrations : il remplace la check-list par une analyse semi-automatique via reconnaissance sémantique, avec une promesse de gain de temps de 40 %. La cellule innovation demande à l'ONVA d'être site pilote, avec un premier déploiement dans deux mois. L'outil est encore en version bêta : documentation lacunaire, quelques retours mitigés des autres administrations pilotes.\n\nL'équipe BA de l'ONVA (5 personnes) est divisée. Delphine, sénior, connaît bien la check-list et trouve l'outil « pas assez mûr ». Thomas, junior, est enthousiaste. Gaspard a utilisé l'outil sur trois dossiers test la semaine dernière : résultats encourageants sur les cas standards, faibles sur les dossiers complexes (majoration pécule artistes). Adopter l'outil demande un investissement de formation (2 jours) et une période de double saisie (4 à 6 semaines).\n\nLa cheffe, Patricia, est pragmatique : « Je ne veux pas être site pilote d'un truc bancal, mais je ne veux pas passer pour l'ONVA ringarde non plus. »\n\nElle lui demande en réunion d'équipe : « Gaspard, tu nous proposes quoi ? On y va ou pas ? »\n\nGaspard lui répond :",
       "figures": [],
@@ -11189,7 +11250,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "ag_initiative",
         "ag_adjust",
-        "ag_learn"
+        "ag_learn",
+        "ag_tech"
       ],
       "situation": "Gaspard est Business Analyst à l'ONVA depuis deux ans et demi. Il travaille sur la modernisation de la chaîne de contrôle documentaire. Jusqu'ici, l'ONVA utilise une méthode interne manuelle pour valider les pièces justificatives : tout BA a une check-list Excel de 40 points par type de document, qu'il remplit à chaque dossier d'audit.\n\nUn nouveau produit interne, `DOC_CHECK_AI`, développé par la cellule innovation de la BOSA, est proposé aux administrations : il remplace la check-list par une analyse semi-automatique via reconnaissance sémantique, avec une promesse de gain de temps de 40 %. La cellule innovation demande à l'ONVA d'être site pilote, avec un premier déploiement dans deux mois. L'outil est encore en version bêta : documentation lacunaire, quelques retours mitigés des autres administrations pilotes.\n\nL'équipe BA de l'ONVA (5 personnes) est divisée. Delphine, sénior, connaît bien la check-list et trouve l'outil « pas assez mûr ». Thomas, junior, est enthousiaste. Gaspard a utilisé l'outil sur trois dossiers test la semaine dernière : résultats encourageants sur les cas standards, faibles sur les dossiers complexes (majoration pécule artistes). Adopter l'outil demande un investissement de formation (2 jours) et une période de double saisie (4 à 6 semaines).\n\nLa cheffe, Patricia, est pragmatique : « Je ne veux pas être site pilote d'un truc bancal, mais je ne veux pas passer pour l'ONVA ringarde non plus. »\n\nElle lui demande en réunion d'équipe : « Gaspard, tu nous proposes quoi ? On y va ou pas ? »\n\nGaspard lui répond :",
       "figures": [],
@@ -11233,7 +11295,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "ag_initiative",
         "ag_adjust",
-        "ag_learn"
+        "ag_learn",
+        "ag_tech"
       ],
       "situation": "Gaspard est Business Analyst à l'ONVA depuis deux ans et demi. Il travaille sur la modernisation de la chaîne de contrôle documentaire. Jusqu'ici, l'ONVA utilise une méthode interne manuelle pour valider les pièces justificatives : tout BA a une check-list Excel de 40 points par type de document, qu'il remplit à chaque dossier d'audit.\n\nUn nouveau produit interne, `DOC_CHECK_AI`, développé par la cellule innovation de la BOSA, est proposé aux administrations : il remplace la check-list par une analyse semi-automatique via reconnaissance sémantique, avec une promesse de gain de temps de 40 %. La cellule innovation demande à l'ONVA d'être site pilote, avec un premier déploiement dans deux mois. L'outil est encore en version bêta : documentation lacunaire, quelques retours mitigés des autres administrations pilotes.\n\nL'équipe BA de l'ONVA (5 personnes) est divisée. Delphine, sénior, connaît bien la check-list et trouve l'outil « pas assez mûr ». Thomas, junior, est enthousiaste. Gaspard a utilisé l'outil sur trois dossiers test la semaine dernière : résultats encourageants sur les cas standards, faibles sur les dossiers complexes (majoration pécule artistes). Adopter l'outil demande un investissement de formation (2 jours) et une période de double saisie (4 à 6 semaines).\n\nLa cheffe, Patricia, est pragmatique : « Je ne veux pas être site pilote d'un truc bancal, mais je ne veux pas passer pour l'ONVA ringarde non plus. »\n\nElle lui demande en réunion d'équipe : « Gaspard, tu nous proposes quoi ? On y va ou pas ? »\n\nGaspard lui répond :",
       "figures": [],
@@ -11277,7 +11340,8 @@ window.QUESTIONS_DB = {
       "sub_behaviors": [
         "ag_initiative",
         "ag_adjust",
-        "ag_learn"
+        "ag_learn",
+        "ag_tech"
       ],
       "situation": "Gaspard est Business Analyst à l'ONVA depuis deux ans et demi. Il travaille sur la modernisation de la chaîne de contrôle documentaire. Jusqu'ici, l'ONVA utilise une méthode interne manuelle pour valider les pièces justificatives : tout BA a une check-list Excel de 40 points par type de document, qu'il remplit à chaque dossier d'audit.\n\nUn nouveau produit interne, `DOC_CHECK_AI`, développé par la cellule innovation de la BOSA, est proposé aux administrations : il remplace la check-list par une analyse semi-automatique via reconnaissance sémantique, avec une promesse de gain de temps de 40 %. La cellule innovation demande à l'ONVA d'être site pilote, avec un premier déploiement dans deux mois. L'outil est encore en version bêta : documentation lacunaire, quelques retours mitigés des autres administrations pilotes.\n\nL'équipe BA de l'ONVA (5 personnes) est divisée. Delphine, sénior, connaît bien la check-list et trouve l'outil « pas assez mûr ». Thomas, junior, est enthousiaste. Gaspard a utilisé l'outil sur trois dossiers test la semaine dernière : résultats encourageants sur les cas standards, faibles sur les dossiers complexes (majoration pécule artistes). Adopter l'outil demande un investissement de formation (2 jours) et une période de double saisie (4 à 6 semaines).\n\nLa cheffe, Patricia, est pragmatique : « Je ne veux pas être site pilote d'un truc bancal, mais je ne veux pas passer pour l'ONVA ringarde non plus. »\n\nElle lui demande en réunion d'équipe : « Gaspard, tu nous proposes quoi ? On y va ou pas ? »\n\nGaspard lui répond :",
       "figures": [],
@@ -11492,7 +11556,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_recommend",
-        "pc_sources"
+        "pc_sources",
+        "pc_anticipate"
       ],
       "situation": "Tristan est Business Analyst à l'ONVA depuis deux ans. Il pilote le choix d'un nouvel outil de gestion des user stories et du backlog pour l'équipe projet (12 personnes : 4 BA, 5 devs, 2 testeurs, 1 PM). L'équipe utilise actuellement un mélange de tickets GLPI, fichiers Excel partagés, et tableaux blancs — ce qui crée de la friction.\n\nTrois outils sont en short list. Outil X : leader du marché, puissant, formation incluse, licence 18 k€/an, hébergement dans l'UE. Outil Y : open source, gratuit, mais installation/maintenance à charge IT (~0,3 ETP/an), intégration hébergement interne. Outil Z : petit acteur belge, 8 k€/an, interface plus simple, hébergement Bruxelles, feuille de route dépendante d'une équipe de 12 personnes.\n\nTristan a testé les trois outils deux semaines chacun. Il note que X et Z ont des fonctionnalités équivalentes pour le besoin actuel (60 % des fonctionnalités X sont non utilisées), que Y a un vrai coût caché (la DSI a refusé d'allouer le 0,3 ETP). La décision doit être prise vendredi.\n\nSa cheffe, Patricia, préfère X par réflexe sécuritaire (« personne n'a jamais été licencié pour avoir acheté du leader »). Le DSI préfère Y (« on s'émancipe des licences »). Le PM préfère Z (« simple, belge, léger »). Chaque partie pousse son angle.\n\nMercredi, Patricia écrit à Tristan : « Pour vendredi, tu me fais une reco ? »\n\nTristan lui répond :",
       "figures": [],
@@ -11535,7 +11600,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_recommend",
-        "pc_sources"
+        "pc_sources",
+        "pc_anticipate"
       ],
       "situation": "Tristan est Business Analyst à l'ONVA depuis deux ans. Il pilote le choix d'un nouvel outil de gestion des user stories et du backlog pour l'équipe projet (12 personnes : 4 BA, 5 devs, 2 testeurs, 1 PM). L'équipe utilise actuellement un mélange de tickets GLPI, fichiers Excel partagés, et tableaux blancs — ce qui crée de la friction.\n\nTrois outils sont en short list. Outil X : leader du marché, puissant, formation incluse, licence 18 k€/an, hébergement dans l'UE. Outil Y : open source, gratuit, mais installation/maintenance à charge IT (~0,3 ETP/an), intégration hébergement interne. Outil Z : petit acteur belge, 8 k€/an, interface plus simple, hébergement Bruxelles, feuille de route dépendante d'une équipe de 12 personnes.\n\nTristan a testé les trois outils deux semaines chacun. Il note que X et Z ont des fonctionnalités équivalentes pour le besoin actuel (60 % des fonctionnalités X sont non utilisées), que Y a un vrai coût caché (la DSI a refusé d'allouer le 0,3 ETP). La décision doit être prise vendredi.\n\nSa cheffe, Patricia, préfère X par réflexe sécuritaire (« personne n'a jamais été licencié pour avoir acheté du leader »). Le DSI préfère Y (« on s'émancipe des licences »). Le PM préfère Z (« simple, belge, léger »). Chaque partie pousse son angle.\n\nMercredi, Patricia écrit à Tristan : « Pour vendredi, tu me fais une reco ? »\n\nTristan lui répond :",
       "figures": [],
@@ -11578,7 +11644,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_recommend",
-        "pc_sources"
+        "pc_sources",
+        "pc_anticipate"
       ],
       "situation": "Tristan est Business Analyst à l'ONVA depuis deux ans. Il pilote le choix d'un nouvel outil de gestion des user stories et du backlog pour l'équipe projet (12 personnes : 4 BA, 5 devs, 2 testeurs, 1 PM). L'équipe utilise actuellement un mélange de tickets GLPI, fichiers Excel partagés, et tableaux blancs — ce qui crée de la friction.\n\nTrois outils sont en short list. Outil X : leader du marché, puissant, formation incluse, licence 18 k€/an, hébergement dans l'UE. Outil Y : open source, gratuit, mais installation/maintenance à charge IT (~0,3 ETP/an), intégration hébergement interne. Outil Z : petit acteur belge, 8 k€/an, interface plus simple, hébergement Bruxelles, feuille de route dépendante d'une équipe de 12 personnes.\n\nTristan a testé les trois outils deux semaines chacun. Il note que X et Z ont des fonctionnalités équivalentes pour le besoin actuel (60 % des fonctionnalités X sont non utilisées), que Y a un vrai coût caché (la DSI a refusé d'allouer le 0,3 ETP). La décision doit être prise vendredi.\n\nSa cheffe, Patricia, préfère X par réflexe sécuritaire (« personne n'a jamais été licencié pour avoir acheté du leader »). Le DSI préfère Y (« on s'émancipe des licences »). Le PM préfère Z (« simple, belge, léger »). Chaque partie pousse son angle.\n\nMercredi, Patricia écrit à Tristan : « Pour vendredi, tu me fais une reco ? »\n\nTristan lui répond :",
       "figures": [],
@@ -11621,7 +11688,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "pc_recommend",
-        "pc_sources"
+        "pc_sources",
+        "pc_anticipate"
       ],
       "situation": "Tristan est Business Analyst à l'ONVA depuis deux ans. Il pilote le choix d'un nouvel outil de gestion des user stories et du backlog pour l'équipe projet (12 personnes : 4 BA, 5 devs, 2 testeurs, 1 PM). L'équipe utilise actuellement un mélange de tickets GLPI, fichiers Excel partagés, et tableaux blancs — ce qui crée de la friction.\n\nTrois outils sont en short list. Outil X : leader du marché, puissant, formation incluse, licence 18 k€/an, hébergement dans l'UE. Outil Y : open source, gratuit, mais installation/maintenance à charge IT (~0,3 ETP/an), intégration hébergement interne. Outil Z : petit acteur belge, 8 k€/an, interface plus simple, hébergement Bruxelles, feuille de route dépendante d'une équipe de 12 personnes.\n\nTristan a testé les trois outils deux semaines chacun. Il note que X et Z ont des fonctionnalités équivalentes pour le besoin actuel (60 % des fonctionnalités X sont non utilisées), que Y a un vrai coût caché (la DSI a refusé d'allouer le 0,3 ETP). La décision doit être prise vendredi.\n\nSa cheffe, Patricia, préfère X par réflexe sécuritaire (« personne n'a jamais été licencié pour avoir acheté du leader »). Le DSI préfère Y (« on s'émancipe des licences »). Le PM préfère Z (« simple, belge, léger »). Chaque partie pousse son angle.\n\nMercredi, Patricia écrit à Tristan : « Pour vendredi, tu me fais une reco ? »\n\nTristan lui répond :",
       "figures": [],
@@ -12351,8 +12419,9 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_vigilance",
         "ag_adjust",
+        "ag_vigilance",
+        "ag_tech",
         "ag_initiative"
       ],
       "situation": "Noémie est Business Analyst à l'ONVA depuis deux ans. Elle travaille avec ardeur depuis quatre mois sur une analyse approfondie du processus « vérification de cohérence trimestrielle » entre les déclarations ONSS et les données ONVA. Son livrable : un modèle BPMN complet + 34 user stories + un plan de migration Access → SQL. Livrable attendu dans trois semaines, déjà présenté en pré-revue deux semaines plus tôt avec des retours positifs.\n\nCe vendredi, coup de théâtre. Le SPF Finances publie une note technique annonçant que le format des déclarations trimestrielles ONSS va changer au 1er avril — dans 8 semaines. Le nouveau format ajoute deux champs obligatoires, modifie un code de classification et supprime trois champs hérités. Le changement impacte directement le processus de vérification de Noémie : environ 60 % de son modèle BPMN est à retravailler, et 14 des 34 user stories sont à ré-écrire.\n\nLa première réaction dans l'équipe est un mélange d'agacement (« on n'a jamais de visibilité ») et d'angoisse (« on ne tiendra pas »). Noémie est personnellement frustrée — beaucoup d'efforts d'analyse partent à la benne. Sa cheffe, Aude, est en déplacement toute la semaine suivante.\n\nLa réforme est ferme, date fixée. Ne pas adapter = livrer un modèle obsolète. S'adapter = probablement repousser la livraison + revoir certaines user stories.\n\nLundi matin, son co-équipier Loïc lui écrit : « Noémie, tu as vu la note SPF ? Qu'est-ce qu'on fait ? On tient la date ou on recale tout ? »\n\nNoémie lui répond :",
@@ -12395,8 +12464,9 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_vigilance",
         "ag_adjust",
+        "ag_vigilance",
+        "ag_tech",
         "ag_initiative"
       ],
       "situation": "Noémie est Business Analyst à l'ONVA depuis deux ans. Elle travaille avec ardeur depuis quatre mois sur une analyse approfondie du processus « vérification de cohérence trimestrielle » entre les déclarations ONSS et les données ONVA. Son livrable : un modèle BPMN complet + 34 user stories + un plan de migration Access → SQL. Livrable attendu dans trois semaines, déjà présenté en pré-revue deux semaines plus tôt avec des retours positifs.\n\nCe vendredi, coup de théâtre. Le SPF Finances publie une note technique annonçant que le format des déclarations trimestrielles ONSS va changer au 1er avril — dans 8 semaines. Le nouveau format ajoute deux champs obligatoires, modifie un code de classification et supprime trois champs hérités. Le changement impacte directement le processus de vérification de Noémie : environ 60 % de son modèle BPMN est à retravailler, et 14 des 34 user stories sont à ré-écrire.\n\nLa première réaction dans l'équipe est un mélange d'agacement (« on n'a jamais de visibilité ») et d'angoisse (« on ne tiendra pas »). Noémie est personnellement frustrée — beaucoup d'efforts d'analyse partent à la benne. Sa cheffe, Aude, est en déplacement toute la semaine suivante.\n\nLa réforme est ferme, date fixée. Ne pas adapter = livrer un modèle obsolète. S'adapter = probablement repousser la livraison + revoir certaines user stories.\n\nLundi matin, son co-équipier Loïc lui écrit : « Noémie, tu as vu la note SPF ? Qu'est-ce qu'on fait ? On tient la date ou on recale tout ? »\n\nNoémie lui répond :",
@@ -12439,8 +12509,9 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_vigilance",
         "ag_adjust",
+        "ag_vigilance",
+        "ag_tech",
         "ag_initiative"
       ],
       "situation": "Noémie est Business Analyst à l'ONVA depuis deux ans. Elle travaille avec ardeur depuis quatre mois sur une analyse approfondie du processus « vérification de cohérence trimestrielle » entre les déclarations ONSS et les données ONVA. Son livrable : un modèle BPMN complet + 34 user stories + un plan de migration Access → SQL. Livrable attendu dans trois semaines, déjà présenté en pré-revue deux semaines plus tôt avec des retours positifs.\n\nCe vendredi, coup de théâtre. Le SPF Finances publie une note technique annonçant que le format des déclarations trimestrielles ONSS va changer au 1er avril — dans 8 semaines. Le nouveau format ajoute deux champs obligatoires, modifie un code de classification et supprime trois champs hérités. Le changement impacte directement le processus de vérification de Noémie : environ 60 % de son modèle BPMN est à retravailler, et 14 des 34 user stories sont à ré-écrire.\n\nLa première réaction dans l'équipe est un mélange d'agacement (« on n'a jamais de visibilité ») et d'angoisse (« on ne tiendra pas »). Noémie est personnellement frustrée — beaucoup d'efforts d'analyse partent à la benne. Sa cheffe, Aude, est en déplacement toute la semaine suivante.\n\nLa réforme est ferme, date fixée. Ne pas adapter = livrer un modèle obsolète. S'adapter = probablement repousser la livraison + revoir certaines user stories.\n\nLundi matin, son co-équipier Loïc lui écrit : « Noémie, tu as vu la note SPF ? Qu'est-ce qu'on fait ? On tient la date ou on recale tout ? »\n\nNoémie lui répond :",
@@ -12483,8 +12554,9 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_vigilance",
         "ag_adjust",
+        "ag_vigilance",
+        "ag_tech",
         "ag_initiative"
       ],
       "situation": "Noémie est Business Analyst à l'ONVA depuis deux ans. Elle travaille avec ardeur depuis quatre mois sur une analyse approfondie du processus « vérification de cohérence trimestrielle » entre les déclarations ONSS et les données ONVA. Son livrable : un modèle BPMN complet + 34 user stories + un plan de migration Access → SQL. Livrable attendu dans trois semaines, déjà présenté en pré-revue deux semaines plus tôt avec des retours positifs.\n\nCe vendredi, coup de théâtre. Le SPF Finances publie une note technique annonçant que le format des déclarations trimestrielles ONSS va changer au 1er avril — dans 8 semaines. Le nouveau format ajoute deux champs obligatoires, modifie un code de classification et supprime trois champs hérités. Le changement impacte directement le processus de vérification de Noémie : environ 60 % de son modèle BPMN est à retravailler, et 14 des 34 user stories sont à ré-écrire.\n\nLa première réaction dans l'équipe est un mélange d'agacement (« on n'a jamais de visibilité ») et d'angoisse (« on ne tiendra pas »). Noémie est personnellement frustrée — beaucoup d'efforts d'analyse partent à la benne. Sa cheffe, Aude, est en déplacement toute la semaine suivante.\n\nLa réforme est ferme, date fixée. Ne pas adapter = livrer un modèle obsolète. S'adapter = probablement repousser la livraison + revoir certaines user stories.\n\nLundi matin, son co-équipier Loïc lui écrit : « Noémie, tu as vu la note SPF ? Qu'est-ce qu'on fait ? On tient la date ou on recale tout ? »\n\nNoémie lui répond :",
@@ -13028,7 +13100,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "ag_adjust",
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Hélène est Business Analyst à l'ONVA depuis un an. Elle anime depuis 3 mois un groupe de travail transversal « rédaction de user stories » composé de 6 BA de différents services (pécule, contrôle, informatique, juridique). L'objectif : uniformiser les pratiques de rédaction et créer un guide commun.\n\nLa méthode initiale : une réunion hebdomadaire de 90 minutes en présentiel, avec un tour de table, un exemple par service, et un vote sur les règles à retenir. Après 10 réunions, le guide n'est pas terminé : 40 % des règles sont figées, le reste traîne. Deux participants viennent moins régulièrement ; un a carrément arrêté de venir. Les discussions tournent parfois en rond.\n\nEn parallèle, l'équipe data de l'ONVA a déployé un outil collaboratif en ligne (type Confluence) qui permet co-édition, commentaires, votes. Hélène ne l'utilise pas. Un des participants, Kévin, lui a suggéré deux fois d'y passer ; elle a décliné parce qu'elle préfère le « vivant » du présentiel.\n\nLa cheffe du groupe, Odile, lui a demandé hier : « Dans 6 semaines, il faut que le guide soit livré. À ce rythme on ne tiendra pas. Tu changes de méthode ou tu continues ? »\n\nHélène a remarqué que sa méthode atteint ses limites, mais elle craint qu'un changement démobilise les participants fidèles, et elle n'est pas très à l'aise avec l'outil collaboratif qu'il faudrait probablement utiliser. Le 11e atelier est prévu mercredi.\n\nOdile l'appelle : « Alors Hélène, mercredi tu animes comment ? »\n\nHélène lui répond :",
       "figures": [],
@@ -13071,7 +13144,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "ag_adjust",
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Hélène est Business Analyst à l'ONVA depuis un an. Elle anime depuis 3 mois un groupe de travail transversal « rédaction de user stories » composé de 6 BA de différents services (pécule, contrôle, informatique, juridique). L'objectif : uniformiser les pratiques de rédaction et créer un guide commun.\n\nLa méthode initiale : une réunion hebdomadaire de 90 minutes en présentiel, avec un tour de table, un exemple par service, et un vote sur les règles à retenir. Après 10 réunions, le guide n'est pas terminé : 40 % des règles sont figées, le reste traîne. Deux participants viennent moins régulièrement ; un a carrément arrêté de venir. Les discussions tournent parfois en rond.\n\nEn parallèle, l'équipe data de l'ONVA a déployé un outil collaboratif en ligne (type Confluence) qui permet co-édition, commentaires, votes. Hélène ne l'utilise pas. Un des participants, Kévin, lui a suggéré deux fois d'y passer ; elle a décliné parce qu'elle préfère le « vivant » du présentiel.\n\nLa cheffe du groupe, Odile, lui a demandé hier : « Dans 6 semaines, il faut que le guide soit livré. À ce rythme on ne tiendra pas. Tu changes de méthode ou tu continues ? »\n\nHélène a remarqué que sa méthode atteint ses limites, mais elle craint qu'un changement démobilise les participants fidèles, et elle n'est pas très à l'aise avec l'outil collaboratif qu'il faudrait probablement utiliser. Le 11e atelier est prévu mercredi.\n\nOdile l'appelle : « Alors Hélène, mercredi tu animes comment ? »\n\nHélène lui répond :",
       "figures": [],
@@ -13114,7 +13188,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "ag_adjust",
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Hélène est Business Analyst à l'ONVA depuis un an. Elle anime depuis 3 mois un groupe de travail transversal « rédaction de user stories » composé de 6 BA de différents services (pécule, contrôle, informatique, juridique). L'objectif : uniformiser les pratiques de rédaction et créer un guide commun.\n\nLa méthode initiale : une réunion hebdomadaire de 90 minutes en présentiel, avec un tour de table, un exemple par service, et un vote sur les règles à retenir. Après 10 réunions, le guide n'est pas terminé : 40 % des règles sont figées, le reste traîne. Deux participants viennent moins régulièrement ; un a carrément arrêté de venir. Les discussions tournent parfois en rond.\n\nEn parallèle, l'équipe data de l'ONVA a déployé un outil collaboratif en ligne (type Confluence) qui permet co-édition, commentaires, votes. Hélène ne l'utilise pas. Un des participants, Kévin, lui a suggéré deux fois d'y passer ; elle a décliné parce qu'elle préfère le « vivant » du présentiel.\n\nLa cheffe du groupe, Odile, lui a demandé hier : « Dans 6 semaines, il faut que le guide soit livré. À ce rythme on ne tiendra pas. Tu changes de méthode ou tu continues ? »\n\nHélène a remarqué que sa méthode atteint ses limites, mais elle craint qu'un changement démobilise les participants fidèles, et elle n'est pas très à l'aise avec l'outil collaboratif qu'il faudrait probablement utiliser. Le 11e atelier est prévu mercredi.\n\nOdile l'appelle : « Alors Hélène, mercredi tu animes comment ? »\n\nHélène lui répond :",
       "figures": [],
@@ -13157,7 +13232,8 @@ window.QUESTIONS_DB = {
       ],
       "sub_behaviors": [
         "ag_adjust",
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Hélène est Business Analyst à l'ONVA depuis un an. Elle anime depuis 3 mois un groupe de travail transversal « rédaction de user stories » composé de 6 BA de différents services (pécule, contrôle, informatique, juridique). L'objectif : uniformiser les pratiques de rédaction et créer un guide commun.\n\nLa méthode initiale : une réunion hebdomadaire de 90 minutes en présentiel, avec un tour de table, un exemple par service, et un vote sur les règles à retenir. Après 10 réunions, le guide n'est pas terminé : 40 % des règles sont figées, le reste traîne. Deux participants viennent moins régulièrement ; un a carrément arrêté de venir. Les discussions tournent parfois en rond.\n\nEn parallèle, l'équipe data de l'ONVA a déployé un outil collaboratif en ligne (type Confluence) qui permet co-édition, commentaires, votes. Hélène ne l'utilise pas. Un des participants, Kévin, lui a suggéré deux fois d'y passer ; elle a décliné parce qu'elle préfère le « vivant » du présentiel.\n\nLa cheffe du groupe, Odile, lui a demandé hier : « Dans 6 semaines, il faut que le guide soit livré. À ce rythme on ne tiendra pas. Tu changes de méthode ou tu continues ? »\n\nHélène a remarqué que sa méthode atteint ses limites, mais elle craint qu'un changement démobilise les participants fidèles, et elle n'est pas très à l'aise avec l'outil collaboratif qu'il faudrait probablement utiliser. Le 11e atelier est prévu mercredi.\n\nOdile l'appelle : « Alors Hélène, mercredi tu animes comment ? »\n\nHélène lui répond :",
       "figures": [],
@@ -13199,8 +13275,8 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
-        "ag_adjust"
+        "ag_adjust",
+        "ag_initiative"
       ],
       "situation": "Damien est Business Analyst à l'ONVA depuis deux ans. Lundi matin, un mail interne annonce que Sylvie, la cheffe de projet historique de la chaîne Access-SQL avec qui Damien travaille quotidiennement, part en congé maladie longue durée (4 mois minimum). Elle emporte avec elle toute la mémoire vive du projet : historique des décisions, relations avec les fournisseurs, états d'esprit des parties prenantes. Rien n'était documenté côté gouvernance.\n\nLa direction nomme un chef de projet temporaire, Guillaume, qui vient d'un autre département et découvre la chaîne. Il a trois semaines pour se mettre à niveau avant une revue comité stratégique. Il est très compétent techniquement mais sans histoire.\n\nDamien est, parmi les trois BA du projet, celui qui a le plus bossé avec Sylvie — il connaît 80 % de ce qu'elle aurait voulu transmettre. Les deux autres BA, Claudine et Nicolas, en savent moins. L'équipe attend de voir ce que Damien va faire. Une partie (Claudine) voudrait juste « attendre le retour de Sylvie ». Nicolas, opportuniste, pense qu'il peut prendre la main sur le projet si personne ne s'organise.\n\nDamien a aussi ses propres livrables en cours : un BPMN sur un processus critique, une spec de module, tous en retard. Prendre le rôle de mémoire-relais va le ralentir.\n\nMardi après-midi, Guillaume vient vers lui : « Damien, j'ai compris que tu bossais beaucoup avec Sylvie. Tu peux m'aider à me mettre à niveau ? Comment tu proposes qu'on organise ? »\n\nDamien lui répond :",
       "figures": [],
@@ -13242,8 +13318,8 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
-        "ag_adjust"
+        "ag_adjust",
+        "ag_initiative"
       ],
       "situation": "Damien est Business Analyst à l'ONVA depuis deux ans. Lundi matin, un mail interne annonce que Sylvie, la cheffe de projet historique de la chaîne Access-SQL avec qui Damien travaille quotidiennement, part en congé maladie longue durée (4 mois minimum). Elle emporte avec elle toute la mémoire vive du projet : historique des décisions, relations avec les fournisseurs, états d'esprit des parties prenantes. Rien n'était documenté côté gouvernance.\n\nLa direction nomme un chef de projet temporaire, Guillaume, qui vient d'un autre département et découvre la chaîne. Il a trois semaines pour se mettre à niveau avant une revue comité stratégique. Il est très compétent techniquement mais sans histoire.\n\nDamien est, parmi les trois BA du projet, celui qui a le plus bossé avec Sylvie — il connaît 80 % de ce qu'elle aurait voulu transmettre. Les deux autres BA, Claudine et Nicolas, en savent moins. L'équipe attend de voir ce que Damien va faire. Une partie (Claudine) voudrait juste « attendre le retour de Sylvie ». Nicolas, opportuniste, pense qu'il peut prendre la main sur le projet si personne ne s'organise.\n\nDamien a aussi ses propres livrables en cours : un BPMN sur un processus critique, une spec de module, tous en retard. Prendre le rôle de mémoire-relais va le ralentir.\n\nMardi après-midi, Guillaume vient vers lui : « Damien, j'ai compris que tu bossais beaucoup avec Sylvie. Tu peux m'aider à me mettre à niveau ? Comment tu proposes qu'on organise ? »\n\nDamien lui répond :",
       "figures": [],
@@ -13285,8 +13361,8 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
-        "ag_adjust"
+        "ag_adjust",
+        "ag_initiative"
       ],
       "situation": "Damien est Business Analyst à l'ONVA depuis deux ans. Lundi matin, un mail interne annonce que Sylvie, la cheffe de projet historique de la chaîne Access-SQL avec qui Damien travaille quotidiennement, part en congé maladie longue durée (4 mois minimum). Elle emporte avec elle toute la mémoire vive du projet : historique des décisions, relations avec les fournisseurs, états d'esprit des parties prenantes. Rien n'était documenté côté gouvernance.\n\nLa direction nomme un chef de projet temporaire, Guillaume, qui vient d'un autre département et découvre la chaîne. Il a trois semaines pour se mettre à niveau avant une revue comité stratégique. Il est très compétent techniquement mais sans histoire.\n\nDamien est, parmi les trois BA du projet, celui qui a le plus bossé avec Sylvie — il connaît 80 % de ce qu'elle aurait voulu transmettre. Les deux autres BA, Claudine et Nicolas, en savent moins. L'équipe attend de voir ce que Damien va faire. Une partie (Claudine) voudrait juste « attendre le retour de Sylvie ». Nicolas, opportuniste, pense qu'il peut prendre la main sur le projet si personne ne s'organise.\n\nDamien a aussi ses propres livrables en cours : un BPMN sur un processus critique, une spec de module, tous en retard. Prendre le rôle de mémoire-relais va le ralentir.\n\nMardi après-midi, Guillaume vient vers lui : « Damien, j'ai compris que tu bossais beaucoup avec Sylvie. Tu peux m'aider à me mettre à niveau ? Comment tu proposes qu'on organise ? »\n\nDamien lui répond :",
       "figures": [],
@@ -13328,8 +13404,8 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
-        "ag_adjust"
+        "ag_adjust",
+        "ag_initiative"
       ],
       "situation": "Damien est Business Analyst à l'ONVA depuis deux ans. Lundi matin, un mail interne annonce que Sylvie, la cheffe de projet historique de la chaîne Access-SQL avec qui Damien travaille quotidiennement, part en congé maladie longue durée (4 mois minimum). Elle emporte avec elle toute la mémoire vive du projet : historique des décisions, relations avec les fournisseurs, états d'esprit des parties prenantes. Rien n'était documenté côté gouvernance.\n\nLa direction nomme un chef de projet temporaire, Guillaume, qui vient d'un autre département et découvre la chaîne. Il a trois semaines pour se mettre à niveau avant une revue comité stratégique. Il est très compétent techniquement mais sans histoire.\n\nDamien est, parmi les trois BA du projet, celui qui a le plus bossé avec Sylvie — il connaît 80 % de ce qu'elle aurait voulu transmettre. Les deux autres BA, Claudine et Nicolas, en savent moins. L'équipe attend de voir ce que Damien va faire. Une partie (Claudine) voudrait juste « attendre le retour de Sylvie ». Nicolas, opportuniste, pense qu'il peut prendre la main sur le projet si personne ne s'organise.\n\nDamien a aussi ses propres livrables en cours : un BPMN sur un processus critique, une spec de module, tous en retard. Prendre le rôle de mémoire-relais va le ralentir.\n\nMardi après-midi, Guillaume vient vers lui : « Damien, j'ai compris que tu bossais beaucoup avec Sylvie. Tu peux m'aider à me mettre à niveau ? Comment tu proposes qu'on organise ? »\n\nDamien lui répond :",
       "figures": [],
@@ -14047,9 +14123,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_persevere",
         "ag_adjust",
-        "ag_initiative"
+        "ag_persevere",
+        "ag_initiative",
+        "ag_learn"
       ],
       "situation": "Lucie est Business Analyst à l'ONVA depuis 18 mois. Elle a été missionnée il y a un mois sur un projet en crise : la migration du batch mensuel de génération des attestations fiscales (250 000 attestations en décembre, deadline absolue vers le SPF Finances le 15 janvier). Le batch SQL construit il y a 6 ans par un prestataire est devenu instable ; sa migration vers la nouvelle plateforme devait être prête en novembre. Elle ne l'est pas.\n\nÉtat des lieux en arrivant : trois tentatives de migration ont échoué (performance, format, perte de données sur des cas limites). L'équipe IT (2 devs, 1 DBA) est fatiguée et en conflit larvé avec le prestataire. Le chef de projet précédent est parti « par épuisement ». Le sponsor, Pierre-Henri (directeur), a prévenu la cheffe de Lucie que « c'est la dernière chance, si ça rate encore on reste sur l'ancien batch pour cette année et on refait en 2027 ».\n\nLucie a deux mois avant la deadline SPF Finances. Elle n'a jamais géré de crise de cette ampleur. Les 3 membres IT sont compétents mais démotivés. Revenir à l'ancien batch pour cette année est une option envisagée par Pierre-Henri mais a aussi ses risques (instabilité connue).\n\nLundi matin, elle rencontre l'équipe IT pour la première fois. Son DBA, Marc, ouvre : « Alors, nouvelle cheffe de projet, nouveau plan magique ? »\n\nLucie leur répond :",
       "figures": [],
@@ -14091,9 +14168,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_persevere",
         "ag_adjust",
-        "ag_initiative"
+        "ag_persevere",
+        "ag_initiative",
+        "ag_learn"
       ],
       "situation": "Lucie est Business Analyst à l'ONVA depuis 18 mois. Elle a été missionnée il y a un mois sur un projet en crise : la migration du batch mensuel de génération des attestations fiscales (250 000 attestations en décembre, deadline absolue vers le SPF Finances le 15 janvier). Le batch SQL construit il y a 6 ans par un prestataire est devenu instable ; sa migration vers la nouvelle plateforme devait être prête en novembre. Elle ne l'est pas.\n\nÉtat des lieux en arrivant : trois tentatives de migration ont échoué (performance, format, perte de données sur des cas limites). L'équipe IT (2 devs, 1 DBA) est fatiguée et en conflit larvé avec le prestataire. Le chef de projet précédent est parti « par épuisement ». Le sponsor, Pierre-Henri (directeur), a prévenu la cheffe de Lucie que « c'est la dernière chance, si ça rate encore on reste sur l'ancien batch pour cette année et on refait en 2027 ».\n\nLucie a deux mois avant la deadline SPF Finances. Elle n'a jamais géré de crise de cette ampleur. Les 3 membres IT sont compétents mais démotivés. Revenir à l'ancien batch pour cette année est une option envisagée par Pierre-Henri mais a aussi ses risques (instabilité connue).\n\nLundi matin, elle rencontre l'équipe IT pour la première fois. Son DBA, Marc, ouvre : « Alors, nouvelle cheffe de projet, nouveau plan magique ? »\n\nLucie leur répond :",
       "figures": [],
@@ -14135,9 +14213,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_persevere",
         "ag_adjust",
-        "ag_initiative"
+        "ag_persevere",
+        "ag_initiative",
+        "ag_learn"
       ],
       "situation": "Lucie est Business Analyst à l'ONVA depuis 18 mois. Elle a été missionnée il y a un mois sur un projet en crise : la migration du batch mensuel de génération des attestations fiscales (250 000 attestations en décembre, deadline absolue vers le SPF Finances le 15 janvier). Le batch SQL construit il y a 6 ans par un prestataire est devenu instable ; sa migration vers la nouvelle plateforme devait être prête en novembre. Elle ne l'est pas.\n\nÉtat des lieux en arrivant : trois tentatives de migration ont échoué (performance, format, perte de données sur des cas limites). L'équipe IT (2 devs, 1 DBA) est fatiguée et en conflit larvé avec le prestataire. Le chef de projet précédent est parti « par épuisement ». Le sponsor, Pierre-Henri (directeur), a prévenu la cheffe de Lucie que « c'est la dernière chance, si ça rate encore on reste sur l'ancien batch pour cette année et on refait en 2027 ».\n\nLucie a deux mois avant la deadline SPF Finances. Elle n'a jamais géré de crise de cette ampleur. Les 3 membres IT sont compétents mais démotivés. Revenir à l'ancien batch pour cette année est une option envisagée par Pierre-Henri mais a aussi ses risques (instabilité connue).\n\nLundi matin, elle rencontre l'équipe IT pour la première fois. Son DBA, Marc, ouvre : « Alors, nouvelle cheffe de projet, nouveau plan magique ? »\n\nLucie leur répond :",
       "figures": [],
@@ -14179,9 +14258,10 @@ window.QUESTIONS_DB = {
         "SO2"
       ],
       "sub_behaviors": [
-        "ag_persevere",
         "ag_adjust",
-        "ag_initiative"
+        "ag_persevere",
+        "ag_initiative",
+        "ag_learn"
       ],
       "situation": "Lucie est Business Analyst à l'ONVA depuis 18 mois. Elle a été missionnée il y a un mois sur un projet en crise : la migration du batch mensuel de génération des attestations fiscales (250 000 attestations en décembre, deadline absolue vers le SPF Finances le 15 janvier). Le batch SQL construit il y a 6 ans par un prestataire est devenu instable ; sa migration vers la nouvelle plateforme devait être prête en novembre. Elle ne l'est pas.\n\nÉtat des lieux en arrivant : trois tentatives de migration ont échoué (performance, format, perte de données sur des cas limites). L'équipe IT (2 devs, 1 DBA) est fatiguée et en conflit larvé avec le prestataire. Le chef de projet précédent est parti « par épuisement ». Le sponsor, Pierre-Henri (directeur), a prévenu la cheffe de Lucie que « c'est la dernière chance, si ça rate encore on reste sur l'ancien batch pour cette année et on refait en 2027 ».\n\nLucie a deux mois avant la deadline SPF Finances. Elle n'a jamais géré de crise de cette ampleur. Les 3 membres IT sont compétents mais démotivés. Revenir à l'ancien batch pour cette année est une option envisagée par Pierre-Henri mais a aussi ses risques (instabilité connue).\n\nLundi matin, elle rencontre l'équipe IT pour la première fois. Son DBA, Marc, ouvre : « Alors, nouvelle cheffe de projet, nouveau plan magique ? »\n\nLucie leur répond :",
       "figures": [],
@@ -14731,7 +14811,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Anaïs est Business Analyst à l'ONVA depuis un an. Elle a été nommée référente fonctionnelle d'un petit projet transversal : la refonte de l'intranet du département Modernisation (10 pages, 34 utilisateurs, en interne). Un prestataire externe développe la nouvelle version avec des contacts hebdomadaires. Le budget est limité (12 k€), la livraison prévue dans 8 semaines.\n\nAu sprint review du sprint 3, le prestataire présente une maquette. Anaïs voit deux problèmes. D'abord, la maquette ne respecte pas la charte graphique ONVA officielle publiée il y a 2 ans (couleurs, logo, typographie). Le prestataire l'a apparemment récupérée dans une ancienne version, il ne le sait pas encore. Ensuite, l'accessibilité (RGAA — contrastes, navigation clavier) n'a pas été prise en compte : plusieurs contrastes sont insuffisants et deux formulaires n'ont pas de label explicite. Une collègue malvoyante, Christine, qui utilise un lecteur d'écran, ne pourra pas l'utiliser.\n\nLe prestataire est sympa mais très pris. Il a déjà prévenu qu'un grosse refonte demande une rallonge budgétaire. Le sponsor interne, Gilbert, est pragmatique : « l'intranet c'est juste pour 34 personnes, on se suffit d'une version qui marche ». Il n'est pas sensibilisé à l'accessibilité.\n\nChristine a glissé à Anaïs la semaine dernière : « je ne sais pas si je participerai au lancement, la version actuelle je ne la lisais déjà pas bien ».\n\nEn sortie de sprint review, Gilbert lui demande : « Anaïs, tu valides la maquette ? On peut avancer ? »\n\nAnaïs lui répond :",
       "figures": [],
@@ -14773,7 +14854,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Anaïs est Business Analyst à l'ONVA depuis un an. Elle a été nommée référente fonctionnelle d'un petit projet transversal : la refonte de l'intranet du département Modernisation (10 pages, 34 utilisateurs, en interne). Un prestataire externe développe la nouvelle version avec des contacts hebdomadaires. Le budget est limité (12 k€), la livraison prévue dans 8 semaines.\n\nAu sprint review du sprint 3, le prestataire présente une maquette. Anaïs voit deux problèmes. D'abord, la maquette ne respecte pas la charte graphique ONVA officielle publiée il y a 2 ans (couleurs, logo, typographie). Le prestataire l'a apparemment récupérée dans une ancienne version, il ne le sait pas encore. Ensuite, l'accessibilité (RGAA — contrastes, navigation clavier) n'a pas été prise en compte : plusieurs contrastes sont insuffisants et deux formulaires n'ont pas de label explicite. Une collègue malvoyante, Christine, qui utilise un lecteur d'écran, ne pourra pas l'utiliser.\n\nLe prestataire est sympa mais très pris. Il a déjà prévenu qu'un grosse refonte demande une rallonge budgétaire. Le sponsor interne, Gilbert, est pragmatique : « l'intranet c'est juste pour 34 personnes, on se suffit d'une version qui marche ». Il n'est pas sensibilisé à l'accessibilité.\n\nChristine a glissé à Anaïs la semaine dernière : « je ne sais pas si je participerai au lancement, la version actuelle je ne la lisais déjà pas bien ».\n\nEn sortie de sprint review, Gilbert lui demande : « Anaïs, tu valides la maquette ? On peut avancer ? »\n\nAnaïs lui répond :",
       "figures": [],
@@ -14815,7 +14897,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Anaïs est Business Analyst à l'ONVA depuis un an. Elle a été nommée référente fonctionnelle d'un petit projet transversal : la refonte de l'intranet du département Modernisation (10 pages, 34 utilisateurs, en interne). Un prestataire externe développe la nouvelle version avec des contacts hebdomadaires. Le budget est limité (12 k€), la livraison prévue dans 8 semaines.\n\nAu sprint review du sprint 3, le prestataire présente une maquette. Anaïs voit deux problèmes. D'abord, la maquette ne respecte pas la charte graphique ONVA officielle publiée il y a 2 ans (couleurs, logo, typographie). Le prestataire l'a apparemment récupérée dans une ancienne version, il ne le sait pas encore. Ensuite, l'accessibilité (RGAA — contrastes, navigation clavier) n'a pas été prise en compte : plusieurs contrastes sont insuffisants et deux formulaires n'ont pas de label explicite. Une collègue malvoyante, Christine, qui utilise un lecteur d'écran, ne pourra pas l'utiliser.\n\nLe prestataire est sympa mais très pris. Il a déjà prévenu qu'un grosse refonte demande une rallonge budgétaire. Le sponsor interne, Gilbert, est pragmatique : « l'intranet c'est juste pour 34 personnes, on se suffit d'une version qui marche ». Il n'est pas sensibilisé à l'accessibilité.\n\nChristine a glissé à Anaïs la semaine dernière : « je ne sais pas si je participerai au lancement, la version actuelle je ne la lisais déjà pas bien ».\n\nEn sortie de sprint review, Gilbert lui demande : « Anaïs, tu valides la maquette ? On peut avancer ? »\n\nAnaïs lui répond :",
       "figures": [],
@@ -14857,7 +14940,8 @@ window.QUESTIONS_DB = {
         "CO2"
       ],
       "sub_behaviors": [
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ],
       "situation": "Anaïs est Business Analyst à l'ONVA depuis un an. Elle a été nommée référente fonctionnelle d'un petit projet transversal : la refonte de l'intranet du département Modernisation (10 pages, 34 utilisateurs, en interne). Un prestataire externe développe la nouvelle version avec des contacts hebdomadaires. Le budget est limité (12 k€), la livraison prévue dans 8 semaines.\n\nAu sprint review du sprint 3, le prestataire présente une maquette. Anaïs voit deux problèmes. D'abord, la maquette ne respecte pas la charte graphique ONVA officielle publiée il y a 2 ans (couleurs, logo, typographie). Le prestataire l'a apparemment récupérée dans une ancienne version, il ne le sait pas encore. Ensuite, l'accessibilité (RGAA — contrastes, navigation clavier) n'a pas été prise en compte : plusieurs contrastes sont insuffisants et deux formulaires n'ont pas de label explicite. Une collègue malvoyante, Christine, qui utilise un lecteur d'écran, ne pourra pas l'utiliser.\n\nLe prestataire est sympa mais très pris. Il a déjà prévenu qu'un grosse refonte demande une rallonge budgétaire. Le sponsor interne, Gilbert, est pragmatique : « l'intranet c'est juste pour 34 personnes, on se suffit d'une version qui marche ». Il n'est pas sensibilisé à l'accessibilité.\n\nChristine a glissé à Anaïs la semaine dernière : « je ne sais pas si je participerai au lancement, la version actuelle je ne la lisais déjà pas bien ».\n\nEn sortie de sprint review, Gilbert lui demande : « Anaïs, tu valides la maquette ? On peut avancer ? »\n\nAnaïs lui répond :",
       "figures": [],
@@ -15071,8 +15155,10 @@ window.QUESTIONS_DB = {
         "AG2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_anticipate",
-        "pc_credibility"
+        "pc_credibility",
+        "pc_sources"
       ],
       "situation": "Zoé est Business Analyst à l'ONVA depuis deux ans. Elle accompagne un sponsor métier, Bertrand, qui veut lancer un projet de « dashboard temps réel » pour suivre l'activité du service pécule. Bertrand est convaincu de l'idée depuis un séminaire sectoriel où une administration française a présenté son propre dashboard en direct et « en a tiré 30 % de productivité supplémentaire ».\n\nBertrand a déjà trois choses en main. Un prestataire identifié (« des Français très bons, j'ai le contact »). Un budget estimatif (150 k€ la 1re année). Une date cible (déploiement en 4 mois). Il demande à Zoé d'écrire les specs pour appel d'offres.\n\nZoé, prudente, creuse. Elle contacte la référente française citée dans le séminaire : le dashboard n'est pas « temps réel » mais horaire, et les 30 % de productivité sont un ordre de grandeur communiqué en conférence, non mesuré formellement. Elle parle aux gestionnaires ONVA : leur besoin principal n'est pas le temps réel, mais une vue hebdomadaire consolidée (qu'ils n'ont pas) ; et ils craignent un outil de surveillance. Elle demande à l'IT : un dashboard temps réel sur leur stack actuelle demande environ 300 k€, pas 150.\n\nBertrand est pressé et enthousiaste. Il a déjà présenté oralement son projet au comité de direction comme « acquis ». Il dit à Zoé vendredi : « Zoé, les specs pour lundi ? On se voit une heure ce soir si besoin, mais je voudrais un texte d'accord. »\n\nZoé lui répond :",
       "figures": [],
@@ -15114,8 +15200,10 @@ window.QUESTIONS_DB = {
         "AG2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_anticipate",
-        "pc_credibility"
+        "pc_credibility",
+        "pc_sources"
       ],
       "situation": "Zoé est Business Analyst à l'ONVA depuis deux ans. Elle accompagne un sponsor métier, Bertrand, qui veut lancer un projet de « dashboard temps réel » pour suivre l'activité du service pécule. Bertrand est convaincu de l'idée depuis un séminaire sectoriel où une administration française a présenté son propre dashboard en direct et « en a tiré 30 % de productivité supplémentaire ».\n\nBertrand a déjà trois choses en main. Un prestataire identifié (« des Français très bons, j'ai le contact »). Un budget estimatif (150 k€ la 1re année). Une date cible (déploiement en 4 mois). Il demande à Zoé d'écrire les specs pour appel d'offres.\n\nZoé, prudente, creuse. Elle contacte la référente française citée dans le séminaire : le dashboard n'est pas « temps réel » mais horaire, et les 30 % de productivité sont un ordre de grandeur communiqué en conférence, non mesuré formellement. Elle parle aux gestionnaires ONVA : leur besoin principal n'est pas le temps réel, mais une vue hebdomadaire consolidée (qu'ils n'ont pas) ; et ils craignent un outil de surveillance. Elle demande à l'IT : un dashboard temps réel sur leur stack actuelle demande environ 300 k€, pas 150.\n\nBertrand est pressé et enthousiaste. Il a déjà présenté oralement son projet au comité de direction comme « acquis ». Il dit à Zoé vendredi : « Zoé, les specs pour lundi ? On se voit une heure ce soir si besoin, mais je voudrais un texte d'accord. »\n\nZoé lui répond :",
       "figures": [],
@@ -15157,8 +15245,10 @@ window.QUESTIONS_DB = {
         "AG2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_anticipate",
-        "pc_credibility"
+        "pc_credibility",
+        "pc_sources"
       ],
       "situation": "Zoé est Business Analyst à l'ONVA depuis deux ans. Elle accompagne un sponsor métier, Bertrand, qui veut lancer un projet de « dashboard temps réel » pour suivre l'activité du service pécule. Bertrand est convaincu de l'idée depuis un séminaire sectoriel où une administration française a présenté son propre dashboard en direct et « en a tiré 30 % de productivité supplémentaire ».\n\nBertrand a déjà trois choses en main. Un prestataire identifié (« des Français très bons, j'ai le contact »). Un budget estimatif (150 k€ la 1re année). Une date cible (déploiement en 4 mois). Il demande à Zoé d'écrire les specs pour appel d'offres.\n\nZoé, prudente, creuse. Elle contacte la référente française citée dans le séminaire : le dashboard n'est pas « temps réel » mais horaire, et les 30 % de productivité sont un ordre de grandeur communiqué en conférence, non mesuré formellement. Elle parle aux gestionnaires ONVA : leur besoin principal n'est pas le temps réel, mais une vue hebdomadaire consolidée (qu'ils n'ont pas) ; et ils craignent un outil de surveillance. Elle demande à l'IT : un dashboard temps réel sur leur stack actuelle demande environ 300 k€, pas 150.\n\nBertrand est pressé et enthousiaste. Il a déjà présenté oralement son projet au comité de direction comme « acquis ». Il dit à Zoé vendredi : « Zoé, les specs pour lundi ? On se voit une heure ce soir si besoin, mais je voudrais un texte d'accord. »\n\nZoé lui répond :",
       "figures": [],
@@ -15200,8 +15290,10 @@ window.QUESTIONS_DB = {
         "AG2"
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_anticipate",
-        "pc_credibility"
+        "pc_credibility",
+        "pc_sources"
       ],
       "situation": "Zoé est Business Analyst à l'ONVA depuis deux ans. Elle accompagne un sponsor métier, Bertrand, qui veut lancer un projet de « dashboard temps réel » pour suivre l'activité du service pécule. Bertrand est convaincu de l'idée depuis un séminaire sectoriel où une administration française a présenté son propre dashboard en direct et « en a tiré 30 % de productivité supplémentaire ».\n\nBertrand a déjà trois choses en main. Un prestataire identifié (« des Français très bons, j'ai le contact »). Un budget estimatif (150 k€ la 1re année). Une date cible (déploiement en 4 mois). Il demande à Zoé d'écrire les specs pour appel d'offres.\n\nZoé, prudente, creuse. Elle contacte la référente française citée dans le séminaire : le dashboard n'est pas « temps réel » mais horaire, et les 30 % de productivité sont un ordre de grandeur communiqué en conférence, non mesuré formellement. Elle parle aux gestionnaires ONVA : leur besoin principal n'est pas le temps réel, mais une vue hebdomadaire consolidée (qu'ils n'ont pas) ; et ils craignent un outil de surveillance. Elle demande à l'IT : un dashboard temps réel sur leur stack actuelle demande environ 300 k€, pas 150.\n\nBertrand est pressé et enthousiaste. Il a déjà présenté oralement son projet au comité de direction comme « acquis ». Il dit à Zoé vendredi : « Zoé, les specs pour lundi ? On se voit une heure ce soir si besoin, mais je voudrais un texte d'accord. »\n\nZoé lui répond :",
       "figures": [],
@@ -15415,9 +15507,10 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_tech",
-        "ag_adjust"
+        "ag_initiative",
+        "ag_adjust",
+        "ag_vigilance"
       ],
       "situation": "Malika est Business Analyst à l'ONVA depuis trois ans. Elle co-pilote avec l'IT l'infrastructure de reporting pécule, appuyée sur un data warehouse et un outil Power BI. Depuis 2 ans, les 45 rapports mensuels utilisent des cubes OLAP construits pendant la phase projet. Ces cubes commencent à dater et à cumuler de la dette technique.\n\nUn consultant externe, Pascal, mandaté pour un audit reporting, rend son rapport : il recommande de passer en mode « modélisation sémantique partagée » (un seul modèle central, documenté, réutilisé par tous les rapports), qui est l'approche « moderne » — celle poussée par Microsoft depuis 3 ans. Il propose une migration de 9 mois.\n\nMalika a regardé les bénéfices : réduction de redondance, rapports plus cohérents, facilité de maintenance, ouverture à la self-service BI. Mais aussi les coûts : 9 mois de chantier qui va mobiliser 0,5 ETP IT et 0,3 ETP BA, période de co-existence ancienne/nouvelle instable, risque d'interruption reporting si mal pilotée.\n\nSon chef IT, Raphaël, est prudent : « nos rapports actuels marchent, pourquoi on changerait ». Son équipe utilisatrice (10 managers) n'est pas demandeuse — personne ne s'est plaint de l'existant. Malika elle-même n'est pas experte du nouveau modèle sémantique, elle a lu des articles mais n'a jamais mis en œuvre.\n\nLa directrice Valérie lui demande au détour : « Malika, ce rapport du consultant, tu en fais quoi ? »\n\nMalika lui répond :",
       "figures": [],
@@ -15459,9 +15552,10 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_tech",
-        "ag_adjust"
+        "ag_initiative",
+        "ag_adjust",
+        "ag_vigilance"
       ],
       "situation": "Malika est Business Analyst à l'ONVA depuis trois ans. Elle co-pilote avec l'IT l'infrastructure de reporting pécule, appuyée sur un data warehouse et un outil Power BI. Depuis 2 ans, les 45 rapports mensuels utilisent des cubes OLAP construits pendant la phase projet. Ces cubes commencent à dater et à cumuler de la dette technique.\n\nUn consultant externe, Pascal, mandaté pour un audit reporting, rend son rapport : il recommande de passer en mode « modélisation sémantique partagée » (un seul modèle central, documenté, réutilisé par tous les rapports), qui est l'approche « moderne » — celle poussée par Microsoft depuis 3 ans. Il propose une migration de 9 mois.\n\nMalika a regardé les bénéfices : réduction de redondance, rapports plus cohérents, facilité de maintenance, ouverture à la self-service BI. Mais aussi les coûts : 9 mois de chantier qui va mobiliser 0,5 ETP IT et 0,3 ETP BA, période de co-existence ancienne/nouvelle instable, risque d'interruption reporting si mal pilotée.\n\nSon chef IT, Raphaël, est prudent : « nos rapports actuels marchent, pourquoi on changerait ». Son équipe utilisatrice (10 managers) n'est pas demandeuse — personne ne s'est plaint de l'existant. Malika elle-même n'est pas experte du nouveau modèle sémantique, elle a lu des articles mais n'a jamais mis en œuvre.\n\nLa directrice Valérie lui demande au détour : « Malika, ce rapport du consultant, tu en fais quoi ? »\n\nMalika lui répond :",
       "figures": [],
@@ -15503,9 +15597,10 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_tech",
-        "ag_adjust"
+        "ag_initiative",
+        "ag_adjust",
+        "ag_vigilance"
       ],
       "situation": "Malika est Business Analyst à l'ONVA depuis trois ans. Elle co-pilote avec l'IT l'infrastructure de reporting pécule, appuyée sur un data warehouse et un outil Power BI. Depuis 2 ans, les 45 rapports mensuels utilisent des cubes OLAP construits pendant la phase projet. Ces cubes commencent à dater et à cumuler de la dette technique.\n\nUn consultant externe, Pascal, mandaté pour un audit reporting, rend son rapport : il recommande de passer en mode « modélisation sémantique partagée » (un seul modèle central, documenté, réutilisé par tous les rapports), qui est l'approche « moderne » — celle poussée par Microsoft depuis 3 ans. Il propose une migration de 9 mois.\n\nMalika a regardé les bénéfices : réduction de redondance, rapports plus cohérents, facilité de maintenance, ouverture à la self-service BI. Mais aussi les coûts : 9 mois de chantier qui va mobiliser 0,5 ETP IT et 0,3 ETP BA, période de co-existence ancienne/nouvelle instable, risque d'interruption reporting si mal pilotée.\n\nSon chef IT, Raphaël, est prudent : « nos rapports actuels marchent, pourquoi on changerait ». Son équipe utilisatrice (10 managers) n'est pas demandeuse — personne ne s'est plaint de l'existant. Malika elle-même n'est pas experte du nouveau modèle sémantique, elle a lu des articles mais n'a jamais mis en œuvre.\n\nLa directrice Valérie lui demande au détour : « Malika, ce rapport du consultant, tu en fais quoi ? »\n\nMalika lui répond :",
       "figures": [],
@@ -15547,9 +15642,10 @@ window.QUESTIONS_DB = {
         "PC2"
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_tech",
-        "ag_adjust"
+        "ag_initiative",
+        "ag_adjust",
+        "ag_vigilance"
       ],
       "situation": "Malika est Business Analyst à l'ONVA depuis trois ans. Elle co-pilote avec l'IT l'infrastructure de reporting pécule, appuyée sur un data warehouse et un outil Power BI. Depuis 2 ans, les 45 rapports mensuels utilisent des cubes OLAP construits pendant la phase projet. Ces cubes commencent à dater et à cumuler de la dette technique.\n\nUn consultant externe, Pascal, mandaté pour un audit reporting, rend son rapport : il recommande de passer en mode « modélisation sémantique partagée » (un seul modèle central, documenté, réutilisé par tous les rapports), qui est l'approche « moderne » — celle poussée par Microsoft depuis 3 ans. Il propose une migration de 9 mois.\n\nMalika a regardé les bénéfices : réduction de redondance, rapports plus cohérents, facilité de maintenance, ouverture à la self-service BI. Mais aussi les coûts : 9 mois de chantier qui va mobiliser 0,5 ETP IT et 0,3 ETP BA, période de co-existence ancienne/nouvelle instable, risque d'interruption reporting si mal pilotée.\n\nSon chef IT, Raphaël, est prudent : « nos rapports actuels marchent, pourquoi on changerait ». Son équipe utilisatrice (10 managers) n'est pas demandeuse — personne ne s'est plaint de l'existant. Malika elle-même n'est pas experte du nouveau modèle sémantique, elle a lu des articles mais n'a jamais mis en œuvre.\n\nLa directrice Valérie lui demande au détour : « Malika, ce rapport du consultant, tu en fais quoi ? »\n\nMalika lui répond :",
       "figures": [],

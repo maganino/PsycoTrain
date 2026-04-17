@@ -48,9 +48,10 @@
         }
       ],
       "sub_behaviors": [
-        "pc_recommend",
         "pc_sources",
-        "pc_causes"
+        "pc_recommend",
+        "pc_causes",
+        "pc_credibility"
       ]
     },
     {
@@ -100,6 +101,7 @@
       "sub_behaviors": [
         "pc_credibility",
         "pc_anticipate",
+        "pc_recommend",
         "pc_sources"
       ]
     },
@@ -191,6 +193,7 @@
         }
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_credibility",
         "pc_elements",
         "pc_anticipate"
@@ -240,7 +243,9 @@
         }
       ],
       "sub_behaviors": [
-        "pc_elements"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ]
     },
     {
@@ -287,9 +292,10 @@
         }
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_recommend",
-        "pc_elements"
+        "pc_credibility",
+        "pc_elements",
+        "pc_anticipate"
       ]
     },
     {
@@ -338,8 +344,9 @@
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_recommend",
         "pc_credibility",
-        "pc_elements"
+        "pc_sources"
       ]
     },
     {
@@ -431,8 +438,9 @@
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_sources",
         "pc_credibility",
-        "pc_sources"
+        "pc_recommend"
       ]
     },
     {
@@ -529,7 +537,8 @@
       "sub_behaviors": [
         "pc_anticipate",
         "pc_credibility",
-        "pc_recommend"
+        "pc_recommend",
+        "pc_sources"
       ]
     },
     {
@@ -576,9 +585,9 @@
         }
       ],
       "sub_behaviors": [
-        "pc_elements",
+        "pc_anticipate",
         "pc_credibility",
-        "pc_anticipate"
+        "pc_elements"
       ]
     },
     {
@@ -671,6 +680,7 @@
       ],
       "sub_behaviors": [
         "pc_anticipate",
+        "pc_causes",
         "pc_elements"
       ]
     },
@@ -718,7 +728,8 @@
         }
       ],
       "sub_behaviors": [
-        "pc_credibility"
+        "pc_credibility",
+        "pc_anticipate"
       ]
     },
     {
@@ -767,7 +778,8 @@
       "sub_behaviors": [
         "pc_elements",
         "pc_anticipate",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ]
     },
     {
@@ -815,7 +827,8 @@
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_elements"
+        "pc_elements",
+        "pc_anticipate"
       ]
     },
     {
@@ -864,7 +877,8 @@
       "sub_behaviors": [
         "ag_initiative",
         "ag_adjust",
-        "ag_learn"
+        "ag_learn",
+        "ag_tech"
       ]
     },
     {
@@ -960,7 +974,8 @@
       ],
       "sub_behaviors": [
         "pc_recommend",
-        "pc_sources"
+        "pc_sources",
+        "pc_anticipate"
       ]
     },
     {
@@ -1198,8 +1213,9 @@
         }
       ],
       "sub_behaviors": [
-        "ag_vigilance",
         "ag_adjust",
+        "ag_vigilance",
+        "ag_tech",
         "ag_initiative"
       ]
     },
@@ -1387,7 +1403,8 @@
       ],
       "sub_behaviors": [
         "ag_adjust",
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ]
     },
     {
@@ -1434,8 +1451,8 @@
         }
       ],
       "sub_behaviors": [
-        "ag_initiative",
-        "ag_adjust"
+        "ag_adjust",
+        "ag_initiative"
       ]
     },
     {
@@ -1670,9 +1687,10 @@
         }
       ],
       "sub_behaviors": [
-        "ag_persevere",
         "ag_adjust",
-        "ag_initiative"
+        "ag_persevere",
+        "ag_initiative",
+        "ag_learn"
       ]
     },
     {
@@ -1860,7 +1878,8 @@
         }
       ],
       "sub_behaviors": [
-        "ag_initiative"
+        "ag_initiative",
+        "ag_tech"
       ]
     },
     {
@@ -1955,8 +1974,10 @@
         }
       ],
       "sub_behaviors": [
+        "pc_recommend",
         "pc_anticipate",
-        "pc_credibility"
+        "pc_credibility",
+        "pc_sources"
       ]
     },
     {
@@ -2051,9 +2072,10 @@
         }
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_tech",
-        "ag_adjust"
+        "ag_initiative",
+        "ag_adjust",
+        "ag_vigilance"
       ]
     },
     {

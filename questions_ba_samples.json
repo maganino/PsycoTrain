@@ -56,7 +56,8 @@
       "sub_behaviors": [
         "pc_sources",
         "pc_credibility",
-        "pc_causes"
+        "pc_causes",
+        "pc_recommend"
       ]
     },
     {
@@ -106,6 +107,7 @@
       "sub_behaviors": [
         "pc_credibility",
         "pc_sources",
+        "pc_anticipate",
         "pc_elements"
       ]
     },
