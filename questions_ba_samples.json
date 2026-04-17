@@ -25,7 +25,7 @@
         "r3": 40,
         "r4": 40
       },
-      "schema": "A (--, -, +/-, ++)",
+      "schema": "Full 5 (--, -, +/-, +, ++)",
       "situation": "Vincent est Business Analyst à l'ONVA (Office National des Vacances Annuelles) depuis quatre mois. Sa cheffe de projet, Karine, vient de lui confier le processus P-ART-04, qui calcule au prorata les jours de vacances et le pécule dus aux artistes et techniciens du spectacle. Ces travailleurs enchaînent souvent plusieurs contrats courts sur une même année, et la règle est une des plus délicates de l'Office : elle concerne 45 000 ayants droit.\n\nKarine attend un modèle BPMN As-Is et une note de recommandations pour la fin du mois, en vue du projet qui doit remplacer la chaîne Access / Excel / macros VBA par une application web. Le livrable est bloquant : IT et Juridique ont aligné leur planning sur son modèle, et le comité de direction attend la validation.\n\nVincent dispose de trois sources qui se contredisent. D'abord Paul, analyste tenure depuis quinze ans, lui a expliqué en une heure, de mémoire, que le prorata se calcule en divisant les jours prestés par 312, avec un arrondi fixe au dixième supérieur, sans exception. Paul est la référence interne et n'apprécie pas qu'on remette en cause ses explications.\n\nEnsuite, la base Access de production contient une table `ARTIST_PRORATA_EXCEPTIONS` avec 1 847 enregistrements où le diviseur est 260 ou 286 selon des codes NACE, avec un arrondi différent. Aucune documentation n'accompagne ces codes.\n\nEnfin, parmi 42 tickets GLPI récents, treize ont été résolus par un calcul différent de celui de Paul, avec le commentaire « traitement réglementaire particulier — voir circulaire 2019/14 ». Cette circulaire n'est pas indexée dans la GED officielle. Un collègue la transmet à Vincent depuis son disque local : elle décrit un régime transitoire censé s'appliquer jusqu'en 2021, apparemment encore utilisé.\n\nCe matin, en stand-up, la pression devient explicite. Karine rappelle le délai et ajoute : « Surtout, ne complique pas, on a besoin d'un modèle lisible, pas d'une thèse. » Paul renchérit en visio : « La règle est celle que je t'ai donnée. Les développeurs feront les exceptions plus tard. »\n\nEn fin de stand-up, Karine se tourne vers Vincent et lui demande : « Vincent, sur quelle règle de prorata tu pars pour ton BPMN As-Is ? »\n\nVincent lui répond :",
       "reactions": [
         {
@@ -51,6 +51,12 @@
           "expected_score": "++",
           "text": "« Tableau comparatif des trois sources — mémoire de Paul, table Access, circulaire 2019/14 — avec citations et chiffrage d'impact sur les 1 847 cas. Réunion de 45 min demain matin avec Paul et Juridique pour figer la règle. Dix jours de décalage sur le BPMN, reste du périmètre dans le délai. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner des stratégies de recherche, évaluer la crédibilité et la fiabilité, identifier les éléments essentiels, formuler une recommandation fondée, réfléchir aux conséquences. Vincent triangule les trois sources, quantifie l'impact, matérialise la dimension réglementaire, et transforme une contradiction ambiguë en décision documentée en mobilisant les bons interlocuteurs (Paul + Juridique). Pourquoi ++ et non + : le niveau ++ vient de la combinaison triangulation + chiffrage d'impact + proposition concrète d'arbitrage + re-planning maîtrisé. Un + aurait été donné pour une simple synthèse sans mécanisme de décision ni ré-estimation du délai."
+        },
+        {
+          "letter_preshuffle": "E",
+          "expected_score": "+",
+          "text": "« Je pars provisoirement sur /312 (version Paul) pour ne pas bloquer le BPMN, mais je flague la circulaire 2019/14 et les 1 847 exceptions Access en note explicite. Je te livre le modèle vendredi, et je propose qu'on cale avec Paul la semaine prochaine pour arbitrer. »",
+          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — croiser les sources, formuler une recommandation. Vincent triangule les trois sources et documente explicitement le conflit, ce qui protège le BPMN contre la simplification abusive. Il propose un arbitrage avec Paul. Pourquoi + et non ++ : il manque le chiffrage de l'impact sur les 1 847 cas et la co-saisine du Juridique — Paul seul ne peut pas trancher la valeur normative de la circulaire. Un ++ aurait intégré les trois sources dans un tableau comparatif chiffré, comme la réaction D."
         }
       ],
       "sub_behaviors": [
@@ -76,7 +82,7 @@
         "r3": 40,
         "r4": 40
       },
-      "schema": "A (--, -, +/-, ++)",
+      "schema": "Full 5 (--, -, +/-, +, ++)",
       "situation": "Claire est Business Analyst à l'ONVA depuis un an et travaille sur le périmètre « comptes dormants » : les dossiers d'ayants droit qui n'ont jamais réclamé leur pécule et basculent, passé un certain délai, dans un processus de clôture comptable. Le sujet est sensible parce qu'il croise droit social, prescription et intérêts de l'ayant droit.\n\nLa semaine dernière, une circulaire ministérielle (2026/03) a modifié les règles. Le business owner du processus, Rachid, lui a envoyé une note d'une page : « À partir du 01/07/2026, un compte est considéré comme dormant après 48 mois d'inactivité (au lieu de 36), et la clôture peut être lancée par simple décision du gestionnaire. » Il demande un BPMN To-Be et un set de use cases pour le sprint planning jeudi prochain. Juridique a déjà annoncé au ministère que l'ONVA serait prêt pour le 01/07.\n\nPar réflexe, Claire ouvre le texte intégral de la circulaire. Elle repère deux points que le résumé ne mentionne pas. D'abord, l'article 4 §2 précise que le délai de 48 mois ne s'applique qu'aux comptes de l'ayant droit lui-même ; s'il existe des héritiers identifiés dans les registres de l'état civil, le délai reste de 36 mois avec notification obligatoire avant clôture. Ensuite, une disposition transitoire impose une validation croisée par un deuxième gestionnaire pendant les six premiers mois d'application.\n\nEn consultant les macros VBA de l'outil `DORMANT_V3` actuellement en production, Claire réalise un troisième problème : l'outil ne distingue pas non plus le cas des héritiers et clôture depuis deux ans certains comptes à 36 mois sans notification. Si son interprétation est correcte, l'ONVA est potentiellement en situation de non-conformité sur un volume non négligeable de dossiers passés — ce que ni Rachid ni Juridique ne semblent avoir tracé.\n\nLe sprint est jeudi. Rachid est respecté, pressé, et Claire n'a pas envie de passer pour la BA qui complique tout. En début d'après-midi, son tech lead Loïc passe à son bureau : « Tu pars sur le résumé de Rachid pour le BPMN comptes dormants, ou tu vois autre chose ? On fige quoi avant jeudi ? »\n\nClaire lui répond :",
       "reactions": [
         {
@@ -102,12 +108,18 @@
           "expected_score": "++",
           "text": "« Avant jeudi, tableau à trois colonnes : résumé de Rachid, texte exact de la circulaire (art. 4 §2 + transitoire), comportement actuel de `DORMANT_V3`. J'y mets en évidence le cas héritiers et la double validation manquants, et flague à part la non-conformité probable des macros pour que Juridique décide d'un audit. Réunion de 30 min demain avec Rachid pour valider. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les éléments essentiels et sous-jacents, vérifier crédibilité/fiabilité, formuler recommandations, réfléchir aux conséquences. Claire triangule résumé / texte légal / comportement système, isole les éléments essentiels (héritiers, double validation), et sépare proprement les deux questions (modèle futur vs. conformité passée) pour ne pas noyer la décision. Pourquoi ++ et non + : c'est la combinaison preuve documentée + recommandation + séparation des enjeux + réunion d'arbitrage concrète qui justifie le maximum. Un + aurait été donné pour une bonne synthèse sans la distinction conformité passée / modèle futur."
+        },
+        {
+          "letter_preshuffle": "E",
+          "expected_score": "+",
+          "text": "« Je cite dans mon BPMN l'article 4 §2 et la double validation transitoire avec référence précise, et je signale à Rachid par mail circonstancié que son résumé est incomplet sur le cas héritiers. Je lui demande validation avant jeudi ; le sprint part avec une version qui tient. »",
+          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — détecter les contradictions, formuler une recommandation fondée. Claire documente les deux éléments manquants avec précision (article + transitoire), alerte le business owner par écrit, et sécurise le sprint. Pourquoi + et non ++ : elle ne traite pas la non-conformité historique probable de `DORMANT_V3` sur les deux dernières années — un signal qu'elle détient et qui relève d'un audit séparé. Un ++ aurait séparé les deux enjeux (modèle futur vs. conformité passée) et saisi explicitement le Juridique, comme la réaction D."
         }
       ],
       "sub_behaviors": [
         "pc_credibility",
-        "pc_sources",
         "pc_anticipate",
+        "pc_sources",
         "pc_elements"
       ]
     },
@@ -127,7 +139,7 @@
         "r3": 40,
         "r4": 40
       },
-      "schema": "A (--, -, +/-, ++)",
+      "schema": "Full 5 (--, -, +/-, +, ++)",
       "situation": "Nabil est Business Analyst à l'ONVA depuis deux ans. Depuis six semaines, il cartographie le processus « paiement du pécule de vacances des employés du secteur public détachés » — un processus critique qui conditionne la prochaine vague de migration de la chaîne Access vers la nouvelle application web. Il modélise depuis le début dans Microsoft Visio, outil utilisé par l'équipe depuis plus de dix ans. Son modèle est à environ 80 % : les sous-processus principaux sont en place, il reste les cas particuliers et la relecture métier. Livraison dans trois semaines.\n\nCe lundi matin, lors de la réunion mensuelle du département, le CIO annonce une décision validée par le comité de direction : l'ONVA migre vers Bizagi Modeler dans les six prochaines semaines, en remplacement de Visio. L'objectif est une bibliothèque de processus partagée, alignée sur BPMN 2.0 strict et interopérable avec l'outil de workflow qui pilotera la future application. Une formation de deux jours est planifiée dans trois semaines. Le CIO précise : « Utilisez le nouvel outil quand vous le pouvez, en fonction de votre charge ; l'adoption doit être totale dans six semaines. »\n\nÀ la pause-café, les réactions sont contrastées. Sophie, analyste senior, lève les yeux au ciel : « Sérieux, c'est le quatrième outil en cinq ans. La dernière fois, on a migré vers Signavio, six mois après on revenait sur Visio. Autant ne rien faire, ça va encore être annulé. » Thomas, plus junior, est inquiet : « Moi je veux bien, mais pas en plein projet critique. » Nabil a vu passer Signavio et Draw.io, mais cette fois la décision est liée à l'architecture même de la future application — donc plus structurelle.\n\nReprendre son modèle dans Bizagi maintenant signifierait trois à cinq jours de retard sur la livraison, avec un risque pour la vague de migration. Ne pas reprendre signifie livrer un modèle Visio que l'IT devra convertir d'ici six semaines — dette connue dès la livraison. Nabil est visible dans le département ; la manière dont il gère cette transition va influencer l'adoption des autres analystes, notamment Sophie.\n\nAu moment où il repose son café, Thomas se tourne vers lui : « Toi tu fais quoi, du coup ? Tu bascules maintenant ou tu restes sur Visio ? »\n\nNabil lui répond :",
       "reactions": [
         {
@@ -153,11 +165,17 @@
           "expected_score": "++",
           "text": "« Je termine le modèle critique en Visio comme prévu — il est à 80 %, le refaire maintenant ferait sauter la vague de migration. Je bloque les deux jours de formation Bizagi et me propose pilote pour le prochain processus. REX court à l'équipe en fin de mois, pour les collègues qui hésitent dont Sophie. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Nabil protège l'engagement critique, investit concrètement dans la nouvelle techno via la formation, se positionne comme pilote volontaire (initiative hors mandat), et transforme son expérience en levier pour l'adoption d'équipe. Pourquoi ++ et non + : c'est la combinaison respect du livrable + investissement explicite dans la nouvelle techno + initiative hors fonction + effet d'entraînement sur l'équipe qui justifie le maximum. Un + aurait été donné pour une adoption personnelle sans dimension collective."
+        },
+        {
+          "letter_preshuffle": "E",
+          "expected_score": "+",
+          "text": "« Je finis mon modèle en Visio pour ne pas faire sauter la vague de migration, je bloque les deux jours de formation Bizagi dans trois semaines, et j'attaque le prochain processus directement dans Bizagi. Pour Sophie, je passerai lui montrer après ma formation. »",
+          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, ajuster la méthode, persévérer. Nabil protège l'engagement critique, s'investit explicitement dans la nouvelle techno (formation + premier projet pilote), et intègre le changement sans casser ce qui est en cours. Pourquoi + et non ++ : l'effet d'équipe reste informel (« je passerai lui montrer ») et il ne se positionne pas pilote volontaire avec un REX structuré auprès des analystes qui hésitent. Un ++ aurait transformé son adoption en levier collectif, comme la réaction D."
         }
       ],
       "sub_behaviors": [
-        "ag_adjust",
         "ag_initiative",
+        "ag_adjust",
         "ag_tech"
       ]
     },
@@ -177,7 +195,7 @@
         "r3": 40,
         "r4": 40
       },
-      "schema": "A (--, -, +/-, ++)",
+      "schema": "Full 5 (--, -, +/-, +, ++)",
       "situation": "Amélie est Business Analyst à l'ONVA depuis trois ans et travaille au pôle « Modernisation des processus ». Depuis deux mois, son backlog a été ré-ordonnancé deux fois par la direction : une réforme nationale du pécule de vacances pour certaines catégories de travailleurs (indépendants complémentaires, personnel intermittent) est discutée au niveau du cabinet, et les priorités opérationnelles suivent les annonces politiques.\n\nLundi matin, elle reçoit un mail du directeur du service juridique, Thibault, en copie à sa cheffe. Le cabinet du ministre a demandé à l'Office une note de synthèse sous dix jours : quelles règles internes (circulaires, notes de service, instructions opérationnelles) impactent les catégories concernées par la réforme, et laquelle devient caduque si la réforme passe ? Thibault a identifié une quarantaine de documents dispersés sur le serveur Juridique, dans la GED et dans trois boîtes partagées. Il demande explicitement l'aide d'Amélie : « Tu es la seule à avoir un modèle de processus qui permette de ranger tout ça proprement. Peux-tu nous aider avant vendredi prochain ? »\n\nLe souci est qu'Amélie a déjà un engagement sur son sprint en cours : un package de test scenarios pour un projet de migration (non lié à la réforme), dont la livraison est promise pour jeudi à l'équipe QA. Si elle lâche ce package, la recette est reportée et cinq personnes sont bloquées. L'aide demandée par Thibault n'est pas formellement dans son mandat : elle relève plutôt d'un documentaliste. Amélie l'a déjà signalé il y a quelques mois, sans suite.\n\nEn réfléchissant, elle voit trois angles. La demande est politiquement sensible : le cabinet observe la capacité de l'ONVA à répondre rapidement. Le travail demandé n'est pas si éloigné de sa pratique : cartographier quarante circulaires revient à construire un modèle de contexte, ce qu'elle fait avant les user stories. Enfin, si la réforme passe, ce type de demande se reproduira — la manière dont elle répond maintenant crée un précédent.\n\nÀ 10h30, sa cheffe Aude la croise dans le couloir, visiblement au courant du mail : « Amélie, j'ai vu la demande du Juridique. Ils comptent sur toi. Qu'est-ce que tu me proposes ? »\n\nAmélie lui répond :",
       "reactions": [
         {
@@ -203,6 +221,12 @@
           "expected_score": "++",
           "text": "« Je livre à Thibault un index structuré des 40 circulaires vendredi midi (mon modèle de contexte BA — deux jours de travail concentré). Je décale d'une semaine le package de tests, je préviens Loïc et l'équipe QA cet après-midi. Je documente la méthode pour que Juridique puisse la réutiliser seul la prochaine fois. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative d'activités qui ne font pas partie de sa fonction, persévérer. Amélie accepte le changement de priorité, s'engage sur un livrable ambitieux mais time-boxé, gère explicitement l'impact sur son engagement existant (communication, report assumé), et transforme l'événement en amélioration durable (documentation de méthode pour la prochaine itération). Pourquoi ++ et non + : c'est l'ensemble time-box + re-planning transparent + initiative hors mandat + capitalisation méthodologique qui fait le maximum. Un + aurait été donné pour un simple engagement à aider sans la dimension d'amélioration continue."
+        },
+        {
+          "letter_preshuffle": "E",
+          "expected_score": "+",
+          "text": "« Je livre à Thibault un index structuré des 40 circulaires vendredi midi, je décale mon package de tests d'une semaine et je préviens Loïc et la QA cet après-midi. Je te tiens au courant. Si la demande se reproduit, on en reparlera. »",
+          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative hors fonction. Amélie accepte la priorité politique, time-boxe sa contribution, et communique le report à l'équipe QA bloquée. Pourquoi + et non ++ : elle ne capitalise pas méthodologiquement (pas de documentation pour que Juridique puisse refaire seul, pas d'ancrage durable du précédent). Un ++ aurait transformé l'urgence en amélioration pérenne avec documentation de méthode, comme la réaction D."
         }
       ],
       "sub_behaviors": [
