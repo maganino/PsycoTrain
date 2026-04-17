@@ -49,7 +49,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je pars sur un tableau comparatif des trois sources — mémoire de Paul, table Access, circulaire 2019/14 — avec citations précises et un chiffrage d'impact sur les 1 847 cas. Je propose une réunion de 45 minutes demain matin avec Paul et Juridique pour figer la règle de référence, et je demande dix jours de décalage sur le BPMN. Le reste du périmètre reste dans le délai. »",
+          "text": "« Tableau comparatif des trois sources — mémoire de Paul, table Access, circulaire 2019/14 — avec citations et chiffrage d'impact sur les 1 847 cas. Réunion de 45 min demain matin avec Paul et Juridique pour figer la règle. Dix jours de décalage sur le BPMN, reste du périmètre dans le délai. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner des stratégies de recherche, évaluer la crédibilité et la fiabilité, identifier les éléments essentiels, formuler une recommandation fondée, réfléchir aux conséquences. Vincent triangule les trois sources, quantifie l'impact, matérialise la dimension réglementaire, et transforme une contradiction ambiguë en décision documentée en mobilisant les bons interlocuteurs (Paul + Juridique). Pourquoi ++ et non + : le niveau ++ vient de la combinaison triangulation + chiffrage d'impact + proposition concrète d'arbitrage + re-planning maîtrisé. Un + aurait été donné pour une simple synthèse sans mécanisme de décision ni ré-estimation du délai."
         }
       ]
@@ -94,7 +94,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Avant jeudi je prépare un tableau à trois colonnes : résumé de Rachid, texte exact de la circulaire (art. 4 §2 et disposition transitoire), comportement actuel des macros `DORMANT_V3`. Je mets en évidence le cas héritiers et la double validation manquants, et je flague à part la non-conformité probable des macros actuelles pour que Juridique décide s'il faut ouvrir un ticket d'audit rétroactif. Je propose à Rachid une réunion de 30 minutes demain pour valider ensemble la version à modéliser. »",
+          "text": "« Avant jeudi, tableau à trois colonnes : résumé de Rachid, texte exact de la circulaire (art. 4 §2 + transitoire), comportement actuel de `DORMANT_V3`. J'y mets en évidence le cas héritiers et la double validation manquants, et flague à part la non-conformité probable des macros pour que Juridique décide d'un audit. Réunion de 30 min demain avec Rachid pour valider. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les éléments essentiels et sous-jacents, vérifier crédibilité/fiabilité, formuler recommandations, réfléchir aux conséquences. Claire triangule résumé / texte légal / comportement système, isole les éléments essentiels (héritiers, double validation), et sépare proprement les deux questions (modèle futur vs. conformité passée) pour ne pas noyer la décision. Pourquoi ++ et non + : c'est la combinaison preuve documentée + recommandation + séparation des enjeux + réunion d'arbitrage concrète qui justifie le maximum. Un + aurait été donné pour une bonne synthèse sans la distinction conformité passée / modèle futur."
         }
       ]
@@ -139,7 +139,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je termine le modèle critique en Visio comme prévu, il est à 80 %, le re-faire maintenant ferait sauter la vague de migration. Je bloque les deux jours de formation Bizagi, et je me propose auprès du CIO comme pilote pour le prochain processus. Je partagerai un retour d'expérience court à l'équipe en fin de mois pour les collègues qui hésitent, dont Sophie. »",
+          "text": "« Je termine le modèle critique en Visio comme prévu — il est à 80 %, le refaire maintenant ferait sauter la vague de migration. Je bloque les deux jours de formation Bizagi et me propose pilote pour le prochain processus. REX court à l'équipe en fin de mois, pour les collègues qui hésitent dont Sophie. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Nabil protège l'engagement critique, investit concrètement dans la nouvelle techno via la formation, se positionne comme pilote volontaire (initiative hors mandat), et transforme son expérience en levier pour l'adoption d'équipe. Pourquoi ++ et non + : c'est la combinaison respect du livrable + investissement explicite dans la nouvelle techno + initiative hors fonction + effet d'entraînement sur l'équipe qui justifie le maximum. Un + aurait été donné pour une adoption personnelle sans dimension collective."
         }
       ]
@@ -184,7 +184,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose ceci : je livre à Thibault un index structuré des 40 circulaires vendredi midi, en utilisant mon modèle de contexte BA — deux jours de travail concentré. Pour ça, je décale d'une semaine le package de tests, je préviens Loïc et l'équipe QA dès cet après-midi. Et je documente la méthode utilisée pour que, si la réforme passe, Juridique puisse la réutiliser seul la prochaine fois. Tu valides ce compromis ? »",
+          "text": "« Je livre à Thibault un index structuré des 40 circulaires vendredi midi (mon modèle de contexte BA — deux jours de travail concentré). Je décale d'une semaine le package de tests, je préviens Loïc et l'équipe QA cet après-midi. Je documente la méthode pour que Juridique puisse la réutiliser seul la prochaine fois. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative d'activités qui ne font pas partie de sa fonction, persévérer. Amélie accepte le changement de priorité, s'engage sur un livrable ambitieux mais time-boxé, gère explicitement l'impact sur son engagement existant (communication, report assumé), et transforme l'événement en amélioration durable (documentation de méthode pour la prochaine itération). Pourquoi ++ et non + : c'est l'ensemble time-box + re-planning transparent + initiative hors mandat + capitalisation méthodologique qui fait le maximum. Un + aurait été donné pour un simple engagement à aider sans la dimension d'amélioration continue."
         }
       ]

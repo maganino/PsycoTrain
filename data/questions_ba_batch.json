@@ -36,7 +36,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose 141,6 M€ comme chiffre de référence (comptabilité générale), avec deux lignes de réconciliation : +1,2 M€ de régularisations hors système qui expliquent `PECULE_DASH`, et +2,5 M€ de périmètre élargi côté ONSS. Je tire ça des extractions détaillées ce soir, je te le montre demain matin avant le comité et on fige ensemble. Comme ça le comité voit un chiffre unique et les écarts expliqués. »",
+          "text": "« Je te propose 141,6 M€ comme chiffre de référence (compta générale), avec deux lignes de réconciliation : +1,2 M€ de régularisations hors système pour `PECULE_DASH` et +2,5 M€ de périmètre élargi côté ONSS. Je tire ça des extractions ce soir, te le montre demain matin et on fige avant le comité. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner des stratégies de recherche, identifier les essentiels et sous-jacents, évaluer les causes, formuler une recommandation fondée. Léa hiérarchise les sources, mobilise des causes déjà identifiées, chiffre les écarts, et transforme une divergence brute en rapport exploitable par un comité non-technique. Pourquoi ++ et non + : c'est la combinaison chiffre de référence + réconciliation ligne à ligne + validation avec le chef avant le comité qui justifie le maximum. Un + aurait été donné pour une bonne analyse sans la clôture validée avec Pierre."
         }
       ]
@@ -73,7 +73,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Mon hypothèse : bug induit par le patch d'arrondi de janvier. Les 312 écarts sont tous en défaveur de l'ayant droit, les 47 tickets les confirment, et le patch n'a pas de test de non-régression. J'estime l'impact à environ 40 k€ sur l'échantillon. Je propose au comité : 1) un test ciblé avec Ibrahim sur la règle d'arrondi cette semaine, 2) un gel du patch si confirmé, 3) un plan de rattrapage documenté avant l'audit externe. Je prépare la note dans ce sens. »",
+          "text": "« Mon hypothèse : bug induit par le patch d'arrondi de janvier. 312 écarts tous défavorables, 47 tickets convergents, patch sans test de non-régression. Impact estimé 40 k€. Je propose au comité : test ciblé avec Ibrahim cette semaine, gel du patch si confirmé, plan de rattrapage avant l'audit externe. Je prépare la note. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner les stratégies de recherche, évaluer causes/conséquences, formuler une recommandation fondée, anticiper les conséquences. Marwan formule une hypothèse nette, la relie aux trois sources, chiffre l'impact, propose un plan d'investigation et anticipe l'interaction avec l'audit externe. Pourquoi ++ et non + : c'est la combinaison hypothèse nommée + chiffrage + plan en trois étapes + anticipation de l'audit qui fait le maximum. Un + aurait été un diagnostic sans plan chiffré."
         }
       ]
@@ -110,7 +110,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je ramène à une slide d'intro : « 18 % de dossiers en correction, trois leviers, 220 k€ d'économies estimées ». Ensuite j'adapte chaque recommandation à celui qui doit l'entendre : pour Françoise l'impact terrain pour les gestionnaires, pour Karim l'effort IT chiffré, pour le cabinet le message politique (simplification pour l'employeur). Les BPMN restent en annexe. Je propose un tour de table de cinq minutes par public pour vérifier que le message est passé avant de conclure. »",
+          "text": "« Je ramène à une slide d'intro (18 % de correction, trois leviers, 220 k€ d'économies). J'adapte chaque reco au public : impact terrain pour Françoise, effort IT chiffré pour Karim, simplification employeur pour le cabinet. BPMN en annexe. Tour de table de 5 min par public pour vérifier que le message passe avant de conclure. »",
           "explanation": "Score attendu : ++\nCompétence testée : Communiquer (CO2) — cibler le public, adapter la communication à plusieurs audiences, équilibrer écoute et parole, transparence. Sofia structure un message unique mais le décline par interlocuteur, anticipe les attentes différenciées, et intègre un mécanisme de vérification d'écoute (tour de table). Pourquoi ++ et non + : c'est la combinaison message central + déclinaison par public + mécanisme de feedback qui justifie le maximum. Un + aurait été une structuration correcte sans déclinaison individualisée."
         }
       ]
@@ -147,7 +147,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Dominique, le 72 % est vrai mais concerne surtout les micro-employeurs en difficulté — 0,23 % du parc, recruté via une pop-up d'erreur. Si on le défend tel quel au comité, on risque d'être challengé sur la méthodo et de tout perdre. Je te propose un cadrage plus solide : « portail peu adapté aux micro-employeurs (60 % des déclarations en correction dans ce segment) », appuyé sur nos propres données internes. Même budget demandé, argument plus défendable. Je rédige dans ce sens ? »",
+          "text": "« Dominique, le 72 % vient surtout des micro-employeurs (0,23 % du parc, recruté via une pop-up biaisée). Défendu tel quel, on sera challengés sur la méthodo. Je propose un cadrage plus solide : « portail peu adapté aux micro-employeurs — 60 % de corrections dans ce segment », appuyé sur nos données internes. Même budget demandé, argument défendable. Je rédige ? »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les éléments sous-jacents, vérifier la fiabilité, formuler une recommandation fondée, anticiper les conséquences. Julien démonte le biais, préserve l'objectif du sponsor, et propose un cadrage alternatif appuyé sur des données internes plus solides. Pourquoi ++ et non + : c'est la combinaison analyse des biais + préservation de l'intérêt du sponsor + cadrage alternatif chiffré qui fait le maximum. Un + aurait été une alerte lucide sans proposition de cadrage alternatif."
         }
       ]
@@ -184,7 +184,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je ne peux pas valider en l'état. Les 132 KO sur 168 concernent un seul scénario (changement employeur Q4), qui représente 3 700 dossiers et environ 1,25 M€ par an de paiement sous-évalué. Deux options : 1) repousser la bascule de six semaines pour corriger ce scénario, 2) basculer maintenant mais traiter manuellement ce sous-scénario jusqu'au patch. Je prépare le chiffrage des deux options pour ton comité dans quatre jours, on arbitre à ce moment-là. »",
+          "text": "« Je ne peux pas valider en l'état. Les 132 KO concernent un seul scénario (changement employeur Q4) — 3 700 dossiers, environ 1,25 M€ par an sous-évalués. Deux options : repousser la bascule de 6 semaines pour corriger, ou basculer avec traitement manuel jusqu'au patch. Je prépare le chiffrage des deux pour ton comité, arbitrage dans 4 jours. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les essentiels, évaluer conséquences, formuler recommandations fondées. Inès démonte l'indicateur agrégé, chiffre l'impact global, et présente deux options équilibrées au bon niveau de décision. Pourquoi ++ et non + : c'est la combinaison diagnostic + chiffrage d'impact + alternatives calibrées + calendrier de décision explicite qui justifie le maximum. Un + aurait été un refus argumenté sans alternatives construites."
         }
       ]
@@ -221,7 +221,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Le 91,7 % est biaisé par la composition du pilote (80 % de pièces standards alors que la prod est à 65 %). Corrigé, on serait plutôt à 88 %. J'ajoute un point critique : 40 % des erreurs sont des faux positifs, avec un risque financier direct. Je propose pour le comité : 1) renégocier un SLA segmenté (≥ 95 % sur standards, ≥ 80 % sur non-standards), 2) un plafond sur les faux positifs (≤ 2 %), 3) une clause de sortie à 6 mois. Je prépare la note et un tableau d'aide à la décision. »",
+          "text": "« Le 91,7 % est biaisé (pilote à 80 % de pièces standards vs 65 % en prod → 88 % corrigé). 40 % des erreurs sont des faux positifs, risque financier direct. Je propose au comité : SLA segmenté (≥ 95 % standards, ≥ 80 % non-standards), plafond faux positifs ≤ 2 %, clause de sortie à 6 mois. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, évaluer la crédibilité, formuler une recommandation fondée, anticiper les conséquences. Bastien recompose le taux, sépare la nature des erreurs, et transforme son diagnostic en trois clauses contractuelles actionnables. Pourquoi ++ et non + : c'est la combinaison reconstitution du taux réel + typologie des erreurs + propositions contractuelles chiffrées qui fait le maximum. Un + aurait été un diagnostic correct sans les clauses concrètes."
         }
       ]
@@ -258,7 +258,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Avant de rédiger une note favorable, je voudrais te montrer trois chiffres : 1 720 faux positifs (82 % des flaggés) qui attendraient six semaines leur pécule, une sur-représentation statistique sur trois secteurs et certains noms (risque GDPR art. 22), et une alternative simulée — règle croisée avec irrégularité de cotisation — qui donne 310 k€ de gain sans ce biais. Je propose : saisine DPO cette semaine, présentation au comité des deux options, décision éclairée jeudi. Je te prépare ça ce soir. »",
+          "text": "« Avant note favorable, trois chiffres : 1 720 faux positifs (82 % des flaggés) attendraient 6 semaines, sur-représentation sur 3 secteurs et certains noms (risque GDPR art. 22), et une alternative simulée (règle croisée avec cotisation) qui donne 310 k€ de gain sans ce biais. Je propose : saisine DPO cette semaine, deux options au comité, décision jeudi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, évaluer les conséquences, formuler une recommandation, anticiper les effets. Camille démonte le biais, chiffre le coût humain, propose une alternative plausible, et active la bonne gouvernance (DPO). Pourquoi ++ et non + : c'est la combinaison diagnostic chiffré + impact humain + alternative + gouvernance DPO qui fait le maximum. Un + aurait été une alerte argumentée sans alternative construite ni saisine DPO."
         }
       ]
@@ -295,7 +295,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je sépare en deux lots : les trois points récurrents (48 tickets) partent en sprint correctif cette quinzaine, avec Louis et deux autres utilisateurs en recette. Les 30 tickets de prise en main, je les traite par une FAQ et un atelier de 30 min. J'ajoute un check à 3 mois sur l'effet des correctifs, et je remonte un petit retour d'expérience à l'équipe design pour qu'on intègre le test raccourcis clavier dans nos prochaines UAT. Géraldine, ça marche ? »",
+          "text": "« Je sépare en deux lots : les 48 tickets récurrents partent en sprint correctif cette quinzaine, avec Louis et deux utilisateurs en recette. Les 30 tickets de prise en main, je les traite par une FAQ et un atelier de 30 min. Check à 3 mois, et REX à l'équipe design pour intégrer le test raccourcis clavier en UAT. Géraldine, ça marche ? »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté solutions (SO2) — examiner les causes, comparer les alternatives, implémenter, inscrire dans un cycle d'amélioration continue, intégrer le feedback. Hakim segmente, agit vite, associe l'utilisateur critique comme testeur, et capitalise méthodologiquement pour les prochains projets. Pourquoi ++ et non + : c'est la combinaison action correctrice + association des plaignants + check de suivi + retour d'expérience méthode qui justifie le maximum. Un + serait une correction ciblée sans boucle d'amélioration durable."
         }
       ]
@@ -332,7 +332,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« En 45 min je teste les trois pistes en parallèle avec trois signaux : diff logs avant/après patch de vendredi, distribution des KO par montant, et timestamps des KO vs batch de dimanche. Pour chaque résultat, j'arrive au comité avec une recommandation déjà formulée (rollback patch, ou correction filtre, ou rollback batch) et un estimé du délai de remise en service. Je te pré-envoie les trois scénarios à 14 h 45 pour que tu les aies avant le comité. »",
+          "text": "« En 45 min je teste les trois pistes en parallèle : diff logs avant/après patch de vendredi, distribution des KO par montant, timestamps KO vs batch de dimanche. Pour chacune, je reviens avec une recommandation (rollback patch, correction filtre, ou rollback batch) et un estimé du délai. Pré-envoi à 14 h 45 pour que tu les aies avant ton comité. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les essentiels, formuler des recommandations fondées, anticiper les conséquences. Élodie couple investigation parallèle et préparation de décision, et s'aligne sur la contrainte de temps du comité. Pourquoi ++ et non + : c'est la combinaison enquête parallèle + recommandation par scénario + pré-alignement avec le chef avant le comité qui fait le maximum. Un + aurait été l'enquête seule."
         }
       ]
@@ -369,7 +369,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose de garder l'intention de la user story 4 mais de la reformuler : « En tant qu'ayant droit, je veux comparer mon pécule à une moyenne anonymisée par code métier (n≥30) ». Ça capte le verbatim sans risque RGPD. Je rédige dans ce sens, j'intègre un critère d'acceptation « seuil n≥30 » et je pré-saisis le DPO cet après-midi pour sécuriser. Comme ça jeudi on passe un sprint propre. »",
+          "text": "« Je garde l'intention de la US 4 mais la reformule : « En tant qu'ayant droit, je veux comparer mon pécule à une moyenne anonymisée par code métier (n ≥ 30) ». Ça capte le verbatim sans risque RGPD. J'intègre un critère d'acceptation « seuil n ≥ 30 » et pré-saisis le DPO cet après-midi. Sprint propre jeudi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les éléments essentiels et sous-jacents, évaluer les conséquences, formuler une recommandation fondée. Youssef préserve l'intention utilisateur, neutralise le risque juridique par une reformulation précise, et sécurise la gouvernance (DPO) avant le sprint. Pourquoi ++ et non + : c'est la combinaison reformulation + critère d'acceptation technique (n≥30) + saisine DPO proactive qui justifie le maximum. Un + aurait été une reformulation sans saisine DPO ni seuil."
         }
       ]
@@ -406,7 +406,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose d'attendre trois jours avant de rédiger. Je relis le rapport 2022 (17 % d'auto en pilote), je recompose le benchmark en ajustant volume/périmètre (on serait plutôt à 20-30 % d'automatisation crédible), et je te prépare une note au DG avec un cahier des charges calibré sur cette fourchette + un critère d'exception pour les gestionnaires (garder la main). Mercredi on fait un 30 min avec Anouk et le DG pour recaler la cible avant que l'appel d'offres ne fige tout. »",
+          "text": "« J'attends 3 jours avant de rédiger : je relis le rapport 2022 (17 % d'auto en pilote), recompose le benchmark (plutôt 20-30 % crédibles), et prépare une note au DG avec cahier des charges calibré et critère d'exception gestionnaires. Mercredi, 30 min avec Anouk et le DG pour recaler avant que l'appel d'offres ne fige tout. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, vérifier la fiabilité, formuler une recommandation fondée, anticiper les conséquences. Margot recompose l'analyse à partir des trois sources, propose une fourchette réaliste, préserve la main des gestionnaires (apprentissage du pilote 2022), et pilote la communication au DG avant la bascule contractuelle. Pourquoi ++ et non + : c'est la combinaison recomposition du benchmark + intégration du pilote 2022 + cible recalibrée + réunion d'ajustement DG qui fait le maximum."
         }
       ]
@@ -443,7 +443,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Avant diffusion, je voudrais deux ajouts. D'abord intégrer l'alinéa 3 (fractionnement ≥ 5 j consécutifs) dans ta note — sans ça on est incomplets. Ensuite anticiper la FAQ du SPF qui dit l'inverse : je propose un encadré « position ONVA » qui prime l'instruction, avec un canal dédié pour les contestations employeurs. En parallèle, je suggère qu'on remonte au SPF un courrier de demande de clarification — la FAQ actuelle est explicitement non-contraignante mais crée du bruit. Je te prépare le projet d'encadré cet après-midi. »",
+          "text": "« Deux ajouts avant diffusion. Intégrer l'alinéa 3 (fractionnement ≥ 5 j) dans ta note, sans ça on est incomplets. Ajouter un encadré « position ONVA » qui prime l'instruction, avec un canal dédié pour les contestations employeurs. En parallèle, un courrier au SPF pour clarification — leur FAQ crée du bruit. Je te prépare l'encadré cet après-midi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — détecter les contradictions, formuler une recommandation fondée, anticiper les conséquences, évaluer la fiabilité des sources. Romain traite les deux éléments, sécurise l'outil opérationnel, et ouvre une remontée vers l'autorité normative. Pourquoi ++ et non + : c'est la combinaison correction de la note + stratégie face à la FAQ + courrier de clarification au SPF qui fait le maximum. Un + aurait été la correction + signalement sans gestion durable du conflit de sources."
         }
       ]
@@ -480,7 +480,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Nathalie, je prends. Je fais trois choses cette semaine : 1) je regarde précisément quels chiffres sont déjà dans les exports auto (tu as raison, j'en vois au moins trois redondants), 2) je fais un point avec Philippe pour vérifier quels chiffres il utilise vraiment — j'ai vu qu'il n'a pas ouvert le rapport depuis six semaines, 3) je te demande, ainsi qu'aux neuf autres gestionnaires, un mail court sur ce qui est vraiment utile. Je propose une version allégée à 4 indicateurs, validée avec vous, d'ici 15 jours. Je te tiens au courant à chaque étape. »",
+          "text": "« Nathalie, je prends. Trois choses cette semaine : j'identifie les chiffres déjà dans les exports auto (au moins 3 redondants), je vérifie avec Philippe lesquels il utilise vraiment (rapport pas ouvert depuis 6 semaines), je demande à toi et aux 9 autres gestionnaires un mail court sur l'utile. Version allégée à 4 indicateurs, validée avec vous, d'ici 15 jours. »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté clients (CL2) — approfondir la demande, chercher la solution avec le client, entretenir le contact, porter un regard critique sur le service rendu, prendre en compte le feedback. Aïcha prend au sérieux, enquête côté demandeur et côté utilisateur, élargit à tout le segment, et s'engage sur une solution datée co-construite. Pourquoi ++ et non + : c'est la combinaison écoute + enquête demandeur/utilisateur + co-construction + échéance + communication continue qui justifie le maximum. Un + aurait été une enquête BA sans co-construction."
         }
       ]
@@ -517,7 +517,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose de ne pas rédiger les specs telles quelles. Les deux indicateurs oscillent pour des raisons structurelles (volume r=0,78, arrivée de gestionnaires) — un seuil ±20 % produira surtout du bruit. Je propose trois choses : 1) un seuil ajusté par rapport à un modèle volume+ancienneté, 2) corriger la définition du taux de correction pour ne compter que les vraies erreurs (pas les corrections d'initiative), 3) une revue trimestrielle de la pertinence des alertes avec le comité. Je te rédige la note d'orientation aujourd'hui, specs ajustées ensuite. »",
+          "text": "« Je ne rédige pas ces specs telles quelles : les deux indicateurs oscillent pour des raisons structurelles (volume r = 0,78, ancienneté) — un seuil ±20 % produit surtout du bruit. Trois ajustements : seuil ajusté à un modèle volume+ancienneté, redéfinir le taux de correction (exclure les corrections d'initiative), revue trimestrielle avec le comité. Note d'orientation aujourd'hui, specs ensuite. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, évaluer les causes, formuler une recommandation, anticiper les conséquences. Théo refuse de livrer un dispositif médiocre, diagnostique la cause, attaque le biais de définition de l'indicateur, et inscrit la démarche dans une boucle d'amélioration continue. Pourquoi ++ et non + : c'est la combinaison diagnostic causal + correction de la définition + mécanisme de revue qui fait le maximum. Un + serait l'ajustement du seuil sans toucher à la définition de l'indicateur."
         }
       ]
@@ -554,7 +554,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Marc, je voudrais qu'on se pose 30 min avant publication. J'ai recomposé ton chiffre en excluant 18 personnes concernées par trois situations documentées : juniors en mission externe, incapacités, aménagements officiels mars. Le taux passe à 14 %, et l'essentiel c'est du dépassement d'une journée non systématique. Je te propose d'écrire à quatre mains une formulation qui restitue les deux chiffres — 48 % brut, 14 % corrigé — pour que le comité comprenne. Tu gagnes en crédibilité, et le message reste fort sans être fragile. »",
+          "text": "« Marc, posons-nous 30 min avant publication. J'ai recomposé ton chiffre en excluant 18 personnes (juniors en mission externe, incapacités, aménagements officiels mars) : le taux passe à 14 %, et l'essentiel c'est du dépassement non systématique. Écrivons à quatre mains une formulation qui restitue les deux chiffres — 48 % brut, 14 % corrigé. Tu gagnes en crédibilité. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — vérifier la fiabilité, détecter les contradictions, formuler une recommandation fondée, adapter la communication. Florence recompose le chiffre, préserve la crédibilité de l'auditeur, et propose une formulation à deux chiffres qui fait honneur aux deux lectures. Pourquoi ++ et non + : c'est la combinaison reconstitution chiffrée + préservation de l'auditeur + co-rédaction de la formulation qui justifie le maximum. Un + aurait été le chiffre corrigé sans co-rédaction."
         }
       ]
@@ -591,7 +591,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Denis, le 99,2 % cache quatre familles d'exception très différentes. Famille A (12 000, dates ancien format) : règle d'import correctrice, 2 jours. Famille B (8 500, régularisations négatives) : bloquante, il faut relaxer la contrainte NOT NULL avant bascule sinon paiements 2025 gelés. Famille C (5 200, doublons) : script de réconciliation, 1 semaine. Famille D (1 300, pièces manquantes) : ticket Juridique, hors scope data. Je te propose une note au comité en deux chiffres : 99,2 % migré + 8 500 cas bloquants à résoudre avant « go ». On gagne 3 semaines si on démarre la contrainte B aujourd'hui. »",
+          "text": "« Denis, le 99,2 % cache 4 familles. A (12 k dates ancien format) : règle d'import, 2 j. B (8,5 k régularisations négatives) : bloquante, relaxer NOT NULL. C (5,2 k doublons) : script, 1 sem. D (1,3 k pièces manquantes) : hors scope data. Note comité : 99,2 % migré + 8,5 k bloquants. Lancer B aujourd'hui = 3 semaines gagnées. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les essentiels et sous-jacents, formuler une recommandation, anticiper les conséquences. Mehdi typologise, chiffre, sépare techniques et juridiques, et prépare la communication comité. Pourquoi ++ et non + : c'est la combinaison typologie A/B/C/D + plan d'action par famille + recommandation comité + calendrier qui fait le maximum. Un + aurait été l'identification du bloquant sans plan d'ensemble."
         }
       ]
@@ -628,7 +628,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je ne valide pas. Sur les 18 anomalies, 6 sont juridiquement bloquantes : le calcul dépend de l'ordre des jours fériés dans le mois — contraire à la loi. Elles ont été vues par Fabien et passées « OK » par 3 autres testeurs : on a aussi un problème de qualité UAT à corriger (guide de test plus précis, binôme sur scénarios critiques). Je propose : correction du bug, re-test ciblé sur les 6 scénarios, refonte rapide du guide UAT pour les prochaines campagnes. Nouvelle date « go » dans 10 jours. »",
+          "text": "« Je ne valide pas. 6 des 18 anomalies sont juridiquement bloquantes : le calcul dépend de l'ordre des jours fériés, contraire à la loi — passées « OK » par 4 testeurs, donc aussi un problème de qualité UAT. Je propose : correction du bug, re-test ciblé sur les 6 scénarios, refonte rapide du guide UAT. Nouveau « go » dans 10 jours. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, évaluer les causes, formuler une recommandation, inscrire dans une amélioration. Adèle refuse le « go », diagnostique le défaut juridique, identifie la faille UAT, et inscrit l'action dans une amélioration méthodologique. Pourquoi ++ et non + : c'est la combinaison refus argumenté + diagnostic juridique + amélioration méthode UAT + replanning qui justifie le maximum."
         }
       ]
@@ -665,7 +665,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose qu'on accepte le rôle de site pilote, avec un cadre. Trois mois de pilote mesuré : `DOC_CHECK_AI` sur dossiers standards, check-list sur dossiers complexes artistes comme fallback. Delphine encadre la recette qualité (son expertise check-list est précieuse), Thomas pilote l'adoption quotidienne, moi je coordonne. Critères de succès explicites : -30 % de temps sur standards, <5 % d'erreurs vs check-list, satisfaction équipe ≥ 3/5. Je remonte un retour d'expérience mensuel à la BOSA. À 3 mois on décide go / ajustement / sortie. »",
+          "text": "« J'accepte le rôle de site pilote, avec un cadre. Trois mois : `DOC_CHECK_AI` sur dossiers standards, check-list en fallback sur les complexes artistes. Delphine pilote la recette qualité, Thomas l'adoption, je coordonne. Critères : -30 % de temps, < 5 % d'erreurs vs check-list, satisfaction équipe ≥ 3/5. REX mensuel à la BOSA. À 3 mois, go / ajustement / sortie. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative hors fonction. Gaspard accepte l'innovation avec cadre, mobilise les forces de l'équipe (y compris la sceptique), fixe des métriques, et inscrit l'ONVA comme contributeur actif au produit BOSA. Pourquoi ++ et non + : c'est la combinaison acceptation cadrée + segmentation du périmètre + mobilisation d'équipe + métriques + retour d'expérience structurel qui fait le maximum."
         }
       ]
@@ -702,7 +702,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Jonas, ne coupe pas — on doit documenter avant. Je saisis Laurence (DPO) ce matin pour qualifier, avec Karine en copie. Je propose une suspension conservatoire du flux à partir de vendredi (délai au partenaire) et j'ouvre en parallèle une piste de régularisation : convention cadre + données anonymisées par secteur, pour préserver le rapport sectoriel qui a une vraie valeur. Je prépare une note à trois voix (DPO, juriste, BA) pour quand Karine rentre, avec les options décisionnelles chiffrées. »",
+          "text": "« Jonas, ne coupe pas — on documente avant. Je saisis Laurence (DPO) ce matin, Karine en copie. Suspension conservatoire du flux à partir de vendredi. En parallèle, une piste de régularisation : convention cadre + données anonymisées par secteur, pour préserver le rapport sectoriel. Note à trois voix (DPO, juriste, BA) prête pour le retour de Karine, options chiffrées. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — évaluer la fiabilité, formuler une recommandation, anticiper les conséquences. Naïma active la gouvernance, équilibre conformité et valeur du partenariat, et propose un chemin de régularisation avec délai pour le partenaire. Pourquoi ++ et non + : c'est la combinaison saisine DPO + suspension avec préavis + piste d'anonymisation + note tripartite pour la décision qui justifie le maximum. Un + aurait été la saisine DPO sans piste de régularisation."
         }
       ]
@@ -739,7 +739,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te recommande Z. Arguments : notre besoin tient dans 60 % des fonctions de X (18 k€), Z les couvre à 8 k€, hébergement Bruxelles. Y coûte 0,3 ETP que la DSI ne donnera pas. Point d'attention : Z dépend d'une équipe de 12 personnes — je propose une clause d'escrow code source + portabilité des données + revue à 18 mois. On réévalue alors : si Z a grandi, on continue ; sinon, on migre sans drame vers X. Je préviens DSI et PM avant vendredi pour qu'ils voient la reco avec son cadre. »",
+          "text": "« Je recommande Z : notre besoin tient dans 60 % des fonctions de X (18 k€), Z les couvre à 8 k€, hébergé Bruxelles. Y coûte 0,3 ETP que la DSI refuse. Point d'attention : Z = 12 personnes — clause d'escrow code + portabilité données + revue à 18 mois. Je préviens DSI et PM avant vendredi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — comparer les alternatives, évaluer les conséquences, formuler une recommandation fondée, réfléchir aux effets. Tristan propose, chiffre, identifie le risque structurel, et le couvre contractuellement, tout en préparant l'alignement des parties. Pourquoi ++ et non + : c'est la combinaison recommandation + chiffrage + couverture du risque + stratégie de sortie + alignement préalable qui fait le maximum."
         }
       ]
@@ -776,7 +776,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Perrine, je ne vais pas extraire la liste nominative : un article similaire en 2021 avait généré des plaintes, et sur le top 500 la ré-identification est quasi certaine même anonymisée. Je saisis Laurence (DPO) aujourd'hui. En attendant, je te propose un angle alternatif qui sert ton intention : distribution par tranches de montants et par secteur, avec un top 10 par métier en agrégé (pas de personnes identifiables). Ça donne un article plus fort statistiquement. Je te fais un brouillon de chiffres demain. Valérie en copie à son retour. »",
+          "text": "« Perrine, je n'extrais pas la liste : un article similaire en 2021 a généré des plaintes, la ré-identification sur le top 500 est quasi certaine. Saisine DPO Laurence aujourd'hui. Angle alternatif : distribution par tranches de montants et par secteur, top 10 par métier en agrégé. Brouillon demain, Valérie en copie. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — évaluer les conséquences, vérifier la fiabilité, formuler une recommandation, anticiper les effets. Océane refuse l'extraction risquée, active le DPO, et préserve le besoin éditorial par une alternative qui respecte la vie privée. Pourquoi ++ et non + : c'est la combinaison refus argumenté + activation DPO + alternative éditoriale constructive + communication à la hiérarchie qui fait le maximum."
         }
       ]
@@ -813,7 +813,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Fabienne, je ne fige pas les specs vendredi. Trois points à trancher d'abord : 1) ajout d'une vue « dossiers à risque » pour les seniors (retour atelier concret), 2) l'usage RH prévu par Michel doit être explicite dans l'outil et cadré avec DRH — sinon risque d'usage non consenti, 3) séparer vue personnelle (gestionnaire seul) et vue manager (indicateurs agrégés) pour lever l'anxiété légitime de la junior. Je te propose une réunion avec Michel et DRH mardi, specs re-figées dans 10 jours. On garde le délai global de déploiement. »",
+          "text": "« Fabienne, je ne fige pas les specs vendredi. Trois points à trancher : ajouter une vue « dossiers à risque » pour les seniors (retour atelier), cadrer l'usage RH avec DRH (sinon risque d'usage non consenti), séparer vue personnelle (gestionnaire) et vue manager (agrégés) pour lever l'anxiété légitime. Réunion avec Michel et DRH mardi, specs re-figées dans 10 jours. Délai global préservé. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, formuler une recommandation, anticiper les conséquences, évaluer les causes. Joséphine refuse l'agrégation trompeuse, adresse les trois dimensions (métier, RH, architecture), et propose un re-cadrage qui préserve le calendrier. Pourquoi ++ et non + : c'est la combinaison vue à risque + gouvernance RH/DRH + séparation des vues + re-cadrage calendaire qui fait le maximum."
         }
       ]
@@ -850,7 +850,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose 10 jours de mini-diagnostic sur les trois signaux (Excel parallèle, écart 13e mois, reporting non utilisé), via interviews ciblées et extraction de logs. Livrable : une note de 3 pages avec cause probable pour chaque signal + impact + recommandation pour le v1.1, plus 3 évolutions méthode à appliquer au projet suivant (observation d'usage en UAT, indicateur de contournement, validation post-déploiement du besoin reporting). Projet suivant démarre avec un jour de retard maîtrisé. On ne signe le bilan qu'après ces 10 jours. »",
+          "text": "« Je propose 10 jours de mini-diagnostic sur les 3 signaux (Excel parallèle, écart 13e mois, reporting non utilisé), via interviews ciblées et extraction de logs. Livrable : note de 3 pages avec cause + impact + reco v1.1, plus 3 évolutions méthode pour le projet suivant (observation d'usage en UAT, indicateur de contournement, validation post-déploiement). Projet suivant démarre à 1 jour près. »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté solutions (SO2) — examiner les causes, comparer les alternatives, implémenter, inscrire dans un cycle d'amélioration continue. Farid transforme un bilan-clôture en cycle d'apprentissage, avec mini-diagnostic proportionné et réinjection méthodologique. Pourquoi ++ et non + : c'est la combinaison mini-diagnostic + recommandations produit + évolutions méthode + cadrage de l'impact sur le projet suivant qui fait le maximum. Un + aurait été le diagnostic sans réinjection méthode."
         }
       ]
@@ -887,7 +887,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose qu'on transforme le gel en 6 semaines utiles. Trois chantiers : 1) les devs terminent le bug arrondis et la règle majoration + tests auto renforcés, prêts à déployer le jour du dégel, 2) on documente la chaîne paiement (jamais faite) — j'en prends le lead avec le testeur, 3) deux mercredis ateliers « dette technique » avec l'équipe pour choisir ensemble ce qu'on attaque. Congés autorisés mais échelonnés, pas tous en même temps. Je partage un plan cette semaine, revue toutes les deux semaines. On ressort grandis du gel. »",
+          "text": "« Je transforme le gel en 6 semaines utiles. Trois chantiers : les devs finissent bug arrondis + règle majoration avec tests auto, prêts pour le dégel ; je prends le lead sur la doc chaîne paiement avec le testeur ; deux mercredis d'ateliers « dette technique » en équipe. Congés échelonnés, pas tous ensemble. Plan cette semaine, revue toutes les deux semaines. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode aux nouvelles priorités, prendre l'initiative d'activités hors fonction, persévérer, lire l'imprévu comme apprentissage collectif. Maxime transforme une contrainte imposée en opportunité structurée, garde les équipes mobilisées, et prépare un redémarrage propre. Pourquoi ++ et non + : c'est la combinaison coding maintenu + documentation + ateliers dette + échelonnement des congés + mécanisme de revue qui fait le maximum. Un + aurait été une bonne initiative sans le plan d'ensemble."
         }
       ]
@@ -924,7 +924,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose trois choses dès ce matin : 1) inventaire « conservé / à adapter / à refaire » en binôme — on sauvera probablement 40 % du modèle, 2) j'appelle Aude à midi pour alerte + re-planning, et je contacte le juridique et l'architecte dev pour le coordonner côté chaîne complète, 3) je monte une petite veille partagée sur les publications techniques SPF/ONSS pour qu'on ne soit plus pris de court. Replanning formel d'ici mercredi avec nouvelle date de livraison et charge re-estimée. »",
+          "text": "« Trois choses dès ce matin : inventaire « conservé / à adapter / à refaire » en binôme (on sauvera ~40 % du modèle), j'appelle Aude à midi pour alerte + coord avec juridique et architecte dev, et je monte une veille partagée sur les publications techniques SPF/ONSS pour qu'on ne soit plus pris de court. Replanning formel d'ici mercredi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles contraintes, ajuster la méthode, persévérer, prendre l'initiative hors fonction, lire l'imprévu comme apprentissage. Noémie inventorie, coordonne les parties prenantes impactées, et transforme la surprise en amélioration durable (veille). Pourquoi ++ et non + : c'est la combinaison inventaire + replanification + coordination transverse + veille durable qui fait le maximum. Un + aurait été l'inventaire + replanification sans dimension transverse ni veille."
         }
       ]
@@ -961,7 +961,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je prends, et j'adapte l'animation au format hybride : tour de table qui commence par Liège, chat comme canal d'objection en continu que je reformule à haute voix avant chaque décision, pas de décision figée sans entendre Yasmine et Thomas sur leurs modules. Après la réunion, je te propose 15 min ensemble pour en tirer une mini-charte d'animation hybride qu'on applique à partir de la prochaine gouvernance. J'ai vu que certaines décisions passaient sans eux depuis deux réunions, ça nous coûte de l'expertise. »",
+          "text": "« Je prends, et j'adapte l'animation au format hybride : tour de table qui commence par Liège, chat comme canal d'objection en continu que je reformule avant chaque décision, pas de décision figée sans entendre Yasmine et Thomas sur leurs modules. Après la réunion, 15 min ensemble pour tirer une mini-charte d'animation hybride qu'on applique à la prochaine gouvernance. »",
           "explanation": "Score attendu : ++\nCompétence testée : Communiquer (CO2) — cibler le public, équilibrer, valoriser la diversité, adapter à plusieurs canaux, s'inscrire dans une pratique durable. Raphaël adapte l'animation et en tire une pratique partagée. Pourquoi ++ et non + : c'est la combinaison animation hybride + restitution du diagnostic au chef + proposition de charte durable qui fait le maximum. Un + aurait été l'adaptation ponctuelle sans ancrage dans la pratique d'équipe."
         }
       ]
@@ -998,7 +998,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Karine, j'arrête l'usage informel aujourd'hui et je préviens Charles et Cécile pour qu'on s'aligne. En parallèle, le cadre POC BOSA est activable : je te propose un POC cadré sur 8 semaines (aide à la rédaction de réponses gestionnaires + synthèse de circulaires), avec saisine DPO, hébergement UE, journalisation, et un périmètre fermé de 3 cas d'usage. Les deux gestionnaires demandeurs rentrent comme testeurs. Je te prépare la note de cadrage POC d'ici vendredi pour validation, et je te propose qu'on sollicite la cellule innovation BOSA comme parrain. »",
+          "text": "« Karine, j'arrête l'usage informel aujourd'hui. En parallèle, POC cadré BOSA sur 8 semaines (aide à la rédaction de réponses gestionnaires + synthèse de circulaires), avec saisine DPO, hébergement UE, journalisation, 3 cas d'usage fermés. Les deux gestionnaires demandeurs rentrent comme testeurs. Note de cadrage vendredi pour validation, je sollicite la cellule innovation BOSA comme parrain. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, alerter aux évolutions du domaine, prendre l'initiative hors fonction, persévérer. Salma se met en règle, embarque le collectif, cadre l'initiative sur le dispositif BOSA, et transforme l'élan informel en POC légitime. Pourquoi ++ et non + : c'est la combinaison arrêt immédiat + alignement du collectif + cadrage POC + gouvernance DPO/BOSA + utilisateurs réels qui fait le maximum."
         }
       ]
@@ -1035,7 +1035,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose qu'on généralise en adaptant. Mon diagnostic sur les 48 échecs : 32 résolubles par canal téléphonique (0,5 ETP), 12 par format alternatif, 4 restent insolubles → dérogation PDF. On cible <1 % d'échec en généralisation, donc <60 cas max vs 6 000 redoutés. Je propose : 1) note au cabinet pour expliquer le dispositif (anticiper la commission), 2) déploiement progressif par vagues de 5 000 employeurs avec KPI d'accompagnement, 3) revue à 6 mois pour ajuster. Thibault et Isabelle trouvent chacun leur point : digitalisation poursuivie, risque politique cadré. »",
+          "text": "« Généralisons en adaptant. Sur les 48 échecs : 32 résolubles par canal téléphonique, 12 par format alternatif, 4 en dérogation PDF. Cible <1 % d'échec en généralisation, soit <60 cas max vs 6 000 redoutés. Plan : note au cabinet pour anticiper la commission, déploiement par vagues de 5 000 employeurs avec KPI d'accompagnement, revue à 6 mois. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — lire l'échec comme apprentissage, persévérer, ajuster la méthode, prendre l'initiative hors fonction. Grégoire transforme un bilan mitigé en dispositif durable, anticipe la dimension politique, et propose une voie qui concilie les deux sponsors. Pourquoi ++ et non + : c'est la combinaison diagnostic + dispositif gradué + communication politique + revue structurée qui fait le maximum. Un + aurait été le diagnostic + dispositif sans communication politique."
         }
       ]
@@ -1072,7 +1072,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je refonds la méthode. Ateliers présentiels ramenés à 45 min, focus « prise de décision uniquement » ; entre les séances, co-édition du guide dans l'outil collaboratif avec Kévin co-facilitateur puisqu'il le maîtrise. Je propose 3 jalons partiels d'ici 6 semaines (40 %, 70 %, 100 %). Je recontacte le participant qui ne vient plus pour comprendre pourquoi et voir comment l'embarquer autrement. J'annonce tout ça mercredi en début d'atelier, on décide ensemble. »",
+          "text": "« Je refonds la méthode. Ateliers présentiels ramenés à 45 min, focus « prise de décision uniquement » ; entre les séances, co-édition du guide dans l'outil collaboratif avec Kévin co-facilitateur. Trois jalons partiels (40 %, 70 %, 100 %) d'ici 6 semaines. Je recontacte le participant décrochant pour comprendre. J'annonce ça mercredi en début d'atelier. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative hors fonction, lire l'échec comme apprentissage. Hélène change de méthode, s'appuie sur une compétence du groupe, remobilise, cadence, et co-décide. Pourquoi ++ et non + : c'est la combinaison refonte méthode + jalons + remobilisation individuelle + co-décision qui fait le maximum."
         }
       ]
@@ -1109,7 +1109,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je prends. Je te propose trois choses sur 10 jours : 1) trois sessions d'1 h avec toi pour le contexte projet, décisions clés, parties prenantes ; 2) j'embarque Claudine et Nicolas pour compléter — ils détiennent d'autres fragments — et on co-crée un wiki projet accessible à tous ; 3) quand Sylvie va mieux (dans quelques semaines) je lui envoie un résumé écrit pour qu'elle valide ou corrige. Je décale mon BPMN d'une semaine, j'en parle à Aude cet après-midi. Comme ça on ne perd pas la mémoire, et à son retour Sylvie retrouve un projet lisible. »",
+          "text": "« Sur 10 jours : trois sessions d'1 h avec toi pour le contexte projet, décisions clés, parties prenantes ; j'embarque Claudine et Nicolas pour compléter (ils ont d'autres fragments) et on co-crée un wiki projet accessible à tous ; quand Sylvie va mieux, je lui envoie un résumé écrit à valider. Je décale mon BPMN d'une semaine, j'en parle à Aude cet après-midi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, persévérer, prendre l'initiative hors fonction, lire l'imprévu comme opportunité d'amélioration. Damien prend le rôle de mémoire-relais, embarque le collectif, structure un savoir partagé durable, et prépare la réintégration de Sylvie. Pourquoi ++ et non + : c'est la combinaison transfert structuré + mobilisation BA + wiki durable + boucle avec Sylvie qui fait le maximum. Un + serait le transfert structuré sans la dimension collective ni boucle retour."
         }
       ]
@@ -1146,7 +1146,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose un test cadré sur l'AO portail : la partie exigences fonctionnelles en user stories + critères d'acceptation, avec Sarah et Kevin en lead, Béatrice et Paul relecteurs — on valorise leur expertise. Le reste du cahier reste sur le template historique pour sécuriser. Critères de succès : -30 % de pages, ≥ 4/5 sur enquête lisibilité auprès des soumissionnaires, 0 exigence critique mal interprétée. Atelier retour d'expérience à 1 mois après attribution. Si OK, on généralise sur les AO suivants avec Béatrice et Paul comme co-formateurs pour embarquer la pratique. »",
+          "text": "« Test cadré sur l'AO portail : la partie exigences fonctionnelles en user stories + critères d'acceptation, avec Sarah et Kevin en lead, Béatrice et Paul relecteurs (on valorise leur expertise). Reste du cahier sur le template historique pour sécuriser. Critères : -30 % de pages, ≥ 4/5 en lisibilité auprès des soumissionnaires, 0 exigence critique mal interprétée. Atelier REX à 1 mois. »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté solutions (SO2) — examiner les causes, comparer les alternatives, implémenter, trouver des méthodes durables, inscrire dans un cycle d'amélioration continue. Fatima teste, sécurise, valorise les seniors, fixe des critères mesurables, et prévoit l'adoption durable. Pourquoi ++ et non + : c'est la combinaison test calibré + critères mesurables + valorisation des seniors + roadmap d'adoption qui fait le maximum."
         }
       ]
@@ -1183,7 +1183,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Alexandre, les deux signaux sont de nature différente. Je propose : fix rapide sur la simulation cette semaine (côté Alexandre, tactique) + enquête structurée sur les 17 % d'abandons que je pilote avec Alice (structurel). Dans 10 jours on saura, et on aura deux scénarios sur la table : v1 selon prévu si les abandons sont cosmétiques, ou v1 réduite + bêta prolongée 4 semaines si le mental model est à revoir. Je prépare un point dédié avec toi, Alice et Isabelle d'ici deux semaines pour décider. On sort un produit qui ne perd pas un usager sur six. »",
+          "text": "« Alexandre, les deux signaux sont de nature différente. Fix rapide sur la simulation cette semaine (tactique) + enquête structurée sur les 17 % d'abandons pilotée avec Alice (structurel). Dans 10 jours on aura deux scénarios sur la table : v1 comme prévu si les abandons sont cosmétiques, ou v1 réduite + bêta prolongée 4 semaines si le mental model est à revoir. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer le signal, persévérer face aux difficultés, ajuster la méthode, lire l'échec comme apprentissage. Quentin sépare, instruit, scénarise, et convoque la bonne gouvernance pour arbitrer. Pourquoi ++ et non + : c'est la combinaison fix tactique + enquête structurée + scénarios + gouvernance arbitrale qui fait le maximum."
         }
       ]
@@ -1220,7 +1220,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Paul, je propose un POC Power Apps de 2 semaines avec Maxime, cadré ainsi : 3 user stories clés (saisie, recherche, export), 2 des 4 agents testeurs invités pour valider l'ergonomie, critères go/no-go explicites (saisie ≤ 30 s/dossier, export Excel correct, intégration M365 ok). J'en profite pour me former (2 j Microsoft Learn). À 2 semaines : POC concluant → re-cadrage rapide, mise en prod dans ~5 semaines (gain net), sinon on reprend ASP.NET à peine ralentis. Je préviens la direction dès aujourd'hui pour leur dire qu'on explore une option qui peut accélérer la livraison. »",
+          "text": "« POC Power Apps de 2 semaines avec Maxime : 3 user stories clés (saisie, recherche, export), 2 des 4 agents testeurs pour valider l'ergonomie, critères go/no-go (saisie ≤ 30 s/dossier, export Excel correct, intégration M365). Je me forme en parallèle (2 j Microsoft Learn). Go → mise en prod à ~5 semaines (gain net), sinon on reprend ASP.NET à peine ralentis. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative hors fonction. Émilie cadre un POC rigoureux, se forme, implique les utilisateurs, et remonte de façon transparente. Pourquoi ++ et non + : c'est la combinaison POC cadré + critères go/no-go + apprentissage personnel + communication direction qui fait le maximum."
         }
       ]
@@ -1257,7 +1257,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose qu'on joue la transition proprement. 1) Léna : je lui demande, dans ses 3 semaines, de m'aider à recruter un/une binôme métier et à passer officiellement le relais lors de son pot de départ. 2) Sponsor : je sollicite un des deux chefs de service avec un petit pitch « 2 actions à forte valeur encore à livrer, que ferme-t-on si on ne continue pas ». 3) Jeudi, je présente une roadmap à 3 mois avec le passage de relais visible + demande explicite de sponsor devant les participants. Si à 2 semaines on n'a pas de sponsor ni de binôme, on ferme proprement en capitalisant les acquis. Je te montre l'angle jeudi avant la présentation ? »",
+          "text": "« Je joue la transition proprement. Je demande à Léna de m'aider à trouver un binôme métier et à passer le relais à son pot. Je sollicite un chef de service comme sponsor. Jeudi : roadmap 3 mois + demande explicite de sponsor. Sans sponsor ni binôme à 2 semaines, on ferme en capitalisant. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — persévérer, ajuster la méthode, prendre l'initiative hors fonction, lire l'imprévu comme apprentissage. Benoît transforme un départ en transition cadrée, active la gouvernance, fixe un seuil, et soigne la communication collective. Pourquoi ++ et non + : c'est la combinaison transition avec Léna + recherche sponsor + communication participants + seuil de décision qui fait le maximum."
         }
       ]
@@ -1294,7 +1294,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose qu'on joue en double voie. Voie 1, les 2 premières semaines : diagnostic à froid des 3 échecs avec vous, Marc ; on identifie la cause structurelle et on sort un plan solide, pas magique. Voie 2 : sécuriser l'ancien batch comme fallback pour décembre, comme ça on ne livre pas sous la peur. Côté équipe : je veux qu'on reparte d'un socle propre avec le prestataire, je les invite à une session de travail plutôt qu'à des mails de reproches. Je fais un point court avec Pierre-Henri chaque vendredi, je vous protège du bruit politique. Point d'étape dans 2 semaines : on continue la migration ou on assume le plan B pour cette année. »",
+          "text": "« Double voie. Voie 1 : diagnostic à froid des 3 échecs avec vous, Marc, sur 2 semaines — cause structurelle, plan solide. Voie 2 : sécuriser l'ancien batch en fallback pour décembre. Session de travail avec le prestataire plutôt que mails de reproches. Point d'étape dans 2 semaines. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, persévérer, lire l'échec comme apprentissage, prendre l'initiative hors fonction. Lucie cadre un plan à double voie, restaure la relation prestataire, protège l'équipe du bruit, et prévoit une décision binaire claire. Pourquoi ++ et non + : c'est la combinaison diagnostic + fallback + relation prestataire + communication sponsor + décision cadrée qui fait le maximum."
         }
       ]
@@ -1331,7 +1331,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Sarah, je te remercie, ce que tu dis change la nature du sujet : ce n'est plus un débat « stat vs confort agent », c'est potentiellement un problème de qualité de service aux ayants droit fragiles. Je te propose trois choses. 1) Je fais trois écoutes d'appel avec toi et deux autres agents cette semaine pour objectiver. 2) Je demande à Aude et Éric de reporter l'extension artistes de deux semaines — on ne peut pas étendre un outil sans avoir creusé ce signal. 3) On construit ensemble une évolution de l'outil qui garde les gains (formation, uniformité) sans le côté rigide sur les cas complexes. Je te tiens au courant après mon point avec Aude mercredi. »",
+          "text": "« Sarah, merci — ton signal change la nature du sujet : problème potentiel de qualité de service aux ayants droit fragiles. Trois choses : 3 écoutes d'appel avec toi et deux agents cette semaine, reporter l'extension artistes de 2 semaines avec Aude et Éric, construire ensemble une évolution qui garde les gains sans rigidité. »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté clients (CL2) — approfondir la demande, chercher la solution avec le client, entretenir le contact, porter un regard critique sur le service rendu, prendre en compte le feedback. Karim reformule l'enjeu au vrai niveau (service aux ayants droit), propose un diagnostic objectivable, obtient un report, et co-construit. Pourquoi ++ et non + : c'est la combinaison reformulation + écoutes ciblées + report + co-construction qui fait le maximum."
         }
       ]
@@ -1368,7 +1368,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je vois trois leviers concrets — je les partage parce que tu me demandes un regard, Jean-Charles. 1) User stories trop grosses : je propose qu'on fasse un atelier de 90 min la semaine prochaine pour se caler sur un gabarit, je peux l'animer, j'ai suivi une formation récemment. 2) Rétros polies : essayons un format start/stop/continue au prochain sprint pour structurer. 3) Ta présence (ou celle d'un délégué) au moins à une partie du sprint review aiderait à fluidifier les arbitrages. Vincent, ça te va si on pose ces trois actions comme engagements du prochain sprint ? »",
+          "text": "« Trois leviers concrets, Jean-Charles. User stories trop grosses : atelier de 90 min la semaine prochaine pour caler un gabarit, je peux l'animer (formation récente). Rétros polies : format start/stop/continue au prochain sprint. Ta présence, ou celle d'un délégué, à une partie du sprint review fluidifierait les arbitrages. Vincent, on pose ces trois actions comme engagements du prochain sprint ? »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, prendre l'initiative hors fonction, persévérer, lire le changement comme apprentissage. Sabrina nomme, propose concrètement, s'engage elle-même (atelier), soutient le SM, et ancre le tout comme engagement collectif. Pourquoi ++ et non + : c'est la combinaison diagnostic + propositions + engagement personnel + soutien SM + validation collective qui fait le maximum."
         }
       ]
@@ -1405,7 +1405,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Avant obligation, je propose qu'on fasse évoluer la méthode sur 3 mois. Trois pistes : 1) ajouter un volet « processus atypiques » avec un cadre plus souple — Paul est le mieux placé pour le co-écrire, ce qui règle aussi son adhésion, 2) garder la version actuelle telle quelle pour les processus standards (les juniors en ont besoin), 3) une revue semestrielle co-pilotée avec les 8 BA pour faire évoluer la méthode au lieu de la figer. Dans 3 mois on la rend obligatoire, avec une version qui intègre les critiques. Comme ça on gagne l'adhésion au lieu de la forcer. »",
+          "text": "« Avant obligation, faire évoluer la méthode sur 3 mois. Trois pistes : volet « processus atypiques » co-écrit avec Paul (règle aussi son adhésion), version actuelle intacte pour les standards (les juniors en ont besoin), revue semestrielle avec les 8 BA. Obligation dans 3 mois, version enrichie. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer le changement, persévérer, ajuster la méthode, prendre l'initiative hors fonction. Jérôme transforme une opposition en évolution, équilibre les besoins, valorise le senior critique, et inscrit la méthode dans une boucle d'amélioration. Pourquoi ++ et non + : c'est la combinaison évolution méthode + volet souple + protection des juniors + revue semestrielle qui fait le maximum."
         }
       ]
@@ -1442,7 +1442,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Gilbert, je ne valide pas en l'état. Deux points structurants : charte graphique à jour (la maquette utilise une version de 2023 périmée, le prestataire ne le sait pas) et accessibilité RGAA, au moins sur l'essentiel (contrastes, labels, nav clavier) — sinon Christine ne peut pas utiliser l'intranet, et on s'expose à un sujet qui va devenir obligatoire. Je cadre ça avec le prestataire cette semaine, je chiffre l'impact (probablement sans rallonge, c'est de la correction), et je te reviens mercredi. Si besoin on associe Christine pour une rapide revue en fin de projet. »",
+          "text": "« Gilbert, je ne valide pas. Deux points structurants : charte graphique à jour (la maquette utilise une version de 2023 périmée) et accessibilité RGAA sur l'essentiel — contrastes, labels, nav clavier — sinon Christine ne peut pas l'utiliser. Je cadre ça avec le prestataire cette semaine, je chiffre l'impact (sans doute sans rallonge, c'est de la correction), retour mercredi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — alerte aux évolutions du domaine, intégrer les nouvelles normes, persévérer, prendre l'initiative hors fonction. Anaïs anticipe la norme RGAA, protège une collègue concrète, chiffre, et associe l'utilisatrice finale. Pourquoi ++ et non + : c'est la combinaison refus argumenté + chiffrage + anticipation normative + embarquement de l'utilisatrice qui fait le maximum."
         }
       ]
@@ -1479,7 +1479,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je te propose une instruction structurée sur 6 semaines : 1) entretiens avec les 4 administrations pionnières (2 semaines) — je veux la liste des pépins, pas que le pitch BOSA ; 2) point formel avec l'ONSS (Georges en face) pour comprendre leur réserve et voir si on peut se synchroniser ; 3) mini-POC sur un flux secondaire à faible enjeu avec Julien, le dev enthousiaste, pour toucher la plateforme. Critères de décision posés à l'avance : retours pionniers, alignement ONSS, chiffrage effort, résultat POC. Dans 6 semaines on arbitre avec des éléments. Si go, on raccorde en 9-12 mois ; sinon on revoit dans un an. »",
+          "text": "« Instruction structurée sur 6 semaines : entretiens avec les 4 administrations pionnières (la liste des pépins, pas juste le pitch BOSA), point formel avec l'ONSS pour comprendre leur réserve, mini-POC sur un flux secondaire avec Julien. Critères de décision posés à l'avance : retours pionniers, alignement ONSS, chiffrage effort, résultat POC. Arbitrage dans 6 semaines. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — alerte aux évolutions du domaine, intégrer les nouvelles technologies, persévérer, prendre l'initiative hors fonction. Pierre-Yves instruit, teste, coordonne l'ONSS, fixe des critères, et prévoit une décision explicite. Pourquoi ++ et non + : c'est la combinaison entretiens + coordination ONSS + mini-POC + critères explicites qui fait le maximum."
         }
       ]
@@ -1516,7 +1516,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Bertrand, je ne peux pas rédiger les specs telles quelles, mais j'ai ce qu'il faut pour construire un projet plus solide. Trois faits : gain français non mesuré, IT chiffre 300 k€, gestionnaires veulent un hebdo consolidé avec crainte d'outil de surveillance. Je te propose un cadrage alternatif : v1 « hebdo consolidé co-conçu avec les gestionnaires » (~80 k€, 3 mois, sans métriques individuelles), évaluation à 6 mois, v2 temps réel si le besoin émerge. Je te fais une note de recadrage pour lundi et un mini-script pour ta communication au comité (on a affiné, on va plus vite avec un périmètre v1 maîtrisé). Comme ça tu ne perds pas en crédibilité. »",
+          "text": "« Bertrand, je ne peux pas rédiger ces specs. Trois faits : gain français non mesuré, IT à 300 k€, gestionnaires veulent un hebdo consolidé et craignent l'outil de surveillance. Cadrage alternatif : v1 « hebdo co-conçu avec les gestionnaires » (~80 k€, 3 mois, sans métriques individuelles), évaluation à 6 mois, v2 temps réel si le besoin émerge. Note de recadrage pour lundi. »",
           "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — détecter les contradictions, évaluer les conséquences, formuler une recommandation fondée, anticiper les effets. Zoé recompose l'analyse, propose une alternative soutenable, désamorce la peur-gestionnaire, et prépare la communication du sponsor. Pourquoi ++ et non + : c'est la combinaison recadrage + alternative chiffrée + prise en compte de la peur utilisateur + script sponsor qui fait le maximum."
         }
       ]
@@ -1553,7 +1553,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Bonjour Chantal, bienvenue, je suis content qu'on puisse se voir vite. Trois angles que je te propose d'aborder : 1) j'ai 5 ans sur la chaîne pécule et je peux te faire gagner du temps côté métier ; 2) il y a des inquiétudes légitimes dans les deux équipes sur les méthodes, je veux bien jouer un rôle de passerelle si ça t'aide, surtout côté Modernisation où je suis écouté ; 3) je pense qu'on peut construire une méthode mixte qui prend le meilleur des deux cultures (processus côté Modernisation, KPI côté D&R). Je te propose un jeudi matin pour démarrer, plus un atelier commun des deux équipes dans 2 semaines si tu le veux. »",
+          "text": "« Bonjour Chantal, bienvenue. Trois angles : j'ai 5 ans sur la chaîne pécule et peux te faire gagner du temps côté métier ; je veux bien jouer un rôle de passerelle entre les deux équipes, surtout côté Modernisation ; on peut construire une méthode mixte (processus + KPI). Jeudi matin ? »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — participer au changement, prendre l'initiative hors fonction, persévérer. Antoine se positionne activement comme passerelle, valorise les deux cultures, et propose un rituel commun. Pourquoi ++ et non + : c'est la combinaison transparence sur les inquiétudes + rôle de passerelle assumé + vision méthode mixte + proposition d'atelier commun qui fait le maximum."
         }
       ]
@@ -1590,7 +1590,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Je propose un POC cadré de 2 mois. 3 rapports reconstruits selon le modèle sémantique, critères explicites : -30 % de lignes de définition, temps de génération ≤ actuel, 3 managers testeurs avec enquête satisfaction. Je m'y forme en parallèle. J'embarque Raphaël comme co-pilote pour qu'il ne découvre pas à la fin, et j'implique un manager métier comme sponsor usage. À 2 mois, tu as une note de décision : si POC concluant, chantier de 9 mois formalisé avec budget et ressources ; sinon, on range proprement. Tu veux que je lance cette semaine ? »",
+          "text": "« POC cadré de 2 mois : 3 rapports reconstruits selon le modèle sémantique. Critères : -30 % de lignes de définition, temps de génération ≤ actuel, 3 managers testeurs avec enquête satisfaction. Je me forme en parallèle, Raphaël co-pilote pour éviter la découverte tardive, un manager métier comme sponsor usage. À 2 mois, note de décision : chantier 9 mois ou rangement propre. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — alerte aux évolutions du domaine, intégrer les nouvelles technologies, persévérer, prendre l'initiative hors fonction. Malika cadre le POC, s'engage personnellement, embarque les acteurs, et prépare la décision. Pourquoi ++ et non + : c'est la combinaison POC cadré + critères mesurables + co-pilotage Raphaël + sponsor usage + point de décision formel qui fait le maximum."
         }
       ]
@@ -1627,7 +1627,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Marc, il faut qu'on arbitre. J'ai reçu ce matin un export data qui change le paysage : 3 recommandations contredites, 7 modifiées, 6 nouvelles à ajouter, 24 intactes. Je te recommande : décaler le comité de 2 semaines pour livrer une analyse à jour plutôt que contredite en séance — on aura plus de crédibilité avec les managers concernés. Je peux préparer un mail d'excuse au nom du projet (incident data tardif) pour prévenir les 8 participants aujourd'hui, et proposer la nouvelle date vendredi. À la rigueur, si 2 semaines c'est impossible, on fait un comité « v1 » avec les 24 recommandations sûres + annonce d'un « v2 » à 3 semaines pour le reste. Tu préfères lequel ? »",
+          "text": "« Marc, il faut arbitrer. Export data ce matin : 3 reco contredites, 7 modifiées, 6 nouvelles, 24 intactes. Je recommande de décaler le comité de 2 semaines pour livrer une analyse à jour. Mail d'excuse aujourd'hui aux 8 participants. Alternative : « v1 » sur les 24 sûres + « v2 » à 3 semaines. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, intégrer le changement, persévérer, prendre l'initiative hors fonction. Charles qualifie l'impact, recommande, anticipe la communication aux parties prenantes, et propose un plan B. Pourquoi ++ et non + : c'est la combinaison diagnostic chiffré + recommandation motivée + plan B + gestion de la communication qui fait le maximum."
         }
       ]
@@ -1664,7 +1664,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Jean-Michel, je comprends la pression des managers, mais les chiffres racontent une autre histoire. Sur 24, 19 réussissent aussi bien ou mieux qu'avant, 5 en reconversion sont en difficulté parce qu'ils sont peu à l'aise avec le numérique. Revenir au 100 % présentiel, c'est casser ce qui marche pour 19 afin de régler le cas de 5. Je te propose plutôt de garder l'e-learning et d'ajouter un parcours « accompagnement numérique » (2 demi-journées de coaching individuel en amont) pour les profils détectés en difficulté. Je peux te co-construire ce parcours avec toi en 3 semaines, et on le lance dès la prochaine promotion. Je parle aussi aux 2 managers mécontents pour leur expliquer. »",
+          "text": "« Jean-Michel, les chiffres racontent une autre histoire : 19 sur 24 réussissent aussi bien ou mieux, 5 en reconversion ont du mal avec le numérique. Revenir au 100 % présentiel casserait ce qui marche pour 19. Je propose de garder l'e-learning et d'ajouter un parcours « accompagnement numérique » (2 demi-j de coaching) pour les profils en difficulté. »",
           "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — lire l'échec comme apprentissage, persévérer, ajuster la méthode, prendre l'initiative hors fonction. Cécile recompose la lecture, préserve les bénéfices, propose un dispositif proportionné, s'engage personnellement, et gère la communication aux managers. Pourquoi ++ et non + : c'est la combinaison diagnostic chiffré + solution proportionnée + engagement personnel + gestion com managers qui fait le maximum."
         }
       ]
@@ -1701,7 +1701,7 @@
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
-          "text": "« Martine, oui c'est toujours moi, et je te dois des excuses — on n'a pas repris contact depuis 4 mois et tu as porté 18 signaux qu'on n'a pas lus comme tels. Je te propose trois choses. 1) Une séance ensemble jeudi pour trier les 18 demandes : celles qui sont des fix, celles qui révèlent un manque de l'outil. 2) Un point mensuel court entre toi et moi à partir de ce mois-ci, pour que ça ne se distende plus jamais. 3) Je parle aujourd'hui à Raphaël pour prioriser ce qui doit vraiment l'être, et je remonterai à ma hiérarchie que la médiation est un client à mandat sensible qui mérite un canal prioritaire. Pour le directeur, fais comme tu préfères, mais je voudrais qu'on règle le problème avec toi en premier. »",
+          "text": "« Martine, je te dois des excuses — 4 mois sans contact, et 18 signaux qu'on n'a pas lus. Trois choses : séance jeudi pour trier les 18 demandes (fix vs manque outil), point mensuel court entre nous dès ce mois, et je remonte à ma hiérarchie qu'il faut un canal prioritaire pour la médiation. »",
           "explanation": "Score attendu : ++\nCompétence testée : Être orienté clients (CL2) — approfondir la demande, chercher la solution avec le client, entretenir le contact, porter un regard critique sur le service rendu, prendre en compte le feedback. Olivier reconnaît, relance, ancre un rituel durable, priorise, et défend la cliente dans l'organisation. Pourquoi ++ et non + : c'est la combinaison reconnaissance + tri des 18 + point mensuel + défense interne + préservation du dialogue avant escalade qui fait le maximum."
         }
       ]
