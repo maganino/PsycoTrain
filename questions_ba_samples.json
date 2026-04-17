@@ -32,38 +32,60 @@
           "letter_preshuffle": "A",
           "expected_score": "--",
           "text": "« Je pars sur la règle que Paul m'a donnée : /312 avec arrondi fixe. C'est la plus simple à modéliser, Paul est la référence interne, et on ajoutera juste une note de bas de page sur les exceptions. Comme ça on tient le délai et on n'ouvre pas un débat qui nous ferait exploser le planning. »",
-          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — évaluer des informations complexes, vérifier la fiabilité, confronter des sources contradictoires. Vincent sélectionne arbitrairement une seule source malgré des preuves tangibles qu'elle est incomplète (1 847 exceptions en base, 13 tickets réglementaires, circulaire non indexée). Il ne croise rien, ne vérifie pas la crédibilité de la règle retenue, et dissimule le conflit de sources en le réduisant à une « note de bas de page ». Pourquoi -- et non - : ce qui fait basculer au niveau le plus bas est l'acceptation consciente du risque pour les ayants droit couplée à la minimisation délibérée de l'information contraire — pas seulement un oubli. Un simple oubli serait -."
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — évaluer des informations complexes, vérifier la fiabilité, confronter des sources contradictoires. Vincent sélectionne arbitrairement une seule source malgré des preuves tangibles qu'elle est incomplète (1 847 exceptions en base, 13 tickets réglementaires, circulaire non indexée). Il ne croise rien, ne vérifie pas la crédibilité de la règle retenue, et dissimule le conflit de sources en le réduisant à une « note de bas de page ». Pourquoi -- et non - : ce qui fait basculer au niveau le plus bas est l'acceptation consciente du risque pour les ayants droit couplée à la minimisation délibérée de l'information contraire — pas seulement un oubli. Un simple oubli serait -.",
+          "sub_behaviors": [
+            "pc_credibility",
+            "pc_sources"
+          ]
         },
         {
           "letter_preshuffle": "B",
           "expected_score": "-",
           "text": "« J'ai exporté la table des exceptions depuis Access, je construis le BPMN directement à partir des 1 847 cas réels. Les données de production ne mentent pas, elles sont plus fiables que la mémoire de Paul ou qu'une vieille circulaire. Je garde Paul et Juridique en dehors de la boucle pour rester neutre et livrer à temps. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — évaluer la crédibilité et la fiabilité de l'information, croiser plusieurs sources, situer l'information dans son contexte réglementaire. Vincent utilise une source (les données de production), ce qui est mieux que de ne rien vérifier, mais il confond « ce qui est exécuté » avec « ce qui est réglementaire ». La base peut très bien refléter une pratique erronée que la circulaire a rendue caduque en 2021. Isoler son analyse du Juridique et de Paul détruit toute triangulation. Pourquoi - et non -- : il y a un effort de vérification factuelle, il ne choisit pas à l'aveugle une opinion — ce qui le distingue d'une réaction totalement non-analytique."
+          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — évaluer la crédibilité et la fiabilité de l'information, croiser plusieurs sources, situer l'information dans son contexte réglementaire. Vincent utilise une source (les données de production), ce qui est mieux que de ne rien vérifier, mais il confond « ce qui est exécuté » avec « ce qui est réglementaire ». La base peut très bien refléter une pratique erronée que la circulaire a rendue caduque en 2021. Isoler son analyse du Juridique et de Paul détruit toute triangulation. Pourquoi - et non -- : il y a un effort de vérification factuelle, il ne choisit pas à l'aveugle une opinion — ce qui le distingue d'une réaction totalement non-analytique.",
+          "sub_behaviors": [
+            "pc_sources",
+            "pc_credibility"
+          ]
         },
         {
           "letter_preshuffle": "C",
           "expected_score": "+/-",
           "text": "« Je n'ai pas encore tranché, à vrai dire. Les trois sources ne concordent pas. Je t'envoie un mail d'alerte ce soir avec les points qui clochent, et je te laisse arbitrer avec Paul et Juridique. Dis-moi ce que tu décides et je repars du résultat. »",
-          "explanation": "Score attendu : +/-\nCompétence testée : Penser de manière critique (PC2) — tirer une conclusion argumentée à partir d'informations complexes. Vincent détecte correctement la contradiction et remonte l'alerte, ce qui est un pas positif. Mais il arrête le raisonnement à la détection : il n'analyse pas, ne chiffre pas l'impact, ne propose pas de critère d'arbitrage. La décision est entièrement renvoyée à la hiérarchie sans matière pour la prendre, ce qui neutralise la valeur ajoutée d'un BA. Pourquoi +/- et non + : un + exigerait au minimum une synthèse des trois sources et une recommandation motivée, même prudente. Ici Vincent se contente de dire « il y a un problème »."
+          "explanation": "Score attendu : +/-\nCompétence testée : Penser de manière critique (PC2) — tirer une conclusion argumentée à partir d'informations complexes. Vincent détecte correctement la contradiction et remonte l'alerte, ce qui est un pas positif. Mais il arrête le raisonnement à la détection : il n'analyse pas, ne chiffre pas l'impact, ne propose pas de critère d'arbitrage. La décision est entièrement renvoyée à la hiérarchie sans matière pour la prendre, ce qui neutralise la valeur ajoutée d'un BA. Pourquoi +/- et non + : un + exigerait au minimum une synthèse des trois sources et une recommandation motivée, même prudente. Ici Vincent se contente de dire « il y a un problème ».",
+          "sub_behaviors": [
+            "pc_sources",
+            "pc_recommend"
+          ]
         },
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
           "text": "« Tableau comparatif des trois sources — mémoire de Paul, table Access, circulaire 2019/14 — avec citations et chiffrage d'impact sur les 1 847 cas. Réunion de 45 min demain matin avec Paul et Juridique pour figer la règle. Dix jours de décalage sur le BPMN, reste du périmètre dans le délai. »",
-          "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner des stratégies de recherche, évaluer la crédibilité et la fiabilité, identifier les éléments essentiels, formuler une recommandation fondée, réfléchir aux conséquences. Vincent triangule les trois sources, quantifie l'impact, matérialise la dimension réglementaire, et transforme une contradiction ambiguë en décision documentée en mobilisant les bons interlocuteurs (Paul + Juridique). Pourquoi ++ et non + : le niveau ++ vient de la combinaison triangulation + chiffrage d'impact + proposition concrète d'arbitrage + re-planning maîtrisé. Un + aurait été donné pour une simple synthèse sans mécanisme de décision ni ré-estimation du délai."
+          "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner des stratégies de recherche, évaluer la crédibilité et la fiabilité, identifier les éléments essentiels, formuler une recommandation fondée, réfléchir aux conséquences. Vincent triangule les trois sources, quantifie l'impact, matérialise la dimension réglementaire, et transforme une contradiction ambiguë en décision documentée en mobilisant les bons interlocuteurs (Paul + Juridique). Pourquoi ++ et non + : le niveau ++ vient de la combinaison triangulation + chiffrage d'impact + proposition concrète d'arbitrage + re-planning maîtrisé. Un + aurait été donné pour une simple synthèse sans mécanisme de décision ni ré-estimation du délai.",
+          "sub_behaviors": [
+            "pc_sources",
+            "pc_elements",
+            "pc_credibility",
+            "pc_recommend"
+          ]
         },
         {
           "letter_preshuffle": "E",
           "expected_score": "+",
           "text": "« Je pars provisoirement sur /312 (version Paul) pour ne pas bloquer le BPMN, mais je flague la circulaire 2019/14 et les 1 847 exceptions Access en note explicite. Je te livre le modèle vendredi, et je propose qu'on cale avec Paul la semaine prochaine pour arbitrer. »",
-          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — croiser les sources, formuler une recommandation. Vincent triangule les trois sources et documente explicitement le conflit, ce qui protège le BPMN contre la simplification abusive. Il propose un arbitrage avec Paul. Pourquoi + et non ++ : il manque le chiffrage de l'impact sur les 1 847 cas et la co-saisine du Juridique — Paul seul ne peut pas trancher la valeur normative de la circulaire. Un ++ aurait intégré les trois sources dans un tableau comparatif chiffré, comme la réaction D."
+          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — croiser les sources, formuler une recommandation. Vincent triangule les trois sources et documente explicitement le conflit, ce qui protège le BPMN contre la simplification abusive. Il propose un arbitrage avec Paul. Pourquoi + et non ++ : il manque le chiffrage de l'impact sur les 1 847 cas et la co-saisine du Juridique — Paul seul ne peut pas trancher la valeur normative de la circulaire. Un ++ aurait intégré les trois sources dans un tableau comparatif chiffré, comme la réaction D.",
+          "sub_behaviors": [
+            "pc_sources",
+            "pc_recommend"
+          ]
         }
       ],
       "sub_behaviors": [
-        "pc_sources",
         "pc_credibility",
-        "pc_causes",
-        "pc_recommend"
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ]
     },
     {
@@ -89,38 +111,59 @@
           "letter_preshuffle": "A",
           "expected_score": "--",
           "text": "« Je pars sur le résumé de Rachid, c'est lui le business owner et c'est lui qui est responsable de l'interprétation. Moi je modélise, je n'interprète pas les circulaires. Si j'ouvre le texte légal à chaque note de synthèse qu'on me donne, on ne livre jamais. »",
-          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — vérifier la crédibilité et la fiabilité de l'information, évaluer les conséquences, situer l'information dans son cadre (ici réglementaire). Claire détient une preuve écrite que la source secondaire (le résumé) est incomplète sur un point qui touche aux droits des héritiers, mais elle choisit délibérément de ne pas s'en servir. Pourquoi -- et non - : au-delà de l'omission, elle pose en principe qu'un BA ne doit pas croiser les sources — ce qui nie explicitement le cœur du niveau N2 et expose l'outil cible à reproduire l'erreur. Ce n'est pas un oubli, c'est une règle de travail délibérément dégradée."
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — vérifier la crédibilité et la fiabilité de l'information, évaluer les conséquences, situer l'information dans son cadre (ici réglementaire). Claire détient une preuve écrite que la source secondaire (le résumé) est incomplète sur un point qui touche aux droits des héritiers, mais elle choisit délibérément de ne pas s'en servir. Pourquoi -- et non - : au-delà de l'omission, elle pose en principe qu'un BA ne doit pas croiser les sources — ce qui nie explicitement le cœur du niveau N2 et expose l'outil cible à reproduire l'erreur. Ce n'est pas un oubli, c'est une règle de travail délibérément dégradée.",
+          "sub_behaviors": [
+            "pc_credibility",
+            "pc_sources",
+            "pc_causes"
+          ]
         },
         {
           "letter_preshuffle": "B",
           "expected_score": "-",
           "text": "« Je corrige silencieusement le BPMN en intégrant le cas héritiers et la double validation. Rachid verra bien en relecture, et comme ça on évite de rouvrir un débat avant le sprint. Pour les macros actuelles je ne touche pas, ce n'est pas mon scope. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) et Communiquer (CO2, secondaire) — partager une analyse et adapter sa communication au public concerné. Claire utilise sa lecture critique de la circulaire (point positif), mais elle dissocie l'analyse de la communication : elle corrige unilatéralement sans documenter la divergence auprès du business owner. Résultat : Rachid découvre un modèle qui ne correspond plus à sa note, ce qui détruit la traçabilité réglementaire de la décision. Pourquoi - et non -- : la correction elle-même est techniquement valable, ce qui la distingue d'un simple contournement. Mais l'absence d'alerte transparente prive l'organisation de la décision éclairée à laquelle elle a droit."
+          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) et Communiquer (CO2, secondaire) — partager une analyse et adapter sa communication au public concerné. Claire utilise sa lecture critique de la circulaire (point positif), mais elle dissocie l'analyse de la communication : elle corrige unilatéralement sans documenter la divergence auprès du business owner. Résultat : Rachid découvre un modèle qui ne correspond plus à sa note, ce qui détruit la traçabilité réglementaire de la décision. Pourquoi - et non -- : la correction elle-même est techniquement valable, ce qui la distingue d'un simple contournement. Mais l'absence d'alerte transparente prive l'organisation de la décision éclairée à laquelle elle a droit.",
+          "sub_behaviors": []
         },
         {
           "letter_preshuffle": "C",
           "expected_score": "+/-",
           "text": "« Je t'avoue que j'ai des doutes, j'ai l'impression que le résumé de Rachid passe à côté du cas héritiers. Je vais lui envoyer un mail ce soir pour lui demander de re-vérifier avant jeudi. Sinon je pars sur son résumé. »",
-          "explanation": "Score attendu : +/-\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion à partir des informations évaluées. Claire détecte et signale, ce qui est positif. Mais elle ne cite pas l'article précis (art. 4 §2), elle ne documente pas l'écart, elle ne mentionne pas non plus la double validation ni la non-conformité possible des macros actuelles. Rachid, pressé, risque de balayer l'alerte en l'absence de preuve écrite. Pourquoi +/- et non + : il manque à la fois la preuve documentaire, la recommandation explicite et l'anticipation de la conséquence (non-conformité historique). Un + exigerait au moins une comparaison écrite appuyée sur le texte."
+          "explanation": "Score attendu : +/-\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion à partir des informations évaluées. Claire détecte et signale, ce qui est positif. Mais elle ne cite pas l'article précis (art. 4 §2), elle ne documente pas l'écart, elle ne mentionne pas non plus la double validation ni la non-conformité possible des macros actuelles. Rachid, pressé, risque de balayer l'alerte en l'absence de preuve écrite. Pourquoi +/- et non + : il manque à la fois la preuve documentaire, la recommandation explicite et l'anticipation de la conséquence (non-conformité historique). Un + exigerait au moins une comparaison écrite appuyée sur le texte.",
+          "sub_behaviors": [
+            "pc_recommend",
+            "pc_anticipate"
+          ]
         },
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
           "text": "« Avant jeudi, tableau à trois colonnes : résumé de Rachid, texte exact de la circulaire (art. 4 §2 + transitoire), comportement actuel de `DORMANT_V3`. J'y mets en évidence le cas héritiers et la double validation manquants, et flague à part la non-conformité probable des macros pour que Juridique décide d'un audit. Réunion de 30 min demain avec Rachid pour valider. »",
-          "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les éléments essentiels et sous-jacents, vérifier crédibilité/fiabilité, formuler recommandations, réfléchir aux conséquences. Claire triangule résumé / texte légal / comportement système, isole les éléments essentiels (héritiers, double validation), et sépare proprement les deux questions (modèle futur vs. conformité passée) pour ne pas noyer la décision. Pourquoi ++ et non + : c'est la combinaison preuve documentée + recommandation + séparation des enjeux + réunion d'arbitrage concrète qui justifie le maximum. Un + aurait été donné pour une bonne synthèse sans la distinction conformité passée / modèle futur."
+          "explanation": "Score attendu : ++\nCompétence testée : Penser de manière critique (PC2) — combiner stratégies de recherche, identifier les éléments essentiels et sous-jacents, vérifier crédibilité/fiabilité, formuler recommandations, réfléchir aux conséquences. Claire triangule résumé / texte légal / comportement système, isole les éléments essentiels (héritiers, double validation), et sépare proprement les deux questions (modèle futur vs. conformité passée) pour ne pas noyer la décision. Pourquoi ++ et non + : c'est la combinaison preuve documentée + recommandation + séparation des enjeux + réunion d'arbitrage concrète qui justifie le maximum. Un + aurait été donné pour une bonne synthèse sans la distinction conformité passée / modèle futur.",
+          "sub_behaviors": [
+            "pc_elements",
+            "pc_credibility",
+            "pc_sources",
+            "pc_anticipate"
+          ]
         },
         {
           "letter_preshuffle": "E",
           "expected_score": "+",
           "text": "« Je cite dans mon BPMN l'article 4 §2 et la double validation transitoire avec référence précise, et je signale à Rachid par mail circonstancié que son résumé est incomplet sur le cas héritiers. Je lui demande validation avant jeudi ; le sprint part avec une version qui tient. »",
-          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — détecter les contradictions, formuler une recommandation fondée. Claire documente les deux éléments manquants avec précision (article + transitoire), alerte le business owner par écrit, et sécurise le sprint. Pourquoi + et non ++ : elle ne traite pas la non-conformité historique probable de `DORMANT_V3` sur les deux dernières années — un signal qu'elle détient et qui relève d'un audit séparé. Un ++ aurait séparé les deux enjeux (modèle futur vs. conformité passée) et saisi explicitement le Juridique, comme la réaction D."
+          "explanation": "Score attendu : +\nCompétence testée : Penser de manière critique (PC2) — détecter les contradictions, formuler une recommandation fondée. Claire documente les deux éléments manquants avec précision (article + transitoire), alerte le business owner par écrit, et sécurise le sprint. Pourquoi + et non ++ : elle ne traite pas la non-conformité historique probable de `DORMANT_V3` sur les deux dernières années — un signal qu'elle détient et qui relève d'un audit séparé. Un ++ aurait séparé les deux enjeux (modèle futur vs. conformité passée) et saisi explicitement le Juridique, comme la réaction D.",
+          "sub_behaviors": [
+            "pc_recommend"
+          ]
         }
       ],
       "sub_behaviors": [
-        "pc_credibility",
         "pc_anticipate",
-        "pc_sources",
-        "pc_elements"
+        "pc_causes",
+        "pc_credibility",
+        "pc_elements",
+        "pc_recommend",
+        "pc_sources"
       ]
     },
     {
@@ -146,36 +189,61 @@
           "letter_preshuffle": "A",
           "expected_score": "--",
           "text": "« Je reste sur Visio et j'attends de voir. Franchement, Sophie a raison, ce genre d'annonce a déjà été annulé deux fois. Je ne vais pas perdre du temps à apprendre un outil qui va peut-être disparaître dans six mois. Si on m'y oblige, on en reparlera. »",
-          "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies dans sa méthode de travail, ajuster sa méthode quand les priorités et les besoins changent. Nabil refuse frontalement le changement, s'aligne sur la résistance de Sophie, et renvoie toute action à une contrainte future. Il ignore également le signal qu'il envoie à l'équipe en tant qu'analyste visible. Pourquoi -- et non - : ce n'est pas seulement de la prudence, c'est un alignement explicite sur une logique de non-engagement présentée comme rationnelle. Un - aurait été une attitude prudente sans refus affirmé."
+          "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies dans sa méthode de travail, ajuster sa méthode quand les priorités et les besoins changent. Nabil refuse frontalement le changement, s'aligne sur la résistance de Sophie, et renvoie toute action à une contrainte future. Il ignore également le signal qu'il envoie à l'équipe en tant qu'analyste visible. Pourquoi -- et non - : ce n'est pas seulement de la prudence, c'est un alignement explicite sur une logique de non-engagement présentée comme rationnelle. Un - aurait été une attitude prudente sans refus affirmé.",
+          "sub_behaviors": [
+            "ag_tech",
+            "ag_adjust"
+          ]
         },
         {
           "letter_preshuffle": "B",
           "expected_score": "-",
           "text": "« Je reprends tout dans Bizagi cette semaine, je n'aurai pas deux fois l'occasion d'apprendre à l'aise. Tant pis si le livrable prend une semaine de retard, on rattrapera. De toute façon, si on livre en Visio maintenant, il faudra tout refaire dans six semaines. »",
-          "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (AG2) — persévérer face aux difficultés tout en ajustant la méthode de façon pragmatique. L'ouverture au nouvel outil est réelle, ce qui est positif. Mais Nabil sacrifie unilatéralement un engagement bloquant (vague de migration) à une ambition d'apprentissage individuelle, sans replanification ni concertation. L'agilité n'est pas l'adoption impulsive : elle intègre le changement sans casser les priorités en cours. Pourquoi - et non -- : il y a une intention positive (adoption de la nouvelle techno), ce qui le distingue d'un simple refus."
+          "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (AG2) — persévérer face aux difficultés tout en ajustant la méthode de façon pragmatique. L'ouverture au nouvel outil est réelle, ce qui est positif. Mais Nabil sacrifie unilatéralement un engagement bloquant (vague de migration) à une ambition d'apprentissage individuelle, sans replanification ni concertation. L'agilité n'est pas l'adoption impulsive : elle intègre le changement sans casser les priorités en cours. Pourquoi - et non -- : il y a une intention positive (adoption de la nouvelle techno), ce qui le distingue d'un simple refus.",
+          "sub_behaviors": [
+            "ag_persevere",
+            "ag_adjust"
+          ]
         },
         {
           "letter_preshuffle": "C",
           "expected_score": "+/-",
           "text": "« Je termine la première moitié en Visio et je refais la deuxième moitié directement dans Bizagi, ça me permettra d'apprendre sur le tas sans prendre trop de retard. Le modèle final sera mixte mais au moins j'aurai touché au nouvel outil. »",
-          "explanation": "Score attendu : +/-\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode, intégrer la nouvelle technologie. Nabil fait un pas vers le changement et tente de concilier livrable et apprentissage, ce qui est positif. Mais la solution produit un livrable incohérent (deux outils, deux notations possibles, un seul processus), ce qui transfère le coût de la transition à l'IT et abîme la qualité du livrable critique. L'intention est bonne, l'exécution est hybride dans le mauvais sens. Pourquoi +/- et non + : il manque une séparation claire entre l'engagement actuel et l'investissement dans le nouvel outil sur le prochain périmètre."
+          "explanation": "Score attendu : +/-\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode, intégrer la nouvelle technologie. Nabil fait un pas vers le changement et tente de concilier livrable et apprentissage, ce qui est positif. Mais la solution produit un livrable incohérent (deux outils, deux notations possibles, un seul processus), ce qui transfère le coût de la transition à l'IT et abîme la qualité du livrable critique. L'intention est bonne, l'exécution est hybride dans le mauvais sens. Pourquoi +/- et non + : il manque une séparation claire entre l'engagement actuel et l'investissement dans le nouvel outil sur le prochain périmètre.",
+          "sub_behaviors": [
+            "ag_tech",
+            "ag_adjust"
+          ]
         },
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
           "text": "« Je termine le modèle critique en Visio comme prévu — il est à 80 %, le refaire maintenant ferait sauter la vague de migration. Je bloque les deux jours de formation Bizagi et me propose pilote pour le prochain processus. REX court à l'équipe en fin de mois, pour les collègues qui hésitent dont Sophie. »",
-          "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Nabil protège l'engagement critique, investit concrètement dans la nouvelle techno via la formation, se positionne comme pilote volontaire (initiative hors mandat), et transforme son expérience en levier pour l'adoption d'équipe. Pourquoi ++ et non + : c'est la combinaison respect du livrable + investissement explicite dans la nouvelle techno + initiative hors fonction + effet d'entraînement sur l'équipe qui justifie le maximum. Un + aurait été donné pour une adoption personnelle sans dimension collective."
+          "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, persévérer, ajuster la méthode, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Nabil protège l'engagement critique, investit concrètement dans la nouvelle techno via la formation, se positionne comme pilote volontaire (initiative hors mandat), et transforme son expérience en levier pour l'adoption d'équipe. Pourquoi ++ et non + : c'est la combinaison respect du livrable + investissement explicite dans la nouvelle techno + initiative hors fonction + effet d'entraînement sur l'équipe qui justifie le maximum. Un + aurait été donné pour une adoption personnelle sans dimension collective.",
+          "sub_behaviors": [
+            "ag_initiative",
+            "ag_tech",
+            "ag_persevere",
+            "ag_adjust"
+          ]
         },
         {
           "letter_preshuffle": "E",
           "expected_score": "+",
           "text": "« Je finis mon modèle en Visio pour ne pas faire sauter la vague de migration, je bloque les deux jours de formation Bizagi dans trois semaines, et j'attaque le prochain processus directement dans Bizagi. Pour Sophie, je passerai lui montrer après ma formation. »",
-          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, ajuster la méthode, persévérer. Nabil protège l'engagement critique, s'investit explicitement dans la nouvelle techno (formation + premier projet pilote), et intègre le changement sans casser ce qui est en cours. Pourquoi + et non ++ : l'effet d'équipe reste informel (« je passerai lui montrer ») et il ne se positionne pas pilote volontaire avec un REX structuré auprès des analystes qui hésitent. Un ++ aurait transformé son adoption en levier collectif, comme la réaction D."
+          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — intégrer les nouvelles technologies, ajuster la méthode, persévérer. Nabil protège l'engagement critique, s'investit explicitement dans la nouvelle techno (formation + premier projet pilote), et intègre le changement sans casser ce qui est en cours. Pourquoi + et non ++ : l'effet d'équipe reste informel (« je passerai lui montrer ») et il ne se positionne pas pilote volontaire avec un REX structuré auprès des analystes qui hésitent. Un ++ aurait transformé son adoption en levier collectif, comme la réaction D.",
+          "sub_behaviors": [
+            "ag_tech",
+            "ag_initiative",
+            "ag_persevere",
+            "ag_adjust"
+          ]
         }
       ],
       "sub_behaviors": [
-        "ag_initiative",
         "ag_adjust",
+        "ag_initiative",
+        "ag_persevere",
         "ag_tech"
       ]
     },
@@ -202,37 +270,59 @@
           "letter_preshuffle": "A",
           "expected_score": "--",
           "text": "« Honnêtement Aude, ce n'est pas mon mandat. Juridique a besoin d'un documentaliste, pas d'un BA. Si je prends ça, je vais droit dans le mur sur mon sprint et on crée un précédent où tout le monde nous refile ses dossiers quand c'est urgent. Je préfère qu'on dise non proprement. »",
-          "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode quand les priorités et besoins changent, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Amélie refuse frontalement un besoin prioritaire politiquement, en se cachant derrière la stricte définition de son mandat, alors que la demande est techniquement proche de sa pratique. Elle ne propose aucune alternative. Pourquoi -- et non - : ce n'est pas seulement une hésitation à sortir du cadre, c'est une défense explicite et verrouillée du périmètre comme règle. C'est l'anti-agilité, pas une simple prudence."
+          "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode quand les priorités et besoins changent, prendre l'initiative d'activités qui ne font pas partie de sa fonction. Amélie refuse frontalement un besoin prioritaire politiquement, en se cachant derrière la stricte définition de son mandat, alors que la demande est techniquement proche de sa pratique. Elle ne propose aucune alternative. Pourquoi -- et non - : ce n'est pas seulement une hésitation à sortir du cadre, c'est une défense explicite et verrouillée du périmètre comme règle. C'est l'anti-agilité, pas une simple prudence.",
+          "sub_behaviors": [
+            "ag_adjust",
+            "ag_initiative"
+          ]
         },
         {
           "letter_preshuffle": "B",
           "expected_score": "-",
           "text": "« OK, je reprends ça à 100 % cette semaine, le package de tests attendra la semaine prochaine. On ne peut pas dire non au cabinet, c'est prioritaire. Je m'organise. »",
-          "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, mais aussi respecter les engagements clients internes. Amélie accepte le changement de priorité (positif) mais absorbe le choc sans négociation ni replanification explicite avec les cinq personnes bloquées par le package de tests. Elle crée silencieusement un dommage collatéral. L'agilité ne signifie pas « tout encaisser » mais réordonnancer de façon transparente. Pourquoi - et non -- : l'acceptation du changement et la priorisation politique correcte empêchent de descendre jusqu'au niveau le plus bas."
+          "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster la méthode, mais aussi respecter les engagements clients internes. Amélie accepte le changement de priorité (positif) mais absorbe le choc sans négociation ni replanification explicite avec les cinq personnes bloquées par le package de tests. Elle crée silencieusement un dommage collatéral. L'agilité ne signifie pas « tout encaisser » mais réordonnancer de façon transparente. Pourquoi - et non -- : l'acceptation du changement et la priorisation politique correcte empêchent de descendre jusqu'au niveau le plus bas.",
+          "sub_behaviors": [
+            "ag_adjust"
+          ]
         },
         {
           "letter_preshuffle": "C",
           "expected_score": "+/-",
           "text": "« Je vais essayer de tenir les deux cette semaine. Je prends la demande de Thibault et je continue le package de tests en parallèle. On verra en fin de semaine ce qui aura avancé. Je te tiens au courant. »",
-          "explanation": "Score attendu : +/-\nCompétence testée : Faire preuve d'agilité (AG2) et Être orienté solutions (SO2, secondaire) — trouver une méthode durable. Amélie accepte les deux priorités, ce qui montre de l'ouverture, mais sans arbitrage ni méthode. Résultat probable : les deux livrables arriveront en retard, et aucun retour d'expérience ne sera capitalisé pour les prochaines sollicitations similaires. C'est de l'agilité intention sans agilité méthode. Pourquoi +/- et non + : il manque la re-priorisation explicite, la time-box, et la communication aux parties prenantes de l'engagement initial."
+          "explanation": "Score attendu : +/-\nCompétence testée : Faire preuve d'agilité (AG2) et Être orienté solutions (SO2, secondaire) — trouver une méthode durable. Amélie accepte les deux priorités, ce qui montre de l'ouverture, mais sans arbitrage ni méthode. Résultat probable : les deux livrables arriveront en retard, et aucun retour d'expérience ne sera capitalisé pour les prochaines sollicitations similaires. C'est de l'agilité intention sans agilité méthode. Pourquoi +/- et non + : il manque la re-priorisation explicite, la time-box, et la communication aux parties prenantes de l'engagement initial.",
+          "sub_behaviors": [
+            "ag_learn"
+          ]
         },
         {
           "letter_preshuffle": "D",
           "expected_score": "++",
           "text": "« Je livre à Thibault un index structuré des 40 circulaires vendredi midi (mon modèle de contexte BA — deux jours de travail concentré). Je décale d'une semaine le package de tests, je préviens Loïc et l'équipe QA cet après-midi. Je documente la méthode pour que Juridique puisse la réutiliser seul la prochaine fois. »",
-          "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative d'activités qui ne font pas partie de sa fonction, persévérer. Amélie accepte le changement de priorité, s'engage sur un livrable ambitieux mais time-boxé, gère explicitement l'impact sur son engagement existant (communication, report assumé), et transforme l'événement en amélioration durable (documentation de méthode pour la prochaine itération). Pourquoi ++ et non + : c'est l'ensemble time-box + re-planning transparent + initiative hors mandat + capitalisation méthodologique qui fait le maximum. Un + aurait été donné pour un simple engagement à aider sans la dimension d'amélioration continue."
+          "explanation": "Score attendu : ++\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative d'activités qui ne font pas partie de sa fonction, persévérer. Amélie accepte le changement de priorité, s'engage sur un livrable ambitieux mais time-boxé, gère explicitement l'impact sur son engagement existant (communication, report assumé), et transforme l'événement en amélioration durable (documentation de méthode pour la prochaine itération). Pourquoi ++ et non + : c'est l'ensemble time-box + re-planning transparent + initiative hors mandat + capitalisation méthodologique qui fait le maximum. Un + aurait été donné pour un simple engagement à aider sans la dimension d'amélioration continue.",
+          "sub_behaviors": [
+            "ag_initiative",
+            "ag_adjust",
+            "ag_persevere",
+            "ag_learn"
+          ]
         },
         {
           "letter_preshuffle": "E",
           "expected_score": "+",
           "text": "« Je livre à Thibault un index structuré des 40 circulaires vendredi midi, je décale mon package de tests d'une semaine et je préviens Loïc et la QA cet après-midi. Je te tiens au courant. Si la demande se reproduit, on en reparlera. »",
-          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative hors fonction. Amélie accepte la priorité politique, time-boxe sa contribution, et communique le report à l'équipe QA bloquée. Pourquoi + et non ++ : elle ne capitalise pas méthodologiquement (pas de documentation pour que Juridique puisse refaire seul, pas d'ancrage durable du précédent). Un ++ aurait transformé l'urgence en amélioration pérenne avec documentation de méthode, comme la réaction D."
+          "explanation": "Score attendu : +\nCompétence testée : Faire preuve d'agilité (AG2) — ajuster sa méthode aux nouvelles priorités, prendre l'initiative hors fonction. Amélie accepte la priorité politique, time-boxe sa contribution, et communique le report à l'équipe QA bloquée. Pourquoi + et non ++ : elle ne capitalise pas méthodologiquement (pas de documentation pour que Juridique puisse refaire seul, pas d'ancrage durable du précédent). Un ++ aurait transformé l'urgence en amélioration pérenne avec documentation de méthode, comme la réaction D.",
+          "sub_behaviors": [
+            "ag_initiative",
+            "ag_learn",
+            "ag_adjust"
+          ]
         }
       ],
       "sub_behaviors": [
         "ag_adjust",
+        "ag_initiative",
         "ag_learn",
-        "ag_initiative"
+        "ag_persevere"
       ]
     }
   ]
