@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "description": "EPSO AD/426/25 · Data Management · Seed v1 (20 MCQs).",
+    "description": "EPSO AD/426/25 · Data Management · Seed v1.1 (20 MCQs, explanations expanded with context).",
     "exam_date": "2026-04-29",
-    "status": "shell_with_20",
+    "status": "shell_with_20_v1.1",
     "coverage": "8 EU regulations · 5 frameworks · 7 duty-focused",
     "difficulty_mix": "8 easy · 8 medium · 4 hard"
   },
@@ -21,10 +21,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "27 April 2016 is the adoption date, not the application date — GDPR provided a two-year transition period.",
-        "B": "Correct. GDPR became applicable on 25 May 2018, two years after adoption (Art. 99).",
-        "C": "11 December 2018 is the application date of Regulation 2018/1725 (EU institutions), not GDPR.",
-        "D": "24 September 2023 is the application date of the Data Governance Act (Reg. 2022/868)."
+        "A": "27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
+        "B": "Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.",
+        "C": "11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
+        "D": "24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
       }
     },
     {
@@ -41,10 +41,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2).",
-        "B": "Correct. Reg. 2018/1725 mirrors the GDPR rules for EU institutions; the EDPS supervises compliance.",
-        "C": "The Open Data Directive governs reuse of public-sector information, not personal-data protection.",
-        "D": "The DGA sets rules for data intermediation and altruism, not the personal-data protection regime of EU institutions."
+        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
+        "B": "Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.",
+        "C": "The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.",
+        "D": "The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
       }
     },
     {
@@ -61,10 +61,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138).",
-        "B": "Meteorological is one of the six categories.",
-        "C": "Correct. Health is NOT an HVD category — electronic health data is governed by the EHDS (Reg. 2025/327). The six HVD categories are: geospatial; earth observation & environment; meteorological; statistics; companies & company ownership; mobility.",
-        "D": "Mobility is one of the six categories."
+        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
+        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
+        "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
+        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
       }
     },
     {
@@ -81,10 +81,10 @@
       },
       "correct": "D",
       "explanations": {
-        "A": "Pillar 1 — rules for reusing protected public-sector data (confidential, IP-covered, personal).",
-        "B": "Pillar 2 — providers of data intermediation services under a notification regime (Ch III).",
-        "C": "Pillar 3 — data altruism for causes of general interest, with a standardised European Data Altruism Consent Form (Ch IV).",
-        "D": "Correct (the trap). Cloud/edge switching rights belong to the Data Act (Ch VI), not the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB)."
+        "A": "Pillar 1 — reuse of protected public-sector data (health records, statistics, IP-protected, confidential commercial data). This extends Open Data Directive logic to data that can't be made 'open by default'.",
+        "B": "Pillar 2 — data intermediation services. Neutral third parties that connect data holders and data users under a notification regime (Ch III of the DGA). They can't commercialise the data they broker.",
+        "C": "Pillar 3 — data altruism for causes of general interest. Comes with a standardised European Data Altruism Consent Form (Ch IV) so donors can share data confidently, and a register of recognised altruism organisations.",
+        "D": "Correct — the trap answer. Cloud / edge switching rights belong to the Data Act (Ch VI of Reg. 2023/2854), NOT the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB) — the expert body that advises the Commission on data-spaces deployment and cross-sector interoperability."
       }
     },
     {
@@ -101,10 +101,10 @@
       },
       "correct": "A",
       "explanations": {
-        "A": "Correct. Ch II of the Data Act gives the user of a connected product the right to access the data the product generates.",
-        "B": "Ch III governs data sharing between businesses on fair, reasonable and non-discriminatory terms — not user access.",
-        "C": "Ch V covers public-body access in emergencies or situations of exceptional public interest — not a consumer request.",
-        "D": "Ch VI is about switching between cloud / edge providers; unrelated to IoT user-data access."
+        "A": "Correct. Ch II of the Data Act gives the user of a connected product the right to access the data it generates. The user can also instruct the data holder to share this data with a third party of their choice — for example a repair shop, a competitor aftermarket service, or an analytics provider.",
+        "B": "Ch III deals with B2B data sharing when a legal obligation to share exists — it sets FRAND (Fair, Reasonable And Non-Discriminatory) terms so the data holder can't impose abusive conditions. Not triggered by a consumer asking for their own usage data.",
+        "C": "Ch V covers public-body access to private-sector data in situations of exceptional public need (public emergency, crisis). A user wanting their own data isn't a public emergency and isn't a public body.",
+        "D": "Ch VI is about switching between cloud / edge providers — no ransom fees, functional equivalence, portability of workloads. Different stakeholders, different chapter, unrelated to IoT user-data access."
       }
     },
     {
@@ -121,10 +121,10 @@
       },
       "correct": "D",
       "explanations": {
-        "A": "Minimal risk covers the bulk of AI (spam filters, games) with voluntary obligations only.",
-        "B": "Limited risk triggers transparency duties (e.g. chatbots disclosing they are AI).",
-        "C": "High-risk AI (Annex III) requires conformity assessment, but this specific use is further up the pyramid.",
-        "D": "Correct. Art 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement as an unacceptable practice, banned save narrowly defined exceptions (serious crime, prior authorisation)."
+        "A": "Minimal risk covers the bulk of AI systems — spam filters, recommendation engines, games — with voluntary codes of conduct and no mandatory obligations. Law-enforcement biometric ID is nowhere near this tier.",
+        "B": "Limited risk triggers transparency duties — chatbots must disclose they are AI, deepfakes must be labelled. The concern is informed use, not safety. Biometric ID sits much higher on the pyramid.",
+        "C": "Tempting because 'high risk' sounds severe, but it isn't severe enough. High-risk AI (Annex III) requires conformity assessment, documentation and human oversight — yet many biometric-ID uses still get more restrictive treatment. Real-time remote ID in public for police is the very top.",
+        "D": "Correct. Art. 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement purposes as an 'unacceptable' practice, banned save narrowly defined exceptions (serious crime, prior judicial or independent administrative authorisation). This is the sharpest cut on the AI Act's risk pyramid."
       }
     },
     {
@@ -141,10 +141,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "There is no blanket obligation to publish training datasets openly; trade secrets and IP are protected.",
-        "B": "Correct. Art 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures.",
-        "C": "Synthetic data is permitted but not required; the key criterion is relevance and representativeness.",
-        "D": "Personal data may be processed in training sets under specific safeguards (Art 10(5)); there is no outright ban."
+        "A": "There is no blanket obligation to publish training datasets openly. Trade secrets, IP, personal data and security concerns all push against that. Art. 10 focuses on the quality of the datasets, not their public availability.",
+        "B": "Correct. Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. This is the heart of the Art. 10 data-governance obligations — alongside relevance, representativeness, error-minimisation and documented design choices.",
+        "C": "Synthetic data (artificially generated) is explicitly allowed and can actually help satisfy bias-mitigation obligations when real data is scarce or skewed. But the AI Act doesn't require synthetic-only training — the key criteria are relevance and representativeness, whatever the source.",
+        "D": "Personal data may be processed in training sets under specific safeguards. Art. 10(5) even allows processing of special categories of data (health, biometric, political opinions) where strictly necessary for bias monitoring and correction — a narrow derogation justified by the public interest in fair AI."
       }
     },
     {
@@ -161,10 +161,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "It is not a regulation — it has no binding legal force on its own.",
-        "B": "The Data Act is a regulation and does not require transposition; no directive is derived from it.",
-        "C": "Correct. The Data Union Strategy is a Commission Communication (COM(2025) 835), a policy framework succeeding the 2020 European Strategy for Data.",
-        "D": "The EDPB issues guidelines on GDPR, not EU data-market strategies."
+        "A": "It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.",
+        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.",
+        "C": "Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).",
+        "D": "The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee."
       }
     },
     {
@@ -181,10 +181,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "Data Architecture is one of the 11 knowledge areas but sits on the periphery, not the hub.",
-        "B": "Data Quality is a peripheral knowledge area.",
-        "C": "Correct. Data Governance is the central, cross-cutting knowledge area binding the other ten.",
-        "D": "Metadata management is an important but peripheral knowledge area."
+        "A": "Data Architecture is one of the 11 DAMA knowledge areas but sits on the periphery of the wheel. Architecture decisions are shaped by governance policies, not the other way around.",
+        "B": "Data Quality is a peripheral knowledge area — measured against standards set by governance, not setting the standards itself.",
+        "C": "Correct. Data Governance is the central, cross-cutting knowledge area at the hub of the DAMA wheel. Every other area (architecture, quality, security, metadata, warehousing, master data, etc.) produces policies and KPIs that governance oversees, and is in turn shaped by the policies governance sets. That's why DAMA places it at the centre visually.",
+        "D": "Metadata management is an important but peripheral knowledge area. Its outputs (catalogues, lineage) feed governance, but it isn't the hub."
       }
     },
     {
@@ -201,10 +201,10 @@
       },
       "correct": "A",
       "explanations": {
-        "A": "Correct. FAIR = Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016).",
-        "B": "Not the FAIR definition; these are unrelated data-engineering adjectives.",
-        "C": "Plausible but incorrect — 'Federated' and 'Audited' are not part of FAIR.",
-        "D": "Reproducibility is related but not the FAIR wording; the fourth letter is Reusable."
+        "A": "Correct. FAIR stands for Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016). Originally proposed for scientific research data, now adopted as the default yardstick for open data across the EU — including data.europa.eu.",
+        "B": "Not the FAIR definition. These are unrelated data-engineering adjectives strung together — be suspicious of plausible-sounding technical words glued into an acronym.",
+        "C": "Plausible but wrong. 'Federated' (distributed architectures) and 'Audited' (security/governance) are real concepts, just not part of FAIR.",
+        "D": "Reproducibility matters in research but isn't the FAIR wording. The fourth letter is Reusable — clear license, rich provenance, community standards — which enables reproducibility as a consequence."
       }
     },
     {
@@ -221,10 +221,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "Reversed. EIF layers are ordered legal → technical.",
-        "B": "Correct. Legal · Organisational · Semantic · Technical, with an Interoperability Governance overlay.",
-        "C": "Incorrect ordering — Legal precedes Organisational.",
-        "D": "Does not reflect the EIF structure."
+        "A": "Reversed. The EIF layers progress from policy down to technology, not the other way around. Reversing the order is a common distractor.",
+        "B": "Correct. Legal · Organisational · Semantic · Technical. An Interoperability Governance overlay binds the four layers together, and 'Integrated Public Service Governance' sits on top as an overarching principle. The order matters: you can't have meaningful technical interoperability if the legal frameworks clash or organisations don't align on processes.",
+        "C": "Legal precedes Organisational — legal alignment is the first layer because without compatible legal frameworks, nothing else can work.",
+        "D": "Does not reflect the EIF structure at all. The layers are named and ordered specifically in the framework documentation."
       }
     },
     {
@@ -241,10 +241,10 @@
       },
       "correct": "A",
       "explanations": {
-        "A": "Correct. Confidentiality · Integrity · Availability are the three pillars of the CIA model; sometimes extended with Authenticity / Non-repudiation.",
-        "B": "Auditability is a control, not a core CIA objective.",
-        "C": "These relate to access management (e.g. RBAC), not CIA.",
-        "D": "Consent is a GDPR lawful basis, not part of the CIA triad."
+        "A": "Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.",
+        "B": "Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.",
+        "C": "Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.",
+        "D": "Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely."
       }
     },
     {
@@ -261,10 +261,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "Controllership is defined by who determines purposes and means, not by who physically handles data.",
-        "B": "Correct. The company determines purposes and means (controller); the payroll service acts on its instructions (processor, Art 4(8), Art 28).",
-        "C": "Joint controllership (Art 26) requires joint determination of purposes and means — not the default for a service provider.",
-        "D": "Pay slips contain personal data of employees and are in GDPR scope regardless of who sees them."
+        "A": "Controllership under GDPR is determined by who decides the purposes and means of processing — not by who physically handles the data. A processor's servers might store terabytes of personal data and still not be a controller.",
+        "B": "Correct. The company determines the purposes (pay our employees) and the essential means (use this payroll service). The payroll provider acts on the company's instructions, making it a processor under Art. 4(8). A data processing agreement (Art. 28) must cover the relationship, including instructions, security, sub-processors and deletion at the end of the service.",
+        "C": "Joint controllership (Art. 26) is a specific legal construct requiring joint determination of purposes and means — typical for platforms where two entities genuinely co-design the processing (e.g. social-media page admins + the platform). It isn't the default for a service-provider relationship.",
+        "D": "Pay slips contain personal data of employees (name, salary, social-security data) and are in GDPR scope regardless of who physically sees them. 'Public' applies to anonymous statistics, not individual pay data."
       }
     },
     {
@@ -281,10 +281,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "DCAT-AP is not a model registry; no such EU standard uses this name.",
-        "B": "Correct. DCAT-AP (Data Catalogue Vocabulary Application Profile) specifies how to describe datasets on European data portals; extensions include StatDCAT-AP and GeoDCAT-AP.",
-        "C": "GDPR data portability (Art 20) uses common structured formats but is not specified by DCAT-AP.",
-        "D": "DCAT-AP describes datasets and catalogues, not cloud SaaS providers."
+        "A": "DCAT-AP is not a model registry — no EU standard under this name concerns ML model metadata. Don't confuse with AI-Act-era model-card ideas, which are different and newer.",
+        "B": "Correct. DCAT-AP (Data Catalogue Vocabulary — Application Profile) is an EU-specific profile of the W3C DCAT vocabulary, used to describe datasets and catalogues consistently across European open-data portals. It's what powers data.europa.eu. Key extensions include StatDCAT-AP (statistics) and GeoDCAT-AP (geospatial), with a dedicated HVD profile for High-Value Datasets.",
+        "C": "GDPR data portability (Art. 20) requires common structured / machine-readable formats (CSV, JSON, XML) but doesn't mandate DCAT-AP specifically. DCAT-AP is about cataloguing datasets, not about exporting personal data.",
+        "D": "DCAT-AP describes datasets and catalogues on data portals, not cloud SaaS providers. Cloud-provider directories are a different (and much less standardised) category."
       }
     },
     {
@@ -301,10 +301,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "That describes the classic ETL pattern, not ELT.",
-        "B": "Correct. In ELT the raw data is loaded into the target (e.g. a columnar warehouse) and transformed there, leveraging the warehouse's compute.",
-        "C": "ELT still transforms — just after loading.",
-        "D": "Loading without querying is archival, not ELT."
+        "A": "That describes the classic ETL pattern (Extract → Transform → Load): the on-premise workflow where transformations run in a dedicated ETL engine (Informatica, SSIS, Talend) before the data lands in the target.",
+        "B": "Correct. In ELT (Extract → Load → Transform), raw data is loaded straight into the target — typically a modern columnar warehouse (Snowflake, BigQuery, Redshift) — and transformations run there using SQL. This works because the warehouse's compute is cheap and elastic, removing the need for a separate ETL server. Modern stacks like dbt are built around this pattern.",
+        "C": "ELT still transforms — the letters just rearrange when. 'No transformations' would be replication / change-data-capture, not ELT.",
+        "D": "Loading data without ever querying it is archival or cold storage, not ELT. ELT specifically exists to make data queryable fast."
       }
     },
     {
@@ -321,10 +321,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "Only true anonymisation removes data from scope; pseudonymisation does not.",
-        "B": "Reversed — it is anonymisation that takes data out of scope.",
-        "C": "Correct. Anonymisation (irreversible) means the data is no longer personal and is outside GDPR (Recital 26). Pseudonymisation (reversible with a key) is a safeguard, but the data remains personal and in scope (Art 4(5), Art 25, Art 32).",
-        "D": "Properly executed anonymisation is explicitly recognised as taking data out of scope (Recital 26)."
+        "A": "Only true anonymisation removes data from GDPR scope. Pseudonymised data, because it can be re-identified through the key, remains personal data and stays in scope.",
+        "B": "Reversed. It's anonymisation that takes data out of scope — pseudonymisation is a safeguard, not an exemption. This swap is one of the exam's favourite traps.",
+        "C": "Correct. Anonymisation (irreversible — no re-identification possible even when combined with other data sets) means the data is no longer personal and therefore outside GDPR (Recital 26). Pseudonymisation (reversible via a separate key kept secure) is explicitly defined in Art. 4(5) as a safeguard — the data remains personal and GDPR still applies. The key mental test: can someone with access to additional information re-identify the person? If yes, it's pseudonymisation.",
+        "D": "Properly executed anonymisation is explicitly recognised in Recital 26 as taking data out of scope — otherwise the concept would be meaningless. The challenge is that 'properly executed' is hard to achieve in practice (linkage attacks, auxiliary data)."
       }
     },
     {
@@ -341,10 +341,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "A classic warehouse uses proprietary storage and does not operate directly on open object-storage Parquet.",
-        "B": "A plain lake lacks ACID, schema enforcement and time-travel; schema-on-read alone is limiting for BI.",
-        "C": "Correct. A lakehouse layers an open table format (Delta / Iceberg / Hudi) on object-store files, providing ACID, schema enforcement and time-travel while keeping the openness of a lake, serving both BI and ML.",
-        "D": "OLTP with replicas is designed for transactional workloads, not analytics on large Parquet files."
+        "A": "A classic data warehouse uses proprietary storage (Snowflake's micro-partitions, BigQuery's Capacitor, Redshift blocks) — it doesn't operate directly on user-managed object storage with open Parquet files. It also wouldn't give you time-travel out of the box unless the vendor adds it.",
+        "B": "A plain Hadoop-era lake lacks ACID transactions, lacks schema enforcement, and has no time-travel. Schema-on-read alone is fine for exploration, but BI tools expect structured, consistent tables and concurrent reads/writes break.",
+        "C": "Correct. A lakehouse layers an open table format — Delta Lake, Apache Iceberg, or Apache Hudi — on top of object-store files (typically Parquet). This adds the warehouse-like guarantees (ACID transactions, schema enforcement, time-travel, efficient upserts) while keeping the lake's openness and low cost. Both BI tools and ML pipelines can read the same tables, eliminating the classic 'copy data to the ML cluster' step.",
+        "D": "OLTP databases (PostgreSQL, MySQL) with read replicas are optimised for transactional workloads — row-oriented storage, small short transactions. Analytics scans over large Parquet files would be painfully slow, and you'd lose the object-storage cost advantage entirely."
       }
     },
     {
@@ -361,10 +361,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "KPIs can be counts, ratios, currency — not only percentages.",
-        "B": "Correct. A Key Performance Indicator is a metric deliberately chosen because it ties to an organisational objective and tracks progress toward it.",
-        "C": "Refresh cadence depends on the use case — many KPIs are tracked monthly or quarterly.",
-        "D": "A dashboard is a visualisation that may display KPIs; the two terms are not synonymous."
+        "A": "KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.",
+        "B": "Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.",
+        "C": "Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.",
+        "D": "A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
       }
     },
     {
@@ -381,10 +381,10 @@
       },
       "correct": "B",
       "explanations": {
-        "A": "That describes data labelling — assigning the target class to examples.",
-        "B": "Correct. Feature engineering designs and derives the input variables the model will learn from, drawing on domain knowledge.",
-        "C": "Evaluating on a test set is model validation, not feature engineering.",
-        "D": "RBAC governs access to data but has nothing to do with feature creation."
+        "A": "That describes data labelling — assigning the target class (fraud / not fraud) to historical examples, typically done manually, via weak-labelling heuristics, or by using a trusted source of truth. Labels are an input to supervised learning; features are the other input.",
+        "B": "Correct. Feature engineering is the craft of designing and deriving the input variables the model will learn from — things like 'transactions in the last 24 h', 'device-country mismatch flag', 'log-amount', or embeddings of categorical fields. It's where domain knowledge turns into predictive signal, and in practice it often has more impact on model performance than the choice of algorithm.",
+        "C": "Evaluating a model on a held-out test set is model validation / evaluation — measuring how well the model generalises to unseen data. Feature engineering happens upstream; evaluation happens downstream.",
+        "D": "RBAC governs who can access the training data — a security / compliance concern. It's completely disjoint from the data-science task of deriving useful input variables."
       }
     },
     {
@@ -401,10 +401,10 @@
       },
       "correct": "C",
       "explanations": {
-        "A": "Swaps the roles — IATE is a terminology database, not a thesaurus.",
-        "B": "Swaps the roles — EuroVoc is a thesaurus, not a terminology database.",
-        "C": "Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database; EuroVoc is the multilingual thesaurus used to index EU documents across institutions.",
-        "D": "Neither is a procurement catalogue; the EU translation memory is Euramis, not EuroVoc."
+        "A": "Swaps the roles. IATE is not a thesaurus — it's the EU's inter-institutional terminology database.",
+        "B": "Swaps the roles. EuroVoc is not a terminology database — it's the EU's multilingual thesaurus.",
+        "C": "Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database — concepts defined across 24 official languages, maintained collaboratively by translators and terminologists in all EU institutions. EuroVoc is the multilingual thesaurus used to index documents across institutions, structured according to SKOS and covering all EU policy fields. Different tools for different jobs: IATE for terms (what does this word mean?), EuroVoc for classification (how do I file this document?).",
+        "D": "Neither resource is a procurement catalogue. The EU translation memory is Euramis, not EuroVoc. Public-procurement data lives in TED (Tenders Electronic Daily), a separate portal."
       }
     }
   ]
