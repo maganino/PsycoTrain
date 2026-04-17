@@ -1135,6 +1135,209 @@ function renderGuideCritical(root){
         </div>
       </div>
 
+      <h2>Flowchart visuel rapide</h2>
+      <p>Pour décider en quelques secondes pendant l'examen. Lisez chaque case du haut vers le bas : si la réponse est OUI/NON dans le sens indiqué, sortez avec le score à droite ; sinon, descendez.</p>
+
+      <div class="qflow">
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">MASK ?</div>
+            <div class="ttl">Masque ou ignore une source contradictoire ?</div>
+            <div class="hint">Moyenne arbitraire, « dans la marge », dissimulation, refus d'ouvrir la source</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; OUI</div>
+            <div class="badge mm">--</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; NON</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">CRX ?</div>
+            <div class="ttl">Croise au moins 2 sources ?</div>
+            <div class="hint">Données, texte réglementaire, comportement système, mémoire d'audit</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge m">-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">REC ?</div>
+            <div class="ttl">Recommandation motivée (pas juste alerte) ?</div>
+            <div class="hint">Un chiffre de référence + arbitrage, pas un renvoi à la hiérarchie</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge n">+/-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">4C ?</div>
+            <div class="ttl">Les 4 critères cochés ?</div>
+            <div class="hint">Triangulation + Chiffrage + Recommandation + Anticipation</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge p">+</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-final">
+          <div class="badge">++ Très approprié</div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--muted);margin-top:4px"><strong>Mémo :</strong> MASK &rarr; CRX &rarr; REC &rarr; 4C. Le premier OUI/NON « fatal » donne le score.</p>
+
+      <h2>Exemples concrets : même situation, 5 scores</h2>
+      <p>Réactions réelles tirées du SJT BA — Penser critique, pour montrer comment la même situation produit des scores très différents selon l'approche.</p>
+
+      <div class="ex-sit" style="font-size:13px;font-style:normal;color:var(--sub);background:#EEEDFE;padding:12px 14px;border-radius:10px;border-left:3px solid #534AB7;margin:10px 0">
+        <strong>Situation (Léa, pécule intermittents) :</strong> Rapport de réconciliation pécule à remettre lundi au comité. Trois sources divergent de 1 à 1,8 % : <code>PECULE_DASH</code> = 142,8 M€, ONSS = 144,1 M€, compta générale = 141,6 M€. Le chef Pierre dit : « prends la moyenne, c'est dans la marge ». Léa sait pourtant déjà que l'écart ONSS vient d'un périmètre élargi et que l'écart <code>PECULE_DASH</code>/compta vient de régularisations tardives hors système. Elle a accès aux trois extractions détaillées.
+      </div>
+
+      <div class="ex-card pp">
+        <div class="ex-head">
+          <span class="badge pp">++ Très approprié</span>
+          <span class="label">Cas exemplaire : triangulation + chiffrage + recommandation + validation</span>
+        </div>
+        <div class="ex-react">« Je te propose 141,6 M€ comme chiffre de référence (comptabilité générale), avec deux lignes de réconciliation : +1,2 M€ de régularisations hors système qui expliquent <code>PECULE_DASH</code>, et +2,5 M€ de périmètre élargi côté ONSS. Je tire ça des extractions détaillées ce soir, je te le montre demain matin avant le comité et on fige ensemble. Comme ça le comité voit un chiffre unique et les écarts expliqués. »</div>
+        <div class="ex-why"><strong>Pourquoi ++ :</strong> chiffre de référence choisi et motivé (Recommandation), deux lignes de réconciliation chiffrées qui croisent les trois sources (Triangulation + Chiffrage), validation avec Pierre avant le comité (Anticipation, pas de surprise). Les 4 critères sont cochés.</div>
+        <div class="ex-signals">
+          <span>MASK ? NON</span><span>CRX ? OUI</span><span>REC ? OUI</span><span>4C ? OUI</span>
+        </div>
+      </div>
+
+      <div class="ex-card p">
+        <div class="ex-head">
+          <span class="badge p">+ Approprié</span>
+          <span class="label">Bonne analyse, mais un critère manque</span>
+        </div>
+        <div class="ex-sit" style="background:#EEEDFE;font-style:normal">
+          <strong>Variante (Marwan, patch d'arrondi) :</strong> Audit du calcul de supplément pécule. 312 écarts sur 128 000 dossiers (0,24 %), tous en défaveur de l'ayant droit ; 47 tickets support convergents ; un patch d'arrondi déployé en janvier sans test de non-régression. Le directeur préfèrerait une conclusion rassurante avant un audit externe.
+        </div>
+        <div class="ex-react">« Je pense qu'il y a un problème. Les 312 écarts sont tous négatifs pour l'ayant droit, les tickets clos commercialement ne sont pas une preuve d'absence de bug, et le patch d'arrondi de janvier n'a pas été testé en non-régression. Je recommande de suspendre le processus le temps de vérifier, et j'écris ça dans la note. »</div>
+        <div class="ex-why"><strong>Pourquoi + et non ++ :</strong> triangulation solide (3 sources mobilisées), recommandation explicite, pas d'alignement sur la conclusion souhaitée. Mais <strong>pas de chiffrage d'impact</strong> (€ pour les ayants droit concernés) et pas de plan d'investigation ciblé sur la règle d'arrondi avant de sauter à « suspendre ». Un critère sur quatre manque.</div>
+        <div class="ex-signals">
+          <span>MASK ? NON</span><span>CRX ? OUI</span><span>REC ? OUI</span><span>4C ? NON (chiffrage absent)</span>
+        </div>
+      </div>
+
+      <div class="ex-card n">
+        <div class="ex-head">
+          <span class="badge n">+/- Neutre</span>
+          <span class="label">Détection correcte, renvoi à la hiérarchie</span>
+        </div>
+        <div class="ex-react">« Les trois chiffres divergent de 1 à 1,8 %, je préfère te remonter l'alerte. Je mets les trois dans le rapport avec un encart « à clarifier », et je te laisse décider de ce qu'on présente au comité. Tu me dis ? »</div>
+        <div class="ex-why"><strong>Pourquoi +/- :</strong> l'incohérence est détectée et documentée (bien), mais Léa connaît déjà deux causes probables et ne les restitue pas. Pas d'arbitrage entre sources, pas de recommandation : le comité reçoit trois chiffres sans valeur ajoutée. La plus-value du BA n'apparaît pas.</div>
+        <div class="ex-signals">
+          <span>MASK ? NON</span><span>CRX ? OUI (partiel)</span><span>REC ? NON</span>
+        </div>
+      </div>
+
+      <div class="ex-card m">
+        <div class="ex-head">
+          <span class="badge m">- Inapproprié</span>
+          <span class="label">Choix par autorité, sources non croisées</span>
+        </div>
+        <div class="ex-react">« Je prends le chiffre de la comptabilité générale, 141,6 M€. C'est la source officielle utilisée pour la clôture, les deux autres sont des tableaux de bord. Je note juste en annexe que les autres sources donnent un chiffre différent, sans détailler. »</div>
+        <div class="ex-why"><strong>Pourquoi - et non +/- :</strong> le chiffre retenu peut être juste, mais la source est choisie par principe d'autorité (« c'est la compta ») sans expliquer les écarts que Léa connaît partiellement. L'annexe évasive empêche le comité de comprendre la marge réelle : raisonnement monopoint, pas de croisement réel.</div>
+        <div class="ex-signals">
+          <span>MASK ? NON</span><span>CRX ? NON</span>
+        </div>
+      </div>
+
+      <div class="ex-card mm">
+        <div class="ex-head">
+          <span class="badge mm">-- Très inapproprié</span>
+          <span class="label">Moyenne fabriquée pour clore le débat</span>
+        </div>
+        <div class="ex-react">« Je pars sur la moyenne des trois comme tu l'as dit, 142,8 M€ arrondis. C'est dans la marge, et si quelqu'un râle on dira qu'il y a des décalages de périmètre. Ça évite de rouvrir un débat technique à trois jours du comité. »</div>
+        <div class="ex-why"><strong>Pourquoi -- et non - :</strong> ce n'est pas une simple absence de croisement, c'est une réponse pseudo-chiffrée fabriquée (moyenne de sources incohérentes présentée comme fiable) alors que Léa connaît les causes des écarts. Le rapport sera remis au comité comme une donnée fiable — faute d'intégrité professionnelle.</div>
+        <div class="ex-signals">
+          <span>MASK ? OUI (moyenne arbitraire, causes ignorées)</span>
+        </div>
+      </div>
+
+      <h2>Compétences évaluées</h2>
+      <p>Chaque situation teste <strong>Penser de manière critique</strong> (compétence principale) croisée avec une ou plusieurs compétences secondaires. Niveaux confirmés par les phrases de la description de fonction BA ONVA (AFG26032) vs cartes de compétences BOSA.</p>
+
+      <div class="comp-grid">
+        <div class="comp-card primary">
+          <h4>Penser critique (Niv. 2)</h4>
+          <ul>
+            <li>Combiner différentes stratégies de recherche</li>
+            <li>Identifier les éléments essentiels et sous-jacents</li>
+            <li>Évaluer causes, conséquences et liens</li>
+            <li>Vérifier crédibilité et fiabilité</li>
+            <li>Formuler des recommandations fondées</li>
+            <li>Anticiper les conséquences</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Être orienté solutions (Niv. 2)</h4>
+          <ul>
+            <li>Examiner les raisons d'un problème</li>
+            <li>Rechercher plusieurs alternatives</li>
+            <li>Prendre en compte différents points de vue</li>
+            <li>Implémenter et adapter la solution</li>
+            <li>Méthodes durables pour problèmes récurrents</li>
+            <li>Amélioration continue</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Communiquer (Niv. 2)</h4>
+          <ul>
+            <li>Partager des idées de façon claire</li>
+            <li>S'exprimer de manière assertive</li>
+            <li>Équilibre écoute / parole</li>
+            <li>Valoriser la diversité des contributions</li>
+            <li>Cibler la communication selon le public</li>
+            <li>Outils digitaux sécurisés</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Être orienté clients (Niv. 2)</h4>
+          <ul>
+            <li>Approfondir la demande pour cerner le besoin</li>
+            <li>Chercher la solution la plus appropriée</li>
+            <li>Conseils objectifs et impartiaux</li>
+            <li>Traiter dans les limites du service</li>
+            <li>Entretenir le contact</li>
+            <li>Regard critique + feedback client</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Faire preuve d'agilité (Niv. 2)</h4>
+          <ul>
+            <li>Vigilance aux changements du domaine</li>
+            <li>Intégrer les nouvelles technologies</li>
+            <li>Persévérer face aux difficultés</li>
+            <li>Échec = opportunité d'apprentissage</li>
+            <li>Ajuster la méthode aux priorités</li>
+            <li>Initiatives hors fonction</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Analyse métier / BPMN (technique)</h4>
+          <ul>
+            <li>Principes, outils et méthodes de BA</li>
+            <li>Méthode BPMN</li>
+            <li>Connaissance de la matière et mise en pratique</li>
+            <li>Raisonnement abstrait (aptitude)</li>
+          </ul>
+        </div>
+      </div>
+
       <h2>Signaux par score (PC2)</h2>
       <div class="section">
         <h3><span class="score-tag score-pp">++</span> Signaux exemplaires</h3>
@@ -1261,6 +1464,209 @@ function renderGuideAgility(root){
             <strong>Trois max &rarr;</strong> <span class="score-tag score-p">+ Approprié</span><br>
             <strong>Les quatre &rarr;</strong> <span class="score-tag score-pp">++ Très approprié</span>
           </div>
+        </div>
+      </div>
+
+      <h2>Flowchart visuel rapide</h2>
+      <p>Pour décider en quelques secondes pendant l'examen. Lisez chaque case du haut vers le bas : si la réponse sort dans le sens indiqué, sortez avec le score à droite ; sinon, descendez.</p>
+
+      <div class="qflow">
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">REF ?</div>
+            <div class="ttl">Refus ou alignement sur la résistance ?</div>
+            <div class="hint">« pas mon mandat », « on dit non proprement », « ça sera annulé comme l'autre fois »</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; OUI</div>
+            <div class="badge mm">--</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; NON</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">ENG ?</div>
+            <div class="ttl">Engagement existant protégé ?</div>
+            <div class="hint">Livrable critique en cours n'est ni lâché ni absorbé en silence</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge m">-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">PLAN ?</div>
+            <div class="ttl">Replanning explicite et time-boxé ?</div>
+            <div class="hint">Délai annoncé, parties prenantes nommées, pas « en parallèle » flou</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge n">+/-</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-row">
+          <div class="qflow-q">
+            <div class="acr">4L ?</div>
+            <div class="ttl">Les 4 leviers combinés ?</div>
+            <div class="hint">Livrable protégé + Investissement méthode + Initiative hors mandat + Effet d'équipe</div>
+          </div>
+          <div class="qflow-fail">
+            <div class="arr">&rarr; NON</div>
+            <div class="badge p">+</div>
+          </div>
+        </div>
+        <div class="qflow-down">&darr; OUI</div>
+
+        <div class="qflow-final">
+          <div class="badge">++ Très approprié</div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--muted);margin-top:4px"><strong>Mémo :</strong> REF &rarr; ENG &rarr; PLAN &rarr; 4L. Le premier OUI/NON « fatal » donne le score.</p>
+
+      <h2>Exemples concrets : même situation, 5 scores</h2>
+      <p>Réactions réelles tirées du SJT BA — Agilité, pour montrer comment la même situation produit des scores très différents selon l'approche.</p>
+
+      <div class="ex-sit" style="font-size:13px;font-style:normal;color:var(--sub);background:#EEEDFE;padding:12px 14px;border-radius:10px;border-left:3px solid #534AB7;margin:10px 0">
+        <strong>Situation (Maxime, gel des déploiements 6 semaines) :</strong> Chaîne de paiement culturelle, en plein sprint. Un incident de sécurité impose de figer toutes les mises en production pendant 6 semaines (coder oui, déployer non). L'équipe (3 BA, 2 devs, 1 testeur) est démobilisée ; deux devs évoquent des congés. Le chef de projet Grégoire hésite entre ralentir l'équipe et saisir l'occasion pour des chantiers structurants jamais faits (dette technique, doc chaîne paiement, user stories).
+      </div>
+
+      <div class="ex-card pp">
+        <div class="ex-head">
+          <span class="badge pp">++ Très approprié</span>
+          <span class="label">Cas exemplaire : engagement protégé + méthode + initiative + effet d'équipe</span>
+        </div>
+        <div class="ex-react">« Je propose qu'on transforme le gel en 6 semaines utiles. Trois chantiers : 1) les devs terminent le bug arrondis et la règle majoration + tests auto renforcés, prêts à déployer le jour du dégel, 2) on documente la chaîne paiement (jamais faite) — j'en prends le lead avec le testeur, 3) deux mercredis ateliers « dette technique » avec l'équipe pour choisir ensemble ce qu'on attaque. Congés autorisés mais échelonnés, pas tous en même temps. Je partage un plan cette semaine, revue toutes les deux semaines. »</div>
+        <div class="ex-why"><strong>Pourquoi ++ :</strong> livrables en cours protégés et prêts au dégel (Livrable), documentation nouvelle + tests auto (Investissement méthode), lead pris sur la doc (Initiative hors mandat), ateliers collectifs + revue biweekly (Effet d'équipe). Les 4 leviers sont cochés.</div>
+        <div class="ex-signals">
+          <span>REF ? NON</span><span>ENG ? OUI</span><span>PLAN ? OUI</span><span>4L ? OUI</span>
+        </div>
+      </div>
+
+      <div class="ex-card p">
+        <div class="ex-head">
+          <span class="badge p">+ Approprié</span>
+          <span class="label">Bonne adoption, mais un levier manque</span>
+        </div>
+        <div class="ex-sit" style="background:#EEEDFE;font-style:normal">
+          <strong>Variante (Noémie, changement de format ONSS à 8 semaines) :</strong> 4 mois d'analyse approfondie. Le SPF Finances annonce un nouveau format de déclarations trimestrielles : 60 % du modèle BPMN et 14 user stories sur 34 sont à ré-écrire. La cheffe Aude est en déplacement toute la semaine.
+        </div>
+        <div class="ex-react">« Je te propose qu'on se fasse un état des lieux ce matin : on fait l'inventaire « conservé / à adapter / à refaire » du modèle et des user stories, je chiffre le nouveau délai, et j'alerte Aude par téléphone en fin de journée même si elle est en déplacement. Comme ça on ne laisse pas le sujet dormir. »</div>
+        <div class="ex-why"><strong>Pourquoi + et non ++ :</strong> triage, replanification, alerte à la cheffe — adoption sincère avec méthode. Mais Noémie ne coordonne pas avec les autres équipes impactées par le changement de format (dev, juridique, architecte) et ne transforme pas l'imprévu en ressource durable (veille ONSS partagée). L'effet d'équipe manque.</div>
+        <div class="ex-signals">
+          <span>REF ? NON</span><span>ENG ? OUI</span><span>PLAN ? OUI</span><span>4L ? NON (effet d'équipe absent)</span>
+        </div>
+      </div>
+
+      <div class="ex-card n">
+        <div class="ex-head">
+          <span class="badge n">+/- Neutre</span>
+          <span class="label">Bonne idée, méthode incomplète</span>
+        </div>
+        <div class="ex-react">« On lève le pied sur le coding et on profite du temps pour documenter la chaîne paiement. Ça nous ferait du bien, il n'y a pas de doc actuelle. Les devs peuvent participer. Je propose qu'on cadre ça ensemble. »</div>
+        <div class="ex-why"><strong>Pourquoi +/- :</strong> proposition d'activité structurante (bien), mais piste unique qui ne traite pas la démobilisation spécifique des devs (documenter n'est pas toujours vécu comme valorisant), ni le sort du travail coding déjà commencé, ni le redémarrage au dégel. Pas de time-box, pas de plan d'ensemble.</div>
+        <div class="ex-signals">
+          <span>REF ? NON</span><span>ENG ? OUI</span><span>PLAN ? NON</span>
+        </div>
+      </div>
+
+      <div class="ex-card m">
+        <div class="ex-head">
+          <span class="badge m">- Inapproprié</span>
+          <span class="label">Rythme maintenu, méthode non ajustée</span>
+        </div>
+        <div class="ex-react">« On continue à coder, on stocke tout et on déploiera tout d'un coup dans 6 semaines. Comme ça on n'a pas perdu le rythme. Les devs restent occupés, le testeur testera en local. »</div>
+        <div class="ex-why"><strong>Pourquoi - et non +/- :</strong> Maxime ne démobilise pas (positif, ce qui le distingue du --), mais il ne redéfinit pas la méthode. Six semaines de code stocké sans test réel = big-bang déploiement instable. C'est casser un engagement implicite de qualité, et manquer l'opportunité structurante.</div>
+        <div class="ex-signals">
+          <span>REF ? NON</span><span>ENG ? NON (qualité sacrifiée)</span>
+        </div>
+      </div>
+
+      <div class="ex-card mm">
+        <div class="ex-head">
+          <span class="badge mm">-- Très inapproprié</span>
+          <span class="label">Alignement sur la démobilisation ambiante</span>
+        </div>
+        <div class="ex-react">« On met l'équipe au ralenti, on ne peut rien faire d'utile sans prod. Les devs qui veulent poser des congés, laisse-les y aller. On reprend dans 6 semaines quand le gel sera levé. Ça évitera d'imposer des tâches artificielles qui frustreraient tout le monde. »</div>
+        <div class="ex-why"><strong>Pourquoi -- et non - :</strong> ce n'est pas une hésitation ou une prudence, c'est un refus explicite d'occuper utilement un temps exceptionnel. Maxime s'aligne sur la démobilisation et laisse 6 semaines d'ETP partir. Pire qu'un mauvais plan : aucun plan, et signal donné à l'équipe que l'imprévu = arrêt.</div>
+        <div class="ex-signals">
+          <span>REF ? OUI (alignement sur résistance)</span>
+        </div>
+      </div>
+
+      <h2>Compétences évaluées</h2>
+      <p>Chaque situation teste <strong>Faire preuve d'agilité</strong> (compétence principale) croisée avec une ou plusieurs compétences secondaires. Niveaux confirmés par les phrases de la description de fonction BA ONVA (AFG26032) vs cartes de compétences BOSA.</p>
+
+      <div class="comp-grid">
+        <div class="comp-card primary">
+          <h4>Faire preuve d'agilité (Niv. 2)</h4>
+          <ul>
+            <li>Alerte aux changements du domaine</li>
+            <li>Intégrer les nouvelles technologies</li>
+            <li>Persévérer face aux difficultés</li>
+            <li>Échec = opportunité d'apprentissage</li>
+            <li>Ajuster la méthode quand priorités changent</li>
+            <li>Initiative hors fonction</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Penser critique (Niv. 2)</h4>
+          <ul>
+            <li>Croiser plusieurs sources</li>
+            <li>Identifier essentiels et sous-jacents</li>
+            <li>Évaluer causes et conséquences</li>
+            <li>Vérifier crédibilité / fiabilité</li>
+            <li>Recommandations fondées</li>
+            <li>Anticiper les conséquences</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Être orienté solutions (Niv. 2)</h4>
+          <ul>
+            <li>Examiner les raisons d'un problème</li>
+            <li>Rechercher plusieurs alternatives</li>
+            <li>Prendre en compte différents points de vue</li>
+            <li>Implémenter et adapter la solution</li>
+            <li>Méthodes durables</li>
+            <li>Amélioration continue</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Communiquer (Niv. 2)</h4>
+          <ul>
+            <li>Partager des idées clairement</li>
+            <li>S'exprimer de manière assertive</li>
+            <li>Équilibre écoute / parole</li>
+            <li>Valoriser la diversité</li>
+            <li>Cibler selon le public</li>
+            <li>Outils digitaux sécurisés</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Être orienté clients (Niv. 2)</h4>
+          <ul>
+            <li>Approfondir la demande</li>
+            <li>Chercher la solution appropriée</li>
+            <li>Conseils objectifs et impartiaux</li>
+            <li>Traiter dans les limites du service</li>
+            <li>Entretenir le contact</li>
+            <li>Regard critique + feedback</li>
+          </ul>
+        </div>
+        <div class="comp-card">
+          <h4>Analyse métier / BPMN (technique)</h4>
+          <ul>
+            <li>Principes, outils et méthodes de BA</li>
+            <li>Méthode BPMN</li>
+            <li>Connaissance de la matière et mise en pratique</li>
+            <li>Raisonnement abstrait (aptitude)</li>
+          </ul>
         </div>
       </div>
 
