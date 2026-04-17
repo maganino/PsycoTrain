@@ -244,6 +244,18 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .drill-pick{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
 .drill-pick select{padding:9px 10px;border:1.5px solid var(--border);border-radius:10px;background:var(--card);font-family:inherit;font-size:13px;font-weight:600;color:var(--text);flex:1;min-width:180px}
 
+/* Per-topic dashboard (MCQ playlist card) */
+.topic-stats{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.topic-stats h4{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin:0 0 6px}
+.topic-row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;padding:7px 10px;margin-bottom:5px;background:var(--bg);border-radius:8px;cursor:pointer;transition:background .12s}
+.topic-row:hover{background:var(--accentbg)}
+.tr-name{font-size:12.5px;color:var(--sub);font-weight:600}
+.tr-score{font-family:'Courier New',monospace;font-size:12px;font-weight:700;color:var(--text)}
+.tr-bar{grid-column:1/-1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:2px}
+.tr-bar div{height:100%;background:var(--green)}
+.tr-bar div.low{background:var(--red)}
+.tr-bar div.med{background:var(--amber)}
+
 /* MCQ per-option explanations on reveal */
 .mcq-expls{margin-top:12px;display:flex;flex-direction:column;gap:8px}
 .mcq-expl{border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:10px 12px;background:var(--card);font-size:13px;line-height:1.5}
@@ -310,9 +322,16 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .tl-card .tl-tag{font-size:11px;color:var(--muted)}
 .tl-card .tl-body{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-size:12.5px;line-height:1.55;color:var(--sub)}
 .tl-card.open .tl-body{display:block}
-.tl-card .tl-body dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin-top:4px}
+.tl-card .tl-body dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin-top:6px}
 .tl-card .tl-body dt{font-weight:700;color:var(--text);font-size:11.5px}
 .tl-card .tl-body dd{color:var(--sub);font-size:12px}
+.tl-context{font-size:12.5px;line-height:1.6;color:var(--sub);margin:4px 0 4px;padding:8px 0;border-top:1px dashed var(--border)}
+.tl-context strong{color:var(--text)}
+.tl-exam{font-size:11.5px;line-height:1.55;color:var(--accent);background:var(--accentbg);padding:6px 10px;border-radius:8px;margin-top:8px;border-left:3px solid var(--accent)}
+.tl-exam strong{color:var(--accent)}
+.fw-when{font-size:11.5px;color:var(--muted);margin-top:7px;padding-top:6px;border-top:1px dashed var(--border);font-style:italic;line-height:1.5}
+.trap-signal{padding:8px 12px;background:var(--amberbg);color:var(--amber);font-size:11.5px;font-weight:600;border-top:1px solid #e0b860;line-height:1.5}
+.trap-signal strong{color:var(--amber)}
 
 /* Tab: 11 Duties wheel */
 .duty-wheel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:6px 0}
@@ -741,6 +760,48 @@ function renderHome(root){
     const isMcq = activePlaylist.type === 'mcq';
     const guideLabel = isMcq ? 'Content Explorer' : 'Comment réussir ce test ?';
 
+    // Per-topic stats for this MCQ playlist (only topics you've attempted,
+    // weakest first — so your eye goes to what needs work).
+    let topicStatsHtml = '';
+    if(isMcq){
+      const playlistQs = DB.questions.filter(q => q.source === activePlaylist.key);
+      const byTopic = {};
+      for(const q of playlistQs){
+        const t = q.topic || 'unknown';
+        if(!byTopic[t]) byTopic[t] = { n: 0, attempted: 0, scoreSum: 0 };
+        byTopic[t].n++;
+        const s = stats[q.id];
+        if(s && s.attempts > 0){
+          byTopic[t].attempted++;
+          byTopic[t].scoreSum += statScore(s);
+        }
+      }
+      const rows = Object.keys(byTopic)
+        .filter(t => byTopic[t].attempted > 0)
+        .sort((a, b) => {
+          const accA = byTopic[a].scoreSum / byTopic[a].attempted;
+          const accB = byTopic[b].scoreSum / byTopic[b].attempted;
+          return accA - accB;  // weakest first
+        })
+        .map(t => {
+          const { n, attempted, scoreSum } = byTopic[t];
+          const acc = Math.round(scoreSum / attempted * 100);
+          const label = TOPIC_LABELS[t] || t;
+          const barCls = acc < 50 ? 'low' : (acc < 75 ? 'med' : '');
+          return `<div class="topic-row" data-drill-topic="${esc(t)}">
+            <div class="tr-name">${esc(label)}</div>
+            <div class="tr-score">${attempted}/${n} · ${acc}%</div>
+            <div class="tr-bar"><div class="${barCls}" style="width:${acc}%"></div></div>
+          </div>`;
+        }).join('');
+      if(rows){
+        topicStatsHtml = `<div class="topic-stats">
+          <h4>Your topics · weakest first · tap to drill</h4>
+          ${rows}
+        </div>`;
+      }
+    }
+
     // MCQ mode selector (Timed / Free / Topic drill)
     const mcqModeHtml = isMcq ? `
       <div class="mode-grid">
@@ -792,6 +853,7 @@ function renderHome(root){
         </div>
         ${(isSjt || isMcq) ? `<button class="btn btn-secondary" id="playlist-guide-btn" style="margin-top:12px;width:100%">${guideLabel}</button>` : ''}
         ${mcqModeHtml}
+        ${topicStatsHtml}
       </div>`;
   }
 
@@ -906,6 +968,12 @@ function renderHome(root){
     const topic = root.querySelector('#drill-topic')?.value;
     if(!topic) return;
     startPractice({ mode: 'topic_drill', drillTopic: topic });
+  });
+  // Per-topic dashboard rows → quick-start a topic drill
+  root.querySelectorAll('.topic-row[data-drill-topic]').forEach(r => {
+    r.addEventListener('click', () => {
+      startPractice({ mode: 'topic_drill', drillTopic: r.dataset.drillTopic });
+    });
   });
   root.querySelector('#save-btn').addEventListener('click', downloadStats);
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
@@ -1946,12 +2014,16 @@ function renderEpsoExplorer(root){
             <div class="tl-name">GDPR · Regulation (EU) 2016/679</div>
             <div class="tl-tag">Personal data · horizontal · excl. EU institutions</div>
             <div class="tl-body">
+              <div class="tl-context">
+                GDPR replaced the 1995 Data Protection Directive with a single, directly applicable regulation — same rules in all 27 Member States, no more national fragmentation. It also went extra-territorial: any non-EU company targeting EU residents is in scope. Everything you'll see about the DGA, Data Act, AI Act and EHDS is built on top of this foundation.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>27 Apr 2016</dd>
-                <dt>Applicable</dt><dd>25 May 2018</dd>
-                <dt>Scope</dt><dd>Processing of personal data in the Union, both public and private sector. <strong>Does not</strong> apply to EU institutions.</dd>
-                <dt>Mechanisms</dt><dd>Lawful basis (Art 6); data-subject rights (Art 15–22); DPIA for high-risk (Art 35); DPO (Art 37); breach notification 72 h (Art 33); fines up to €20M or 4% global turnover.</dd>
+                <dt>Applicable</dt><dd>25 May 2018 — Art. 99 gave a two-year transition period.</dd>
+                <dt>Scope</dt><dd>Processing of personal data in the Union, both public and private sector. <strong>Does not</strong> apply to EU institutions (that carve-out is why Reg. 2018/1725 had to exist).</dd>
+                <dt>Mechanisms</dt><dd>Lawful basis (Art 6); data-subject rights (Art 15–22); DPIA for high-risk (Art 35); DPO (Art 37); breach notification within 72 h (Art 33); fines up to €20M or 4% global turnover.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> watch the subject. 'A Belgian hospital' or 'a Spanish SaaS' → GDPR. 'The European Commission' or 'Frontex' or any EU body → <strong>not</strong> GDPR — Reg. 2018/1725.</div>
             </div>
           </div>
 
@@ -1960,12 +2032,16 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Regulation (EU) 2018/1725</div>
             <div class="tl-tag">GDPR for EU institutions · EDPS as supervisor</div>
             <div class="tl-body">
+              <div class="tl-context">
+                A near-carbon-copy of GDPR, written because Article 2 GDPR deliberately excludes EU institutions. Same data-subject rights, same lawful-basis model, same DPIA logic — only the supervisor changes: the European Data Protection Supervisor (EDPS) instead of national DPAs. Same principles, different regulator.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>23 Oct 2018</dd>
                 <dt>Applicable</dt><dd>11 Dec 2018</dd>
-                <dt>Scope</dt><dd>Mirrors GDPR for <strong>EU institutions, bodies, offices, agencies</strong>. Supervisor: EDPS (European Data Protection Supervisor).</dd>
-                <dt>Key trap</dt><dd>If the question targets the Commission / Parliament / any EU body — this regulation applies, not GDPR.</dd>
+                <dt>Scope</dt><dd><strong>EU institutions, bodies, offices, agencies</strong> — Commission, Parliament, Council, EDPS itself, ECB, Frontex, EEAS, all agencies.</dd>
+                <dt>Supervisor</dt><dd>EDPS — enforces rights, investigates complaints, can fine EU bodies.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> default reflex — if the question mentions any EU institution, body, office or agency, this regulation applies and GDPR does not.</div>
             </div>
           </div>
 
@@ -1974,12 +2050,16 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Open Data Directive · (EU) 2019/1024</div>
             <div class="tl-tag">PSI reuse · High-Value Datasets · free by default</div>
             <div class="tl-body">
+              <div class="tl-context">
+                Replaces the older 2003 PSI Directive. The core logic: public-sector information was paid for by taxpayers, so it should be reusable by everyone — for free, in machine-readable formats, via APIs where possible. Publicly funded research data gets the same treatment. This is the Union's most explicit commitment to open-by-default.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>20 Jun 2019</dd>
-                <dt>Transposition</dt><dd>17 Jul 2021</dd>
-                <dt>Scope</dt><dd>Reuse of public sector information + publicly funded research data. Replaces PSI Directive 2003/98/EC.</dd>
-                <dt>Mechanisms</dt><dd>High-Value Datasets list via Implementing Reg. 2023/138 (6 thematic categories: geospatial, earth obs. &amp; env., meteorology, statistics, companies, mobility); machine-readable + API access; free of charge as default.</dd>
+                <dt>Transposition</dt><dd>17 Jul 2021 (it's a <em>directive</em>, so Member States had to transpose — not directly applicable like a regulation).</dd>
+                <dt>Scope</dt><dd>Reuse of public-sector information + publicly funded research data. Replaces PSI Directive 2003/98/EC.</dd>
+                <dt>HVDs</dt><dd>High-Value Datasets, defined by Implementing Reg. 2023/138 in 6 categories: geospatial · earth observation &amp; environment · meteorology · statistics · companies &amp; company ownership · mobility. Free + machine-readable + API access.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> 'High-Value Datasets' is the key acronym. Health is <strong>not</strong> an HVD category — health data lives under the EHDS.</div>
             </div>
           </div>
 
@@ -1988,11 +2068,16 @@ function renderEpsoExplorer(root){
             <div class="tl-name">European Strategy for Data · COM(2020) 66</div>
             <div class="tl-tag">Policy foundation for DGA / Data Act / AI Act</div>
             <div class="tl-body">
+              <div class="tl-context">
+                Not a law — a Commission roadmap proposing a 'single market for data' where EU firms compete on data as a resource. This document is the political source of almost everything that came next: the DGA (2022), the Data Act (2023), the AI Act (2024), plus the Common European Data Spaces programme.
+              </div>
               <dl>
-                <dt>Type</dt><dd>Commission Communication (not legally binding).</dd>
-                <dt>Vision</dt><dd>A single market for data — the Union as a leading data-agile economy.</dd>
-                <dt>Instruments launched</dt><dd>Common European Data Spaces, subsequent DGA, Data Act, AI Act; SME &amp; skills investments.</dd>
+                <dt>Type</dt><dd>Commission Communication — a policy document, not legally binding.</dd>
+                <dt>Date</dt><dd>19 Feb 2020</dd>
+                <dt>Vision</dt><dd>A Union where people, businesses and public bodies can use data freely, fairly and securely, with legal certainty and technical means to do so.</dd>
+                <dt>Instruments launched</dt><dd>Common European Data Spaces; subsequent DGA, Data Act, AI Act; SME &amp; skills investments; data-portability enablers.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> if a question asks 'which policy launched the Data Spaces?' — this is it. 'Strategy' = Communication = non-binding.</div>
             </div>
           </div>
 
@@ -2001,14 +2086,18 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Data Governance Act · Reg (EU) 2022/868</div>
             <div class="tl-tag">4 pillars · horizontal data-sharing enabler</div>
             <div class="tl-body">
+              <div class="tl-context">
+                The DGA is horizontal plumbing: it creates <em>roles</em> and <em>mechanisms</em>, not individual rights. Public bodies sitting on valuable but protected data (health records, confidential commercial info, IP-protected data) finally have a legal path to let others reuse it. Data intermediation services get a notification regime so people can trust neutral go-betweens. Data altruism becomes a formal category with a standard consent form.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>30 May 2022</dd>
                 <dt>Applicable</dt><dd>24 Sep 2023</dd>
-                <dt>Pillar 1</dt><dd>Reuse of protected public-sector data (health, statistics, IP-protected, confidential commercial).</dd>
-                <dt>Pillar 2</dt><dd>Data intermediation services — neutral third parties, notification regime (Ch III).</dd>
-                <dt>Pillar 3</dt><dd>Data altruism (Ch IV) + standardised European Data Altruism Consent Form.</dd>
-                <dt>Pillar 4</dt><dd>European Data Innovation Board (EDIB) — expert body advising the Commission.</dd>
+                <dt>Pillar 1</dt><dd><strong>Reuse of protected public-sector data</strong> — health, statistics, IP-protected, confidential commercial.</dd>
+                <dt>Pillar 2</dt><dd><strong>Data intermediation services</strong> — neutral third parties connecting data holders and users; notification regime (Ch III).</dd>
+                <dt>Pillar 3</dt><dd><strong>Data altruism</strong> (Ch IV) — donating data for causes of general interest + standardised European Data Altruism Consent Form.</dd>
+                <dt>Pillar 4</dt><dd><strong>European Data Innovation Board (EDIB)</strong> — expert body advising the Commission on data-spaces deployment and interoperability.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> memorise the four pillars in order. A question will swap one of them with 'cloud switching' (which is Data Act Ch VI, not DGA) to trick you.</div>
             </div>
           </div>
 
@@ -2017,15 +2106,19 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Data Act · Reg (EU) 2023/2854</div>
             <div class="tl-tag">IoT data rights · cloud switching · B2B/B2C/B2G</div>
             <div class="tl-body">
+              <div class="tl-context">
+                Where the DGA built mechanisms, the Data Act hands out actual rights. If you own a connected coffee machine, tractor or car, you can demand the data it generates — and pass that data to the repair shop or service of your choice (Ch II). If you're a cloud customer, you can move to another provider without paying ransom fees (Ch VI). Public bodies get emergency access in crises (Ch V). It's the IoT + cloud rights package.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>13 Dec 2023</dd>
                 <dt>Applicable</dt><dd>12 Sep 2025</dd>
-                <dt>Ch II</dt><dd>Access to IoT-product-generated data for the user.</dd>
-                <dt>Ch III</dt><dd>B2B data-sharing obligations on FRAND terms.</dd>
-                <dt>Ch V</dt><dd>B2G access for exceptional public need.</dd>
-                <dt>Ch VI</dt><dd>Cloud / edge provider switching rights; no switching fees by 2027.</dd>
+                <dt>Ch II</dt><dd>User access to data generated by connected products (IoT). Users can also ask the data holder to share with a third party of their choice.</dd>
+                <dt>Ch III</dt><dd>B2B data-sharing obligations on FRAND terms when a legal obligation to share exists.</dd>
+                <dt>Ch V</dt><dd>B2G access for public bodies in situations of exceptional need (public emergency, crisis).</dd>
+                <dt>Ch VI</dt><dd>Cloud / edge provider switching rights — no switching fees allowed by 2027; functional equivalence required.</dd>
                 <dt>Ch VIII</dt><dd>Data-space interoperability + essential requirements for smart contracts.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal — keywords per chapter:</strong> 'connected product' / 'IoT user' → Ch II · 'FRAND' / 'B2B data holder' → Ch III · 'exceptional need' / 'public emergency' → Ch V · 'cloud switching' / 'egress fees' → Ch VI.</div>
             </div>
           </div>
 
@@ -2034,12 +2127,17 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Interoperable Europe Act · Reg (EU) 2024/903</div>
             <div class="tl-tag">Cross-border public services · EIF as reference</div>
             <div class="tl-body">
+              <div class="tl-context">
+                Focused narrowly on public-sector digital services that cross borders — the tech stack behind eIDAS wallets, pan-European health services, cross-border tax or social-security exchanges. Its new weapon: mandatory interoperability assessments (Art. 3) before spending money on new public IT. It also blesses the EIF (Legal / Organisational / Semantic / Technical) as <em>the</em> reference model.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>13 Mar 2024</dd>
                 <dt>Applicable</dt><dd>12 Jul 2024</dd>
-                <dt>Scope</dt><dd>Cross-border interoperability of public services delivered in/by the Union.</dd>
-                <dt>Mechanisms</dt><dd>Interoperable Europe Board (governance); mandatory interoperability assessments (Art 3); Interoperable Europe Portal (shared solutions); GovTech pilots; regulatory sandboxes; EIF (legal / organisational / semantic / technical) as reference framework.</dd>
+                <dt>Scope</dt><dd>Cross-border interoperability of public services delivered in/by the Union — not private-sector services.</dd>
+                <dt>Governance</dt><dd>Interoperable Europe Board (MS representatives + Commission).</dd>
+                <dt>Key tools</dt><dd>Mandatory interoperability assessments (Art 3) · Interoperable Europe Portal (reusable building blocks like eDelivery, eSignature, SEMIC) · GovTech pilots · regulatory sandboxes · EIF as the reference framework.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> public administrations exchanging information across Member States → this act. Not GDPR, not DGA. Keywords to recognise: 'Interoperable Europe Board', 'EIF', 'interoperability assessment'.</div>
             </div>
           </div>
 
@@ -2048,14 +2146,18 @@ function renderEpsoExplorer(root){
             <div class="tl-name">AI Act · Reg (EU) 2024/1689</div>
             <div class="tl-tag">Risk pyramid · GPAI · Art 10 data governance</div>
             <div class="tl-body">
+              <div class="tl-context">
+                Classifies AI by <em>risk</em>, not by technology. Unacceptable uses (government social scoring, real-time biometric ID in public for police) are banned outright. High-risk AI (in hiring, credit scoring, medical devices, migration, critical infrastructure) needs conformity assessment — a CE-mark-style regime. Generative AI and foundation models fall under the new GPAI chapter. Article 10 spells out the data-governance rules you must satisfy when training, validating or testing a high-risk model.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>13 Jun 2024</dd>
-                <dt>Applicable</dt><dd>Staggered: prohibited practices Feb 2025; GPAI Aug 2025; high-risk general Aug 2026; embedded high-risk Aug 2027.</dd>
-                <dt>Risk pyramid</dt><dd>Unacceptable (Art 5 — banned) · High-risk (Annex I + III, conformity assessment) · Limited (transparency obligations) · Minimal (voluntary).</dd>
-                <dt>Art 10</dt><dd>Data governance for training / validation / testing sets used by high-risk AI: relevance, representativeness, bias detection + correction, data provenance, design choices documented.</dd>
-                <dt>GPAI</dt><dd>General-purpose AI models — Ch V obligations (transparency, copyright, systemic-risk tier for very capable models).</dd>
-                <dt>Authority</dt><dd>EU AI Office (centralised).</dd>
+                <dt>Applicable</dt><dd>Staggered: prohibited practices from Feb 2025 · GPAI from Aug 2025 · high-risk general Aug 2026 · embedded high-risk Aug 2027.</dd>
+                <dt>Risk pyramid</dt><dd><strong>Unacceptable</strong> (Art 5 — banned) · <strong>High-risk</strong> (Annex I + III, conformity assessment) · <strong>Limited</strong> (transparency, e.g. chatbots must disclose) · <strong>Minimal</strong> (voluntary codes).</dd>
+                <dt>Art 10</dt><dd>Training / validation / test sets of high-risk AI: relevance + representativeness, error-free to the extent possible, bias examined and mitigated, design choices documented, provenance traceable.</dd>
+                <dt>GPAI</dt><dd>General-purpose AI models (Ch V) — transparency, copyright compliance, a systemic-risk tier for very capable models.</dd>
+                <dt>Authority</dt><dd>EU AI Office (centralised, within the Commission).</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal — two hot spots:</strong> Art. 5 (banned practices — real-time remote biometric ID in public for law enforcement is the canonical example) and Art. 10 (data governance for training data).</div>
             </div>
           </div>
 
@@ -2064,13 +2166,17 @@ function renderEpsoExplorer(root){
             <div class="tl-name">EHDS · Reg (EU) 2025/327</div>
             <div class="tl-tag">First operational European Data Space · health</div>
             <div class="tl-body">
+              <div class="tl-context">
+                The first of the 14 Common European Data Spaces to become a binding regulation — health led the way because it was the most politically ready, and the business case was clear: secondary use of health data unlocks research, drug development and public-health policy. Patients get portable access to their own records across borders; researchers get a safe path to anonymised / pseudonymised datasets through 'Health Data Access Bodies'.
+              </div>
               <dl>
                 <dt>Adopted</dt><dd>11 Feb 2025</dd>
                 <dt>Applicable</dt><dd>First obligations from 26 Mar 2027 (staggered).</dd>
-                <dt>Primary use</dt><dd>Citizens' rights over their electronic health data, cross-border access.</dd>
-                <dt>Secondary use</dt><dd>Research, innovation, policy-making — via Health Data Access Bodies (HDABs).</dd>
-                <dt>Why it matters</dt><dd>First of the 14 Common European Data Spaces to become a binding regulation.</dd>
+                <dt>Primary use</dt><dd>Citizens' rights over their electronic health data — access, portability, cross-border use.</dd>
+                <dt>Secondary use</dt><dd>Research, innovation, policy-making, regulatory activities — channelled through Health Data Access Bodies (HDABs).</dd>
+                <dt>Why it matters</dt><dd>First operational Common European Data Space. The template the other 13 will follow.</dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> 'first operational data space' = EHDS. Secondary use goes through an HDAB, not a private data intermediary under the DGA.</div>
             </div>
           </div>
 
@@ -2079,12 +2185,18 @@ function renderEpsoExplorer(root){
             <div class="tl-name">Data Union Strategy · COM(2025) 835</div>
             <div class="tl-tag">Consolidation of the 2020 Strategy</div>
             <div class="tl-body">
+              <div class="tl-context">
+                A Commission Communication published in November 2025 to update the 2020 European Strategy for Data. After five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act), the emphasis shifts from <em>making laws</em> to <em>consolidating</em>: simplifying where rules overlap, accelerating data-space roll-out, maturing the ecosystem. Think of it as 'Strategy 2.0'.
+              </div>
               <dl>
-                <dt>Type</dt><dd>Commission Communication (not legally binding).</dd>
-                <dt>Purpose</dt><dd>Successor policy framework to the 2020 European Strategy for Data; consolidates DGA / Data Act / AI Act foundations into a unified "Data Union".</dd>
+                <dt>Type</dt><dd>Commission Communication — non-binding.</dd>
+                <dt>Date</dt><dd>November 2025</dd>
+                <dt>Reference</dt><dd>COM(2025) 835 final</dd>
+                <dt>Successor to</dt><dd>European Strategy for Data (Feb 2020, COM(2020) 66).</dd>
                 <dt>Focus</dt><dd>Operationalising Common European Data Spaces, simplifying existing rules (digital omnibus), maturing the ecosystem.</dd>
-                <dt>Read the full text</dt><dd><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52025DC0835" target="_blank" rel="noopener" style="color:var(--accent)">EUR-Lex · COM(2025) 835</a></dd>
+                <dt>Read</dt><dd><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52025DC0835" target="_blank" rel="noopener" style="color:var(--accent)">EUR-Lex · COM(2025) 835</a></dd>
               </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> just know <em>what</em> it is (Communication · Nov 2025 · COM(2025) 835 · successor to the 2020 Strategy). You don't need to memorise its content for April.</div>
             </div>
           </div>
 
@@ -2107,67 +2219,67 @@ function renderEpsoExplorer(root){
           <div class="duty-card" data-open>
             <div class="dc-title">1 · Data architecture &amp; interoperability</div>
             <div class="dc-key">Reference architectures · EIF 4 layers · AI-enabled cloud</div>
-            <div class="dc-body">Semantic interoperability, ontologies, building blocks. EU anchor: EIF (Legal / Organisational / Semantic / Technical). Interoperable Europe Act frames the public-sector version.</div>
+            <div class="dc-body">Designing how data flows across systems so that 'product' in system A means the same as 'product' in system B — that's semantic interoperability. The EU reference is the EIF (Legal / Organisational / Semantic / Technical layers), with an Interoperability Governance overlay. For public administrations specifically, the Interoperable Europe Act (2024/903) turns this into a legal obligation: mandatory interoperability assessments before new public IT spend, plus a shared portal of reusable building blocks (eDelivery, eSignature, SEMIC).</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">2 · Data policies &amp; strategy</div>
             <div class="dc-key">Lifecycle · EU strategies · data spaces</div>
-            <div class="dc-body">Policy drafting, data lifecycle governance. EU anchors: European Strategy for Data (Feb 2020), Data Union Strategy (Nov 2025), 14 Common European Data Spaces.</div>
+            <div class="dc-body">Translating business or legal goals into written data policies — how long we keep data, who can use it, which quality bar applies — and governing the data lifecycle from acquisition through archival to disposal. At EU level, the compass is the European Strategy for Data (Feb 2020) and its successor, the Data Union Strategy (Nov 2025). Policy becomes concrete through the 14 Common European Data Spaces (health, agriculture, energy, mobility, etc.), the Interoperable Europe Act and supporting programmes like DSSC and Simpl.</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">3 · Data engineering &amp; integration</div>
             <div class="dc-key">ETL · ELT · APIs · Kafka · Airflow</div>
-            <div class="dc-body">Batch (ETL — transform before load) vs modern (ELT — load then transform). APIs: REST, GraphQL. Real-time: Kafka. Orchestration: Airflow (DAGs).</div>
+            <div class="dc-body">Moving data from sources into analytics or operational stores. Classic batch = ETL (Extract → Transform → Load in an external engine); modern cloud pattern = ELT (load raw first, transform inside the warehouse's cheap compute). Real-time streaming uses Kafka (producer / consumer, partitioned topics, replay by offset). Synchronous exchange uses APIs: REST (resource-oriented, HTTP verbs) and GraphQL (single endpoint, client-defined queries). Orchestration ties it together — Airflow schedules DAGs of tasks with retries and SLAs.</div>
           </div>
 
           <div class="duty-card hub">
             <div class="dc-title">HUB · Data governance &amp; compliance</div>
             <div class="dc-key">Policies · roles · EU law · maturity · audits</div>
-            <div class="dc-body">DAMA-DMBOK puts this at the centre. Roles: Owner, Steward, Custodian, Controller, Processor, DPO, CDO. EU anchors: GDPR (2016/679) for member states · Reg 2018/1725 for EU institutions.</div>
+            <div class="dc-body">DAMA-DMBOK puts this at the centre because every other duty feeds into it. Governance decides <em>who owns what</em> (Data Owner, accountable), <em>who maintains quality and definitions</em> (Steward), <em>who handles storage and ops</em> (Custodian), and <em>who plays GDPR roles</em> (Controller / Processor / DPO). At the org level a CDO sets strategy. EU law anchors: GDPR for Member States (national DPAs) · Reg 2018/1725 for EU institutions (supervised by EDPS). Maturity is typically assessed against DAMA or CMMI-DM models.</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">4 · Data platforms</div>
             <div class="dc-key">Warehouse · Lake · Lakehouse · big data · mining</div>
-            <div class="dc-body">Warehouse = schema-on-write, structured. Lake = schema-on-read, raw. Lakehouse = lake storage + warehouse semantics (Delta, Iceberg). Big data: volume/velocity/variety.</div>
+            <div class="dc-body">Three archetypes. <strong>Warehouse</strong>: structured, schema-on-write, curated — optimised for BI but costly for raw/unstructured data. <strong>Lake</strong>: cheap object storage, schema-on-read, any format — but no ACID, weak governance. <strong>Lakehouse</strong>: the modern compromise — open table formats (Delta Lake, Iceberg, Hudi) add transactions, schema enforcement and time-travel on top of lake storage, serving BI and ML from the same substrate. 'Big data' = the 3 Vs (volume, velocity, variety); often extended to 5 Vs (veracity, value).</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">5 · BI &amp; reporting</div>
             <div class="dc-key">Dashboards · self-service · KPIs · predictive</div>
-            <div class="dc-body">Descriptive (what happened) → diagnostic (why) → predictive (what will happen) → prescriptive (what to do). KPIs tied to objectives, self-service tools reduce IT bottleneck.</div>
+            <div class="dc-body">The analytics maturity ladder: descriptive (what happened — dashboards) → diagnostic (why — drill-downs) → predictive (what might happen — ML models) → prescriptive (what to do — optimisation). KPIs are the subset of metrics you've consciously tied to objectives; tracking them over time tells you if your strategy is working. Self-service BI (Power BI, Tableau, Metabase) lets business users build reports without IT tickets — fast, but only safe when governance (definitions, certified datasets) is in place.</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">6 · Master &amp; reference data (MDM)</div>
             <div class="dc-key">Glossaries · IATE · EuroVoc · multilingual</div>
-            <div class="dc-body">Master data: the golden record (Customer, Product). Reference data: controlled code lists. EU-specific: <strong>IATE</strong> (terminology), <strong>EuroVoc</strong> (thesaurus), multilingual SKOS thesauri.</div>
+            <div class="dc-body"><strong>Master data</strong> = the 'nouns' of the business that everyone needs to agree on — Customer, Product, Employee, Location — usually consolidated into a golden record across source systems. <strong>Reference data</strong> = closed controlled code lists (country codes, currency codes, status enums). At EU scale multilingualism is mandatory: <strong>IATE</strong> is the inter-institutional terminology database (concepts in 24 languages), <strong>EuroVoc</strong> is the EU thesaurus used to index documents across institutions (SKOS-based).</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">7 · Metadata &amp; taxonomy</div>
             <div class="dc-key">DCAT-AP · SKOS · RDF/OWL/SPARQL · 5-star · Dublin Core</div>
-            <div class="dc-body">EU portal: <strong>data.europa.eu</strong>. Schemas: DCAT-AP (catalogue), SKOS (thesauri), Dublin Core (15 core elements). Stack: RDF (triples) · OWL (ontology) · SPARQL (query). 5-star Open Data by Tim Berners-Lee.</div>
+            <div class="dc-body">Describing data about the data — so catalogues are searchable, lineage is traceable, and meaning survives across systems. The EU portal <strong>data.europa.eu</strong> uses DCAT-AP (an application profile of W3C DCAT) to describe datasets; SKOS models thesauri; Dublin Core provides 15 core elements (title, creator, date…). Underneath sits the Semantic Web stack: RDF (subject-predicate-object triples), OWL (formal ontology), SPARQL (query language). Tim Berners-Lee's 5-star scheme grades openness from ★ (on web, open license) to ★★★★★ (linked open data).</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">8 · Data quality</div>
             <div class="dc-key">Profiling · cleansing · ISO 8000 · ISO/IEC 25012</div>
-            <div class="dc-body">ISO 8000: data quality framework, especially master data. ISO/IEC 25012: 15 quality characteristics (accuracy, completeness, consistency, credibility, currentness, etc.).</div>
+            <div class="dc-body">Two complementary standards. <strong>ISO 8000</strong> is oriented toward master-data exchange and provenance (where did it come from, is it intact, is it fit for purpose?). <strong>ISO/IEC 25012</strong> defines 15 characteristics that together describe 'quality': accuracy, completeness, consistency, credibility, currentness, accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability. In practice you don't measure all 15 — you pick the ones that matter for the use case and build profiling + cleansing pipelines around them.</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">9 · Data security &amp; privacy</div>
             <div class="dc-key">RBAC/ABAC · encryption · DPIA · anon vs pseudo · CIA</div>
-            <div class="dc-body">CIA: Confidentiality / Integrity / Availability. DPIA: GDPR Art 35. <strong>Anonymisation</strong> irreversible (out of GDPR), <strong>pseudonymisation</strong> reversible with a key (still in GDPR). Privacy by design &amp; by default = GDPR Art 25.</div>
+            <div class="dc-body">Security and privacy sit side by side but aren't the same thing. Security's classical objectives are the CIA triad: <strong>C</strong>onfidentiality (who can see it), <strong>I</strong>ntegrity (correct and untampered), <strong>A</strong>vailability (accessible when needed). Access is enforced via RBAC (role-based) or ABAC (attribute-based). GDPR Art 25 ('privacy by design &amp; by default') bakes controls in from architecture stage. Art 35 triggers a DPIA whenever processing is 'likely to result in high risk' to rights and freedoms. Key distinction: anonymisation (irreversible) takes data out of GDPR; pseudonymisation (reversible with a separate key) keeps it in GDPR as a safeguard.</div>
           </div>
 
           <div class="duty-card">
             <div class="dc-title">10 · Advanced analytics &amp; AI prep</div>
             <div class="dc-key">Feature engineering · labelling · AI Act Art 10</div>
-            <div class="dc-body">Feature engineering, data labelling, augmentation. EU anchor: AI Act Art 10 — data-governance obligations for high-risk AI training / validation / test datasets (relevance, representativeness, bias correction, provenance).</div>
+            <div class="dc-body">The ML-specific data-prep stack. <strong>Feature engineering</strong> = crafting the input variables a model will learn from (rolling averages, flags, encodings). <strong>Labelling</strong> = assigning ground truth to supervised examples. <strong>Augmentation</strong> = generating synthetic variants to boost minority classes or improve robustness. The EU anchor is AI Act Art. 10: if your system is classified as high-risk, your training / validation / test sets must be relevant and representative, as free of errors as possible, and examined for biases likely to affect health, safety or fundamental rights — with mitigation measures documented.</div>
           </div>
 
         </div>
@@ -2179,7 +2291,7 @@ function renderEpsoExplorer(root){
 
           <div class="fw-card">
             <h4>DAMA-DMBOK</h4>
-            <div class="desc">Data Management Body of Knowledge — 11 Knowledge Areas.</div>
+            <div class="desc">Data Management Body of Knowledge — the industry-standard reference model. 11 Knowledge Areas arranged in a wheel, with <strong>Data Governance at the centre</strong> because every other area feeds policy into it and consumes policy from it.</div>
             <ul>
               <li><strong>Data Governance (hub)</strong></li>
               <li>Data Architecture · Data Modeling &amp; Design</li>
@@ -2189,22 +2301,24 @@ function renderEpsoExplorer(root){
               <li>Reference &amp; Master Data · Metadata</li>
               <li>Data Warehousing &amp; BI · Data Quality</li>
             </ul>
+            <div class="fw-when">When asked 'which area…' and the answer is cross-cutting — it's almost always Data Governance.</div>
           </div>
 
           <div class="fw-card">
             <h4>FAIR principles</h4>
-            <div class="desc">Guiding scientific-data stewardship.</div>
+            <div class="desc">A 4-letter checklist (Wilkinson et al., 2016) for making datasets research-community-ready. Adopted wholesale by the EU Open Data programme and by data.europa.eu as the default yardstick.</div>
             <ul>
               <li><strong>F</strong>indable — persistent ID, rich metadata, indexed</li>
               <li><strong>A</strong>ccessible — standardised open protocol, authentication where needed</li>
               <li><strong>I</strong>nteroperable — formal language, shared vocabularies, references</li>
               <li><strong>R</strong>eusable — clear license, provenance, community standards</li>
             </ul>
+            <div class="fw-when">Scientific or research data? FAIR. Open government data? Also FAIR + 5-star.</div>
           </div>
 
           <div class="fw-card">
             <h4>EIF · 4 layers</h4>
-            <div class="desc">European Interoperability Framework — public-sector interop.</div>
+            <div class="desc">European Interoperability Framework — the reference model used by every EU public-administration interoperability initiative, and the backbone of the Interoperable Europe Act (2024/903).</div>
             <ul>
               <li><strong>Legal</strong> — aligned legal frameworks</li>
               <li><strong>Organisational</strong> — business processes &amp; responsibilities</li>
@@ -2212,46 +2326,50 @@ function renderEpsoExplorer(root){
               <li><strong>Technical</strong> — systems, applications, infrastructure</li>
               <li><em>+ Integrated Public Service Governance (overarching)</em></li>
             </ul>
+            <div class="fw-when">Interoperability between public administrations → EIF. Interoperability between companies → not EIF's turf.</div>
           </div>
 
           <div class="fw-card">
             <h4>DCAT-AP · SKOS · RDF</h4>
-            <div class="desc">EU open-data metadata stack.</div>
+            <div class="desc">The EU open-data metadata stack. DCAT-AP describes the <em>datasets</em>; SKOS structures the <em>vocabularies</em> used to classify them; RDF/OWL/SPARQL is the underlying semantic-web plumbing.</div>
             <ul>
-              <li><strong>DCAT-AP</strong> — EU catalogue schema; powers data.europa.eu</li>
-              <li>Extensions: StatDCAT-AP · GeoDCAT-AP · HVD profile</li>
-              <li><strong>SKOS</strong> — Simple Knowledge Organization System (thesauri)</li>
-              <li><strong>RDF / OWL / SPARQL</strong> — triples / ontology / query</li>
-              <li><strong>Dublin Core</strong> — 15 core metadata elements</li>
+              <li><strong>DCAT-AP</strong> — EU application profile of DCAT; powers data.europa.eu</li>
+              <li>Extensions: StatDCAT-AP (statistics) · GeoDCAT-AP (geospatial) · HVD profile</li>
+              <li><strong>SKOS</strong> — Simple Knowledge Organization System (thesauri like EuroVoc)</li>
+              <li><strong>RDF / OWL / SPARQL</strong> — triples / ontology language / query language</li>
+              <li><strong>Dublin Core</strong> — 15 core metadata elements (title, creator, date…)</li>
             </ul>
+            <div class="fw-when">Cataloguing EU datasets → DCAT-AP. Indexing EU documents → EuroVoc via SKOS.</div>
           </div>
 
           <div class="fw-card">
             <h4>5-star Open Data</h4>
-            <div class="desc">Tim Berners-Lee's deployment scheme.</div>
+            <div class="desc">Tim Berners-Lee's deployment scheme (2010). A simple 1-to-5 ladder for how 'open' an open dataset really is — each star adds reusability on top of the previous.</div>
             <ul>
               <li>★ on web, open license</li>
               <li>★★ machine-readable structured data</li>
               <li>★★★ non-proprietary format (CSV &gt; Excel)</li>
               <li>★★★★ URIs to identify things</li>
-              <li>★★★★★ linked to other data (LOD)</li>
+              <li>★★★★★ linked to other data (Linked Open Data)</li>
             </ul>
+            <div class="fw-when">If the question mentions 'URIs' or 'linked data' → you're in 4★ / 5★ territory.</div>
           </div>
 
           <div class="fw-card">
             <h4>CIA triad</h4>
-            <div class="desc">Core security objectives.</div>
+            <div class="desc">The classical objectives of information security. Predates GDPR by decades but remains the backbone of any security control set. Often extended with Authenticity and Non-repudiation ('AIC' + N/R in some textbooks).</div>
             <ul>
               <li><strong>C</strong>onfidentiality — only authorised can access</li>
               <li><strong>I</strong>ntegrity — data not altered improperly</li>
               <li><strong>A</strong>vailability — accessible when needed</li>
               <li>+ often extended: Authenticity · Non-repudiation</li>
             </ul>
+            <div class="fw-when">Security questions default here. GDPR technical-measures questions also lean on CIA.</div>
           </div>
 
           <div class="fw-card">
             <h4>Roles cheatsheet</h4>
-            <div class="desc">Who does what — the exam loves these.</div>
+            <div class="desc">Two role families are often blurred in exam questions. <strong>Data-management roles</strong> (Owner, Steward, Custodian) come from DAMA. <strong>GDPR roles</strong> (Controller, Processor, DPO) come from the regulation. CDO is an org-level leadership role; don't confuse with DPO.</div>
             <ul>
               <li><strong>Data Owner</strong> — accountable, sets policy</li>
               <li><strong>Data Steward</strong> — executes policy, quality, definitions</li>
@@ -2261,15 +2379,17 @@ function renderEpsoExplorer(root){
               <li><strong>DPO</strong> — advises on GDPR compliance</li>
               <li><strong>CDO</strong> — org-level data strategy</li>
             </ul>
+            <div class="fw-when">Controller vs Processor is the most-tested pair. 'Decides purposes and means' → Controller, always.</div>
           </div>
 
           <div class="fw-card">
             <h4>ISO quality standards</h4>
-            <div class="desc">Reference models for data quality.</div>
+            <div class="desc">Two complementary ISO families. ISO 8000 focuses on master-data exchange and provenance. ISO/IEC 25012 (part of the 25000 series) lists the characteristics that make up 'quality' in a more generic sense.</div>
             <ul>
-              <li><strong>ISO 8000</strong> — data quality, esp. master data</li>
-              <li><strong>ISO/IEC 25012</strong> — 15 characteristics (accuracy, completeness, consistency, credibility, currentness, accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability)</li>
+              <li><strong>ISO 8000</strong> — data quality, esp. master data + provenance</li>
+              <li><strong>ISO/IEC 25012</strong> — 15 quality characteristics (accuracy, completeness, consistency, credibility, currentness, accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability)</li>
             </ul>
+            <div class="fw-when">'Which ISO lists quality characteristics?' → ISO/IEC 25012, never ISO 8000.</div>
           </div>
 
         </div>
@@ -2295,12 +2415,13 @@ function renderEpsoExplorer(root){
               <h5>Reg 2018/1725</h5>
               <ul>
                 <li>Applies to <strong>EU institutions, bodies, offices, agencies</strong></li>
-                <li>Mirrors GDPR obligations</li>
+                <li>Mirrors GDPR obligations (same rights, same DPIA logic)</li>
                 <li>Supervisor: <strong>EDPS</strong> (European Data Protection Supervisor)</li>
-                <li>Question mentions "Commission", "Parliament", "ECB" → 2018/1725</li>
+                <li>Question mentions 'Commission', 'Parliament', 'ECB' → 2018/1725</li>
               </ul>
             </div>
           </div>
+          <div class="trap-signal"><strong>Signal:</strong> watch who the subject is. Hospital · school · airline · bank → GDPR. Commission · Parliament · EDPS · Agency · ECB → 2018/1725. Same principles, different regulator.</div>
         </div>
 
         <div class="trap-row">
@@ -2312,7 +2433,7 @@ function renderEpsoExplorer(root){
                 <li>4 pillars: protected PSI reuse · intermediation services · altruism · EDIB</li>
                 <li>Creates <strong>mechanisms &amp; roles</strong> for data sharing</li>
                 <li>Target: confidential / IP-protected / personal public-sector data</li>
-                <li>Keyword: "data intermediary", "altruism", "EDIB"</li>
+                <li>Keywords: 'data intermediary', 'altruism', 'EDIB'</li>
               </ul>
             </div>
             <div>
@@ -2321,10 +2442,11 @@ function renderEpsoExplorer(root){
                 <li>IoT-generated data access for users (Ch II)</li>
                 <li>B2B FRAND sharing (Ch III) + B2G exceptional need (Ch V)</li>
                 <li>Cloud / edge switching rights (Ch VI)</li>
-                <li>Keyword: "IoT", "connected product", "cloud switching", "smart contract"</li>
+                <li>Keywords: 'IoT', 'connected product', 'cloud switching', 'smart contract'</li>
               </ul>
             </div>
           </div>
+          <div class="trap-signal"><strong>Signal:</strong> DGA = who and how (mechanisms &amp; roles). Data Act = what (user rights). If you see 'altruism' or 'intermediary' → DGA. If you see 'IoT' or 'cloud switching' → Data Act.</div>
         </div>
 
         <div class="trap-row">
@@ -2334,8 +2456,9 @@ function renderEpsoExplorer(root){
               <h5>Anonymisation</h5>
               <ul>
                 <li><strong>Irreversible</strong> — no way back to the data subject</li>
-                <li>Data is no longer personal — <strong>outside GDPR scope</strong></li>
+                <li>Data is no longer personal — <strong>outside GDPR scope</strong> (Recital 26)</li>
                 <li>Requires removing/altering all identifiers + limiting re-identification risk</li>
+                <li>Real-world test: even combined with other data sets, you can't re-identify</li>
               </ul>
             </div>
             <div>
@@ -2344,9 +2467,11 @@ function renderEpsoExplorer(root){
                 <li><strong>Reversible</strong> with a separate key (kept secure)</li>
                 <li>Data is <strong>still personal</strong> — GDPR still applies</li>
                 <li>A safeguard / risk-reduction measure (GDPR Art 4(5), Art 25, Art 32)</li>
+                <li>Examples: replacing name with an ID in a table while the mapping is held elsewhere</li>
               </ul>
             </div>
           </div>
+          <div class="trap-signal"><strong>Signal:</strong> one-way function vs two-way. If there's a 'key' that can re-identify — pseudonymisation, GDPR still applies. If the identifiers are gone for good with no re-ID path — anonymisation, out of scope.</div>
         </div>
 
         <div class="trap-row">
@@ -2357,7 +2482,8 @@ function renderEpsoExplorer(root){
               <ul>
                 <li>Covers <strong>open / non-sensitive</strong> public sector information</li>
                 <li>Principle: free of charge, machine-readable, open by default</li>
-                <li>HVD: categories in Implementing Reg 2023/138</li>
+                <li>HVDs: six categories defined in Implementing Reg 2023/138</li>
+                <li>Replaces the older PSI Directive 2003/98/EC</li>
               </ul>
             </div>
             <div>
@@ -2365,10 +2491,12 @@ function renderEpsoExplorer(root){
               <ul>
                 <li>Covers <strong>protected</strong> public-sector data (confidential, IP, personal)</li>
                 <li>Establishes conditions, not default openness</li>
-                <li>Complements Open Data Dir., does not replace it</li>
+                <li>Complements Open Data Dir. — does not replace it; the two co-exist</li>
+                <li>Adds intermediation services + data altruism on top</li>
               </ul>
             </div>
           </div>
+          <div class="trap-signal"><strong>Signal:</strong> Open = default. DGA = with conditions. If the data is open public-sector info → Directive. If it's confidential / IP / personal → DGA.</div>
         </div>
 
         <div class="trap-row">
@@ -2377,20 +2505,23 @@ function renderEpsoExplorer(root){
             <div>
               <h5>Warehouse</h5>
               <ul>
-                <li>Schema-on-<strong>write</strong> · structured data</li>
-                <li>Optimised for BI / reporting · curated</li>
-                <li>Costly for unstructured / raw data</li>
+                <li>Schema-on-<strong>write</strong> · structured data only</li>
+                <li>Optimised for BI / reporting · curated dimensional models</li>
+                <li>Costly for unstructured / raw data (text, audio, images)</li>
+                <li>Proprietary storage (Snowflake, Redshift, BigQuery)</li>
               </ul>
             </div>
             <div>
               <h5>Lake (and Lakehouse)</h5>
               <ul>
                 <li>Lake: schema-on-<strong>read</strong>, raw, cheap, any format</li>
-                <li>Lakehouse: adds ACID + warehouse semantics on lake storage (Delta / Iceberg / Hudi)</li>
-                <li>Lakehouse = one platform for BI + ML</li>
+                <li>Lakehouse: adds ACID + schema enforcement + time-travel via open table formats</li>
+                <li>Open table formats: Delta Lake · Apache Iceberg · Apache Hudi</li>
+                <li>Lakehouse = one platform for BI + ML on the same Parquet files</li>
               </ul>
             </div>
           </div>
+          <div class="trap-signal"><strong>Signal:</strong> 'schema-on-write' → Warehouse. 'open table format' / 'Delta / Iceberg / Hudi' / 'ACID on object storage' → Lakehouse. Plain 'schema-on-read' with no ACID → Lake.</div>
         </div>
 
       </div>
@@ -2736,13 +2867,23 @@ function renderPractice(root){
       return `<div class="${cls}" data-letter="${esc(o.letter)}">${SJT_LABELS[o.letter] || esc(o.text)}</div>`;
     }).join('')}</div>`;
   } else {
-    // Shuffle numerical options; persist order in session so it's stable across re-renders
-    if(!SESSION.shuffledOpts || SESSION.shuffledOpts.qid !== q.id){
-      SESSION.shuffledOpts = { qid: q.id, order: shuffle(q.options) };
+    // MCQ is never shuffled: the per-option explanations reference specific
+    // letters (A/B/C/D), so re-lettering would break the mapping.
+    // Numerical is shuffled to prevent position memorisation; display letters
+    // follow the shuffled position.
+    const shouldShuffle = q.type !== 'mcq';
+    let displayOpts;
+    if(shouldShuffle){
+      if(!SESSION.shuffledOpts || SESSION.shuffledOpts.qid !== q.id){
+        SESSION.shuffledOpts = { qid: q.id, order: shuffle(q.options) };
+      }
+      displayOpts = SESSION.shuffledOpts.order;
+    } else {
+      displayOpts = q.options;
     }
-    const displayOpts = SESSION.shuffledOpts.order;
     const letters = 'ABCDE';
     optsHtml = displayOpts.map((o, i) => {
+      const displayLetter = shouldShuffle ? letters[i] : o.letter;
       let cls = 'opt';
       if(SESSION.revealed){
         cls += ' dis';
@@ -2753,7 +2894,7 @@ function renderPractice(root){
         cls += ' sel';
       }
       return `<div class="${cls}" data-letter="${esc(o.letter)}">
-        <div class="ol">${letters[i]}</div>
+        <div class="ol">${displayLetter}</div>
         <div class="ot">${esc(o.text)}</div>
       </div>`;
     }).join('');
