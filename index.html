@@ -120,6 +120,40 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .btn-reset{padding:5px 10px;border-radius:8px;border:1.5px solid var(--redbdr);background:var(--redbg);color:var(--red);font-size:11px;font-weight:600;cursor:pointer}
 .btn-reset:hover{background:var(--red);color:#fff}
 
+/* Compact home (v2) */
+.dash-stats{display:flex;gap:8px;margin:10px 0 10px;flex-wrap:wrap}
+.dash-stats .stat-chip{flex:1;min-width:100px;padding:12px 10px}
+
+.pl-bar{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:2px 2px 8px;margin-bottom:10px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.pl-bar .chip{flex:0 0 auto;white-space:nowrap}
+
+.action-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.ia-btn{width:38px;height:38px;border-radius:999px;border:1.5px solid var(--border);background:var(--card);font-size:16px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .15s,background .15s,color .15s;color:var(--sub);padding:0;flex-shrink:0}
+.ia-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ia-btn.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.ia-btn.danger{border-color:var(--redbdr);color:var(--red)}
+.ia-btn.danger:hover{background:var(--redbg);color:var(--red);border-color:var(--red)}
+.ia-btn.warn-tri{color:var(--amber);font-size:18px}
+.ia-btn.warn-tri.on{color:#fff;background:var(--amber);border-color:var(--amber)}
+
+.time-slider-wrap{flex:1;display:flex;align-items:center;gap:10px;padding:6px 14px;border:1.5px solid var(--border);border-radius:999px;background:var(--card);min-width:180px;height:38px}
+.time-slider-wrap input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;height:4px;min-width:80px}
+.time-slider-wrap .tval{font-family:'Courier New',monospace;font-size:12px;font-weight:700;color:var(--accent);min-width:44px;text-align:right}
+
+.start-row{display:flex;gap:8px;margin-top:10px}
+.start-row .btn{flex:1}
+
+.mini-row{display:flex;gap:6px;margin-top:10px;justify-content:flex-end}
+.ia-mini{width:32px;height:32px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);font-size:14px;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;transition:border-color .15s,color .15s,background .15s}
+.ia-mini:hover{color:var(--accent);border-color:var(--accent)}
+.ia-mini.danger:hover{color:var(--red);border-color:var(--red);background:var(--redbg)}
+
+/* MCQ compact section (modes + drill + topic stats under the action row) */
+.mcq-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.mcq-section .mode-grid{margin-top:0;margin-bottom:0}
+.mcq-section .drill-pick{margin-top:8px}
+.mcq-section .topic-stats{margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+
 /* Empty state */
 .empty{text-align:center;padding:30px 16px;color:var(--muted)}
 .empty h2{font-size:18px;color:var(--text);margin-bottom:6px}
@@ -716,23 +750,24 @@ function renderHome(root){
 
   // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5)
   const total = DB.questions.length;
-  let attempted = 0, scoreSum = 0, scoreInTimeSum = 0;
+  let gAttempted = 0, gScoreSum = 0, gScoreInTimeSum = 0;
   for(const q of DB.questions){
     const s = stats[q.id];
     if(s && s.attempts > 0){
-      attempted++;
+      gAttempted++;
       const sc = statScore(s);
-      scoreSum += sc;
-      if(s.last_within_time) scoreInTimeSum += sc;
+      gScoreSum += sc;
+      if(s.last_within_time) gScoreInTimeSum += sc;
     }
   }
-  const accuracy = attempted > 0 ? Math.round(scoreSum / attempted * 100) : 0;
-  const accuracyInTime = attempted > 0 ? Math.round(scoreInTimeSum / attempted * 100) : 0;
+  const globalStats = {
+    attempted: gAttempted,
+    total,
+    accuracy: gAttempted > 0 ? Math.round(gScoreSum / gAttempted * 100) : 0,
+    accuracyInTime: gAttempted > 0 ? Math.round(gScoreInTimeSum / gAttempted * 100) : 0,
+  };
 
-  // How many in current filter?
-  const pool = buildPool(settings);
-
-  // Per-source counts and stats (one entry per playlist key).
+  // Per-source counts + stats (one entry per playlist key).
   const sourceCounts = {};
   const sourceStats = {};
   for(const q of DB.questions){
@@ -748,77 +783,77 @@ function renderHome(root){
     }
   }
 
+  const pool = buildPool(settings);
   const activePlaylist = settings.playlist ? playlistByKey(settings.playlist) : null;
+  const isMcq = !!(activePlaylist && activePlaylist.type === 'mcq');
+  const isSjt = !!(activePlaylist && activePlaylist.type === 'sjt');
+  const hasGuide = isSjt || isMcq;
 
-  // Per-playlist card (only when a specific playlist is selected).
-  let playlistCardHtml = '';
+  // The dashboard row adapts to the active playlist.
+  let dash;
   if(activePlaylist){
     const ss = sourceStats[activePlaylist.key] || {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
-    const pAcc = ss.attempted > 0 ? Math.round(ss.scoreSum / ss.attempted * 100) : 0;
-    const pAccTime = ss.attempted > 0 ? Math.round(ss.scoreInTimeSum / ss.attempted * 100) : 0;
-    const isSjt = activePlaylist.type === 'sjt';
-    const isMcq = activePlaylist.type === 'mcq';
-    const guideLabel = isMcq ? 'Content Explorer' : 'Comment réussir ce test ?';
+    dash = {
+      attempted: ss.attempted,
+      total: ss.total,
+      accuracy: ss.attempted > 0 ? Math.round(ss.scoreSum / ss.attempted * 100) : 0,
+      accuracyInTime: ss.attempted > 0 ? Math.round(ss.scoreInTimeSum / ss.attempted * 100) : 0,
+    };
+  } else {
+    dash = globalStats;
+  }
 
-    // Per-topic stats for this MCQ playlist (only topics you've attempted,
-    // weakest first — so your eye goes to what needs work).
-    let topicStatsHtml = '';
-    if(isMcq){
-      const playlistQs = DB.questions.filter(q => q.source === activePlaylist.key);
-      const byTopic = {};
-      for(const q of playlistQs){
-        const t = q.topic || 'unknown';
-        if(!byTopic[t]) byTopic[t] = { n: 0, attempted: 0, scoreSum: 0 };
-        byTopic[t].n++;
-        const s = stats[q.id];
-        if(s && s.attempts > 0){
-          byTopic[t].attempted++;
-          byTopic[t].scoreSum += statScore(s);
-        }
-      }
-      const rows = Object.keys(byTopic)
-        .filter(t => byTopic[t].attempted > 0)
-        .sort((a, b) => {
-          const accA = byTopic[a].scoreSum / byTopic[a].attempted;
-          const accB = byTopic[b].scoreSum / byTopic[b].attempted;
-          return accA - accB;  // weakest first
-        })
-        .map(t => {
-          const { n, attempted, scoreSum } = byTopic[t];
-          const acc = Math.round(scoreSum / attempted * 100);
-          const label = TOPIC_LABELS[t] || t;
-          const barCls = acc < 50 ? 'low' : (acc < 75 ? 'med' : '');
-          return `<div class="topic-row" data-drill-topic="${esc(t)}">
-            <div class="tr-name">${esc(label)}</div>
-            <div class="tr-score">${attempted}/${n} · ${acc}%</div>
-            <div class="tr-bar"><div class="${barCls}" style="width:${acc}%"></div></div>
-          </div>`;
-        }).join('');
-      if(rows){
-        topicStatsHtml = `<div class="topic-stats">
-          <h4>Your topics · weakest first · tap to drill</h4>
-          ${rows}
-        </div>`;
+  const canReset = dash.attempted > 0;
+
+  // MCQ section (mode buttons, drill dropdown, topic stats) — only for MCQ.
+  let mcqSectionHtml = '';
+  if(isMcq){
+    const playlistQs = DB.questions.filter(q => q.source === activePlaylist.key);
+    const byTopic = {};
+    for(const q of playlistQs){
+      const t = q.topic || 'unknown';
+      if(!byTopic[t]) byTopic[t] = { n: 0, attempted: 0, scoreSum: 0 };
+      byTopic[t].n++;
+      const s = stats[q.id];
+      if(s && s.attempts > 0){
+        byTopic[t].attempted++;
+        byTopic[t].scoreSum += statScore(s);
       }
     }
+    const topicRows = Object.keys(byTopic)
+      .filter(t => byTopic[t].attempted > 0)
+      .sort((a, b) => (byTopic[a].scoreSum / byTopic[a].attempted) - (byTopic[b].scoreSum / byTopic[b].attempted))
+      .map(t => {
+        const { n, attempted, scoreSum } = byTopic[t];
+        const acc = Math.round(scoreSum / attempted * 100);
+        const label = TOPIC_LABELS[t] || t;
+        const barCls = acc < 50 ? 'low' : (acc < 75 ? 'med' : '');
+        return `<div class="topic-row" data-drill-topic="${esc(t)}">
+          <div class="tr-name">${esc(label)}</div>
+          <div class="tr-score">${attempted}/${n} · ${acc}%</div>
+          <div class="tr-bar"><div class="${barCls}" style="width:${acc}%"></div></div>
+        </div>`;
+      }).join('');
+    const topicStatsHtml = topicRows
+      ? `<div class="topic-stats"><h4>Your topics · weakest first · tap to drill</h4>${topicRows}</div>`
+      : '';
 
-    // MCQ mode selector (Timed / Free / Topic drill)
-    const mcqModeHtml = isMcq ? `
+    mcqSectionHtml = `<div class="mcq-section">
       <div class="mode-grid">
-        <div class="mode-btn" data-mcq-mode="timed_exam">
+        <div class="mode-btn" data-mcq-mode="timed_exam" title="30 random Qs · 40-minute global countdown">
           <span class="emoji">⚡</span>
           <span class="title">Timed Exam</span>
           <span class="sub">30 Qs · 40 min</span>
         </div>
-        <div class="mode-btn" data-mcq-mode="free_study">
+        <div class="mode-btn" data-mcq-mode="free_study" title="Unlimited questions · immediate per-option feedback">
           <span class="emoji">📚</span>
           <span class="title">Free Study</span>
-          <span class="sub">Unlimited · immediate feedback</span>
+          <span class="sub">Unlimited</span>
         </div>
-        <div class="mode-btn" data-mcq-mode="topic_drill">
+        <div class="mode-btn" data-mcq-mode="topic_drill" title="Focus on one topic — EU regulations, a framework, or a specific duty">
           <span class="emoji">🎯</span>
           <span class="title">Topic Drill</span>
-          <span class="sub">Focus on one area</span>
+          <span class="sub">Pick a topic</span>
         </div>
       </div>
       <div id="drill-pick-box" class="drill-pick" style="display:none">
@@ -838,82 +873,78 @@ function renderHome(root){
           <option value="advanced_analytics">Duty · Advanced analytics &amp; AI prep</option>
         </select>
         <button class="btn btn-primary btn-small" id="start-drill-btn">Start drill</button>
-      </div>` : '';
-
-    playlistCardHtml = `
-      <div class="section type-stats-section">
-        <div class="hdr-row">
-          <h3>${esc(activePlaylist.label)}</h3>
-          ${ss.attempted > 0 ? `<button class="btn-reset" data-reset-playlist="${esc(activePlaylist.key)}">Reset</button>` : ''}
-        </div>
-        <div class="stats-row">
-          <div class="stat-chip"><strong>${ss.attempted}/${ss.total}</strong><div class="lbl">Done</div></div>
-          <div class="stat-chip"><strong>${pAcc}%</strong><div class="lbl">Accuracy</div></div>
-          <div class="stat-chip"><strong>${pAccTime}%</strong><div class="lbl">In time</div></div>
-        </div>
-        ${(isSjt || isMcq) ? `<button class="btn btn-secondary" id="playlist-guide-btn" style="margin-top:12px;width:100%">${guideLabel}</button>` : ''}
-        ${mcqModeHtml}
-        ${topicStatsHtml}
-      </div>`;
+      </div>
+      ${topicStatsHtml}
+    </div>`;
   }
 
   const session = loadSession();
+  const visiblePlaylists = PLAYLISTS.filter(p => sourceCounts[p.key]);
+
+  // Guide button title differs for MCQ (Content Explorer vs 'how to ace').
+  const guideTitle = isMcq
+    ? 'Content Explorer — interactive map of regs, duties, frameworks, traps'
+    : 'How to ace this test — decision flowchart, examples, competencies';
+  const resetTitle = activePlaylist
+    ? `Reset stats for “${activePlaylist.label}”`
+    : 'Reset all practice stats';
+  const timeTitle = 'Target time per question · affects numerical only; SJT uses 120/40s, MCQ uses 80s';
+
+  // The dashboard always shows attempted/total to give a sense of coverage.
+  const attemptedStr = `${dash.attempted}/${dash.total}`;
+  const dashSubLabel = activePlaylist ? esc(activePlaylist.label) : 'All playlists';
 
   root.appendChild($(`
     <div class="home">
       <h1>PsycoTrain</h1>
-      <div class="sub">${total} questions · ${PLAYLISTS.filter(p => sourceCounts[p.key]).length} playlists</div>
+      <div class="sub">${total} questions · ${visiblePlaylists.length} playlists · <em>${dashSubLabel}</em></div>
 
-      <div class="stats-row">
-        <div class="stat-chip"><strong>${total}</strong><div class="lbl">Total</div></div>
-        <div class="stat-chip"><strong>${attempted}</strong><div class="lbl">Attempted</div></div>
-        <div class="stat-chip"><strong>${accuracy}%</strong><div class="lbl">Accuracy</div></div>
-        <div class="stat-chip"><strong>${accuracyInTime}%</strong><div class="lbl">In time</div></div>
+      <!-- Adaptive dashboard: shows global or active-playlist stats in the same slot. -->
+      <div class="dash-stats">
+        <div class="stat-chip"><strong>${attemptedStr}</strong><div class="lbl">Attempted</div></div>
+        <div class="stat-chip"><strong>${dash.accuracy}%</strong><div class="lbl">Accuracy</div></div>
+        <div class="stat-chip"><strong>${dash.accuracyInTime}%</strong><div class="lbl">In time</div></div>
       </div>
 
-      <div class="section">
-        <h3>Playlist</h3>
-        <div class="chip-row" id="playlist-chips">
-          ${chipHtml('playlist-chip', null, 'All', settings.playlist === null)}
-          ${PLAYLISTS.filter(p => sourceCounts[p.key]).map(p =>
-            chipHtml('playlist-chip', p.key, `${p.label} (${sourceCounts[p.key]})`, settings.playlist === p.key)
-          ).join('')}
+      <!-- Horizontal swipe bar of playlists. -->
+      <div class="pl-bar" id="playlist-chips">
+        ${chipHtml('playlist-chip', null, 'All', settings.playlist === null)}
+        ${visiblePlaylists.map(p =>
+          chipHtml('playlist-chip', p.key, `${p.label} (${sourceCounts[p.key]})`, settings.playlist === p.key)
+        ).join('')}
+      </div>
+
+      <!-- Compact actions: guide · weak-only · reset · time slider. Tooltips on hover. -->
+      <div class="action-row">
+        ${hasGuide ? `<button class="ia-btn" id="guide-btn" title="${esc(guideTitle)}">?</button>` : ''}
+        <button class="ia-btn warn-tri ${settings.weakOnly ? 'on' : ''}" id="weak-btn" title="Weak only — unseen questions + those with accuracy below 60%">⚠</button>
+        ${canReset ? `<button class="ia-btn danger" id="reset-btn" title="${esc(resetTitle)}">🗑</button>` : ''}
+        <div class="time-slider-wrap" title="${esc(timeTitle)}">
+          <input type="range" id="target-range" min="10" max="300" step="5" value="${settings.targetSec}">
+          <span class="tval" id="target-val">${settings.targetSec}s</span>
         </div>
       </div>
 
-      ${playlistCardHtml}
+      ${mcqSectionHtml}
 
-      <div class="section">
-        <div class="toggle-row" id="weak-toggle">
-          <div class="toggle ${settings.weakOnly?'on':''}"></div>
-          <div>Weak only (unseen + accuracy &lt; 60%)</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h3>Target time per question</h3>
-        <div class="timecfg">
-          <input type="number" id="target-input" min="5" max="3600" step="5" value="${settings.targetSec}">
-          <span>seconds (${Math.floor(settings.targetSec/60)}:${String(settings.targetSec%60).padStart(2,'0')})</span>
-        </div>
-        <div class="sub" style="font-size:11px;margin-top:4px">SJT uses its own per-question timing (120s reading + first answer, 40s thereafter) — this setting only affects numerical.</div>
-      </div>
-
-      <div class="actions">
-        ${session ? '<button class="btn btn-primary" id="resume-btn">Resume session</button>' : ''}
-        ${activePlaylist && activePlaylist.type === 'mcq' ? '' : `<button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
-          Start practice ${pool.length === 0 ? '(no questions)' : ''}
+      <!-- Start / Resume side by side. For MCQ, mode buttons already act as Start. -->
+      ${(session || !isMcq) ? `
+      <div class="start-row">
+        ${session ? '<button class="btn btn-primary" id="resume-btn">Resume</button>' : ''}
+        ${isMcq ? '' : `<button class="btn btn-primary" id="start-btn" ${pool.length === 0 ? 'disabled' : ''}>
+          Start practice${pool.length === 0 ? ' (no questions)' : ''}
         </button>`}
-        <div class="btn-row">
-          <button class="btn btn-secondary btn-small" id="save-btn">⬇ Save stats</button>
-          <button class="btn btn-secondary btn-small" id="load-btn">↑ Load stats</button>
-          <button class="btn btn-secondary btn-small" id="reset-all-btn" style="border-color:var(--redbdr);color:var(--red)">Reset all</button>
-        </div>
+      </div>` : ''}
+
+      <!-- Tiny save/load icons at the bottom. -->
+      <div class="mini-row">
+        <button class="ia-mini" id="save-btn" title="Save all practice stats to a JSON file">⬇</button>
+        <button class="ia-mini" id="load-btn" title="Load practice stats from a JSON file">⬆</button>
       </div>
     </div>
   `));
 
-  // Wire up chip click handlers
+  // Wire up playlist chips → switch playlist.
   root.querySelectorAll('#playlist-chips .chip').forEach(c => {
     c.addEventListener('click', () => {
       const newKey = c.dataset.value === '__null__' ? null : c.dataset.value;
@@ -930,29 +961,43 @@ function renderHome(root){
       render();
     });
   });
-  root.querySelector('#weak-toggle').addEventListener('click', () => {
-    settings.weakOnly = !settings.weakOnly;
-    saveSettings(settings);
-    render();
-  });
-  const tIn = root.querySelector('#target-input');
-  tIn.addEventListener('change', () => {
-    let v = parseInt(tIn.value, 10);
-    if(!Number.isFinite(v) || v < 5) v = 5;
-    if(v > 3600) v = 3600;
-    settings.targetSec = v;
-    saveSettings(settings);
-    render();
-  });
-  root.querySelector('#start-btn')?.addEventListener('click', () => startPractice());
-  root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
-  root.querySelector('#playlist-guide-btn')?.addEventListener('click', () => {
+
+  // Action icons
+  root.querySelector('#guide-btn')?.addEventListener('click', () => {
     GUIDE_KEY = settings.playlist;
     MODE = 'guide';
     SCROLL_TARGET = 'top';
     render();
   });
-  // MCQ mode buttons: Timed Exam / Free Study / Topic Drill
+  root.querySelector('#weak-btn')?.addEventListener('click', () => {
+    settings.weakOnly = !settings.weakOnly;
+    saveSettings(settings);
+    render();
+  });
+  root.querySelector('#reset-btn')?.addEventListener('click', () => {
+    if(activePlaylist) resetStatsForPlaylist(activePlaylist.key);
+    else resetAllStats();
+  });
+
+  // Time slider — live label + persist.
+  const tRange = root.querySelector('#target-range');
+  const tLabel = root.querySelector('#target-val');
+  if(tRange && tLabel){
+    tRange.addEventListener('input', () => { tLabel.textContent = `${tRange.value}s`; });
+    tRange.addEventListener('change', () => {
+      let v = parseInt(tRange.value, 10);
+      if(!Number.isFinite(v) || v < 10) v = 10;
+      if(v > 300) v = 300;
+      settings.targetSec = v;
+      saveSettings(settings);
+    });
+  }
+
+  // Start / Resume
+  root.querySelector('#start-btn')?.addEventListener('click', () => startPractice());
+  root.querySelector('#resume-btn')?.addEventListener('click', resumePractice);
+
+  // MCQ mode buttons + drill
   root.querySelectorAll('.mode-btn[data-mcq-mode]').forEach(b => {
     b.addEventListener('click', () => {
       const m = b.dataset.mcqMode;
@@ -975,12 +1020,10 @@ function renderHome(root){
       startPractice({ mode: 'topic_drill', drillTopic: r.dataset.drillTopic });
     });
   });
+
+  // Mini save / load
   root.querySelector('#save-btn').addEventListener('click', downloadStats);
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
-  root.querySelector('#reset-all-btn').addEventListener('click', resetAllStats);
-  root.querySelectorAll('[data-reset-playlist]').forEach(b => {
-    b.addEventListener('click', () => resetStatsForPlaylist(b.dataset.resetPlaylist));
-  });
 }
 function chipHtml(cls, value, label, on){
   return `<div class="chip ${cls} ${on?'on':''}" data-value="${value === null ? '__null__' : esc(value)}">${esc(label)}</div>`;
