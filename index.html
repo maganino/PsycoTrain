@@ -834,7 +834,7 @@ function renderHome(root){
           <input type="number" id="target-input" min="5" max="3600" step="5" value="${settings.targetSec}">
           <span>seconds (${Math.floor(settings.targetSec/60)}:${String(settings.targetSec%60).padStart(2,'0')})</span>
         </div>
-        <div class="sub" style="font-size:11px;margin-top:4px">SJT uses its own per-question timing (90s / 40s) — this setting only affects numerical.</div>
+        <div class="sub" style="font-size:11px;margin-top:4px">SJT uses its own per-question timing (120s reading + first answer, 40s thereafter) — this setting only affects numerical.</div>
       </div>
 
       <div class="actions">
@@ -1581,7 +1581,7 @@ function renderGuideCritical(root){
           <li><strong>Cherchez la triangulation</strong> : une réaction qui n'en nomme qu'une seule est rarement au-dessus de +/-.</li>
           <li><strong>Chiffrage = forte présomption de ++</strong> (nb de cas, € impact, délai). Absence de chiffrage = plafond à +.</li>
           <li><strong>Séparer conformité passée et décision future</strong> est un signal ++ fréquent à l'ONVA.</li>
-          <li><strong>Temps cible : 90 s pour la première réaction (lecture), 40 s pour les suivantes.</strong></li>
+          <li><strong>Temps cible : 120 s pour la lecture + première réaction, 40 s pour les suivantes.</strong></li>
         </ul>
       </div>
     </div>
@@ -1912,7 +1912,7 @@ function renderGuideAgility(root){
           <li><strong>Chercher la time-box</strong> : « 2 jours », « vendredi midi », « cette semaine » — son absence plafonne à +/-.</li>
           <li><strong>L'initiative hors mandat</strong> (se proposer pilote, REX à l'équipe, doc méthode) est le marqueur le plus discriminant du ++.</li>
           <li><strong>Attention au rôle-modèle</strong> : si la situation mentionne la visibilité du protagoniste, une réaction qui ignore ce signal plafonne au + même si elle est personnellement bonne.</li>
-          <li><strong>Temps cible : 90 s pour la première réaction (lecture), 40 s pour les suivantes.</strong></li>
+          <li><strong>Temps cible : 120 s pour la lecture + première réaction, 40 s pour les suivantes.</strong></li>
         </ul>
       </div>
     </div>
@@ -2618,14 +2618,14 @@ function pickAnswer(letter){
   render();
 }
 // Effective target time:
-//   - SJT: 90s for the first reaction of a situation (reading time), 40s for r2/r3/r4.
+//   - SJT: 120s for the first reaction of a situation (reading + first answer), 40s for r2/r3/r4.
 //     If a question carries its own `target_sec`, that value wins.
 //   - Non-SJT: user-configurable default from settings.
 function effectiveTargetMs(){
   const q = DB && SESSION ? DB.questions.find(x => x.id === SESSION.currentQid) : null;
   if(q && q.type === 'sjt'){
     if(typeof q.target_sec === 'number') return q.target_sec * 1000;
-    return (SESSION.sjt_first_reaction ? 90 : 40) * 1000;
+    return (SESSION.sjt_first_reaction ? 120 : 40) * 1000;
   }
   if(q && q.type === 'mcq'){
     if(typeof q.target_sec === 'number') return q.target_sec * 1000;
