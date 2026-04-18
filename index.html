@@ -528,7 +528,12 @@ function lsDel(k){ try{ localStorage.removeItem(k); }catch(e){} }
 function shuffle(arr){ const a = [...arr]; for(let i = a.length-1; i > 0; i--){ const j = Math.random()*(i+1)|0; [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
 function loadStats(){ return lsGet(LS_STATS) || {}; }
-function saveStats(s){ return lsSet(LS_STATS, s); }
+// STATS_DIRTY flips whenever stats mutate — used to decide whether the save
+// prompt is worth showing on test exit. Cleared after a successful load/save
+// to the default stats file, and explicitly at the end of init() so app-open
+// cleanup doesn't trigger a save prompt.
+let STATS_DIRTY = false;
+function saveStats(s){ STATS_DIRTY = true; return lsSet(LS_STATS, s); }
 // Default target times per question type (in seconds)
 const DEFAULT_TARGET_SEC = {
   'sjt': 55,                // ~75 min / ~80 reactions
@@ -720,6 +725,109 @@ function downloadStats(){
 }
 
 // ============================================================================
+// Default-path stats sync (File System Access API + IndexedDB handle cache).
+// The user picks their iCloud stats.json once (suggested location:
+//   /Users/ninonenni/Library/Mobile Documents/com~apple~CloudDocs/exercise/PsycoTrain/stats.json
+// ). We persist the FileSystemFileHandle in IndexedDB; every subsequent load
+// and save reuses it silently — effectively the "default path".
+// Fallback on Safari/iOS (no FSA): existing download/upload dialogs.
+// ============================================================================
+const STATS_DEFAULT_NAME = 'stats.json';
+const FSA_DB_NAME = 'psycotrain_fsa';
+const FSA_STORE = 'handles';
+const FSA_HANDLE_KEY = 'stats_file';
+
+function hasFSA(){ return typeof window !== 'undefined' && 'showSaveFilePicker' in window; }
+
+function fsaDb(){
+  return new Promise((res, rej) => {
+    const req = indexedDB.open(FSA_DB_NAME, 1);
+    req.onupgradeneeded = () => req.result.createObjectStore(FSA_STORE);
+    req.onsuccess = () => res(req.result);
+    req.onerror = () => rej(req.error);
+  });
+}
+async function fsaGetHandle(){
+  try {
+    const db = await fsaDb();
+    return await new Promise((res, rej) => {
+      const tx = db.transaction(FSA_STORE, 'readonly');
+      const r = tx.objectStore(FSA_STORE).get(FSA_HANDLE_KEY);
+      r.onsuccess = () => res(r.result || null);
+      r.onerror = () => rej(r.error);
+    });
+  } catch(e){ return null; }
+}
+async function fsaSetHandle(h){
+  const db = await fsaDb();
+  await new Promise((res, rej) => {
+    const tx = db.transaction(FSA_STORE, 'readwrite');
+    tx.objectStore(FSA_STORE).put(h, FSA_HANDLE_KEY);
+    tx.oncomplete = () => res();
+    tx.onerror = () => rej(tx.error);
+  });
+}
+async function fsaEnsurePermission(handle, mode){
+  const opts = { mode };
+  if((await handle.queryPermission(opts)) === 'granted') return true;
+  return (await handle.requestPermission(opts)) === 'granted';
+}
+
+// Called at app startup. User can cancel; returns quickly in that case.
+async function promptLoadStats(){
+  if(!confirm('Load stats from saved file?\n(default: iCloud PsycoTrain/stats.json)')) return;
+  if(!hasFSA()){ pickStatsFile(); return; }
+  try {
+    let handle = await fsaGetHandle();
+    if(!handle){
+      // First run: user picks the iCloud stats.json. The browser can't seed a
+      // full path but remembers the folder for subsequent pickers.
+      const picked = await window.showOpenFilePicker({
+        types: [{ description: 'Stats JSON', accept: { 'application/json': ['.json'] } }],
+        multiple: false,
+      }).catch(() => null);
+      handle = picked && picked[0] ? picked[0] : null;
+      if(!handle) return;
+      await fsaSetHandle(handle);
+    }
+    if(!(await fsaEnsurePermission(handle, 'read'))){ toast('Permission denied'); return; }
+    const file = await handle.getFile();
+    const txt = await file.text();
+    mergeStatsFromObject(JSON.parse(txt));
+    STATS_DIRTY = false;
+  } catch(e){
+    toast('Load failed: ' + (e.message || e));
+  }
+}
+
+// Called on test exit / end-of-quiz / results-back. Skips silently if the
+// session didn't change any stats.
+async function promptSaveStats(){
+  if(!STATS_DIRTY) return;
+  if(!confirm('Save stats to file?\n(default: iCloud PsycoTrain/stats.json)')) return;
+  if(!hasFSA()){ downloadStats(); STATS_DIRTY = false; return; }
+  try {
+    let handle = await fsaGetHandle();
+    if(!handle){
+      handle = await window.showSaveFilePicker({
+        suggestedName: STATS_DEFAULT_NAME,
+        types: [{ description: 'Stats JSON', accept: { 'application/json': ['.json'] } }],
+      }).catch(() => null);
+      if(!handle) return;
+      await fsaSetHandle(handle);
+    }
+    if(!(await fsaEnsurePermission(handle, 'readwrite'))){ toast('Permission denied'); return; }
+    const w = await handle.createWritable();
+    await w.write(JSON.stringify(loadStats(), null, 2));
+    await w.close();
+    STATS_DIRTY = false;
+    toast('Stats saved');
+  } catch(e){
+    toast('Save failed: ' + (e.message || e));
+  }
+}
+
+// ============================================================================
 // UI
 // ============================================================================
 const TYPE_LABELS = {
@@ -789,6 +897,7 @@ function toast(msg){
 }
 
 let SCROLL_TARGET = 'top'; // 'top' | 'explanation' | 'none'
+let PLAYLIST_SCROLL_X = 0; // preserves horizontal scroll of #playlist-chips across re-renders
 function render(){
   const root = document.getElementById('root');
   root.innerHTML = '';
@@ -1069,9 +1178,15 @@ function renderHome(root){
     </div>
   `));
 
+  // Restore horizontal scroll position (chip click triggers re-render, which would
+  // otherwise reset the bar to scrollLeft=0 and hide the user's chosen chip).
+  const plBarEl = root.querySelector('#playlist-chips');
+  if(plBarEl) plBarEl.scrollLeft = PLAYLIST_SCROLL_X;
+
   // Wire up playlist chips → switch playlist.
   root.querySelectorAll('#playlist-chips .chip').forEach(c => {
     c.addEventListener('click', () => {
+      PLAYLIST_SCROLL_X = c.parentElement.scrollLeft;
       const newKey = c.dataset.value === '__null__' ? null : c.dataset.value;
       settings.playlist = newKey;
       // Adjust default target time when switching: non-SJT playlists benefit
@@ -2985,10 +3100,11 @@ function resumePractice(){
   MODE = 'practice';
   render();
 }
-function exitPractice(){
+async function exitPractice(){
   stopTimer();
   if(SESSION && SESSION.picked.length > 1) saveSession(SESSION);
   else clearSession();
+  await promptSaveStats();
   SESSION = null;
   MODE = 'home';
   SCROLL_TARGET = 'top';
@@ -3008,7 +3124,15 @@ function startSjtTimer(){
     const rem = sc.deadline_ms - Date.now();
     const el = document.getElementById('sjt-scn-rem');
     const hdr = document.getElementById('sjt-scn-header');
-    if(el) el.textContent = fmtTime(Math.max(0, rem));
+    const stickyEl = document.getElementById('sjt-scn-rem-sticky');
+    const remTxt = fmtTime(Math.max(0, rem));
+    if(el) el.textContent = remTxt;
+    if(stickyEl){
+      stickyEl.textContent = remTxt;
+      stickyEl.className = 'tmr';
+      if(rem <= 0) stickyEl.classList.add('over');
+      else if(rem < 30 * 1000) stickyEl.classList.add('warn');
+    }
     if(hdr){
       hdr.classList.remove('warn', 'over');
       if(rem <= 0) hdr.classList.add('over');
@@ -3203,7 +3327,12 @@ function advanceQuestion(){
       render();
       return;
     }
-    stopTimer(); toast('No more questions'); MODE='home'; SESSION=null; clearSession(); render(); return;
+    stopTimer();
+    toast('No more questions');
+    promptSaveStats().finally(() => {
+      MODE='home'; SESSION=null; clearSession(); render();
+    });
+    return;
   }
 
   // SJT: show all reactions of the situation together in the new per-scenario flow.
@@ -3431,11 +3560,19 @@ function renderSjtScenario(root){
   const allRated = ratedCount === total;
   const submitLbl = revealed ? 'Next scenario →' : (allRated ? 'Submit all' : `Submit (${ratedCount}/${total} rated)`);
 
+  // Compact sticky countdown chip (mirrors MCQ .tmr) — stays visible while scrolling.
+  let stickyTimerCls = 'tmr';
+  if(revealed) stickyTimerCls = 'tmr';
+  else if(expired) stickyTimerCls = 'tmr over';
+  else if(remainingMs < 30 * 1000) stickyTimerCls = 'tmr warn';
+  const stickyTimerTxt = revealed ? '—' : fmtTime(remainingMs);
+
   root.appendChild($(`
     <div class="practice">
       <div class="hdr">
         <div class="hdr-row">
           <div class="progress">Scenario · ${ratedCount}/${total} rated · ${Number.isInteger(SESSION.correct_count||0)?(SESSION.correct_count||0):(SESSION.correct_count||0).toFixed(1)}/${SESSION.answered_count||0} ✓</div>
+          <div class="${stickyTimerCls}" id="sjt-scn-rem-sticky">${stickyTimerTxt}</div>
           <button class="exit" id="exit-btn">Exit</button>
         </div>
       </div>
@@ -3773,9 +3910,10 @@ function renderResults(root){
     </div>
   `));
 
-  root.querySelector('#results-back').addEventListener('click', () => {
+  root.querySelector('#results-back').addEventListener('click', async () => {
     // Persist stats (already recorded per-question); clear session.
     clearSession();
+    await promptSaveStats();
     SESSION = null;
     MODE = 'home';
     SCROLL_TARGET = 'top';
@@ -3786,7 +3924,7 @@ function renderResults(root){
 // ============================================================================
 // Init
 // ============================================================================
-function init(){
+async function init(){
   // questions.js sets window.QUESTIONS_DB synchronously via the <script> tag
   if(!window.QUESTIONS_DB){
     document.getElementById('root').innerHTML = `
@@ -3815,6 +3953,14 @@ function init(){
     if(purged) saveStats(stats);
     localStorage.setItem(CLEANUP_KEY, '1');
   }
+
+  // Ask the user whether to load stats from the default file. Confirm() runs
+  // before first render so the home screen opens with fresh data.
+  await promptLoadStats();
+  // Any dirty-flag flip from init-time cleanup or merge is not user-driven —
+  // start the session with a clean slate so we don't prompt to save on exit
+  // unless the user actually answered something.
+  STATS_DIRTY = false;
 
   render();
 }
