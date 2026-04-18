@@ -3125,6 +3125,7 @@ function startSjtTimer(){
     const el = document.getElementById('sjt-scn-rem');
     const hdr = document.getElementById('sjt-scn-header');
     const stickyEl = document.getElementById('sjt-scn-rem-sticky');
+    const stickyBar = document.getElementById('sjt-scn-bar-sticky');
     const remTxt = fmtTime(Math.max(0, rem));
     if(el) el.textContent = remTxt;
     if(stickyEl){
@@ -3132,6 +3133,14 @@ function startSjtTimer(){
       stickyEl.className = 'tmr';
       if(rem <= 0) stickyEl.classList.add('over');
       else if(rem < 30 * 1000) stickyEl.classList.add('warn');
+    }
+    if(stickyBar){
+      const totalMs = (sc.duration_sec || 0) * 1000;
+      const pct = totalMs > 0 ? Math.max(0, Math.min(100, (rem / totalMs) * 100)) : 0;
+      stickyBar.style.width = pct + '%';
+      stickyBar.className = 'time-bar';
+      if(rem <= 0) stickyBar.classList.add('over');
+      else if(pct < 20) stickyBar.classList.add('warn');
     }
     if(hdr){
       hdr.classList.remove('warn', 'over');
@@ -3560,12 +3569,25 @@ function renderSjtScenario(root){
   const allRated = ratedCount === total;
   const submitLbl = revealed ? 'Next scenario →' : (allRated ? 'Submit all' : `Submit (${ratedCount}/${total} rated)`);
 
-  // Compact sticky countdown chip (mirrors MCQ .tmr) — stays visible while scrolling.
+  // Compact sticky countdown chip + shrinking bar (mirrors MCQ .tmr + .time-bar)
+  // so both the remaining time and a visual depletion cue stay visible while
+  // scrolling through the reaction list.
+  const totalMs = (sc.duration_sec || 0) * 1000;
   let stickyTimerCls = 'tmr';
-  if(revealed) stickyTimerCls = 'tmr';
-  else if(expired) stickyTimerCls = 'tmr over';
+  if(expired) stickyTimerCls = 'tmr over';
   else if(remainingMs < 30 * 1000) stickyTimerCls = 'tmr warn';
   const stickyTimerTxt = revealed ? '—' : fmtTime(remainingMs);
+  let stickyBarPct, stickyBarCls;
+  if(revealed){
+    stickyBarPct = 0;
+    stickyBarCls = '';
+  } else if(expired || totalMs <= 0){
+    stickyBarPct = 0;
+    stickyBarCls = 'over';
+  } else {
+    stickyBarPct = Math.max(0, Math.min(100, (remainingMs / totalMs) * 100));
+    stickyBarCls = stickyBarPct < 20 ? 'warn' : '';
+  }
 
   root.appendChild($(`
     <div class="practice">
@@ -3575,6 +3597,7 @@ function renderSjtScenario(root){
           <div class="${stickyTimerCls}" id="sjt-scn-rem-sticky">${stickyTimerTxt}</div>
           <button class="exit" id="exit-btn">Exit</button>
         </div>
+        <div class="time-bar-wrap"><div class="time-bar ${stickyBarCls}" id="sjt-scn-bar-sticky" style="width:${stickyBarPct}%"></div></div>
       </div>
 
       <div class="${hdrCls}" id="sjt-scn-header">
