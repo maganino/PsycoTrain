@@ -2177,6 +2177,7 @@ function renderEpsoExplorer(root){
         <div class="tab" data-tab="duties">11 Duties</div>
         <div class="tab" data-tab="frameworks">Frameworks</div>
         <div class="tab" data-tab="traps">Traps</div>
+        <div class="tab" data-tab="knowledge">DM Knowledge</div>
       </div>
 
       <!-- TAB 1 · EU REGULATION TIMELINE -->
@@ -2699,6 +2700,186 @@ function renderEpsoExplorer(root){
         </div>
 
       </div>
+
+      <!-- TAB 5 · DM KNOWLEDGE — course-inspired reference across 8 chapters -->
+      <div class="tab-body" data-body="knowledge">
+        <p class="intro">Compact reference across the 8 chapters of a foundational Data Management course. Click any chapter to expand.</p>
+
+        <div class="timeline">
+
+          <div class="tl-card" data-open>
+            <div class="tl-year">Ch 1</div>
+            <div class="tl-name">Fundamentals of Data Management</div>
+            <div class="tl-tag">Intro · benefits · lifecycle · concepts · QA · roles · challenges · emerging trends</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Why DM matters: data is an asset. When managed well, it drives decisions, operational efficiency and compliance. Badly managed, it becomes liability — risk, cost, lost trust.
+              </div>
+              <dl>
+                <dt>Definition</dt><dd>Systematic practice of collecting, organising, protecting and using data throughout its lifecycle.</dd>
+                <dt>Benefits</dt><dd>Better decisions · operational efficiency · reduced risk · regulatory compliance · innovation velocity · competitive edge.</dd>
+                <dt>Data lifecycle</dt><dd>Create → Store → Use → Share → Archive → Destroy. Governance and security touch every stage.</dd>
+                <dt>Key concepts</dt><dd>Master data (business nouns — Customer, Product) · reference data (code lists) · metadata (data about data) · lineage (origin + transformations) · stewardship.</dd>
+                <dt>QA &amp; cleansing</dt><dd>Profile → detect issues → correct → monitor continuously. Standards: ISO 8000 (MDM-oriented) · ISO/IEC 25012 (15 quality characteristics).</dd>
+                <dt>Roles</dt><dd>Owner (accountable) · Steward (executes, maintains quality) · Custodian (IT-operational) · CDO (strategy) · DPO (privacy compliance).</dd>
+                <dt>Challenges</dt><dd>Data silos · quality decay · compliance burden · skills gap · legacy integration.</dd>
+                <dt>Emerging trends</dt><dd><strong>DataOps</strong> (CI/CD for data pipelines) · <strong>data mesh</strong> (domain-oriented decentralised ownership) · <strong>data fabric</strong> (metadata-driven auto-integration layer) · <strong>data contracts</strong> (producer/consumer schema agreements) · <strong>vector databases</strong> (AI-era storage of embeddings) · <strong>synthetic data</strong> · <strong>federated learning</strong> (train without centralising data).</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> roles are the most-tested slice. Owner (accountable) vs Steward (executes) vs Custodian (IT) vs CDO (strategy) vs DPO (privacy).</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 2</div>
+            <div class="tl-name">Data Collection &amp; Acquisition</div>
+            <div class="tl-tag">Sources · methods · sampling · validation · ethics</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Every downstream quality problem starts (or is prevented) at collection. The job is to gather the right data, from trustworthy sources, under a consent and validation regime that survives audit.
+              </div>
+              <dl>
+                <dt>Types of sources</dt><dd><strong>Internal vs external</strong> (CRM/ERP vs third-party feeds). <strong>Structured</strong> (RDB, tabular) vs <strong>semi-structured</strong> (JSON, XML, logs) vs <strong>unstructured</strong> (text, images, audio, video). <strong>Streaming vs batch</strong>.</dd>
+                <dt>Practical examples</dt><dd>Operational systems (CRM, ERP), IoT sensors, clickstream logs, third-party APIs, social media, surveys, censuses, open data portals.</dd>
+                <dt>Collection methods</dt><dd><strong>Active</strong> — surveys, interviews, experiments (subject aware). <strong>Passive</strong> — sensors, logs, web analytics, scraping (subject often unaware — ethics!). <strong>Integration</strong> — API ingestion, ETL feeds, CDC from source systems.</dd>
+                <dt>Data sampling</dt><dd>When the population is too big: <strong>random</strong> (equal chance) · <strong>stratified</strong> (preserves group proportions) · <strong>systematic</strong> (every Nth) · <strong>cluster</strong> (sample whole groups). Sample size depends on confidence level + margin of error.</dd>
+                <dt>Data validation</dt><dd>Syntax (type, format, regex) · domain (enums, ranges) · referential integrity (FK exists) · cross-field (end_date ≥ start_date) · business rules (order total = sum of lines). Validate <em>at ingestion</em>, not later — cost compounds.</dd>
+                <dt>Best practices</dt><dd>Document provenance (source, timestamp, owner) · log every ingestion · version schemas · validate at boundary · isolate raw vs curated zones.</dd>
+                <dt>Challenges</dt><dd>Source drift (schema changes unannounced) · access rights · consent tracking · latency vs completeness tradeoff · volume.</dd>
+                <dt>Ethics</dt><dd>Consent (GDPR Art 6 lawful basis) · purpose limitation · minimisation · bias mitigation (AI Act Art 10) · fair use · transparency.</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> sampling types are classic MCQ fodder. Stratified ≠ systematic. Validation trap: anonymisation is not a validation step — it's a privacy control.</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 3</div>
+            <div class="tl-name">Data Processing &amp; Integration</div>
+            <div class="tl-tag">Cleaning · transformation · ETL/ELT · streaming · pipelines</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Raw data becomes usable here. Three goals: standardise (same format), reconcile (same meaning across sources), enrich (add derived signal). Every transformation is documented lineage.
+              </div>
+              <dl>
+                <dt>Data cleaning</dt><dd>Handle <strong>missing values</strong> (drop · impute mean/median · forward-fill · model-predict) · <strong>outliers</strong> (investigate vs cap) · <strong>duplicates</strong> (dedup keys) · <strong>encoding</strong> (UTF-8, one-hot, label-encode).</dd>
+                <dt>Transformation techniques</dt><dd><strong>Normalisation</strong> (0–1 min-max · z-score standardise) · <strong>aggregation</strong> · <strong>pivoting</strong> · joining · type casting · derived features (e.g. rolling average).</dd>
+                <dt>ETL</dt><dd>Extract → Transform → Load. On-prem pattern — transformations run in a dedicated engine (Informatica, SSIS, Talend) before landing in target. Best when source compute &gt; target compute.</dd>
+                <dt>ELT</dt><dd>Extract → Load → Transform. Modern cloud pattern — raw lands in the warehouse, transformations run in-warehouse using SQL (e.g. dbt). Works when warehouse compute is cheap + elastic.</dd>
+                <dt>Integration approaches</dt><dd>ETL · ELT · <strong>data virtualisation</strong> (federation — query without moving data) · streaming pipelines · API-to-API · <strong>CDC</strong> (Change Data Capture — propagate source changes in near-real-time via log mining).</dd>
+                <dt>Real-time processing</dt><dd>Event streams via <strong>Kafka</strong> (partitioned topics, producer/consumer) or Kinesis. Stream processing: <strong>Flink</strong>, Spark Structured Streaming, Kafka Streams. Latency goals in ms–seconds.</dd>
+                <dt>Big data processing</dt><dd>The 5 Vs (Volume · Velocity · Variety · Veracity · Value). Distributed frameworks: Spark (in-memory), Hadoop MapReduce (legacy batch), Dask (Python-native).</dd>
+                <dt>Challenges</dt><dd>Schema drift · backfills · quality propagation · orchestration · performance tuning · cost.</dd>
+                <dt>Pipelines</dt><dd>Orchestrators: <strong>Airflow</strong> (DAGs of tasks, retries, SLAs) · Prefect · Dagster. Principles: idempotency (re-run safe) · incremental loads (only new data) · observability (logs, metrics, alerts).</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> ETL vs ELT is the big one. Keywords: 'on-prem / dedicated engine' → ETL. 'cloud warehouse / dbt / SQL-native' → ELT. CDC is about <em>propagating</em> source changes, not batch loading.</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 4</div>
+            <div class="tl-name">Data Storage &amp; Management</div>
+            <div class="tl-tag">DBMS · types · warehousing · archiving · retention · optimisation</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Choice of storage engine follows the access pattern. OLTP (many small transactions) and OLAP (few large scans) have opposite optimal designs. Lakehouses try to bridge both.
+              </div>
+              <dl>
+                <dt>Types of storage</dt><dd><strong>Relational</strong> (RDBMS — PostgreSQL, MySQL, Oracle, SQL Server) · <strong>NoSQL</strong>: key-value (Redis), document (MongoDB), column-family (Cassandra), graph (Neo4j), time-series (InfluxDB, Timestream). <strong>Object storage</strong> (S3, Azure Blob, GCS). <strong>File systems</strong> (HDFS).</dd>
+                <dt>DBMS</dt><dd>Software layer over storage providing transactions, queries, concurrency control. <strong>OLTP</strong> (row-oriented, ACID, small transactions — order entry) vs <strong>OLAP</strong> (columnar, bulk scans — analytics). <strong>ACID</strong>: Atomicity, Consistency, Isolation, Durability.</dd>
+                <dt>Data warehousing</dt><dd>Subject-oriented, integrated, time-variant, non-volatile (Inmon). Modern cloud warehouses: <strong>Snowflake</strong>, BigQuery, Redshift, Databricks SQL. Typically columnar, MPP.</dd>
+                <dt>Archiving &amp; backups</dt><dd>Snapshots · point-in-time recovery · disaster recovery. <strong>RPO</strong> (Recovery Point Objective — data loss tolerance) · <strong>RTO</strong> (Recovery Time Objective — downtime tolerance).</dd>
+                <dt>Blob lifecycle</dt><dd>Storage tiers by access frequency: <strong>hot</strong> (frequent, highest storage cost, cheap retrieval) · <strong>cool/warm</strong> (infrequent) · <strong>archive</strong> (rarely, cheapest storage, highest retrieval cost + latency hours). Lifecycle rules auto-transition objects.</dd>
+                <dt>Retention &amp; compliance</dt><dd>Data retention policies align with GDPR (minimisation), sector-specific laws (health, finance, tax). Legal holds override retention.</dd>
+                <dt>Storage optimisation</dt><dd>Compression (Parquet + Snappy/Zstd) · partitioning (by date, region) · indexing (B-tree, hash, bitmap) · clustering (co-locate related rows) · compaction (merge small files).</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> OLTP vs OLAP · ACID meaning · RPO vs RTO definitions. NoSQL categories are memorised differently than RDBMS.</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 5</div>
+            <div class="tl-name">Data Analysis &amp; Interpretation</div>
+            <div class="tl-tag">EDA · predictive · ML · text/sentiment · time series</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Extract insight from prepared data. The maturity ladder: descriptive (what happened) → diagnostic (why) → predictive (what will) → prescriptive (what to do).
+              </div>
+              <dl>
+                <dt>EDA</dt><dd>Exploratory Data Analysis — first pass on a new dataset. Summary stats (mean, median, std, min/max), distributions, correlations (Pearson/Spearman), quick visualisations (histogram, scatter, box plot). Goal: understand shape before modeling.</dd>
+                <dt>Predictive analytics</dt><dd><strong>Regression</strong> (linear, logistic, polynomial) · <strong>trees</strong> (decision tree, Random Forest, Gradient Boosting — XGBoost, LightGBM) · <strong>neural networks</strong> (deep learning). Workflow: train / validate / test split, cross-validation, hyperparameter tuning.</dd>
+                <dt>Machine learning</dt><dd><strong>Supervised</strong> (labeled data — regression + classification) · <strong>unsupervised</strong> (clustering — k-means, DBSCAN; dimensionality reduction — PCA, t-SNE, UMAP) · <strong>reinforcement</strong> (agent + reward).</dd>
+                <dt>Text &amp; sentiment analysis</dt><dd>Tokenisation · NER (Named Entity Recognition) · embeddings (word2vec, BERT, OpenAI embeddings) · sentiment classification (positive/negative/neutral). Tools: Azure AI Language, Hugging Face, spaCy.</dd>
+                <dt>Time series analysis</dt><dd>Decomposition: trend + seasonality + residual. Models: <strong>ARIMA</strong> (requires stationarity — differencing) · <strong>Prophet</strong> (handles seasonality + holidays natively) · <strong>LSTM</strong> (deep learning, long-range dependencies). Key concept: stationarity (mean/variance constant over time).</dd>
+                <dt>Interpreting</dt><dd>Confidence intervals · p-values · A/B testing · correlation ≠ causation (needs randomised design or careful causal inference). Always cross-check with domain expert.</dd>
+                <dt>Communicating</dt><dd>Match audience (exec vs analyst) · lead with the headline · show uncertainty · use visuals (chapter 6).</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> supervised vs unsupervised is basic — don't miss. Time-series: ARIMA needs stationarity. EDA is the phase before modeling, not after.</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 6</div>
+            <div class="tl-name">Data Visualization &amp; Reporting</div>
+            <div class="tl-tag">Principles · tools · dashboards · storytelling</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Visualisation is translation. Good visuals transmit insight in seconds; bad ones mislead. The rule: the chart serves the message, not the other way round.
+              </div>
+              <dl>
+                <dt>Principles</dt><dd>Chart matches the data: <strong>bar</strong> for categorical comparisons · <strong>line</strong> for trends over time · <strong>scatter</strong> for correlation · <strong>heatmap</strong> for matrices. Use <strong>pre-attentive attributes</strong> (position, length, colour, size) — the brain processes these before conscious thought. Minimise chartjunk (Tufte).</dd>
+                <dt>Tools</dt><dd><strong>Power BI</strong> (Microsoft, integrated with Microsoft Fabric — unified lakehouse + BI) · <strong>Tableau</strong> · <strong>Metabase</strong> (open source) · <strong>Looker</strong> · code-first: Matplotlib, Plotly, Seaborn, Altair.</dd>
+                <dt>Dashboards</dt><dd>Two archetypes: <strong>operational</strong> (real-time, narrow, single-purpose — e.g. call centre queue) · <strong>analytical</strong> (broader, interactive, drill-downs). Layout: KPI summary at top, details below. Self-service vs curated governance tradeoff.</dd>
+                <dt>Interactive</dt><dd>Filters · drill-downs · cross-highlighting · tooltips · parameterised views. Let users answer their own follow-up questions without a new request.</dd>
+                <dt>Storytelling</dt><dd>Narrative arc: hook → context → insight → recommendation → next step. The <strong>Minto Pyramid</strong>: lead with the answer, support with evidence.</dd>
+                <dt>Reporting best practices</dt><dd>Consistent naming · dated snapshots · audit trail · accessible (colourblind-safe palettes, alt text) · mobile-friendly · versioned.</dd>
+                <dt>Common pitfalls</dt><dd>Pie charts with &gt; 7 slices · truncated y-axis inflating small differences · 3-D perspective distortion · missing units · rainbow colourmap for ordered data (use viridis).</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> chart-type-by-data is a classic MCQ. Pre-attentive attributes: position &gt; length &gt; angle &gt; area &gt; colour (in accuracy).</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 7</div>
+            <div class="tl-name">Data Governance &amp; Compliance</div>
+            <div class="tl-tag">Policies · privacy · security · risk · monitoring</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                Governance is the operating system for data: who owns what, what can be done with it, how quality is measured, and how violations are detected. EU regs (Timeline tab) give the legal framing; operational frameworks give the implementation.
+              </div>
+              <dl>
+                <dt>Policies vs standards</dt><dd><strong>Policy</strong> = the rule ("personal data must be encrypted at rest"). <strong>Standard</strong> = the specific implementation ("AES-256, KMS-managed keys, rotation every 90 days"). <strong>Procedure</strong> = the steps. Policies are stable; standards evolve.</dd>
+                <dt>Regulatory compliance</dt><dd>EU: GDPR (2016/679), Reg 2018/1725, DGA, Data Act, AI Act, EHDS (see Timeline). Regional: HIPAA (US health), CCPA (California), PIPEDA (Canada). Sector: PCI-DSS (cards), SOX (financial reporting).</dd>
+                <dt>Privacy</dt><dd>GDPR core principles: lawfulness, fairness, transparency · purpose limitation · data minimisation · accuracy · storage limitation · integrity &amp; confidentiality · accountability. Data-subject rights (Art 15–22): access, rectification, erasure, portability, objection.</dd>
+                <dt>Security frameworks</dt><dd><strong>CIS Controls</strong> (18 critical controls, prioritised) · <strong>NIST CSF</strong> (Identify, Protect, Detect, Respond, Recover) · <strong>ISO 27001</strong> (ISMS certification standard). Azure Policy can auto-enforce CIS benchmarks on cloud resources.</dd>
+                <dt>Risk management</dt><dd>Identify → Assess (likelihood × impact) → Mitigate → Monitor. Formal tools: <strong>DPIA</strong> (Data Protection Impact Assessment — GDPR Art 35) · AI Impact Assessment (AI Act). Risk register is a living document.</dd>
+                <dt>Monitoring &amp; auditing</dt><dd>Continuous not annual. SIEM (Security Information and Event Management — Splunk, Sentinel, Elastic) aggregates logs and alerts. Audit trails for any change to sensitive data. Quarterly access reviews.</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> policy vs standard vs procedure distinction. NIST CSF 5 functions in order. DPIA trigger = "high risk to rights &amp; freedoms" (Art 35).</div>
+            </div>
+          </div>
+
+          <div class="tl-card">
+            <div class="tl-year">Ch 8</div>
+            <div class="tl-name">Data Management Meets AI</div>
+            <div class="tl-tag">AI-assisted collection · processing · viz · governance · future</div>
+            <div class="tl-body">
+              <div class="tl-context">
+                AI is now both a consumer and a contributor to the data stack. The interesting pattern: AI tools accelerate each DM phase, and AI systems need DM rigor (Art 10) to be safe.
+              </div>
+              <dl>
+                <dt>AI-assisted collection</dt><dd>OCR + form recognisers turn paper/PDF into structured data. Synthetic data generation (GANs, diffusion, LLMs) creates realistic samples that protect privacy. Smart web scrapers handle JavaScript, CAPTCHAs.</dd>
+                <dt>AI in processing</dt><dd>Auto-cleaning (anomaly detection, duplicate resolution via embeddings) · entity resolution (matching records across systems) · schema inference from raw files · auto-imputation of missing values with predictive models.</dd>
+                <dt>AI-driven visualisation</dt><dd>Natural-language to chart ("show me sales by region last quarter" → Power BI Copilot builds it). Auto-insight detection highlights anomalies in dashboards. Automated narrative generation drafts summary paragraphs.</dd>
+                <dt>AI-assisted governance</dt><dd>Auto-classification of data sensitivity · PII detection in free text · auto-tagging of new datasets · policy violation detection · drift monitoring on AI models themselves.</dd>
+                <dt>Future trends</dt><dd>AI-native platforms (vector DBs as first-class citizens — Pinecone, pgvector, Azure AI Search) · semantic layers over lakehouses · self-healing pipelines (auto-remediate common failures) · autonomous analytics (AI agents that ask and answer their own data questions).</dd>
+                <dt>Practical examples</dt><dd>Azure SQL automatic tuning (auto-create/drop indexes based on workload) · Snowflake Cortex (LLM functions in SQL) · Databricks Genie · Microsoft Fabric Copilot.</dd>
+              </dl>
+              <div class="tl-exam"><strong>Exam signal:</strong> AI Act Art 10 returns here — data governance for high-risk AI training data (relevance, representativeness, bias detection). Synthetic data is allowed by AI Act, not mandated.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   `));
 
