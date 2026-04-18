@@ -8,9 +8,9 @@ window.QUESTIONS_DB = {
   "sources": [
     "BOSA_Num",
     "BOSA_SJT",
-    "EPSO_AD426_DATA",
     "BOSA_SJT_BA_CRIT",
-    "BOSA_SJT_BA_AGIL"
+    "BOSA_SJT_BA_AGIL",
+    "EPSO_AD426_DATA"
   ],
   "questions": [
     {
@@ -6722,5706 +6722,6 @@ window.QUESTIONS_DB = {
       ],
       "correct": "E",
       "explanation": "Score attendu : ++\nCompétence testée : Collaborer C1+C5 (exemple + feedback) + Agilité A4 + Orienté Résultats R6 (apprentissage + responsabilité).\nCette réaction est exemplaire : vous assumez pleinement la responsabilité (R6), vous transformez le feedback en apprentissage structuré (A4), vous montrez l'exemple de vulnérabilité maîtrisée (C1), et vous instaurez des mécanismes de feedback durables (C5). Pourquoi ++ et non + : la reformulation protège l'anonymat du 360° tout en étant transparente, les trois changements sont directement liés aux constats, et la demande de coaching à Mme De Wilde crée un mécanisme d'accompagnement et de redevabilité. Vous ne vous contentez pas de promettre — vous mettez en place une structure qui rend le changement mesurable et durable."
-    },
-    {
-      "id": "epso_reg_001",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 1",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "GDPR Art. 99",
-      "figures": [],
-      "question": "When did the General Data Protection Regulation (Reg. (EU) 2016/679) become applicable?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "27 April 2016"
-        },
-        {
-          "letter": "B",
-          "text": "25 May 2018"
-        },
-        {
-          "letter": "C",
-          "text": "11 December 2018"
-        },
-        {
-          "letter": "D",
-          "text": "24 September 2023"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.\n· A: 27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.\n· C: 11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.\n· D: 24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks.",
-      "explanations": {
-        "A": "27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
-        "B": "Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.",
-        "C": "11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
-        "D": "24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
-      }
-    },
-    {
-      "id": "epso_reg_002",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 2",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Reg 2018/1725",
-      "figures": [],
-      "question": "Which regulation governs the processing of personal data by EU institutions, bodies, offices and agencies?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Regulation (EU) 2016/679 (GDPR)"
-        },
-        {
-          "letter": "B",
-          "text": "Regulation (EU) 2018/1725"
-        },
-        {
-          "letter": "C",
-          "text": "Directive (EU) 2019/1024 (Open Data)"
-        },
-        {
-          "letter": "D",
-          "text": "Regulation (EU) 2022/868 (DGA)"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.\n· A: GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.\n· C: The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.\n· D: The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies.",
-      "explanations": {
-        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
-        "B": "Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.",
-        "C": "The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.",
-        "D": "The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
-      }
-    },
-    {
-      "id": "epso_reg_003",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 3",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Open Data Dir. + Impl. Reg. 2023/138",
-      "figures": [],
-      "question": "Under the Open Data Directive (2019/1024), High-Value Datasets are defined in an Implementing Regulation with six thematic categories. Which of the following is NOT one of them?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Geospatial"
-        },
-        {
-          "letter": "B",
-          "text": "Meteorological"
-        },
-        {
-          "letter": "C",
-          "text": "Health"
-        },
-        {
-          "letter": "D",
-          "text": "Mobility"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.\n· D: Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
-      "explanations": {
-        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
-        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
-        "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
-        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
-      }
-    },
-    {
-      "id": "epso_reg_004",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 4",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "DGA Chapters II–IV + EDIB",
-      "figures": [],
-      "question": "Which of the following is NOT one of the four pillars of the Data Governance Act (Reg. (EU) 2022/868)?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Reuse of protected public-sector data"
-        },
-        {
-          "letter": "B",
-          "text": "Data intermediation services"
-        },
-        {
-          "letter": "C",
-          "text": "Data altruism"
-        },
-        {
-          "letter": "D",
-          "text": "Cloud-to-cloud switching rights"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct — the trap answer. Cloud / edge switching rights belong to the Data Act (Ch VI of Reg. 2023/2854), NOT the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB) — the expert body that advises the Commission on data-spaces deployment and cross-sector interoperability.\n· A: Pillar 1 — reuse of protected public-sector data (health records, statistics, IP-protected, confidential commercial data). This extends Open Data Directive logic to data that can't be made 'open by default'.\n· B: Pillar 2 — data intermediation services. Neutral third parties that connect data holders and data users under a notification regime (Ch III of the DGA). They can't commercialise the data they broker.\n· C: Pillar 3 — data altruism for causes of general interest. Comes with a standardised European Data Altruism Consent Form (Ch IV) so donors can share data confidently, and a register of recognised altruism organisations.",
-      "explanations": {
-        "A": "Pillar 1 — reuse of protected public-sector data (health records, statistics, IP-protected, confidential commercial data). This extends Open Data Directive logic to data that can't be made 'open by default'.",
-        "B": "Pillar 2 — data intermediation services. Neutral third parties that connect data holders and data users under a notification regime (Ch III of the DGA). They can't commercialise the data they broker.",
-        "C": "Pillar 3 — data altruism for causes of general interest. Comes with a standardised European Data Altruism Consent Form (Ch IV) so donors can share data confidently, and a register of recognised altruism organisations.",
-        "D": "Correct — the trap answer. Cloud / edge switching rights belong to the Data Act (Ch VI of Reg. 2023/2854), NOT the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB) — the expert body that advises the Commission on data-spaces deployment and cross-sector interoperability."
-      }
-    },
-    {
-      "id": "epso_reg_005",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 5",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Data Act Ch II–VI",
-      "figures": [],
-      "question": "A manufacturer of connected coffee machines must comply with which chapter of the Data Act (Reg. (EU) 2023/2854) when the user asks to access the usage data the machine generates?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Chapter II — access to product data by users"
-        },
-        {
-          "letter": "B",
-          "text": "Chapter III — B2B data sharing on FRAND terms"
-        },
-        {
-          "letter": "C",
-          "text": "Chapter V — B2G in cases of exceptional need"
-        },
-        {
-          "letter": "D",
-          "text": "Chapter VI — cloud and edge switching"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Ch II of the Data Act gives the user of a connected product the right to access the data it generates. The user can also instruct the data holder to share this data with a third party of their choice — for example a repair shop, a competitor aftermarket service, or an analytics provider.\n· B: Ch III deals with B2B data sharing when a legal obligation to share exists — it sets FRAND (Fair, Reasonable And Non-Discriminatory) terms so the data holder can't impose abusive conditions. Not triggered by a consumer asking for their own usage data.\n· C: Ch V covers public-body access to private-sector data in situations of exceptional public need (public emergency, crisis). A user wanting their own data isn't a public emergency and isn't a public body.\n· D: Ch VI is about switching between cloud / edge providers — no ransom fees, functional equivalence, portability of workloads. Different stakeholders, different chapter, unrelated to IoT user-data access.",
-      "explanations": {
-        "A": "Correct. Ch II of the Data Act gives the user of a connected product the right to access the data it generates. The user can also instruct the data holder to share this data with a third party of their choice — for example a repair shop, a competitor aftermarket service, or an analytics provider.",
-        "B": "Ch III deals with B2B data sharing when a legal obligation to share exists — it sets FRAND (Fair, Reasonable And Non-Discriminatory) terms so the data holder can't impose abusive conditions. Not triggered by a consumer asking for their own usage data.",
-        "C": "Ch V covers public-body access to private-sector data in situations of exceptional public need (public emergency, crisis). A user wanting their own data isn't a public emergency and isn't a public body.",
-        "D": "Ch VI is about switching between cloud / edge providers — no ransom fees, functional equivalence, portability of workloads. Different stakeholders, different chapter, unrelated to IoT user-data access."
-      }
-    },
-    {
-      "id": "epso_reg_006",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 6",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "AI Act Art. 5",
-      "figures": [],
-      "question": "Under the AI Act (Reg. (EU) 2024/1689), a real-time remote biometric identification system used in public spaces for law-enforcement purposes is categorised as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Minimal risk"
-        },
-        {
-          "letter": "B",
-          "text": "Limited risk"
-        },
-        {
-          "letter": "C",
-          "text": "High risk (subject to conformity assessment)"
-        },
-        {
-          "letter": "D",
-          "text": "Unacceptable risk (banned, with narrow exceptions)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Art. 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement purposes as an 'unacceptable' practice, banned save narrowly defined exceptions (serious crime, prior judicial or independent administrative authorisation). This is the sharpest cut on the AI Act's risk pyramid.\n· A: Minimal risk covers the bulk of AI systems — spam filters, recommendation engines, games — with voluntary codes of conduct and no mandatory obligations. Law-enforcement biometric ID is nowhere near this tier.\n· B: Limited risk triggers transparency duties — chatbots must disclose they are AI, deepfakes must be labelled. The concern is informed use, not safety. Biometric ID sits much higher on the pyramid.\n· C: Tempting because 'high risk' sounds severe, but it isn't severe enough. High-risk AI (Annex III) requires conformity assessment, documentation and human oversight — yet many biometric-ID uses still get more restrictive treatment. Real-time remote ID in public for police is the very top.",
-      "explanations": {
-        "A": "Minimal risk covers the bulk of AI systems — spam filters, recommendation engines, games — with voluntary codes of conduct and no mandatory obligations. Law-enforcement biometric ID is nowhere near this tier.",
-        "B": "Limited risk triggers transparency duties — chatbots must disclose they are AI, deepfakes must be labelled. The concern is informed use, not safety. Biometric ID sits much higher on the pyramid.",
-        "C": "Tempting because 'high risk' sounds severe, but it isn't severe enough. High-risk AI (Annex III) requires conformity assessment, documentation and human oversight — yet many biometric-ID uses still get more restrictive treatment. Real-time remote ID in public for police is the very top.",
-        "D": "Correct. Art. 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement purposes as an 'unacceptable' practice, banned save narrowly defined exceptions (serious crime, prior judicial or independent administrative authorisation). This is the sharpest cut on the AI Act's risk pyramid."
-      }
-    },
-    {
-      "id": "epso_reg_007",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 7",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "AI Act Art. 10",
-      "figures": [],
-      "question": "Article 10 of the AI Act imposes data-governance requirements on training, validation and test datasets of high-risk AI systems. Which obligation is specifically listed by Article 10?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Mandatory open-data publication of all training datasets"
-        },
-        {
-          "letter": "B",
-          "text": "Examination of possible biases and appropriate measures to detect, prevent and mitigate them"
-        },
-        {
-          "letter": "C",
-          "text": "Exclusive use of synthetic data"
-        },
-        {
-          "letter": "D",
-          "text": "Blanket prohibition of any personal data in training sets"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. This is the heart of the Art. 10 data-governance obligations — alongside relevance, representativeness, error-minimisation and documented design choices.\n· A: There is no blanket obligation to publish training datasets openly. Trade secrets, IP, personal data and security concerns all push against that. Art. 10 focuses on the quality of the datasets, not their public availability.\n· C: Synthetic data (artificially generated) is explicitly allowed and can actually help satisfy bias-mitigation obligations when real data is scarce or skewed. But the AI Act doesn't require synthetic-only training — the key criteria are relevance and representativeness, whatever the source.\n· D: Personal data may be processed in training sets under specific safeguards. Art. 10(5) even allows processing of special categories of data (health, biometric, political opinions) where strictly necessary for bias monitoring and correction — a narrow derogation justified by the public interest in fair AI.",
-      "explanations": {
-        "A": "There is no blanket obligation to publish training datasets openly. Trade secrets, IP, personal data and security concerns all push against that. Art. 10 focuses on the quality of the datasets, not their public availability.",
-        "B": "Correct. Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. This is the heart of the Art. 10 data-governance obligations — alongside relevance, representativeness, error-minimisation and documented design choices.",
-        "C": "Synthetic data (artificially generated) is explicitly allowed and can actually help satisfy bias-mitigation obligations when real data is scarce or skewed. But the AI Act doesn't require synthetic-only training — the key criteria are relevance and representativeness, whatever the source.",
-        "D": "Personal data may be processed in training sets under specific safeguards. Art. 10(5) even allows processing of special categories of data (health, biometric, political opinions) where strictly necessary for bias monitoring and correction — a narrow derogation justified by the public interest in fair AI."
-      }
-    },
-    {
-      "id": "epso_reg_008",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 8",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "COM(2025) 835",
-      "figures": [],
-      "question": "The 'Data Union Strategy' announced in November 2025 is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A binding regulation on Common European Data Spaces"
-        },
-        {
-          "letter": "B",
-          "text": "A directive transposing the Data Act into national law"
-        },
-        {
-          "letter": "C",
-          "text": "A Commission Communication (COM(2025) 835 final)"
-        },
-        {
-          "letter": "D",
-          "text": "A joint statement of the European Data Protection Board"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).\n· A: It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.\n· B: The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.\n· D: The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee.",
-      "explanations": {
-        "A": "It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.",
-        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.",
-        "C": "Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).",
-        "D": "The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee."
-      }
-    },
-    {
-      "id": "epso_fw_009",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 1",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "DAMA-DMBOK wheel",
-      "figures": [],
-      "question": "In the DAMA-DMBOK framework, which knowledge area is depicted at the centre of the wheel, connecting all others?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data Architecture"
-        },
-        {
-          "letter": "B",
-          "text": "Data Quality"
-        },
-        {
-          "letter": "C",
-          "text": "Data Governance"
-        },
-        {
-          "letter": "D",
-          "text": "Metadata"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Data Governance is the central, cross-cutting knowledge area at the hub of the DAMA wheel. Every other area (architecture, quality, security, metadata, warehousing, master data, etc.) produces policies and KPIs that governance oversees, and is in turn shaped by the policies governance sets. That's why DAMA places it at the centre visually.\n· A: Data Architecture is one of the 11 DAMA knowledge areas but sits on the periphery of the wheel. Architecture decisions are shaped by governance policies, not the other way around.\n· B: Data Quality is a peripheral knowledge area — measured against standards set by governance, not setting the standards itself.\n· D: Metadata management is an important but peripheral knowledge area. Its outputs (catalogues, lineage) feed governance, but it isn't the hub.",
-      "explanations": {
-        "A": "Data Architecture is one of the 11 DAMA knowledge areas but sits on the periphery of the wheel. Architecture decisions are shaped by governance policies, not the other way around.",
-        "B": "Data Quality is a peripheral knowledge area — measured against standards set by governance, not setting the standards itself.",
-        "C": "Correct. Data Governance is the central, cross-cutting knowledge area at the hub of the DAMA wheel. Every other area (architecture, quality, security, metadata, warehousing, master data, etc.) produces policies and KPIs that governance oversees, and is in turn shaped by the policies governance sets. That's why DAMA places it at the centre visually.",
-        "D": "Metadata management is an important but peripheral knowledge area. Its outputs (catalogues, lineage) feed governance, but it isn't the hub."
-      }
-    },
-    {
-      "id": "epso_fw_010",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 2",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Wilkinson et al. 2016",
-      "figures": [],
-      "question": "The FAIR principles for data stewardship stand for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Findable, Accessible, Interoperable, Reusable"
-        },
-        {
-          "letter": "B",
-          "text": "Fast, Aggregated, Integrated, Relational"
-        },
-        {
-          "letter": "C",
-          "text": "Federated, Audited, Indexed, Referenced"
-        },
-        {
-          "letter": "D",
-          "text": "Formal, Authoritative, Immutable, Reproducible"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. FAIR stands for Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016). Originally proposed for scientific research data, now adopted as the default yardstick for open data across the EU — including data.europa.eu.\n· B: Not the FAIR definition. These are unrelated data-engineering adjectives strung together — be suspicious of plausible-sounding technical words glued into an acronym.\n· C: Plausible but wrong. 'Federated' (distributed architectures) and 'Audited' (security/governance) are real concepts, just not part of FAIR.\n· D: Reproducibility matters in research but isn't the FAIR wording. The fourth letter is Reusable — clear license, rich provenance, community standards — which enables reproducibility as a consequence.",
-      "explanations": {
-        "A": "Correct. FAIR stands for Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016). Originally proposed for scientific research data, now adopted as the default yardstick for open data across the EU — including data.europa.eu.",
-        "B": "Not the FAIR definition. These are unrelated data-engineering adjectives strung together — be suspicious of plausible-sounding technical words glued into an acronym.",
-        "C": "Plausible but wrong. 'Federated' (distributed architectures) and 'Audited' (security/governance) are real concepts, just not part of FAIR.",
-        "D": "Reproducibility matters in research but isn't the FAIR wording. The fourth letter is Reusable — clear license, rich provenance, community standards — which enables reproducibility as a consequence."
-      }
-    },
-    {
-      "id": "epso_fw_011",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 3",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "EIF",
-      "figures": [],
-      "question": "The European Interoperability Framework (EIF) defines four interoperability layers. Which is the correct order, from 'most policy' to 'most technical'?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Technical · Semantic · Organisational · Legal"
-        },
-        {
-          "letter": "B",
-          "text": "Legal · Organisational · Semantic · Technical"
-        },
-        {
-          "letter": "C",
-          "text": "Organisational · Semantic · Legal · Technical"
-        },
-        {
-          "letter": "D",
-          "text": "Semantic · Technical · Legal · Organisational"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Legal · Organisational · Semantic · Technical. An Interoperability Governance overlay binds the four layers together, and 'Integrated Public Service Governance' sits on top as an overarching principle. The order matters: you can't have meaningful technical interoperability if the legal frameworks clash or organisations don't align on processes.\n· A: Reversed. The EIF layers progress from policy down to technology, not the other way around. Reversing the order is a common distractor.\n· C: Legal precedes Organisational — legal alignment is the first layer because without compatible legal frameworks, nothing else can work.\n· D: Does not reflect the EIF structure at all. The layers are named and ordered specifically in the framework documentation.",
-      "explanations": {
-        "A": "Reversed. The EIF layers progress from policy down to technology, not the other way around. Reversing the order is a common distractor.",
-        "B": "Correct. Legal · Organisational · Semantic · Technical. An Interoperability Governance overlay binds the four layers together, and 'Integrated Public Service Governance' sits on top as an overarching principle. The order matters: you can't have meaningful technical interoperability if the legal frameworks clash or organisations don't align on processes.",
-        "C": "Legal precedes Organisational — legal alignment is the first layer because without compatible legal frameworks, nothing else can work.",
-        "D": "Does not reflect the EIF structure at all. The layers are named and ordered specifically in the framework documentation."
-      }
-    },
-    {
-      "id": "epso_fw_012",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 4",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "CIA",
-      "figures": [],
-      "question": "The CIA triad in information security refers to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Confidentiality, Integrity, Availability"
-        },
-        {
-          "letter": "B",
-          "text": "Compliance, Integrity, Auditability"
-        },
-        {
-          "letter": "C",
-          "text": "Control, Identification, Access"
-        },
-        {
-          "letter": "D",
-          "text": "Consent, Isolation, Accountability"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.\n· B: Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.\n· C: Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.\n· D: Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely.",
-      "explanations": {
-        "A": "Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.",
-        "B": "Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.",
-        "C": "Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.",
-        "D": "Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely."
-      }
-    },
-    {
-      "id": "epso_fw_013",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 5",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "GDPR Art. 4, 26, 28",
-      "figures": [],
-      "question": "Under the GDPR, a payroll service running employee salaries on behalf of a company is typically:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The data controller, because it physically handles the data"
-        },
-        {
-          "letter": "B",
-          "text": "The data processor, because it processes data on behalf of the controller"
-        },
-        {
-          "letter": "C",
-          "text": "Jointly controller and processor by default"
-        },
-        {
-          "letter": "D",
-          "text": "Outside GDPR scope since pay slips are considered public"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. The company determines the purposes (pay our employees) and the essential means (use this payroll service). The payroll provider acts on the company's instructions, making it a processor under Art. 4(8). A data processing agreement (Art. 28) must cover the relationship, including instructions, security, sub-processors and deletion at the end of the service.\n· A: Controllership under GDPR is determined by who decides the purposes and means of processing — not by who physically handles the data. A processor's servers might store terabytes of personal data and still not be a controller.\n· C: Joint controllership (Art. 26) is a specific legal construct requiring joint determination of purposes and means — typical for platforms where two entities genuinely co-design the processing (e.g. social-media page admins + the platform). It isn't the default for a service-provider relationship.\n· D: Pay slips contain personal data of employees (name, salary, social-security data) and are in GDPR scope regardless of who physically sees them. 'Public' applies to anonymous statistics, not individual pay data.",
-      "explanations": {
-        "A": "Controllership under GDPR is determined by who decides the purposes and means of processing — not by who physically handles the data. A processor's servers might store terabytes of personal data and still not be a controller.",
-        "B": "Correct. The company determines the purposes (pay our employees) and the essential means (use this payroll service). The payroll provider acts on the company's instructions, making it a processor under Art. 4(8). A data processing agreement (Art. 28) must cover the relationship, including instructions, security, sub-processors and deletion at the end of the service.",
-        "C": "Joint controllership (Art. 26) is a specific legal construct requiring joint determination of purposes and means — typical for platforms where two entities genuinely co-design the processing (e.g. social-media page admins + the platform). It isn't the default for a service-provider relationship.",
-        "D": "Pay slips contain personal data of employees (name, salary, social-security data) and are in GDPR scope regardless of who physically sees them. 'Public' applies to anonymous statistics, not individual pay data."
-      }
-    },
-    {
-      "id": "epso_duty_014",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 1",
-      "topic": "metadata_taxonomy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DCAT-AP",
-      "figures": [],
-      "question": "What is DCAT-AP primarily used for on the EU data.europa.eu portal?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A machine-learning model registry for EU projects"
-        },
-        {
-          "letter": "B",
-          "text": "An application profile of the DCAT vocabulary to describe datasets and catalogues"
-        },
-        {
-          "letter": "C",
-          "text": "A file format for personal-data export requests under GDPR"
-        },
-        {
-          "letter": "D",
-          "text": "A public directory of SaaS cloud providers"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. DCAT-AP (Data Catalogue Vocabulary — Application Profile) is an EU-specific profile of the W3C DCAT vocabulary, used to describe datasets and catalogues consistently across European open-data portals. It's what powers data.europa.eu. Key extensions include StatDCAT-AP (statistics) and GeoDCAT-AP (geospatial), with a dedicated HVD profile for High-Value Datasets.\n· A: DCAT-AP is not a model registry — no EU standard under this name concerns ML model metadata. Don't confuse with AI-Act-era model-card ideas, which are different and newer.\n· C: GDPR data portability (Art. 20) requires common structured / machine-readable formats (CSV, JSON, XML) but doesn't mandate DCAT-AP specifically. DCAT-AP is about cataloguing datasets, not about exporting personal data.\n· D: DCAT-AP describes datasets and catalogues on data portals, not cloud SaaS providers. Cloud-provider directories are a different (and much less standardised) category.",
-      "explanations": {
-        "A": "DCAT-AP is not a model registry — no EU standard under this name concerns ML model metadata. Don't confuse with AI-Act-era model-card ideas, which are different and newer.",
-        "B": "Correct. DCAT-AP (Data Catalogue Vocabulary — Application Profile) is an EU-specific profile of the W3C DCAT vocabulary, used to describe datasets and catalogues consistently across European open-data portals. It's what powers data.europa.eu. Key extensions include StatDCAT-AP (statistics) and GeoDCAT-AP (geospatial), with a dedicated HVD profile for High-Value Datasets.",
-        "C": "GDPR data portability (Art. 20) requires common structured / machine-readable formats (CSV, JSON, XML) but doesn't mandate DCAT-AP specifically. DCAT-AP is about cataloguing datasets, not about exporting personal data.",
-        "D": "DCAT-AP describes datasets and catalogues on data portals, not cloud SaaS providers. Cloud-provider directories are a different (and much less standardised) category."
-      }
-    },
-    {
-      "id": "epso_duty_015",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 1",
-      "topic": "data_engineering",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "ETL vs ELT",
-      "figures": [],
-      "question": "A data team adopts ELT instead of ETL when ingesting logs into a modern cloud warehouse. The key difference is that in ELT:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Transformations happen before loading into the target store"
-        },
-        {
-          "letter": "B",
-          "text": "Transformations happen inside the target store after loading"
-        },
-        {
-          "letter": "C",
-          "text": "No transformations are applied at all"
-        },
-        {
-          "letter": "D",
-          "text": "Data is loaded but never queried"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. In ELT (Extract → Load → Transform), raw data is loaded straight into the target — typically a modern columnar warehouse (Snowflake, BigQuery, Redshift) — and transformations run there using SQL. This works because the warehouse's compute is cheap and elastic, removing the need for a separate ETL server. Modern stacks like dbt are built around this pattern.\n· A: That describes the classic ETL pattern (Extract → Transform → Load): the on-premise workflow where transformations run in a dedicated ETL engine (Informatica, SSIS, Talend) before the data lands in the target.\n· C: ELT still transforms — the letters just rearrange when. 'No transformations' would be replication / change-data-capture, not ELT.\n· D: Loading data without ever querying it is archival or cold storage, not ELT. ELT specifically exists to make data queryable fast.",
-      "explanations": {
-        "A": "That describes the classic ETL pattern (Extract → Transform → Load): the on-premise workflow where transformations run in a dedicated ETL engine (Informatica, SSIS, Talend) before the data lands in the target.",
-        "B": "Correct. In ELT (Extract → Load → Transform), raw data is loaded straight into the target — typically a modern columnar warehouse (Snowflake, BigQuery, Redshift) — and transformations run there using SQL. This works because the warehouse's compute is cheap and elastic, removing the need for a separate ETL server. Modern stacks like dbt are built around this pattern.",
-        "C": "ELT still transforms — the letters just rearrange when. 'No transformations' would be replication / change-data-capture, not ELT.",
-        "D": "Loading data without ever querying it is archival or cold storage, not ELT. ELT specifically exists to make data queryable fast."
-      }
-    },
-    {
-      "id": "epso_duty_016",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 1",
-      "topic": "data_security",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "GDPR Recital 26, Art. 4(5)",
-      "figures": [],
-      "question": "Which statement about the GDPR treatment of anonymised vs pseudonymised data is correct?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Both fall outside GDPR scope once processed"
-        },
-        {
-          "letter": "B",
-          "text": "Pseudonymised data falls outside GDPR; anonymised data stays in scope"
-        },
-        {
-          "letter": "C",
-          "text": "Anonymised data falls outside GDPR; pseudonymised data remains in scope"
-        },
-        {
-          "letter": "D",
-          "text": "Both are always in GDPR scope regardless of technique"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Anonymisation (irreversible — no re-identification possible even when combined with other data sets) means the data is no longer personal and therefore outside GDPR (Recital 26). Pseudonymisation (reversible via a separate key kept secure) is explicitly defined in Art. 4(5) as a safeguard — the data remains personal and GDPR still applies. The key mental test: can someone with access to additional information re-identify the person? If yes, it's pseudonymisation.\n· A: Only true anonymisation removes data from GDPR scope. Pseudonymised data, because it can be re-identified through the key, remains personal data and stays in scope.\n· B: Reversed. It's anonymisation that takes data out of scope — pseudonymisation is a safeguard, not an exemption. This swap is one of the exam's favourite traps.\n· D: Properly executed anonymisation is explicitly recognised in Recital 26 as taking data out of scope — otherwise the concept would be meaningless. The challenge is that 'properly executed' is hard to achieve in practice (linkage attacks, auxiliary data).",
-      "explanations": {
-        "A": "Only true anonymisation removes data from GDPR scope. Pseudonymised data, because it can be re-identified through the key, remains personal data and stays in scope.",
-        "B": "Reversed. It's anonymisation that takes data out of scope — pseudonymisation is a safeguard, not an exemption. This swap is one of the exam's favourite traps.",
-        "C": "Correct. Anonymisation (irreversible — no re-identification possible even when combined with other data sets) means the data is no longer personal and therefore outside GDPR (Recital 26). Pseudonymisation (reversible via a separate key kept secure) is explicitly defined in Art. 4(5) as a safeguard — the data remains personal and GDPR still applies. The key mental test: can someone with access to additional information re-identify the person? If yes, it's pseudonymisation.",
-        "D": "Properly executed anonymisation is explicitly recognised in Recital 26 as taking data out of scope — otherwise the concept would be meaningless. The challenge is that 'properly executed' is hard to achieve in practice (linkage attacks, auxiliary data)."
-      }
-    },
-    {
-      "id": "epso_duty_017",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 1",
-      "topic": "data_platforms",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Lakehouse",
-      "figures": [],
-      "question": "An analytics team needs ACID transactions, schema enforcement and time-travel directly on object storage holding raw Parquet files, while still supporting BI dashboards and ML feature pipelines. Which architecture best fits?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A classic data warehouse with nightly batch ingestion"
-        },
-        {
-          "letter": "B",
-          "text": "A Hadoop-era data lake with schema-on-read only"
-        },
-        {
-          "letter": "C",
-          "text": "A lakehouse using an open table format such as Delta, Iceberg or Hudi"
-        },
-        {
-          "letter": "D",
-          "text": "A relational OLTP database with read replicas"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. A lakehouse layers an open table format — Delta Lake, Apache Iceberg, or Apache Hudi — on top of object-store files (typically Parquet). This adds the warehouse-like guarantees (ACID transactions, schema enforcement, time-travel, efficient upserts) while keeping the lake's openness and low cost. Both BI tools and ML pipelines can read the same tables, eliminating the classic 'copy data to the ML cluster' step.\n· A: A classic data warehouse uses proprietary storage (Snowflake's micro-partitions, BigQuery's Capacitor, Redshift blocks) — it doesn't operate directly on user-managed object storage with open Parquet files. It also wouldn't give you time-travel out of the box unless the vendor adds it.\n· B: A plain Hadoop-era lake lacks ACID transactions, lacks schema enforcement, and has no time-travel. Schema-on-read alone is fine for exploration, but BI tools expect structured, consistent tables and concurrent reads/writes break.\n· D: OLTP databases (PostgreSQL, MySQL) with read replicas are optimised for transactional workloads — row-oriented storage, small short transactions. Analytics scans over large Parquet files would be painfully slow, and you'd lose the object-storage cost advantage entirely.",
-      "explanations": {
-        "A": "A classic data warehouse uses proprietary storage (Snowflake's micro-partitions, BigQuery's Capacitor, Redshift blocks) — it doesn't operate directly on user-managed object storage with open Parquet files. It also wouldn't give you time-travel out of the box unless the vendor adds it.",
-        "B": "A plain Hadoop-era lake lacks ACID transactions, lacks schema enforcement, and has no time-travel. Schema-on-read alone is fine for exploration, but BI tools expect structured, consistent tables and concurrent reads/writes break.",
-        "C": "Correct. A lakehouse layers an open table format — Delta Lake, Apache Iceberg, or Apache Hudi — on top of object-store files (typically Parquet). This adds the warehouse-like guarantees (ACID transactions, schema enforcement, time-travel, efficient upserts) while keeping the lake's openness and low cost. Both BI tools and ML pipelines can read the same tables, eliminating the classic 'copy data to the ML cluster' step.",
-        "D": "OLTP databases (PostgreSQL, MySQL) with read replicas are optimised for transactional workloads — row-oriented storage, small short transactions. Analytics scans over large Parquet files would be painfully slow, and you'd lose the object-storage cost advantage entirely."
-      }
-    },
-    {
-      "id": "epso_duty_018",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 1",
-      "topic": "bi_reporting",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "KPI",
-      "figures": [],
-      "question": "Which statement best distinguishes a KPI from an ordinary metric?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A KPI must always be expressed as a percentage"
-        },
-        {
-          "letter": "B",
-          "text": "A KPI is a metric chosen for its strategic link to an objective and used to track progress"
-        },
-        {
-          "letter": "C",
-          "text": "A KPI is only valid if refreshed in real time"
-        },
-        {
-          "letter": "D",
-          "text": "A KPI is a synonym for a dashboard"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.\n· A: KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.\n· C: Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.\n· D: A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous.",
-      "explanations": {
-        "A": "KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.",
-        "B": "Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.",
-        "C": "Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.",
-        "D": "A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
-      }
-    },
-    {
-      "id": "epso_duty_019",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 1",
-      "topic": "advanced_analytics",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Feature engineering vs labelling",
-      "figures": [],
-      "question": "In a supervised machine-learning pipeline for fraud detection, 'feature engineering' refers to which activity?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Assigning the 'fraud / not fraud' ground-truth to each historical record"
-        },
-        {
-          "letter": "B",
-          "text": "Creating predictive variables (e.g. rolling-average amount, device-country mismatch flag) from raw data"
-        },
-        {
-          "letter": "C",
-          "text": "Evaluating model performance on a held-out test set"
-        },
-        {
-          "letter": "D",
-          "text": "Defining role-based access controls for the model's training data"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Feature engineering is the craft of designing and deriving the input variables the model will learn from — things like 'transactions in the last 24 h', 'device-country mismatch flag', 'log-amount', or embeddings of categorical fields. It's where domain knowledge turns into predictive signal, and in practice it often has more impact on model performance than the choice of algorithm.\n· A: That describes data labelling — assigning the target class (fraud / not fraud) to historical examples, typically done manually, via weak-labelling heuristics, or by using a trusted source of truth. Labels are an input to supervised learning; features are the other input.\n· C: Evaluating a model on a held-out test set is model validation / evaluation — measuring how well the model generalises to unseen data. Feature engineering happens upstream; evaluation happens downstream.\n· D: RBAC governs who can access the training data — a security / compliance concern. It's completely disjoint from the data-science task of deriving useful input variables.",
-      "explanations": {
-        "A": "That describes data labelling — assigning the target class (fraud / not fraud) to historical examples, typically done manually, via weak-labelling heuristics, or by using a trusted source of truth. Labels are an input to supervised learning; features are the other input.",
-        "B": "Correct. Feature engineering is the craft of designing and deriving the input variables the model will learn from — things like 'transactions in the last 24 h', 'device-country mismatch flag', 'log-amount', or embeddings of categorical fields. It's where domain knowledge turns into predictive signal, and in practice it often has more impact on model performance than the choice of algorithm.",
-        "C": "Evaluating a model on a held-out test set is model validation / evaluation — measuring how well the model generalises to unseen data. Feature engineering happens upstream; evaluation happens downstream.",
-        "D": "RBAC governs who can access the training data — a security / compliance concern. It's completely disjoint from the data-science task of deriving useful input variables."
-      }
-    },
-    {
-      "id": "epso_duty_020",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 1",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "IATE · EuroVoc",
-      "figures": [],
-      "question": "Which of the following correctly pairs EU multilingual reference resources with their primary purpose?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU terminology database"
-        },
-        {
-          "letter": "B",
-          "text": "EuroVoc — the EU's inter-institutional terminology database; IATE — a multilingual thesaurus"
-        },
-        {
-          "letter": "C",
-          "text": "IATE — the EU's inter-institutional terminology database; EuroVoc — a multilingual thesaurus for indexing EU documents"
-        },
-        {
-          "letter": "D",
-          "text": "IATE — a public-procurement catalogue; EuroVoc — the EU's translation memory"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database — concepts defined across 24 official languages, maintained collaboratively by translators and terminologists in all EU institutions. EuroVoc is the multilingual thesaurus used to index documents across institutions, structured according to SKOS and covering all EU policy fields. Different tools for different jobs: IATE for terms (what does this word mean?), EuroVoc for classification (how do I file this document?).\n· A: Swaps the roles. IATE is not a thesaurus — it's the EU's inter-institutional terminology database.\n· B: Swaps the roles. EuroVoc is not a terminology database — it's the EU's multilingual thesaurus.\n· D: Neither resource is a procurement catalogue. The EU translation memory is Euramis, not EuroVoc. Public-procurement data lives in TED (Tenders Electronic Daily), a separate portal.",
-      "explanations": {
-        "A": "Swaps the roles. IATE is not a thesaurus — it's the EU's inter-institutional terminology database.",
-        "B": "Swaps the roles. EuroVoc is not a terminology database — it's the EU's multilingual thesaurus.",
-        "C": "Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database — concepts defined across 24 official languages, maintained collaboratively by translators and terminologists in all EU institutions. EuroVoc is the multilingual thesaurus used to index documents across institutions, structured according to SKOS and covering all EU policy fields. Different tools for different jobs: IATE for terms (what does this word mean?), EuroVoc for classification (how do I file this document?).",
-        "D": "Neither resource is a procurement catalogue. The EU translation memory is Euramis, not EuroVoc. Public-procurement data lives in TED (Tenders Electronic Daily), a separate portal."
-      }
-    },
-    {
-      "id": "epso_reg_021",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 9",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "GDPR Art. 6",
-      "figures": [],
-      "question": "Which of the following is NOT one of the six lawful bases for processing listed in Art. 6(1) GDPR?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Consent of the data subject"
-        },
-        {
-          "letter": "B",
-          "text": "Legitimate interest of the controller"
-        },
-        {
-          "letter": "C",
-          "text": "Commercial profitability of the controller"
-        },
-        {
-          "letter": "D",
-          "text": "Performance of a contract with the data subject"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Commercial profitability is not a GDPR lawful basis. The six bases are: consent · contract · legal obligation · vital interests · public task · legitimate interest. Profitability might motivate legitimate-interest claims, but the legal basis itself has to be one of the named six.\n· A: Consent (Art. 6(1)(a)) is one of the six bases — it must be freely given, specific, informed and unambiguous (Art. 7), and withdrawable at any time.\n· B: Legitimate interest (Art. 6(1)(f)) is one of the six bases, available where the controller's or a third party's interest is not overridden by the data subject's rights. It requires a documented balancing test.\n· D: Performance of a contract (Art. 6(1)(b)) is a standard basis — e.g. shipping an order you purchased requires processing your address.",
-      "explanations": {
-        "A": "Consent (Art. 6(1)(a)) is one of the six bases — it must be freely given, specific, informed and unambiguous (Art. 7), and withdrawable at any time.",
-        "B": "Legitimate interest (Art. 6(1)(f)) is one of the six bases, available where the controller's or a third party's interest is not overridden by the data subject's rights. It requires a documented balancing test.",
-        "C": "Correct. Commercial profitability is not a GDPR lawful basis. The six bases are: consent · contract · legal obligation · vital interests · public task · legitimate interest. Profitability might motivate legitimate-interest claims, but the legal basis itself has to be one of the named six.",
-        "D": "Performance of a contract (Art. 6(1)(b)) is a standard basis — e.g. shipping an order you purchased requires processing your address."
-      }
-    },
-    {
-      "id": "epso_reg_022",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 10",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "GDPR Art. 33",
-      "figures": [],
-      "question": "Under Art. 33 GDPR, within what timeframe must a controller notify the competent supervisory authority of a personal data breach?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Immediately, without any defined window"
-        },
-        {
-          "letter": "B",
-          "text": "Within 24 hours of becoming aware"
-        },
-        {
-          "letter": "C",
-          "text": "Within 72 hours of becoming aware, where feasible"
-        },
-        {
-          "letter": "D",
-          "text": "Within 30 days, aligned with the DPIA consultation period"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Art. 33(1) requires notification to the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach. If later, reasons for the delay must accompany the notification. Notification to affected data subjects (Art. 34) is separately required when the breach is likely to result in a high risk to their rights and freedoms.\n· A: GDPR does not use a vague 'immediately' standard for breach notification — it sets a clock (72 hours) precisely so controllers have a workable, auditable deadline.\n· B: 24 hours is the e-Privacy / telecom breach-notification rule for electronic-communication providers, not the GDPR standard.\n· D: 30 days is unrelated to breach notification. Prior-consultation deadlines with the DPA for high-risk DPIAs are different (and longer), governed by Art. 36.",
-      "explanations": {
-        "A": "GDPR does not use a vague 'immediately' standard for breach notification — it sets a clock (72 hours) precisely so controllers have a workable, auditable deadline.",
-        "B": "24 hours is the e-Privacy / telecom breach-notification rule for electronic-communication providers, not the GDPR standard.",
-        "C": "Correct. Art. 33(1) requires notification to the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach. If later, reasons for the delay must accompany the notification. Notification to affected data subjects (Art. 34) is separately required when the breach is likely to result in a high risk to their rights and freedoms.",
-        "D": "30 days is unrelated to breach notification. Prior-consultation deadlines with the DPA for high-risk DPIAs are different (and longer), governed by Art. 36."
-      }
-    },
-    {
-      "id": "epso_reg_023",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 11",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "GDPR Art. 20",
-      "figures": [],
-      "question": "The GDPR right to data portability (Art. 20) applies specifically when processing is based on:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Any of the six lawful bases in Art. 6"
-        },
-        {
-          "letter": "B",
-          "text": "Consent or a contract, and is carried out by automated means"
-        },
-        {
-          "letter": "C",
-          "text": "Legitimate interest only"
-        },
-        {
-          "letter": "D",
-          "text": "A legal obligation imposed on the controller"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Art. 20(1) limits portability to processing (a) based on consent (Art. 6(1)(a) or Art. 9(2)(a)) or on a contract (Art. 6(1)(b)), AND (b) carried out by automated means. The output must be a structured, commonly used and machine-readable format. Paper records and public-task processing are out of scope.\n· A: Portability has a narrower scope than the other data-subject rights. It is not triggered by every lawful basis.\n· C: Legitimate interest is explicitly excluded — portability is limited to consent / contract bases.\n· D: Legal-obligation processing (e.g. tax records a company must keep) does not trigger portability. Access (Art. 15) still applies, but not portability.",
-      "explanations": {
-        "A": "Portability has a narrower scope than the other data-subject rights. It is not triggered by every lawful basis.",
-        "B": "Correct. Art. 20(1) limits portability to processing (a) based on consent (Art. 6(1)(a) or Art. 9(2)(a)) or on a contract (Art. 6(1)(b)), AND (b) carried out by automated means. The output must be a structured, commonly used and machine-readable format. Paper records and public-task processing are out of scope.",
-        "C": "Legitimate interest is explicitly excluded — portability is limited to consent / contract bases.",
-        "D": "Legal-obligation processing (e.g. tax records a company must keep) does not trigger portability. Access (Art. 15) still applies, but not portability."
-      }
-    },
-    {
-      "id": "epso_reg_024",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 12",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Reg 2018/1725 Art. 52",
-      "figures": [],
-      "question": "Which body supervises the application of Regulation (EU) 2018/1725 in EU institutions?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The European Data Protection Board (EDPB)"
-        },
-        {
-          "letter": "B",
-          "text": "The Court of Justice of the European Union"
-        },
-        {
-          "letter": "C",
-          "text": "The national Data Protection Authority of the host Member State"
-        },
-        {
-          "letter": "D",
-          "text": "The European Data Protection Supervisor (EDPS)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The EDPS (European Data Protection Supervisor) is the independent authority that supervises EU institutions, bodies, offices and agencies on personal-data matters under Reg. 2018/1725. It can investigate complaints, conduct audits, issue reprimands and impose fines on EU bodies.\n· A: The EDPB coordinates national DPAs on GDPR matters. The EDPS is an EDPB member but not the enforcement authority for EU institutions — the EDPS role is separate.\n· B: The CJEU adjudicates cases brought before it. It is not the day-to-day supervisor — that role is executive, and belongs to the EDPS.\n· C: National DPAs supervise GDPR within their Member State. They have no jurisdiction over EU institutions — those operate under the separate 2018/1725 regime.",
-      "explanations": {
-        "A": "The EDPB coordinates national DPAs on GDPR matters. The EDPS is an EDPB member but not the enforcement authority for EU institutions — the EDPS role is separate.",
-        "B": "The CJEU adjudicates cases brought before it. It is not the day-to-day supervisor — that role is executive, and belongs to the EDPS.",
-        "C": "National DPAs supervise GDPR within their Member State. They have no jurisdiction over EU institutions — those operate under the separate 2018/1725 regime.",
-        "D": "Correct. The EDPS (European Data Protection Supervisor) is the independent authority that supervises EU institutions, bodies, offices and agencies on personal-data matters under Reg. 2018/1725. It can investigate complaints, conduct audits, issue reprimands and impose fines on EU bodies."
-      }
-    },
-    {
-      "id": "epso_reg_025",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 13",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Open Data Dir. Art. 1",
-      "figures": [],
-      "question": "The Open Data Directive (EU) 2019/1024 primarily governs:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Protection of personal data in the Union"
-        },
-        {
-          "letter": "B",
-          "text": "Cross-border electronic identification"
-        },
-        {
-          "letter": "C",
-          "text": "Data sharing obligations between private companies"
-        },
-        {
-          "letter": "D",
-          "text": "Reuse of public-sector information and publicly funded research data"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The Open Data Directive replaces the 2003 PSI Directive and extends open-by-default principles to both public-sector information and publicly funded research data. Key ideas: free of charge, machine-readable formats, API access where feasible, and a dedicated High-Value Datasets regime (Implementing Reg. 2023/138).\n· A: Personal-data protection is the domain of GDPR (Member States) and Reg. 2018/1725 (EU institutions). The Open Data Directive is not a privacy instrument.\n· B: Cross-border eID is governed by eIDAS (Reg. 910/2014, revised by 2024/1183). Unrelated to open-data reuse.\n· C: Private-to-private data-sharing is the Data Act's space (Ch III FRAND terms). The Open Data Directive focuses on the public sector.",
-      "explanations": {
-        "A": "Personal-data protection is the domain of GDPR (Member States) and Reg. 2018/1725 (EU institutions). The Open Data Directive is not a privacy instrument.",
-        "B": "Cross-border eID is governed by eIDAS (Reg. 910/2014, revised by 2024/1183). Unrelated to open-data reuse.",
-        "C": "Private-to-private data-sharing is the Data Act's space (Ch III FRAND terms). The Open Data Directive focuses on the public sector.",
-        "D": "Correct. The Open Data Directive replaces the 2003 PSI Directive and extends open-by-default principles to both public-sector information and publicly funded research data. Key ideas: free of charge, machine-readable formats, API access where feasible, and a dedicated High-Value Datasets regime (Implementing Reg. 2023/138)."
-      }
-    },
-    {
-      "id": "epso_reg_026",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 14",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "DGA Ch III",
-      "figures": [],
-      "question": "Under Chapter III of the DGA (2022/868), a recognised data intermediation service is NOT allowed to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Use the data it intermediates for its own commercial purposes"
-        },
-        {
-          "letter": "B",
-          "text": "Provide technical infrastructure for data exchange between holders and users"
-        },
-        {
-          "letter": "C",
-          "text": "Be notified to the competent authority of its Member State"
-        },
-        {
-          "letter": "D",
-          "text": "Facilitate the exercise of data-subject rights on behalf of individuals"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. A central design choice of Ch III: the intermediary must be strictly neutral. It cannot commercialise the data it routes (e.g. by selling it on, enriching its own products, or cross-selling). Neutrality is what distinguishes DGA intermediaries from ordinary data brokers and earns user trust. Breach of this principle voids the service's recognition.\n· B: Providing technical infrastructure is exactly what an intermediation service does — the DGA builds a trusted pipe between holders and users.\n· C: Notification to the competent authority is mandatory under Art. 11 DGA — it's how the service acquires its recognised status and is listed publicly.\n· D: Intermediation for data subjects exercising their rights (e.g. portability agents, consent-management services) is explicitly contemplated as a legitimate intermediation category.",
-      "explanations": {
-        "A": "Correct. A central design choice of Ch III: the intermediary must be strictly neutral. It cannot commercialise the data it routes (e.g. by selling it on, enriching its own products, or cross-selling). Neutrality is what distinguishes DGA intermediaries from ordinary data brokers and earns user trust. Breach of this principle voids the service's recognition.",
-        "B": "Providing technical infrastructure is exactly what an intermediation service does — the DGA builds a trusted pipe between holders and users.",
-        "C": "Notification to the competent authority is mandatory under Art. 11 DGA — it's how the service acquires its recognised status and is listed publicly.",
-        "D": "Intermediation for data subjects exercising their rights (e.g. portability agents, consent-management services) is explicitly contemplated as a legitimate intermediation category."
-      }
-    },
-    {
-      "id": "epso_reg_027",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 15",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DGA Ch IV",
-      "figures": [],
-      "question": "The European Data Altruism Consent Form introduced by the DGA (Ch IV) is designed to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Replace the standard GDPR consent requirements for all processing"
-        },
-        {
-          "letter": "B",
-          "text": "Serve as an intra-institutional authorisation within the Commission"
-        },
-        {
-          "letter": "C",
-          "text": "Standardise how individuals and companies donate data for causes of general interest"
-        },
-        {
-          "letter": "D",
-          "text": "Operate as a commercial licence template for paid data transactions"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The European Data Altruism Consent Form (Art. 22 DGA, with a Commission implementing act setting its layout) is a common template so donors understand what they are agreeing to when contributing data for objectives of general interest — health research, climate science, combating emergencies, official statistics. Recognised altruism organisations must be not-for-profit and listed in a public register.\n· A: Data altruism does not override GDPR. The altruism consent form is an additional standardised mechanism that still sits on top of the GDPR lawful-basis framework.\n· B: Nothing in the altruism regime is internal to the Commission — the mechanism is outward-facing and available EU-wide.\n· D: Altruism is explicitly non-commercial. The form is a donation mechanism, not a licence for paid transactions — those sit under other instruments (Open Data Dir., Data Act Ch III).",
-      "explanations": {
-        "A": "Data altruism does not override GDPR. The altruism consent form is an additional standardised mechanism that still sits on top of the GDPR lawful-basis framework.",
-        "B": "Nothing in the altruism regime is internal to the Commission — the mechanism is outward-facing and available EU-wide.",
-        "C": "Correct. The European Data Altruism Consent Form (Art. 22 DGA, with a Commission implementing act setting its layout) is a common template so donors understand what they are agreeing to when contributing data for objectives of general interest — health research, climate science, combating emergencies, official statistics. Recognised altruism organisations must be not-for-profit and listed in a public register.",
-        "D": "Altruism is explicitly non-commercial. The form is a donation mechanism, not a licence for paid transactions — those sit under other instruments (Open Data Dir., Data Act Ch III)."
-      }
-    },
-    {
-      "id": "epso_reg_028",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 16",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "DGA application date",
-      "figures": [],
-      "question": "When did the Data Governance Act (Reg. (EU) 2022/868) become applicable?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "25 May 2018"
-        },
-        {
-          "letter": "B",
-          "text": "17 July 2021"
-        },
-        {
-          "letter": "C",
-          "text": "24 September 2023"
-        },
-        {
-          "letter": "D",
-          "text": "12 September 2025"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The DGA was adopted 30 May 2022 and became applicable on 24 September 2023, after a 15-month grace period. Memorise this alongside the other EU data-regulation dates — sequencing questions are common.\n· A: 25 May 2018 is the GDPR application date.\n· B: 17 July 2021 is the Open Data Directive transposition deadline.\n· D: 12 September 2025 is the Data Act application date, not the DGA.",
-      "explanations": {
-        "A": "25 May 2018 is the GDPR application date.",
-        "B": "17 July 2021 is the Open Data Directive transposition deadline.",
-        "C": "Correct. The DGA was adopted 30 May 2022 and became applicable on 24 September 2023, after a 15-month grace period. Memorise this alongside the other EU data-regulation dates — sequencing questions are common.",
-        "D": "12 September 2025 is the Data Act application date, not the DGA."
-      }
-    },
-    {
-      "id": "epso_reg_029",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 17",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data Act Ch VI",
-      "figures": [],
-      "question": "Chapter VI of the Data Act (Reg. 2023/2854) addresses:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Biometric identification in public spaces"
-        },
-        {
-          "letter": "B",
-          "text": "Reuse of protected public-sector data"
-        },
-        {
-          "letter": "C",
-          "text": "Switching between cloud or edge data-processing services"
-        },
-        {
-          "letter": "D",
-          "text": "Data altruism and the European consent form"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Ch VI of the Data Act sets rules on switching between providers of cloud / edge services: no contractual, technical or financial barriers, phased removal of switching / egress fees (target: zero by 2027) and functional equivalence requirements so a customer can actually move workloads. It's the piece of the Data Act aimed at breaking vendor lock-in.\n· A: Biometric identification is the AI Act's turf (Art. 5 bans, Annex III high-risk).\n· B: Protected public-sector data reuse is DGA Chapter II, not Data Act.\n· D: Data altruism sits in DGA Chapter IV. The Data Act has no altruism chapter.",
-      "explanations": {
-        "A": "Biometric identification is the AI Act's turf (Art. 5 bans, Annex III high-risk).",
-        "B": "Protected public-sector data reuse is DGA Chapter II, not Data Act.",
-        "C": "Correct. Ch VI of the Data Act sets rules on switching between providers of cloud / edge services: no contractual, technical or financial barriers, phased removal of switching / egress fees (target: zero by 2027) and functional equivalence requirements so a customer can actually move workloads. It's the piece of the Data Act aimed at breaking vendor lock-in.",
-        "D": "Data altruism sits in DGA Chapter IV. The Data Act has no altruism chapter."
-      }
-    },
-    {
-      "id": "epso_reg_030",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 18",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Data Act Ch V",
-      "figures": [],
-      "question": "A public body requests access to proprietary data held by a private company to respond to a major flood. Which Data Act mechanism applies?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Chapter II — user access to connected-product data"
-        },
-        {
-          "letter": "B",
-          "text": "Chapter III — B2B FRAND sharing when a legal obligation exists"
-        },
-        {
-          "letter": "C",
-          "text": "Chapter V — B2G access in cases of exceptional need"
-        },
-        {
-          "letter": "D",
-          "text": "Chapter VI — cloud and edge switching"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Ch V ('Business to Government' — B2G) lets public bodies obtain private-sector data in situations of exceptional need: responding to a public emergency (floods, wildfires, pandemics) or preventing / mitigating one. The Act limits scope, ties the request to necessity and proportionality, and forbids using the data for unrelated purposes.\n· A: Ch II is about the user of a connected product receiving their own data, not public authorities obtaining company data for crisis response.\n· B: Ch III governs B2B data sharing when another act already imposes a sharing obligation. It sets FRAND commercial terms — unrelated to emergency public access.\n· D: Ch VI concerns cloud customer switching. Different problem entirely.",
-      "explanations": {
-        "A": "Ch II is about the user of a connected product receiving their own data, not public authorities obtaining company data for crisis response.",
-        "B": "Ch III governs B2B data sharing when another act already imposes a sharing obligation. It sets FRAND commercial terms — unrelated to emergency public access.",
-        "C": "Correct. Ch V ('Business to Government' — B2G) lets public bodies obtain private-sector data in situations of exceptional need: responding to a public emergency (floods, wildfires, pandemics) or preventing / mitigating one. The Act limits scope, ties the request to necessity and proportionality, and forbids using the data for unrelated purposes.",
-        "D": "Ch VI concerns cloud customer switching. Different problem entirely."
-      }
-    },
-    {
-      "id": "epso_reg_031",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 19",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Data Act Ch III",
-      "figures": [],
-      "question": "Under Ch III of the Data Act, a data holder that is legally obliged to share data with a data recipient must offer terms that are:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Fair, Reasonable And Non-Discriminatory (FRAND)"
-        },
-        {
-          "letter": "B",
-          "text": "Identical to those of the holder's most favoured customer"
-        },
-        {
-          "letter": "C",
-          "text": "Free of charge in all circumstances"
-        },
-        {
-          "letter": "D",
-          "text": "Subject to bilateral confidentiality with no remuneration limits"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Ch III (Arts. 8–12) requires terms that are Fair, Reasonable And Non-Discriminatory. FRAND lets data holders recover reasonable costs and, for non-SME recipients, a reasonable margin — while preventing abusive, excessive or exclusionary pricing. FRAND is borrowed from standard-essential-patent law and adapted to data.\n· B: 'Most favoured customer' is a benchmark in some commercial agreements but is not the Data Act standard. FRAND is a balance, not a match-the-best-deal rule.\n· C: Free-of-charge is the Open Data Directive logic for public-sector information, not B2B private-sector sharing under the Data Act.\n· D: FRAND explicitly limits remuneration to what is reasonable. Unlimited pricing with NDAs would defeat the chapter's purpose.",
-      "explanations": {
-        "A": "Correct. Ch III (Arts. 8–12) requires terms that are Fair, Reasonable And Non-Discriminatory. FRAND lets data holders recover reasonable costs and, for non-SME recipients, a reasonable margin — while preventing abusive, excessive or exclusionary pricing. FRAND is borrowed from standard-essential-patent law and adapted to data.",
-        "B": "'Most favoured customer' is a benchmark in some commercial agreements but is not the Data Act standard. FRAND is a balance, not a match-the-best-deal rule.",
-        "C": "Free-of-charge is the Open Data Directive logic for public-sector information, not B2B private-sector sharing under the Data Act.",
-        "D": "FRAND explicitly limits remuneration to what is reasonable. Unlimited pricing with NDAs would defeat the chapter's purpose."
-      }
-    },
-    {
-      "id": "epso_reg_032",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 20",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "AI Act risk pyramid",
-      "figures": [],
-      "question": "Under the AI Act, a chatbot deployed by a retailer to answer customer questions typically falls into which risk tier?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Unacceptable risk — prohibited"
-        },
-        {
-          "letter": "B",
-          "text": "High risk — conformity assessment required"
-        },
-        {
-          "letter": "C",
-          "text": "Limited risk — transparency obligation (user must know they are interacting with AI)"
-        },
-        {
-          "letter": "D",
-          "text": "Minimal risk — no obligation"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Conversational AI systems fall under the 'limited-risk / transparency' category. The operator must ensure users are aware they are interacting with an AI system (unless it is obvious from context). This is the core transparency obligation of Art. 50.\n· A: Prohibited AI is the narrow list in Art. 5 (social scoring, real-time remote biometric ID for police, manipulative practices). A retail chatbot is nowhere near.\n· B: High-risk AI (Annex III) covers sensitive domains — recruiting, credit scoring, education, migration, critical infrastructure, justice. A shop chatbot is not in scope of Annex III by default.\n· D: Minimal risk covers systems with no specific obligation (spam filters, games). Chatbots sit one step above because of the transparency duty.",
-      "explanations": {
-        "A": "Prohibited AI is the narrow list in Art. 5 (social scoring, real-time remote biometric ID for police, manipulative practices). A retail chatbot is nowhere near.",
-        "B": "High-risk AI (Annex III) covers sensitive domains — recruiting, credit scoring, education, migration, critical infrastructure, justice. A shop chatbot is not in scope of Annex III by default.",
-        "C": "Correct. Conversational AI systems fall under the 'limited-risk / transparency' category. The operator must ensure users are aware they are interacting with an AI system (unless it is obvious from context). This is the core transparency obligation of Art. 50.",
-        "D": "Minimal risk covers systems with no specific obligation (spam filters, games). Chatbots sit one step above because of the transparency duty."
-      }
-    },
-    {
-      "id": "epso_reg_033",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 21",
-      "topic": "eu_regulation",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "AI Act Ch V (GPAI)",
-      "figures": [],
-      "question": "Under Chapter V of the AI Act, General-Purpose AI (GPAI) models with 'systemic risk' are subject to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Only a light-touch code of conduct"
-        },
-        {
-          "letter": "B",
-          "text": "Full Annex III high-risk obligations by default"
-        },
-        {
-          "letter": "C",
-          "text": "Specific obligations including model evaluations, systemic-risk assessment and cybersecurity protection"
-        },
-        {
-          "letter": "D",
-          "text": "A blanket prohibition on EU deployment"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Art. 55 imposes additional obligations on GPAI with systemic risk: state-of-the-art model evaluations (including adversarial testing), assessment and mitigation of systemic risks at Union level, incident reporting, and adequate cybersecurity of the model and its infrastructure. The tier is triggered by capability thresholds (cumulative training compute > 10^25 FLOPs) or Commission designation.\n· A: Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on frontier models.\n· B: GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model as such.\n· D: GPAI is not banned. The AI Act regulates it, staggered by capability and risk — prohibition is reserved for Art. 5 practices.",
-      "explanations": {
-        "A": "Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on frontier models.",
-        "B": "GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model as such.",
-        "C": "Correct. Art. 55 imposes additional obligations on GPAI with systemic risk: state-of-the-art model evaluations (including adversarial testing), assessment and mitigation of systemic risks at Union level, incident reporting, and adequate cybersecurity of the model and its infrastructure. The tier is triggered by capability thresholds (cumulative training compute > 10^25 FLOPs) or Commission designation.",
-        "D": "GPAI is not banned. The AI Act regulates it, staggered by capability and risk — prohibition is reserved for Art. 5 practices."
-      }
-    },
-    {
-      "id": "epso_reg_034",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 22",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Interoperable Europe Act",
-      "figures": [],
-      "question": "The Interoperable Europe Act (Reg. (EU) 2024/903) primarily targets interoperability of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Private-sector B2B data exchanges"
-        },
-        {
-          "letter": "B",
-          "text": "Consumer IoT devices sold within the internal market"
-        },
-        {
-          "letter": "C",
-          "text": "Internal Commission HR systems only"
-        },
-        {
-          "letter": "D",
-          "text": "Cross-border public services delivered in or by the Union"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The Interoperable Europe Act creates a framework for cross-border interoperability of public services in the Union. Key tools: mandatory interoperability assessments (Art. 3) before major public-sector IT spend, the Interoperable Europe Board (MS + Commission), a portal of reusable building blocks (eDelivery, eSignature, SEMIC) and GovTech / regulatory-sandbox support.\n· A: Private-sector B2B exchanges are governed by the Data Act (Ch III) and data-space initiatives, not the Interoperable Europe Act.\n· B: IoT devices are covered by the Data Act (Ch II), Cyber Resilience Act and product-safety legislation — not the Interoperable Europe Act.\n· C: The scope is EU-wide public administrations, not just the Commission's internal systems.",
-      "explanations": {
-        "A": "Private-sector B2B exchanges are governed by the Data Act (Ch III) and data-space initiatives, not the Interoperable Europe Act.",
-        "B": "IoT devices are covered by the Data Act (Ch II), Cyber Resilience Act and product-safety legislation — not the Interoperable Europe Act.",
-        "C": "The scope is EU-wide public administrations, not just the Commission's internal systems.",
-        "D": "Correct. The Interoperable Europe Act creates a framework for cross-border interoperability of public services in the Union. Key tools: mandatory interoperability assessments (Art. 3) before major public-sector IT spend, the Interoperable Europe Board (MS + Commission), a portal of reusable building blocks (eDelivery, eSignature, SEMIC) and GovTech / regulatory-sandbox support."
-      }
-    },
-    {
-      "id": "epso_reg_035",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 23",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Interoperable Europe Act Art. 3",
-      "figures": [],
-      "question": "Art. 3 of the Interoperable Europe Act introduces a mandatory 'interoperability assessment'. It must be carried out:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Before Union entities or public-sector bodies make binding decisions on new or substantially modified trans-European IT solutions"
-        },
-        {
-          "letter": "B",
-          "text": "After a new cross-border public service has gone live"
-        },
-        {
-          "letter": "C",
-          "text": "Only for private-sector software procurements exceeding €10 million"
-        },
-        {
-          "letter": "D",
-          "text": "Only on systems that process special categories of personal data"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 3 requires Union entities and public-sector bodies to carry out an interoperability assessment before binding decisions on trans-European digital public services, to identify cross-border effects and plan around the EIF layers. The assessment feeds the Interoperable Europe Portal, creating a searchable library for reuse.\n· B: Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante.\n· C: There is no €10 million threshold — the obligation applies to trans-European public-service IT regardless of procurement value.\n· D: Special-category personal data triggers a GDPR DPIA (Art. 35), not an interoperability assessment. Different instruments, different focus.",
-      "explanations": {
-        "A": "Correct. Art. 3 requires Union entities and public-sector bodies to carry out an interoperability assessment before binding decisions on trans-European digital public services, to identify cross-border effects and plan around the EIF layers. The assessment feeds the Interoperable Europe Portal, creating a searchable library for reuse.",
-        "B": "Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante.",
-        "C": "There is no €10 million threshold — the obligation applies to trans-European public-service IT regardless of procurement value.",
-        "D": "Special-category personal data triggers a GDPR DPIA (Art. 35), not an interoperability assessment. Different instruments, different focus."
-      }
-    },
-    {
-      "id": "epso_reg_036",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 24",
-      "topic": "eu_regulation",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "EHDS Reg 2025/327",
-      "figures": [],
-      "question": "Under the European Health Data Space Regulation (EU) 2025/327, researchers wishing to use electronic health data for secondary purposes must:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Publish the data on the Open Data Portal free of charge"
-        },
-        {
-          "letter": "B",
-          "text": "Register as a DGA data altruism organisation"
-        },
-        {
-          "letter": "C",
-          "text": "Obtain a Data Act FRAND licence from the hospital"
-        },
-        {
-          "letter": "D",
-          "text": "Apply via a recognised Health Data Access Body (HDAB)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The EHDS channels secondary uses (research, innovation, policy, regulatory activities) through Health Data Access Bodies (HDABs). These Member-State bodies vet applications, pair purposes with appropriate data, apply minimisation and pseudonymisation, and provide the data in secure processing environments. HDABs are the template the other European Data Spaces are expected to follow.\n· A: Health data is not open-by-default — it's sensitive personal data under GDPR Art. 9 and must be handled under the EHDS secondary-use regime, not the Open Data Directive.\n· B: Data altruism (DGA Ch IV) is a separate mechanism for voluntary donations of data for general-interest causes. Not the EHDS secondary-use route.\n· C: Data Act Ch III FRAND terms apply to B2B data sharing when a separate obligation to share exists — not to health research. Hospitals don't licence patient data to researchers bilaterally under EHDS.",
-      "explanations": {
-        "A": "Health data is not open-by-default — it's sensitive personal data under GDPR Art. 9 and must be handled under the EHDS secondary-use regime, not the Open Data Directive.",
-        "B": "Data altruism (DGA Ch IV) is a separate mechanism for voluntary donations of data for general-interest causes. Not the EHDS secondary-use route.",
-        "C": "Data Act Ch III FRAND terms apply to B2B data sharing when a separate obligation to share exists — not to health research. Hospitals don't licence patient data to researchers bilaterally under EHDS.",
-        "D": "Correct. The EHDS channels secondary uses (research, innovation, policy, regulatory activities) through Health Data Access Bodies (HDABs). These Member-State bodies vet applications, pair purposes with appropriate data, apply minimisation and pseudonymisation, and provide the data in secure processing environments. HDABs are the template the other European Data Spaces are expected to follow."
-      }
-    },
-    {
-      "id": "epso_reg_037",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · EU Regulation · 25",
-      "topic": "eu_regulation",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "COM(2020) 66",
-      "figures": [],
-      "question": "The 'European Strategy for Data' (Feb 2020, COM(2020) 66) is best described as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A binding EU regulation"
-        },
-        {
-          "letter": "B",
-          "text": "A Council conclusion on cybersecurity"
-        },
-        {
-          "letter": "C",
-          "text": "An EDPB opinion on cross-border processing"
-        },
-        {
-          "letter": "D",
-          "text": "A Commission Communication setting out a vision for a single market for data"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The European Strategy for Data is a Commission Communication (policy document, non-binding) published in February 2020. It articulated the vision of a single market for data and a programme of Common European Data Spaces. The 2025 Data Union Strategy (COM(2025) 835) is its update.\n· A: Regulations are binding legal acts. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.\n· B: Council conclusions are another instrument; the 2020 Strategy came from the Commission, not the Council.\n· C: EDPB opinions focus on personal-data questions, not on broad data-market strategy.",
-      "explanations": {
-        "A": "Regulations are binding legal acts. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.",
-        "B": "Council conclusions are another instrument; the 2020 Strategy came from the Commission, not the Council.",
-        "C": "EDPB opinions focus on personal-data questions, not on broad data-market strategy.",
-        "D": "Correct. The European Strategy for Data is a Commission Communication (policy document, non-binding) published in February 2020. It articulated the vision of a single market for data and a programme of Common European Data Spaces. The 2025 Data Union Strategy (COM(2025) 835) is its update."
-      }
-    },
-    {
-      "id": "epso_fw_038",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 6",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "DAMA-DMBOK",
-      "figures": [],
-      "question": "Which of the following is NOT one of the 11 DAMA-DMBOK knowledge areas?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data Quality"
-        },
-        {
-          "letter": "B",
-          "text": "Data Warehousing and Business Intelligence"
-        },
-        {
-          "letter": "C",
-          "text": "Data Monetisation"
-        },
-        {
-          "letter": "D",
-          "text": "Metadata Management"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. 'Data Monetisation' is not a DAMA-DMBOK knowledge area. The 11 areas are: Data Governance (hub), Data Architecture, Data Modelling & Design, Data Storage & Operations, Data Security, Data Integration & Interoperability, Document & Content Management, Reference & Master Data, Data Warehousing & BI, Metadata, Data Quality.\n· A: Data Quality is one of the 11 areas — measuring and improving fitness-for-use against defined criteria.\n· B: Data Warehousing and Business Intelligence is an area in its own right in DAMA-DMBOK.\n· D: Metadata Management is one of the 11 peripheral areas of the DAMA wheel.",
-      "explanations": {
-        "A": "Data Quality is one of the 11 areas — measuring and improving fitness-for-use against defined criteria.",
-        "B": "Data Warehousing and Business Intelligence is an area in its own right in DAMA-DMBOK.",
-        "C": "Correct. 'Data Monetisation' is not a DAMA-DMBOK knowledge area. The 11 areas are: Data Governance (hub), Data Architecture, Data Modelling & Design, Data Storage & Operations, Data Security, Data Integration & Interoperability, Document & Content Management, Reference & Master Data, Data Warehousing & BI, Metadata, Data Quality.",
-        "D": "Metadata Management is one of the 11 peripheral areas of the DAMA wheel."
-      }
-    },
-    {
-      "id": "epso_fw_039",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 7",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "FAIR 'A'",
-      "figures": [],
-      "question": "In the FAIR principles, 'Accessible' means specifically that data:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Are retrievable via a standardised, open communication protocol that allows authentication / authorisation where needed"
-        },
-        {
-          "letter": "B",
-          "text": "Must always be freely available to anyone without authentication"
-        },
-        {
-          "letter": "C",
-          "text": "Are stored only on EU-based servers"
-        },
-        {
-          "letter": "D",
-          "text": "Are available in at least 24 EU languages"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Accessible (A1: via a standardised protocol; A1.1 free, open, universally implementable; A1.2 allows authentication / authorisation; A2: metadata is accessible even when the data are no longer available). The emphasis is on machine-retrievability and persistence of metadata, not on zero-cost open access.\n· B: FAIR accessibility does not require open-to-all access. It requires a standardised protocol for retrieval, which can include authentication and authorisation. Protected data can still be FAIR.\n· C: FAIR is storage-location neutral. Sovereignty is a separate concern addressed by other instruments (e.g. GDPR transfers, EUCS).\n· D: Multilingualism matters at EU level but isn't part of the FAIR definition — FAIR is a scientific-data framework, not an EU-language policy.",
-      "explanations": {
-        "A": "Correct. Accessible (A1: via a standardised protocol; A1.1 free, open, universally implementable; A1.2 allows authentication / authorisation; A2: metadata is accessible even when the data are no longer available). The emphasis is on machine-retrievability and persistence of metadata, not on zero-cost open access.",
-        "B": "FAIR accessibility does not require open-to-all access. It requires a standardised protocol for retrieval, which can include authentication and authorisation. Protected data can still be FAIR.",
-        "C": "FAIR is storage-location neutral. Sovereignty is a separate concern addressed by other instruments (e.g. GDPR transfers, EUCS).",
-        "D": "Multilingualism matters at EU level but isn't part of the FAIR definition — FAIR is a scientific-data framework, not an EU-language policy."
-      }
-    },
-    {
-      "id": "epso_fw_040",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 8",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "EIF overlay",
-      "figures": [],
-      "question": "On top of the four EIF layers, what additional element binds them together and coordinates cross-layer decisions?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data Protection Impact Assessment"
-        },
-        {
-          "letter": "B",
-          "text": "Architectural Reference Model"
-        },
-        {
-          "letter": "C",
-          "text": "Common Procurement Vocabulary"
-        },
-        {
-          "letter": "D",
-          "text": "Interoperability Governance"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The EIF explicitly adds an 'Interoperability Governance' overlay across the four layers (Legal, Organisational, Semantic, Technical), plus 'Integrated Public Service Governance' as an overarching principle for jointly designing public services. Without governance, decisions at each layer drift apart.\n· A: A DPIA is a GDPR (Art. 35) obligation for high-risk personal-data processing. It has no structural role in the EIF.\n· B: There is no separate 'Architectural Reference Model' in EIF — the EIF itself is the reference model.\n· C: The CPV is a classification for public procurement notices. Unrelated to EIF structure.",
-      "explanations": {
-        "A": "A DPIA is a GDPR (Art. 35) obligation for high-risk personal-data processing. It has no structural role in the EIF.",
-        "B": "There is no separate 'Architectural Reference Model' in EIF — the EIF itself is the reference model.",
-        "C": "The CPV is a classification for public procurement notices. Unrelated to EIF structure.",
-        "D": "Correct. The EIF explicitly adds an 'Interoperability Governance' overlay across the four layers (Legal, Organisational, Semantic, Technical), plus 'Integrated Public Service Governance' as an overarching principle for jointly designing public services. Without governance, decisions at each layer drift apart."
-      }
-    },
-    {
-      "id": "epso_fw_041",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 9",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "SKOS",
-      "figures": [],
-      "question": "SKOS (Simple Knowledge Organization System) is primarily used to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Encrypt RDF triples at rest"
-        },
-        {
-          "letter": "B",
-          "text": "Represent thesauri, taxonomies and classification schemes on the Semantic Web"
-        },
-        {
-          "letter": "C",
-          "text": "Query relational databases using SQL"
-        },
-        {
-          "letter": "D",
-          "text": "Define ACID transaction boundaries in lakehouses"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. SKOS is a W3C recommendation for representing thesauri, taxonomies and subject-heading systems as RDF data, so that vocabularies like EuroVoc can be published on the Semantic Web with consistent structure (concept, prefLabel, altLabel, broader, narrower, related).\n· A: SKOS is a modelling vocabulary, not an encryption scheme. RDF at rest is typically protected by storage-level or transport-level encryption, not by SKOS.\n· C: SQL queries relational tables. SPARQL — not SKOS — is the query language for RDF graphs.\n· D: ACID in lakehouses is provided by open table formats (Delta, Iceberg, Hudi). SKOS has nothing to do with transaction semantics.",
-      "explanations": {
-        "A": "SKOS is a modelling vocabulary, not an encryption scheme. RDF at rest is typically protected by storage-level or transport-level encryption, not by SKOS.",
-        "B": "Correct. SKOS is a W3C recommendation for representing thesauri, taxonomies and subject-heading systems as RDF data, so that vocabularies like EuroVoc can be published on the Semantic Web with consistent structure (concept, prefLabel, altLabel, broader, narrower, related).",
-        "C": "SQL queries relational tables. SPARQL — not SKOS — is the query language for RDF graphs.",
-        "D": "ACID in lakehouses is provided by open table formats (Delta, Iceberg, Hudi). SKOS has nothing to do with transaction semantics."
-      }
-    },
-    {
-      "id": "epso_fw_042",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 10",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "RDF / OWL / SPARQL",
-      "figures": [],
-      "question": "Which statement about the Semantic Web stack is correct?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "OWL is a query language for RDF graphs"
-        },
-        {
-          "letter": "B",
-          "text": "RDF is a relational database management system"
-        },
-        {
-          "letter": "C",
-          "text": "SPARQL is an ontology formalism equivalent to OWL"
-        },
-        {
-          "letter": "D",
-          "text": "RDF represents facts as subject-predicate-object triples; SPARQL is the query language; OWL is an ontology language"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. RDF (Resource Description Framework) expresses facts as subject-predicate-object triples using URIs. SPARQL is the W3C query language for triple stores. OWL (Web Ontology Language) builds on RDF Schema to let you define classes, properties, cardinality and other formal constraints that reasoners can use.\n· A: OWL is not a query language — SPARQL is. OWL adds formal semantics (classes, properties, restrictions) on top of RDF to support reasoning.\n· B: RDF is a data model for the Semantic Web, not a DBMS. Triple stores (Virtuoso, GraphDB, Jena) implement RDF storage; RDF itself is the model.\n· C: Wrong — those are different roles. SPARQL retrieves, OWL models meaning.",
-      "explanations": {
-        "A": "OWL is not a query language — SPARQL is. OWL adds formal semantics (classes, properties, restrictions) on top of RDF to support reasoning.",
-        "B": "RDF is a data model for the Semantic Web, not a DBMS. Triple stores (Virtuoso, GraphDB, Jena) implement RDF storage; RDF itself is the model.",
-        "C": "Wrong — those are different roles. SPARQL retrieves, OWL models meaning.",
-        "D": "Correct. RDF (Resource Description Framework) expresses facts as subject-predicate-object triples using URIs. SPARQL is the W3C query language for triple stores. OWL (Web Ontology Language) builds on RDF Schema to let you define classes, properties, cardinality and other formal constraints that reasoners can use."
-      }
-    },
-    {
-      "id": "epso_fw_043",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 11",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Berners-Lee 2010",
-      "figures": [],
-      "question": "Tim Berners-Lee's 5-star Open Data scheme awards the top rating (★★★★★) to data that:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Is published as a PDF with an open licence"
-        },
-        {
-          "letter": "B",
-          "text": "Uses non-proprietary formats"
-        },
-        {
-          "letter": "C",
-          "text": "Uses URIs to identify things and is linked to other data (Linked Open Data)"
-        },
-        {
-          "letter": "D",
-          "text": "Is available through a paywalled API with OAuth"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The ladder: ★ on web, open licence → ★★ machine-readable structured data → ★★★ non-proprietary format → ★★★★ use URIs to identify things → ★★★★★ link to other data (Linked Open Data). The top tier enables discovery and cross-dataset queries across the web.\n· A: PDF + open licence is only ★ — on the web, openly licensed. It is not machine-readable in any structural sense.\n· B: Non-proprietary formats (CSV, JSON) earn ★★★, not ★★★★★.\n· D: A paywalled API is not open by any definition. The scheme starts from 'openly licensed' as a minimum; paywalls exclude a dataset entirely.",
-      "explanations": {
-        "A": "PDF + open licence is only ★ — on the web, openly licensed. It is not machine-readable in any structural sense.",
-        "B": "Non-proprietary formats (CSV, JSON) earn ★★★, not ★★★★★.",
-        "C": "Correct. The ladder: ★ on web, open licence → ★★ machine-readable structured data → ★★★ non-proprietary format → ★★★★ use URIs to identify things → ★★★★★ link to other data (Linked Open Data). The top tier enables discovery and cross-dataset queries across the web.",
-        "D": "A paywalled API is not open by any definition. The scheme starts from 'openly licensed' as a minimum; paywalls exclude a dataset entirely."
-      }
-    },
-    {
-      "id": "epso_fw_044",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 12",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data Owner vs Steward",
-      "figures": [],
-      "question": "In data-management role models, the Data Owner is distinguished from the Data Steward because the Owner:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Physically stores and backs up the data"
-        },
-        {
-          "letter": "B",
-          "text": "Is accountable for the data domain and sets policy for its use"
-        },
-        {
-          "letter": "C",
-          "text": "Writes the SQL queries used to extract the data"
-        },
-        {
-          "letter": "D",
-          "text": "Acts as the GDPR data subject"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. The Data Owner is a senior business stakeholder accountable for a data domain (customers, products, suppliers). They decide who may use the data, approve quality thresholds and sign off on definitions. The Steward executes the policy day-to-day — enforcing quality rules, maintaining definitions, resolving issues.\n· A: Physical storage and backup fall to the Data Custodian — typically the IT operations team.\n· C: Writing queries is an analyst / engineer activity, not an Owner's role.\n· D: The data subject is the individual whose personal data is processed (GDPR Art. 4(1)). Not a data-management role at all.",
-      "explanations": {
-        "A": "Physical storage and backup fall to the Data Custodian — typically the IT operations team.",
-        "B": "Correct. The Data Owner is a senior business stakeholder accountable for a data domain (customers, products, suppliers). They decide who may use the data, approve quality thresholds and sign off on definitions. The Steward executes the policy day-to-day — enforcing quality rules, maintaining definitions, resolving issues.",
-        "C": "Writing queries is an analyst / engineer activity, not an Owner's role.",
-        "D": "The data subject is the individual whose personal data is processed (GDPR Art. 4(1)). Not a data-management role at all."
-      }
-    },
-    {
-      "id": "epso_fw_045",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 13",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "CDO vs DPO",
-      "figures": [],
-      "question": "Which statement correctly contrasts the Chief Data Officer (CDO) with the Data Protection Officer (DPO)?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "CDO and DPO are synonyms in the EU institutions"
-        },
-        {
-          "letter": "B",
-          "text": "CDO is a GDPR-mandated role; DPO is a voluntary strategic function"
-        },
-        {
-          "letter": "C",
-          "text": "CDO is an organisation-level strategic data-leadership role; DPO is a GDPR / 2018/1725 compliance role independent from management"
-        },
-        {
-          "letter": "D",
-          "text": "CDO reports to the DPO in all GDPR-regulated entities"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The CDO (Chief Data Officer) owns the organisation's overall data strategy, governance programme and value creation. The DPO is a legally required role for public authorities and certain processing (Art. 37 GDPR), must operate independently, advise on compliance, and report to the highest level of management. Distinct mandates, distinct independence requirements.\n· A: They are different roles with different mandates and reporting lines. Combining them is a governance anti-pattern because it blurs strategic and compliance objectives.\n· B: The opposite is true. The DPO is the GDPR-mandated role (Arts. 37–39 GDPR, and 2018/1725 for EU institutions). The CDO is a strategic business role with no legal definition.\n· D: No such reporting line exists. In fact the DPO must not receive instructions on carrying out their compliance tasks (Art. 38(3) GDPR).",
-      "explanations": {
-        "A": "They are different roles with different mandates and reporting lines. Combining them is a governance anti-pattern because it blurs strategic and compliance objectives.",
-        "B": "The opposite is true. The DPO is the GDPR-mandated role (Arts. 37–39 GDPR, and 2018/1725 for EU institutions). The CDO is a strategic business role with no legal definition.",
-        "C": "Correct. The CDO (Chief Data Officer) owns the organisation's overall data strategy, governance programme and value creation. The DPO is a legally required role for public authorities and certain processing (Art. 37 GDPR), must operate independently, advise on compliance, and report to the highest level of management. Distinct mandates, distinct independence requirements.",
-        "D": "No such reporting line exists. In fact the DPO must not receive instructions on carrying out their compliance tasks (Art. 38(3) GDPR)."
-      }
-    },
-    {
-      "id": "epso_fw_046",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 14",
-      "topic": "framework",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "ISO 8000 vs ISO/IEC 25012",
-      "figures": [],
-      "question": "Which ISO standard lists 15 inherent and system-dependent characteristics of data quality (accuracy, completeness, consistency, credibility, currentness, …)?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "ISO 9001"
-        },
-        {
-          "letter": "B",
-          "text": "ISO 8000"
-        },
-        {
-          "letter": "C",
-          "text": "ISO/IEC 25012"
-        },
-        {
-          "letter": "D",
-          "text": "ISO/IEC 27001"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. ISO/IEC 25012 (part of the SQuaRE 25000 series) defines 15 data-quality characteristics split between inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability).\n· A: ISO 9001 is the general quality-management-system standard — not specific to data.\n· B: ISO 8000 deals with data quality, with a strong focus on master-data exchange and provenance. It does not contain the 15-characteristic list.\n· D: ISO/IEC 27001 is the information-security management standard. CIA triad, controls, ISMS — not quality characteristics.",
-      "explanations": {
-        "A": "ISO 9001 is the general quality-management-system standard — not specific to data.",
-        "B": "ISO 8000 deals with data quality, with a strong focus on master-data exchange and provenance. It does not contain the 15-characteristic list.",
-        "C": "Correct. ISO/IEC 25012 (part of the SQuaRE 25000 series) defines 15 data-quality characteristics split between inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability).",
-        "D": "ISO/IEC 27001 is the information-security management standard. CIA triad, controls, ISMS — not quality characteristics."
-      }
-    },
-    {
-      "id": "epso_fw_047",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Framework · 15",
-      "topic": "framework",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "ISO 8000",
-      "figures": [],
-      "question": "ISO 8000 on data quality is particularly associated with:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cybersecurity incident response"
-        },
-        {
-          "letter": "B",
-          "text": "Continuous-integration pipeline testing"
-        },
-        {
-          "letter": "C",
-          "text": "Multilingual machine translation evaluation"
-        },
-        {
-          "letter": "D",
-          "text": "Master-data exchange, provenance and syntactic / semantic encoding"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. ISO 8000 is oriented toward master-data exchange: it specifies how data is encoded (syntactic quality), how it matches an agreed vocabulary (semantic quality), and how its provenance is recorded. Parts of the standard cover portable master data, data provenance, and quality measurement for master data.\n· A: Cybersecurity incident response is the domain of ISO/IEC 27035 and equivalents — not ISO 8000.\n· B: CI pipelines are tested using software-engineering practices, not ISO data-quality standards.\n· C: Machine-translation evaluation has its own metrics (BLEU, chrF) — nothing to do with ISO 8000.",
-      "explanations": {
-        "A": "Cybersecurity incident response is the domain of ISO/IEC 27035 and equivalents — not ISO 8000.",
-        "B": "CI pipelines are tested using software-engineering practices, not ISO data-quality standards.",
-        "C": "Machine-translation evaluation has its own metrics (BLEU, chrF) — nothing to do with ISO 8000.",
-        "D": "Correct. ISO 8000 is oriented toward master-data exchange: it specifies how data is encoded (syntactic quality), how it matches an agreed vocabulary (semantic quality), and how its provenance is recorded. Parts of the standard cover portable master data, data provenance, and quality measurement for master data."
-      }
-    },
-    {
-      "id": "epso_duty_048",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 1",
-      "topic": "data_architecture",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Logical vs physical",
-      "figures": [],
-      "question": "Which of the following best describes a logical data model?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Tablespaces, index types and partitioning chosen for a specific DBMS"
-        },
-        {
-          "letter": "B",
-          "text": "The encryption-at-rest configuration for a storage bucket"
-        },
-        {
-          "letter": "C",
-          "text": "The UML deployment diagram of a production cluster"
-        },
-        {
-          "letter": "D",
-          "text": "A technology-neutral representation of entities, attributes and relationships"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. A logical model captures what the data means — entities, attributes, relationships, cardinalities — independently of the DBMS chosen. It sits between the conceptual (very high level, business terms only) and the physical (DBMS-specific structures, indexes, storage). Separating the three is a classical Zachman / DAMA practice.\n· A: Those are physical-model concerns — choices tied to a specific DBMS product. The logical model precedes physical implementation.\n· B: Encryption-at-rest is a data-security control, not a modelling concept.\n· C: Deployment diagrams belong in infrastructure architecture, not data modelling.",
-      "explanations": {
-        "A": "Those are physical-model concerns — choices tied to a specific DBMS product. The logical model precedes physical implementation.",
-        "B": "Encryption-at-rest is a data-security control, not a modelling concept.",
-        "C": "Deployment diagrams belong in infrastructure architecture, not data modelling.",
-        "D": "Correct. A logical model captures what the data means — entities, attributes, relationships, cardinalities — independently of the DBMS chosen. It sits between the conceptual (very high level, business terms only) and the physical (DBMS-specific structures, indexes, storage). Separating the three is a classical Zachman / DAMA practice."
-      }
-    },
-    {
-      "id": "epso_duty_049",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 2",
-      "topic": "data_architecture",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "OLTP vs OLAP",
-      "figures": [],
-      "question": "A system supporting thousands of short, concurrent write transactions per second for an e-banking application is best classified as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "OLAP — online analytical processing"
-        },
-        {
-          "letter": "B",
-          "text": "Data mart for quarterly reporting"
-        },
-        {
-          "letter": "C",
-          "text": "HDFS — Hadoop distributed file system"
-        },
-        {
-          "letter": "D",
-          "text": "OLTP — online transaction processing"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. OLTP systems (PostgreSQL, MySQL, Oracle, SQL Server) are built for many short, ACID transactions — row-oriented storage, tight locking, low-latency commits. E-banking, e-commerce checkout, reservation systems are textbook OLTP workloads.\n· A: OLAP is optimised for long, read-heavy analytical queries over historical data — columnar storage, star schemas. Concurrent small writes would be painful.\n· B: A data mart is a subject-oriented slice of a warehouse, used for reporting — read-heavy, not write-heavy.\n· C: HDFS is a batch-oriented file system for large-scale analytics, not a transactional database.",
-      "explanations": {
-        "A": "OLAP is optimised for long, read-heavy analytical queries over historical data — columnar storage, star schemas. Concurrent small writes would be painful.",
-        "B": "A data mart is a subject-oriented slice of a warehouse, used for reporting — read-heavy, not write-heavy.",
-        "C": "HDFS is a batch-oriented file system for large-scale analytics, not a transactional database.",
-        "D": "Correct. OLTP systems (PostgreSQL, MySQL, Oracle, SQL Server) are built for many short, ACID transactions — row-oriented storage, tight locking, low-latency commits. E-banking, e-commerce checkout, reservation systems are textbook OLTP workloads."
-      }
-    },
-    {
-      "id": "epso_duty_050",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 3",
-      "topic": "data_architecture",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Semantic interoperability",
-      "figures": [],
-      "question": "Two EU public administrations exchange documents where 'customer' means different things in each context. Which EIF layer must they reconcile to achieve semantic interoperability?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Legal"
-        },
-        {
-          "letter": "B",
-          "text": "Organisational"
-        },
-        {
-          "letter": "C",
-          "text": "Semantic"
-        },
-        {
-          "letter": "D",
-          "text": "Technical"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.\n· A: Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.\n· B: Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.\n· D: Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean.",
-      "explanations": {
-        "A": "Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.",
-        "B": "Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.",
-        "C": "Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.",
-        "D": "Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean."
-      }
-    },
-    {
-      "id": "epso_duty_051",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 4",
-      "topic": "data_architecture",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Data mesh",
-      "figures": [],
-      "question": "In a 'data mesh' architecture, which of the following is a defining principle?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A single centralised team owns all enterprise data"
-        },
-        {
-          "letter": "B",
-          "text": "All data must be stored in a single relational warehouse"
-        },
-        {
-          "letter": "C",
-          "text": "Domain-oriented decentralised ownership with data treated as a product"
-        },
-        {
-          "letter": "D",
-          "text": "No governance is applied; teams choose their own tools freely"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Data mesh (Zhamak Dehghani, 2019) rests on four principles: domain-oriented decentralised ownership, data-as-a-product, self-serve data platform, and federated computational governance. Each domain owns and publishes its data products with clear SLAs, documentation and contracts, while a shared platform and global policies keep interoperability and compliance intact.\n· A: Centralised ownership is the antipattern the mesh tries to fix. A central platform team creates bottlenecks; domains can't scale.\n· B: A single warehouse is orthogonal to — and often at odds with — mesh thinking. Mesh is about distributed ownership, not a single store.\n· D: Mesh explicitly requires federated computational governance. 'No governance' is not mesh; it's chaos.",
-      "explanations": {
-        "A": "Centralised ownership is the antipattern the mesh tries to fix. A central platform team creates bottlenecks; domains can't scale.",
-        "B": "A single warehouse is orthogonal to — and often at odds with — mesh thinking. Mesh is about distributed ownership, not a single store.",
-        "C": "Correct. Data mesh (Zhamak Dehghani, 2019) rests on four principles: domain-oriented decentralised ownership, data-as-a-product, self-serve data platform, and federated computational governance. Each domain owns and publishes its data products with clear SLAs, documentation and contracts, while a shared platform and global policies keep interoperability and compliance intact.",
-        "D": "Mesh explicitly requires federated computational governance. 'No governance' is not mesh; it's chaos."
-      }
-    },
-    {
-      "id": "epso_duty_052",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 5",
-      "topic": "data_architecture",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Core Vocabularies",
-      "figures": [],
-      "question": "EU 'Core Vocabularies' (Core Person, Core Business, Core Location, Core Public Service) are maintained by the SEMIC initiative to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Provide a minimum set of reusable, simplified, extensible data models for cross-border public services"
-        },
-        {
-          "letter": "B",
-          "text": "Serve as the legal basis for cross-border transfers of personal data"
-        },
-        {
-          "letter": "C",
-          "text": "Replace the DCAT-AP application profile on data.europa.eu"
-        },
-        {
-          "letter": "D",
-          "text": "Act as the official EU translation memory"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. SEMIC's Core Vocabularies are minimal, reusable data models for key public-sector concepts — Person, Business, Location, Public Service. They reduce semantic drift across administrations and are referenced by the Interoperable Europe Act ecosystem of reusable building blocks.\n· B: Legal bases for transfers come from GDPR Chapter V (adequacy, SCCs, BCRs) — not vocabularies.\n· C: DCAT-AP and Core Vocabularies are complementary: DCAT-AP describes datasets; Core Vocabularies describe the real-world entities those datasets refer to.\n· D: The EU translation memory is Euramis — nothing to do with SEMIC Core Vocabularies.",
-      "explanations": {
-        "A": "Correct. SEMIC's Core Vocabularies are minimal, reusable data models for key public-sector concepts — Person, Business, Location, Public Service. They reduce semantic drift across administrations and are referenced by the Interoperable Europe Act ecosystem of reusable building blocks.",
-        "B": "Legal bases for transfers come from GDPR Chapter V (adequacy, SCCs, BCRs) — not vocabularies.",
-        "C": "DCAT-AP and Core Vocabularies are complementary: DCAT-AP describes datasets; Core Vocabularies describe the real-world entities those datasets refer to.",
-        "D": "The EU translation memory is Euramis — nothing to do with SEMIC Core Vocabularies."
-      }
-    },
-    {
-      "id": "epso_duty_053",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 6",
-      "topic": "data_architecture",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Normalisation",
-      "figures": [],
-      "question": "In relational design, the third normal form (3NF) aims to eliminate:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Primary keys"
-        },
-        {
-          "letter": "B",
-          "text": "Any form of indexing"
-        },
-        {
-          "letter": "C",
-          "text": "Foreign-key constraints"
-        },
-        {
-          "letter": "D",
-          "text": "Transitive dependencies between non-key attributes"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. 3NF requires the table to be in 2NF and that every non-key attribute depend on the key, the whole key, and nothing but the key (Codd's pithy summary). Transitive dependencies — where a non-key attribute depends on another non-key attribute — are removed by splitting the table.\n· A: Primary keys are essential to normalisation, not the thing being eliminated. A table without a primary key isn't even in 1NF in the modern reading.\n· B: Indexing is a physical optimisation, orthogonal to normalisation.\n· C: Foreign keys enforce referential integrity between normalised tables; they support normalisation rather than contradict it.",
-      "explanations": {
-        "A": "Primary keys are essential to normalisation, not the thing being eliminated. A table without a primary key isn't even in 1NF in the modern reading.",
-        "B": "Indexing is a physical optimisation, orthogonal to normalisation.",
-        "C": "Foreign keys enforce referential integrity between normalised tables; they support normalisation rather than contradict it.",
-        "D": "Correct. 3NF requires the table to be in 2NF and that every non-key attribute depend on the key, the whole key, and nothing but the key (Codd's pithy summary). Transitive dependencies — where a non-key attribute depends on another non-key attribute — are removed by splitting the table."
-      }
-    },
-    {
-      "id": "epso_duty_054",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 7",
-      "topic": "data_architecture",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Star vs snowflake",
-      "figures": [],
-      "question": "A dimensional-modelling team chooses a 'star schema' over a 'snowflake schema' primarily because:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Star schemas normalise dimension tables to reduce storage"
-        },
-        {
-          "letter": "B",
-          "text": "Snowflake schemas are only legal for government data"
-        },
-        {
-          "letter": "C",
-          "text": "Star schemas keep dimensions denormalised, making BI queries simpler and faster"
-        },
-        {
-          "letter": "D",
-          "text": "Snowflake is a file format, not a schema design"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. A star schema has a central fact table surrounded by denormalised dimension tables — simpler joins, faster BI queries, easier for business users to understand. Snowflake schemas normalise dimensions (e.g. splitting 'Product → Category → Department'), saving storage but adding joins that slow typical reporting queries.\n· A: It's the opposite. Snowflake schemas normalise dimensions into multiple related tables. Stars keep them flat.\n· B: Nothing in data law constrains schema design to stars or snowflakes.\n· D: Snowflake is the name of both a dimensional design pattern and a cloud data warehouse product. The question is about the schema pattern.",
-      "explanations": {
-        "A": "It's the opposite. Snowflake schemas normalise dimensions into multiple related tables. Stars keep them flat.",
-        "B": "Nothing in data law constrains schema design to stars or snowflakes.",
-        "C": "Correct. A star schema has a central fact table surrounded by denormalised dimension tables — simpler joins, faster BI queries, easier for business users to understand. Snowflake schemas normalise dimensions (e.g. splitting 'Product → Category → Department'), saving storage but adding joins that slow typical reporting queries.",
-        "D": "Snowflake is the name of both a dimensional design pattern and a cloud data warehouse product. The question is about the schema pattern."
-      }
-    },
-    {
-      "id": "epso_duty_055",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 8",
-      "topic": "data_architecture",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Event-driven architecture",
-      "figures": [],
-      "question": "In an event-driven architecture using Apache Kafka, a consumer 'replays' events by:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Deleting the topic and re-producing from the source"
-        },
-        {
-          "letter": "B",
-          "text": "Resetting its offset on the relevant partitions to an earlier position"
-        },
-        {
-          "letter": "C",
-          "text": "Requesting a new stream from the cluster administrator"
-        },
-        {
-          "letter": "D",
-          "text": "Creating a new broker in the cluster"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Kafka stores events in append-only partitioned logs and tracks each consumer's position as an 'offset'. To replay, a consumer commits (or seeks to) an earlier offset and re-reads the log. This makes Kafka ideal for event sourcing and for reprocessing after a bug fix — no source system needs to be touched.\n· A: Deleting and re-producing is destructive and not how replay works. Kafka retains events for a configurable period; replay is just a matter of reading old offsets again.\n· C: There is no 'request a new stream' operation — consumers pull directly from partitions via offsets.\n· D: Adding brokers scales capacity; it has nothing to do with replay.",
-      "explanations": {
-        "A": "Deleting and re-producing is destructive and not how replay works. Kafka retains events for a configurable period; replay is just a matter of reading old offsets again.",
-        "B": "Correct. Kafka stores events in append-only partitioned logs and tracks each consumer's position as an 'offset'. To replay, a consumer commits (or seeks to) an earlier offset and re-reads the log. This makes Kafka ideal for event sourcing and for reprocessing after a bug fix — no source system needs to be touched.",
-        "C": "There is no 'request a new stream' operation — consumers pull directly from partitions via offsets.",
-        "D": "Adding brokers scales capacity; it has nothing to do with replay."
-      }
-    },
-    {
-      "id": "epso_duty_056",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 9",
-      "topic": "data_architecture",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "CAP theorem",
-      "figures": [],
-      "question": "Under the CAP theorem, in the presence of a network partition a distributed system must choose between:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cost and Performance"
-        },
-        {
-          "letter": "B",
-          "text": "Compression and Parallelism"
-        },
-        {
-          "letter": "C",
-          "text": "Clarity and Portability"
-        },
-        {
-          "letter": "D",
-          "text": "Consistency and Availability"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Brewer's CAP theorem states that a distributed data system can provide at most two of Consistency, Availability and Partition-tolerance. Because partitions (network failures) are a fact of life, real designs must choose C or A during a partition. CP systems prefer correctness (reject writes / reads that might be stale); AP systems prefer responsiveness (serve possibly stale data).\n· A: CAP concerns correctness and responsiveness trade-offs, not cost optimisation.\n· B: Compression and parallelism are performance techniques, not the CAP trade-off.\n· C: Not CAP letters — these sound plausible but don't correspond.",
-      "explanations": {
-        "A": "CAP concerns correctness and responsiveness trade-offs, not cost optimisation.",
-        "B": "Compression and parallelism are performance techniques, not the CAP trade-off.",
-        "C": "Not CAP letters — these sound plausible but don't correspond.",
-        "D": "Correct. Brewer's CAP theorem states that a distributed data system can provide at most two of Consistency, Availability and Partition-tolerance. Because partitions (network failures) are a fact of life, real designs must choose C or A during a partition. CP systems prefer correctness (reject writes / reads that might be stale); AP systems prefer responsiveness (serve possibly stale data)."
-      }
-    },
-    {
-      "id": "epso_duty_057",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Architecture · 10",
-      "topic": "data_architecture",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Reference architecture",
-      "figures": [],
-      "question": "A 'reference architecture' for a data platform is primarily:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A deployed production system"
-        },
-        {
-          "letter": "B",
-          "text": "A single vendor's proprietary product catalogue"
-        },
-        {
-          "letter": "C",
-          "text": "A standard set of components, patterns and principles to guide the design of concrete systems"
-        },
-        {
-          "letter": "D",
-          "text": "A detailed cost estimate per cloud region"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. A reference architecture is a blueprint — named components (ingest, storage, processing, serving, catalogue, governance), interaction patterns, technology-agnostic principles. Teams use it to avoid reinventing the wheel and to keep designs consistent across projects. The EU Big-Data Value Reference Model and DAMA's architecture area are good examples.\n· A: Reference architectures describe the template; deployed systems are instances built from the template.\n· B: A vendor catalogue maps onto an architecture; it isn't one.\n· D: Cost estimates support a business case. They aren't the architectural design.",
-      "explanations": {
-        "A": "Reference architectures describe the template; deployed systems are instances built from the template.",
-        "B": "A vendor catalogue maps onto an architecture; it isn't one.",
-        "C": "Correct. A reference architecture is a blueprint — named components (ingest, storage, processing, serving, catalogue, governance), interaction patterns, technology-agnostic principles. Teams use it to avoid reinventing the wheel and to keep designs consistent across projects. The EU Big-Data Value Reference Model and DAMA's architecture area are good examples.",
-        "D": "Cost estimates support a business case. They aren't the architectural design."
-      }
-    },
-    {
-      "id": "epso_duty_058",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 1",
-      "topic": "data_governance",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Governance definition",
-      "figures": [],
-      "question": "Which activity best exemplifies data governance as defined by DAMA-DMBOK?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Writing SQL transformations in dbt"
-        },
-        {
-          "letter": "B",
-          "text": "Defining who is accountable for a data domain and under which policies it may be used"
-        },
-        {
-          "letter": "C",
-          "text": "Configuring a Kafka cluster for high throughput"
-        },
-        {
-          "letter": "D",
-          "text": "Optimising a neural-network hyperparameter"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.\n· A: Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.\n· C: Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.\n· D: Hyperparameter tuning is ML / data science — governed by policy but not a governance activity.",
-      "explanations": {
-        "A": "Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.",
-        "B": "Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.",
-        "C": "Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.",
-        "D": "Hyperparameter tuning is ML / data science — governed by policy but not a governance activity."
-      }
-    },
-    {
-      "id": "epso_duty_059",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 2",
-      "topic": "data_governance",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DAMA maturity",
-      "figures": [],
-      "question": "A governance team assesses its maturity using the DAMA-DMBOK / CMMI-DM scale. A level associated with 'defined processes documented and consistently used across the enterprise' is best described as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Initial / ad hoc"
-        },
-        {
-          "letter": "B",
-          "text": "Repeatable but undocumented"
-        },
-        {
-          "letter": "C",
-          "text": "Defined (standardised and institutionalised)"
-        },
-        {
-          "letter": "D",
-          "text": "Optimising (continuous improvement with measurement)"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. At the 'Defined' level (commonly level 3), processes are standardised, documented and institutionalised across the enterprise. Everyone follows the same playbook even if metrics aren't yet tracked.\n· A: Initial / ad hoc means processes exist only in individuals' heads — not documented, not consistent. That's level 1.\n· B: Repeatable implies processes recur but are not formally documented or enterprise-wide. That's level 2.\n· D: Optimising (level 5) adds quantitative management and continuous improvement on top of 'Managed' (level 4). The question describes documented + consistent, which is one step below.",
-      "explanations": {
-        "A": "Initial / ad hoc means processes exist only in individuals' heads — not documented, not consistent. That's level 1.",
-        "B": "Repeatable implies processes recur but are not formally documented or enterprise-wide. That's level 2.",
-        "C": "Correct. At the 'Defined' level (commonly level 3), processes are standardised, documented and institutionalised across the enterprise. Everyone follows the same playbook even if metrics aren't yet tracked.",
-        "D": "Optimising (level 5) adds quantitative management and continuous improvement on top of 'Managed' (level 4). The question describes documented + consistent, which is one step below."
-      }
-    },
-    {
-      "id": "epso_duty_060",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 3",
-      "topic": "data_governance",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Data Steward",
-      "figures": [],
-      "question": "A 'Data Steward' in a governance programme is typically responsible for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Approving budgets for data platform investments"
-        },
-        {
-          "letter": "B",
-          "text": "Deciding whether GDPR applies to the organisation"
-        },
-        {
-          "letter": "C",
-          "text": "Backing up and restoring data in production"
-        },
-        {
-          "letter": "D",
-          "text": "Executing data-quality rules, maintaining business definitions and resolving data issues in a domain"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper.\n· A: Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.\n· B: Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.\n· C: Backup and restore are Custodian / IT-operations tasks.",
-      "explanations": {
-        "A": "Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.",
-        "B": "Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.",
-        "C": "Backup and restore are Custodian / IT-operations tasks.",
-        "D": "Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper."
-      }
-    },
-    {
-      "id": "epso_duty_061",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 4",
-      "topic": "data_governance",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DPO independence",
-      "figures": [],
-      "question": "Under Art. 38 GDPR (and mirrored in Reg. 2018/1725), the DPO must:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Report to the line manager for daily tasks but not on compliance"
-        },
-        {
-          "letter": "B",
-          "text": "Be independent and report to the highest management level without receiving instructions on tasks"
-        },
-        {
-          "letter": "C",
-          "text": "Be a member of the executive board"
-        },
-        {
-          "letter": "D",
-          "text": "Hold Power of Attorney for all controller decisions"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.\n· A: Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).\n· C: The DPO is not required to be on the executive board — only to have direct access to it.\n· D: The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller.",
-      "explanations": {
-        "A": "Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).",
-        "B": "Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.",
-        "C": "The DPO is not required to be on the executive board — only to have direct access to it.",
-        "D": "The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller."
-      }
-    },
-    {
-      "id": "epso_duty_062",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 5",
-      "topic": "data_governance",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Records of Processing",
-      "figures": [],
-      "question": "Art. 30 GDPR (and Art. 31 Reg. 2018/1725) require maintaining 'Records of Processing Activities' (RoPA). For controllers, these records must include:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Purposes of processing, categories of data subjects and data, recipients, transfers to third countries where applicable, retention periods and a general description of security measures"
-        },
-        {
-          "letter": "B",
-          "text": "Only the names of data subjects who consented"
-        },
-        {
-          "letter": "C",
-          "text": "The exact SQL queries used in the controller's databases"
-        },
-        {
-          "letter": "D",
-          "text": "A daily log of every read operation on personal data"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).\n· B: Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.\n· C: SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.\n· D: A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction.",
-      "explanations": {
-        "A": "Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).",
-        "B": "Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.",
-        "C": "SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.",
-        "D": "A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction."
-      }
-    },
-    {
-      "id": "epso_duty_063",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 6",
-      "topic": "data_governance",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Business glossary",
-      "figures": [],
-      "question": "A business glossary in a data-governance programme primarily provides:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Physical table definitions and index types"
-        },
-        {
-          "letter": "B",
-          "text": "A list of all data subjects with open GDPR requests"
-        },
-        {
-          "letter": "C",
-          "text": "The encryption keys used for at-rest storage"
-        },
-        {
-          "letter": "D",
-          "text": "Agreed business definitions of terms and KPIs across the organisation"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem.\n· A: Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.\n· B: DSAR tracking is handled by a rights-management / compliance tool, not a glossary.\n· C: Key management belongs in security / HSM infrastructure, not in a glossary.",
-      "explanations": {
-        "A": "Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.",
-        "B": "DSAR tracking is handled by a rights-management / compliance tool, not a glossary.",
-        "C": "Key management belongs in security / HSM infrastructure, not in a glossary.",
-        "D": "Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem."
-      }
-    },
-    {
-      "id": "epso_duty_064",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 7",
-      "topic": "data_governance",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Accountability",
-      "figures": [],
-      "question": "The GDPR principle of 'accountability' (Art. 5(2)) requires the controller to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Be able to demonstrate compliance with the data-protection principles"
-        },
-        {
-          "letter": "B",
-          "text": "Pay administrative fines before processing begins"
-        },
-        {
-          "letter": "C",
-          "text": "Publish all processing activities publicly"
-        },
-        {
-          "letter": "D",
-          "text": "Report every processing activity to the Court of Justice"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 5(2) adds 'accountability' on top of the six substantive principles (lawfulness/fairness/transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity/confidentiality). Controllers must not only comply — they must be able to demonstrate compliance, e.g. through RoPA, DPIAs, policies, training records, audit trails.\n· B: Fines are enforcement actions, not a precondition for processing.\n· C: Publicity is not required — RoPA is internal (though DPAs can request it). Privacy notices (Arts. 13–14) are the public-facing transparency instrument.\n· D: The CJEU does not receive operational reports from controllers.",
-      "explanations": {
-        "A": "Correct. Art. 5(2) adds 'accountability' on top of the six substantive principles (lawfulness/fairness/transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity/confidentiality). Controllers must not only comply — they must be able to demonstrate compliance, e.g. through RoPA, DPIAs, policies, training records, audit trails.",
-        "B": "Fines are enforcement actions, not a precondition for processing.",
-        "C": "Publicity is not required — RoPA is internal (though DPAs can request it). Privacy notices (Arts. 13–14) are the public-facing transparency instrument.",
-        "D": "The CJEU does not receive operational reports from controllers."
-      }
-    },
-    {
-      "id": "epso_duty_065",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 8",
-      "topic": "data_governance",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Joint controllership Art. 26",
-      "figures": [],
-      "question": "Two EU agencies jointly determine the purposes and means of a shared processing activity. They are:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Controller and processor"
-        },
-        {
-          "letter": "B",
-          "text": "Joint controllers, with their arrangement spelled out in a transparent agreement"
-        },
-        {
-          "letter": "C",
-          "text": "Outside the scope of Reg. 2018/1725"
-        },
-        {
-          "letter": "D",
-          "text": "Automatically subject to GDPR instead of Reg. 2018/1725"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Where two or more controllers jointly determine purposes and means, they are joint controllers (Art. 26 GDPR; Art. 28 Reg. 2018/1725). Their respective responsibilities — especially regarding data-subject rights and transparency — must be set out in an arrangement, with the essence made available to data subjects. The CJEU has applied this broadly (Fashion ID, Jehovah's Witnesses, Wirtschaftsakademie).\n· A: Controller + processor requires one entity to instruct the other. Joint determination of purposes and means is structurally different.\n· C: Processing by EU bodies falls under Reg. 2018/1725 regardless of whether it is solo or joint.\n· D: GDPR doesn't apply to EU institutions — Art. 2 GDPR carves them out. 2018/1725 is the applicable regulation whether control is solo or joint.",
-      "explanations": {
-        "A": "Controller + processor requires one entity to instruct the other. Joint determination of purposes and means is structurally different.",
-        "B": "Correct. Where two or more controllers jointly determine purposes and means, they are joint controllers (Art. 26 GDPR; Art. 28 Reg. 2018/1725). Their respective responsibilities — especially regarding data-subject rights and transparency — must be set out in an arrangement, with the essence made available to data subjects. The CJEU has applied this broadly (Fashion ID, Jehovah's Witnesses, Wirtschaftsakademie).",
-        "C": "Processing by EU bodies falls under Reg. 2018/1725 regardless of whether it is solo or joint.",
-        "D": "GDPR doesn't apply to EU institutions — Art. 2 GDPR carves them out. 2018/1725 is the applicable regulation whether control is solo or joint."
-      }
-    },
-    {
-      "id": "epso_duty_066",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 9",
-      "topic": "data_governance",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Privacy by design",
-      "figures": [],
-      "question": "Under Art. 25 GDPR ('Data protection by design and by default'), the controller must implement:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Appropriate technical and organisational measures at the time of determining the means of processing and at the time of processing itself"
-        },
-        {
-          "letter": "B",
-          "text": "Encryption of all personal data in all circumstances"
-        },
-        {
-          "letter": "C",
-          "text": "A DPO regardless of scale, complexity or risk"
-        },
-        {
-          "letter": "D",
-          "text": "Open publication of all processing code"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.\n· B: Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.\n· C: DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.\n· D: Open-source publication is not a GDPR obligation; it may even conflict with security requirements.",
-      "explanations": {
-        "A": "Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.",
-        "B": "Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.",
-        "C": "DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.",
-        "D": "Open-source publication is not a GDPR obligation; it may even conflict with security requirements."
-      }
-    },
-    {
-      "id": "epso_duty_067",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Governance · 10",
-      "topic": "data_governance",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "EDPB role",
-      "figures": [],
-      "question": "The European Data Protection Board (EDPB) was established to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Supervise EU institutions instead of the EDPS"
-        },
-        {
-          "letter": "B",
-          "text": "Ensure consistent application of GDPR across Member States, issue guidelines and decide binding disputes between national DPAs"
-        },
-        {
-          "letter": "C",
-          "text": "Draft EU data-market strategies"
-        },
-        {
-          "letter": "D",
-          "text": "Adjudicate criminal cases related to data breaches"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Under GDPR Chapter VII, the EDPB is composed of the heads of each national DPA plus the EDPS. It issues guidelines, recommendations and best practices, and decides binding disputes under the one-stop-shop consistency mechanism (Art. 65). Its guidelines, while not legally binding, are highly authoritative in practice.\n· A: The EDPS supervises EU institutions under Reg. 2018/1725. The EDPB coordinates national DPAs under GDPR.\n· C: Strategy documents come from the Commission, not the EDPB.\n· D: Criminal adjudication is for Member-State courts (and, via preliminary rulings, the CJEU). The EDPB is an administrative body.",
-      "explanations": {
-        "A": "The EDPS supervises EU institutions under Reg. 2018/1725. The EDPB coordinates national DPAs under GDPR.",
-        "B": "Correct. Under GDPR Chapter VII, the EDPB is composed of the heads of each national DPA plus the EDPS. It issues guidelines, recommendations and best practices, and decides binding disputes under the one-stop-shop consistency mechanism (Art. 65). Its guidelines, while not legally binding, are highly authoritative in practice.",
-        "C": "Strategy documents come from the Commission, not the EDPB.",
-        "D": "Criminal adjudication is for Member-State courts (and, via preliminary rulings, the CJEU). The EDPB is an administrative body."
-      }
-    },
-    {
-      "id": "epso_duty_068",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 1",
-      "topic": "data_policy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data lifecycle",
-      "figures": [],
-      "question": "Which of the following best represents the stages of a classical data lifecycle?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Prediction → Visualisation → Compression → Deletion"
-        },
-        {
-          "letter": "B",
-          "text": "Ingest → Cache → Display → Log"
-        },
-        {
-          "letter": "C",
-          "text": "Train → Validate → Deploy → Monitor"
-        },
-        {
-          "letter": "D",
-          "text": "Create / acquire → Store → Use → Archive → Destroy"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. A standard lifecycle moves through acquisition (creation / ingestion from sources), storage, use (analysis, integration, sharing), archival (reduced-access retention), and destruction (secure deletion once retention ends). Policy attaches retention rules, quality rules and access rules to each stage. Storage-limitation (GDPR Art. 5(1)(e)) makes the end of the lifecycle legally binding for personal data.\n· A: Those are ML / visualisation steps, not a data-lifecycle model.\n· B: Those are application / observability terms, not the canonical lifecycle stages.\n· C: That describes an ML model lifecycle, not a data lifecycle.",
-      "explanations": {
-        "A": "Those are ML / visualisation steps, not a data-lifecycle model.",
-        "B": "Those are application / observability terms, not the canonical lifecycle stages.",
-        "C": "That describes an ML model lifecycle, not a data lifecycle.",
-        "D": "Correct. A standard lifecycle moves through acquisition (creation / ingestion from sources), storage, use (analysis, integration, sharing), archival (reduced-access retention), and destruction (secure deletion once retention ends). Policy attaches retention rules, quality rules and access rules to each stage. Storage-limitation (GDPR Art. 5(1)(e)) makes the end of the lifecycle legally binding for personal data."
-      }
-    },
-    {
-      "id": "epso_duty_069",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 2",
-      "topic": "data_policy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data spaces",
-      "figures": [],
-      "question": "The 14 Common European Data Spaces announced in the 2020 European Strategy for Data are:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Regulations directly applicable to all Member States"
-        },
-        {
-          "letter": "B",
-          "text": "Private blockchain networks"
-        },
-        {
-          "letter": "C",
-          "text": "A single cloud service operated by the Commission"
-        },
-        {
-          "letter": "D",
-          "text": "Sectoral initiatives to pool and share data within specific domains (health, agriculture, energy, mobility …)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre).\n· A: Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.\n· B: Data spaces are technology-neutral. Some pilots use blockchain; most do not.\n· C: Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
-      "explanations": {
-        "A": "Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.",
-        "B": "Data spaces are technology-neutral. Some pilots use blockchain; most do not.",
-        "C": "Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
-        "D": "Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre)."
-      }
-    },
-    {
-      "id": "epso_duty_070",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 3",
-      "topic": "data_policy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data classification",
-      "figures": [],
-      "question": "A public administration categorises datasets as 'public · internal · confidential · restricted'. This practice is called:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data normalisation"
-        },
-        {
-          "letter": "B",
-          "text": "Data anonymisation"
-        },
-        {
-          "letter": "C",
-          "text": "Data lineage"
-        },
-        {
-          "letter": "D",
-          "text": "Data classification"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies.\n· A: Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.\n· B: Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.\n· C: Lineage traces data from origin through transformations to destinations. Different concept.",
-      "explanations": {
-        "A": "Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.",
-        "B": "Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.",
-        "C": "Lineage traces data from origin through transformations to destinations. Different concept.",
-        "D": "Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies."
-      }
-    },
-    {
-      "id": "epso_duty_071",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 4",
-      "topic": "data_policy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Retention policy",
-      "figures": [],
-      "question": "GDPR Art. 5(1)(e) ('storage limitation') requires that personal data be kept:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Indefinitely, to ensure future auditability"
-        },
-        {
-          "letter": "B",
-          "text": "For no longer than necessary for the purposes for which they are processed"
-        },
-        {
-          "letter": "C",
-          "text": "For exactly seven years regardless of purpose"
-        },
-        {
-          "letter": "D",
-          "text": "Forever if the controller obtained one-time consent"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Storage limitation is one of the six substantive GDPR principles: personal data kept in a form permitting identification must be retained only for as long as necessary for the purposes. Longer storage is allowed only for archiving in the public interest, scientific/historical research or statistical purposes, subject to appropriate safeguards (Art. 89).\n· A: Indefinite retention contradicts storage limitation. Audit retention must itself have a defined period justified by a legal basis.\n· C: Seven years is a common national bookkeeping rule — not a GDPR rule. Each purpose demands its own assessment.\n· D: Consent does not override retention limits. The purpose still bounds how long data can be kept.",
-      "explanations": {
-        "A": "Indefinite retention contradicts storage limitation. Audit retention must itself have a defined period justified by a legal basis.",
-        "B": "Correct. Storage limitation is one of the six substantive GDPR principles: personal data kept in a form permitting identification must be retained only for as long as necessary for the purposes. Longer storage is allowed only for archiving in the public interest, scientific/historical research or statistical purposes, subject to appropriate safeguards (Art. 89).",
-        "C": "Seven years is a common national bookkeeping rule — not a GDPR rule. Each purpose demands its own assessment.",
-        "D": "Consent does not override retention limits. The purpose still bounds how long data can be kept."
-      }
-    },
-    {
-      "id": "epso_duty_072",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 5",
-      "topic": "data_policy",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Data sovereignty vs data localisation",
-      "figures": [],
-      "question": "The Data Act (Art. 32) addresses international governmental access to non-personal data held in the EU. Its core rule is that cloud / data-processing providers must:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Always comply with any foreign court order"
-        },
-        {
-          "letter": "B",
-          "text": "Notify the European Commission before each routine customer request"
-        },
-        {
-          "letter": "C",
-          "text": "Store all data exclusively in a single Member State"
-        },
-        {
-          "letter": "D",
-          "text": "Prevent or challenge third-country governmental access where it would conflict with Union or Member-State law"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Art. 32 of the Data Act requires providers of data-processing services to take 'all adequate technical, organisational and legal measures' to prevent international governmental access to non-personal data that would conflict with Union or Member-State law. Compliance with foreign court or administrative orders is only possible where an international agreement exists, or under narrowly defined conditions.\n· A: Automatic compliance with any foreign order would ignore the EU legal framework and the Art. 32 safeguards.\n· B: No Commission pre-notification is required for ordinary customer requests; Art. 32 concerns foreign-government access specifically.\n· C: The Data Act does not impose single-Member-State localisation. EU data may be stored and processed across the Union and beyond, subject to safeguards.",
-      "explanations": {
-        "A": "Automatic compliance with any foreign order would ignore the EU legal framework and the Art. 32 safeguards.",
-        "B": "No Commission pre-notification is required for ordinary customer requests; Art. 32 concerns foreign-government access specifically.",
-        "C": "The Data Act does not impose single-Member-State localisation. EU data may be stored and processed across the Union and beyond, subject to safeguards.",
-        "D": "Correct. Art. 32 of the Data Act requires providers of data-processing services to take 'all adequate technical, organisational and legal measures' to prevent international governmental access to non-personal data that would conflict with Union or Member-State law. Compliance with foreign court or administrative orders is only possible where an international agreement exists, or under narrowly defined conditions."
-      }
-    },
-    {
-      "id": "epso_duty_073",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 6",
-      "topic": "data_policy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DSSC",
-      "figures": [],
-      "question": "The Data Spaces Support Centre (DSSC) is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A regulatory body with enforcement powers"
-        },
-        {
-          "letter": "B",
-          "text": "An EU-funded initiative providing technical, legal and organisational guidance to accelerate Common European Data Spaces"
-        },
-        {
-          "letter": "C",
-          "text": "A national certification body under the NIS2 Directive"
-        },
-        {
-          "letter": "D",
-          "text": "A private data broker recognised under the DGA"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.\n· A: The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).\n· C: NIS2 certification bodies are national and focused on cybersecurity, not data spaces.\n· D: DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker.",
-      "explanations": {
-        "A": "The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).",
-        "B": "Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.",
-        "C": "NIS2 certification bodies are national and focused on cybersecurity, not data spaces.",
-        "D": "DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker."
-      }
-    },
-    {
-      "id": "epso_duty_074",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 7",
-      "topic": "data_policy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data strategy vs data policy",
-      "figures": [],
-      "question": "Which statement best distinguishes a data strategy from a data policy?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A strategy sets direction and priorities; a policy translates direction into binding rules for specific activities"
-        },
-        {
-          "letter": "B",
-          "text": "They are synonyms"
-        },
-        {
-          "letter": "C",
-          "text": "A strategy is signed by the DPO; a policy by the CDO"
-        },
-        {
-          "letter": "D",
-          "text": "A policy is a multi-year plan; a strategy is a one-page rule"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.\n· B: They play different roles in the governance stack.\n· C: Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.\n· D: Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules.",
-      "explanations": {
-        "A": "Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.",
-        "B": "They play different roles in the governance stack.",
-        "C": "Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.",
-        "D": "Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules."
-      }
-    },
-    {
-      "id": "epso_duty_075",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 8",
-      "topic": "data_policy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Simpl",
-      "figures": [],
-      "question": "'Simpl', referenced in EU data-policy documents, is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A cryptocurrency launched by the Commission"
-        },
-        {
-          "letter": "B",
-          "text": "A national registry of data intermediaries"
-        },
-        {
-          "letter": "C",
-          "text": "A directive replacing the DGA"
-        },
-        {
-          "letter": "D",
-          "text": "An open-source smart middleware platform to federate EU data spaces and cloud-to-edge resources"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Simpl is an open-source, smart, federated middleware being developed by the Commission to interconnect participants in the Common European Data Spaces and enable cloud-to-edge data processing. It provides shared building blocks — identity, authorisation, interoperable connectors — that data spaces can plug into rather than each reinventing them.\n· A: Simpl has nothing to do with crypto or CBDC.\n· B: National intermediary registries fall under the DGA — not Simpl.\n· C: Nothing replaces the DGA; it is in force. Simpl is technical infrastructure, not a legal act.",
-      "explanations": {
-        "A": "Simpl has nothing to do with crypto or CBDC.",
-        "B": "National intermediary registries fall under the DGA — not Simpl.",
-        "C": "Nothing replaces the DGA; it is in force. Simpl is technical infrastructure, not a legal act.",
-        "D": "Correct. Simpl is an open-source, smart, federated middleware being developed by the Commission to interconnect participants in the Common European Data Spaces and enable cloud-to-edge data processing. It provides shared building blocks — identity, authorisation, interoperable connectors — that data spaces can plug into rather than each reinventing them."
-      }
-    },
-    {
-      "id": "epso_duty_076",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 9",
-      "topic": "data_policy",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Data spaces governance",
-      "figures": [],
-      "question": "A data-space design must deliver 'federated computational governance'. This concept primarily means:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Running all governance processes on a single shared database"
-        },
-        {
-          "letter": "B",
-          "text": "Delegating all governance to the Commission"
-        },
-        {
-          "letter": "C",
-          "text": "Global rules encoded as code and enforced automatically across distributed domain data products, while leaving domain-specific decisions to domain owners"
-        },
-        {
-          "letter": "D",
-          "text": "Removing all policies so that domains are free to decide"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.\n· A: Federation is the opposite of centralising everything in one database.\n· B: Delegation to the Commission would centralise authority and defeat the federation design.\n· D: No policies would eliminate trust and interoperability — data spaces would not function.",
-      "explanations": {
-        "A": "Federation is the opposite of centralising everything in one database.",
-        "B": "Delegation to the Commission would centralise authority and defeat the federation design.",
-        "C": "Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.",
-        "D": "No policies would eliminate trust and interoperability — data spaces would not function."
-      }
-    },
-    {
-      "id": "epso_duty_077",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Policy · 10",
-      "topic": "data_policy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "EU Digital Decade",
-      "figures": [],
-      "question": "The 'Digital Decade' policy programme aims to achieve EU digital targets by:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "2026"
-        },
-        {
-          "letter": "B",
-          "text": "2050"
-        },
-        {
-          "letter": "C",
-          "text": "2040"
-        },
-        {
-          "letter": "D",
-          "text": "2030"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The 2030 Digital Decade Policy Programme (Decision (EU) 2022/2481) sets quantified targets for 2030 in four axes: skills, infrastructure, business digitalisation, and digitalisation of public services. Member States and the Commission track progress through annual reports and coordinated roadmaps. It is the overarching frame for EU digital policy (including data and AI).\n· A: 2026 is close — but that's not the Digital Decade horizon.\n· B: 2050 is the Union's climate-neutrality target, not the digital programme.\n· C: 2040 is a climate horizon, not a digital one.",
-      "explanations": {
-        "A": "2026 is close — but that's not the Digital Decade horizon.",
-        "B": "2050 is the Union's climate-neutrality target, not the digital programme.",
-        "C": "2040 is a climate horizon, not a digital one.",
-        "D": "Correct. The 2030 Digital Decade Policy Programme (Decision (EU) 2022/2481) sets quantified targets for 2030 in four axes: skills, infrastructure, business digitalisation, and digitalisation of public services. Member States and the Commission track progress through annual reports and coordinated roadmaps. It is the overarching frame for EU digital policy (including data and AI)."
-      }
-    },
-    {
-      "id": "epso_duty_078",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 2",
-      "topic": "data_engineering",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "REST",
-      "figures": [],
-      "question": "In a REST API exposing a list of employees, the HTTP verb used to retrieve an employee by ID is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "POST"
-        },
-        {
-          "letter": "B",
-          "text": "PATCH"
-        },
-        {
-          "letter": "C",
-          "text": "DELETE"
-        },
-        {
-          "letter": "D",
-          "text": "GET"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET.\n· A: POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.\n· B: PATCH applies a partial update. It's for modification, not retrieval.\n· C: DELETE removes the resource. It would not be used to retrieve.",
-      "explanations": {
-        "A": "POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.",
-        "B": "PATCH applies a partial update. It's for modification, not retrieval.",
-        "C": "DELETE removes the resource. It would not be used to retrieve.",
-        "D": "Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET."
-      }
-    },
-    {
-      "id": "epso_duty_079",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 3",
-      "topic": "data_engineering",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Batch vs streaming",
-      "figures": [],
-      "question": "Which is the defining characteristic of stream processing versus batch processing?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Stream processing operates on unbounded data in near-real time while batch operates on bounded, periodically scheduled data sets"
-        },
-        {
-          "letter": "B",
-          "text": "Stream processing operates on bounded, scheduled data sets while batch operates on unbounded data"
-        },
-        {
-          "letter": "C",
-          "text": "Stream processing always uses SQL; batch never does"
-        },
-        {
-          "letter": "D",
-          "text": "Batch processing is always faster than stream processing"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Stream processing treats data as an unbounded sequence of events arriving continuously, processed near-real-time with low latency (Kafka Streams, Flink, Spark Structured Streaming). Batch processes a bounded dataset collected over a window (hour, day) with higher latency but often simpler semantics. Modern engines unify both under the same API (e.g. Flink's unified batch/stream model).\n· B: Reversed — the definitions are swapped.\n· C: Both can use SQL — see Flink SQL, Spark SQL, ksqlDB.\n· D: Speed depends on metrics (throughput vs latency). Streaming typically has lower latency; batch can have higher throughput.",
-      "explanations": {
-        "A": "Correct. Stream processing treats data as an unbounded sequence of events arriving continuously, processed near-real-time with low latency (Kafka Streams, Flink, Spark Structured Streaming). Batch processes a bounded dataset collected over a window (hour, day) with higher latency but often simpler semantics. Modern engines unify both under the same API (e.g. Flink's unified batch/stream model).",
-        "B": "Reversed — the definitions are swapped.",
-        "C": "Both can use SQL — see Flink SQL, Spark SQL, ksqlDB.",
-        "D": "Speed depends on metrics (throughput vs latency). Streaming typically has lower latency; batch can have higher throughput."
-      }
-    },
-    {
-      "id": "epso_duty_080",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 4",
-      "topic": "data_engineering",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Kafka partitions",
-      "figures": [],
-      "question": "In Apache Kafka, partitions within a topic provide:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A mechanism to shard the topic for parallelism and to preserve ordering within each partition"
-        },
-        {
-          "letter": "B",
-          "text": "Automatic encryption-at-rest for each consumer"
-        },
-        {
-          "letter": "C",
-          "text": "A built-in schema registry"
-        },
-        {
-          "letter": "D",
-          "text": "Exactly-once delivery to every consumer by default"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Partitions are the unit of parallelism: consumers in a consumer group share partitions so throughput scales. Order is guaranteed within a partition (not across partitions). Producers typically choose partitions via a key hash so messages for the same key land in the same partition and keep order.\n· B: Encryption-at-rest is a storage-level concern, configured outside Kafka's partition semantics.\n· C: The schema registry is a separate component (Confluent Schema Registry, Apicurio) and not tied to partitions.\n· D: Exactly-once is available but requires transactional producers and careful consumer configuration — it's not the default.",
-      "explanations": {
-        "A": "Correct. Partitions are the unit of parallelism: consumers in a consumer group share partitions so throughput scales. Order is guaranteed within a partition (not across partitions). Producers typically choose partitions via a key hash so messages for the same key land in the same partition and keep order.",
-        "B": "Encryption-at-rest is a storage-level concern, configured outside Kafka's partition semantics.",
-        "C": "The schema registry is a separate component (Confluent Schema Registry, Apicurio) and not tied to partitions.",
-        "D": "Exactly-once is available but requires transactional producers and careful consumer configuration — it's not the default."
-      }
-    },
-    {
-      "id": "epso_duty_081",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 5",
-      "topic": "data_engineering",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Airflow DAG",
-      "figures": [],
-      "question": "Apache Airflow represents a scheduled data-processing workflow as a:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cyclic finite-state machine"
-        },
-        {
-          "letter": "B",
-          "text": "Directed Acyclic Graph (DAG) of tasks with dependencies"
-        },
-        {
-          "letter": "C",
-          "text": "Single monolithic SQL script"
-        },
-        {
-          "letter": "D",
-          "text": "Recursive tree of monadic transformations"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Airflow models a workflow as a DAG: nodes are tasks (extract, transform, load, publish), edges are dependencies (task B runs after A succeeds). The scheduler runs tasks when their upstream dependencies are met, with retries, SLAs, and backfills. Alternatives include Prefect, Dagster, Argo Workflows.\n· A: Cycles would prevent deterministic scheduling. Airflow's graph is explicitly acyclic.\n· C: A DAG can include SQL tasks but isn't itself SQL.\n· D: Not an Airflow concept. Airflow's model is the DAG — pragmatic, not monadic.",
-      "explanations": {
-        "A": "Cycles would prevent deterministic scheduling. Airflow's graph is explicitly acyclic.",
-        "B": "Correct. Airflow models a workflow as a DAG: nodes are tasks (extract, transform, load, publish), edges are dependencies (task B runs after A succeeds). The scheduler runs tasks when their upstream dependencies are met, with retries, SLAs, and backfills. Alternatives include Prefect, Dagster, Argo Workflows.",
-        "C": "A DAG can include SQL tasks but isn't itself SQL.",
-        "D": "Not an Airflow concept. Airflow's model is the DAG — pragmatic, not monadic."
-      }
-    },
-    {
-      "id": "epso_duty_082",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 6",
-      "topic": "data_engineering",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "APIs",
-      "figures": [],
-      "question": "Compared to REST, a GraphQL API typically lets the client:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Receive push notifications when data changes"
-        },
-        {
-          "letter": "B",
-          "text": "Ask for exactly the fields it needs in a single request, avoiding over- or under-fetching"
-        },
-        {
-          "letter": "C",
-          "text": "Skip authentication by default"
-        },
-        {
-          "letter": "D",
-          "text": "Commit database transactions on the server"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. GraphQL exposes a single endpoint and a strongly typed schema. Clients compose queries that specify exactly the fields they want across nested relationships, avoiding REST's over-fetching (too many fields) and under-fetching (needing multiple calls). Trade-offs: caching and rate limiting are trickier than with REST.\n· A: Real-time push is provided by subscriptions, WebSockets or Server-Sent Events — supported in GraphQL but not unique to it.\n· C: Authentication is orthogonal to the query language — both REST and GraphQL need it.\n· D: Committing transactions is a server-side database concern; GraphQL mutations describe intent but do not bypass the server's transaction logic.",
-      "explanations": {
-        "A": "Real-time push is provided by subscriptions, WebSockets or Server-Sent Events — supported in GraphQL but not unique to it.",
-        "B": "Correct. GraphQL exposes a single endpoint and a strongly typed schema. Clients compose queries that specify exactly the fields they want across nested relationships, avoiding REST's over-fetching (too many fields) and under-fetching (needing multiple calls). Trade-offs: caching and rate limiting are trickier than with REST.",
-        "C": "Authentication is orthogonal to the query language — both REST and GraphQL need it.",
-        "D": "Committing transactions is a server-side database concern; GraphQL mutations describe intent but do not bypass the server's transaction logic."
-      }
-    },
-    {
-      "id": "epso_duty_083",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 7",
-      "topic": "data_engineering",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "CDC",
-      "figures": [],
-      "question": "Change Data Capture (CDC) is a pattern in which:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The full table is re-extracted on every run"
-        },
-        {
-          "letter": "B",
-          "text": "Machine-learning models retrain on every new record"
-        },
-        {
-          "letter": "C",
-          "text": "Data is encrypted at the source before leaving the network"
-        },
-        {
-          "letter": "D",
-          "text": "Only inserts, updates and deletes on the source are captured (often from the database log) and propagated downstream"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. CDC tools (Debezium, Oracle GoldenGate, AWS DMS, Fivetran) tail the database transaction log (WAL / binlog / redo log) and stream every insert / update / delete as an event. This keeps downstream systems (warehouses, lakes, search indexes) in near-real-time sync with source OLTP stores, without heavy re-extracts.\n· A: Full re-extraction is the opposite of CDC — it's inefficient for large tables and is precisely what CDC avoids.\n· B: Retraining strategy is an ML-ops concern, not what CDC defines.\n· C: Encryption at source is a separate security control.",
-      "explanations": {
-        "A": "Full re-extraction is the opposite of CDC — it's inefficient for large tables and is precisely what CDC avoids.",
-        "B": "Retraining strategy is an ML-ops concern, not what CDC defines.",
-        "C": "Encryption at source is a separate security control.",
-        "D": "Correct. CDC tools (Debezium, Oracle GoldenGate, AWS DMS, Fivetran) tail the database transaction log (WAL / binlog / redo log) and stream every insert / update / delete as an event. This keeps downstream systems (warehouses, lakes, search indexes) in near-real-time sync with source OLTP stores, without heavy re-extracts."
-      }
-    },
-    {
-      "id": "epso_duty_084",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 8",
-      "topic": "data_engineering",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Idempotency",
-      "figures": [],
-      "question": "An idempotent data pipeline is one where:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Running it multiple times with the same input produces the same result as running it once"
-        },
-        {
-          "letter": "B",
-          "text": "It can only be run once per day"
-        },
-        {
-          "letter": "C",
-          "text": "It requires manual approval between stages"
-        },
-        {
-          "letter": "D",
-          "text": "It transforms data into a new format every run"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. An idempotent operation yields the same state no matter how many times it runs. For pipelines this typically means using merge / upsert (not append) semantics keyed on natural keys, deterministic partitioning, and replayable ingestion. Idempotency is essential for robustness — retries, backfills and failure recovery all depend on it.\n· B: Scheduling frequency doesn't define idempotency.\n· C: Manual gates are governance controls, not idempotency.\n· D: Changing format each run is actually the opposite of reproducible, deterministic behaviour.",
-      "explanations": {
-        "A": "Correct. An idempotent operation yields the same state no matter how many times it runs. For pipelines this typically means using merge / upsert (not append) semantics keyed on natural keys, deterministic partitioning, and replayable ingestion. Idempotency is essential for robustness — retries, backfills and failure recovery all depend on it.",
-        "B": "Scheduling frequency doesn't define idempotency.",
-        "C": "Manual gates are governance controls, not idempotency.",
-        "D": "Changing format each run is actually the opposite of reproducible, deterministic behaviour."
-      }
-    },
-    {
-      "id": "epso_duty_085",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 9",
-      "topic": "data_engineering",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "dbt",
-      "figures": [],
-      "question": "The tool 'dbt' (data build tool) is used primarily to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Orchestrate container deployments in Kubernetes"
-        },
-        {
-          "letter": "B",
-          "text": "Ingest Kafka topics into a lakehouse"
-        },
-        {
-          "letter": "C",
-          "text": "Define, test and version-control SQL transformations that run inside a data warehouse (the 'T' in ELT)"
-        },
-        {
-          "letter": "D",
-          "text": "Label training data for supervised machine learning"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. dbt is a SQL-first transformation framework: engineers define models (SELECTs), tests, documentation and lineage in version-controlled files; dbt compiles and runs them in the warehouse (Snowflake, BigQuery, Redshift, Postgres). It is the de-facto standard for the 'T' in modern ELT stacks.\n· A: Kubernetes orchestration is done by Helm / Argo / Kustomize, not dbt.\n· B: Ingestion is the job of tools like Fivetran, Airbyte, Kafka Connect — not dbt.\n· D: Labelling is an ML-ops concern (Labelbox, Scale, Prodigy). dbt is about SQL transformations.",
-      "explanations": {
-        "A": "Kubernetes orchestration is done by Helm / Argo / Kustomize, not dbt.",
-        "B": "Ingestion is the job of tools like Fivetran, Airbyte, Kafka Connect — not dbt.",
-        "C": "Correct. dbt is a SQL-first transformation framework: engineers define models (SELECTs), tests, documentation and lineage in version-controlled files; dbt compiles and runs them in the warehouse (Snowflake, BigQuery, Redshift, Postgres). It is the de-facto standard for the 'T' in modern ELT stacks.",
-        "D": "Labelling is an ML-ops concern (Labelbox, Scale, Prodigy). dbt is about SQL transformations."
-      }
-    },
-    {
-      "id": "epso_duty_086",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Engineering · 10",
-      "topic": "data_engineering",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data pipeline",
-      "figures": [],
-      "question": "In a data pipeline, 'backfilling' refers to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Adding encryption to an existing stream"
-        },
-        {
-          "letter": "B",
-          "text": "Re-running historical computations for a past date range, typically after a code fix or new feature"
-        },
-        {
-          "letter": "C",
-          "text": "Forwarding every record to archive"
-        },
-        {
-          "letter": "D",
-          "text": "Deleting incorrect records from production"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Backfilling replays a pipeline across a historical date range — commonly used after fixing a bug, introducing a new column, or onboarding a new source. Frameworks like Airflow, Dagster and dbt provide first-class support (`--backfill`, catch-up runs). Idempotent pipelines make backfills safe because re-runs don't duplicate data.\n· A: Encryption is a security control, not a scheduling pattern.\n· C: Archiving is a lifecycle activity, not backfilling.\n· D: Deleting records is 'cleanup' or 'reversal' — separate from reconstructing history.",
-      "explanations": {
-        "A": "Encryption is a security control, not a scheduling pattern.",
-        "B": "Correct. Backfilling replays a pipeline across a historical date range — commonly used after fixing a bug, introducing a new column, or onboarding a new source. Frameworks like Airflow, Dagster and dbt provide first-class support (`--backfill`, catch-up runs). Idempotent pipelines make backfills safe because re-runs don't duplicate data.",
-        "C": "Archiving is a lifecycle activity, not backfilling.",
-        "D": "Deleting records is 'cleanup' or 'reversal' — separate from reconstructing history."
-      }
-    },
-    {
-      "id": "epso_duty_087",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 2",
-      "topic": "data_platforms",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Warehouse",
-      "figures": [],
-      "question": "A classical data warehouse typically employs:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Schema-on-read with no structural constraints"
-        },
-        {
-          "letter": "B",
-          "text": "A graph database with SPARQL endpoints"
-        },
-        {
-          "letter": "C",
-          "text": "A document-oriented NoSQL store"
-        },
-        {
-          "letter": "D",
-          "text": "Schema-on-write with curated, structured tables optimised for BI"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. A warehouse enforces schema-on-write: data is cleansed, conformed and loaded into dimensional structures (star / snowflake schemas) before it becomes queryable. This produces consistent, high-quality, analytics-optimised data at the cost of upfront modelling and ETL.\n· A: Schema-on-read is the lake pattern, where structure is applied at query time. Warehouses enforce schema when data is loaded.\n· B: Graph databases serve different workloads (network analysis, knowledge graphs). SPARQL is an RDF query language, not a warehouse pattern.\n· C: Document stores (MongoDB, Couchbase) are operational databases, not warehouses.",
-      "explanations": {
-        "A": "Schema-on-read is the lake pattern, where structure is applied at query time. Warehouses enforce schema when data is loaded.",
-        "B": "Graph databases serve different workloads (network analysis, knowledge graphs). SPARQL is an RDF query language, not a warehouse pattern.",
-        "C": "Document stores (MongoDB, Couchbase) are operational databases, not warehouses.",
-        "D": "Correct. A warehouse enforces schema-on-write: data is cleansed, conformed and loaded into dimensional structures (star / snowflake schemas) before it becomes queryable. This produces consistent, high-quality, analytics-optimised data at the cost of upfront modelling and ETL."
-      }
-    },
-    {
-      "id": "epso_duty_088",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 3",
-      "topic": "data_platforms",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data lake",
-      "figures": [],
-      "question": "A data lake is characterised by:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Schema-on-read storage of raw data in diverse formats on low-cost object / distributed storage"
-        },
-        {
-          "letter": "B",
-          "text": "Strictly normalised relational schemas"
-        },
-        {
-          "letter": "C",
-          "text": "Only structured tabular data"
-        },
-        {
-          "letter": "D",
-          "text": "Mandatory ACID transactions on every read"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. A data lake stores raw data in its native format (CSV, JSON, Parquet, Avro, images, logs) on cheap scalable storage (HDFS or object storage like S3, GCS, Azure ADLS). Schema is applied at query time ('schema-on-read'), which supports exploration and ML on diverse data but trades away the governance and ACID guarantees of a warehouse.\n· B: Normalised relational schemas are OLTP or warehouse territory, not lakes.\n· C: Lakes accept any format — including unstructured (audio, images, free text).\n· D: Plain lakes lack ACID. Adding ACID via an open table format (Delta / Iceberg / Hudi) is what turns a lake into a lakehouse.",
-      "explanations": {
-        "A": "Correct. A data lake stores raw data in its native format (CSV, JSON, Parquet, Avro, images, logs) on cheap scalable storage (HDFS or object storage like S3, GCS, Azure ADLS). Schema is applied at query time ('schema-on-read'), which supports exploration and ML on diverse data but trades away the governance and ACID guarantees of a warehouse.",
-        "B": "Normalised relational schemas are OLTP or warehouse territory, not lakes.",
-        "C": "Lakes accept any format — including unstructured (audio, images, free text).",
-        "D": "Plain lakes lack ACID. Adding ACID via an open table format (Delta / Iceberg / Hudi) is what turns a lake into a lakehouse."
-      }
-    },
-    {
-      "id": "epso_duty_089",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 4",
-      "topic": "data_platforms",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Iceberg / Delta / Hudi",
-      "figures": [],
-      "question": "What do Apache Iceberg, Delta Lake and Apache Hudi have in common?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "They are open table formats that add ACID, schema evolution and time-travel on top of files (typically Parquet) in object storage"
-        },
-        {
-          "letter": "B",
-          "text": "They are proprietary storage engines bundled only with one cloud provider"
-        },
-        {
-          "letter": "C",
-          "text": "They are OLTP database systems replacing PostgreSQL"
-        },
-        {
-          "letter": "D",
-          "text": "They are classification taxonomies under the AI Act"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Iceberg, Delta and Hudi are the three major open table formats of the lakehouse era. They maintain metadata (snapshots, manifests) alongside Parquet data files and add warehouse-grade features: ACID transactions, schema evolution, partition evolution, time-travel, efficient upserts and deletes. They make BI and ML work on the same object-store dataset.\n· B: All three are open-source and work on multiple clouds. Vendor lock-in is specifically what they push back against.\n· C: None of the three is an OLTP engine. They target analytics workloads at scale.\n· D: Nothing to do with AI Act tiers.",
-      "explanations": {
-        "A": "Correct. Iceberg, Delta and Hudi are the three major open table formats of the lakehouse era. They maintain metadata (snapshots, manifests) alongside Parquet data files and add warehouse-grade features: ACID transactions, schema evolution, partition evolution, time-travel, efficient upserts and deletes. They make BI and ML work on the same object-store dataset.",
-        "B": "All three are open-source and work on multiple clouds. Vendor lock-in is specifically what they push back against.",
-        "C": "None of the three is an OLTP engine. They target analytics workloads at scale.",
-        "D": "Nothing to do with AI Act tiers."
-      }
-    },
-    {
-      "id": "epso_duty_090",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 5",
-      "topic": "data_platforms",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Columnar storage",
-      "figures": [],
-      "question": "Parquet, ORC and Arrow are all examples of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Columnar storage / memory formats optimised for analytics workloads"
-        },
-        {
-          "letter": "B",
-          "text": "Row-oriented OLTP table formats"
-        },
-        {
-          "letter": "C",
-          "text": "Encryption schemes for personal data"
-        },
-        {
-          "letter": "D",
-          "text": "Regulatory reporting XBRL taxonomies"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Parquet (on-disk), ORC (on-disk) and Arrow (in-memory) are columnar formats: values of each column are stored together, enabling compression, vectorised execution and efficient column-pruning for analytical queries. This is why lakehouses, warehouses and distributed SQL engines rely on them.\n· B: Row-oriented layouts (typical of OLTP) store values of one record contiguously — inefficient for analytics that scan a few columns over many rows.\n· C: They are not encryption schemes — encryption is a separate layer that can be applied on top of any of these formats.\n· D: XBRL is a regulatory-reporting language; unrelated to these columnar formats.",
-      "explanations": {
-        "A": "Correct. Parquet (on-disk), ORC (on-disk) and Arrow (in-memory) are columnar formats: values of each column are stored together, enabling compression, vectorised execution and efficient column-pruning for analytical queries. This is why lakehouses, warehouses and distributed SQL engines rely on them.",
-        "B": "Row-oriented layouts (typical of OLTP) store values of one record contiguously — inefficient for analytics that scan a few columns over many rows.",
-        "C": "They are not encryption schemes — encryption is a separate layer that can be applied on top of any of these formats.",
-        "D": "XBRL is a regulatory-reporting language; unrelated to these columnar formats."
-      }
-    },
-    {
-      "id": "epso_duty_091",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 6",
-      "topic": "data_platforms",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "5 Vs of big data",
-      "figures": [],
-      "question": "The 3 Vs of big data (classical model) stand for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Volume, Variety, Velocity"
-        },
-        {
-          "letter": "B",
-          "text": "Value, Validity, Veracity"
-        },
-        {
-          "letter": "C",
-          "text": "Vector, Vertex, Vault"
-        },
-        {
-          "letter": "D",
-          "text": "Virtual, Visual, Voluntary"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Volume (how much), Variety (structured, semi-structured, unstructured formats) and Velocity (how fast it arrives) are the classical 3 Vs coined by Doug Laney. The model is often extended to 5 Vs with Veracity (trust / quality) and Value (extracted worth), and sometimes 7 Vs (adding Variability and Visualisation).\n· B: Those are often added as the 4th / 5th Vs but aren't the original three.\n· C: Unrelated jargon.\n· D: Unrelated — not the definition.",
-      "explanations": {
-        "A": "Correct. Volume (how much), Variety (structured, semi-structured, unstructured formats) and Velocity (how fast it arrives) are the classical 3 Vs coined by Doug Laney. The model is often extended to 5 Vs with Veracity (trust / quality) and Value (extracted worth), and sometimes 7 Vs (adding Variability and Visualisation).",
-        "B": "Those are often added as the 4th / 5th Vs but aren't the original three.",
-        "C": "Unrelated jargon.",
-        "D": "Unrelated — not the definition."
-      }
-    },
-    {
-      "id": "epso_duty_092",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 7",
-      "topic": "data_platforms",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Polyglot persistence",
-      "figures": [],
-      "question": "'Polyglot persistence' as a platform principle means:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Every application must expose its data through a single REST endpoint"
-        },
-        {
-          "letter": "B",
-          "text": "Data must always be stored in plaintext so any language can read it"
-        },
-        {
-          "letter": "C",
-          "text": "All data is stored in multiple languages for translation purposes"
-        },
-        {
-          "letter": "D",
-          "text": "Different parts of a system use different data stores tailored to their workload (relational, document, key-value, graph, time-series, search…)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Polyglot persistence (Fowler, 2011) argues that a modern system is rarely best served by a single data store; instead, each capability uses the store best suited to its access pattern — relational for complex transactions, key-value (Redis) for caches, document (MongoDB) for flexible entities, search (Elasticsearch) for full-text, graph (Neo4j) for relationships, time-series (InfluxDB) for metrics.\n· A: A single endpoint is an API-layer pattern, not a persistence-layer one.\n· B: Plaintext storage contradicts sound security practice and is unrelated to polyglot persistence.\n· C: Despite the 'linguistic' name, polyglot persistence has nothing to do with human languages.",
-      "explanations": {
-        "A": "A single endpoint is an API-layer pattern, not a persistence-layer one.",
-        "B": "Plaintext storage contradicts sound security practice and is unrelated to polyglot persistence.",
-        "C": "Despite the 'linguistic' name, polyglot persistence has nothing to do with human languages.",
-        "D": "Correct. Polyglot persistence (Fowler, 2011) argues that a modern system is rarely best served by a single data store; instead, each capability uses the store best suited to its access pattern — relational for complex transactions, key-value (Redis) for caches, document (MongoDB) for flexible entities, search (Elasticsearch) for full-text, graph (Neo4j) for relationships, time-series (InfluxDB) for metrics."
-      }
-    },
-    {
-      "id": "epso_duty_093",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 8",
-      "topic": "data_platforms",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Vector database",
-      "figures": [],
-      "question": "A 'vector database' (Pinecone, Weaviate, Milvus) is optimised for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Storing financial ledger transactions with strict ACID guarantees"
-        },
-        {
-          "letter": "B",
-          "text": "Running OLTP workloads at millisecond commit latency"
-        },
-        {
-          "letter": "C",
-          "text": "Serving static HTML pages with edge caching"
-        },
-        {
-          "letter": "D",
-          "text": "Performing approximate nearest-neighbour searches over high-dimensional embeddings"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Vector databases index high-dimensional embeddings (from LLMs or other ML models) and accept similarity queries — approximate nearest-neighbour (ANN) search using algorithms like HNSW or IVF. They power semantic search, retrieval-augmented generation (RAG) and recommendation systems that need similarity rather than exact matches.\n· A: Financial ledgers use traditional ACID OLTP databases.\n· B: OLTP is served by row-oriented RDBMSs, not vector stores.\n· C: Static-page serving is a CDN / edge-cache concern.",
-      "explanations": {
-        "A": "Financial ledgers use traditional ACID OLTP databases.",
-        "B": "OLTP is served by row-oriented RDBMSs, not vector stores.",
-        "C": "Static-page serving is a CDN / edge-cache concern.",
-        "D": "Correct. Vector databases index high-dimensional embeddings (from LLMs or other ML models) and accept similarity queries — approximate nearest-neighbour (ANN) search using algorithms like HNSW or IVF. They power semantic search, retrieval-augmented generation (RAG) and recommendation systems that need similarity rather than exact matches."
-      }
-    },
-    {
-      "id": "epso_duty_094",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 9",
-      "topic": "data_platforms",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "OLAP cube",
-      "figures": [],
-      "question": "An 'OLAP cube' is best described as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A physical server form factor"
-        },
-        {
-          "letter": "B",
-          "text": "A container image format"
-        },
-        {
-          "letter": "C",
-          "text": "A multi-dimensional data structure pre-aggregated along business dimensions (time, geography, product…) for fast slice-and-dice analysis"
-        },
-        {
-          "letter": "D",
-          "text": "A hardware encryption appliance"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. OLAP cubes (SSAS, Essbase, Mondrian) pre-aggregate measures (sales, counts) along dimensions so analysts can slice, dice, drill-down and roll-up interactively. Modern in-memory engines (Power BI / Tabular, ClickHouse, DuckDB, Druid) increasingly compute on the fly, blurring the classic cube concept but keeping the multi-dimensional mental model.\n· A: Cube here is a logical / mathematical metaphor, not a server chassis.\n· B: Container images are packaged by OCI formats (Docker, OCI), unrelated.\n· D: Encryption appliances are HSMs / TPMs, unrelated.",
-      "explanations": {
-        "A": "Cube here is a logical / mathematical metaphor, not a server chassis.",
-        "B": "Container images are packaged by OCI formats (Docker, OCI), unrelated.",
-        "C": "Correct. OLAP cubes (SSAS, Essbase, Mondrian) pre-aggregate measures (sales, counts) along dimensions so analysts can slice, dice, drill-down and roll-up interactively. Modern in-memory engines (Power BI / Tabular, ClickHouse, DuckDB, Druid) increasingly compute on the fly, blurring the classic cube concept but keeping the multi-dimensional mental model.",
-        "D": "Encryption appliances are HSMs / TPMs, unrelated."
-      }
-    },
-    {
-      "id": "epso_duty_095",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Platforms · 10",
-      "topic": "data_platforms",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Compute-storage separation",
-      "figures": [],
-      "question": "Modern cloud warehouses (Snowflake, BigQuery, Redshift RA3) separate compute from storage primarily to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Reduce query latency to microseconds on small workloads"
-        },
-        {
-          "letter": "B",
-          "text": "Eliminate the need for SQL as a query language"
-        },
-        {
-          "letter": "C",
-          "text": "Guarantee strict ACID across transactional and analytical systems alike"
-        },
-        {
-          "letter": "D",
-          "text": "Scale compute and storage independently, enabling elasticity and isolating workloads"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Separating storage (object store, once-written, shared) from compute (ephemeral clusters / warehouses / slots) means you can scale each dimension independently. Different teams can get their own compute cluster on the same data without contention, and storage costs stay cheap. Snowflake's virtual warehouses, BigQuery slots and Redshift managed storage all embody this design.\n· A: Separation sometimes adds latency compared with shared-nothing local disks; the benefit is elsewhere.\n· B: SQL remains the primary interface for all three systems.\n· C: ACID is not the point — modern warehouses add it to analytics storage, but OLTP systems remain separate.",
-      "explanations": {
-        "A": "Separation sometimes adds latency compared with shared-nothing local disks; the benefit is elsewhere.",
-        "B": "SQL remains the primary interface for all three systems.",
-        "C": "ACID is not the point — modern warehouses add it to analytics storage, but OLTP systems remain separate.",
-        "D": "Correct. Separating storage (object store, once-written, shared) from compute (ephemeral clusters / warehouses / slots) means you can scale each dimension independently. Different teams can get their own compute cluster on the same data without contention, and storage costs stay cheap. Snowflake's virtual warehouses, BigQuery slots and Redshift managed storage all embody this design."
-      }
-    },
-    {
-      "id": "epso_duty_096",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 2",
-      "topic": "bi_reporting",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Descriptive analytics",
-      "figures": [],
-      "question": "'Descriptive analytics' primarily answers the question:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "What should we do next?"
-        },
-        {
-          "letter": "B",
-          "text": "What will happen?"
-        },
-        {
-          "letter": "C",
-          "text": "What happened?"
-        },
-        {
-          "letter": "D",
-          "text": "Why did it happen?"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.\n· A: Prescriptive analytics answers 'what should we do?' — optimisation, decision support.\n· B: Predictive analytics answers 'what will happen?' — forecasting, classification.\n· D: Diagnostic analytics answers 'why did it happen?' — drill-downs, root-cause analysis.",
-      "explanations": {
-        "A": "Prescriptive analytics answers 'what should we do?' — optimisation, decision support.",
-        "B": "Predictive analytics answers 'what will happen?' — forecasting, classification.",
-        "C": "Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.",
-        "D": "Diagnostic analytics answers 'why did it happen?' — drill-downs, root-cause analysis."
-      }
-    },
-    {
-      "id": "epso_duty_097",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 3",
-      "topic": "bi_reporting",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Self-service BI",
-      "figures": [],
-      "question": "Self-service BI is characterised by:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Business users building their own reports on governed datasets without an IT ticket"
-        },
-        {
-          "letter": "B",
-          "text": "IT exclusively preparing all analyses"
-        },
-        {
-          "letter": "C",
-          "text": "Purely manual paper-based reporting"
-        },
-        {
-          "letter": "D",
-          "text": "Deploying Kafka clusters by the finance team"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Self-service BI (Power BI, Tableau, Qlik, Metabase, Looker) empowers business users to build reports, slice/dice and share insights without waiting for an IT backlog. To stay safe, it needs governed semantic layers (certified datasets, shared measures) and good glossaries — otherwise multiple versions of the truth proliferate.\n· B: Central IT prepping everything is the old waterfall model — the opposite of self-service.\n· C: Paper reporting pre-dates BI altogether.\n· D: Operating data infrastructure is a data-engineering task, not a BI user's role.",
-      "explanations": {
-        "A": "Correct. Self-service BI (Power BI, Tableau, Qlik, Metabase, Looker) empowers business users to build reports, slice/dice and share insights without waiting for an IT backlog. To stay safe, it needs governed semantic layers (certified datasets, shared measures) and good glossaries — otherwise multiple versions of the truth proliferate.",
-        "B": "Central IT prepping everything is the old waterfall model — the opposite of self-service.",
-        "C": "Paper reporting pre-dates BI altogether.",
-        "D": "Operating data infrastructure is a data-engineering task, not a BI user's role."
-      }
-    },
-    {
-      "id": "epso_duty_098",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 4",
-      "topic": "bi_reporting",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Semantic layer",
-      "figures": [],
-      "question": "A BI 'semantic layer' (e.g. Power BI datasets, Looker's LookML, Cube, dbt Semantic Layer) primarily provides:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A shared, governed definition of metrics and dimensions that multiple tools and users can query consistently"
-        },
-        {
-          "letter": "B",
-          "text": "An encryption layer for in-transit data"
-        },
-        {
-          "letter": "C",
-          "text": "A visualisation theme for corporate dashboards"
-        },
-        {
-          "letter": "D",
-          "text": "A vector index for semantic search"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. A semantic layer sits between raw data and consumers: it defines metrics ('net revenue'), dimensions ('region') and their relationships once, so every dashboard, ad-hoc query and embedded analytics uses the same formula. This solves the 'same term, different number' problem that plagues ungoverned self-service BI.\n· B: TLS / encryption belongs to the transport / security layer.\n· C: Themes are visual styling, not semantic definitions.\n· D: 'Semantic' overlaps with the ML world ('semantic search') but in BI it refers to the metrics-definition layer.",
-      "explanations": {
-        "A": "Correct. A semantic layer sits between raw data and consumers: it defines metrics ('net revenue'), dimensions ('region') and their relationships once, so every dashboard, ad-hoc query and embedded analytics uses the same formula. This solves the 'same term, different number' problem that plagues ungoverned self-service BI.",
-        "B": "TLS / encryption belongs to the transport / security layer.",
-        "C": "Themes are visual styling, not semantic definitions.",
-        "D": "'Semantic' overlaps with the ML world ('semantic search') but in BI it refers to the metrics-definition layer."
-      }
-    },
-    {
-      "id": "epso_duty_099",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 5",
-      "topic": "bi_reporting",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "SMART KPIs",
-      "figures": [],
-      "question": "The 'SMART' acronym applied to KPIs stands for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Specific, Measurable, Achievable, Relevant, Time-bound"
-        },
-        {
-          "letter": "B",
-          "text": "Strategic, Measurable, Automated, Reported, Timely"
-        },
-        {
-          "letter": "C",
-          "text": "Simple, Managed, Aggregated, Reviewed, Transparent"
-        },
-        {
-          "letter": "D",
-          "text": "Scalable, Modular, Abstract, Reliable, Tractable"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. SMART is Specific, Measurable, Achievable, Relevant, Time-bound — the classical goal-setting checklist, widely applied to KPI design. A KPI that is vague, not measurable, unattainable, irrelevant or lacks a time dimension will fail to drive behaviour.\n· B: Contains 'automated' and 'strategic' — not the SMART letters.\n· C: Reasonable-sounding but not SMART.\n· D: Those are software-engineering qualities — unrelated.",
-      "explanations": {
-        "A": "Correct. SMART is Specific, Measurable, Achievable, Relevant, Time-bound — the classical goal-setting checklist, widely applied to KPI design. A KPI that is vague, not measurable, unattainable, irrelevant or lacks a time dimension will fail to drive behaviour.",
-        "B": "Contains 'automated' and 'strategic' — not the SMART letters.",
-        "C": "Reasonable-sounding but not SMART.",
-        "D": "Those are software-engineering qualities — unrelated."
-      }
-    },
-    {
-      "id": "epso_duty_100",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 6",
-      "topic": "bi_reporting",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Predictive vs prescriptive",
-      "figures": [],
-      "question": "A transport agency uses a model to recommend the optimal route given traffic, weather and accident probability. This is an example of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Descriptive analytics"
-        },
-        {
-          "letter": "B",
-          "text": "Diagnostic analytics"
-        },
-        {
-          "letter": "C",
-          "text": "Predictive analytics"
-        },
-        {
-          "letter": "D",
-          "text": "Prescriptive analytics"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints).\n· A: Descriptive would report past travel times — it doesn't recommend a course of action.\n· B: Diagnostic would explain why a particular route was slow yesterday — a root-cause analysis, not a recommendation.\n· C: Predictive would forecast the travel time or arrival probability. Recommending the optimal action is a step beyond prediction.",
-      "explanations": {
-        "A": "Descriptive would report past travel times — it doesn't recommend a course of action.",
-        "B": "Diagnostic would explain why a particular route was slow yesterday — a root-cause analysis, not a recommendation.",
-        "C": "Predictive would forecast the travel time or arrival probability. Recommending the optimal action is a step beyond prediction.",
-        "D": "Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints)."
-      }
-    },
-    {
-      "id": "epso_duty_101",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 7",
-      "topic": "bi_reporting",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Dashboard vs report",
-      "figures": [],
-      "question": "Compared to a 'report', a 'dashboard' in BI typically:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Offers at-a-glance, visual summaries of KPIs with interactivity"
-        },
-        {
-          "letter": "B",
-          "text": "Provides a rich narrative with many pages of text"
-        },
-        {
-          "letter": "C",
-          "text": "Is delivered exclusively on paper"
-        },
-        {
-          "letter": "D",
-          "text": "Contains only raw tables with no visuals"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Dashboards combine KPIs, charts and filters into a visual summary optimised for quick comprehension. They often support interactivity — drill-down, slicing — and refresh frequently. Reports tend to be longer, narrative and delivered on a schedule.\n· B: Narrative reports (annual reports, audit reports) rely on prose; dashboards rely on visuals.\n· C: Paper delivery is rare in modern BI; dashboards are typically interactive web artefacts.\n· D: Raw tables are the opposite of a dashboard's visual summary.",
-      "explanations": {
-        "A": "Correct. Dashboards combine KPIs, charts and filters into a visual summary optimised for quick comprehension. They often support interactivity — drill-down, slicing — and refresh frequently. Reports tend to be longer, narrative and delivered on a schedule.",
-        "B": "Narrative reports (annual reports, audit reports) rely on prose; dashboards rely on visuals.",
-        "C": "Paper delivery is rare in modern BI; dashboards are typically interactive web artefacts.",
-        "D": "Raw tables are the opposite of a dashboard's visual summary."
-      }
-    },
-    {
-      "id": "epso_duty_102",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 8",
-      "topic": "bi_reporting",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Leading vs lagging",
-      "figures": [],
-      "question": "Monthly customer-satisfaction survey score is best described as a:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Leading indicator that anticipates future revenue trends"
-        },
-        {
-          "letter": "B",
-          "text": "Lagging indicator of past customer experience"
-        },
-        {
-          "letter": "C",
-          "text": "Operational indicator with no strategic value"
-        },
-        {
-          "letter": "D",
-          "text": "Raw metric incompatible with KPI classification"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.\n· B: Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.\n· C: Customer satisfaction is a classical strategic KPI, not merely operational.\n· D: Any quantifiable measure can be a metric and, if tied to an objective, a KPI.",
-      "explanations": {
-        "A": "Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.",
-        "B": "Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.",
-        "C": "Customer satisfaction is a classical strategic KPI, not merely operational.",
-        "D": "Any quantifiable measure can be a metric and, if tied to an objective, a KPI."
-      }
-    },
-    {
-      "id": "epso_duty_103",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 9",
-      "topic": "bi_reporting",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Chart choice",
-      "figures": [],
-      "question": "You want to visualise how a single KPI varies across a hierarchy of categories (e.g. country → region → city) and show relative size. The most appropriate chart is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A pie chart with 30 slices"
-        },
-        {
-          "letter": "B",
-          "text": "A stacked line chart over time"
-        },
-        {
-          "letter": "C",
-          "text": "A treemap"
-        },
-        {
-          "letter": "D",
-          "text": "A 3D rotating bar chart"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.\n· B: Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.\n· D: 3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice.",
-      "explanations": {
-        "A": "Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.",
-        "B": "Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.",
-        "C": "Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.",
-        "D": "3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice."
-      }
-    },
-    {
-      "id": "epso_duty_104",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · BI & Reporting · 10",
-      "topic": "bi_reporting",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Reporting cadence",
-      "figures": [],
-      "question": "A 'reporting cadence' defines:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The speed of the network between source and dashboard"
-        },
-        {
-          "letter": "B",
-          "text": "The encryption algorithm used for reports in transit"
-        },
-        {
-          "letter": "C",
-          "text": "The agreed frequency at which a report or KPI is refreshed and reviewed"
-        },
-        {
-          "letter": "D",
-          "text": "The visualisation library used on the front-end"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.\n· A: Network speed is a technical performance concern, not cadence.\n· B: Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.\n· D: Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence.",
-      "explanations": {
-        "A": "Network speed is a technical performance concern, not cadence.",
-        "B": "Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.",
-        "C": "Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.",
-        "D": "Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence."
-      }
-    },
-    {
-      "id": "epso_duty_105",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 2",
-      "topic": "master_data",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Master vs reference",
-      "figures": [],
-      "question": "Which pair best distinguishes master data from reference data?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Master data = ISO country codes; reference data = customer records"
-        },
-        {
-          "letter": "B",
-          "text": "Master data = training datasets; reference data = test datasets"
-        },
-        {
-          "letter": "C",
-          "text": "Master data = transactional events; reference data = historical archives"
-        },
-        {
-          "letter": "D",
-          "text": "Master data = key business entities (customer, product, employee); reference data = controlled code lists (country, currency, status)"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business.\n· A: Reversed. Country codes are reference data; customer records are master data.\n· B: ML training / test sets are unrelated to the master / reference distinction.\n· C: Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
-      "explanations": {
-        "A": "Reversed. Country codes are reference data; customer records are master data.",
-        "B": "ML training / test sets are unrelated to the master / reference distinction.",
-        "C": "Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
-        "D": "Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business."
-      }
-    },
-    {
-      "id": "epso_duty_106",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 3",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Golden record",
-      "figures": [],
-      "question": "In MDM, a 'golden record' is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The most recent edit of any record in any source system"
-        },
-        {
-          "letter": "B",
-          "text": "The training dataset used to retrain a fraud-detection model"
-        },
-        {
-          "letter": "C",
-          "text": "A copy of the production database kept for disaster recovery"
-        },
-        {
-          "letter": "D",
-          "text": "A single, reconciled, authoritative view of a master entity merged from multiple source systems"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth.\n· A: 'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.\n· B: Training datasets are ML artefacts, not MDM records.\n· C: DR copies are operational backups, unrelated.",
-      "explanations": {
-        "A": "'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.",
-        "B": "Training datasets are ML artefacts, not MDM records.",
-        "C": "DR copies are operational backups, unrelated.",
-        "D": "Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth."
-      }
-    },
-    {
-      "id": "epso_duty_107",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 4",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Survivorship",
-      "figures": [],
-      "question": "In MDM matching and merging, a 'survivorship rule' determines:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Which records are archived to cold storage"
-        },
-        {
-          "letter": "B",
-          "text": "Which attribute value wins when several source systems disagree about the same entity"
-        },
-        {
-          "letter": "C",
-          "text": "Which employees survive organisational restructuring"
-        },
-        {
-          "letter": "D",
-          "text": "Which node in a Kafka cluster handles the next message"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.\n· A: Archiving is a lifecycle task, unrelated to survivorship.\n· C: HR humour aside, it's not what MDM means.\n· D: Kafka partition assignment is a different technical topic.",
-      "explanations": {
-        "A": "Archiving is a lifecycle task, unrelated to survivorship.",
-        "B": "Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.",
-        "C": "HR humour aside, it's not what MDM means.",
-        "D": "Kafka partition assignment is a different technical topic."
-      }
-    },
-    {
-      "id": "epso_duty_108",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 5",
-      "topic": "master_data",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Code lists",
-      "figures": [],
-      "question": "Which of the following is NOT typically considered reference data?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "ISO 3166 country codes"
-        },
-        {
-          "letter": "B",
-          "text": "ISO 4217 currency codes"
-        },
-        {
-          "letter": "C",
-          "text": "Individual customer transactions"
-        },
-        {
-          "letter": "D",
-          "text": "Human-Resources job-grade categories"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Individual customer transactions are transactional data, not reference. They are high-volume, event-like, and reference back to master entities (customer, product). Reference data, by contrast, is small, stable and shared across many systems.\n· A: Country codes are canonical reference data — stable, controlled, widely referenced.\n· B: Currency codes are textbook reference data.\n· D: HR job grades are a controlled code list — a reference-data use case.",
-      "explanations": {
-        "A": "Country codes are canonical reference data — stable, controlled, widely referenced.",
-        "B": "Currency codes are textbook reference data.",
-        "C": "Correct. Individual customer transactions are transactional data, not reference. They are high-volume, event-like, and reference back to master entities (customer, product). Reference data, by contrast, is small, stable and shared across many systems.",
-        "D": "HR job grades are a controlled code list — a reference-data use case."
-      }
-    },
-    {
-      "id": "epso_duty_109",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 6",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "IATE purpose",
-      "figures": [],
-      "question": "IATE (Inter-Active Terminology for Europe) supports EU multilingualism by providing:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A controlled, inter-institutional terminology database of concepts in 24 languages"
-        },
-        {
-          "letter": "B",
-          "text": "Machine-translation training corpora"
-        },
-        {
-          "letter": "C",
-          "text": "A legal register of EU treaties"
-        },
-        {
-          "letter": "D",
-          "text": "The public-procurement vocabulary (CPV)"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.\n· B: MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.\n· C: The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.\n· D: CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE.",
-      "explanations": {
-        "A": "Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.",
-        "B": "MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.",
-        "C": "The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.",
-        "D": "CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE."
-      }
-    },
-    {
-      "id": "epso_duty_110",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 7",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "EuroVoc purpose",
-      "figures": [],
-      "question": "EuroVoc is used by EU institutions to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Serve as the EU's translation memory"
-        },
-        {
-          "letter": "B",
-          "text": "Index documents across institutions using a multilingual thesaurus"
-        },
-        {
-          "letter": "C",
-          "text": "Authenticate users on the Interoperable Europe Portal"
-        },
-        {
-          "letter": "D",
-          "text": "Provide SQL access to the Official Journal archive"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.\n· A: The EU translation memory is Euramis.\n· C: Authentication is handled by EU Login / eIDAS, not EuroVoc.\n· D: EuroVoc is a vocabulary, not a database engine or query interface.",
-      "explanations": {
-        "A": "The EU translation memory is Euramis.",
-        "B": "Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.",
-        "C": "Authentication is handled by EU Login / eIDAS, not EuroVoc.",
-        "D": "EuroVoc is a vocabulary, not a database engine or query interface."
-      }
-    },
-    {
-      "id": "epso_duty_111",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 8",
-      "topic": "master_data",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "MDM architecture",
-      "figures": [],
-      "question": "A 'registry-style' MDM architecture differs from a 'repository-style' MDM primarily because:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Registry stores only an index pointing to source systems; repository stores the golden record itself"
-        },
-        {
-          "letter": "B",
-          "text": "Registry is an open-data concept; repository is a closed-data concept"
-        },
-        {
-          "letter": "C",
-          "text": "Registry applies to customer data; repository to product data"
-        },
-        {
-          "letter": "D",
-          "text": "Registry is legally required by the DGA; repository is optional"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.\n· B: Not a meaningful distinction — neither style is tied to open vs closed data.\n· C: MDM styles apply to any master domain.\n· D: The DGA doesn't mandate either architecture.",
-      "explanations": {
-        "A": "Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.",
-        "B": "Not a meaningful distinction — neither style is tied to open vs closed data.",
-        "C": "MDM styles apply to any master domain.",
-        "D": "The DGA doesn't mandate either architecture."
-      }
-    },
-    {
-      "id": "epso_duty_112",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 9",
-      "topic": "master_data",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Core Business vocabulary",
-      "figures": [],
-      "question": "The EU 'Core Business Vocabulary' (SEMIC) provides:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A mandatory ontology for banks under MiFID II"
-        },
-        {
-          "letter": "B",
-          "text": "A catalogue of consulting firms recognised by the Commission"
-        },
-        {
-          "letter": "C",
-          "text": "A controlled list of business-sector NACE codes"
-        },
-        {
-          "letter": "D",
-          "text": "A minimum reusable data model to describe legal entities across public services"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically.\n· A: MiFID II has its own regulatory-reporting standards unrelated to Core Business.\n· B: No such catalogue is linked to Core Business.\n· C: NACE codes are a separate Eurostat classification.",
-      "explanations": {
-        "A": "MiFID II has its own regulatory-reporting standards unrelated to Core Business.",
-        "B": "No such catalogue is linked to Core Business.",
-        "C": "NACE codes are a separate Eurostat classification.",
-        "D": "Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically."
-      }
-    },
-    {
-      "id": "epso_duty_113",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Master & Reference · 10",
-      "topic": "master_data",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "LEI",
-      "figures": [],
-      "question": "The Legal Entity Identifier (LEI, ISO 17442) is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A 10-character alphanumeric code issued under eIDAS"
-        },
-        {
-          "letter": "B",
-          "text": "A 20-character alphanumeric code uniquely identifying legal entities engaging in financial transactions worldwide"
-        },
-        {
-          "letter": "C",
-          "text": "A GDPR pseudonym for natural persons"
-        },
-        {
-          "letter": "D",
-          "text": "A registration scheme under the Open Data Directive"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).\n· A: eIDAS concerns electronic identification and trust services, not LEI.\n· C: LEIs identify legal entities, not natural persons.\n· D: The Open Data Directive doesn't define the LEI.",
-      "explanations": {
-        "A": "eIDAS concerns electronic identification and trust services, not LEI.",
-        "B": "Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).",
-        "C": "LEIs identify legal entities, not natural persons.",
-        "D": "The Open Data Directive doesn't define the LEI."
-      }
-    },
-    {
-      "id": "epso_duty_114",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 2",
-      "topic": "metadata_taxonomy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Metadata definition",
-      "figures": [],
-      "question": "Metadata can be defined as:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data about data — describing its content, context, structure and lineage"
-        },
-        {
-          "letter": "B",
-          "text": "Data that has been encrypted"
-        },
-        {
-          "letter": "C",
-          "text": "Data older than seven years"
-        },
-        {
-          "letter": "D",
-          "text": "Data exclusively about machine-learning models"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.\n· B: Encryption is a security operation, not a definition of metadata.\n· C: Age isn't part of the definition of metadata.\n· D: Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset).",
-      "explanations": {
-        "A": "Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.",
-        "B": "Encryption is a security operation, not a definition of metadata.",
-        "C": "Age isn't part of the definition of metadata.",
-        "D": "Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset)."
-      }
-    },
-    {
-      "id": "epso_duty_115",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 3",
-      "topic": "metadata_taxonomy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Dublin Core",
-      "figures": [],
-      "question": "Dublin Core provides a set of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "15 core metadata elements for describing resources (title, creator, date, subject, …)"
-        },
-        {
-          "letter": "B",
-          "text": "Cybersecurity controls for EU institutions"
-        },
-        {
-          "letter": "C",
-          "text": "EU public-procurement categories"
-        },
-        {
-          "letter": "D",
-          "text": "ML model evaluation metrics"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.\n· B: Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.\n· C: Procurement codes live in CPV, not Dublin Core.\n· D: ML metrics (accuracy, precision, recall) are unrelated to metadata schemas.",
-      "explanations": {
-        "A": "Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.",
-        "B": "Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.",
-        "C": "Procurement codes live in CPV, not Dublin Core.",
-        "D": "ML metrics (accuracy, precision, recall) are unrelated to metadata schemas."
-      }
-    },
-    {
-      "id": "epso_duty_116",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 4",
-      "topic": "metadata_taxonomy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Data lineage",
-      "figures": [],
-      "question": "Data lineage in a catalogue tracks:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "The origin of data and the transformations it undergoes from source to consumption"
-        },
-        {
-          "letter": "B",
-          "text": "The geographic origin of data-centre hardware"
-        },
-        {
-          "letter": "C",
-          "text": "Only the login history of analysts"
-        },
-        {
-          "letter": "D",
-          "text": "The training runs of ML models"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.\n· B: Hardware origin is a supply-chain / sovereignty concern, not data lineage.\n· C: Login history is an audit log, not lineage.\n· D: ML-model provenance is related but a different layer (model lineage) from data lineage.",
-      "explanations": {
-        "A": "Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.",
-        "B": "Hardware origin is a supply-chain / sovereignty concern, not data lineage.",
-        "C": "Login history is an audit log, not lineage.",
-        "D": "ML-model provenance is related but a different layer (model lineage) from data lineage."
-      }
-    },
-    {
-      "id": "epso_duty_117",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 5",
-      "topic": "metadata_taxonomy",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "data.europa.eu",
-      "figures": [],
-      "question": "The EU open-data portal data.europa.eu federates datasets from:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Only Commission departments"
-        },
-        {
-          "letter": "B",
-          "text": "Member-State public-sector data portals, EU institutions, bodies and agencies, based on DCAT-AP"
-        },
-        {
-          "letter": "C",
-          "text": "Private-sector e-commerce platforms"
-        },
-        {
-          "letter": "D",
-          "text": "OECD and UN data repositories exclusively"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.\n· A: The portal aggregates far more than Commission DGs.\n· C: Private e-commerce is out of scope.\n· D: Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies.",
-      "explanations": {
-        "A": "The portal aggregates far more than Commission DGs.",
-        "B": "Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.",
-        "C": "Private e-commerce is out of scope.",
-        "D": "Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies."
-      }
-    },
-    {
-      "id": "epso_duty_118",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 6",
-      "topic": "metadata_taxonomy",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "DCAT-AP extensions",
-      "figures": [],
-      "question": "On the data.europa.eu ecosystem, a dataset containing meteorological observations would likely be described using:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "GeoDCAT-AP"
-        },
-        {
-          "letter": "B",
-          "text": "StatDCAT-AP"
-        },
-        {
-          "letter": "C",
-          "text": "The HVD application profile of DCAT-AP"
-        },
-        {
-          "letter": "D",
-          "text": "A and C are both commonly applicable"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. A real meteorological dataset would typically be described with the HVD profile (because it falls in an HVD category) AND GeoDCAT-AP (because it is geospatial). Profiles are composable; using both maximises interoperability across the portal ecosystem.\n· A: GeoDCAT-AP is the geospatial profile. Meteorological data is often geo-referenced (station locations, grids), so GeoDCAT-AP often applies.\n· B: StatDCAT-AP targets statistical datasets (SDMX-style aggregates). Raw observations are not typically statistical aggregates.\n· C: The HVD profile applies because 'meteorological' is one of the six High-Value-Dataset categories under Implementing Reg. 2023/138.",
-      "explanations": {
-        "A": "GeoDCAT-AP is the geospatial profile. Meteorological data is often geo-referenced (station locations, grids), so GeoDCAT-AP often applies.",
-        "B": "StatDCAT-AP targets statistical datasets (SDMX-style aggregates). Raw observations are not typically statistical aggregates.",
-        "C": "The HVD profile applies because 'meteorological' is one of the six High-Value-Dataset categories under Implementing Reg. 2023/138.",
-        "D": "Correct. A real meteorological dataset would typically be described with the HVD profile (because it falls in an HVD category) AND GeoDCAT-AP (because it is geospatial). Profiles are composable; using both maximises interoperability across the portal ecosystem."
-      }
-    },
-    {
-      "id": "epso_duty_119",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 7",
-      "topic": "metadata_taxonomy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Taxonomy vs ontology",
-      "figures": [],
-      "question": "Which is the most accurate distinction between a taxonomy and an ontology?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Taxonomies hierarchically classify concepts; ontologies formally specify concepts, relationships and axioms with a logic reasoners can use"
-        },
-        {
-          "letter": "B",
-          "text": "Taxonomies are always richer than ontologies"
-        },
-        {
-          "letter": "C",
-          "text": "They are synonyms"
-        },
-        {
-          "letter": "D",
-          "text": "Ontologies always use JSON while taxonomies use XML"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.\n· B: The opposite — ontologies are richer because they capture more semantics.\n· C: They are related but distinct. Using them interchangeably loses important precision.\n· D: Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction.",
-      "explanations": {
-        "A": "Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.",
-        "B": "The opposite — ontologies are richer because they capture more semantics.",
-        "C": "They are related but distinct. Using them interchangeably loses important precision.",
-        "D": "Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction."
-      }
-    },
-    {
-      "id": "epso_duty_120",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 8",
-      "topic": "metadata_taxonomy",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Data catalogue",
-      "figures": [],
-      "question": "A 'data catalogue' in a modern data platform (e.g. Collibra, OpenMetadata, DataHub) typically provides:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Only physical table definitions"
-        },
-        {
-          "letter": "B",
-          "text": "A container orchestration platform"
-        },
-        {
-          "letter": "C",
-          "text": "An encryption key rotation service"
-        },
-        {
-          "letter": "D",
-          "text": "Searchable inventory of data assets with metadata, ownership, lineage, quality and business glossary integration"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes.\n· A: Physical definitions are only part of what a catalogue provides.\n· B: Container orchestration is Kubernetes's job.\n· C: Key rotation belongs to a KMS / HSM, not a catalogue.",
-      "explanations": {
-        "A": "Physical definitions are only part of what a catalogue provides.",
-        "B": "Container orchestration is Kubernetes's job.",
-        "C": "Key rotation belongs to a KMS / HSM, not a catalogue.",
-        "D": "Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes."
-      }
-    },
-    {
-      "id": "epso_duty_121",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 9",
-      "topic": "metadata_taxonomy",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Semantic search",
-      "figures": [],
-      "question": "'Semantic search' over documents, as increasingly implemented in EU libraries and portals, relies primarily on:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Exact keyword matching with Boolean operators"
-        },
-        {
-          "letter": "B",
-          "text": "Dense vector embeddings capturing semantic similarity, often combined with traditional keyword search (hybrid)"
-        },
-        {
-          "letter": "C",
-          "text": "SQL full-text LIKE queries"
-        },
-        {
-          "letter": "D",
-          "text": "Regex substitutions in the documents"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.\n· A: Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.\n· C: LIKE is lexical and pattern-based — not semantic.\n· D: Regex is pattern matching, not meaning-based retrieval.",
-      "explanations": {
-        "A": "Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.",
-        "B": "Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.",
-        "C": "LIKE is lexical and pattern-based — not semantic.",
-        "D": "Regex is pattern matching, not meaning-based retrieval."
-      }
-    },
-    {
-      "id": "epso_duty_122",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 10",
-      "topic": "metadata_taxonomy",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Persistent identifiers",
-      "figures": [],
-      "question": "DOIs, ORCIDs and Handle.net identifiers are examples of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Encryption key types"
-        },
-        {
-          "letter": "B",
-          "text": "European public-procurement codes"
-        },
-        {
-          "letter": "C",
-          "text": "Data-warehouse storage formats"
-        },
-        {
-          "letter": "D",
-          "text": "Persistent identifiers that make resources findable over time, supporting the 'F' in FAIR"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier).\n· A: Keys are secrets, not identifiers.\n· B: Procurement codes live in CPV.\n· C: Storage formats are Parquet, ORC, Avro, etc.",
-      "explanations": {
-        "A": "Keys are secrets, not identifiers.",
-        "B": "Procurement codes live in CPV.",
-        "C": "Storage formats are Parquet, ORC, Avro, etc.",
-        "D": "Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier)."
-      }
-    },
-    {
-      "id": "epso_duty_123",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 1",
-      "topic": "data_quality",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "ISO/IEC 25012 dims",
-      "figures": [],
-      "question": "Which of the following is an 'inherent' data-quality characteristic under ISO/IEC 25012?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Availability"
-        },
-        {
-          "letter": "B",
-          "text": "Accuracy"
-        },
-        {
-          "letter": "C",
-          "text": "Portability"
-        },
-        {
-          "letter": "D",
-          "text": "Recoverability"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability is system-dependent — it depends on infrastructure uptime, not the data itself.\n· C: Portability depends on the surrounding system (formats, migration tools).\n· D: Recoverability depends on backup and restore mechanisms — system-dependent.",
-      "explanations": {
-        "A": "Availability is system-dependent — it depends on infrastructure uptime, not the data itself.",
-        "B": "Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.",
-        "C": "Portability depends on the surrounding system (formats, migration tools).",
-        "D": "Recoverability depends on backup and restore mechanisms — system-dependent."
-      }
-    },
-    {
-      "id": "epso_duty_124",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 2",
-      "topic": "data_quality",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Profiling",
-      "figures": [],
-      "question": "'Data profiling' involves:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Predicting a user's preferences from past behaviour"
-        },
-        {
-          "letter": "B",
-          "text": "Encrypting personal data at rest"
-        },
-        {
-          "letter": "C",
-          "text": "Analysing datasets to understand structure, content, distributions and quality issues"
-        },
-        {
-          "letter": "D",
-          "text": "Producing GDPR privacy notices"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Data profiling is the systematic examination of a dataset — distributions, null rates, uniqueness, length patterns, value frequencies, cross-column dependencies — to understand its quality and structure. It is the essential first step before cleansing, modelling or integration. Tools include Great Expectations, Soda, pandas-profiling / ydata-profiling, Dataedo.\n· A: User profiling is an ML / marketing concept, unrelated.\n· B: Encryption is a security control.\n· D: Privacy notices are a transparency obligation under GDPR Arts. 13–14.",
-      "explanations": {
-        "A": "User profiling is an ML / marketing concept, unrelated.",
-        "B": "Encryption is a security control.",
-        "C": "Correct. Data profiling is the systematic examination of a dataset — distributions, null rates, uniqueness, length patterns, value frequencies, cross-column dependencies — to understand its quality and structure. It is the essential first step before cleansing, modelling or integration. Tools include Great Expectations, Soda, pandas-profiling / ydata-profiling, Dataedo.",
-        "D": "Privacy notices are a transparency obligation under GDPR Arts. 13–14."
-      }
-    },
-    {
-      "id": "epso_duty_125",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 3",
-      "topic": "data_quality",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Accuracy vs precision",
-      "figures": [],
-      "question": "In data-quality terms, 'accuracy' and 'precision' differ because:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Accuracy is closeness to the true value; precision is the level of granularity / repeatability of measurement"
-        },
-        {
-          "letter": "B",
-          "text": "They are synonymous"
-        },
-        {
-          "letter": "C",
-          "text": "Accuracy applies to text; precision to numbers"
-        },
-        {
-          "letter": "D",
-          "text": "Accuracy applies only to ML models"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Accuracy answers 'is the value right?' — closeness to the true real-world value. Precision answers 'how finely / consistently is it measured?' — number of digits, repeatability, granularity. A GPS can be precise (5 decimal places) but inaccurate (shifted by 10 m); and vice versa. Both are ISO/IEC 25012 quality characteristics.\n· B: They describe different things; conflating them is a common source of confusion.\n· C: Both apply to numeric and structured data in general.\n· D: Accuracy predates ML and applies to any data domain; in ML, 'accuracy' also names a specific classification metric (TP+TN)/N, but the DQ concept is broader.",
-      "explanations": {
-        "A": "Correct. Accuracy answers 'is the value right?' — closeness to the true real-world value. Precision answers 'how finely / consistently is it measured?' — number of digits, repeatability, granularity. A GPS can be precise (5 decimal places) but inaccurate (shifted by 10 m); and vice versa. Both are ISO/IEC 25012 quality characteristics.",
-        "B": "They describe different things; conflating them is a common source of confusion.",
-        "C": "Both apply to numeric and structured data in general.",
-        "D": "Accuracy predates ML and applies to any data domain; in ML, 'accuracy' also names a specific classification metric (TP+TN)/N, but the DQ concept is broader."
-      }
-    },
-    {
-      "id": "epso_duty_126",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 4",
-      "topic": "data_quality",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Completeness",
-      "figures": [],
-      "question": "Monitoring 'completeness' on an incoming customer feed means checking:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Whether the data is encrypted end-to-end"
-        },
-        {
-          "letter": "B",
-          "text": "Whether all required attributes are populated for each record and whether expected record counts are received"
-        },
-        {
-          "letter": "C",
-          "text": "Whether records are logically consistent with each other"
-        },
-        {
-          "letter": "D",
-          "text": "Whether the records are available to all departments"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Completeness has two common dimensions: (1) record-level — all required attributes filled (no unexpected NULLs where values must exist), (2) dataset-level — expected volume received (no partial batches, no missing delta). It is one of the five inherent ISO/IEC 25012 characteristics and a frequent failure mode in pipelines.\n· A: Encryption is a security property.\n· C: Consistency is its own characteristic — agreement between related data.\n· D: Availability / accessibility is a system-dependent characteristic, not completeness.",
-      "explanations": {
-        "A": "Encryption is a security property.",
-        "B": "Correct. Completeness has two common dimensions: (1) record-level — all required attributes filled (no unexpected NULLs where values must exist), (2) dataset-level — expected volume received (no partial batches, no missing delta). It is one of the five inherent ISO/IEC 25012 characteristics and a frequent failure mode in pipelines.",
-        "C": "Consistency is its own characteristic — agreement between related data.",
-        "D": "Availability / accessibility is a system-dependent characteristic, not completeness."
-      }
-    },
-    {
-      "id": "epso_duty_127",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 5",
-      "topic": "data_quality",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "DQ rules",
-      "figures": [],
-      "question": "A data-quality rule stating 'total order amount must equal the sum of line-item amounts' targets which dimension?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Completeness"
-        },
-        {
-          "letter": "B",
-          "text": "Consistency (internal consistency across related attributes)"
-        },
-        {
-          "letter": "C",
-          "text": "Accessibility"
-        },
-        {
-          "letter": "D",
-          "text": "Portability"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. This is a cross-attribute / cross-table consistency check: values at different levels of the record must agree by a known business rule. Consistency (ISO/IEC 25012) covers both same-record consistency and cross-system consistency. Such 'reconciliation' rules are at the heart of financial, invoicing and ERP DQ pipelines.\n· A: Completeness would check whether the total and line items are populated at all, not whether they agree.\n· C: Accessibility is about whether data can be obtained by authorised users.\n· D: Portability is about moving data between systems — unrelated to arithmetic consistency.",
-      "explanations": {
-        "A": "Completeness would check whether the total and line items are populated at all, not whether they agree.",
-        "B": "Correct. This is a cross-attribute / cross-table consistency check: values at different levels of the record must agree by a known business rule. Consistency (ISO/IEC 25012) covers both same-record consistency and cross-system consistency. Such 'reconciliation' rules are at the heart of financial, invoicing and ERP DQ pipelines.",
-        "C": "Accessibility is about whether data can be obtained by authorised users.",
-        "D": "Portability is about moving data between systems — unrelated to arithmetic consistency."
-      }
-    },
-    {
-      "id": "epso_duty_128",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 6",
-      "topic": "data_quality",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Cleansing",
-      "figures": [],
-      "question": "'Data cleansing' refers to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Deleting a production database"
-        },
-        {
-          "letter": "B",
-          "text": "Detecting and correcting errors, inconsistencies, duplicates and missing values in a dataset"
-        },
-        {
-          "letter": "C",
-          "text": "Encrypting sensitive fields in a database"
-        },
-        {
-          "letter": "D",
-          "text": "Compressing Parquet files on object storage"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Data cleansing (scrubbing) detects quality issues — incorrect values, duplicates, misspellings, missing values, inconsistent formats — and corrects them. It's typically preceded by profiling and feeds into MDM, analytics or ML pipelines. Techniques include standardisation, deduplication, validation against reference lists, and record linkage.\n· A: That is destruction, not cleansing. Cleansing preserves data while improving it.\n· C: Encryption doesn't improve quality — it protects confidentiality.\n· D: Compression is a storage optimisation.",
-      "explanations": {
-        "A": "That is destruction, not cleansing. Cleansing preserves data while improving it.",
-        "B": "Correct. Data cleansing (scrubbing) detects quality issues — incorrect values, duplicates, misspellings, missing values, inconsistent formats — and corrects them. It's typically preceded by profiling and feeds into MDM, analytics or ML pipelines. Techniques include standardisation, deduplication, validation against reference lists, and record linkage.",
-        "C": "Encryption doesn't improve quality — it protects confidentiality.",
-        "D": "Compression is a storage optimisation."
-      }
-    },
-    {
-      "id": "epso_duty_129",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 7",
-      "topic": "data_quality",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DQ monitoring",
-      "figures": [],
-      "question": "Great Expectations, Soda and dbt tests are all examples of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cloud providers"
-        },
-        {
-          "letter": "B",
-          "text": "Notebook environments"
-        },
-        {
-          "letter": "C",
-          "text": "Stream-processing engines"
-        },
-        {
-          "letter": "D",
-          "text": "Tools that express and execute data-quality tests / assertions on datasets within a pipeline"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. These tools let engineers express quality expectations in code — row counts, null rates, uniqueness, referential integrity, value ranges, accepted values, cross-column invariants. They run inside pipelines and fail fast when data violates expectations, often alerting or quarantining records. They are the 'testing framework' equivalent for data.\n· A: None are cloud providers.\n· B: Notebooks are Jupyter, Zeppelin, Hex, Deepnote.\n· C: Stream processors are Flink, Kafka Streams, Spark Structured Streaming.",
-      "explanations": {
-        "A": "None are cloud providers.",
-        "B": "Notebooks are Jupyter, Zeppelin, Hex, Deepnote.",
-        "C": "Stream processors are Flink, Kafka Streams, Spark Structured Streaming.",
-        "D": "Correct. These tools let engineers express quality expectations in code — row counts, null rates, uniqueness, referential integrity, value ranges, accepted values, cross-column invariants. They run inside pipelines and fail fast when data violates expectations, often alerting or quarantining records. They are the 'testing framework' equivalent for data."
-      }
-    },
-    {
-      "id": "epso_duty_130",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 8",
-      "topic": "data_quality",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Fitness for use",
-      "figures": [],
-      "question": "In data-quality theory, 'fitness for use' implies that quality is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Absolute — there is a single universal quality standard"
-        },
-        {
-          "letter": "B",
-          "text": "Defined entirely by the originating system's vendor"
-        },
-        {
-          "letter": "C",
-          "text": "Relative to the intended purpose of the data — the same dataset can be fit for one use and unfit for another"
-        },
-        {
-          "letter": "D",
-          "text": "Synonymous with high precision"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. 'Fitness for use' (Juran) is the core insight of modern DQ: quality is context-dependent. Customer addresses good enough for targeted marketing may be unfit for legal notifications. DQ programmes therefore define quality by use case, with KPIs mapped to business purposes — not by a universal bar.\n· A: Absolute quality doesn't make sense across contexts — a dataset sufficient for a trend estimate may be unfit for billing.\n· B: Vendors describe the product; fitness is judged by the user in their context.\n· D: Precision is one dimension; fitness is the integration of multiple dimensions against the purpose.",
-      "explanations": {
-        "A": "Absolute quality doesn't make sense across contexts — a dataset sufficient for a trend estimate may be unfit for billing.",
-        "B": "Vendors describe the product; fitness is judged by the user in their context.",
-        "C": "Correct. 'Fitness for use' (Juran) is the core insight of modern DQ: quality is context-dependent. Customer addresses good enough for targeted marketing may be unfit for legal notifications. DQ programmes therefore define quality by use case, with KPIs mapped to business purposes — not by a universal bar.",
-        "D": "Precision is one dimension; fitness is the integration of multiple dimensions against the purpose."
-      }
-    },
-    {
-      "id": "epso_duty_131",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 9",
-      "topic": "data_quality",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Record linkage",
-      "figures": [],
-      "question": "Record linkage (also called entity resolution) is the process of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Cryptographically signing each record"
-        },
-        {
-          "letter": "B",
-          "text": "Linking database tables via foreign keys"
-        },
-        {
-          "letter": "C",
-          "text": "Identifying and matching records that refer to the same real-world entity across one or several data sources"
-        },
-        {
-          "letter": "D",
-          "text": "Compressing duplicate rows with run-length encoding"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Record linkage identifies pairs of records that, despite differences in spelling, format or data quality, refer to the same person, organisation, product or location. Deterministic rules (exact match on keys) are combined with probabilistic methods (Fellegi-Sunter) and, increasingly, ML classifiers. It is central to MDM, fraud detection and census/statistics.\n· A: Signing is a security / integrity operation, unrelated.\n· B: Foreign keys link by design; record linkage tackles the harder case where there's no shared key.\n· D: RLE is a compression technique, not a DQ concept.",
-      "explanations": {
-        "A": "Signing is a security / integrity operation, unrelated.",
-        "B": "Foreign keys link by design; record linkage tackles the harder case where there's no shared key.",
-        "C": "Correct. Record linkage identifies pairs of records that, despite differences in spelling, format or data quality, refer to the same person, organisation, product or location. Deterministic rules (exact match on keys) are combined with probabilistic methods (Fellegi-Sunter) and, increasingly, ML classifiers. It is central to MDM, fraud detection and census/statistics.",
-        "D": "RLE is a compression technique, not a DQ concept."
-      }
-    },
-    {
-      "id": "epso_duty_132",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Quality · 10",
-      "topic": "data_quality",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "DQ scorecard",
-      "figures": [],
-      "question": "A 'data-quality scorecard' summarises:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "CPU usage of analytics clusters"
-        },
-        {
-          "letter": "B",
-          "text": "A set of DQ KPIs (completeness, accuracy, consistency, timeliness …) scored and tracked over time"
-        },
-        {
-          "letter": "C",
-          "text": "The outcome of GDPR fines in the last year"
-        },
-        {
-          "letter": "D",
-          "text": "The number of Kafka messages per day"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. A DQ scorecard presents a curated set of quality KPIs by domain (or by critical dataset), with traffic-light thresholds and trends. It gives governance bodies an at-a-glance view of where quality is improving or degrading, and drives investment prioritisation. It's the BI-for-DQ.\n· A: CPU usage is an infrastructure metric.\n· C: Fines are enforcement metrics — separate from internal DQ tracking.\n· D: Kafka throughput is a platform metric.",
-      "explanations": {
-        "A": "CPU usage is an infrastructure metric.",
-        "B": "Correct. A DQ scorecard presents a curated set of quality KPIs by domain (or by critical dataset), with traffic-light thresholds and trends. It gives governance bodies an at-a-glance view of where quality is improving or degrading, and drives investment prioritisation. It's the BI-for-DQ.",
-        "C": "Fines are enforcement metrics — separate from internal DQ tracking.",
-        "D": "Kafka throughput is a platform metric."
-      }
-    },
-    {
-      "id": "epso_duty_133",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 2",
-      "topic": "data_security",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "RBAC vs ABAC",
-      "figures": [],
-      "question": "What is the primary difference between RBAC and ABAC access-control models?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "RBAC assigns permissions via roles; ABAC evaluates attributes of subject, resource, action and context in policy rules"
-        },
-        {
-          "letter": "B",
-          "text": "RBAC is deprecated; ABAC is mandatory under GDPR"
-        },
-        {
-          "letter": "C",
-          "text": "RBAC applies to SQL; ABAC applies to NoSQL only"
-        },
-        {
-          "letter": "D",
-          "text": "RBAC requires biometric login; ABAC does not"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. RBAC (Role-Based Access Control) groups permissions into roles that users inherit. ABAC (Attribute-Based Access Control) evaluates policies on attributes of the subject (department, clearance), the resource (classification, owner), the action (read, write) and the context (time, location, risk score). ABAC is more flexible and expressive; RBAC is simpler and easier to audit. Modern systems often combine both (RBAC for baseline, ABAC for fine-grained rules).\n· B: GDPR mandates appropriate technical measures but does not prescribe RBAC vs ABAC. Both are valid.\n· C: Both models are technology-neutral.\n· D: Biometrics are an authentication method, orthogonal to access-control models.",
-      "explanations": {
-        "A": "Correct. RBAC (Role-Based Access Control) groups permissions into roles that users inherit. ABAC (Attribute-Based Access Control) evaluates policies on attributes of the subject (department, clearance), the resource (classification, owner), the action (read, write) and the context (time, location, risk score). ABAC is more flexible and expressive; RBAC is simpler and easier to audit. Modern systems often combine both (RBAC for baseline, ABAC for fine-grained rules).",
-        "B": "GDPR mandates appropriate technical measures but does not prescribe RBAC vs ABAC. Both are valid.",
-        "C": "Both models are technology-neutral.",
-        "D": "Biometrics are an authentication method, orthogonal to access-control models."
-      }
-    },
-    {
-      "id": "epso_duty_134",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 3",
-      "topic": "data_security",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Encryption at rest vs in transit",
-      "figures": [],
-      "question": "Encryption 'in transit' protects data while it is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Stored on disk in a database"
-        },
-        {
-          "letter": "B",
-          "text": "Moving over a network between systems"
-        },
-        {
-          "letter": "C",
-          "text": "Being displayed on a screen"
-        },
-        {
-          "letter": "D",
-          "text": "Being physically transported by courier"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Encryption in transit protects data moving between systems, typically via TLS (HTTPS) or IPsec. Both at-rest and in-transit encryption are recommended baseline controls for personal data under GDPR Art. 32 and are almost always required for sensitive public-sector systems.\n· A: Storage-level encryption is 'at rest' — applied while the data sits on disk or in backup.\n· C: Display-layer protection is more about screen masking / UI controls than encryption.\n· D: Physical courier protection is 'physical security', not cryptographic in-transit encryption.",
-      "explanations": {
-        "A": "Storage-level encryption is 'at rest' — applied while the data sits on disk or in backup.",
-        "B": "Correct. Encryption in transit protects data moving between systems, typically via TLS (HTTPS) or IPsec. Both at-rest and in-transit encryption are recommended baseline controls for personal data under GDPR Art. 32 and are almost always required for sensitive public-sector systems.",
-        "C": "Display-layer protection is more about screen masking / UI controls than encryption.",
-        "D": "Physical courier protection is 'physical security', not cryptographic in-transit encryption."
-      }
-    },
-    {
-      "id": "epso_duty_135",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 4",
-      "topic": "data_security",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "DPIA Art. 35",
-      "figures": [],
-      "question": "Under GDPR Art. 35, a DPIA must be carried out when processing is likely to result in:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A high risk to the rights and freedoms of natural persons"
-        },
-        {
-          "letter": "B",
-          "text": "A marketing gain for the controller"
-        },
-        {
-          "letter": "C",
-          "text": "Any level of technical complexity"
-        },
-        {
-          "letter": "D",
-          "text": "A financial loss for the processor"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 35(1) mandates a DPIA whenever processing, especially using new technologies, is 'likely to result in a high risk to the rights and freedoms of natural persons'. Art. 35(3) adds specific triggers: systematic and extensive profiling producing legal effects, large-scale special-category processing, and systematic monitoring of publicly accessible areas. National DPAs publish 'blacklists' and 'whitelists' to help controllers decide.\n· B: Commercial gain is irrelevant to the DPIA threshold.\n· C: Complexity alone does not trigger a DPIA.\n· D: Loss to the processor is a commercial risk, not a DPIA trigger.",
-      "explanations": {
-        "A": "Correct. Art. 35(1) mandates a DPIA whenever processing, especially using new technologies, is 'likely to result in a high risk to the rights and freedoms of natural persons'. Art. 35(3) adds specific triggers: systematic and extensive profiling producing legal effects, large-scale special-category processing, and systematic monitoring of publicly accessible areas. National DPAs publish 'blacklists' and 'whitelists' to help controllers decide.",
-        "B": "Commercial gain is irrelevant to the DPIA threshold.",
-        "C": "Complexity alone does not trigger a DPIA.",
-        "D": "Loss to the processor is a commercial risk, not a DPIA trigger."
-      }
-    },
-    {
-      "id": "epso_duty_136",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 5",
-      "topic": "data_security",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "GDPR Art. 32",
-      "figures": [],
-      "question": "Art. 32 GDPR on security of processing requires measures 'appropriate to the risk', providing as examples:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Only passwords longer than 12 characters"
-        },
-        {
-          "letter": "B",
-          "text": "Using blockchain for every record"
-        },
-        {
-          "letter": "C",
-          "text": "Publishing all system logs openly"
-        },
-        {
-          "letter": "D",
-          "text": "Pseudonymisation and encryption of personal data; ongoing confidentiality, integrity, availability and resilience; ability to restore in a timely manner; regular testing"
-        }
-      ],
-      "correct": "D",
-      "explanation": "Correct: D — Correct. Art. 32(1) lists examples of appropriate measures: pseudonymisation and encryption; ensuring ongoing confidentiality, integrity, availability and resilience; ability to restore availability and access in a timely manner after an incident; and a process for regularly testing, assessing and evaluating the effectiveness of the measures. Note the CIA triad sitting underneath.\n· A: Art. 32 doesn't prescribe specific password lengths.\n· B: Blockchain is neither required nor sufficient — Art. 32 is technology-neutral.\n· C: Publishing logs openly would typically violate confidentiality.",
-      "explanations": {
-        "A": "Art. 32 doesn't prescribe specific password lengths.",
-        "B": "Blockchain is neither required nor sufficient — Art. 32 is technology-neutral.",
-        "C": "Publishing logs openly would typically violate confidentiality.",
-        "D": "Correct. Art. 32(1) lists examples of appropriate measures: pseudonymisation and encryption; ensuring ongoing confidentiality, integrity, availability and resilience; ability to restore availability and access in a timely manner after an incident; and a process for regularly testing, assessing and evaluating the effectiveness of the measures. Note the CIA triad sitting underneath."
-      }
-    },
-    {
-      "id": "epso_duty_137",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 6",
-      "topic": "data_security",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Pseudonymisation Art. 4(5)",
-      "figures": [],
-      "question": "Art. 4(5) GDPR defines pseudonymisation as processing such that personal data can no longer be attributed to a specific data subject:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Under any circumstances whatsoever"
-        },
-        {
-          "letter": "B",
-          "text": "Without the use of additional information, which is kept separately and subject to technical and organisational measures"
-        },
-        {
-          "letter": "C",
-          "text": "Only by the data subject themselves"
-        },
-        {
-          "letter": "D",
-          "text": "Only by the national data-protection authority"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Pseudonymisation is explicitly reversible — with the separately held 'additional information' (e.g. a mapping table / key), the subject can be identified again. That's precisely why pseudonymised data stays personal data and remains in GDPR scope. The value of pseudonymisation is as a safeguard under Arts. 25 and 32, reducing risk of linkability.\n· A: If re-identification were impossible under all circumstances, it would be anonymisation, not pseudonymisation.\n· C: The capability is held by whoever controls the additional information (typically the controller), not by the data subject alone.\n· D: DPAs have no special reversal capability — they investigate compliance.",
-      "explanations": {
-        "A": "If re-identification were impossible under all circumstances, it would be anonymisation, not pseudonymisation.",
-        "B": "Correct. Pseudonymisation is explicitly reversible — with the separately held 'additional information' (e.g. a mapping table / key), the subject can be identified again. That's precisely why pseudonymised data stays personal data and remains in GDPR scope. The value of pseudonymisation is as a safeguard under Arts. 25 and 32, reducing risk of linkability.",
-        "C": "The capability is held by whoever controls the additional information (typically the controller), not by the data subject alone.",
-        "D": "DPAs have no special reversal capability — they investigate compliance."
-      }
-    },
-    {
-      "id": "epso_duty_138",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 7",
-      "topic": "data_security",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Least privilege",
-      "figures": [],
-      "question": "The 'principle of least privilege' in access control means:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Users and systems are granted only the permissions strictly required to perform their tasks"
-        },
-        {
-          "letter": "B",
-          "text": "All users have administrator rights by default"
-        },
-        {
-          "letter": "C",
-          "text": "Access is always granted for 24 hours and then revoked"
-        },
-        {
-          "letter": "D",
-          "text": "Permissions are granted in alphabetical order"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Least privilege (Saltzer & Schroeder, 1975) requires that every user, service account or process operates with the minimum permissions needed for its function. This reduces blast radius on compromise and limits accidental damage. It complements separation of duties and underpins modern zero-trust and JIT-access patterns.\n· B: Blanket admin rights is the opposite of least privilege — and a security antipattern.\n· C: Time-bounding access (just-in-time) is related but not the definition of least privilege.\n· D: Alphabetical ordering has no security relevance.",
-      "explanations": {
-        "A": "Correct. Least privilege (Saltzer & Schroeder, 1975) requires that every user, service account or process operates with the minimum permissions needed for its function. This reduces blast radius on compromise and limits accidental damage. It complements separation of duties and underpins modern zero-trust and JIT-access patterns.",
-        "B": "Blanket admin rights is the opposite of least privilege — and a security antipattern.",
-        "C": "Time-bounding access (just-in-time) is related but not the definition of least privilege.",
-        "D": "Alphabetical ordering has no security relevance."
-      }
-    },
-    {
-      "id": "epso_duty_139",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 8",
-      "topic": "data_security",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Differential privacy",
-      "figures": [],
-      "question": "'Differential privacy' is a privacy-protection technique that:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Encrypts all data end-to-end with quantum-resistant algorithms"
-        },
-        {
-          "letter": "B",
-          "text": "Adds calibrated statistical noise to query outputs so that the presence or absence of any single individual does not measurably affect the result"
-        },
-        {
-          "letter": "C",
-          "text": "Removes direct identifiers and replaces them with hashes"
-        },
-        {
-          "letter": "D",
-          "text": "Is equivalent to pseudonymisation under GDPR"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Differential privacy (Dwork et al., 2006) is a mathematical framework guaranteeing that the inclusion or exclusion of any single individual in a dataset changes the probability of any query outcome by at most a bounded factor (ε). In practice, DP mechanisms add carefully calibrated noise (Laplace, Gaussian) to query outputs or to statistics. It is used by the US Census 2020, Apple and Google for telemetry, and is increasingly discussed for EU data-space secondary use.\n· A: Differential privacy is not an encryption scheme — it is a statistical property of outputs.\n· C: Direct-identifier hashing is pseudonymisation, not DP.\n· D: DP is a stronger, quantitative privacy guarantee — not equivalent to the legal concept of pseudonymisation.",
-      "explanations": {
-        "A": "Differential privacy is not an encryption scheme — it is a statistical property of outputs.",
-        "B": "Correct. Differential privacy (Dwork et al., 2006) is a mathematical framework guaranteeing that the inclusion or exclusion of any single individual in a dataset changes the probability of any query outcome by at most a bounded factor (ε). In practice, DP mechanisms add carefully calibrated noise (Laplace, Gaussian) to query outputs or to statistics. It is used by the US Census 2020, Apple and Google for telemetry, and is increasingly discussed for EU data-space secondary use.",
-        "C": "Direct-identifier hashing is pseudonymisation, not DP.",
-        "D": "DP is a stronger, quantitative privacy guarantee — not equivalent to the legal concept of pseudonymisation."
-      }
-    },
-    {
-      "id": "epso_duty_140",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 9",
-      "topic": "data_security",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Zero trust",
-      "figures": [],
-      "question": "The 'zero-trust' security model is best summarised by the slogan:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "'Trust but verify'"
-        },
-        {
-          "letter": "B",
-          "text": "'Never trust, always verify' — no implicit trust based on network location"
-        },
-        {
-          "letter": "C",
-          "text": "'Deny by default, allow by exception' only for databases"
-        },
-        {
-          "letter": "D",
-          "text": "'Always trust internal traffic'"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Zero trust abandons the perimeter assumption that 'inside the corporate network = safe'. Every request — internal or external — is authenticated, authorised and continuously verified against identity, device posture, and context. The NIST SP 800-207 model codifies the approach; mTLS, short-lived credentials and per-request policy decisions are hallmarks.\n· A: 'Trust but verify' is the older perimeter-based philosophy. Zero-trust drops the initial trust part.\n· C: Deny-by-default is a firewall principle, not the full zero-trust story.\n· D: Trusting internal traffic is precisely what zero trust rejects.",
-      "explanations": {
-        "A": "'Trust but verify' is the older perimeter-based philosophy. Zero-trust drops the initial trust part.",
-        "B": "Correct. Zero trust abandons the perimeter assumption that 'inside the corporate network = safe'. Every request — internal or external — is authenticated, authorised and continuously verified against identity, device posture, and context. The NIST SP 800-207 model codifies the approach; mTLS, short-lived credentials and per-request policy decisions are hallmarks.",
-        "C": "Deny-by-default is a firewall principle, not the full zero-trust story.",
-        "D": "Trusting internal traffic is precisely what zero trust rejects."
-      }
-    },
-    {
-      "id": "epso_duty_141",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Data Security · 10",
-      "topic": "data_security",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "ISO 27001",
-      "figures": [],
-      "question": "ISO/IEC 27001 is primarily:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "A standard specifying requirements for an Information Security Management System (ISMS)"
-        },
-        {
-          "letter": "B",
-          "text": "A standard for data-quality characteristics"
-        },
-        {
-          "letter": "C",
-          "text": "An EU Directive on personal-data protection"
-        },
-        {
-          "letter": "D",
-          "text": "A vocabulary for geospatial data"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. ISO/IEC 27001 sets requirements for an ISMS — an organisation-wide, risk-based management system for information security. It is the basis for certification audits. ISO/IEC 27002 (accompanying) provides a catalogue of security controls. Together they structure most public-sector and enterprise security programmes.\n· B: Data-quality characteristics are ISO/IEC 25012.\n· C: GDPR is the personal-data instrument, not ISO 27001.\n· D: Geospatial vocabularies include ISO 19115 (metadata) and others — not 27001.",
-      "explanations": {
-        "A": "Correct. ISO/IEC 27001 sets requirements for an ISMS — an organisation-wide, risk-based management system for information security. It is the basis for certification audits. ISO/IEC 27002 (accompanying) provides a catalogue of security controls. Together they structure most public-sector and enterprise security programmes.",
-        "B": "Data-quality characteristics are ISO/IEC 25012.",
-        "C": "GDPR is the personal-data instrument, not ISO 27001.",
-        "D": "Geospatial vocabularies include ISO 19115 (metadata) and others — not 27001."
-      }
-    },
-    {
-      "id": "epso_duty_142",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 2",
-      "topic": "advanced_analytics",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Supervised vs unsupervised",
-      "figures": [],
-      "question": "Clustering customers into segments without predefined labels is an example of:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Unsupervised learning"
-        },
-        {
-          "letter": "B",
-          "text": "Supervised learning"
-        },
-        {
-          "letter": "C",
-          "text": "Reinforcement learning"
-        },
-        {
-          "letter": "D",
-          "text": "Federated learning"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Clustering (k-means, DBSCAN, hierarchical, Gaussian mixtures) is the canonical unsupervised task: discover structure in data without given labels. Results need interpretation — the algorithm tells you 'here are groups' but not 'this group = high-value customers'. Anomaly detection and association rules are other unsupervised families.\n· B: Supervised learning requires labelled training examples (input → target).\n· C: Reinforcement learning is sequential decision-making with rewards (games, robotics, RLHF).\n· D: Federated learning is a distributed training method, not a task type.",
-      "explanations": {
-        "A": "Correct. Clustering (k-means, DBSCAN, hierarchical, Gaussian mixtures) is the canonical unsupervised task: discover structure in data without given labels. Results need interpretation — the algorithm tells you 'here are groups' but not 'this group = high-value customers'. Anomaly detection and association rules are other unsupervised families.",
-        "B": "Supervised learning requires labelled training examples (input → target).",
-        "C": "Reinforcement learning is sequential decision-making with rewards (games, robotics, RLHF).",
-        "D": "Federated learning is a distributed training method, not a task type."
-      }
-    },
-    {
-      "id": "epso_duty_143",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 3",
-      "topic": "advanced_analytics",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Train/validate/test",
-      "figures": [],
-      "question": "In ML best practice, the 'test set' is primarily used for:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Tuning hyperparameters during model development"
-        },
-        {
-          "letter": "B",
-          "text": "Fitting the model parameters"
-        },
-        {
-          "letter": "C",
-          "text": "Estimating the model's generalisation performance on unseen data, once only, after training and validation"
-        },
-        {
-          "letter": "D",
-          "text": "Computing feature importances"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. The test set is held out, untouched during training and tuning, and used once at the end to report an unbiased estimate of generalisation performance. Repeated re-use of the test set effectively turns it into a validation set, biasing the reported metric.\n· A: Hyperparameter tuning is done on the validation set. Using the test set for tuning leaks information and inflates apparent performance.\n· B: Model parameters are fit on the training set.\n· D: Feature importances are computed on training data (or validation), not on the test set.",
-      "explanations": {
-        "A": "Hyperparameter tuning is done on the validation set. Using the test set for tuning leaks information and inflates apparent performance.",
-        "B": "Model parameters are fit on the training set.",
-        "C": "Correct. The test set is held out, untouched during training and tuning, and used once at the end to report an unbiased estimate of generalisation performance. Repeated re-use of the test set effectively turns it into a validation set, biasing the reported metric.",
-        "D": "Feature importances are computed on training data (or validation), not on the test set."
-      }
-    },
-    {
-      "id": "epso_duty_144",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 4",
-      "topic": "advanced_analytics",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Precision vs recall",
-      "figures": [],
-      "question": "A fraud-detection model with high recall but low precision will:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Miss many fraud cases while producing very few false alarms"
-        },
-        {
-          "letter": "B",
-          "text": "Have high accuracy on non-fraud but low on fraud"
-        },
-        {
-          "letter": "C",
-          "text": "Catch most fraud cases but raise many false alarms"
-        },
-        {
-          "letter": "D",
-          "text": "Produce no fraud alerts at all"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Recall = TP / (TP + FN) — the share of actual frauds captured. Precision = TP / (TP + FP) — the share of alerts that are true frauds. High recall / low precision means the model catches most fraud (few false negatives) but with many false alarms (many false positives). In fraud detection, this is often acceptable because missing fraud is costlier than investigating a false alert.\n· A: That would be low recall + high precision — the opposite.\n· B: That's an accuracy-on-subclasses claim, not the precision-recall trade-off.\n· D: No alerts at all would mean zero recall.",
-      "explanations": {
-        "A": "That would be low recall + high precision — the opposite.",
-        "B": "That's an accuracy-on-subclasses claim, not the precision-recall trade-off.",
-        "C": "Correct. Recall = TP / (TP + FN) — the share of actual frauds captured. Precision = TP / (TP + FP) — the share of alerts that are true frauds. High recall / low precision means the model catches most fraud (few false negatives) but with many false alarms (many false positives). In fraud detection, this is often acceptable because missing fraud is costlier than investigating a false alert.",
-        "D": "No alerts at all would mean zero recall."
-      }
-    },
-    {
-      "id": "epso_duty_145",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 5",
-      "topic": "advanced_analytics",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Overfitting",
-      "figures": [],
-      "question": "A model that achieves near-perfect training accuracy but significantly lower accuracy on a held-out test set is most likely:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Underfitting"
-        },
-        {
-          "letter": "B",
-          "text": "Perfectly calibrated"
-        },
-        {
-          "letter": "C",
-          "text": "Overfitting — memorising training data, failing to generalise"
-        },
-        {
-          "letter": "D",
-          "text": "Suffering from label noise only on the test set"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Overfitting happens when a model captures idiosyncratic noise in the training data instead of underlying signal. Symptoms: training loss near zero while validation / test loss is high. Remedies include regularisation (L1/L2, dropout), simpler models, more data, data augmentation, early stopping and cross-validation.\n· A: Underfitting shows poor performance on both training and test — the model is too simple.\n· B: Calibration is about predicted probabilities matching observed frequencies — different concept.\n· D: Label noise on the test set would lower apparent performance across the board, not just the gap between train and test.",
-      "explanations": {
-        "A": "Underfitting shows poor performance on both training and test — the model is too simple.",
-        "B": "Calibration is about predicted probabilities matching observed frequencies — different concept.",
-        "C": "Correct. Overfitting happens when a model captures idiosyncratic noise in the training data instead of underlying signal. Symptoms: training loss near zero while validation / test loss is high. Remedies include regularisation (L1/L2, dropout), simpler models, more data, data augmentation, early stopping and cross-validation.",
-        "D": "Label noise on the test set would lower apparent performance across the board, not just the gap between train and test."
-      }
-    },
-    {
-      "id": "epso_duty_146",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 6",
-      "topic": "advanced_analytics",
-      "difficulty": "easy",
-      "target_sec": 80,
-      "ref": "Classification vs regression",
-      "figures": [],
-      "question": "Predicting house prices in euros from features like size, location and age is an example of a:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Classification task"
-        },
-        {
-          "letter": "B",
-          "text": "Clustering task"
-        },
-        {
-          "letter": "C",
-          "text": "Regression task"
-        },
-        {
-          "letter": "D",
-          "text": "Reinforcement-learning task"
-        }
-      ],
-      "correct": "C",
-      "explanation": "Correct: C — Correct. Regression predicts a continuous numeric target — prices, temperatures, energy demand. Common algorithms: linear regression, gradient-boosted trees (XGBoost, LightGBM), neural regression heads. Evaluation uses RMSE, MAE, R² — not classification metrics.\n· A: Classification predicts categorical labels (spam / not spam, fraud / not fraud).\n· B: Clustering groups without labels.\n· D: RL is sequential decisions under reward.",
-      "explanations": {
-        "A": "Classification predicts categorical labels (spam / not spam, fraud / not fraud).",
-        "B": "Clustering groups without labels.",
-        "C": "Correct. Regression predicts a continuous numeric target — prices, temperatures, energy demand. Common algorithms: linear regression, gradient-boosted trees (XGBoost, LightGBM), neural regression heads. Evaluation uses RMSE, MAE, R² — not classification metrics.",
-        "D": "RL is sequential decisions under reward."
-      }
-    },
-    {
-      "id": "epso_duty_147",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 7",
-      "topic": "advanced_analytics",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "Bias in ML",
-      "figures": [],
-      "question": "Under AI Act Art. 10, which action best addresses bias in training data for a high-risk AI system intended to score job applicants?",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Ignore demographic attributes and assume the model is fair"
-        },
-        {
-          "letter": "B",
-          "text": "Examine possible biases likely to affect fundamental rights, apply appropriate detection / prevention / mitigation measures, and document the choices"
-        },
-        {
-          "letter": "C",
-          "text": "Publish the training data openly to all applicants"
-        },
-        {
-          "letter": "D",
-          "text": "Exclude the model entirely — the AI Act bans all applicant-scoring systems"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. AI Act Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. Art. 10(5) even allows processing of special-category data strictly for bias monitoring and correction. Documentation of design choices is mandatory (Art. 10(2)(h)), feeding the technical documentation under Annex IV.\n· A: 'Fairness through unawareness' is a well-known failure mode: proxy features (postal code, school name) reintroduce the protected attribute implicitly. Ignoring is not mitigating.\n· C: Publishing training data openly would typically breach GDPR and other protections. It is not an AI Act requirement.\n· D: Applicant-scoring AI is high-risk (Annex III), not prohibited. Ban applies only to Art. 5 practices.",
-      "explanations": {
-        "A": "'Fairness through unawareness' is a well-known failure mode: proxy features (postal code, school name) reintroduce the protected attribute implicitly. Ignoring is not mitigating.",
-        "B": "Correct. AI Act Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. Art. 10(5) even allows processing of special-category data strictly for bias monitoring and correction. Documentation of design choices is mandatory (Art. 10(2)(h)), feeding the technical documentation under Annex IV.",
-        "C": "Publishing training data openly would typically breach GDPR and other protections. It is not an AI Act requirement.",
-        "D": "Applicant-scoring AI is high-risk (Annex III), not prohibited. Ban applies only to Art. 5 practices."
-      }
-    },
-    {
-      "id": "epso_duty_148",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 8",
-      "topic": "advanced_analytics",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Data augmentation",
-      "figures": [],
-      "question": "'Data augmentation' in ML typically refers to:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Generating synthetic or transformed variants of training examples (e.g. image rotations, text paraphrases) to improve robustness and coverage"
-        },
-        {
-          "letter": "B",
-          "text": "Adding new labelled records by manual annotation"
-        },
-        {
-          "letter": "C",
-          "text": "Buying more data from an external vendor"
-        },
-        {
-          "letter": "D",
-          "text": "Encrypting the training set"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.\n· B: Manual annotation is data labelling, not augmentation.\n· C: Procurement of external data is data acquisition, not augmentation.\n· D: Encryption is a security control, not a data-augmentation technique.",
-      "explanations": {
-        "A": "Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.",
-        "B": "Manual annotation is data labelling, not augmentation.",
-        "C": "Procurement of external data is data acquisition, not augmentation.",
-        "D": "Encryption is a security control, not a data-augmentation technique."
-      }
-    },
-    {
-      "id": "epso_duty_149",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 9",
-      "topic": "advanced_analytics",
-      "difficulty": "hard",
-      "target_sec": 80,
-      "ref": "MLOps",
-      "figures": [],
-      "question": "A model in production shows degraded accuracy several months after deployment. The most likely cause is:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Data drift or concept drift — input distribution or the relationship between inputs and target has shifted"
-        },
-        {
-          "letter": "B",
-          "text": "The code was mis-compiled"
-        },
-        {
-          "letter": "C",
-          "text": "The training set was too large"
-        },
-        {
-          "letter": "D",
-          "text": "Unit tests failed at release time"
-        }
-      ],
-      "correct": "A",
-      "explanation": "Correct: A — Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.\n· B: A compilation issue would typically produce immediate errors, not gradual accuracy decay.\n· C: Large training sets generally help, not hurt, unless they introduce noise or bias.\n· D: Failed tests would have blocked release.",
-      "explanations": {
-        "A": "Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.",
-        "B": "A compilation issue would typically produce immediate errors, not gradual accuracy decay.",
-        "C": "Large training sets generally help, not hurt, unless they introduce noise or bias.",
-        "D": "Failed tests would have blocked release."
-      }
-    },
-    {
-      "id": "epso_duty_150",
-      "type": "mcq",
-      "source": "EPSO_AD426_DATA",
-      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 10",
-      "topic": "advanced_analytics",
-      "difficulty": "medium",
-      "target_sec": 80,
-      "ref": "Federated learning",
-      "figures": [],
-      "question": "'Federated learning' trains ML models while:",
-      "options": [
-        {
-          "letter": "A",
-          "text": "Collecting all raw data in a central cloud store"
-        },
-        {
-          "letter": "B",
-          "text": "Keeping raw data on the devices / nodes and exchanging only model updates with a central aggregator"
-        },
-        {
-          "letter": "C",
-          "text": "Requiring every node to share its training set openly"
-        },
-        {
-          "letter": "D",
-          "text": "Preventing any collaborative model building"
-        }
-      ],
-      "correct": "B",
-      "explanation": "Correct: B — Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.\n· A: Central data collection is the classical centralised paradigm — exactly what federated learning avoids.\n· C: That would defeat the privacy purpose — federated learning specifically keeps data local.\n· D: Federated learning is explicitly designed to enable collaborative model building across organisations.",
-      "explanations": {
-        "A": "Central data collection is the classical centralised paradigm — exactly what federated learning avoids.",
-        "B": "Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.",
-        "C": "That would defeat the privacy purpose — federated learning specifically keeps data local.",
-        "D": "Federated learning is explicitly designed to enable collaborative model building across organisations."
-      }
     },
     {
       "id": "sjt_crit_s01_r1",
@@ -23197,6 +17497,7378 @@ window.QUESTIONS_DB = {
       ],
       "correct": "D",
       "explanation": "Score attendu : +\nCompétence testée : Être orienté clients (CL2) — approfondir, chercher la solution avec le client, entretenir le contact. Olivier relance le lien, reconnaît le manque, et propose d'analyser collectivement. Pourquoi + et non ++ : il ne propose pas de rituel durable (point mensuel ou trimestriel) pour éviter de retomber dans le même schéma, et ne traite pas l'escalade émergente vers le directeur. Un ++ ancre une relation durable."
+    },
+    {
+      "id": "epso_reg_001",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 1",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "GDPR Art. 99",
+      "figures": [],
+      "question": "When did the General Data Protection Regulation (Reg. (EU) 2016/679) become applicable?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "27 April 2016"
+        },
+        {
+          "letter": "B",
+          "text": "25 May 2018"
+        },
+        {
+          "letter": "C",
+          "text": "11 December 2018"
+        },
+        {
+          "letter": "D",
+          "text": "24 September 2023"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.\n· A: 27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.\n· C: 11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.\n· D: 24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks.",
+      "explanations": {
+        "A": "27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
+        "B": "Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.",
+        "C": "11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
+        "D": "24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
+      }
+    },
+    {
+      "id": "epso_reg_002",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 2",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Reg 2018/1725",
+      "figures": [],
+      "question": "Which regulation governs the processing of personal data by EU institutions, bodies, offices and agencies?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Regulation (EU) 2016/679 (GDPR)"
+        },
+        {
+          "letter": "B",
+          "text": "Regulation (EU) 2018/1725"
+        },
+        {
+          "letter": "C",
+          "text": "Directive (EU) 2019/1024 (Open Data)"
+        },
+        {
+          "letter": "D",
+          "text": "Regulation (EU) 2022/868 (DGA)"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.\n· A: GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.\n· C: The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.\n· D: The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies.",
+      "explanations": {
+        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
+        "B": "Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.",
+        "C": "The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.",
+        "D": "The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
+      }
+    },
+    {
+      "id": "epso_reg_003",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 3",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Open Data Dir. + Impl. Reg. 2023/138",
+      "figures": [],
+      "question": "Under the Open Data Directive (2019/1024), High-Value Datasets are defined in an Implementing Regulation with six thematic categories. Which of the following is NOT one of them?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Geospatial"
+        },
+        {
+          "letter": "B",
+          "text": "Meteorological"
+        },
+        {
+          "letter": "C",
+          "text": "Health"
+        },
+        {
+          "letter": "D",
+          "text": "Mobility"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.\n· D: Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
+      "explanations": {
+        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
+        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
+        "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
+        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
+      }
+    },
+    {
+      "id": "epso_reg_004",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 4",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "DGA Chapters II–IV + EDIB",
+      "figures": [],
+      "question": "Which of the following is NOT one of the four pillars of the Data Governance Act (Reg. (EU) 2022/868)?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Reuse of protected public-sector data"
+        },
+        {
+          "letter": "B",
+          "text": "Data intermediation services"
+        },
+        {
+          "letter": "C",
+          "text": "Data altruism"
+        },
+        {
+          "letter": "D",
+          "text": "Cloud-to-cloud switching rights"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct — the trap answer. Cloud / edge switching rights belong to the Data Act (Ch VI of Reg. 2023/2854), NOT the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB) — the expert body that advises the Commission on data-spaces deployment and cross-sector interoperability.\n· A: Pillar 1 — reuse of protected public-sector data (health records, statistics, IP-protected, confidential commercial data). This extends Open Data Directive logic to data that can't be made 'open by default'.\n· B: Pillar 2 — data intermediation services. Neutral third parties that connect data holders and data users under a notification regime (Ch III of the DGA). They can't commercialise the data they broker.\n· C: Pillar 3 — data altruism for causes of general interest. Comes with a standardised European Data Altruism Consent Form (Ch IV) so donors can share data confidently, and a register of recognised altruism organisations.",
+      "explanations": {
+        "A": "Pillar 1 — reuse of protected public-sector data (health records, statistics, IP-protected, confidential commercial data). This extends Open Data Directive logic to data that can't be made 'open by default'.",
+        "B": "Pillar 2 — data intermediation services. Neutral third parties that connect data holders and data users under a notification regime (Ch III of the DGA). They can't commercialise the data they broker.",
+        "C": "Pillar 3 — data altruism for causes of general interest. Comes with a standardised European Data Altruism Consent Form (Ch IV) so donors can share data confidently, and a register of recognised altruism organisations.",
+        "D": "Correct — the trap answer. Cloud / edge switching rights belong to the Data Act (Ch VI of Reg. 2023/2854), NOT the DGA. The DGA's fourth pillar is the European Data Innovation Board (EDIB) — the expert body that advises the Commission on data-spaces deployment and cross-sector interoperability."
+      }
+    },
+    {
+      "id": "epso_reg_005",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 5",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data Act Ch II–VI",
+      "figures": [],
+      "question": "A manufacturer of connected coffee machines must comply with which chapter of the Data Act (Reg. (EU) 2023/2854) when the user asks to access the usage data the machine generates?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Chapter II — access to product data by users"
+        },
+        {
+          "letter": "B",
+          "text": "Chapter III — B2B data sharing on FRAND terms"
+        },
+        {
+          "letter": "C",
+          "text": "Chapter V — B2G in cases of exceptional need"
+        },
+        {
+          "letter": "D",
+          "text": "Chapter VI — cloud and edge switching"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Ch II of the Data Act gives the user of a connected product the right to access the data it generates. The user can also instruct the data holder to share this data with a third party of their choice — for example a repair shop, a competitor aftermarket service, or an analytics provider.\n· B: Ch III deals with B2B data sharing when a legal obligation to share exists — it sets FRAND (Fair, Reasonable And Non-Discriminatory) terms so the data holder can't impose abusive conditions. Not triggered by a consumer asking for their own usage data.\n· C: Ch V covers public-body access to private-sector data in situations of exceptional public need (public emergency, crisis). A user wanting their own data isn't a public emergency and isn't a public body.\n· D: Ch VI is about switching between cloud / edge providers — no ransom fees, functional equivalence, portability of workloads. Different stakeholders, different chapter, unrelated to IoT user-data access.",
+      "explanations": {
+        "A": "Correct. Ch II of the Data Act gives the user of a connected product the right to access the data it generates. The user can also instruct the data holder to share this data with a third party of their choice — for example a repair shop, a competitor aftermarket service, or an analytics provider.",
+        "B": "Ch III deals with B2B data sharing when a legal obligation to share exists — it sets FRAND (Fair, Reasonable And Non-Discriminatory) terms so the data holder can't impose abusive conditions. Not triggered by a consumer asking for their own usage data.",
+        "C": "Ch V covers public-body access to private-sector data in situations of exceptional public need (public emergency, crisis). A user wanting their own data isn't a public emergency and isn't a public body.",
+        "D": "Ch VI is about switching between cloud / edge providers — no ransom fees, functional equivalence, portability of workloads. Different stakeholders, different chapter, unrelated to IoT user-data access."
+      }
+    },
+    {
+      "id": "epso_reg_006",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 6",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "AI Act Art. 5",
+      "figures": [],
+      "question": "Under the AI Act (Reg. (EU) 2024/1689), a real-time remote biometric identification system used in public spaces for law-enforcement purposes is categorised as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Minimal risk"
+        },
+        {
+          "letter": "B",
+          "text": "Limited risk"
+        },
+        {
+          "letter": "C",
+          "text": "High risk (subject to conformity assessment)"
+        },
+        {
+          "letter": "D",
+          "text": "Unacceptable risk (banned, with narrow exceptions)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Art. 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement purposes as an 'unacceptable' practice, banned save narrowly defined exceptions (serious crime, prior judicial or independent administrative authorisation). This is the sharpest cut on the AI Act's risk pyramid.\n· A: Minimal risk covers the bulk of AI systems — spam filters, recommendation engines, games — with voluntary codes of conduct and no mandatory obligations. Law-enforcement biometric ID is nowhere near this tier.\n· B: Limited risk triggers transparency duties — chatbots must disclose they are AI, deepfakes must be labelled. The concern is informed use, not safety. Biometric ID sits much higher on the pyramid.\n· C: Tempting because 'high risk' sounds severe, but it isn't severe enough. High-risk AI (Annex III) requires conformity assessment, documentation and human oversight — yet many biometric-ID uses still get more restrictive treatment. Real-time remote ID in public for police is the very top.",
+      "explanations": {
+        "A": "Minimal risk covers the bulk of AI systems — spam filters, recommendation engines, games — with voluntary codes of conduct and no mandatory obligations. Law-enforcement biometric ID is nowhere near this tier.",
+        "B": "Limited risk triggers transparency duties — chatbots must disclose they are AI, deepfakes must be labelled. The concern is informed use, not safety. Biometric ID sits much higher on the pyramid.",
+        "C": "Tempting because 'high risk' sounds severe, but it isn't severe enough. High-risk AI (Annex III) requires conformity assessment, documentation and human oversight — yet many biometric-ID uses still get more restrictive treatment. Real-time remote ID in public for police is the very top.",
+        "D": "Correct. Art. 5 lists real-time remote biometric identification in publicly accessible spaces for law-enforcement purposes as an 'unacceptable' practice, banned save narrowly defined exceptions (serious crime, prior judicial or independent administrative authorisation). This is the sharpest cut on the AI Act's risk pyramid."
+      }
+    },
+    {
+      "id": "epso_reg_007",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 7",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "AI Act Art. 10",
+      "figures": [],
+      "question": "Article 10 of the AI Act imposes data-governance requirements on training, validation and test datasets of high-risk AI systems. Which obligation is specifically listed by Article 10?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Mandatory open-data publication of all training datasets"
+        },
+        {
+          "letter": "B",
+          "text": "Examination of possible biases and appropriate measures to detect, prevent and mitigate them"
+        },
+        {
+          "letter": "C",
+          "text": "Exclusive use of synthetic data"
+        },
+        {
+          "letter": "D",
+          "text": "Blanket prohibition of any personal data in training sets"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. This is the heart of the Art. 10 data-governance obligations — alongside relevance, representativeness, error-minimisation and documented design choices.\n· A: There is no blanket obligation to publish training datasets openly. Trade secrets, IP, personal data and security concerns all push against that. Art. 10 focuses on the quality of the datasets, not their public availability.\n· C: Synthetic data (artificially generated) is explicitly allowed and can actually help satisfy bias-mitigation obligations when real data is scarce or skewed. But the AI Act doesn't require synthetic-only training — the key criteria are relevance and representativeness, whatever the source.\n· D: Personal data may be processed in training sets under specific safeguards. Art. 10(5) even allows processing of special categories of data (health, biometric, political opinions) where strictly necessary for bias monitoring and correction — a narrow derogation justified by the public interest in fair AI.",
+      "explanations": {
+        "A": "There is no blanket obligation to publish training datasets openly. Trade secrets, IP, personal data and security concerns all push against that. Art. 10 focuses on the quality of the datasets, not their public availability.",
+        "B": "Correct. Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. This is the heart of the Art. 10 data-governance obligations — alongside relevance, representativeness, error-minimisation and documented design choices.",
+        "C": "Synthetic data (artificially generated) is explicitly allowed and can actually help satisfy bias-mitigation obligations when real data is scarce or skewed. But the AI Act doesn't require synthetic-only training — the key criteria are relevance and representativeness, whatever the source.",
+        "D": "Personal data may be processed in training sets under specific safeguards. Art. 10(5) even allows processing of special categories of data (health, biometric, political opinions) where strictly necessary for bias monitoring and correction — a narrow derogation justified by the public interest in fair AI."
+      }
+    },
+    {
+      "id": "epso_reg_008",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 8",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "COM(2025) 835",
+      "figures": [],
+      "question": "The 'Data Union Strategy' announced in November 2025 is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A binding regulation on Common European Data Spaces"
+        },
+        {
+          "letter": "B",
+          "text": "A directive transposing the Data Act into national law"
+        },
+        {
+          "letter": "C",
+          "text": "A Commission Communication (COM(2025) 835 final)"
+        },
+        {
+          "letter": "D",
+          "text": "A joint statement of the European Data Protection Board"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).\n· A: It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.\n· B: The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.\n· D: The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee.",
+      "explanations": {
+        "A": "It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.",
+        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.",
+        "C": "Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).",
+        "D": "The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee."
+      }
+    },
+    {
+      "id": "epso_fw_009",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 1",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "DAMA-DMBOK wheel",
+      "figures": [],
+      "question": "In the DAMA-DMBOK framework, which knowledge area is depicted at the centre of the wheel, connecting all others?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data Architecture"
+        },
+        {
+          "letter": "B",
+          "text": "Data Quality"
+        },
+        {
+          "letter": "C",
+          "text": "Data Governance"
+        },
+        {
+          "letter": "D",
+          "text": "Metadata"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Data Governance is the central, cross-cutting knowledge area at the hub of the DAMA wheel. Every other area (architecture, quality, security, metadata, warehousing, master data, etc.) produces policies and KPIs that governance oversees, and is in turn shaped by the policies governance sets. That's why DAMA places it at the centre visually.\n· A: Data Architecture is one of the 11 DAMA knowledge areas but sits on the periphery of the wheel. Architecture decisions are shaped by governance policies, not the other way around.\n· B: Data Quality is a peripheral knowledge area — measured against standards set by governance, not setting the standards itself.\n· D: Metadata management is an important but peripheral knowledge area. Its outputs (catalogues, lineage) feed governance, but it isn't the hub.",
+      "explanations": {
+        "A": "Data Architecture is one of the 11 DAMA knowledge areas but sits on the periphery of the wheel. Architecture decisions are shaped by governance policies, not the other way around.",
+        "B": "Data Quality is a peripheral knowledge area — measured against standards set by governance, not setting the standards itself.",
+        "C": "Correct. Data Governance is the central, cross-cutting knowledge area at the hub of the DAMA wheel. Every other area (architecture, quality, security, metadata, warehousing, master data, etc.) produces policies and KPIs that governance oversees, and is in turn shaped by the policies governance sets. That's why DAMA places it at the centre visually.",
+        "D": "Metadata management is an important but peripheral knowledge area. Its outputs (catalogues, lineage) feed governance, but it isn't the hub."
+      }
+    },
+    {
+      "id": "epso_fw_010",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 2",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Wilkinson et al. 2016",
+      "figures": [],
+      "question": "The FAIR principles for data stewardship stand for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Findable, Accessible, Interoperable, Reusable"
+        },
+        {
+          "letter": "B",
+          "text": "Fast, Aggregated, Integrated, Relational"
+        },
+        {
+          "letter": "C",
+          "text": "Federated, Audited, Indexed, Referenced"
+        },
+        {
+          "letter": "D",
+          "text": "Formal, Authoritative, Immutable, Reproducible"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. FAIR stands for Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016). Originally proposed for scientific research data, now adopted as the default yardstick for open data across the EU — including data.europa.eu.\n· B: Not the FAIR definition. These are unrelated data-engineering adjectives strung together — be suspicious of plausible-sounding technical words glued into an acronym.\n· C: Plausible but wrong. 'Federated' (distributed architectures) and 'Audited' (security/governance) are real concepts, just not part of FAIR.\n· D: Reproducibility matters in research but isn't the FAIR wording. The fourth letter is Reusable — clear license, rich provenance, community standards — which enables reproducibility as a consequence.",
+      "explanations": {
+        "A": "Correct. FAIR stands for Findable · Accessible · Interoperable · Reusable (Wilkinson et al., 2016). Originally proposed for scientific research data, now adopted as the default yardstick for open data across the EU — including data.europa.eu.",
+        "B": "Not the FAIR definition. These are unrelated data-engineering adjectives strung together — be suspicious of plausible-sounding technical words glued into an acronym.",
+        "C": "Plausible but wrong. 'Federated' (distributed architectures) and 'Audited' (security/governance) are real concepts, just not part of FAIR.",
+        "D": "Reproducibility matters in research but isn't the FAIR wording. The fourth letter is Reusable — clear license, rich provenance, community standards — which enables reproducibility as a consequence."
+      }
+    },
+    {
+      "id": "epso_fw_011",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 3",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "EIF",
+      "figures": [],
+      "question": "The European Interoperability Framework (EIF) defines four interoperability layers. Which is the correct order, from 'most policy' to 'most technical'?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Technical · Semantic · Organisational · Legal"
+        },
+        {
+          "letter": "B",
+          "text": "Legal · Organisational · Semantic · Technical"
+        },
+        {
+          "letter": "C",
+          "text": "Organisational · Semantic · Legal · Technical"
+        },
+        {
+          "letter": "D",
+          "text": "Semantic · Technical · Legal · Organisational"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Legal · Organisational · Semantic · Technical. An Interoperability Governance overlay binds the four layers together, and 'Integrated Public Service Governance' sits on top as an overarching principle. The order matters: you can't have meaningful technical interoperability if the legal frameworks clash or organisations don't align on processes.\n· A: Reversed. The EIF layers progress from policy down to technology, not the other way around. Reversing the order is a common distractor.\n· C: Legal precedes Organisational — legal alignment is the first layer because without compatible legal frameworks, nothing else can work.\n· D: Does not reflect the EIF structure at all. The layers are named and ordered specifically in the framework documentation.",
+      "explanations": {
+        "A": "Reversed. The EIF layers progress from policy down to technology, not the other way around. Reversing the order is a common distractor.",
+        "B": "Correct. Legal · Organisational · Semantic · Technical. An Interoperability Governance overlay binds the four layers together, and 'Integrated Public Service Governance' sits on top as an overarching principle. The order matters: you can't have meaningful technical interoperability if the legal frameworks clash or organisations don't align on processes.",
+        "C": "Legal precedes Organisational — legal alignment is the first layer because without compatible legal frameworks, nothing else can work.",
+        "D": "Does not reflect the EIF structure at all. The layers are named and ordered specifically in the framework documentation."
+      }
+    },
+    {
+      "id": "epso_fw_012",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 4",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "CIA",
+      "figures": [],
+      "question": "The CIA triad in information security refers to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Confidentiality, Integrity, Availability"
+        },
+        {
+          "letter": "B",
+          "text": "Compliance, Integrity, Auditability"
+        },
+        {
+          "letter": "C",
+          "text": "Control, Identification, Access"
+        },
+        {
+          "letter": "D",
+          "text": "Consent, Isolation, Accountability"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.\n· B: Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.\n· C: Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.\n· D: Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely.",
+      "explanations": {
+        "A": "Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.",
+        "B": "Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.",
+        "C": "Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.",
+        "D": "Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely."
+      }
+    },
+    {
+      "id": "epso_fw_013",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 5",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "GDPR Art. 4, 26, 28",
+      "figures": [],
+      "question": "Under the GDPR, a payroll service running employee salaries on behalf of a company is typically:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The data controller, because it physically handles the data"
+        },
+        {
+          "letter": "B",
+          "text": "The data processor, because it processes data on behalf of the controller"
+        },
+        {
+          "letter": "C",
+          "text": "Jointly controller and processor by default"
+        },
+        {
+          "letter": "D",
+          "text": "Outside GDPR scope since pay slips are considered public"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. The company determines the purposes (pay our employees) and the essential means (use this payroll service). The payroll provider acts on the company's instructions, making it a processor under Art. 4(8). A data processing agreement (Art. 28) must cover the relationship, including instructions, security, sub-processors and deletion at the end of the service.\n· A: Controllership under GDPR is determined by who decides the purposes and means of processing — not by who physically handles the data. A processor's servers might store terabytes of personal data and still not be a controller.\n· C: Joint controllership (Art. 26) is a specific legal construct requiring joint determination of purposes and means — typical for platforms where two entities genuinely co-design the processing (e.g. social-media page admins + the platform). It isn't the default for a service-provider relationship.\n· D: Pay slips contain personal data of employees (name, salary, social-security data) and are in GDPR scope regardless of who physically sees them. 'Public' applies to anonymous statistics, not individual pay data.",
+      "explanations": {
+        "A": "Controllership under GDPR is determined by who decides the purposes and means of processing — not by who physically handles the data. A processor's servers might store terabytes of personal data and still not be a controller.",
+        "B": "Correct. The company determines the purposes (pay our employees) and the essential means (use this payroll service). The payroll provider acts on the company's instructions, making it a processor under Art. 4(8). A data processing agreement (Art. 28) must cover the relationship, including instructions, security, sub-processors and deletion at the end of the service.",
+        "C": "Joint controllership (Art. 26) is a specific legal construct requiring joint determination of purposes and means — typical for platforms where two entities genuinely co-design the processing (e.g. social-media page admins + the platform). It isn't the default for a service-provider relationship.",
+        "D": "Pay slips contain personal data of employees (name, salary, social-security data) and are in GDPR scope regardless of who physically sees them. 'Public' applies to anonymous statistics, not individual pay data."
+      }
+    },
+    {
+      "id": "epso_duty_014",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 1",
+      "topic": "metadata_taxonomy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DCAT-AP",
+      "figures": [],
+      "question": "What is DCAT-AP primarily used for on the EU data.europa.eu portal?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A machine-learning model registry for EU projects"
+        },
+        {
+          "letter": "B",
+          "text": "An application profile of the DCAT vocabulary to describe datasets and catalogues"
+        },
+        {
+          "letter": "C",
+          "text": "A file format for personal-data export requests under GDPR"
+        },
+        {
+          "letter": "D",
+          "text": "A public directory of SaaS cloud providers"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. DCAT-AP (Data Catalogue Vocabulary — Application Profile) is an EU-specific profile of the W3C DCAT vocabulary, used to describe datasets and catalogues consistently across European open-data portals. It's what powers data.europa.eu. Key extensions include StatDCAT-AP (statistics) and GeoDCAT-AP (geospatial), with a dedicated HVD profile for High-Value Datasets.\n· A: DCAT-AP is not a model registry — no EU standard under this name concerns ML model metadata. Don't confuse with AI-Act-era model-card ideas, which are different and newer.\n· C: GDPR data portability (Art. 20) requires common structured / machine-readable formats (CSV, JSON, XML) but doesn't mandate DCAT-AP specifically. DCAT-AP is about cataloguing datasets, not about exporting personal data.\n· D: DCAT-AP describes datasets and catalogues on data portals, not cloud SaaS providers. Cloud-provider directories are a different (and much less standardised) category.",
+      "explanations": {
+        "A": "DCAT-AP is not a model registry — no EU standard under this name concerns ML model metadata. Don't confuse with AI-Act-era model-card ideas, which are different and newer.",
+        "B": "Correct. DCAT-AP (Data Catalogue Vocabulary — Application Profile) is an EU-specific profile of the W3C DCAT vocabulary, used to describe datasets and catalogues consistently across European open-data portals. It's what powers data.europa.eu. Key extensions include StatDCAT-AP (statistics) and GeoDCAT-AP (geospatial), with a dedicated HVD profile for High-Value Datasets.",
+        "C": "GDPR data portability (Art. 20) requires common structured / machine-readable formats (CSV, JSON, XML) but doesn't mandate DCAT-AP specifically. DCAT-AP is about cataloguing datasets, not about exporting personal data.",
+        "D": "DCAT-AP describes datasets and catalogues on data portals, not cloud SaaS providers. Cloud-provider directories are a different (and much less standardised) category."
+      }
+    },
+    {
+      "id": "epso_duty_015",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 1",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "ETL vs ELT",
+      "figures": [],
+      "question": "A data team adopts ELT instead of ETL when ingesting logs into a modern cloud warehouse. The key difference is that in ELT:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Transformations happen before loading into the target store"
+        },
+        {
+          "letter": "B",
+          "text": "Transformations happen inside the target store after loading"
+        },
+        {
+          "letter": "C",
+          "text": "No transformations are applied at all"
+        },
+        {
+          "letter": "D",
+          "text": "Data is loaded but never queried"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. In ELT (Extract → Load → Transform), raw data is loaded straight into the target — typically a modern columnar warehouse (Snowflake, BigQuery, Redshift) — and transformations run there using SQL. This works because the warehouse's compute is cheap and elastic, removing the need for a separate ETL server. Modern stacks like dbt are built around this pattern.\n· A: That describes the classic ETL pattern (Extract → Transform → Load): the on-premise workflow where transformations run in a dedicated ETL engine (Informatica, SSIS, Talend) before the data lands in the target.\n· C: ELT still transforms — the letters just rearrange when. 'No transformations' would be replication / change-data-capture, not ELT.\n· D: Loading data without ever querying it is archival or cold storage, not ELT. ELT specifically exists to make data queryable fast.",
+      "explanations": {
+        "A": "That describes the classic ETL pattern (Extract → Transform → Load): the on-premise workflow where transformations run in a dedicated ETL engine (Informatica, SSIS, Talend) before the data lands in the target.",
+        "B": "Correct. In ELT (Extract → Load → Transform), raw data is loaded straight into the target — typically a modern columnar warehouse (Snowflake, BigQuery, Redshift) — and transformations run there using SQL. This works because the warehouse's compute is cheap and elastic, removing the need for a separate ETL server. Modern stacks like dbt are built around this pattern.",
+        "C": "ELT still transforms — the letters just rearrange when. 'No transformations' would be replication / change-data-capture, not ELT.",
+        "D": "Loading data without ever querying it is archival or cold storage, not ELT. ELT specifically exists to make data queryable fast."
+      }
+    },
+    {
+      "id": "epso_duty_016",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 1",
+      "topic": "data_security",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "GDPR Recital 26, Art. 4(5)",
+      "figures": [],
+      "question": "Which statement about the GDPR treatment of anonymised vs pseudonymised data is correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Both fall outside GDPR scope once processed"
+        },
+        {
+          "letter": "B",
+          "text": "Pseudonymised data falls outside GDPR; anonymised data stays in scope"
+        },
+        {
+          "letter": "C",
+          "text": "Anonymised data falls outside GDPR; pseudonymised data remains in scope"
+        },
+        {
+          "letter": "D",
+          "text": "Both are always in GDPR scope regardless of technique"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Anonymisation (irreversible — no re-identification possible even when combined with other data sets) means the data is no longer personal and therefore outside GDPR (Recital 26). Pseudonymisation (reversible via a separate key kept secure) is explicitly defined in Art. 4(5) as a safeguard — the data remains personal and GDPR still applies. The key mental test: can someone with access to additional information re-identify the person? If yes, it's pseudonymisation.\n· A: Only true anonymisation removes data from GDPR scope. Pseudonymised data, because it can be re-identified through the key, remains personal data and stays in scope.\n· B: Reversed. It's anonymisation that takes data out of scope — pseudonymisation is a safeguard, not an exemption. This swap is one of the exam's favourite traps.\n· D: Properly executed anonymisation is explicitly recognised in Recital 26 as taking data out of scope — otherwise the concept would be meaningless. The challenge is that 'properly executed' is hard to achieve in practice (linkage attacks, auxiliary data).",
+      "explanations": {
+        "A": "Only true anonymisation removes data from GDPR scope. Pseudonymised data, because it can be re-identified through the key, remains personal data and stays in scope.",
+        "B": "Reversed. It's anonymisation that takes data out of scope — pseudonymisation is a safeguard, not an exemption. This swap is one of the exam's favourite traps.",
+        "C": "Correct. Anonymisation (irreversible — no re-identification possible even when combined with other data sets) means the data is no longer personal and therefore outside GDPR (Recital 26). Pseudonymisation (reversible via a separate key kept secure) is explicitly defined in Art. 4(5) as a safeguard — the data remains personal and GDPR still applies. The key mental test: can someone with access to additional information re-identify the person? If yes, it's pseudonymisation.",
+        "D": "Properly executed anonymisation is explicitly recognised in Recital 26 as taking data out of scope — otherwise the concept would be meaningless. The challenge is that 'properly executed' is hard to achieve in practice (linkage attacks, auxiliary data)."
+      }
+    },
+    {
+      "id": "epso_duty_017",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 1",
+      "topic": "data_platforms",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Lakehouse",
+      "figures": [],
+      "question": "An analytics team needs ACID transactions, schema enforcement and time-travel directly on object storage holding raw Parquet files, while still supporting BI dashboards and ML feature pipelines. Which architecture best fits?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A classic data warehouse with nightly batch ingestion"
+        },
+        {
+          "letter": "B",
+          "text": "A Hadoop-era data lake with schema-on-read only"
+        },
+        {
+          "letter": "C",
+          "text": "A lakehouse using an open table format such as Delta, Iceberg or Hudi"
+        },
+        {
+          "letter": "D",
+          "text": "A relational OLTP database with read replicas"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. A lakehouse layers an open table format — Delta Lake, Apache Iceberg, or Apache Hudi — on top of object-store files (typically Parquet). This adds the warehouse-like guarantees (ACID transactions, schema enforcement, time-travel, efficient upserts) while keeping the lake's openness and low cost. Both BI tools and ML pipelines can read the same tables, eliminating the classic 'copy data to the ML cluster' step.\n· A: A classic data warehouse uses proprietary storage (Snowflake's micro-partitions, BigQuery's Capacitor, Redshift blocks) — it doesn't operate directly on user-managed object storage with open Parquet files. It also wouldn't give you time-travel out of the box unless the vendor adds it.\n· B: A plain Hadoop-era lake lacks ACID transactions, lacks schema enforcement, and has no time-travel. Schema-on-read alone is fine for exploration, but BI tools expect structured, consistent tables and concurrent reads/writes break.\n· D: OLTP databases (PostgreSQL, MySQL) with read replicas are optimised for transactional workloads — row-oriented storage, small short transactions. Analytics scans over large Parquet files would be painfully slow, and you'd lose the object-storage cost advantage entirely.",
+      "explanations": {
+        "A": "A classic data warehouse uses proprietary storage (Snowflake's micro-partitions, BigQuery's Capacitor, Redshift blocks) — it doesn't operate directly on user-managed object storage with open Parquet files. It also wouldn't give you time-travel out of the box unless the vendor adds it.",
+        "B": "A plain Hadoop-era lake lacks ACID transactions, lacks schema enforcement, and has no time-travel. Schema-on-read alone is fine for exploration, but BI tools expect structured, consistent tables and concurrent reads/writes break.",
+        "C": "Correct. A lakehouse layers an open table format — Delta Lake, Apache Iceberg, or Apache Hudi — on top of object-store files (typically Parquet). This adds the warehouse-like guarantees (ACID transactions, schema enforcement, time-travel, efficient upserts) while keeping the lake's openness and low cost. Both BI tools and ML pipelines can read the same tables, eliminating the classic 'copy data to the ML cluster' step.",
+        "D": "OLTP databases (PostgreSQL, MySQL) with read replicas are optimised for transactional workloads — row-oriented storage, small short transactions. Analytics scans over large Parquet files would be painfully slow, and you'd lose the object-storage cost advantage entirely."
+      }
+    },
+    {
+      "id": "epso_duty_018",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 1",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "KPI",
+      "figures": [],
+      "question": "Which statement best distinguishes a KPI from an ordinary metric?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A KPI must always be expressed as a percentage"
+        },
+        {
+          "letter": "B",
+          "text": "A KPI is a metric chosen for its strategic link to an objective and used to track progress"
+        },
+        {
+          "letter": "C",
+          "text": "A KPI is only valid if refreshed in real time"
+        },
+        {
+          "letter": "D",
+          "text": "A KPI is a synonym for a dashboard"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.\n· A: KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.\n· C: Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.\n· D: A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous.",
+      "explanations": {
+        "A": "KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.",
+        "B": "Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.",
+        "C": "Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.",
+        "D": "A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
+      }
+    },
+    {
+      "id": "epso_duty_019",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 1",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Feature engineering vs labelling",
+      "figures": [],
+      "question": "In a supervised machine-learning pipeline for fraud detection, 'feature engineering' refers to which activity?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Assigning the 'fraud / not fraud' ground-truth to each historical record"
+        },
+        {
+          "letter": "B",
+          "text": "Creating predictive variables (e.g. rolling-average amount, device-country mismatch flag) from raw data"
+        },
+        {
+          "letter": "C",
+          "text": "Evaluating model performance on a held-out test set"
+        },
+        {
+          "letter": "D",
+          "text": "Defining role-based access controls for the model's training data"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Feature engineering is the craft of designing and deriving the input variables the model will learn from — things like 'transactions in the last 24 h', 'device-country mismatch flag', 'log-amount', or embeddings of categorical fields. It's where domain knowledge turns into predictive signal, and in practice it often has more impact on model performance than the choice of algorithm.\n· A: That describes data labelling — assigning the target class (fraud / not fraud) to historical examples, typically done manually, via weak-labelling heuristics, or by using a trusted source of truth. Labels are an input to supervised learning; features are the other input.\n· C: Evaluating a model on a held-out test set is model validation / evaluation — measuring how well the model generalises to unseen data. Feature engineering happens upstream; evaluation happens downstream.\n· D: RBAC governs who can access the training data — a security / compliance concern. It's completely disjoint from the data-science task of deriving useful input variables.",
+      "explanations": {
+        "A": "That describes data labelling — assigning the target class (fraud / not fraud) to historical examples, typically done manually, via weak-labelling heuristics, or by using a trusted source of truth. Labels are an input to supervised learning; features are the other input.",
+        "B": "Correct. Feature engineering is the craft of designing and deriving the input variables the model will learn from — things like 'transactions in the last 24 h', 'device-country mismatch flag', 'log-amount', or embeddings of categorical fields. It's where domain knowledge turns into predictive signal, and in practice it often has more impact on model performance than the choice of algorithm.",
+        "C": "Evaluating a model on a held-out test set is model validation / evaluation — measuring how well the model generalises to unseen data. Feature engineering happens upstream; evaluation happens downstream.",
+        "D": "RBAC governs who can access the training data — a security / compliance concern. It's completely disjoint from the data-science task of deriving useful input variables."
+      }
+    },
+    {
+      "id": "epso_duty_020",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 1",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "IATE · EuroVoc",
+      "figures": [],
+      "question": "Which of the following correctly pairs EU multilingual reference resources with their primary purpose?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU terminology database"
+        },
+        {
+          "letter": "B",
+          "text": "EuroVoc — the EU's inter-institutional terminology database; IATE — a multilingual thesaurus"
+        },
+        {
+          "letter": "C",
+          "text": "IATE — the EU's inter-institutional terminology database; EuroVoc — a multilingual thesaurus for indexing EU documents"
+        },
+        {
+          "letter": "D",
+          "text": "IATE — a public-procurement catalogue; EuroVoc — the EU's translation memory"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database — concepts defined across 24 official languages, maintained collaboratively by translators and terminologists in all EU institutions. EuroVoc is the multilingual thesaurus used to index documents across institutions, structured according to SKOS and covering all EU policy fields. Different tools for different jobs: IATE for terms (what does this word mean?), EuroVoc for classification (how do I file this document?).\n· A: Swaps the roles. IATE is not a thesaurus — it's the EU's inter-institutional terminology database.\n· B: Swaps the roles. EuroVoc is not a terminology database — it's the EU's multilingual thesaurus.\n· D: Neither resource is a procurement catalogue. The EU translation memory is Euramis, not EuroVoc. Public-procurement data lives in TED (Tenders Electronic Daily), a separate portal.",
+      "explanations": {
+        "A": "Swaps the roles. IATE is not a thesaurus — it's the EU's inter-institutional terminology database.",
+        "B": "Swaps the roles. EuroVoc is not a terminology database — it's the EU's multilingual thesaurus.",
+        "C": "Correct. IATE (Inter-Active Terminology for Europe) is the EU's inter-institutional terminology database — concepts defined across 24 official languages, maintained collaboratively by translators and terminologists in all EU institutions. EuroVoc is the multilingual thesaurus used to index documents across institutions, structured according to SKOS and covering all EU policy fields. Different tools for different jobs: IATE for terms (what does this word mean?), EuroVoc for classification (how do I file this document?).",
+        "D": "Neither resource is a procurement catalogue. The EU translation memory is Euramis, not EuroVoc. Public-procurement data lives in TED (Tenders Electronic Daily), a separate portal."
+      }
+    },
+    {
+      "id": "epso_reg_021",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 9",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "GDPR Art. 6",
+      "figures": [],
+      "question": "Which of the following is NOT one of the six lawful bases for processing listed in Art. 6(1) GDPR?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Consent of the data subject"
+        },
+        {
+          "letter": "B",
+          "text": "Legitimate interest of the controller"
+        },
+        {
+          "letter": "C",
+          "text": "Commercial profitability of the controller"
+        },
+        {
+          "letter": "D",
+          "text": "Performance of a contract with the data subject"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Commercial profitability is not a GDPR lawful basis. The six bases are: consent · contract · legal obligation · vital interests · public task · legitimate interest. Profitability might motivate legitimate-interest claims, but the legal basis itself has to be one of the named six.\n· A: Consent (Art. 6(1)(a)) is one of the six bases — it must be freely given, specific, informed and unambiguous (Art. 7), and withdrawable at any time.\n· B: Legitimate interest (Art. 6(1)(f)) is one of the six bases, available where the controller's or a third party's interest is not overridden by the data subject's rights. It requires a documented balancing test.\n· D: Performance of a contract (Art. 6(1)(b)) is a standard basis — e.g. shipping an order you purchased requires processing your address.",
+      "explanations": {
+        "A": "Consent (Art. 6(1)(a)) is one of the six bases — it must be freely given, specific, informed and unambiguous (Art. 7), and withdrawable at any time.",
+        "B": "Legitimate interest (Art. 6(1)(f)) is one of the six bases, available where the controller's or a third party's interest is not overridden by the data subject's rights. It requires a documented balancing test.",
+        "C": "Correct. Commercial profitability is not a GDPR lawful basis. The six bases are: consent · contract · legal obligation · vital interests · public task · legitimate interest. Profitability might motivate legitimate-interest claims, but the legal basis itself has to be one of the named six.",
+        "D": "Performance of a contract (Art. 6(1)(b)) is a standard basis — e.g. shipping an order you purchased requires processing your address."
+      }
+    },
+    {
+      "id": "epso_reg_022",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 10",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "GDPR Art. 33",
+      "figures": [],
+      "question": "Under Art. 33 GDPR, within what timeframe must a controller notify the competent supervisory authority of a personal data breach?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Immediately, without any defined window"
+        },
+        {
+          "letter": "B",
+          "text": "Within 24 hours of becoming aware"
+        },
+        {
+          "letter": "C",
+          "text": "Within 72 hours of becoming aware, where feasible"
+        },
+        {
+          "letter": "D",
+          "text": "Within 30 days, aligned with the DPIA consultation period"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Art. 33(1) requires notification to the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach. If later, reasons for the delay must accompany the notification. Notification to affected data subjects (Art. 34) is separately required when the breach is likely to result in a high risk to their rights and freedoms.\n· A: GDPR does not use a vague 'immediately' standard for breach notification — it sets a clock (72 hours) precisely so controllers have a workable, auditable deadline.\n· B: 24 hours is the e-Privacy / telecom breach-notification rule for electronic-communication providers, not the GDPR standard.\n· D: 30 days is unrelated to breach notification. Prior-consultation deadlines with the DPA for high-risk DPIAs are different (and longer), governed by Art. 36.",
+      "explanations": {
+        "A": "GDPR does not use a vague 'immediately' standard for breach notification — it sets a clock (72 hours) precisely so controllers have a workable, auditable deadline.",
+        "B": "24 hours is the e-Privacy / telecom breach-notification rule for electronic-communication providers, not the GDPR standard.",
+        "C": "Correct. Art. 33(1) requires notification to the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach. If later, reasons for the delay must accompany the notification. Notification to affected data subjects (Art. 34) is separately required when the breach is likely to result in a high risk to their rights and freedoms.",
+        "D": "30 days is unrelated to breach notification. Prior-consultation deadlines with the DPA for high-risk DPIAs are different (and longer), governed by Art. 36."
+      }
+    },
+    {
+      "id": "epso_reg_023",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 11",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "GDPR Art. 20",
+      "figures": [],
+      "question": "The GDPR right to data portability (Art. 20) applies specifically when processing is based on:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Any of the six lawful bases in Art. 6"
+        },
+        {
+          "letter": "B",
+          "text": "Consent or a contract, and is carried out by automated means"
+        },
+        {
+          "letter": "C",
+          "text": "Legitimate interest only"
+        },
+        {
+          "letter": "D",
+          "text": "A legal obligation imposed on the controller"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Art. 20(1) limits portability to processing (a) based on consent (Art. 6(1)(a) or Art. 9(2)(a)) or on a contract (Art. 6(1)(b)), AND (b) carried out by automated means. The output must be a structured, commonly used and machine-readable format. Paper records and public-task processing are out of scope.\n· A: Portability has a narrower scope than the other data-subject rights. It is not triggered by every lawful basis.\n· C: Legitimate interest is explicitly excluded — portability is limited to consent / contract bases.\n· D: Legal-obligation processing (e.g. tax records a company must keep) does not trigger portability. Access (Art. 15) still applies, but not portability.",
+      "explanations": {
+        "A": "Portability has a narrower scope than the other data-subject rights. It is not triggered by every lawful basis.",
+        "B": "Correct. Art. 20(1) limits portability to processing (a) based on consent (Art. 6(1)(a) or Art. 9(2)(a)) or on a contract (Art. 6(1)(b)), AND (b) carried out by automated means. The output must be a structured, commonly used and machine-readable format. Paper records and public-task processing are out of scope.",
+        "C": "Legitimate interest is explicitly excluded — portability is limited to consent / contract bases.",
+        "D": "Legal-obligation processing (e.g. tax records a company must keep) does not trigger portability. Access (Art. 15) still applies, but not portability."
+      }
+    },
+    {
+      "id": "epso_reg_024",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 12",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Reg 2018/1725 Art. 52",
+      "figures": [],
+      "question": "Which body supervises the application of Regulation (EU) 2018/1725 in EU institutions?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The European Data Protection Board (EDPB)"
+        },
+        {
+          "letter": "B",
+          "text": "The Court of Justice of the European Union"
+        },
+        {
+          "letter": "C",
+          "text": "The national Data Protection Authority of the host Member State"
+        },
+        {
+          "letter": "D",
+          "text": "The European Data Protection Supervisor (EDPS)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The EDPS (European Data Protection Supervisor) is the independent authority that supervises EU institutions, bodies, offices and agencies on personal-data matters under Reg. 2018/1725. It can investigate complaints, conduct audits, issue reprimands and impose fines on EU bodies.\n· A: The EDPB coordinates national DPAs on GDPR matters. The EDPS is an EDPB member but not the enforcement authority for EU institutions — the EDPS role is separate.\n· B: The CJEU adjudicates cases brought before it. It is not the day-to-day supervisor — that role is executive, and belongs to the EDPS.\n· C: National DPAs supervise GDPR within their Member State. They have no jurisdiction over EU institutions — those operate under the separate 2018/1725 regime.",
+      "explanations": {
+        "A": "The EDPB coordinates national DPAs on GDPR matters. The EDPS is an EDPB member but not the enforcement authority for EU institutions — the EDPS role is separate.",
+        "B": "The CJEU adjudicates cases brought before it. It is not the day-to-day supervisor — that role is executive, and belongs to the EDPS.",
+        "C": "National DPAs supervise GDPR within their Member State. They have no jurisdiction over EU institutions — those operate under the separate 2018/1725 regime.",
+        "D": "Correct. The EDPS (European Data Protection Supervisor) is the independent authority that supervises EU institutions, bodies, offices and agencies on personal-data matters under Reg. 2018/1725. It can investigate complaints, conduct audits, issue reprimands and impose fines on EU bodies."
+      }
+    },
+    {
+      "id": "epso_reg_025",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 13",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Open Data Dir. Art. 1",
+      "figures": [],
+      "question": "The Open Data Directive (EU) 2019/1024 primarily governs:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Protection of personal data in the Union"
+        },
+        {
+          "letter": "B",
+          "text": "Cross-border electronic identification"
+        },
+        {
+          "letter": "C",
+          "text": "Data sharing obligations between private companies"
+        },
+        {
+          "letter": "D",
+          "text": "Reuse of public-sector information and publicly funded research data"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The Open Data Directive replaces the 2003 PSI Directive and extends open-by-default principles to both public-sector information and publicly funded research data. Key ideas: free of charge, machine-readable formats, API access where feasible, and a dedicated High-Value Datasets regime (Implementing Reg. 2023/138).\n· A: Personal-data protection is the domain of GDPR (Member States) and Reg. 2018/1725 (EU institutions). The Open Data Directive is not a privacy instrument.\n· B: Cross-border eID is governed by eIDAS (Reg. 910/2014, revised by 2024/1183). Unrelated to open-data reuse.\n· C: Private-to-private data-sharing is the Data Act's space (Ch III FRAND terms). The Open Data Directive focuses on the public sector.",
+      "explanations": {
+        "A": "Personal-data protection is the domain of GDPR (Member States) and Reg. 2018/1725 (EU institutions). The Open Data Directive is not a privacy instrument.",
+        "B": "Cross-border eID is governed by eIDAS (Reg. 910/2014, revised by 2024/1183). Unrelated to open-data reuse.",
+        "C": "Private-to-private data-sharing is the Data Act's space (Ch III FRAND terms). The Open Data Directive focuses on the public sector.",
+        "D": "Correct. The Open Data Directive replaces the 2003 PSI Directive and extends open-by-default principles to both public-sector information and publicly funded research data. Key ideas: free of charge, machine-readable formats, API access where feasible, and a dedicated High-Value Datasets regime (Implementing Reg. 2023/138)."
+      }
+    },
+    {
+      "id": "epso_reg_026",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 14",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "DGA Ch III",
+      "figures": [],
+      "question": "Under Chapter III of the DGA (2022/868), a recognised data intermediation service is NOT allowed to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Use the data it intermediates for its own commercial purposes"
+        },
+        {
+          "letter": "B",
+          "text": "Provide technical infrastructure for data exchange between holders and users"
+        },
+        {
+          "letter": "C",
+          "text": "Be notified to the competent authority of its Member State"
+        },
+        {
+          "letter": "D",
+          "text": "Facilitate the exercise of data-subject rights on behalf of individuals"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. A central design choice of Ch III: the intermediary must be strictly neutral. It cannot commercialise the data it routes (e.g. by selling it on, enriching its own products, or cross-selling). Neutrality is what distinguishes DGA intermediaries from ordinary data brokers and earns user trust. Breach of this principle voids the service's recognition.\n· B: Providing technical infrastructure is exactly what an intermediation service does — the DGA builds a trusted pipe between holders and users.\n· C: Notification to the competent authority is mandatory under Art. 11 DGA — it's how the service acquires its recognised status and is listed publicly.\n· D: Intermediation for data subjects exercising their rights (e.g. portability agents, consent-management services) is explicitly contemplated as a legitimate intermediation category.",
+      "explanations": {
+        "A": "Correct. A central design choice of Ch III: the intermediary must be strictly neutral. It cannot commercialise the data it routes (e.g. by selling it on, enriching its own products, or cross-selling). Neutrality is what distinguishes DGA intermediaries from ordinary data brokers and earns user trust. Breach of this principle voids the service's recognition.",
+        "B": "Providing technical infrastructure is exactly what an intermediation service does — the DGA builds a trusted pipe between holders and users.",
+        "C": "Notification to the competent authority is mandatory under Art. 11 DGA — it's how the service acquires its recognised status and is listed publicly.",
+        "D": "Intermediation for data subjects exercising their rights (e.g. portability agents, consent-management services) is explicitly contemplated as a legitimate intermediation category."
+      }
+    },
+    {
+      "id": "epso_reg_027",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 15",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DGA Ch IV",
+      "figures": [],
+      "question": "The European Data Altruism Consent Form introduced by the DGA (Ch IV) is designed to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Replace the standard GDPR consent requirements for all processing"
+        },
+        {
+          "letter": "B",
+          "text": "Serve as an intra-institutional authorisation within the Commission"
+        },
+        {
+          "letter": "C",
+          "text": "Standardise how individuals and companies donate data for causes of general interest"
+        },
+        {
+          "letter": "D",
+          "text": "Operate as a commercial licence template for paid data transactions"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The European Data Altruism Consent Form (Art. 22 DGA, with a Commission implementing act setting its layout) is a common template so donors understand what they are agreeing to when contributing data for objectives of general interest — health research, climate science, combating emergencies, official statistics. Recognised altruism organisations must be not-for-profit and listed in a public register.\n· A: Data altruism does not override GDPR. The altruism consent form is an additional standardised mechanism that still sits on top of the GDPR lawful-basis framework.\n· B: Nothing in the altruism regime is internal to the Commission — the mechanism is outward-facing and available EU-wide.\n· D: Altruism is explicitly non-commercial. The form is a donation mechanism, not a licence for paid transactions — those sit under other instruments (Open Data Dir., Data Act Ch III).",
+      "explanations": {
+        "A": "Data altruism does not override GDPR. The altruism consent form is an additional standardised mechanism that still sits on top of the GDPR lawful-basis framework.",
+        "B": "Nothing in the altruism regime is internal to the Commission — the mechanism is outward-facing and available EU-wide.",
+        "C": "Correct. The European Data Altruism Consent Form (Art. 22 DGA, with a Commission implementing act setting its layout) is a common template so donors understand what they are agreeing to when contributing data for objectives of general interest — health research, climate science, combating emergencies, official statistics. Recognised altruism organisations must be not-for-profit and listed in a public register.",
+        "D": "Altruism is explicitly non-commercial. The form is a donation mechanism, not a licence for paid transactions — those sit under other instruments (Open Data Dir., Data Act Ch III)."
+      }
+    },
+    {
+      "id": "epso_reg_028",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 16",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "DGA application date",
+      "figures": [],
+      "question": "When did the Data Governance Act (Reg. (EU) 2022/868) become applicable?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "25 May 2018"
+        },
+        {
+          "letter": "B",
+          "text": "17 July 2021"
+        },
+        {
+          "letter": "C",
+          "text": "24 September 2023"
+        },
+        {
+          "letter": "D",
+          "text": "12 September 2025"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The DGA was adopted 30 May 2022 and became applicable on 24 September 2023, after a 15-month grace period. Memorise this alongside the other EU data-regulation dates — sequencing questions are common.\n· A: 25 May 2018 is the GDPR application date.\n· B: 17 July 2021 is the Open Data Directive transposition deadline.\n· D: 12 September 2025 is the Data Act application date, not the DGA.",
+      "explanations": {
+        "A": "25 May 2018 is the GDPR application date.",
+        "B": "17 July 2021 is the Open Data Directive transposition deadline.",
+        "C": "Correct. The DGA was adopted 30 May 2022 and became applicable on 24 September 2023, after a 15-month grace period. Memorise this alongside the other EU data-regulation dates — sequencing questions are common.",
+        "D": "12 September 2025 is the Data Act application date, not the DGA."
+      }
+    },
+    {
+      "id": "epso_reg_029",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 17",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data Act Ch VI",
+      "figures": [],
+      "question": "Chapter VI of the Data Act (Reg. 2023/2854) addresses:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Biometric identification in public spaces"
+        },
+        {
+          "letter": "B",
+          "text": "Reuse of protected public-sector data"
+        },
+        {
+          "letter": "C",
+          "text": "Switching between cloud or edge data-processing services"
+        },
+        {
+          "letter": "D",
+          "text": "Data altruism and the European consent form"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Ch VI of the Data Act sets rules on switching between providers of cloud / edge services: no contractual, technical or financial barriers, phased removal of switching / egress fees (target: zero by 2027) and functional equivalence requirements so a customer can actually move workloads. It's the piece of the Data Act aimed at breaking vendor lock-in.\n· A: Biometric identification is the AI Act's turf (Art. 5 bans, Annex III high-risk).\n· B: Protected public-sector data reuse is DGA Chapter II, not Data Act.\n· D: Data altruism sits in DGA Chapter IV. The Data Act has no altruism chapter.",
+      "explanations": {
+        "A": "Biometric identification is the AI Act's turf (Art. 5 bans, Annex III high-risk).",
+        "B": "Protected public-sector data reuse is DGA Chapter II, not Data Act.",
+        "C": "Correct. Ch VI of the Data Act sets rules on switching between providers of cloud / edge services: no contractual, technical or financial barriers, phased removal of switching / egress fees (target: zero by 2027) and functional equivalence requirements so a customer can actually move workloads. It's the piece of the Data Act aimed at breaking vendor lock-in.",
+        "D": "Data altruism sits in DGA Chapter IV. The Data Act has no altruism chapter."
+      }
+    },
+    {
+      "id": "epso_reg_030",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 18",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Data Act Ch V",
+      "figures": [],
+      "question": "A public body requests access to proprietary data held by a private company to respond to a major flood. Which Data Act mechanism applies?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Chapter II — user access to connected-product data"
+        },
+        {
+          "letter": "B",
+          "text": "Chapter III — B2B FRAND sharing when a legal obligation exists"
+        },
+        {
+          "letter": "C",
+          "text": "Chapter V — B2G access in cases of exceptional need"
+        },
+        {
+          "letter": "D",
+          "text": "Chapter VI — cloud and edge switching"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Ch V ('Business to Government' — B2G) lets public bodies obtain private-sector data in situations of exceptional need: responding to a public emergency (floods, wildfires, pandemics) or preventing / mitigating one. The Act limits scope, ties the request to necessity and proportionality, and forbids using the data for unrelated purposes.\n· A: Ch II is about the user of a connected product receiving their own data, not public authorities obtaining company data for crisis response.\n· B: Ch III governs B2B data sharing when another act already imposes a sharing obligation. It sets FRAND commercial terms — unrelated to emergency public access.\n· D: Ch VI concerns cloud customer switching. Different problem entirely.",
+      "explanations": {
+        "A": "Ch II is about the user of a connected product receiving their own data, not public authorities obtaining company data for crisis response.",
+        "B": "Ch III governs B2B data sharing when another act already imposes a sharing obligation. It sets FRAND commercial terms — unrelated to emergency public access.",
+        "C": "Correct. Ch V ('Business to Government' — B2G) lets public bodies obtain private-sector data in situations of exceptional need: responding to a public emergency (floods, wildfires, pandemics) or preventing / mitigating one. The Act limits scope, ties the request to necessity and proportionality, and forbids using the data for unrelated purposes.",
+        "D": "Ch VI concerns cloud customer switching. Different problem entirely."
+      }
+    },
+    {
+      "id": "epso_reg_031",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 19",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Data Act Ch III",
+      "figures": [],
+      "question": "Under Ch III of the Data Act, a data holder that is legally obliged to share data with a data recipient must offer terms that are:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Fair, Reasonable And Non-Discriminatory (FRAND)"
+        },
+        {
+          "letter": "B",
+          "text": "Identical to those of the holder's most favoured customer"
+        },
+        {
+          "letter": "C",
+          "text": "Free of charge in all circumstances"
+        },
+        {
+          "letter": "D",
+          "text": "Subject to bilateral confidentiality with no remuneration limits"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Ch III (Arts. 8–12) requires terms that are Fair, Reasonable And Non-Discriminatory. FRAND lets data holders recover reasonable costs and, for non-SME recipients, a reasonable margin — while preventing abusive, excessive or exclusionary pricing. FRAND is borrowed from standard-essential-patent law and adapted to data.\n· B: 'Most favoured customer' is a benchmark in some commercial agreements but is not the Data Act standard. FRAND is a balance, not a match-the-best-deal rule.\n· C: Free-of-charge is the Open Data Directive logic for public-sector information, not B2B private-sector sharing under the Data Act.\n· D: FRAND explicitly limits remuneration to what is reasonable. Unlimited pricing with NDAs would defeat the chapter's purpose.",
+      "explanations": {
+        "A": "Correct. Ch III (Arts. 8–12) requires terms that are Fair, Reasonable And Non-Discriminatory. FRAND lets data holders recover reasonable costs and, for non-SME recipients, a reasonable margin — while preventing abusive, excessive or exclusionary pricing. FRAND is borrowed from standard-essential-patent law and adapted to data.",
+        "B": "'Most favoured customer' is a benchmark in some commercial agreements but is not the Data Act standard. FRAND is a balance, not a match-the-best-deal rule.",
+        "C": "Free-of-charge is the Open Data Directive logic for public-sector information, not B2B private-sector sharing under the Data Act.",
+        "D": "FRAND explicitly limits remuneration to what is reasonable. Unlimited pricing with NDAs would defeat the chapter's purpose."
+      }
+    },
+    {
+      "id": "epso_reg_032",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 20",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "AI Act risk pyramid",
+      "figures": [],
+      "question": "Under the AI Act, a chatbot deployed by a retailer to answer customer questions typically falls into which risk tier?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Unacceptable risk — prohibited"
+        },
+        {
+          "letter": "B",
+          "text": "High risk — conformity assessment required"
+        },
+        {
+          "letter": "C",
+          "text": "Limited risk — transparency obligation (user must know they are interacting with AI)"
+        },
+        {
+          "letter": "D",
+          "text": "Minimal risk — no obligation"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Conversational AI systems fall under the 'limited-risk / transparency' category. The operator must ensure users are aware they are interacting with an AI system (unless it is obvious from context). This is the core transparency obligation of Art. 50.\n· A: Prohibited AI is the narrow list in Art. 5 (social scoring, real-time remote biometric ID for police, manipulative practices). A retail chatbot is nowhere near.\n· B: High-risk AI (Annex III) covers sensitive domains — recruiting, credit scoring, education, migration, critical infrastructure, justice. A shop chatbot is not in scope of Annex III by default.\n· D: Minimal risk covers systems with no specific obligation (spam filters, games). Chatbots sit one step above because of the transparency duty.",
+      "explanations": {
+        "A": "Prohibited AI is the narrow list in Art. 5 (social scoring, real-time remote biometric ID for police, manipulative practices). A retail chatbot is nowhere near.",
+        "B": "High-risk AI (Annex III) covers sensitive domains — recruiting, credit scoring, education, migration, critical infrastructure, justice. A shop chatbot is not in scope of Annex III by default.",
+        "C": "Correct. Conversational AI systems fall under the 'limited-risk / transparency' category. The operator must ensure users are aware they are interacting with an AI system (unless it is obvious from context). This is the core transparency obligation of Art. 50.",
+        "D": "Minimal risk covers systems with no specific obligation (spam filters, games). Chatbots sit one step above because of the transparency duty."
+      }
+    },
+    {
+      "id": "epso_reg_033",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 21",
+      "topic": "eu_regulation",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "AI Act Ch V (GPAI)",
+      "figures": [],
+      "question": "Under Chapter V of the AI Act, General-Purpose AI (GPAI) models with 'systemic risk' are subject to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Only a light-touch code of conduct"
+        },
+        {
+          "letter": "B",
+          "text": "Full Annex III high-risk obligations by default"
+        },
+        {
+          "letter": "C",
+          "text": "Specific obligations including model evaluations, systemic-risk assessment and cybersecurity protection"
+        },
+        {
+          "letter": "D",
+          "text": "A blanket prohibition on EU deployment"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Art. 55 imposes additional obligations on GPAI with systemic risk: state-of-the-art model evaluations (including adversarial testing), assessment and mitigation of systemic risks at Union level, incident reporting, and adequate cybersecurity of the model and its infrastructure. The tier is triggered by capability thresholds (cumulative training compute > 10^25 FLOPs) or Commission designation.\n· A: Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on frontier models.\n· B: GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model as such.\n· D: GPAI is not banned. The AI Act regulates it, staggered by capability and risk — prohibition is reserved for Art. 5 practices.",
+      "explanations": {
+        "A": "Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on frontier models.",
+        "B": "GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model as such.",
+        "C": "Correct. Art. 55 imposes additional obligations on GPAI with systemic risk: state-of-the-art model evaluations (including adversarial testing), assessment and mitigation of systemic risks at Union level, incident reporting, and adequate cybersecurity of the model and its infrastructure. The tier is triggered by capability thresholds (cumulative training compute > 10^25 FLOPs) or Commission designation.",
+        "D": "GPAI is not banned. The AI Act regulates it, staggered by capability and risk — prohibition is reserved for Art. 5 practices."
+      }
+    },
+    {
+      "id": "epso_reg_034",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 22",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Interoperable Europe Act",
+      "figures": [],
+      "question": "The Interoperable Europe Act (Reg. (EU) 2024/903) primarily targets interoperability of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Private-sector B2B data exchanges"
+        },
+        {
+          "letter": "B",
+          "text": "Consumer IoT devices sold within the internal market"
+        },
+        {
+          "letter": "C",
+          "text": "Internal Commission HR systems only"
+        },
+        {
+          "letter": "D",
+          "text": "Cross-border public services delivered in or by the Union"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The Interoperable Europe Act creates a framework for cross-border interoperability of public services in the Union. Key tools: mandatory interoperability assessments (Art. 3) before major public-sector IT spend, the Interoperable Europe Board (MS + Commission), a portal of reusable building blocks (eDelivery, eSignature, SEMIC) and GovTech / regulatory-sandbox support.\n· A: Private-sector B2B exchanges are governed by the Data Act (Ch III) and data-space initiatives, not the Interoperable Europe Act.\n· B: IoT devices are covered by the Data Act (Ch II), Cyber Resilience Act and product-safety legislation — not the Interoperable Europe Act.\n· C: The scope is EU-wide public administrations, not just the Commission's internal systems.",
+      "explanations": {
+        "A": "Private-sector B2B exchanges are governed by the Data Act (Ch III) and data-space initiatives, not the Interoperable Europe Act.",
+        "B": "IoT devices are covered by the Data Act (Ch II), Cyber Resilience Act and product-safety legislation — not the Interoperable Europe Act.",
+        "C": "The scope is EU-wide public administrations, not just the Commission's internal systems.",
+        "D": "Correct. The Interoperable Europe Act creates a framework for cross-border interoperability of public services in the Union. Key tools: mandatory interoperability assessments (Art. 3) before major public-sector IT spend, the Interoperable Europe Board (MS + Commission), a portal of reusable building blocks (eDelivery, eSignature, SEMIC) and GovTech / regulatory-sandbox support."
+      }
+    },
+    {
+      "id": "epso_reg_035",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 23",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Interoperable Europe Act Art. 3",
+      "figures": [],
+      "question": "Art. 3 of the Interoperable Europe Act introduces a mandatory 'interoperability assessment'. It must be carried out:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Before Union entities or public-sector bodies make binding decisions on new or substantially modified trans-European IT solutions"
+        },
+        {
+          "letter": "B",
+          "text": "After a new cross-border public service has gone live"
+        },
+        {
+          "letter": "C",
+          "text": "Only for private-sector software procurements exceeding €10 million"
+        },
+        {
+          "letter": "D",
+          "text": "Only on systems that process special categories of personal data"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Art. 3 requires Union entities and public-sector bodies to carry out an interoperability assessment before binding decisions on trans-European digital public services, to identify cross-border effects and plan around the EIF layers. The assessment feeds the Interoperable Europe Portal, creating a searchable library for reuse.\n· B: Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante.\n· C: There is no €10 million threshold — the obligation applies to trans-European public-service IT regardless of procurement value.\n· D: Special-category personal data triggers a GDPR DPIA (Art. 35), not an interoperability assessment. Different instruments, different focus.",
+      "explanations": {
+        "A": "Correct. Art. 3 requires Union entities and public-sector bodies to carry out an interoperability assessment before binding decisions on trans-European digital public services, to identify cross-border effects and plan around the EIF layers. The assessment feeds the Interoperable Europe Portal, creating a searchable library for reuse.",
+        "B": "Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante.",
+        "C": "There is no €10 million threshold — the obligation applies to trans-European public-service IT regardless of procurement value.",
+        "D": "Special-category personal data triggers a GDPR DPIA (Art. 35), not an interoperability assessment. Different instruments, different focus."
+      }
+    },
+    {
+      "id": "epso_reg_036",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 24",
+      "topic": "eu_regulation",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "EHDS Reg 2025/327",
+      "figures": [],
+      "question": "Under the European Health Data Space Regulation (EU) 2025/327, researchers wishing to use electronic health data for secondary purposes must:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Publish the data on the Open Data Portal free of charge"
+        },
+        {
+          "letter": "B",
+          "text": "Register as a DGA data altruism organisation"
+        },
+        {
+          "letter": "C",
+          "text": "Obtain a Data Act FRAND licence from the hospital"
+        },
+        {
+          "letter": "D",
+          "text": "Apply via a recognised Health Data Access Body (HDAB)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The EHDS channels secondary uses (research, innovation, policy, regulatory activities) through Health Data Access Bodies (HDABs). These Member-State bodies vet applications, pair purposes with appropriate data, apply minimisation and pseudonymisation, and provide the data in secure processing environments. HDABs are the template the other European Data Spaces are expected to follow.\n· A: Health data is not open-by-default — it's sensitive personal data under GDPR Art. 9 and must be handled under the EHDS secondary-use regime, not the Open Data Directive.\n· B: Data altruism (DGA Ch IV) is a separate mechanism for voluntary donations of data for general-interest causes. Not the EHDS secondary-use route.\n· C: Data Act Ch III FRAND terms apply to B2B data sharing when a separate obligation to share exists — not to health research. Hospitals don't licence patient data to researchers bilaterally under EHDS.",
+      "explanations": {
+        "A": "Health data is not open-by-default — it's sensitive personal data under GDPR Art. 9 and must be handled under the EHDS secondary-use regime, not the Open Data Directive.",
+        "B": "Data altruism (DGA Ch IV) is a separate mechanism for voluntary donations of data for general-interest causes. Not the EHDS secondary-use route.",
+        "C": "Data Act Ch III FRAND terms apply to B2B data sharing when a separate obligation to share exists — not to health research. Hospitals don't licence patient data to researchers bilaterally under EHDS.",
+        "D": "Correct. The EHDS channels secondary uses (research, innovation, policy, regulatory activities) through Health Data Access Bodies (HDABs). These Member-State bodies vet applications, pair purposes with appropriate data, apply minimisation and pseudonymisation, and provide the data in secure processing environments. HDABs are the template the other European Data Spaces are expected to follow."
+      }
+    },
+    {
+      "id": "epso_reg_037",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · EU Regulation · 25",
+      "topic": "eu_regulation",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "COM(2020) 66",
+      "figures": [],
+      "question": "The 'European Strategy for Data' (Feb 2020, COM(2020) 66) is best described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A binding EU regulation"
+        },
+        {
+          "letter": "B",
+          "text": "A Council conclusion on cybersecurity"
+        },
+        {
+          "letter": "C",
+          "text": "An EDPB opinion on cross-border processing"
+        },
+        {
+          "letter": "D",
+          "text": "A Commission Communication setting out a vision for a single market for data"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The European Strategy for Data is a Commission Communication (policy document, non-binding) published in February 2020. It articulated the vision of a single market for data and a programme of Common European Data Spaces. The 2025 Data Union Strategy (COM(2025) 835) is its update.\n· A: Regulations are binding legal acts. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.\n· B: Council conclusions are another instrument; the 2020 Strategy came from the Commission, not the Council.\n· C: EDPB opinions focus on personal-data questions, not on broad data-market strategy.",
+      "explanations": {
+        "A": "Regulations are binding legal acts. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.",
+        "B": "Council conclusions are another instrument; the 2020 Strategy came from the Commission, not the Council.",
+        "C": "EDPB opinions focus on personal-data questions, not on broad data-market strategy.",
+        "D": "Correct. The European Strategy for Data is a Commission Communication (policy document, non-binding) published in February 2020. It articulated the vision of a single market for data and a programme of Common European Data Spaces. The 2025 Data Union Strategy (COM(2025) 835) is its update."
+      }
+    },
+    {
+      "id": "epso_fw_038",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 6",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "DAMA-DMBOK",
+      "figures": [],
+      "question": "Which of the following is NOT one of the 11 DAMA-DMBOK knowledge areas?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data Quality"
+        },
+        {
+          "letter": "B",
+          "text": "Data Warehousing and Business Intelligence"
+        },
+        {
+          "letter": "C",
+          "text": "Data Monetisation"
+        },
+        {
+          "letter": "D",
+          "text": "Metadata Management"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. 'Data Monetisation' is not a DAMA-DMBOK knowledge area. The 11 areas are: Data Governance (hub), Data Architecture, Data Modelling & Design, Data Storage & Operations, Data Security, Data Integration & Interoperability, Document & Content Management, Reference & Master Data, Data Warehousing & BI, Metadata, Data Quality.\n· A: Data Quality is one of the 11 areas — measuring and improving fitness-for-use against defined criteria.\n· B: Data Warehousing and Business Intelligence is an area in its own right in DAMA-DMBOK.\n· D: Metadata Management is one of the 11 peripheral areas of the DAMA wheel.",
+      "explanations": {
+        "A": "Data Quality is one of the 11 areas — measuring and improving fitness-for-use against defined criteria.",
+        "B": "Data Warehousing and Business Intelligence is an area in its own right in DAMA-DMBOK.",
+        "C": "Correct. 'Data Monetisation' is not a DAMA-DMBOK knowledge area. The 11 areas are: Data Governance (hub), Data Architecture, Data Modelling & Design, Data Storage & Operations, Data Security, Data Integration & Interoperability, Document & Content Management, Reference & Master Data, Data Warehousing & BI, Metadata, Data Quality.",
+        "D": "Metadata Management is one of the 11 peripheral areas of the DAMA wheel."
+      }
+    },
+    {
+      "id": "epso_fw_039",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 7",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "FAIR 'A'",
+      "figures": [],
+      "question": "In the FAIR principles, 'Accessible' means specifically that data:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Are retrievable via a standardised, open communication protocol that allows authentication / authorisation where needed"
+        },
+        {
+          "letter": "B",
+          "text": "Must always be freely available to anyone without authentication"
+        },
+        {
+          "letter": "C",
+          "text": "Are stored only on EU-based servers"
+        },
+        {
+          "letter": "D",
+          "text": "Are available in at least 24 EU languages"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Accessible (A1: via a standardised protocol; A1.1 free, open, universally implementable; A1.2 allows authentication / authorisation; A2: metadata is accessible even when the data are no longer available). The emphasis is on machine-retrievability and persistence of metadata, not on zero-cost open access.\n· B: FAIR accessibility does not require open-to-all access. It requires a standardised protocol for retrieval, which can include authentication and authorisation. Protected data can still be FAIR.\n· C: FAIR is storage-location neutral. Sovereignty is a separate concern addressed by other instruments (e.g. GDPR transfers, EUCS).\n· D: Multilingualism matters at EU level but isn't part of the FAIR definition — FAIR is a scientific-data framework, not an EU-language policy.",
+      "explanations": {
+        "A": "Correct. Accessible (A1: via a standardised protocol; A1.1 free, open, universally implementable; A1.2 allows authentication / authorisation; A2: metadata is accessible even when the data are no longer available). The emphasis is on machine-retrievability and persistence of metadata, not on zero-cost open access.",
+        "B": "FAIR accessibility does not require open-to-all access. It requires a standardised protocol for retrieval, which can include authentication and authorisation. Protected data can still be FAIR.",
+        "C": "FAIR is storage-location neutral. Sovereignty is a separate concern addressed by other instruments (e.g. GDPR transfers, EUCS).",
+        "D": "Multilingualism matters at EU level but isn't part of the FAIR definition — FAIR is a scientific-data framework, not an EU-language policy."
+      }
+    },
+    {
+      "id": "epso_fw_040",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 8",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "EIF overlay",
+      "figures": [],
+      "question": "On top of the four EIF layers, what additional element binds them together and coordinates cross-layer decisions?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data Protection Impact Assessment"
+        },
+        {
+          "letter": "B",
+          "text": "Architectural Reference Model"
+        },
+        {
+          "letter": "C",
+          "text": "Common Procurement Vocabulary"
+        },
+        {
+          "letter": "D",
+          "text": "Interoperability Governance"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The EIF explicitly adds an 'Interoperability Governance' overlay across the four layers (Legal, Organisational, Semantic, Technical), plus 'Integrated Public Service Governance' as an overarching principle for jointly designing public services. Without governance, decisions at each layer drift apart.\n· A: A DPIA is a GDPR (Art. 35) obligation for high-risk personal-data processing. It has no structural role in the EIF.\n· B: There is no separate 'Architectural Reference Model' in EIF — the EIF itself is the reference model.\n· C: The CPV is a classification for public procurement notices. Unrelated to EIF structure.",
+      "explanations": {
+        "A": "A DPIA is a GDPR (Art. 35) obligation for high-risk personal-data processing. It has no structural role in the EIF.",
+        "B": "There is no separate 'Architectural Reference Model' in EIF — the EIF itself is the reference model.",
+        "C": "The CPV is a classification for public procurement notices. Unrelated to EIF structure.",
+        "D": "Correct. The EIF explicitly adds an 'Interoperability Governance' overlay across the four layers (Legal, Organisational, Semantic, Technical), plus 'Integrated Public Service Governance' as an overarching principle for jointly designing public services. Without governance, decisions at each layer drift apart."
+      }
+    },
+    {
+      "id": "epso_fw_041",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 9",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "SKOS",
+      "figures": [],
+      "question": "SKOS (Simple Knowledge Organization System) is primarily used to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encrypt RDF triples at rest"
+        },
+        {
+          "letter": "B",
+          "text": "Represent thesauri, taxonomies and classification schemes on the Semantic Web"
+        },
+        {
+          "letter": "C",
+          "text": "Query relational databases using SQL"
+        },
+        {
+          "letter": "D",
+          "text": "Define ACID transaction boundaries in lakehouses"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. SKOS is a W3C recommendation for representing thesauri, taxonomies and subject-heading systems as RDF data, so that vocabularies like EuroVoc can be published on the Semantic Web with consistent structure (concept, prefLabel, altLabel, broader, narrower, related).\n· A: SKOS is a modelling vocabulary, not an encryption scheme. RDF at rest is typically protected by storage-level or transport-level encryption, not by SKOS.\n· C: SQL queries relational tables. SPARQL — not SKOS — is the query language for RDF graphs.\n· D: ACID in lakehouses is provided by open table formats (Delta, Iceberg, Hudi). SKOS has nothing to do with transaction semantics.",
+      "explanations": {
+        "A": "SKOS is a modelling vocabulary, not an encryption scheme. RDF at rest is typically protected by storage-level or transport-level encryption, not by SKOS.",
+        "B": "Correct. SKOS is a W3C recommendation for representing thesauri, taxonomies and subject-heading systems as RDF data, so that vocabularies like EuroVoc can be published on the Semantic Web with consistent structure (concept, prefLabel, altLabel, broader, narrower, related).",
+        "C": "SQL queries relational tables. SPARQL — not SKOS — is the query language for RDF graphs.",
+        "D": "ACID in lakehouses is provided by open table formats (Delta, Iceberg, Hudi). SKOS has nothing to do with transaction semantics."
+      }
+    },
+    {
+      "id": "epso_fw_042",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 10",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "RDF / OWL / SPARQL",
+      "figures": [],
+      "question": "Which statement about the Semantic Web stack is correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "OWL is a query language for RDF graphs"
+        },
+        {
+          "letter": "B",
+          "text": "RDF is a relational database management system"
+        },
+        {
+          "letter": "C",
+          "text": "SPARQL is an ontology formalism equivalent to OWL"
+        },
+        {
+          "letter": "D",
+          "text": "RDF represents facts as subject-predicate-object triples; SPARQL is the query language; OWL is an ontology language"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. RDF (Resource Description Framework) expresses facts as subject-predicate-object triples using URIs. SPARQL is the W3C query language for triple stores. OWL (Web Ontology Language) builds on RDF Schema to let you define classes, properties, cardinality and other formal constraints that reasoners can use.\n· A: OWL is not a query language — SPARQL is. OWL adds formal semantics (classes, properties, restrictions) on top of RDF to support reasoning.\n· B: RDF is a data model for the Semantic Web, not a DBMS. Triple stores (Virtuoso, GraphDB, Jena) implement RDF storage; RDF itself is the model.\n· C: Wrong — those are different roles. SPARQL retrieves, OWL models meaning.",
+      "explanations": {
+        "A": "OWL is not a query language — SPARQL is. OWL adds formal semantics (classes, properties, restrictions) on top of RDF to support reasoning.",
+        "B": "RDF is a data model for the Semantic Web, not a DBMS. Triple stores (Virtuoso, GraphDB, Jena) implement RDF storage; RDF itself is the model.",
+        "C": "Wrong — those are different roles. SPARQL retrieves, OWL models meaning.",
+        "D": "Correct. RDF (Resource Description Framework) expresses facts as subject-predicate-object triples using URIs. SPARQL is the W3C query language for triple stores. OWL (Web Ontology Language) builds on RDF Schema to let you define classes, properties, cardinality and other formal constraints that reasoners can use."
+      }
+    },
+    {
+      "id": "epso_fw_043",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 11",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Berners-Lee 2010",
+      "figures": [],
+      "question": "Tim Berners-Lee's 5-star Open Data scheme awards the top rating (★★★★★) to data that:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Is published as a PDF with an open licence"
+        },
+        {
+          "letter": "B",
+          "text": "Uses non-proprietary formats"
+        },
+        {
+          "letter": "C",
+          "text": "Uses URIs to identify things and is linked to other data (Linked Open Data)"
+        },
+        {
+          "letter": "D",
+          "text": "Is available through a paywalled API with OAuth"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The ladder: ★ on web, open licence → ★★ machine-readable structured data → ★★★ non-proprietary format → ★★★★ use URIs to identify things → ★★★★★ link to other data (Linked Open Data). The top tier enables discovery and cross-dataset queries across the web.\n· A: PDF + open licence is only ★ — on the web, openly licensed. It is not machine-readable in any structural sense.\n· B: Non-proprietary formats (CSV, JSON) earn ★★★, not ★★★★★.\n· D: A paywalled API is not open by any definition. The scheme starts from 'openly licensed' as a minimum; paywalls exclude a dataset entirely.",
+      "explanations": {
+        "A": "PDF + open licence is only ★ — on the web, openly licensed. It is not machine-readable in any structural sense.",
+        "B": "Non-proprietary formats (CSV, JSON) earn ★★★, not ★★★★★.",
+        "C": "Correct. The ladder: ★ on web, open licence → ★★ machine-readable structured data → ★★★ non-proprietary format → ★★★★ use URIs to identify things → ★★★★★ link to other data (Linked Open Data). The top tier enables discovery and cross-dataset queries across the web.",
+        "D": "A paywalled API is not open by any definition. The scheme starts from 'openly licensed' as a minimum; paywalls exclude a dataset entirely."
+      }
+    },
+    {
+      "id": "epso_fw_044",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 12",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data Owner vs Steward",
+      "figures": [],
+      "question": "In data-management role models, the Data Owner is distinguished from the Data Steward because the Owner:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Physically stores and backs up the data"
+        },
+        {
+          "letter": "B",
+          "text": "Is accountable for the data domain and sets policy for its use"
+        },
+        {
+          "letter": "C",
+          "text": "Writes the SQL queries used to extract the data"
+        },
+        {
+          "letter": "D",
+          "text": "Acts as the GDPR data subject"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. The Data Owner is a senior business stakeholder accountable for a data domain (customers, products, suppliers). They decide who may use the data, approve quality thresholds and sign off on definitions. The Steward executes the policy day-to-day — enforcing quality rules, maintaining definitions, resolving issues.\n· A: Physical storage and backup fall to the Data Custodian — typically the IT operations team.\n· C: Writing queries is an analyst / engineer activity, not an Owner's role.\n· D: The data subject is the individual whose personal data is processed (GDPR Art. 4(1)). Not a data-management role at all.",
+      "explanations": {
+        "A": "Physical storage and backup fall to the Data Custodian — typically the IT operations team.",
+        "B": "Correct. The Data Owner is a senior business stakeholder accountable for a data domain (customers, products, suppliers). They decide who may use the data, approve quality thresholds and sign off on definitions. The Steward executes the policy day-to-day — enforcing quality rules, maintaining definitions, resolving issues.",
+        "C": "Writing queries is an analyst / engineer activity, not an Owner's role.",
+        "D": "The data subject is the individual whose personal data is processed (GDPR Art. 4(1)). Not a data-management role at all."
+      }
+    },
+    {
+      "id": "epso_fw_045",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 13",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "CDO vs DPO",
+      "figures": [],
+      "question": "Which statement correctly contrasts the Chief Data Officer (CDO) with the Data Protection Officer (DPO)?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "CDO and DPO are synonyms in the EU institutions"
+        },
+        {
+          "letter": "B",
+          "text": "CDO is a GDPR-mandated role; DPO is a voluntary strategic function"
+        },
+        {
+          "letter": "C",
+          "text": "CDO is an organisation-level strategic data-leadership role; DPO is a GDPR / 2018/1725 compliance role independent from management"
+        },
+        {
+          "letter": "D",
+          "text": "CDO reports to the DPO in all GDPR-regulated entities"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The CDO (Chief Data Officer) owns the organisation's overall data strategy, governance programme and value creation. The DPO is a legally required role for public authorities and certain processing (Art. 37 GDPR), must operate independently, advise on compliance, and report to the highest level of management. Distinct mandates, distinct independence requirements.\n· A: They are different roles with different mandates and reporting lines. Combining them is a governance anti-pattern because it blurs strategic and compliance objectives.\n· B: The opposite is true. The DPO is the GDPR-mandated role (Arts. 37–39 GDPR, and 2018/1725 for EU institutions). The CDO is a strategic business role with no legal definition.\n· D: No such reporting line exists. In fact the DPO must not receive instructions on carrying out their compliance tasks (Art. 38(3) GDPR).",
+      "explanations": {
+        "A": "They are different roles with different mandates and reporting lines. Combining them is a governance anti-pattern because it blurs strategic and compliance objectives.",
+        "B": "The opposite is true. The DPO is the GDPR-mandated role (Arts. 37–39 GDPR, and 2018/1725 for EU institutions). The CDO is a strategic business role with no legal definition.",
+        "C": "Correct. The CDO (Chief Data Officer) owns the organisation's overall data strategy, governance programme and value creation. The DPO is a legally required role for public authorities and certain processing (Art. 37 GDPR), must operate independently, advise on compliance, and report to the highest level of management. Distinct mandates, distinct independence requirements.",
+        "D": "No such reporting line exists. In fact the DPO must not receive instructions on carrying out their compliance tasks (Art. 38(3) GDPR)."
+      }
+    },
+    {
+      "id": "epso_fw_046",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 14",
+      "topic": "framework",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "ISO 8000 vs ISO/IEC 25012",
+      "figures": [],
+      "question": "Which ISO standard lists 15 inherent and system-dependent characteristics of data quality (accuracy, completeness, consistency, credibility, currentness, …)?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ISO 9001"
+        },
+        {
+          "letter": "B",
+          "text": "ISO 8000"
+        },
+        {
+          "letter": "C",
+          "text": "ISO/IEC 25012"
+        },
+        {
+          "letter": "D",
+          "text": "ISO/IEC 27001"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. ISO/IEC 25012 (part of the SQuaRE 25000 series) defines 15 data-quality characteristics split between inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability).\n· A: ISO 9001 is the general quality-management-system standard — not specific to data.\n· B: ISO 8000 deals with data quality, with a strong focus on master-data exchange and provenance. It does not contain the 15-characteristic list.\n· D: ISO/IEC 27001 is the information-security management standard. CIA triad, controls, ISMS — not quality characteristics.",
+      "explanations": {
+        "A": "ISO 9001 is the general quality-management-system standard — not specific to data.",
+        "B": "ISO 8000 deals with data quality, with a strong focus on master-data exchange and provenance. It does not contain the 15-characteristic list.",
+        "C": "Correct. ISO/IEC 25012 (part of the SQuaRE 25000 series) defines 15 data-quality characteristics split between inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability).",
+        "D": "ISO/IEC 27001 is the information-security management standard. CIA triad, controls, ISMS — not quality characteristics."
+      }
+    },
+    {
+      "id": "epso_fw_047",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Framework · 15",
+      "topic": "framework",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "ISO 8000",
+      "figures": [],
+      "question": "ISO 8000 on data quality is particularly associated with:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cybersecurity incident response"
+        },
+        {
+          "letter": "B",
+          "text": "Continuous-integration pipeline testing"
+        },
+        {
+          "letter": "C",
+          "text": "Multilingual machine translation evaluation"
+        },
+        {
+          "letter": "D",
+          "text": "Master-data exchange, provenance and syntactic / semantic encoding"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. ISO 8000 is oriented toward master-data exchange: it specifies how data is encoded (syntactic quality), how it matches an agreed vocabulary (semantic quality), and how its provenance is recorded. Parts of the standard cover portable master data, data provenance, and quality measurement for master data.\n· A: Cybersecurity incident response is the domain of ISO/IEC 27035 and equivalents — not ISO 8000.\n· B: CI pipelines are tested using software-engineering practices, not ISO data-quality standards.\n· C: Machine-translation evaluation has its own metrics (BLEU, chrF) — nothing to do with ISO 8000.",
+      "explanations": {
+        "A": "Cybersecurity incident response is the domain of ISO/IEC 27035 and equivalents — not ISO 8000.",
+        "B": "CI pipelines are tested using software-engineering practices, not ISO data-quality standards.",
+        "C": "Machine-translation evaluation has its own metrics (BLEU, chrF) — nothing to do with ISO 8000.",
+        "D": "Correct. ISO 8000 is oriented toward master-data exchange: it specifies how data is encoded (syntactic quality), how it matches an agreed vocabulary (semantic quality), and how its provenance is recorded. Parts of the standard cover portable master data, data provenance, and quality measurement for master data."
+      }
+    },
+    {
+      "id": "epso_duty_048",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 1",
+      "topic": "data_architecture",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Logical vs physical",
+      "figures": [],
+      "question": "Which of the following best describes a logical data model?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Tablespaces, index types and partitioning chosen for a specific DBMS"
+        },
+        {
+          "letter": "B",
+          "text": "The encryption-at-rest configuration for a storage bucket"
+        },
+        {
+          "letter": "C",
+          "text": "The UML deployment diagram of a production cluster"
+        },
+        {
+          "letter": "D",
+          "text": "A technology-neutral representation of entities, attributes and relationships"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A logical model captures what the data means — entities, attributes, relationships, cardinalities — independently of the DBMS chosen. It sits between the conceptual (very high level, business terms only) and the physical (DBMS-specific structures, indexes, storage). Separating the three is a classical Zachman / DAMA practice.\n· A: Those are physical-model concerns — choices tied to a specific DBMS product. The logical model precedes physical implementation.\n· B: Encryption-at-rest is a data-security control, not a modelling concept.\n· C: Deployment diagrams belong in infrastructure architecture, not data modelling.",
+      "explanations": {
+        "A": "Those are physical-model concerns — choices tied to a specific DBMS product. The logical model precedes physical implementation.",
+        "B": "Encryption-at-rest is a data-security control, not a modelling concept.",
+        "C": "Deployment diagrams belong in infrastructure architecture, not data modelling.",
+        "D": "Correct. A logical model captures what the data means — entities, attributes, relationships, cardinalities — independently of the DBMS chosen. It sits between the conceptual (very high level, business terms only) and the physical (DBMS-specific structures, indexes, storage). Separating the three is a classical Zachman / DAMA practice."
+      }
+    },
+    {
+      "id": "epso_duty_049",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 2",
+      "topic": "data_architecture",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "OLTP vs OLAP",
+      "figures": [],
+      "question": "A system supporting thousands of short, concurrent write transactions per second for an e-banking application is best classified as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "OLAP — online analytical processing"
+        },
+        {
+          "letter": "B",
+          "text": "Data mart for quarterly reporting"
+        },
+        {
+          "letter": "C",
+          "text": "HDFS — Hadoop distributed file system"
+        },
+        {
+          "letter": "D",
+          "text": "OLTP — online transaction processing"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. OLTP systems (PostgreSQL, MySQL, Oracle, SQL Server) are built for many short, ACID transactions — row-oriented storage, tight locking, low-latency commits. E-banking, e-commerce checkout, reservation systems are textbook OLTP workloads.\n· A: OLAP is optimised for long, read-heavy analytical queries over historical data — columnar storage, star schemas. Concurrent small writes would be painful.\n· B: A data mart is a subject-oriented slice of a warehouse, used for reporting — read-heavy, not write-heavy.\n· C: HDFS is a batch-oriented file system for large-scale analytics, not a transactional database.",
+      "explanations": {
+        "A": "OLAP is optimised for long, read-heavy analytical queries over historical data — columnar storage, star schemas. Concurrent small writes would be painful.",
+        "B": "A data mart is a subject-oriented slice of a warehouse, used for reporting — read-heavy, not write-heavy.",
+        "C": "HDFS is a batch-oriented file system for large-scale analytics, not a transactional database.",
+        "D": "Correct. OLTP systems (PostgreSQL, MySQL, Oracle, SQL Server) are built for many short, ACID transactions — row-oriented storage, tight locking, low-latency commits. E-banking, e-commerce checkout, reservation systems are textbook OLTP workloads."
+      }
+    },
+    {
+      "id": "epso_duty_050",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 3",
+      "topic": "data_architecture",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Semantic interoperability",
+      "figures": [],
+      "question": "Two EU public administrations exchange documents where 'customer' means different things in each context. Which EIF layer must they reconcile to achieve semantic interoperability?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Legal"
+        },
+        {
+          "letter": "B",
+          "text": "Organisational"
+        },
+        {
+          "letter": "C",
+          "text": "Semantic"
+        },
+        {
+          "letter": "D",
+          "text": "Technical"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.\n· A: Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.\n· B: Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.\n· D: Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean.",
+      "explanations": {
+        "A": "Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.",
+        "B": "Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.",
+        "C": "Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.",
+        "D": "Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean."
+      }
+    },
+    {
+      "id": "epso_duty_051",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 4",
+      "topic": "data_architecture",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data mesh",
+      "figures": [],
+      "question": "In a 'data mesh' architecture, which of the following is a defining principle?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A single centralised team owns all enterprise data"
+        },
+        {
+          "letter": "B",
+          "text": "All data must be stored in a single relational warehouse"
+        },
+        {
+          "letter": "C",
+          "text": "Domain-oriented decentralised ownership with data treated as a product"
+        },
+        {
+          "letter": "D",
+          "text": "No governance is applied; teams choose their own tools freely"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Data mesh (Zhamak Dehghani, 2019) rests on four principles: domain-oriented decentralised ownership, data-as-a-product, self-serve data platform, and federated computational governance. Each domain owns and publishes its data products with clear SLAs, documentation and contracts, while a shared platform and global policies keep interoperability and compliance intact.\n· A: Centralised ownership is the antipattern the mesh tries to fix. A central platform team creates bottlenecks; domains can't scale.\n· B: A single warehouse is orthogonal to — and often at odds with — mesh thinking. Mesh is about distributed ownership, not a single store.\n· D: Mesh explicitly requires federated computational governance. 'No governance' is not mesh; it's chaos.",
+      "explanations": {
+        "A": "Centralised ownership is the antipattern the mesh tries to fix. A central platform team creates bottlenecks; domains can't scale.",
+        "B": "A single warehouse is orthogonal to — and often at odds with — mesh thinking. Mesh is about distributed ownership, not a single store.",
+        "C": "Correct. Data mesh (Zhamak Dehghani, 2019) rests on four principles: domain-oriented decentralised ownership, data-as-a-product, self-serve data platform, and federated computational governance. Each domain owns and publishes its data products with clear SLAs, documentation and contracts, while a shared platform and global policies keep interoperability and compliance intact.",
+        "D": "Mesh explicitly requires federated computational governance. 'No governance' is not mesh; it's chaos."
+      }
+    },
+    {
+      "id": "epso_duty_052",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 5",
+      "topic": "data_architecture",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Core Vocabularies",
+      "figures": [],
+      "question": "EU 'Core Vocabularies' (Core Person, Core Business, Core Location, Core Public Service) are maintained by the SEMIC initiative to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Provide a minimum set of reusable, simplified, extensible data models for cross-border public services"
+        },
+        {
+          "letter": "B",
+          "text": "Serve as the legal basis for cross-border transfers of personal data"
+        },
+        {
+          "letter": "C",
+          "text": "Replace the DCAT-AP application profile on data.europa.eu"
+        },
+        {
+          "letter": "D",
+          "text": "Act as the official EU translation memory"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. SEMIC's Core Vocabularies are minimal, reusable data models for key public-sector concepts — Person, Business, Location, Public Service. They reduce semantic drift across administrations and are referenced by the Interoperable Europe Act ecosystem of reusable building blocks.\n· B: Legal bases for transfers come from GDPR Chapter V (adequacy, SCCs, BCRs) — not vocabularies.\n· C: DCAT-AP and Core Vocabularies are complementary: DCAT-AP describes datasets; Core Vocabularies describe the real-world entities those datasets refer to.\n· D: The EU translation memory is Euramis — nothing to do with SEMIC Core Vocabularies.",
+      "explanations": {
+        "A": "Correct. SEMIC's Core Vocabularies are minimal, reusable data models for key public-sector concepts — Person, Business, Location, Public Service. They reduce semantic drift across administrations and are referenced by the Interoperable Europe Act ecosystem of reusable building blocks.",
+        "B": "Legal bases for transfers come from GDPR Chapter V (adequacy, SCCs, BCRs) — not vocabularies.",
+        "C": "DCAT-AP and Core Vocabularies are complementary: DCAT-AP describes datasets; Core Vocabularies describe the real-world entities those datasets refer to.",
+        "D": "The EU translation memory is Euramis — nothing to do with SEMIC Core Vocabularies."
+      }
+    },
+    {
+      "id": "epso_duty_053",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 6",
+      "topic": "data_architecture",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Normalisation",
+      "figures": [],
+      "question": "In relational design, the third normal form (3NF) aims to eliminate:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Primary keys"
+        },
+        {
+          "letter": "B",
+          "text": "Any form of indexing"
+        },
+        {
+          "letter": "C",
+          "text": "Foreign-key constraints"
+        },
+        {
+          "letter": "D",
+          "text": "Transitive dependencies between non-key attributes"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. 3NF requires the table to be in 2NF and that every non-key attribute depend on the key, the whole key, and nothing but the key (Codd's pithy summary). Transitive dependencies — where a non-key attribute depends on another non-key attribute — are removed by splitting the table.\n· A: Primary keys are essential to normalisation, not the thing being eliminated. A table without a primary key isn't even in 1NF in the modern reading.\n· B: Indexing is a physical optimisation, orthogonal to normalisation.\n· C: Foreign keys enforce referential integrity between normalised tables; they support normalisation rather than contradict it.",
+      "explanations": {
+        "A": "Primary keys are essential to normalisation, not the thing being eliminated. A table without a primary key isn't even in 1NF in the modern reading.",
+        "B": "Indexing is a physical optimisation, orthogonal to normalisation.",
+        "C": "Foreign keys enforce referential integrity between normalised tables; they support normalisation rather than contradict it.",
+        "D": "Correct. 3NF requires the table to be in 2NF and that every non-key attribute depend on the key, the whole key, and nothing but the key (Codd's pithy summary). Transitive dependencies — where a non-key attribute depends on another non-key attribute — are removed by splitting the table."
+      }
+    },
+    {
+      "id": "epso_duty_054",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 7",
+      "topic": "data_architecture",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Star vs snowflake",
+      "figures": [],
+      "question": "A dimensional-modelling team chooses a 'star schema' over a 'snowflake schema' primarily because:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Star schemas normalise dimension tables to reduce storage"
+        },
+        {
+          "letter": "B",
+          "text": "Snowflake schemas are only legal for government data"
+        },
+        {
+          "letter": "C",
+          "text": "Star schemas keep dimensions denormalised, making BI queries simpler and faster"
+        },
+        {
+          "letter": "D",
+          "text": "Snowflake is a file format, not a schema design"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. A star schema has a central fact table surrounded by denormalised dimension tables — simpler joins, faster BI queries, easier for business users to understand. Snowflake schemas normalise dimensions (e.g. splitting 'Product → Category → Department'), saving storage but adding joins that slow typical reporting queries.\n· A: It's the opposite. Snowflake schemas normalise dimensions into multiple related tables. Stars keep them flat.\n· B: Nothing in data law constrains schema design to stars or snowflakes.\n· D: Snowflake is the name of both a dimensional design pattern and a cloud data warehouse product. The question is about the schema pattern.",
+      "explanations": {
+        "A": "It's the opposite. Snowflake schemas normalise dimensions into multiple related tables. Stars keep them flat.",
+        "B": "Nothing in data law constrains schema design to stars or snowflakes.",
+        "C": "Correct. A star schema has a central fact table surrounded by denormalised dimension tables — simpler joins, faster BI queries, easier for business users to understand. Snowflake schemas normalise dimensions (e.g. splitting 'Product → Category → Department'), saving storage but adding joins that slow typical reporting queries.",
+        "D": "Snowflake is the name of both a dimensional design pattern and a cloud data warehouse product. The question is about the schema pattern."
+      }
+    },
+    {
+      "id": "epso_duty_055",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 8",
+      "topic": "data_architecture",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Event-driven architecture",
+      "figures": [],
+      "question": "In an event-driven architecture using Apache Kafka, a consumer 'replays' events by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Deleting the topic and re-producing from the source"
+        },
+        {
+          "letter": "B",
+          "text": "Resetting its offset on the relevant partitions to an earlier position"
+        },
+        {
+          "letter": "C",
+          "text": "Requesting a new stream from the cluster administrator"
+        },
+        {
+          "letter": "D",
+          "text": "Creating a new broker in the cluster"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Kafka stores events in append-only partitioned logs and tracks each consumer's position as an 'offset'. To replay, a consumer commits (or seeks to) an earlier offset and re-reads the log. This makes Kafka ideal for event sourcing and for reprocessing after a bug fix — no source system needs to be touched.\n· A: Deleting and re-producing is destructive and not how replay works. Kafka retains events for a configurable period; replay is just a matter of reading old offsets again.\n· C: There is no 'request a new stream' operation — consumers pull directly from partitions via offsets.\n· D: Adding brokers scales capacity; it has nothing to do with replay.",
+      "explanations": {
+        "A": "Deleting and re-producing is destructive and not how replay works. Kafka retains events for a configurable period; replay is just a matter of reading old offsets again.",
+        "B": "Correct. Kafka stores events in append-only partitioned logs and tracks each consumer's position as an 'offset'. To replay, a consumer commits (or seeks to) an earlier offset and re-reads the log. This makes Kafka ideal for event sourcing and for reprocessing after a bug fix — no source system needs to be touched.",
+        "C": "There is no 'request a new stream' operation — consumers pull directly from partitions via offsets.",
+        "D": "Adding brokers scales capacity; it has nothing to do with replay."
+      }
+    },
+    {
+      "id": "epso_duty_056",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 9",
+      "topic": "data_architecture",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "CAP theorem",
+      "figures": [],
+      "question": "Under the CAP theorem, in the presence of a network partition a distributed system must choose between:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cost and Performance"
+        },
+        {
+          "letter": "B",
+          "text": "Compression and Parallelism"
+        },
+        {
+          "letter": "C",
+          "text": "Clarity and Portability"
+        },
+        {
+          "letter": "D",
+          "text": "Consistency and Availability"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Brewer's CAP theorem states that a distributed data system can provide at most two of Consistency, Availability and Partition-tolerance. Because partitions (network failures) are a fact of life, real designs must choose C or A during a partition. CP systems prefer correctness (reject writes / reads that might be stale); AP systems prefer responsiveness (serve possibly stale data).\n· A: CAP concerns correctness and responsiveness trade-offs, not cost optimisation.\n· B: Compression and parallelism are performance techniques, not the CAP trade-off.\n· C: Not CAP letters — these sound plausible but don't correspond.",
+      "explanations": {
+        "A": "CAP concerns correctness and responsiveness trade-offs, not cost optimisation.",
+        "B": "Compression and parallelism are performance techniques, not the CAP trade-off.",
+        "C": "Not CAP letters — these sound plausible but don't correspond.",
+        "D": "Correct. Brewer's CAP theorem states that a distributed data system can provide at most two of Consistency, Availability and Partition-tolerance. Because partitions (network failures) are a fact of life, real designs must choose C or A during a partition. CP systems prefer correctness (reject writes / reads that might be stale); AP systems prefer responsiveness (serve possibly stale data)."
+      }
+    },
+    {
+      "id": "epso_duty_057",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 10",
+      "topic": "data_architecture",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Reference architecture",
+      "figures": [],
+      "question": "A 'reference architecture' for a data platform is primarily:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A deployed production system"
+        },
+        {
+          "letter": "B",
+          "text": "A single vendor's proprietary product catalogue"
+        },
+        {
+          "letter": "C",
+          "text": "A standard set of components, patterns and principles to guide the design of concrete systems"
+        },
+        {
+          "letter": "D",
+          "text": "A detailed cost estimate per cloud region"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. A reference architecture is a blueprint — named components (ingest, storage, processing, serving, catalogue, governance), interaction patterns, technology-agnostic principles. Teams use it to avoid reinventing the wheel and to keep designs consistent across projects. The EU Big-Data Value Reference Model and DAMA's architecture area are good examples.\n· A: Reference architectures describe the template; deployed systems are instances built from the template.\n· B: A vendor catalogue maps onto an architecture; it isn't one.\n· D: Cost estimates support a business case. They aren't the architectural design.",
+      "explanations": {
+        "A": "Reference architectures describe the template; deployed systems are instances built from the template.",
+        "B": "A vendor catalogue maps onto an architecture; it isn't one.",
+        "C": "Correct. A reference architecture is a blueprint — named components (ingest, storage, processing, serving, catalogue, governance), interaction patterns, technology-agnostic principles. Teams use it to avoid reinventing the wheel and to keep designs consistent across projects. The EU Big-Data Value Reference Model and DAMA's architecture area are good examples.",
+        "D": "Cost estimates support a business case. They aren't the architectural design."
+      }
+    },
+    {
+      "id": "epso_duty_058",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 1",
+      "topic": "data_governance",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Governance definition",
+      "figures": [],
+      "question": "Which activity best exemplifies data governance as defined by DAMA-DMBOK?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Writing SQL transformations in dbt"
+        },
+        {
+          "letter": "B",
+          "text": "Defining who is accountable for a data domain and under which policies it may be used"
+        },
+        {
+          "letter": "C",
+          "text": "Configuring a Kafka cluster for high throughput"
+        },
+        {
+          "letter": "D",
+          "text": "Optimising a neural-network hyperparameter"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.\n· A: Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.\n· C: Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.\n· D: Hyperparameter tuning is ML / data science — governed by policy but not a governance activity.",
+      "explanations": {
+        "A": "Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.",
+        "B": "Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.",
+        "C": "Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.",
+        "D": "Hyperparameter tuning is ML / data science — governed by policy but not a governance activity."
+      }
+    },
+    {
+      "id": "epso_duty_059",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 2",
+      "topic": "data_governance",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DAMA maturity",
+      "figures": [],
+      "question": "A governance team assesses its maturity using the DAMA-DMBOK / CMMI-DM scale. A level associated with 'defined processes documented and consistently used across the enterprise' is best described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Initial / ad hoc"
+        },
+        {
+          "letter": "B",
+          "text": "Repeatable but undocumented"
+        },
+        {
+          "letter": "C",
+          "text": "Defined (standardised and institutionalised)"
+        },
+        {
+          "letter": "D",
+          "text": "Optimising (continuous improvement with measurement)"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. At the 'Defined' level (commonly level 3), processes are standardised, documented and institutionalised across the enterprise. Everyone follows the same playbook even if metrics aren't yet tracked.\n· A: Initial / ad hoc means processes exist only in individuals' heads — not documented, not consistent. That's level 1.\n· B: Repeatable implies processes recur but are not formally documented or enterprise-wide. That's level 2.\n· D: Optimising (level 5) adds quantitative management and continuous improvement on top of 'Managed' (level 4). The question describes documented + consistent, which is one step below.",
+      "explanations": {
+        "A": "Initial / ad hoc means processes exist only in individuals' heads — not documented, not consistent. That's level 1.",
+        "B": "Repeatable implies processes recur but are not formally documented or enterprise-wide. That's level 2.",
+        "C": "Correct. At the 'Defined' level (commonly level 3), processes are standardised, documented and institutionalised across the enterprise. Everyone follows the same playbook even if metrics aren't yet tracked.",
+        "D": "Optimising (level 5) adds quantitative management and continuous improvement on top of 'Managed' (level 4). The question describes documented + consistent, which is one step below."
+      }
+    },
+    {
+      "id": "epso_duty_060",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 3",
+      "topic": "data_governance",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data Steward",
+      "figures": [],
+      "question": "A 'Data Steward' in a governance programme is typically responsible for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Approving budgets for data platform investments"
+        },
+        {
+          "letter": "B",
+          "text": "Deciding whether GDPR applies to the organisation"
+        },
+        {
+          "letter": "C",
+          "text": "Backing up and restoring data in production"
+        },
+        {
+          "letter": "D",
+          "text": "Executing data-quality rules, maintaining business definitions and resolving data issues in a domain"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper.\n· A: Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.\n· B: Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.\n· C: Backup and restore are Custodian / IT-operations tasks.",
+      "explanations": {
+        "A": "Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.",
+        "B": "Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.",
+        "C": "Backup and restore are Custodian / IT-operations tasks.",
+        "D": "Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper."
+      }
+    },
+    {
+      "id": "epso_duty_061",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 4",
+      "topic": "data_governance",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DPO independence",
+      "figures": [],
+      "question": "Under Art. 38 GDPR (and mirrored in Reg. 2018/1725), the DPO must:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Report to the line manager for daily tasks but not on compliance"
+        },
+        {
+          "letter": "B",
+          "text": "Be independent and report to the highest management level without receiving instructions on tasks"
+        },
+        {
+          "letter": "C",
+          "text": "Be a member of the executive board"
+        },
+        {
+          "letter": "D",
+          "text": "Hold Power of Attorney for all controller decisions"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.\n· A: Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).\n· C: The DPO is not required to be on the executive board — only to have direct access to it.\n· D: The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller.",
+      "explanations": {
+        "A": "Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).",
+        "B": "Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.",
+        "C": "The DPO is not required to be on the executive board — only to have direct access to it.",
+        "D": "The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller."
+      }
+    },
+    {
+      "id": "epso_duty_062",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 5",
+      "topic": "data_governance",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Records of Processing",
+      "figures": [],
+      "question": "Art. 30 GDPR (and Art. 31 Reg. 2018/1725) require maintaining 'Records of Processing Activities' (RoPA). For controllers, these records must include:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Purposes of processing, categories of data subjects and data, recipients, transfers to third countries where applicable, retention periods and a general description of security measures"
+        },
+        {
+          "letter": "B",
+          "text": "Only the names of data subjects who consented"
+        },
+        {
+          "letter": "C",
+          "text": "The exact SQL queries used in the controller's databases"
+        },
+        {
+          "letter": "D",
+          "text": "A daily log of every read operation on personal data"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).\n· B: Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.\n· C: SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.\n· D: A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction.",
+      "explanations": {
+        "A": "Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).",
+        "B": "Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.",
+        "C": "SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.",
+        "D": "A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction."
+      }
+    },
+    {
+      "id": "epso_duty_063",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 6",
+      "topic": "data_governance",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Business glossary",
+      "figures": [],
+      "question": "A business glossary in a data-governance programme primarily provides:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Physical table definitions and index types"
+        },
+        {
+          "letter": "B",
+          "text": "A list of all data subjects with open GDPR requests"
+        },
+        {
+          "letter": "C",
+          "text": "The encryption keys used for at-rest storage"
+        },
+        {
+          "letter": "D",
+          "text": "Agreed business definitions of terms and KPIs across the organisation"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem.\n· A: Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.\n· B: DSAR tracking is handled by a rights-management / compliance tool, not a glossary.\n· C: Key management belongs in security / HSM infrastructure, not in a glossary.",
+      "explanations": {
+        "A": "Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.",
+        "B": "DSAR tracking is handled by a rights-management / compliance tool, not a glossary.",
+        "C": "Key management belongs in security / HSM infrastructure, not in a glossary.",
+        "D": "Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem."
+      }
+    },
+    {
+      "id": "epso_duty_064",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 7",
+      "topic": "data_governance",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Accountability",
+      "figures": [],
+      "question": "The GDPR principle of 'accountability' (Art. 5(2)) requires the controller to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Be able to demonstrate compliance with the data-protection principles"
+        },
+        {
+          "letter": "B",
+          "text": "Pay administrative fines before processing begins"
+        },
+        {
+          "letter": "C",
+          "text": "Publish all processing activities publicly"
+        },
+        {
+          "letter": "D",
+          "text": "Report every processing activity to the Court of Justice"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Art. 5(2) adds 'accountability' on top of the six substantive principles (lawfulness/fairness/transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity/confidentiality). Controllers must not only comply — they must be able to demonstrate compliance, e.g. through RoPA, DPIAs, policies, training records, audit trails.\n· B: Fines are enforcement actions, not a precondition for processing.\n· C: Publicity is not required — RoPA is internal (though DPAs can request it). Privacy notices (Arts. 13–14) are the public-facing transparency instrument.\n· D: The CJEU does not receive operational reports from controllers.",
+      "explanations": {
+        "A": "Correct. Art. 5(2) adds 'accountability' on top of the six substantive principles (lawfulness/fairness/transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity/confidentiality). Controllers must not only comply — they must be able to demonstrate compliance, e.g. through RoPA, DPIAs, policies, training records, audit trails.",
+        "B": "Fines are enforcement actions, not a precondition for processing.",
+        "C": "Publicity is not required — RoPA is internal (though DPAs can request it). Privacy notices (Arts. 13–14) are the public-facing transparency instrument.",
+        "D": "The CJEU does not receive operational reports from controllers."
+      }
+    },
+    {
+      "id": "epso_duty_065",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 8",
+      "topic": "data_governance",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Joint controllership Art. 26",
+      "figures": [],
+      "question": "Two EU agencies jointly determine the purposes and means of a shared processing activity. They are:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Controller and processor"
+        },
+        {
+          "letter": "B",
+          "text": "Joint controllers, with their arrangement spelled out in a transparent agreement"
+        },
+        {
+          "letter": "C",
+          "text": "Outside the scope of Reg. 2018/1725"
+        },
+        {
+          "letter": "D",
+          "text": "Automatically subject to GDPR instead of Reg. 2018/1725"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Where two or more controllers jointly determine purposes and means, they are joint controllers (Art. 26 GDPR; Art. 28 Reg. 2018/1725). Their respective responsibilities — especially regarding data-subject rights and transparency — must be set out in an arrangement, with the essence made available to data subjects. The CJEU has applied this broadly (Fashion ID, Jehovah's Witnesses, Wirtschaftsakademie).\n· A: Controller + processor requires one entity to instruct the other. Joint determination of purposes and means is structurally different.\n· C: Processing by EU bodies falls under Reg. 2018/1725 regardless of whether it is solo or joint.\n· D: GDPR doesn't apply to EU institutions — Art. 2 GDPR carves them out. 2018/1725 is the applicable regulation whether control is solo or joint.",
+      "explanations": {
+        "A": "Controller + processor requires one entity to instruct the other. Joint determination of purposes and means is structurally different.",
+        "B": "Correct. Where two or more controllers jointly determine purposes and means, they are joint controllers (Art. 26 GDPR; Art. 28 Reg. 2018/1725). Their respective responsibilities — especially regarding data-subject rights and transparency — must be set out in an arrangement, with the essence made available to data subjects. The CJEU has applied this broadly (Fashion ID, Jehovah's Witnesses, Wirtschaftsakademie).",
+        "C": "Processing by EU bodies falls under Reg. 2018/1725 regardless of whether it is solo or joint.",
+        "D": "GDPR doesn't apply to EU institutions — Art. 2 GDPR carves them out. 2018/1725 is the applicable regulation whether control is solo or joint."
+      }
+    },
+    {
+      "id": "epso_duty_066",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 9",
+      "topic": "data_governance",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Privacy by design",
+      "figures": [],
+      "question": "Under Art. 25 GDPR ('Data protection by design and by default'), the controller must implement:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Appropriate technical and organisational measures at the time of determining the means of processing and at the time of processing itself"
+        },
+        {
+          "letter": "B",
+          "text": "Encryption of all personal data in all circumstances"
+        },
+        {
+          "letter": "C",
+          "text": "A DPO regardless of scale, complexity or risk"
+        },
+        {
+          "letter": "D",
+          "text": "Open publication of all processing code"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.\n· B: Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.\n· C: DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.\n· D: Open-source publication is not a GDPR obligation; it may even conflict with security requirements.",
+      "explanations": {
+        "A": "Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.",
+        "B": "Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.",
+        "C": "DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.",
+        "D": "Open-source publication is not a GDPR obligation; it may even conflict with security requirements."
+      }
+    },
+    {
+      "id": "epso_duty_067",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 10",
+      "topic": "data_governance",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "EDPB role",
+      "figures": [],
+      "question": "The European Data Protection Board (EDPB) was established to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Supervise EU institutions instead of the EDPS"
+        },
+        {
+          "letter": "B",
+          "text": "Ensure consistent application of GDPR across Member States, issue guidelines and decide binding disputes between national DPAs"
+        },
+        {
+          "letter": "C",
+          "text": "Draft EU data-market strategies"
+        },
+        {
+          "letter": "D",
+          "text": "Adjudicate criminal cases related to data breaches"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Under GDPR Chapter VII, the EDPB is composed of the heads of each national DPA plus the EDPS. It issues guidelines, recommendations and best practices, and decides binding disputes under the one-stop-shop consistency mechanism (Art. 65). Its guidelines, while not legally binding, are highly authoritative in practice.\n· A: The EDPS supervises EU institutions under Reg. 2018/1725. The EDPB coordinates national DPAs under GDPR.\n· C: Strategy documents come from the Commission, not the EDPB.\n· D: Criminal adjudication is for Member-State courts (and, via preliminary rulings, the CJEU). The EDPB is an administrative body.",
+      "explanations": {
+        "A": "The EDPS supervises EU institutions under Reg. 2018/1725. The EDPB coordinates national DPAs under GDPR.",
+        "B": "Correct. Under GDPR Chapter VII, the EDPB is composed of the heads of each national DPA plus the EDPS. It issues guidelines, recommendations and best practices, and decides binding disputes under the one-stop-shop consistency mechanism (Art. 65). Its guidelines, while not legally binding, are highly authoritative in practice.",
+        "C": "Strategy documents come from the Commission, not the EDPB.",
+        "D": "Criminal adjudication is for Member-State courts (and, via preliminary rulings, the CJEU). The EDPB is an administrative body."
+      }
+    },
+    {
+      "id": "epso_duty_068",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 1",
+      "topic": "data_policy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data lifecycle",
+      "figures": [],
+      "question": "Which of the following best represents the stages of a classical data lifecycle?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Prediction → Visualisation → Compression → Deletion"
+        },
+        {
+          "letter": "B",
+          "text": "Ingest → Cache → Display → Log"
+        },
+        {
+          "letter": "C",
+          "text": "Train → Validate → Deploy → Monitor"
+        },
+        {
+          "letter": "D",
+          "text": "Create / acquire → Store → Use → Archive → Destroy"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A standard lifecycle moves through acquisition (creation / ingestion from sources), storage, use (analysis, integration, sharing), archival (reduced-access retention), and destruction (secure deletion once retention ends). Policy attaches retention rules, quality rules and access rules to each stage. Storage-limitation (GDPR Art. 5(1)(e)) makes the end of the lifecycle legally binding for personal data.\n· A: Those are ML / visualisation steps, not a data-lifecycle model.\n· B: Those are application / observability terms, not the canonical lifecycle stages.\n· C: That describes an ML model lifecycle, not a data lifecycle.",
+      "explanations": {
+        "A": "Those are ML / visualisation steps, not a data-lifecycle model.",
+        "B": "Those are application / observability terms, not the canonical lifecycle stages.",
+        "C": "That describes an ML model lifecycle, not a data lifecycle.",
+        "D": "Correct. A standard lifecycle moves through acquisition (creation / ingestion from sources), storage, use (analysis, integration, sharing), archival (reduced-access retention), and destruction (secure deletion once retention ends). Policy attaches retention rules, quality rules and access rules to each stage. Storage-limitation (GDPR Art. 5(1)(e)) makes the end of the lifecycle legally binding for personal data."
+      }
+    },
+    {
+      "id": "epso_duty_069",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 2",
+      "topic": "data_policy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data spaces",
+      "figures": [],
+      "question": "The 14 Common European Data Spaces announced in the 2020 European Strategy for Data are:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Regulations directly applicable to all Member States"
+        },
+        {
+          "letter": "B",
+          "text": "Private blockchain networks"
+        },
+        {
+          "letter": "C",
+          "text": "A single cloud service operated by the Commission"
+        },
+        {
+          "letter": "D",
+          "text": "Sectoral initiatives to pool and share data within specific domains (health, agriculture, energy, mobility …)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre).\n· A: Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.\n· B: Data spaces are technology-neutral. Some pilots use blockchain; most do not.\n· C: Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
+      "explanations": {
+        "A": "Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.",
+        "B": "Data spaces are technology-neutral. Some pilots use blockchain; most do not.",
+        "C": "Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
+        "D": "Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre)."
+      }
+    },
+    {
+      "id": "epso_duty_070",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 3",
+      "topic": "data_policy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data classification",
+      "figures": [],
+      "question": "A public administration categorises datasets as 'public · internal · confidential · restricted'. This practice is called:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data normalisation"
+        },
+        {
+          "letter": "B",
+          "text": "Data anonymisation"
+        },
+        {
+          "letter": "C",
+          "text": "Data lineage"
+        },
+        {
+          "letter": "D",
+          "text": "Data classification"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies.\n· A: Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.\n· B: Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.\n· C: Lineage traces data from origin through transformations to destinations. Different concept.",
+      "explanations": {
+        "A": "Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.",
+        "B": "Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.",
+        "C": "Lineage traces data from origin through transformations to destinations. Different concept.",
+        "D": "Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies."
+      }
+    },
+    {
+      "id": "epso_duty_071",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 4",
+      "topic": "data_policy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Retention policy",
+      "figures": [],
+      "question": "GDPR Art. 5(1)(e) ('storage limitation') requires that personal data be kept:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Indefinitely, to ensure future auditability"
+        },
+        {
+          "letter": "B",
+          "text": "For no longer than necessary for the purposes for which they are processed"
+        },
+        {
+          "letter": "C",
+          "text": "For exactly seven years regardless of purpose"
+        },
+        {
+          "letter": "D",
+          "text": "Forever if the controller obtained one-time consent"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Storage limitation is one of the six substantive GDPR principles: personal data kept in a form permitting identification must be retained only for as long as necessary for the purposes. Longer storage is allowed only for archiving in the public interest, scientific/historical research or statistical purposes, subject to appropriate safeguards (Art. 89).\n· A: Indefinite retention contradicts storage limitation. Audit retention must itself have a defined period justified by a legal basis.\n· C: Seven years is a common national bookkeeping rule — not a GDPR rule. Each purpose demands its own assessment.\n· D: Consent does not override retention limits. The purpose still bounds how long data can be kept.",
+      "explanations": {
+        "A": "Indefinite retention contradicts storage limitation. Audit retention must itself have a defined period justified by a legal basis.",
+        "B": "Correct. Storage limitation is one of the six substantive GDPR principles: personal data kept in a form permitting identification must be retained only for as long as necessary for the purposes. Longer storage is allowed only for archiving in the public interest, scientific/historical research or statistical purposes, subject to appropriate safeguards (Art. 89).",
+        "C": "Seven years is a common national bookkeeping rule — not a GDPR rule. Each purpose demands its own assessment.",
+        "D": "Consent does not override retention limits. The purpose still bounds how long data can be kept."
+      }
+    },
+    {
+      "id": "epso_duty_072",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 5",
+      "topic": "data_policy",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Data sovereignty vs data localisation",
+      "figures": [],
+      "question": "The Data Act (Art. 32) addresses international governmental access to non-personal data held in the EU. Its core rule is that cloud / data-processing providers must:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Always comply with any foreign court order"
+        },
+        {
+          "letter": "B",
+          "text": "Notify the European Commission before each routine customer request"
+        },
+        {
+          "letter": "C",
+          "text": "Store all data exclusively in a single Member State"
+        },
+        {
+          "letter": "D",
+          "text": "Prevent or challenge third-country governmental access where it would conflict with Union or Member-State law"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Art. 32 of the Data Act requires providers of data-processing services to take 'all adequate technical, organisational and legal measures' to prevent international governmental access to non-personal data that would conflict with Union or Member-State law. Compliance with foreign court or administrative orders is only possible where an international agreement exists, or under narrowly defined conditions.\n· A: Automatic compliance with any foreign order would ignore the EU legal framework and the Art. 32 safeguards.\n· B: No Commission pre-notification is required for ordinary customer requests; Art. 32 concerns foreign-government access specifically.\n· C: The Data Act does not impose single-Member-State localisation. EU data may be stored and processed across the Union and beyond, subject to safeguards.",
+      "explanations": {
+        "A": "Automatic compliance with any foreign order would ignore the EU legal framework and the Art. 32 safeguards.",
+        "B": "No Commission pre-notification is required for ordinary customer requests; Art. 32 concerns foreign-government access specifically.",
+        "C": "The Data Act does not impose single-Member-State localisation. EU data may be stored and processed across the Union and beyond, subject to safeguards.",
+        "D": "Correct. Art. 32 of the Data Act requires providers of data-processing services to take 'all adequate technical, organisational and legal measures' to prevent international governmental access to non-personal data that would conflict with Union or Member-State law. Compliance with foreign court or administrative orders is only possible where an international agreement exists, or under narrowly defined conditions."
+      }
+    },
+    {
+      "id": "epso_duty_073",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 6",
+      "topic": "data_policy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DSSC",
+      "figures": [],
+      "question": "The Data Spaces Support Centre (DSSC) is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A regulatory body with enforcement powers"
+        },
+        {
+          "letter": "B",
+          "text": "An EU-funded initiative providing technical, legal and organisational guidance to accelerate Common European Data Spaces"
+        },
+        {
+          "letter": "C",
+          "text": "A national certification body under the NIS2 Directive"
+        },
+        {
+          "letter": "D",
+          "text": "A private data broker recognised under the DGA"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.\n· A: The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).\n· C: NIS2 certification bodies are national and focused on cybersecurity, not data spaces.\n· D: DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker.",
+      "explanations": {
+        "A": "The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).",
+        "B": "Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.",
+        "C": "NIS2 certification bodies are national and focused on cybersecurity, not data spaces.",
+        "D": "DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker."
+      }
+    },
+    {
+      "id": "epso_duty_074",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 7",
+      "topic": "data_policy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data strategy vs data policy",
+      "figures": [],
+      "question": "Which statement best distinguishes a data strategy from a data policy?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A strategy sets direction and priorities; a policy translates direction into binding rules for specific activities"
+        },
+        {
+          "letter": "B",
+          "text": "They are synonyms"
+        },
+        {
+          "letter": "C",
+          "text": "A strategy is signed by the DPO; a policy by the CDO"
+        },
+        {
+          "letter": "D",
+          "text": "A policy is a multi-year plan; a strategy is a one-page rule"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.\n· B: They play different roles in the governance stack.\n· C: Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.\n· D: Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules.",
+      "explanations": {
+        "A": "Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.",
+        "B": "They play different roles in the governance stack.",
+        "C": "Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.",
+        "D": "Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules."
+      }
+    },
+    {
+      "id": "epso_duty_075",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 8",
+      "topic": "data_policy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Simpl",
+      "figures": [],
+      "question": "'Simpl', referenced in EU data-policy documents, is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A cryptocurrency launched by the Commission"
+        },
+        {
+          "letter": "B",
+          "text": "A national registry of data intermediaries"
+        },
+        {
+          "letter": "C",
+          "text": "A directive replacing the DGA"
+        },
+        {
+          "letter": "D",
+          "text": "An open-source smart middleware platform to federate EU data spaces and cloud-to-edge resources"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Simpl is an open-source, smart, federated middleware being developed by the Commission to interconnect participants in the Common European Data Spaces and enable cloud-to-edge data processing. It provides shared building blocks — identity, authorisation, interoperable connectors — that data spaces can plug into rather than each reinventing them.\n· A: Simpl has nothing to do with crypto or CBDC.\n· B: National intermediary registries fall under the DGA — not Simpl.\n· C: Nothing replaces the DGA; it is in force. Simpl is technical infrastructure, not a legal act.",
+      "explanations": {
+        "A": "Simpl has nothing to do with crypto or CBDC.",
+        "B": "National intermediary registries fall under the DGA — not Simpl.",
+        "C": "Nothing replaces the DGA; it is in force. Simpl is technical infrastructure, not a legal act.",
+        "D": "Correct. Simpl is an open-source, smart, federated middleware being developed by the Commission to interconnect participants in the Common European Data Spaces and enable cloud-to-edge data processing. It provides shared building blocks — identity, authorisation, interoperable connectors — that data spaces can plug into rather than each reinventing them."
+      }
+    },
+    {
+      "id": "epso_duty_076",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 9",
+      "topic": "data_policy",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Data spaces governance",
+      "figures": [],
+      "question": "A data-space design must deliver 'federated computational governance'. This concept primarily means:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Running all governance processes on a single shared database"
+        },
+        {
+          "letter": "B",
+          "text": "Delegating all governance to the Commission"
+        },
+        {
+          "letter": "C",
+          "text": "Global rules encoded as code and enforced automatically across distributed domain data products, while leaving domain-specific decisions to domain owners"
+        },
+        {
+          "letter": "D",
+          "text": "Removing all policies so that domains are free to decide"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.\n· A: Federation is the opposite of centralising everything in one database.\n· B: Delegation to the Commission would centralise authority and defeat the federation design.\n· D: No policies would eliminate trust and interoperability — data spaces would not function.",
+      "explanations": {
+        "A": "Federation is the opposite of centralising everything in one database.",
+        "B": "Delegation to the Commission would centralise authority and defeat the federation design.",
+        "C": "Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.",
+        "D": "No policies would eliminate trust and interoperability — data spaces would not function."
+      }
+    },
+    {
+      "id": "epso_duty_077",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Policy · 10",
+      "topic": "data_policy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "EU Digital Decade",
+      "figures": [],
+      "question": "The 'Digital Decade' policy programme aims to achieve EU digital targets by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "2026"
+        },
+        {
+          "letter": "B",
+          "text": "2050"
+        },
+        {
+          "letter": "C",
+          "text": "2040"
+        },
+        {
+          "letter": "D",
+          "text": "2030"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The 2030 Digital Decade Policy Programme (Decision (EU) 2022/2481) sets quantified targets for 2030 in four axes: skills, infrastructure, business digitalisation, and digitalisation of public services. Member States and the Commission track progress through annual reports and coordinated roadmaps. It is the overarching frame for EU digital policy (including data and AI).\n· A: 2026 is close — but that's not the Digital Decade horizon.\n· B: 2050 is the Union's climate-neutrality target, not the digital programme.\n· C: 2040 is a climate horizon, not a digital one.",
+      "explanations": {
+        "A": "2026 is close — but that's not the Digital Decade horizon.",
+        "B": "2050 is the Union's climate-neutrality target, not the digital programme.",
+        "C": "2040 is a climate horizon, not a digital one.",
+        "D": "Correct. The 2030 Digital Decade Policy Programme (Decision (EU) 2022/2481) sets quantified targets for 2030 in four axes: skills, infrastructure, business digitalisation, and digitalisation of public services. Member States and the Commission track progress through annual reports and coordinated roadmaps. It is the overarching frame for EU digital policy (including data and AI)."
+      }
+    },
+    {
+      "id": "epso_duty_078",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 2",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "REST",
+      "figures": [],
+      "question": "In a REST API exposing a list of employees, the HTTP verb used to retrieve an employee by ID is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "POST"
+        },
+        {
+          "letter": "B",
+          "text": "PATCH"
+        },
+        {
+          "letter": "C",
+          "text": "DELETE"
+        },
+        {
+          "letter": "D",
+          "text": "GET"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET.\n· A: POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.\n· B: PATCH applies a partial update. It's for modification, not retrieval.\n· C: DELETE removes the resource. It would not be used to retrieve.",
+      "explanations": {
+        "A": "POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.",
+        "B": "PATCH applies a partial update. It's for modification, not retrieval.",
+        "C": "DELETE removes the resource. It would not be used to retrieve.",
+        "D": "Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET."
+      }
+    },
+    {
+      "id": "epso_duty_079",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 3",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Batch vs streaming",
+      "figures": [],
+      "question": "Which is the defining characteristic of stream processing versus batch processing?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Stream processing operates on unbounded data in near-real time while batch operates on bounded, periodically scheduled data sets"
+        },
+        {
+          "letter": "B",
+          "text": "Stream processing operates on bounded, scheduled data sets while batch operates on unbounded data"
+        },
+        {
+          "letter": "C",
+          "text": "Stream processing always uses SQL; batch never does"
+        },
+        {
+          "letter": "D",
+          "text": "Batch processing is always faster than stream processing"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Stream processing treats data as an unbounded sequence of events arriving continuously, processed near-real-time with low latency (Kafka Streams, Flink, Spark Structured Streaming). Batch processes a bounded dataset collected over a window (hour, day) with higher latency but often simpler semantics. Modern engines unify both under the same API (e.g. Flink's unified batch/stream model).\n· B: Reversed — the definitions are swapped.\n· C: Both can use SQL — see Flink SQL, Spark SQL, ksqlDB.\n· D: Speed depends on metrics (throughput vs latency). Streaming typically has lower latency; batch can have higher throughput.",
+      "explanations": {
+        "A": "Correct. Stream processing treats data as an unbounded sequence of events arriving continuously, processed near-real-time with low latency (Kafka Streams, Flink, Spark Structured Streaming). Batch processes a bounded dataset collected over a window (hour, day) with higher latency but often simpler semantics. Modern engines unify both under the same API (e.g. Flink's unified batch/stream model).",
+        "B": "Reversed — the definitions are swapped.",
+        "C": "Both can use SQL — see Flink SQL, Spark SQL, ksqlDB.",
+        "D": "Speed depends on metrics (throughput vs latency). Streaming typically has lower latency; batch can have higher throughput."
+      }
+    },
+    {
+      "id": "epso_duty_080",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 4",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Kafka partitions",
+      "figures": [],
+      "question": "In Apache Kafka, partitions within a topic provide:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A mechanism to shard the topic for parallelism and to preserve ordering within each partition"
+        },
+        {
+          "letter": "B",
+          "text": "Automatic encryption-at-rest for each consumer"
+        },
+        {
+          "letter": "C",
+          "text": "A built-in schema registry"
+        },
+        {
+          "letter": "D",
+          "text": "Exactly-once delivery to every consumer by default"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Partitions are the unit of parallelism: consumers in a consumer group share partitions so throughput scales. Order is guaranteed within a partition (not across partitions). Producers typically choose partitions via a key hash so messages for the same key land in the same partition and keep order.\n· B: Encryption-at-rest is a storage-level concern, configured outside Kafka's partition semantics.\n· C: The schema registry is a separate component (Confluent Schema Registry, Apicurio) and not tied to partitions.\n· D: Exactly-once is available but requires transactional producers and careful consumer configuration — it's not the default.",
+      "explanations": {
+        "A": "Correct. Partitions are the unit of parallelism: consumers in a consumer group share partitions so throughput scales. Order is guaranteed within a partition (not across partitions). Producers typically choose partitions via a key hash so messages for the same key land in the same partition and keep order.",
+        "B": "Encryption-at-rest is a storage-level concern, configured outside Kafka's partition semantics.",
+        "C": "The schema registry is a separate component (Confluent Schema Registry, Apicurio) and not tied to partitions.",
+        "D": "Exactly-once is available but requires transactional producers and careful consumer configuration — it's not the default."
+      }
+    },
+    {
+      "id": "epso_duty_081",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 5",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Airflow DAG",
+      "figures": [],
+      "question": "Apache Airflow represents a scheduled data-processing workflow as a:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cyclic finite-state machine"
+        },
+        {
+          "letter": "B",
+          "text": "Directed Acyclic Graph (DAG) of tasks with dependencies"
+        },
+        {
+          "letter": "C",
+          "text": "Single monolithic SQL script"
+        },
+        {
+          "letter": "D",
+          "text": "Recursive tree of monadic transformations"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Airflow models a workflow as a DAG: nodes are tasks (extract, transform, load, publish), edges are dependencies (task B runs after A succeeds). The scheduler runs tasks when their upstream dependencies are met, with retries, SLAs, and backfills. Alternatives include Prefect, Dagster, Argo Workflows.\n· A: Cycles would prevent deterministic scheduling. Airflow's graph is explicitly acyclic.\n· C: A DAG can include SQL tasks but isn't itself SQL.\n· D: Not an Airflow concept. Airflow's model is the DAG — pragmatic, not monadic.",
+      "explanations": {
+        "A": "Cycles would prevent deterministic scheduling. Airflow's graph is explicitly acyclic.",
+        "B": "Correct. Airflow models a workflow as a DAG: nodes are tasks (extract, transform, load, publish), edges are dependencies (task B runs after A succeeds). The scheduler runs tasks when their upstream dependencies are met, with retries, SLAs, and backfills. Alternatives include Prefect, Dagster, Argo Workflows.",
+        "C": "A DAG can include SQL tasks but isn't itself SQL.",
+        "D": "Not an Airflow concept. Airflow's model is the DAG — pragmatic, not monadic."
+      }
+    },
+    {
+      "id": "epso_duty_082",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 6",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "APIs",
+      "figures": [],
+      "question": "Compared to REST, a GraphQL API typically lets the client:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Receive push notifications when data changes"
+        },
+        {
+          "letter": "B",
+          "text": "Ask for exactly the fields it needs in a single request, avoiding over- or under-fetching"
+        },
+        {
+          "letter": "C",
+          "text": "Skip authentication by default"
+        },
+        {
+          "letter": "D",
+          "text": "Commit database transactions on the server"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. GraphQL exposes a single endpoint and a strongly typed schema. Clients compose queries that specify exactly the fields they want across nested relationships, avoiding REST's over-fetching (too many fields) and under-fetching (needing multiple calls). Trade-offs: caching and rate limiting are trickier than with REST.\n· A: Real-time push is provided by subscriptions, WebSockets or Server-Sent Events — supported in GraphQL but not unique to it.\n· C: Authentication is orthogonal to the query language — both REST and GraphQL need it.\n· D: Committing transactions is a server-side database concern; GraphQL mutations describe intent but do not bypass the server's transaction logic.",
+      "explanations": {
+        "A": "Real-time push is provided by subscriptions, WebSockets or Server-Sent Events — supported in GraphQL but not unique to it.",
+        "B": "Correct. GraphQL exposes a single endpoint and a strongly typed schema. Clients compose queries that specify exactly the fields they want across nested relationships, avoiding REST's over-fetching (too many fields) and under-fetching (needing multiple calls). Trade-offs: caching and rate limiting are trickier than with REST.",
+        "C": "Authentication is orthogonal to the query language — both REST and GraphQL need it.",
+        "D": "Committing transactions is a server-side database concern; GraphQL mutations describe intent but do not bypass the server's transaction logic."
+      }
+    },
+    {
+      "id": "epso_duty_083",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 7",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "CDC",
+      "figures": [],
+      "question": "Change Data Capture (CDC) is a pattern in which:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The full table is re-extracted on every run"
+        },
+        {
+          "letter": "B",
+          "text": "Machine-learning models retrain on every new record"
+        },
+        {
+          "letter": "C",
+          "text": "Data is encrypted at the source before leaving the network"
+        },
+        {
+          "letter": "D",
+          "text": "Only inserts, updates and deletes on the source are captured (often from the database log) and propagated downstream"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. CDC tools (Debezium, Oracle GoldenGate, AWS DMS, Fivetran) tail the database transaction log (WAL / binlog / redo log) and stream every insert / update / delete as an event. This keeps downstream systems (warehouses, lakes, search indexes) in near-real-time sync with source OLTP stores, without heavy re-extracts.\n· A: Full re-extraction is the opposite of CDC — it's inefficient for large tables and is precisely what CDC avoids.\n· B: Retraining strategy is an ML-ops concern, not what CDC defines.\n· C: Encryption at source is a separate security control.",
+      "explanations": {
+        "A": "Full re-extraction is the opposite of CDC — it's inefficient for large tables and is precisely what CDC avoids.",
+        "B": "Retraining strategy is an ML-ops concern, not what CDC defines.",
+        "C": "Encryption at source is a separate security control.",
+        "D": "Correct. CDC tools (Debezium, Oracle GoldenGate, AWS DMS, Fivetran) tail the database transaction log (WAL / binlog / redo log) and stream every insert / update / delete as an event. This keeps downstream systems (warehouses, lakes, search indexes) in near-real-time sync with source OLTP stores, without heavy re-extracts."
+      }
+    },
+    {
+      "id": "epso_duty_084",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 8",
+      "topic": "data_engineering",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Idempotency",
+      "figures": [],
+      "question": "An idempotent data pipeline is one where:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Running it multiple times with the same input produces the same result as running it once"
+        },
+        {
+          "letter": "B",
+          "text": "It can only be run once per day"
+        },
+        {
+          "letter": "C",
+          "text": "It requires manual approval between stages"
+        },
+        {
+          "letter": "D",
+          "text": "It transforms data into a new format every run"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. An idempotent operation yields the same state no matter how many times it runs. For pipelines this typically means using merge / upsert (not append) semantics keyed on natural keys, deterministic partitioning, and replayable ingestion. Idempotency is essential for robustness — retries, backfills and failure recovery all depend on it.\n· B: Scheduling frequency doesn't define idempotency.\n· C: Manual gates are governance controls, not idempotency.\n· D: Changing format each run is actually the opposite of reproducible, deterministic behaviour.",
+      "explanations": {
+        "A": "Correct. An idempotent operation yields the same state no matter how many times it runs. For pipelines this typically means using merge / upsert (not append) semantics keyed on natural keys, deterministic partitioning, and replayable ingestion. Idempotency is essential for robustness — retries, backfills and failure recovery all depend on it.",
+        "B": "Scheduling frequency doesn't define idempotency.",
+        "C": "Manual gates are governance controls, not idempotency.",
+        "D": "Changing format each run is actually the opposite of reproducible, deterministic behaviour."
+      }
+    },
+    {
+      "id": "epso_duty_085",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 9",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "dbt",
+      "figures": [],
+      "question": "The tool 'dbt' (data build tool) is used primarily to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Orchestrate container deployments in Kubernetes"
+        },
+        {
+          "letter": "B",
+          "text": "Ingest Kafka topics into a lakehouse"
+        },
+        {
+          "letter": "C",
+          "text": "Define, test and version-control SQL transformations that run inside a data warehouse (the 'T' in ELT)"
+        },
+        {
+          "letter": "D",
+          "text": "Label training data for supervised machine learning"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. dbt is a SQL-first transformation framework: engineers define models (SELECTs), tests, documentation and lineage in version-controlled files; dbt compiles and runs them in the warehouse (Snowflake, BigQuery, Redshift, Postgres). It is the de-facto standard for the 'T' in modern ELT stacks.\n· A: Kubernetes orchestration is done by Helm / Argo / Kustomize, not dbt.\n· B: Ingestion is the job of tools like Fivetran, Airbyte, Kafka Connect — not dbt.\n· D: Labelling is an ML-ops concern (Labelbox, Scale, Prodigy). dbt is about SQL transformations.",
+      "explanations": {
+        "A": "Kubernetes orchestration is done by Helm / Argo / Kustomize, not dbt.",
+        "B": "Ingestion is the job of tools like Fivetran, Airbyte, Kafka Connect — not dbt.",
+        "C": "Correct. dbt is a SQL-first transformation framework: engineers define models (SELECTs), tests, documentation and lineage in version-controlled files; dbt compiles and runs them in the warehouse (Snowflake, BigQuery, Redshift, Postgres). It is the de-facto standard for the 'T' in modern ELT stacks.",
+        "D": "Labelling is an ML-ops concern (Labelbox, Scale, Prodigy). dbt is about SQL transformations."
+      }
+    },
+    {
+      "id": "epso_duty_086",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 10",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data pipeline",
+      "figures": [],
+      "question": "In a data pipeline, 'backfilling' refers to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Adding encryption to an existing stream"
+        },
+        {
+          "letter": "B",
+          "text": "Re-running historical computations for a past date range, typically after a code fix or new feature"
+        },
+        {
+          "letter": "C",
+          "text": "Forwarding every record to archive"
+        },
+        {
+          "letter": "D",
+          "text": "Deleting incorrect records from production"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Backfilling replays a pipeline across a historical date range — commonly used after fixing a bug, introducing a new column, or onboarding a new source. Frameworks like Airflow, Dagster and dbt provide first-class support (`--backfill`, catch-up runs). Idempotent pipelines make backfills safe because re-runs don't duplicate data.\n· A: Encryption is a security control, not a scheduling pattern.\n· C: Archiving is a lifecycle activity, not backfilling.\n· D: Deleting records is 'cleanup' or 'reversal' — separate from reconstructing history.",
+      "explanations": {
+        "A": "Encryption is a security control, not a scheduling pattern.",
+        "B": "Correct. Backfilling replays a pipeline across a historical date range — commonly used after fixing a bug, introducing a new column, or onboarding a new source. Frameworks like Airflow, Dagster and dbt provide first-class support (`--backfill`, catch-up runs). Idempotent pipelines make backfills safe because re-runs don't duplicate data.",
+        "C": "Archiving is a lifecycle activity, not backfilling.",
+        "D": "Deleting records is 'cleanup' or 'reversal' — separate from reconstructing history."
+      }
+    },
+    {
+      "id": "epso_duty_087",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 2",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Warehouse",
+      "figures": [],
+      "question": "A classical data warehouse typically employs:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Schema-on-read with no structural constraints"
+        },
+        {
+          "letter": "B",
+          "text": "A graph database with SPARQL endpoints"
+        },
+        {
+          "letter": "C",
+          "text": "A document-oriented NoSQL store"
+        },
+        {
+          "letter": "D",
+          "text": "Schema-on-write with curated, structured tables optimised for BI"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A warehouse enforces schema-on-write: data is cleansed, conformed and loaded into dimensional structures (star / snowflake schemas) before it becomes queryable. This produces consistent, high-quality, analytics-optimised data at the cost of upfront modelling and ETL.\n· A: Schema-on-read is the lake pattern, where structure is applied at query time. Warehouses enforce schema when data is loaded.\n· B: Graph databases serve different workloads (network analysis, knowledge graphs). SPARQL is an RDF query language, not a warehouse pattern.\n· C: Document stores (MongoDB, Couchbase) are operational databases, not warehouses.",
+      "explanations": {
+        "A": "Schema-on-read is the lake pattern, where structure is applied at query time. Warehouses enforce schema when data is loaded.",
+        "B": "Graph databases serve different workloads (network analysis, knowledge graphs). SPARQL is an RDF query language, not a warehouse pattern.",
+        "C": "Document stores (MongoDB, Couchbase) are operational databases, not warehouses.",
+        "D": "Correct. A warehouse enforces schema-on-write: data is cleansed, conformed and loaded into dimensional structures (star / snowflake schemas) before it becomes queryable. This produces consistent, high-quality, analytics-optimised data at the cost of upfront modelling and ETL."
+      }
+    },
+    {
+      "id": "epso_duty_088",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 3",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data lake",
+      "figures": [],
+      "question": "A data lake is characterised by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Schema-on-read storage of raw data in diverse formats on low-cost object / distributed storage"
+        },
+        {
+          "letter": "B",
+          "text": "Strictly normalised relational schemas"
+        },
+        {
+          "letter": "C",
+          "text": "Only structured tabular data"
+        },
+        {
+          "letter": "D",
+          "text": "Mandatory ACID transactions on every read"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. A data lake stores raw data in its native format (CSV, JSON, Parquet, Avro, images, logs) on cheap scalable storage (HDFS or object storage like S3, GCS, Azure ADLS). Schema is applied at query time ('schema-on-read'), which supports exploration and ML on diverse data but trades away the governance and ACID guarantees of a warehouse.\n· B: Normalised relational schemas are OLTP or warehouse territory, not lakes.\n· C: Lakes accept any format — including unstructured (audio, images, free text).\n· D: Plain lakes lack ACID. Adding ACID via an open table format (Delta / Iceberg / Hudi) is what turns a lake into a lakehouse.",
+      "explanations": {
+        "A": "Correct. A data lake stores raw data in its native format (CSV, JSON, Parquet, Avro, images, logs) on cheap scalable storage (HDFS or object storage like S3, GCS, Azure ADLS). Schema is applied at query time ('schema-on-read'), which supports exploration and ML on diverse data but trades away the governance and ACID guarantees of a warehouse.",
+        "B": "Normalised relational schemas are OLTP or warehouse territory, not lakes.",
+        "C": "Lakes accept any format — including unstructured (audio, images, free text).",
+        "D": "Plain lakes lack ACID. Adding ACID via an open table format (Delta / Iceberg / Hudi) is what turns a lake into a lakehouse."
+      }
+    },
+    {
+      "id": "epso_duty_089",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 4",
+      "topic": "data_platforms",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Iceberg / Delta / Hudi",
+      "figures": [],
+      "question": "What do Apache Iceberg, Delta Lake and Apache Hudi have in common?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "They are open table formats that add ACID, schema evolution and time-travel on top of files (typically Parquet) in object storage"
+        },
+        {
+          "letter": "B",
+          "text": "They are proprietary storage engines bundled only with one cloud provider"
+        },
+        {
+          "letter": "C",
+          "text": "They are OLTP database systems replacing PostgreSQL"
+        },
+        {
+          "letter": "D",
+          "text": "They are classification taxonomies under the AI Act"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Iceberg, Delta and Hudi are the three major open table formats of the lakehouse era. They maintain metadata (snapshots, manifests) alongside Parquet data files and add warehouse-grade features: ACID transactions, schema evolution, partition evolution, time-travel, efficient upserts and deletes. They make BI and ML work on the same object-store dataset.\n· B: All three are open-source and work on multiple clouds. Vendor lock-in is specifically what they push back against.\n· C: None of the three is an OLTP engine. They target analytics workloads at scale.\n· D: Nothing to do with AI Act tiers.",
+      "explanations": {
+        "A": "Correct. Iceberg, Delta and Hudi are the three major open table formats of the lakehouse era. They maintain metadata (snapshots, manifests) alongside Parquet data files and add warehouse-grade features: ACID transactions, schema evolution, partition evolution, time-travel, efficient upserts and deletes. They make BI and ML work on the same object-store dataset.",
+        "B": "All three are open-source and work on multiple clouds. Vendor lock-in is specifically what they push back against.",
+        "C": "None of the three is an OLTP engine. They target analytics workloads at scale.",
+        "D": "Nothing to do with AI Act tiers."
+      }
+    },
+    {
+      "id": "epso_duty_090",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 5",
+      "topic": "data_platforms",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Columnar storage",
+      "figures": [],
+      "question": "Parquet, ORC and Arrow are all examples of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Columnar storage / memory formats optimised for analytics workloads"
+        },
+        {
+          "letter": "B",
+          "text": "Row-oriented OLTP table formats"
+        },
+        {
+          "letter": "C",
+          "text": "Encryption schemes for personal data"
+        },
+        {
+          "letter": "D",
+          "text": "Regulatory reporting XBRL taxonomies"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Parquet (on-disk), ORC (on-disk) and Arrow (in-memory) are columnar formats: values of each column are stored together, enabling compression, vectorised execution and efficient column-pruning for analytical queries. This is why lakehouses, warehouses and distributed SQL engines rely on them.\n· B: Row-oriented layouts (typical of OLTP) store values of one record contiguously — inefficient for analytics that scan a few columns over many rows.\n· C: They are not encryption schemes — encryption is a separate layer that can be applied on top of any of these formats.\n· D: XBRL is a regulatory-reporting language; unrelated to these columnar formats.",
+      "explanations": {
+        "A": "Correct. Parquet (on-disk), ORC (on-disk) and Arrow (in-memory) are columnar formats: values of each column are stored together, enabling compression, vectorised execution and efficient column-pruning for analytical queries. This is why lakehouses, warehouses and distributed SQL engines rely on them.",
+        "B": "Row-oriented layouts (typical of OLTP) store values of one record contiguously — inefficient for analytics that scan a few columns over many rows.",
+        "C": "They are not encryption schemes — encryption is a separate layer that can be applied on top of any of these formats.",
+        "D": "XBRL is a regulatory-reporting language; unrelated to these columnar formats."
+      }
+    },
+    {
+      "id": "epso_duty_091",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 6",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "5 Vs of big data",
+      "figures": [],
+      "question": "The 3 Vs of big data (classical model) stand for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Volume, Variety, Velocity"
+        },
+        {
+          "letter": "B",
+          "text": "Value, Validity, Veracity"
+        },
+        {
+          "letter": "C",
+          "text": "Vector, Vertex, Vault"
+        },
+        {
+          "letter": "D",
+          "text": "Virtual, Visual, Voluntary"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Volume (how much), Variety (structured, semi-structured, unstructured formats) and Velocity (how fast it arrives) are the classical 3 Vs coined by Doug Laney. The model is often extended to 5 Vs with Veracity (trust / quality) and Value (extracted worth), and sometimes 7 Vs (adding Variability and Visualisation).\n· B: Those are often added as the 4th / 5th Vs but aren't the original three.\n· C: Unrelated jargon.\n· D: Unrelated — not the definition.",
+      "explanations": {
+        "A": "Correct. Volume (how much), Variety (structured, semi-structured, unstructured formats) and Velocity (how fast it arrives) are the classical 3 Vs coined by Doug Laney. The model is often extended to 5 Vs with Veracity (trust / quality) and Value (extracted worth), and sometimes 7 Vs (adding Variability and Visualisation).",
+        "B": "Those are often added as the 4th / 5th Vs but aren't the original three.",
+        "C": "Unrelated jargon.",
+        "D": "Unrelated — not the definition."
+      }
+    },
+    {
+      "id": "epso_duty_092",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 7",
+      "topic": "data_platforms",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Polyglot persistence",
+      "figures": [],
+      "question": "'Polyglot persistence' as a platform principle means:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Every application must expose its data through a single REST endpoint"
+        },
+        {
+          "letter": "B",
+          "text": "Data must always be stored in plaintext so any language can read it"
+        },
+        {
+          "letter": "C",
+          "text": "All data is stored in multiple languages for translation purposes"
+        },
+        {
+          "letter": "D",
+          "text": "Different parts of a system use different data stores tailored to their workload (relational, document, key-value, graph, time-series, search…)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Polyglot persistence (Fowler, 2011) argues that a modern system is rarely best served by a single data store; instead, each capability uses the store best suited to its access pattern — relational for complex transactions, key-value (Redis) for caches, document (MongoDB) for flexible entities, search (Elasticsearch) for full-text, graph (Neo4j) for relationships, time-series (InfluxDB) for metrics.\n· A: A single endpoint is an API-layer pattern, not a persistence-layer one.\n· B: Plaintext storage contradicts sound security practice and is unrelated to polyglot persistence.\n· C: Despite the 'linguistic' name, polyglot persistence has nothing to do with human languages.",
+      "explanations": {
+        "A": "A single endpoint is an API-layer pattern, not a persistence-layer one.",
+        "B": "Plaintext storage contradicts sound security practice and is unrelated to polyglot persistence.",
+        "C": "Despite the 'linguistic' name, polyglot persistence has nothing to do with human languages.",
+        "D": "Correct. Polyglot persistence (Fowler, 2011) argues that a modern system is rarely best served by a single data store; instead, each capability uses the store best suited to its access pattern — relational for complex transactions, key-value (Redis) for caches, document (MongoDB) for flexible entities, search (Elasticsearch) for full-text, graph (Neo4j) for relationships, time-series (InfluxDB) for metrics."
+      }
+    },
+    {
+      "id": "epso_duty_093",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 8",
+      "topic": "data_platforms",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Vector database",
+      "figures": [],
+      "question": "A 'vector database' (Pinecone, Weaviate, Milvus) is optimised for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Storing financial ledger transactions with strict ACID guarantees"
+        },
+        {
+          "letter": "B",
+          "text": "Running OLTP workloads at millisecond commit latency"
+        },
+        {
+          "letter": "C",
+          "text": "Serving static HTML pages with edge caching"
+        },
+        {
+          "letter": "D",
+          "text": "Performing approximate nearest-neighbour searches over high-dimensional embeddings"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Vector databases index high-dimensional embeddings (from LLMs or other ML models) and accept similarity queries — approximate nearest-neighbour (ANN) search using algorithms like HNSW or IVF. They power semantic search, retrieval-augmented generation (RAG) and recommendation systems that need similarity rather than exact matches.\n· A: Financial ledgers use traditional ACID OLTP databases.\n· B: OLTP is served by row-oriented RDBMSs, not vector stores.\n· C: Static-page serving is a CDN / edge-cache concern.",
+      "explanations": {
+        "A": "Financial ledgers use traditional ACID OLTP databases.",
+        "B": "OLTP is served by row-oriented RDBMSs, not vector stores.",
+        "C": "Static-page serving is a CDN / edge-cache concern.",
+        "D": "Correct. Vector databases index high-dimensional embeddings (from LLMs or other ML models) and accept similarity queries — approximate nearest-neighbour (ANN) search using algorithms like HNSW or IVF. They power semantic search, retrieval-augmented generation (RAG) and recommendation systems that need similarity rather than exact matches."
+      }
+    },
+    {
+      "id": "epso_duty_094",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 9",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "OLAP cube",
+      "figures": [],
+      "question": "An 'OLAP cube' is best described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A physical server form factor"
+        },
+        {
+          "letter": "B",
+          "text": "A container image format"
+        },
+        {
+          "letter": "C",
+          "text": "A multi-dimensional data structure pre-aggregated along business dimensions (time, geography, product…) for fast slice-and-dice analysis"
+        },
+        {
+          "letter": "D",
+          "text": "A hardware encryption appliance"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. OLAP cubes (SSAS, Essbase, Mondrian) pre-aggregate measures (sales, counts) along dimensions so analysts can slice, dice, drill-down and roll-up interactively. Modern in-memory engines (Power BI / Tabular, ClickHouse, DuckDB, Druid) increasingly compute on the fly, blurring the classic cube concept but keeping the multi-dimensional mental model.\n· A: Cube here is a logical / mathematical metaphor, not a server chassis.\n· B: Container images are packaged by OCI formats (Docker, OCI), unrelated.\n· D: Encryption appliances are HSMs / TPMs, unrelated.",
+      "explanations": {
+        "A": "Cube here is a logical / mathematical metaphor, not a server chassis.",
+        "B": "Container images are packaged by OCI formats (Docker, OCI), unrelated.",
+        "C": "Correct. OLAP cubes (SSAS, Essbase, Mondrian) pre-aggregate measures (sales, counts) along dimensions so analysts can slice, dice, drill-down and roll-up interactively. Modern in-memory engines (Power BI / Tabular, ClickHouse, DuckDB, Druid) increasingly compute on the fly, blurring the classic cube concept but keeping the multi-dimensional mental model.",
+        "D": "Encryption appliances are HSMs / TPMs, unrelated."
+      }
+    },
+    {
+      "id": "epso_duty_095",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 10",
+      "topic": "data_platforms",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Compute-storage separation",
+      "figures": [],
+      "question": "Modern cloud warehouses (Snowflake, BigQuery, Redshift RA3) separate compute from storage primarily to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Reduce query latency to microseconds on small workloads"
+        },
+        {
+          "letter": "B",
+          "text": "Eliminate the need for SQL as a query language"
+        },
+        {
+          "letter": "C",
+          "text": "Guarantee strict ACID across transactional and analytical systems alike"
+        },
+        {
+          "letter": "D",
+          "text": "Scale compute and storage independently, enabling elasticity and isolating workloads"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Separating storage (object store, once-written, shared) from compute (ephemeral clusters / warehouses / slots) means you can scale each dimension independently. Different teams can get their own compute cluster on the same data without contention, and storage costs stay cheap. Snowflake's virtual warehouses, BigQuery slots and Redshift managed storage all embody this design.\n· A: Separation sometimes adds latency compared with shared-nothing local disks; the benefit is elsewhere.\n· B: SQL remains the primary interface for all three systems.\n· C: ACID is not the point — modern warehouses add it to analytics storage, but OLTP systems remain separate.",
+      "explanations": {
+        "A": "Separation sometimes adds latency compared with shared-nothing local disks; the benefit is elsewhere.",
+        "B": "SQL remains the primary interface for all three systems.",
+        "C": "ACID is not the point — modern warehouses add it to analytics storage, but OLTP systems remain separate.",
+        "D": "Correct. Separating storage (object store, once-written, shared) from compute (ephemeral clusters / warehouses / slots) means you can scale each dimension independently. Different teams can get their own compute cluster on the same data without contention, and storage costs stay cheap. Snowflake's virtual warehouses, BigQuery slots and Redshift managed storage all embody this design."
+      }
+    },
+    {
+      "id": "epso_duty_096",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 2",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Descriptive analytics",
+      "figures": [],
+      "question": "'Descriptive analytics' primarily answers the question:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "What should we do next?"
+        },
+        {
+          "letter": "B",
+          "text": "What will happen?"
+        },
+        {
+          "letter": "C",
+          "text": "What happened?"
+        },
+        {
+          "letter": "D",
+          "text": "Why did it happen?"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.\n· A: Prescriptive analytics answers 'what should we do?' — optimisation, decision support.\n· B: Predictive analytics answers 'what will happen?' — forecasting, classification.\n· D: Diagnostic analytics answers 'why did it happen?' — drill-downs, root-cause analysis.",
+      "explanations": {
+        "A": "Prescriptive analytics answers 'what should we do?' — optimisation, decision support.",
+        "B": "Predictive analytics answers 'what will happen?' — forecasting, classification.",
+        "C": "Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.",
+        "D": "Diagnostic analytics answers 'why did it happen?' — drill-downs, root-cause analysis."
+      }
+    },
+    {
+      "id": "epso_duty_097",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 3",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Self-service BI",
+      "figures": [],
+      "question": "Self-service BI is characterised by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Business users building their own reports on governed datasets without an IT ticket"
+        },
+        {
+          "letter": "B",
+          "text": "IT exclusively preparing all analyses"
+        },
+        {
+          "letter": "C",
+          "text": "Purely manual paper-based reporting"
+        },
+        {
+          "letter": "D",
+          "text": "Deploying Kafka clusters by the finance team"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Self-service BI (Power BI, Tableau, Qlik, Metabase, Looker) empowers business users to build reports, slice/dice and share insights without waiting for an IT backlog. To stay safe, it needs governed semantic layers (certified datasets, shared measures) and good glossaries — otherwise multiple versions of the truth proliferate.\n· B: Central IT prepping everything is the old waterfall model — the opposite of self-service.\n· C: Paper reporting pre-dates BI altogether.\n· D: Operating data infrastructure is a data-engineering task, not a BI user's role.",
+      "explanations": {
+        "A": "Correct. Self-service BI (Power BI, Tableau, Qlik, Metabase, Looker) empowers business users to build reports, slice/dice and share insights without waiting for an IT backlog. To stay safe, it needs governed semantic layers (certified datasets, shared measures) and good glossaries — otherwise multiple versions of the truth proliferate.",
+        "B": "Central IT prepping everything is the old waterfall model — the opposite of self-service.",
+        "C": "Paper reporting pre-dates BI altogether.",
+        "D": "Operating data infrastructure is a data-engineering task, not a BI user's role."
+      }
+    },
+    {
+      "id": "epso_duty_098",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 4",
+      "topic": "bi_reporting",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Semantic layer",
+      "figures": [],
+      "question": "A BI 'semantic layer' (e.g. Power BI datasets, Looker's LookML, Cube, dbt Semantic Layer) primarily provides:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A shared, governed definition of metrics and dimensions that multiple tools and users can query consistently"
+        },
+        {
+          "letter": "B",
+          "text": "An encryption layer for in-transit data"
+        },
+        {
+          "letter": "C",
+          "text": "A visualisation theme for corporate dashboards"
+        },
+        {
+          "letter": "D",
+          "text": "A vector index for semantic search"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. A semantic layer sits between raw data and consumers: it defines metrics ('net revenue'), dimensions ('region') and their relationships once, so every dashboard, ad-hoc query and embedded analytics uses the same formula. This solves the 'same term, different number' problem that plagues ungoverned self-service BI.\n· B: TLS / encryption belongs to the transport / security layer.\n· C: Themes are visual styling, not semantic definitions.\n· D: 'Semantic' overlaps with the ML world ('semantic search') but in BI it refers to the metrics-definition layer.",
+      "explanations": {
+        "A": "Correct. A semantic layer sits between raw data and consumers: it defines metrics ('net revenue'), dimensions ('region') and their relationships once, so every dashboard, ad-hoc query and embedded analytics uses the same formula. This solves the 'same term, different number' problem that plagues ungoverned self-service BI.",
+        "B": "TLS / encryption belongs to the transport / security layer.",
+        "C": "Themes are visual styling, not semantic definitions.",
+        "D": "'Semantic' overlaps with the ML world ('semantic search') but in BI it refers to the metrics-definition layer."
+      }
+    },
+    {
+      "id": "epso_duty_099",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 5",
+      "topic": "bi_reporting",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "SMART KPIs",
+      "figures": [],
+      "question": "The 'SMART' acronym applied to KPIs stands for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Specific, Measurable, Achievable, Relevant, Time-bound"
+        },
+        {
+          "letter": "B",
+          "text": "Strategic, Measurable, Automated, Reported, Timely"
+        },
+        {
+          "letter": "C",
+          "text": "Simple, Managed, Aggregated, Reviewed, Transparent"
+        },
+        {
+          "letter": "D",
+          "text": "Scalable, Modular, Abstract, Reliable, Tractable"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. SMART is Specific, Measurable, Achievable, Relevant, Time-bound — the classical goal-setting checklist, widely applied to KPI design. A KPI that is vague, not measurable, unattainable, irrelevant or lacks a time dimension will fail to drive behaviour.\n· B: Contains 'automated' and 'strategic' — not the SMART letters.\n· C: Reasonable-sounding but not SMART.\n· D: Those are software-engineering qualities — unrelated.",
+      "explanations": {
+        "A": "Correct. SMART is Specific, Measurable, Achievable, Relevant, Time-bound — the classical goal-setting checklist, widely applied to KPI design. A KPI that is vague, not measurable, unattainable, irrelevant or lacks a time dimension will fail to drive behaviour.",
+        "B": "Contains 'automated' and 'strategic' — not the SMART letters.",
+        "C": "Reasonable-sounding but not SMART.",
+        "D": "Those are software-engineering qualities — unrelated."
+      }
+    },
+    {
+      "id": "epso_duty_100",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 6",
+      "topic": "bi_reporting",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Predictive vs prescriptive",
+      "figures": [],
+      "question": "A transport agency uses a model to recommend the optimal route given traffic, weather and accident probability. This is an example of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Descriptive analytics"
+        },
+        {
+          "letter": "B",
+          "text": "Diagnostic analytics"
+        },
+        {
+          "letter": "C",
+          "text": "Predictive analytics"
+        },
+        {
+          "letter": "D",
+          "text": "Prescriptive analytics"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints).\n· A: Descriptive would report past travel times — it doesn't recommend a course of action.\n· B: Diagnostic would explain why a particular route was slow yesterday — a root-cause analysis, not a recommendation.\n· C: Predictive would forecast the travel time or arrival probability. Recommending the optimal action is a step beyond prediction.",
+      "explanations": {
+        "A": "Descriptive would report past travel times — it doesn't recommend a course of action.",
+        "B": "Diagnostic would explain why a particular route was slow yesterday — a root-cause analysis, not a recommendation.",
+        "C": "Predictive would forecast the travel time or arrival probability. Recommending the optimal action is a step beyond prediction.",
+        "D": "Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints)."
+      }
+    },
+    {
+      "id": "epso_duty_101",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 7",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Dashboard vs report",
+      "figures": [],
+      "question": "Compared to a 'report', a 'dashboard' in BI typically:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Offers at-a-glance, visual summaries of KPIs with interactivity"
+        },
+        {
+          "letter": "B",
+          "text": "Provides a rich narrative with many pages of text"
+        },
+        {
+          "letter": "C",
+          "text": "Is delivered exclusively on paper"
+        },
+        {
+          "letter": "D",
+          "text": "Contains only raw tables with no visuals"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Dashboards combine KPIs, charts and filters into a visual summary optimised for quick comprehension. They often support interactivity — drill-down, slicing — and refresh frequently. Reports tend to be longer, narrative and delivered on a schedule.\n· B: Narrative reports (annual reports, audit reports) rely on prose; dashboards rely on visuals.\n· C: Paper delivery is rare in modern BI; dashboards are typically interactive web artefacts.\n· D: Raw tables are the opposite of a dashboard's visual summary.",
+      "explanations": {
+        "A": "Correct. Dashboards combine KPIs, charts and filters into a visual summary optimised for quick comprehension. They often support interactivity — drill-down, slicing — and refresh frequently. Reports tend to be longer, narrative and delivered on a schedule.",
+        "B": "Narrative reports (annual reports, audit reports) rely on prose; dashboards rely on visuals.",
+        "C": "Paper delivery is rare in modern BI; dashboards are typically interactive web artefacts.",
+        "D": "Raw tables are the opposite of a dashboard's visual summary."
+      }
+    },
+    {
+      "id": "epso_duty_102",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 8",
+      "topic": "bi_reporting",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Leading vs lagging",
+      "figures": [],
+      "question": "Monthly customer-satisfaction survey score is best described as a:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Leading indicator that anticipates future revenue trends"
+        },
+        {
+          "letter": "B",
+          "text": "Lagging indicator of past customer experience"
+        },
+        {
+          "letter": "C",
+          "text": "Operational indicator with no strategic value"
+        },
+        {
+          "letter": "D",
+          "text": "Raw metric incompatible with KPI classification"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.\n· B: Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.\n· C: Customer satisfaction is a classical strategic KPI, not merely operational.\n· D: Any quantifiable measure can be a metric and, if tied to an objective, a KPI.",
+      "explanations": {
+        "A": "Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.",
+        "B": "Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.",
+        "C": "Customer satisfaction is a classical strategic KPI, not merely operational.",
+        "D": "Any quantifiable measure can be a metric and, if tied to an objective, a KPI."
+      }
+    },
+    {
+      "id": "epso_duty_103",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 9",
+      "topic": "bi_reporting",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Chart choice",
+      "figures": [],
+      "question": "You want to visualise how a single KPI varies across a hierarchy of categories (e.g. country → region → city) and show relative size. The most appropriate chart is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A pie chart with 30 slices"
+        },
+        {
+          "letter": "B",
+          "text": "A stacked line chart over time"
+        },
+        {
+          "letter": "C",
+          "text": "A treemap"
+        },
+        {
+          "letter": "D",
+          "text": "A 3D rotating bar chart"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.\n· B: Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.\n· D: 3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice.",
+      "explanations": {
+        "A": "Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.",
+        "B": "Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.",
+        "C": "Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.",
+        "D": "3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice."
+      }
+    },
+    {
+      "id": "epso_duty_104",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 10",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Reporting cadence",
+      "figures": [],
+      "question": "A 'reporting cadence' defines:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The speed of the network between source and dashboard"
+        },
+        {
+          "letter": "B",
+          "text": "The encryption algorithm used for reports in transit"
+        },
+        {
+          "letter": "C",
+          "text": "The agreed frequency at which a report or KPI is refreshed and reviewed"
+        },
+        {
+          "letter": "D",
+          "text": "The visualisation library used on the front-end"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.\n· A: Network speed is a technical performance concern, not cadence.\n· B: Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.\n· D: Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence.",
+      "explanations": {
+        "A": "Network speed is a technical performance concern, not cadence.",
+        "B": "Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.",
+        "C": "Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.",
+        "D": "Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence."
+      }
+    },
+    {
+      "id": "epso_duty_105",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 2",
+      "topic": "master_data",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Master vs reference",
+      "figures": [],
+      "question": "Which pair best distinguishes master data from reference data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Master data = ISO country codes; reference data = customer records"
+        },
+        {
+          "letter": "B",
+          "text": "Master data = training datasets; reference data = test datasets"
+        },
+        {
+          "letter": "C",
+          "text": "Master data = transactional events; reference data = historical archives"
+        },
+        {
+          "letter": "D",
+          "text": "Master data = key business entities (customer, product, employee); reference data = controlled code lists (country, currency, status)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business.\n· A: Reversed. Country codes are reference data; customer records are master data.\n· B: ML training / test sets are unrelated to the master / reference distinction.\n· C: Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
+      "explanations": {
+        "A": "Reversed. Country codes are reference data; customer records are master data.",
+        "B": "ML training / test sets are unrelated to the master / reference distinction.",
+        "C": "Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
+        "D": "Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business."
+      }
+    },
+    {
+      "id": "epso_duty_106",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 3",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Golden record",
+      "figures": [],
+      "question": "In MDM, a 'golden record' is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The most recent edit of any record in any source system"
+        },
+        {
+          "letter": "B",
+          "text": "The training dataset used to retrain a fraud-detection model"
+        },
+        {
+          "letter": "C",
+          "text": "A copy of the production database kept for disaster recovery"
+        },
+        {
+          "letter": "D",
+          "text": "A single, reconciled, authoritative view of a master entity merged from multiple source systems"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth.\n· A: 'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.\n· B: Training datasets are ML artefacts, not MDM records.\n· C: DR copies are operational backups, unrelated.",
+      "explanations": {
+        "A": "'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.",
+        "B": "Training datasets are ML artefacts, not MDM records.",
+        "C": "DR copies are operational backups, unrelated.",
+        "D": "Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth."
+      }
+    },
+    {
+      "id": "epso_duty_107",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 4",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Survivorship",
+      "figures": [],
+      "question": "In MDM matching and merging, a 'survivorship rule' determines:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Which records are archived to cold storage"
+        },
+        {
+          "letter": "B",
+          "text": "Which attribute value wins when several source systems disagree about the same entity"
+        },
+        {
+          "letter": "C",
+          "text": "Which employees survive organisational restructuring"
+        },
+        {
+          "letter": "D",
+          "text": "Which node in a Kafka cluster handles the next message"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.\n· A: Archiving is a lifecycle task, unrelated to survivorship.\n· C: HR humour aside, it's not what MDM means.\n· D: Kafka partition assignment is a different technical topic.",
+      "explanations": {
+        "A": "Archiving is a lifecycle task, unrelated to survivorship.",
+        "B": "Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.",
+        "C": "HR humour aside, it's not what MDM means.",
+        "D": "Kafka partition assignment is a different technical topic."
+      }
+    },
+    {
+      "id": "epso_duty_108",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 5",
+      "topic": "master_data",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Code lists",
+      "figures": [],
+      "question": "Which of the following is NOT typically considered reference data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ISO 3166 country codes"
+        },
+        {
+          "letter": "B",
+          "text": "ISO 4217 currency codes"
+        },
+        {
+          "letter": "C",
+          "text": "Individual customer transactions"
+        },
+        {
+          "letter": "D",
+          "text": "Human-Resources job-grade categories"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Individual customer transactions are transactional data, not reference. They are high-volume, event-like, and reference back to master entities (customer, product). Reference data, by contrast, is small, stable and shared across many systems.\n· A: Country codes are canonical reference data — stable, controlled, widely referenced.\n· B: Currency codes are textbook reference data.\n· D: HR job grades are a controlled code list — a reference-data use case.",
+      "explanations": {
+        "A": "Country codes are canonical reference data — stable, controlled, widely referenced.",
+        "B": "Currency codes are textbook reference data.",
+        "C": "Correct. Individual customer transactions are transactional data, not reference. They are high-volume, event-like, and reference back to master entities (customer, product). Reference data, by contrast, is small, stable and shared across many systems.",
+        "D": "HR job grades are a controlled code list — a reference-data use case."
+      }
+    },
+    {
+      "id": "epso_duty_109",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 6",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "IATE purpose",
+      "figures": [],
+      "question": "IATE (Inter-Active Terminology for Europe) supports EU multilingualism by providing:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A controlled, inter-institutional terminology database of concepts in 24 languages"
+        },
+        {
+          "letter": "B",
+          "text": "Machine-translation training corpora"
+        },
+        {
+          "letter": "C",
+          "text": "A legal register of EU treaties"
+        },
+        {
+          "letter": "D",
+          "text": "The public-procurement vocabulary (CPV)"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.\n· B: MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.\n· C: The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.\n· D: CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE.",
+      "explanations": {
+        "A": "Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.",
+        "B": "MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.",
+        "C": "The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.",
+        "D": "CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE."
+      }
+    },
+    {
+      "id": "epso_duty_110",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 7",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "EuroVoc purpose",
+      "figures": [],
+      "question": "EuroVoc is used by EU institutions to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Serve as the EU's translation memory"
+        },
+        {
+          "letter": "B",
+          "text": "Index documents across institutions using a multilingual thesaurus"
+        },
+        {
+          "letter": "C",
+          "text": "Authenticate users on the Interoperable Europe Portal"
+        },
+        {
+          "letter": "D",
+          "text": "Provide SQL access to the Official Journal archive"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.\n· A: The EU translation memory is Euramis.\n· C: Authentication is handled by EU Login / eIDAS, not EuroVoc.\n· D: EuroVoc is a vocabulary, not a database engine or query interface.",
+      "explanations": {
+        "A": "The EU translation memory is Euramis.",
+        "B": "Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.",
+        "C": "Authentication is handled by EU Login / eIDAS, not EuroVoc.",
+        "D": "EuroVoc is a vocabulary, not a database engine or query interface."
+      }
+    },
+    {
+      "id": "epso_duty_111",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 8",
+      "topic": "master_data",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "MDM architecture",
+      "figures": [],
+      "question": "A 'registry-style' MDM architecture differs from a 'repository-style' MDM primarily because:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Registry stores only an index pointing to source systems; repository stores the golden record itself"
+        },
+        {
+          "letter": "B",
+          "text": "Registry is an open-data concept; repository is a closed-data concept"
+        },
+        {
+          "letter": "C",
+          "text": "Registry applies to customer data; repository to product data"
+        },
+        {
+          "letter": "D",
+          "text": "Registry is legally required by the DGA; repository is optional"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.\n· B: Not a meaningful distinction — neither style is tied to open vs closed data.\n· C: MDM styles apply to any master domain.\n· D: The DGA doesn't mandate either architecture.",
+      "explanations": {
+        "A": "Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.",
+        "B": "Not a meaningful distinction — neither style is tied to open vs closed data.",
+        "C": "MDM styles apply to any master domain.",
+        "D": "The DGA doesn't mandate either architecture."
+      }
+    },
+    {
+      "id": "epso_duty_112",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 9",
+      "topic": "master_data",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Core Business vocabulary",
+      "figures": [],
+      "question": "The EU 'Core Business Vocabulary' (SEMIC) provides:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A mandatory ontology for banks under MiFID II"
+        },
+        {
+          "letter": "B",
+          "text": "A catalogue of consulting firms recognised by the Commission"
+        },
+        {
+          "letter": "C",
+          "text": "A controlled list of business-sector NACE codes"
+        },
+        {
+          "letter": "D",
+          "text": "A minimum reusable data model to describe legal entities across public services"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically.\n· A: MiFID II has its own regulatory-reporting standards unrelated to Core Business.\n· B: No such catalogue is linked to Core Business.\n· C: NACE codes are a separate Eurostat classification.",
+      "explanations": {
+        "A": "MiFID II has its own regulatory-reporting standards unrelated to Core Business.",
+        "B": "No such catalogue is linked to Core Business.",
+        "C": "NACE codes are a separate Eurostat classification.",
+        "D": "Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically."
+      }
+    },
+    {
+      "id": "epso_duty_113",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Master & Reference · 10",
+      "topic": "master_data",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "LEI",
+      "figures": [],
+      "question": "The Legal Entity Identifier (LEI, ISO 17442) is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A 10-character alphanumeric code issued under eIDAS"
+        },
+        {
+          "letter": "B",
+          "text": "A 20-character alphanumeric code uniquely identifying legal entities engaging in financial transactions worldwide"
+        },
+        {
+          "letter": "C",
+          "text": "A GDPR pseudonym for natural persons"
+        },
+        {
+          "letter": "D",
+          "text": "A registration scheme under the Open Data Directive"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).\n· A: eIDAS concerns electronic identification and trust services, not LEI.\n· C: LEIs identify legal entities, not natural persons.\n· D: The Open Data Directive doesn't define the LEI.",
+      "explanations": {
+        "A": "eIDAS concerns electronic identification and trust services, not LEI.",
+        "B": "Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).",
+        "C": "LEIs identify legal entities, not natural persons.",
+        "D": "The Open Data Directive doesn't define the LEI."
+      }
+    },
+    {
+      "id": "epso_duty_114",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 2",
+      "topic": "metadata_taxonomy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Metadata definition",
+      "figures": [],
+      "question": "Metadata can be defined as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data about data — describing its content, context, structure and lineage"
+        },
+        {
+          "letter": "B",
+          "text": "Data that has been encrypted"
+        },
+        {
+          "letter": "C",
+          "text": "Data older than seven years"
+        },
+        {
+          "letter": "D",
+          "text": "Data exclusively about machine-learning models"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.\n· B: Encryption is a security operation, not a definition of metadata.\n· C: Age isn't part of the definition of metadata.\n· D: Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset).",
+      "explanations": {
+        "A": "Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.",
+        "B": "Encryption is a security operation, not a definition of metadata.",
+        "C": "Age isn't part of the definition of metadata.",
+        "D": "Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset)."
+      }
+    },
+    {
+      "id": "epso_duty_115",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 3",
+      "topic": "metadata_taxonomy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Dublin Core",
+      "figures": [],
+      "question": "Dublin Core provides a set of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "15 core metadata elements for describing resources (title, creator, date, subject, …)"
+        },
+        {
+          "letter": "B",
+          "text": "Cybersecurity controls for EU institutions"
+        },
+        {
+          "letter": "C",
+          "text": "EU public-procurement categories"
+        },
+        {
+          "letter": "D",
+          "text": "ML model evaluation metrics"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.\n· B: Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.\n· C: Procurement codes live in CPV, not Dublin Core.\n· D: ML metrics (accuracy, precision, recall) are unrelated to metadata schemas.",
+      "explanations": {
+        "A": "Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.",
+        "B": "Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.",
+        "C": "Procurement codes live in CPV, not Dublin Core.",
+        "D": "ML metrics (accuracy, precision, recall) are unrelated to metadata schemas."
+      }
+    },
+    {
+      "id": "epso_duty_116",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 4",
+      "topic": "metadata_taxonomy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data lineage",
+      "figures": [],
+      "question": "Data lineage in a catalogue tracks:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The origin of data and the transformations it undergoes from source to consumption"
+        },
+        {
+          "letter": "B",
+          "text": "The geographic origin of data-centre hardware"
+        },
+        {
+          "letter": "C",
+          "text": "Only the login history of analysts"
+        },
+        {
+          "letter": "D",
+          "text": "The training runs of ML models"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.\n· B: Hardware origin is a supply-chain / sovereignty concern, not data lineage.\n· C: Login history is an audit log, not lineage.\n· D: ML-model provenance is related but a different layer (model lineage) from data lineage.",
+      "explanations": {
+        "A": "Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.",
+        "B": "Hardware origin is a supply-chain / sovereignty concern, not data lineage.",
+        "C": "Login history is an audit log, not lineage.",
+        "D": "ML-model provenance is related but a different layer (model lineage) from data lineage."
+      }
+    },
+    {
+      "id": "epso_duty_117",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 5",
+      "topic": "metadata_taxonomy",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "data.europa.eu",
+      "figures": [],
+      "question": "The EU open-data portal data.europa.eu federates datasets from:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Only Commission departments"
+        },
+        {
+          "letter": "B",
+          "text": "Member-State public-sector data portals, EU institutions, bodies and agencies, based on DCAT-AP"
+        },
+        {
+          "letter": "C",
+          "text": "Private-sector e-commerce platforms"
+        },
+        {
+          "letter": "D",
+          "text": "OECD and UN data repositories exclusively"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.\n· A: The portal aggregates far more than Commission DGs.\n· C: Private e-commerce is out of scope.\n· D: Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies.",
+      "explanations": {
+        "A": "The portal aggregates far more than Commission DGs.",
+        "B": "Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.",
+        "C": "Private e-commerce is out of scope.",
+        "D": "Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies."
+      }
+    },
+    {
+      "id": "epso_duty_118",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 6",
+      "topic": "metadata_taxonomy",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "DCAT-AP extensions",
+      "figures": [],
+      "question": "On the data.europa.eu ecosystem, a dataset containing meteorological observations would likely be described using:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "GeoDCAT-AP"
+        },
+        {
+          "letter": "B",
+          "text": "StatDCAT-AP"
+        },
+        {
+          "letter": "C",
+          "text": "The HVD application profile of DCAT-AP"
+        },
+        {
+          "letter": "D",
+          "text": "A and C are both commonly applicable"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A real meteorological dataset would typically be described with the HVD profile (because it falls in an HVD category) AND GeoDCAT-AP (because it is geospatial). Profiles are composable; using both maximises interoperability across the portal ecosystem.\n· A: GeoDCAT-AP is the geospatial profile. Meteorological data is often geo-referenced (station locations, grids), so GeoDCAT-AP often applies.\n· B: StatDCAT-AP targets statistical datasets (SDMX-style aggregates). Raw observations are not typically statistical aggregates.\n· C: The HVD profile applies because 'meteorological' is one of the six High-Value-Dataset categories under Implementing Reg. 2023/138.",
+      "explanations": {
+        "A": "GeoDCAT-AP is the geospatial profile. Meteorological data is often geo-referenced (station locations, grids), so GeoDCAT-AP often applies.",
+        "B": "StatDCAT-AP targets statistical datasets (SDMX-style aggregates). Raw observations are not typically statistical aggregates.",
+        "C": "The HVD profile applies because 'meteorological' is one of the six High-Value-Dataset categories under Implementing Reg. 2023/138.",
+        "D": "Correct. A real meteorological dataset would typically be described with the HVD profile (because it falls in an HVD category) AND GeoDCAT-AP (because it is geospatial). Profiles are composable; using both maximises interoperability across the portal ecosystem."
+      }
+    },
+    {
+      "id": "epso_duty_119",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 7",
+      "topic": "metadata_taxonomy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Taxonomy vs ontology",
+      "figures": [],
+      "question": "Which is the most accurate distinction between a taxonomy and an ontology?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Taxonomies hierarchically classify concepts; ontologies formally specify concepts, relationships and axioms with a logic reasoners can use"
+        },
+        {
+          "letter": "B",
+          "text": "Taxonomies are always richer than ontologies"
+        },
+        {
+          "letter": "C",
+          "text": "They are synonyms"
+        },
+        {
+          "letter": "D",
+          "text": "Ontologies always use JSON while taxonomies use XML"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.\n· B: The opposite — ontologies are richer because they capture more semantics.\n· C: They are related but distinct. Using them interchangeably loses important precision.\n· D: Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction.",
+      "explanations": {
+        "A": "Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.",
+        "B": "The opposite — ontologies are richer because they capture more semantics.",
+        "C": "They are related but distinct. Using them interchangeably loses important precision.",
+        "D": "Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction."
+      }
+    },
+    {
+      "id": "epso_duty_120",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 8",
+      "topic": "metadata_taxonomy",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data catalogue",
+      "figures": [],
+      "question": "A 'data catalogue' in a modern data platform (e.g. Collibra, OpenMetadata, DataHub) typically provides:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Only physical table definitions"
+        },
+        {
+          "letter": "B",
+          "text": "A container orchestration platform"
+        },
+        {
+          "letter": "C",
+          "text": "An encryption key rotation service"
+        },
+        {
+          "letter": "D",
+          "text": "Searchable inventory of data assets with metadata, ownership, lineage, quality and business glossary integration"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes.\n· A: Physical definitions are only part of what a catalogue provides.\n· B: Container orchestration is Kubernetes's job.\n· C: Key rotation belongs to a KMS / HSM, not a catalogue.",
+      "explanations": {
+        "A": "Physical definitions are only part of what a catalogue provides.",
+        "B": "Container orchestration is Kubernetes's job.",
+        "C": "Key rotation belongs to a KMS / HSM, not a catalogue.",
+        "D": "Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes."
+      }
+    },
+    {
+      "id": "epso_duty_121",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 9",
+      "topic": "metadata_taxonomy",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Semantic search",
+      "figures": [],
+      "question": "'Semantic search' over documents, as increasingly implemented in EU libraries and portals, relies primarily on:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Exact keyword matching with Boolean operators"
+        },
+        {
+          "letter": "B",
+          "text": "Dense vector embeddings capturing semantic similarity, often combined with traditional keyword search (hybrid)"
+        },
+        {
+          "letter": "C",
+          "text": "SQL full-text LIKE queries"
+        },
+        {
+          "letter": "D",
+          "text": "Regex substitutions in the documents"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.\n· A: Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.\n· C: LIKE is lexical and pattern-based — not semantic.\n· D: Regex is pattern matching, not meaning-based retrieval.",
+      "explanations": {
+        "A": "Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.",
+        "B": "Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.",
+        "C": "LIKE is lexical and pattern-based — not semantic.",
+        "D": "Regex is pattern matching, not meaning-based retrieval."
+      }
+    },
+    {
+      "id": "epso_duty_122",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Metadata & Taxonomy · 10",
+      "topic": "metadata_taxonomy",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Persistent identifiers",
+      "figures": [],
+      "question": "DOIs, ORCIDs and Handle.net identifiers are examples of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encryption key types"
+        },
+        {
+          "letter": "B",
+          "text": "European public-procurement codes"
+        },
+        {
+          "letter": "C",
+          "text": "Data-warehouse storage formats"
+        },
+        {
+          "letter": "D",
+          "text": "Persistent identifiers that make resources findable over time, supporting the 'F' in FAIR"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier).\n· A: Keys are secrets, not identifiers.\n· B: Procurement codes live in CPV.\n· C: Storage formats are Parquet, ORC, Avro, etc.",
+      "explanations": {
+        "A": "Keys are secrets, not identifiers.",
+        "B": "Procurement codes live in CPV.",
+        "C": "Storage formats are Parquet, ORC, Avro, etc.",
+        "D": "Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier)."
+      }
+    },
+    {
+      "id": "epso_duty_123",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 1",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "ISO/IEC 25012 dims",
+      "figures": [],
+      "question": "Which of the following is an 'inherent' data-quality characteristic under ISO/IEC 25012?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Availability"
+        },
+        {
+          "letter": "B",
+          "text": "Accuracy"
+        },
+        {
+          "letter": "C",
+          "text": "Portability"
+        },
+        {
+          "letter": "D",
+          "text": "Recoverability"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability is system-dependent — it depends on infrastructure uptime, not the data itself.\n· C: Portability depends on the surrounding system (formats, migration tools).\n· D: Recoverability depends on backup and restore mechanisms — system-dependent.",
+      "explanations": {
+        "A": "Availability is system-dependent — it depends on infrastructure uptime, not the data itself.",
+        "B": "Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.",
+        "C": "Portability depends on the surrounding system (formats, migration tools).",
+        "D": "Recoverability depends on backup and restore mechanisms — system-dependent."
+      }
+    },
+    {
+      "id": "epso_duty_124",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 2",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Profiling",
+      "figures": [],
+      "question": "'Data profiling' involves:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Predicting a user's preferences from past behaviour"
+        },
+        {
+          "letter": "B",
+          "text": "Encrypting personal data at rest"
+        },
+        {
+          "letter": "C",
+          "text": "Analysing datasets to understand structure, content, distributions and quality issues"
+        },
+        {
+          "letter": "D",
+          "text": "Producing GDPR privacy notices"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Data profiling is the systematic examination of a dataset — distributions, null rates, uniqueness, length patterns, value frequencies, cross-column dependencies — to understand its quality and structure. It is the essential first step before cleansing, modelling or integration. Tools include Great Expectations, Soda, pandas-profiling / ydata-profiling, Dataedo.\n· A: User profiling is an ML / marketing concept, unrelated.\n· B: Encryption is a security control.\n· D: Privacy notices are a transparency obligation under GDPR Arts. 13–14.",
+      "explanations": {
+        "A": "User profiling is an ML / marketing concept, unrelated.",
+        "B": "Encryption is a security control.",
+        "C": "Correct. Data profiling is the systematic examination of a dataset — distributions, null rates, uniqueness, length patterns, value frequencies, cross-column dependencies — to understand its quality and structure. It is the essential first step before cleansing, modelling or integration. Tools include Great Expectations, Soda, pandas-profiling / ydata-profiling, Dataedo.",
+        "D": "Privacy notices are a transparency obligation under GDPR Arts. 13–14."
+      }
+    },
+    {
+      "id": "epso_duty_125",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 3",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Accuracy vs precision",
+      "figures": [],
+      "question": "In data-quality terms, 'accuracy' and 'precision' differ because:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Accuracy is closeness to the true value; precision is the level of granularity / repeatability of measurement"
+        },
+        {
+          "letter": "B",
+          "text": "They are synonymous"
+        },
+        {
+          "letter": "C",
+          "text": "Accuracy applies to text; precision to numbers"
+        },
+        {
+          "letter": "D",
+          "text": "Accuracy applies only to ML models"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Accuracy answers 'is the value right?' — closeness to the true real-world value. Precision answers 'how finely / consistently is it measured?' — number of digits, repeatability, granularity. A GPS can be precise (5 decimal places) but inaccurate (shifted by 10 m); and vice versa. Both are ISO/IEC 25012 quality characteristics.\n· B: They describe different things; conflating them is a common source of confusion.\n· C: Both apply to numeric and structured data in general.\n· D: Accuracy predates ML and applies to any data domain; in ML, 'accuracy' also names a specific classification metric (TP+TN)/N, but the DQ concept is broader.",
+      "explanations": {
+        "A": "Correct. Accuracy answers 'is the value right?' — closeness to the true real-world value. Precision answers 'how finely / consistently is it measured?' — number of digits, repeatability, granularity. A GPS can be precise (5 decimal places) but inaccurate (shifted by 10 m); and vice versa. Both are ISO/IEC 25012 quality characteristics.",
+        "B": "They describe different things; conflating them is a common source of confusion.",
+        "C": "Both apply to numeric and structured data in general.",
+        "D": "Accuracy predates ML and applies to any data domain; in ML, 'accuracy' also names a specific classification metric (TP+TN)/N, but the DQ concept is broader."
+      }
+    },
+    {
+      "id": "epso_duty_126",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 4",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Completeness",
+      "figures": [],
+      "question": "Monitoring 'completeness' on an incoming customer feed means checking:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Whether the data is encrypted end-to-end"
+        },
+        {
+          "letter": "B",
+          "text": "Whether all required attributes are populated for each record and whether expected record counts are received"
+        },
+        {
+          "letter": "C",
+          "text": "Whether records are logically consistent with each other"
+        },
+        {
+          "letter": "D",
+          "text": "Whether the records are available to all departments"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Completeness has two common dimensions: (1) record-level — all required attributes filled (no unexpected NULLs where values must exist), (2) dataset-level — expected volume received (no partial batches, no missing delta). It is one of the five inherent ISO/IEC 25012 characteristics and a frequent failure mode in pipelines.\n· A: Encryption is a security property.\n· C: Consistency is its own characteristic — agreement between related data.\n· D: Availability / accessibility is a system-dependent characteristic, not completeness.",
+      "explanations": {
+        "A": "Encryption is a security property.",
+        "B": "Correct. Completeness has two common dimensions: (1) record-level — all required attributes filled (no unexpected NULLs where values must exist), (2) dataset-level — expected volume received (no partial batches, no missing delta). It is one of the five inherent ISO/IEC 25012 characteristics and a frequent failure mode in pipelines.",
+        "C": "Consistency is its own characteristic — agreement between related data.",
+        "D": "Availability / accessibility is a system-dependent characteristic, not completeness."
+      }
+    },
+    {
+      "id": "epso_duty_127",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 5",
+      "topic": "data_quality",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "DQ rules",
+      "figures": [],
+      "question": "A data-quality rule stating 'total order amount must equal the sum of line-item amounts' targets which dimension?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Completeness"
+        },
+        {
+          "letter": "B",
+          "text": "Consistency (internal consistency across related attributes)"
+        },
+        {
+          "letter": "C",
+          "text": "Accessibility"
+        },
+        {
+          "letter": "D",
+          "text": "Portability"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. This is a cross-attribute / cross-table consistency check: values at different levels of the record must agree by a known business rule. Consistency (ISO/IEC 25012) covers both same-record consistency and cross-system consistency. Such 'reconciliation' rules are at the heart of financial, invoicing and ERP DQ pipelines.\n· A: Completeness would check whether the total and line items are populated at all, not whether they agree.\n· C: Accessibility is about whether data can be obtained by authorised users.\n· D: Portability is about moving data between systems — unrelated to arithmetic consistency.",
+      "explanations": {
+        "A": "Completeness would check whether the total and line items are populated at all, not whether they agree.",
+        "B": "Correct. This is a cross-attribute / cross-table consistency check: values at different levels of the record must agree by a known business rule. Consistency (ISO/IEC 25012) covers both same-record consistency and cross-system consistency. Such 'reconciliation' rules are at the heart of financial, invoicing and ERP DQ pipelines.",
+        "C": "Accessibility is about whether data can be obtained by authorised users.",
+        "D": "Portability is about moving data between systems — unrelated to arithmetic consistency."
+      }
+    },
+    {
+      "id": "epso_duty_128",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 6",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Cleansing",
+      "figures": [],
+      "question": "'Data cleansing' refers to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Deleting a production database"
+        },
+        {
+          "letter": "B",
+          "text": "Detecting and correcting errors, inconsistencies, duplicates and missing values in a dataset"
+        },
+        {
+          "letter": "C",
+          "text": "Encrypting sensitive fields in a database"
+        },
+        {
+          "letter": "D",
+          "text": "Compressing Parquet files on object storage"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Data cleansing (scrubbing) detects quality issues — incorrect values, duplicates, misspellings, missing values, inconsistent formats — and corrects them. It's typically preceded by profiling and feeds into MDM, analytics or ML pipelines. Techniques include standardisation, deduplication, validation against reference lists, and record linkage.\n· A: That is destruction, not cleansing. Cleansing preserves data while improving it.\n· C: Encryption doesn't improve quality — it protects confidentiality.\n· D: Compression is a storage optimisation.",
+      "explanations": {
+        "A": "That is destruction, not cleansing. Cleansing preserves data while improving it.",
+        "B": "Correct. Data cleansing (scrubbing) detects quality issues — incorrect values, duplicates, misspellings, missing values, inconsistent formats — and corrects them. It's typically preceded by profiling and feeds into MDM, analytics or ML pipelines. Techniques include standardisation, deduplication, validation against reference lists, and record linkage.",
+        "C": "Encryption doesn't improve quality — it protects confidentiality.",
+        "D": "Compression is a storage optimisation."
+      }
+    },
+    {
+      "id": "epso_duty_129",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 7",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DQ monitoring",
+      "figures": [],
+      "question": "Great Expectations, Soda and dbt tests are all examples of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cloud providers"
+        },
+        {
+          "letter": "B",
+          "text": "Notebook environments"
+        },
+        {
+          "letter": "C",
+          "text": "Stream-processing engines"
+        },
+        {
+          "letter": "D",
+          "text": "Tools that express and execute data-quality tests / assertions on datasets within a pipeline"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. These tools let engineers express quality expectations in code — row counts, null rates, uniqueness, referential integrity, value ranges, accepted values, cross-column invariants. They run inside pipelines and fail fast when data violates expectations, often alerting or quarantining records. They are the 'testing framework' equivalent for data.\n· A: None are cloud providers.\n· B: Notebooks are Jupyter, Zeppelin, Hex, Deepnote.\n· C: Stream processors are Flink, Kafka Streams, Spark Structured Streaming.",
+      "explanations": {
+        "A": "None are cloud providers.",
+        "B": "Notebooks are Jupyter, Zeppelin, Hex, Deepnote.",
+        "C": "Stream processors are Flink, Kafka Streams, Spark Structured Streaming.",
+        "D": "Correct. These tools let engineers express quality expectations in code — row counts, null rates, uniqueness, referential integrity, value ranges, accepted values, cross-column invariants. They run inside pipelines and fail fast when data violates expectations, often alerting or quarantining records. They are the 'testing framework' equivalent for data."
+      }
+    },
+    {
+      "id": "epso_duty_130",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 8",
+      "topic": "data_quality",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Fitness for use",
+      "figures": [],
+      "question": "In data-quality theory, 'fitness for use' implies that quality is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Absolute — there is a single universal quality standard"
+        },
+        {
+          "letter": "B",
+          "text": "Defined entirely by the originating system's vendor"
+        },
+        {
+          "letter": "C",
+          "text": "Relative to the intended purpose of the data — the same dataset can be fit for one use and unfit for another"
+        },
+        {
+          "letter": "D",
+          "text": "Synonymous with high precision"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. 'Fitness for use' (Juran) is the core insight of modern DQ: quality is context-dependent. Customer addresses good enough for targeted marketing may be unfit for legal notifications. DQ programmes therefore define quality by use case, with KPIs mapped to business purposes — not by a universal bar.\n· A: Absolute quality doesn't make sense across contexts — a dataset sufficient for a trend estimate may be unfit for billing.\n· B: Vendors describe the product; fitness is judged by the user in their context.\n· D: Precision is one dimension; fitness is the integration of multiple dimensions against the purpose.",
+      "explanations": {
+        "A": "Absolute quality doesn't make sense across contexts — a dataset sufficient for a trend estimate may be unfit for billing.",
+        "B": "Vendors describe the product; fitness is judged by the user in their context.",
+        "C": "Correct. 'Fitness for use' (Juran) is the core insight of modern DQ: quality is context-dependent. Customer addresses good enough for targeted marketing may be unfit for legal notifications. DQ programmes therefore define quality by use case, with KPIs mapped to business purposes — not by a universal bar.",
+        "D": "Precision is one dimension; fitness is the integration of multiple dimensions against the purpose."
+      }
+    },
+    {
+      "id": "epso_duty_131",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 9",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Record linkage",
+      "figures": [],
+      "question": "Record linkage (also called entity resolution) is the process of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Cryptographically signing each record"
+        },
+        {
+          "letter": "B",
+          "text": "Linking database tables via foreign keys"
+        },
+        {
+          "letter": "C",
+          "text": "Identifying and matching records that refer to the same real-world entity across one or several data sources"
+        },
+        {
+          "letter": "D",
+          "text": "Compressing duplicate rows with run-length encoding"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Record linkage identifies pairs of records that, despite differences in spelling, format or data quality, refer to the same person, organisation, product or location. Deterministic rules (exact match on keys) are combined with probabilistic methods (Fellegi-Sunter) and, increasingly, ML classifiers. It is central to MDM, fraud detection and census/statistics.\n· A: Signing is a security / integrity operation, unrelated.\n· B: Foreign keys link by design; record linkage tackles the harder case where there's no shared key.\n· D: RLE is a compression technique, not a DQ concept.",
+      "explanations": {
+        "A": "Signing is a security / integrity operation, unrelated.",
+        "B": "Foreign keys link by design; record linkage tackles the harder case where there's no shared key.",
+        "C": "Correct. Record linkage identifies pairs of records that, despite differences in spelling, format or data quality, refer to the same person, organisation, product or location. Deterministic rules (exact match on keys) are combined with probabilistic methods (Fellegi-Sunter) and, increasingly, ML classifiers. It is central to MDM, fraud detection and census/statistics.",
+        "D": "RLE is a compression technique, not a DQ concept."
+      }
+    },
+    {
+      "id": "epso_duty_132",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 10",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "DQ scorecard",
+      "figures": [],
+      "question": "A 'data-quality scorecard' summarises:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "CPU usage of analytics clusters"
+        },
+        {
+          "letter": "B",
+          "text": "A set of DQ KPIs (completeness, accuracy, consistency, timeliness …) scored and tracked over time"
+        },
+        {
+          "letter": "C",
+          "text": "The outcome of GDPR fines in the last year"
+        },
+        {
+          "letter": "D",
+          "text": "The number of Kafka messages per day"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. A DQ scorecard presents a curated set of quality KPIs by domain (or by critical dataset), with traffic-light thresholds and trends. It gives governance bodies an at-a-glance view of where quality is improving or degrading, and drives investment prioritisation. It's the BI-for-DQ.\n· A: CPU usage is an infrastructure metric.\n· C: Fines are enforcement metrics — separate from internal DQ tracking.\n· D: Kafka throughput is a platform metric.",
+      "explanations": {
+        "A": "CPU usage is an infrastructure metric.",
+        "B": "Correct. A DQ scorecard presents a curated set of quality KPIs by domain (or by critical dataset), with traffic-light thresholds and trends. It gives governance bodies an at-a-glance view of where quality is improving or degrading, and drives investment prioritisation. It's the BI-for-DQ.",
+        "C": "Fines are enforcement metrics — separate from internal DQ tracking.",
+        "D": "Kafka throughput is a platform metric."
+      }
+    },
+    {
+      "id": "epso_duty_133",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 2",
+      "topic": "data_security",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "RBAC vs ABAC",
+      "figures": [],
+      "question": "What is the primary difference between RBAC and ABAC access-control models?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "RBAC assigns permissions via roles; ABAC evaluates attributes of subject, resource, action and context in policy rules"
+        },
+        {
+          "letter": "B",
+          "text": "RBAC is deprecated; ABAC is mandatory under GDPR"
+        },
+        {
+          "letter": "C",
+          "text": "RBAC applies to SQL; ABAC applies to NoSQL only"
+        },
+        {
+          "letter": "D",
+          "text": "RBAC requires biometric login; ABAC does not"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. RBAC (Role-Based Access Control) groups permissions into roles that users inherit. ABAC (Attribute-Based Access Control) evaluates policies on attributes of the subject (department, clearance), the resource (classification, owner), the action (read, write) and the context (time, location, risk score). ABAC is more flexible and expressive; RBAC is simpler and easier to audit. Modern systems often combine both (RBAC for baseline, ABAC for fine-grained rules).\n· B: GDPR mandates appropriate technical measures but does not prescribe RBAC vs ABAC. Both are valid.\n· C: Both models are technology-neutral.\n· D: Biometrics are an authentication method, orthogonal to access-control models.",
+      "explanations": {
+        "A": "Correct. RBAC (Role-Based Access Control) groups permissions into roles that users inherit. ABAC (Attribute-Based Access Control) evaluates policies on attributes of the subject (department, clearance), the resource (classification, owner), the action (read, write) and the context (time, location, risk score). ABAC is more flexible and expressive; RBAC is simpler and easier to audit. Modern systems often combine both (RBAC for baseline, ABAC for fine-grained rules).",
+        "B": "GDPR mandates appropriate technical measures but does not prescribe RBAC vs ABAC. Both are valid.",
+        "C": "Both models are technology-neutral.",
+        "D": "Biometrics are an authentication method, orthogonal to access-control models."
+      }
+    },
+    {
+      "id": "epso_duty_134",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 3",
+      "topic": "data_security",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Encryption at rest vs in transit",
+      "figures": [],
+      "question": "Encryption 'in transit' protects data while it is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Stored on disk in a database"
+        },
+        {
+          "letter": "B",
+          "text": "Moving over a network between systems"
+        },
+        {
+          "letter": "C",
+          "text": "Being displayed on a screen"
+        },
+        {
+          "letter": "D",
+          "text": "Being physically transported by courier"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Encryption in transit protects data moving between systems, typically via TLS (HTTPS) or IPsec. Both at-rest and in-transit encryption are recommended baseline controls for personal data under GDPR Art. 32 and are almost always required for sensitive public-sector systems.\n· A: Storage-level encryption is 'at rest' — applied while the data sits on disk or in backup.\n· C: Display-layer protection is more about screen masking / UI controls than encryption.\n· D: Physical courier protection is 'physical security', not cryptographic in-transit encryption.",
+      "explanations": {
+        "A": "Storage-level encryption is 'at rest' — applied while the data sits on disk or in backup.",
+        "B": "Correct. Encryption in transit protects data moving between systems, typically via TLS (HTTPS) or IPsec. Both at-rest and in-transit encryption are recommended baseline controls for personal data under GDPR Art. 32 and are almost always required for sensitive public-sector systems.",
+        "C": "Display-layer protection is more about screen masking / UI controls than encryption.",
+        "D": "Physical courier protection is 'physical security', not cryptographic in-transit encryption."
+      }
+    },
+    {
+      "id": "epso_duty_135",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 4",
+      "topic": "data_security",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DPIA Art. 35",
+      "figures": [],
+      "question": "Under GDPR Art. 35, a DPIA must be carried out when processing is likely to result in:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A high risk to the rights and freedoms of natural persons"
+        },
+        {
+          "letter": "B",
+          "text": "A marketing gain for the controller"
+        },
+        {
+          "letter": "C",
+          "text": "Any level of technical complexity"
+        },
+        {
+          "letter": "D",
+          "text": "A financial loss for the processor"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Art. 35(1) mandates a DPIA whenever processing, especially using new technologies, is 'likely to result in a high risk to the rights and freedoms of natural persons'. Art. 35(3) adds specific triggers: systematic and extensive profiling producing legal effects, large-scale special-category processing, and systematic monitoring of publicly accessible areas. National DPAs publish 'blacklists' and 'whitelists' to help controllers decide.\n· B: Commercial gain is irrelevant to the DPIA threshold.\n· C: Complexity alone does not trigger a DPIA.\n· D: Loss to the processor is a commercial risk, not a DPIA trigger.",
+      "explanations": {
+        "A": "Correct. Art. 35(1) mandates a DPIA whenever processing, especially using new technologies, is 'likely to result in a high risk to the rights and freedoms of natural persons'. Art. 35(3) adds specific triggers: systematic and extensive profiling producing legal effects, large-scale special-category processing, and systematic monitoring of publicly accessible areas. National DPAs publish 'blacklists' and 'whitelists' to help controllers decide.",
+        "B": "Commercial gain is irrelevant to the DPIA threshold.",
+        "C": "Complexity alone does not trigger a DPIA.",
+        "D": "Loss to the processor is a commercial risk, not a DPIA trigger."
+      }
+    },
+    {
+      "id": "epso_duty_136",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 5",
+      "topic": "data_security",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "GDPR Art. 32",
+      "figures": [],
+      "question": "Art. 32 GDPR on security of processing requires measures 'appropriate to the risk', providing as examples:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Only passwords longer than 12 characters"
+        },
+        {
+          "letter": "B",
+          "text": "Using blockchain for every record"
+        },
+        {
+          "letter": "C",
+          "text": "Publishing all system logs openly"
+        },
+        {
+          "letter": "D",
+          "text": "Pseudonymisation and encryption of personal data; ongoing confidentiality, integrity, availability and resilience; ability to restore in a timely manner; regular testing"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Art. 32(1) lists examples of appropriate measures: pseudonymisation and encryption; ensuring ongoing confidentiality, integrity, availability and resilience; ability to restore availability and access in a timely manner after an incident; and a process for regularly testing, assessing and evaluating the effectiveness of the measures. Note the CIA triad sitting underneath.\n· A: Art. 32 doesn't prescribe specific password lengths.\n· B: Blockchain is neither required nor sufficient — Art. 32 is technology-neutral.\n· C: Publishing logs openly would typically violate confidentiality.",
+      "explanations": {
+        "A": "Art. 32 doesn't prescribe specific password lengths.",
+        "B": "Blockchain is neither required nor sufficient — Art. 32 is technology-neutral.",
+        "C": "Publishing logs openly would typically violate confidentiality.",
+        "D": "Correct. Art. 32(1) lists examples of appropriate measures: pseudonymisation and encryption; ensuring ongoing confidentiality, integrity, availability and resilience; ability to restore availability and access in a timely manner after an incident; and a process for regularly testing, assessing and evaluating the effectiveness of the measures. Note the CIA triad sitting underneath."
+      }
+    },
+    {
+      "id": "epso_duty_137",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 6",
+      "topic": "data_security",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Pseudonymisation Art. 4(5)",
+      "figures": [],
+      "question": "Art. 4(5) GDPR defines pseudonymisation as processing such that personal data can no longer be attributed to a specific data subject:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Under any circumstances whatsoever"
+        },
+        {
+          "letter": "B",
+          "text": "Without the use of additional information, which is kept separately and subject to technical and organisational measures"
+        },
+        {
+          "letter": "C",
+          "text": "Only by the data subject themselves"
+        },
+        {
+          "letter": "D",
+          "text": "Only by the national data-protection authority"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Pseudonymisation is explicitly reversible — with the separately held 'additional information' (e.g. a mapping table / key), the subject can be identified again. That's precisely why pseudonymised data stays personal data and remains in GDPR scope. The value of pseudonymisation is as a safeguard under Arts. 25 and 32, reducing risk of linkability.\n· A: If re-identification were impossible under all circumstances, it would be anonymisation, not pseudonymisation.\n· C: The capability is held by whoever controls the additional information (typically the controller), not by the data subject alone.\n· D: DPAs have no special reversal capability — they investigate compliance.",
+      "explanations": {
+        "A": "If re-identification were impossible under all circumstances, it would be anonymisation, not pseudonymisation.",
+        "B": "Correct. Pseudonymisation is explicitly reversible — with the separately held 'additional information' (e.g. a mapping table / key), the subject can be identified again. That's precisely why pseudonymised data stays personal data and remains in GDPR scope. The value of pseudonymisation is as a safeguard under Arts. 25 and 32, reducing risk of linkability.",
+        "C": "The capability is held by whoever controls the additional information (typically the controller), not by the data subject alone.",
+        "D": "DPAs have no special reversal capability — they investigate compliance."
+      }
+    },
+    {
+      "id": "epso_duty_138",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 7",
+      "topic": "data_security",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Least privilege",
+      "figures": [],
+      "question": "The 'principle of least privilege' in access control means:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Users and systems are granted only the permissions strictly required to perform their tasks"
+        },
+        {
+          "letter": "B",
+          "text": "All users have administrator rights by default"
+        },
+        {
+          "letter": "C",
+          "text": "Access is always granted for 24 hours and then revoked"
+        },
+        {
+          "letter": "D",
+          "text": "Permissions are granted in alphabetical order"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Least privilege (Saltzer & Schroeder, 1975) requires that every user, service account or process operates with the minimum permissions needed for its function. This reduces blast radius on compromise and limits accidental damage. It complements separation of duties and underpins modern zero-trust and JIT-access patterns.\n· B: Blanket admin rights is the opposite of least privilege — and a security antipattern.\n· C: Time-bounding access (just-in-time) is related but not the definition of least privilege.\n· D: Alphabetical ordering has no security relevance.",
+      "explanations": {
+        "A": "Correct. Least privilege (Saltzer & Schroeder, 1975) requires that every user, service account or process operates with the minimum permissions needed for its function. This reduces blast radius on compromise and limits accidental damage. It complements separation of duties and underpins modern zero-trust and JIT-access patterns.",
+        "B": "Blanket admin rights is the opposite of least privilege — and a security antipattern.",
+        "C": "Time-bounding access (just-in-time) is related but not the definition of least privilege.",
+        "D": "Alphabetical ordering has no security relevance."
+      }
+    },
+    {
+      "id": "epso_duty_139",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 8",
+      "topic": "data_security",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Differential privacy",
+      "figures": [],
+      "question": "'Differential privacy' is a privacy-protection technique that:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Encrypts all data end-to-end with quantum-resistant algorithms"
+        },
+        {
+          "letter": "B",
+          "text": "Adds calibrated statistical noise to query outputs so that the presence or absence of any single individual does not measurably affect the result"
+        },
+        {
+          "letter": "C",
+          "text": "Removes direct identifiers and replaces them with hashes"
+        },
+        {
+          "letter": "D",
+          "text": "Is equivalent to pseudonymisation under GDPR"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Differential privacy (Dwork et al., 2006) is a mathematical framework guaranteeing that the inclusion or exclusion of any single individual in a dataset changes the probability of any query outcome by at most a bounded factor (ε). In practice, DP mechanisms add carefully calibrated noise (Laplace, Gaussian) to query outputs or to statistics. It is used by the US Census 2020, Apple and Google for telemetry, and is increasingly discussed for EU data-space secondary use.\n· A: Differential privacy is not an encryption scheme — it is a statistical property of outputs.\n· C: Direct-identifier hashing is pseudonymisation, not DP.\n· D: DP is a stronger, quantitative privacy guarantee — not equivalent to the legal concept of pseudonymisation.",
+      "explanations": {
+        "A": "Differential privacy is not an encryption scheme — it is a statistical property of outputs.",
+        "B": "Correct. Differential privacy (Dwork et al., 2006) is a mathematical framework guaranteeing that the inclusion or exclusion of any single individual in a dataset changes the probability of any query outcome by at most a bounded factor (ε). In practice, DP mechanisms add carefully calibrated noise (Laplace, Gaussian) to query outputs or to statistics. It is used by the US Census 2020, Apple and Google for telemetry, and is increasingly discussed for EU data-space secondary use.",
+        "C": "Direct-identifier hashing is pseudonymisation, not DP.",
+        "D": "DP is a stronger, quantitative privacy guarantee — not equivalent to the legal concept of pseudonymisation."
+      }
+    },
+    {
+      "id": "epso_duty_140",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 9",
+      "topic": "data_security",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Zero trust",
+      "figures": [],
+      "question": "The 'zero-trust' security model is best summarised by the slogan:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "'Trust but verify'"
+        },
+        {
+          "letter": "B",
+          "text": "'Never trust, always verify' — no implicit trust based on network location"
+        },
+        {
+          "letter": "C",
+          "text": "'Deny by default, allow by exception' only for databases"
+        },
+        {
+          "letter": "D",
+          "text": "'Always trust internal traffic'"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Zero trust abandons the perimeter assumption that 'inside the corporate network = safe'. Every request — internal or external — is authenticated, authorised and continuously verified against identity, device posture, and context. The NIST SP 800-207 model codifies the approach; mTLS, short-lived credentials and per-request policy decisions are hallmarks.\n· A: 'Trust but verify' is the older perimeter-based philosophy. Zero-trust drops the initial trust part.\n· C: Deny-by-default is a firewall principle, not the full zero-trust story.\n· D: Trusting internal traffic is precisely what zero trust rejects.",
+      "explanations": {
+        "A": "'Trust but verify' is the older perimeter-based philosophy. Zero-trust drops the initial trust part.",
+        "B": "Correct. Zero trust abandons the perimeter assumption that 'inside the corporate network = safe'. Every request — internal or external — is authenticated, authorised and continuously verified against identity, device posture, and context. The NIST SP 800-207 model codifies the approach; mTLS, short-lived credentials and per-request policy decisions are hallmarks.",
+        "C": "Deny-by-default is a firewall principle, not the full zero-trust story.",
+        "D": "Trusting internal traffic is precisely what zero trust rejects."
+      }
+    },
+    {
+      "id": "epso_duty_141",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Security · 10",
+      "topic": "data_security",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "ISO 27001",
+      "figures": [],
+      "question": "ISO/IEC 27001 is primarily:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A standard specifying requirements for an Information Security Management System (ISMS)"
+        },
+        {
+          "letter": "B",
+          "text": "A standard for data-quality characteristics"
+        },
+        {
+          "letter": "C",
+          "text": "An EU Directive on personal-data protection"
+        },
+        {
+          "letter": "D",
+          "text": "A vocabulary for geospatial data"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. ISO/IEC 27001 sets requirements for an ISMS — an organisation-wide, risk-based management system for information security. It is the basis for certification audits. ISO/IEC 27002 (accompanying) provides a catalogue of security controls. Together they structure most public-sector and enterprise security programmes.\n· B: Data-quality characteristics are ISO/IEC 25012.\n· C: GDPR is the personal-data instrument, not ISO 27001.\n· D: Geospatial vocabularies include ISO 19115 (metadata) and others — not 27001.",
+      "explanations": {
+        "A": "Correct. ISO/IEC 27001 sets requirements for an ISMS — an organisation-wide, risk-based management system for information security. It is the basis for certification audits. ISO/IEC 27002 (accompanying) provides a catalogue of security controls. Together they structure most public-sector and enterprise security programmes.",
+        "B": "Data-quality characteristics are ISO/IEC 25012.",
+        "C": "GDPR is the personal-data instrument, not ISO 27001.",
+        "D": "Geospatial vocabularies include ISO 19115 (metadata) and others — not 27001."
+      }
+    },
+    {
+      "id": "epso_duty_142",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 2",
+      "topic": "advanced_analytics",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Supervised vs unsupervised",
+      "figures": [],
+      "question": "Clustering customers into segments without predefined labels is an example of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Unsupervised learning"
+        },
+        {
+          "letter": "B",
+          "text": "Supervised learning"
+        },
+        {
+          "letter": "C",
+          "text": "Reinforcement learning"
+        },
+        {
+          "letter": "D",
+          "text": "Federated learning"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Clustering (k-means, DBSCAN, hierarchical, Gaussian mixtures) is the canonical unsupervised task: discover structure in data without given labels. Results need interpretation — the algorithm tells you 'here are groups' but not 'this group = high-value customers'. Anomaly detection and association rules are other unsupervised families.\n· B: Supervised learning requires labelled training examples (input → target).\n· C: Reinforcement learning is sequential decision-making with rewards (games, robotics, RLHF).\n· D: Federated learning is a distributed training method, not a task type.",
+      "explanations": {
+        "A": "Correct. Clustering (k-means, DBSCAN, hierarchical, Gaussian mixtures) is the canonical unsupervised task: discover structure in data without given labels. Results need interpretation — the algorithm tells you 'here are groups' but not 'this group = high-value customers'. Anomaly detection and association rules are other unsupervised families.",
+        "B": "Supervised learning requires labelled training examples (input → target).",
+        "C": "Reinforcement learning is sequential decision-making with rewards (games, robotics, RLHF).",
+        "D": "Federated learning is a distributed training method, not a task type."
+      }
+    },
+    {
+      "id": "epso_duty_143",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 3",
+      "topic": "advanced_analytics",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Train/validate/test",
+      "figures": [],
+      "question": "In ML best practice, the 'test set' is primarily used for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Tuning hyperparameters during model development"
+        },
+        {
+          "letter": "B",
+          "text": "Fitting the model parameters"
+        },
+        {
+          "letter": "C",
+          "text": "Estimating the model's generalisation performance on unseen data, once only, after training and validation"
+        },
+        {
+          "letter": "D",
+          "text": "Computing feature importances"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The test set is held out, untouched during training and tuning, and used once at the end to report an unbiased estimate of generalisation performance. Repeated re-use of the test set effectively turns it into a validation set, biasing the reported metric.\n· A: Hyperparameter tuning is done on the validation set. Using the test set for tuning leaks information and inflates apparent performance.\n· B: Model parameters are fit on the training set.\n· D: Feature importances are computed on training data (or validation), not on the test set.",
+      "explanations": {
+        "A": "Hyperparameter tuning is done on the validation set. Using the test set for tuning leaks information and inflates apparent performance.",
+        "B": "Model parameters are fit on the training set.",
+        "C": "Correct. The test set is held out, untouched during training and tuning, and used once at the end to report an unbiased estimate of generalisation performance. Repeated re-use of the test set effectively turns it into a validation set, biasing the reported metric.",
+        "D": "Feature importances are computed on training data (or validation), not on the test set."
+      }
+    },
+    {
+      "id": "epso_duty_144",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 4",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Precision vs recall",
+      "figures": [],
+      "question": "A fraud-detection model with high recall but low precision will:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Miss many fraud cases while producing very few false alarms"
+        },
+        {
+          "letter": "B",
+          "text": "Have high accuracy on non-fraud but low on fraud"
+        },
+        {
+          "letter": "C",
+          "text": "Catch most fraud cases but raise many false alarms"
+        },
+        {
+          "letter": "D",
+          "text": "Produce no fraud alerts at all"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Recall = TP / (TP + FN) — the share of actual frauds captured. Precision = TP / (TP + FP) — the share of alerts that are true frauds. High recall / low precision means the model catches most fraud (few false negatives) but with many false alarms (many false positives). In fraud detection, this is often acceptable because missing fraud is costlier than investigating a false alert.\n· A: That would be low recall + high precision — the opposite.\n· B: That's an accuracy-on-subclasses claim, not the precision-recall trade-off.\n· D: No alerts at all would mean zero recall.",
+      "explanations": {
+        "A": "That would be low recall + high precision — the opposite.",
+        "B": "That's an accuracy-on-subclasses claim, not the precision-recall trade-off.",
+        "C": "Correct. Recall = TP / (TP + FN) — the share of actual frauds captured. Precision = TP / (TP + FP) — the share of alerts that are true frauds. High recall / low precision means the model catches most fraud (few false negatives) but with many false alarms (many false positives). In fraud detection, this is often acceptable because missing fraud is costlier than investigating a false alert.",
+        "D": "No alerts at all would mean zero recall."
+      }
+    },
+    {
+      "id": "epso_duty_145",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 5",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Overfitting",
+      "figures": [],
+      "question": "A model that achieves near-perfect training accuracy but significantly lower accuracy on a held-out test set is most likely:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Underfitting"
+        },
+        {
+          "letter": "B",
+          "text": "Perfectly calibrated"
+        },
+        {
+          "letter": "C",
+          "text": "Overfitting — memorising training data, failing to generalise"
+        },
+        {
+          "letter": "D",
+          "text": "Suffering from label noise only on the test set"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Overfitting happens when a model captures idiosyncratic noise in the training data instead of underlying signal. Symptoms: training loss near zero while validation / test loss is high. Remedies include regularisation (L1/L2, dropout), simpler models, more data, data augmentation, early stopping and cross-validation.\n· A: Underfitting shows poor performance on both training and test — the model is too simple.\n· B: Calibration is about predicted probabilities matching observed frequencies — different concept.\n· D: Label noise on the test set would lower apparent performance across the board, not just the gap between train and test.",
+      "explanations": {
+        "A": "Underfitting shows poor performance on both training and test — the model is too simple.",
+        "B": "Calibration is about predicted probabilities matching observed frequencies — different concept.",
+        "C": "Correct. Overfitting happens when a model captures idiosyncratic noise in the training data instead of underlying signal. Symptoms: training loss near zero while validation / test loss is high. Remedies include regularisation (L1/L2, dropout), simpler models, more data, data augmentation, early stopping and cross-validation.",
+        "D": "Label noise on the test set would lower apparent performance across the board, not just the gap between train and test."
+      }
+    },
+    {
+      "id": "epso_duty_146",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 6",
+      "topic": "advanced_analytics",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Classification vs regression",
+      "figures": [],
+      "question": "Predicting house prices in euros from features like size, location and age is an example of a:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Classification task"
+        },
+        {
+          "letter": "B",
+          "text": "Clustering task"
+        },
+        {
+          "letter": "C",
+          "text": "Regression task"
+        },
+        {
+          "letter": "D",
+          "text": "Reinforcement-learning task"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Regression predicts a continuous numeric target — prices, temperatures, energy demand. Common algorithms: linear regression, gradient-boosted trees (XGBoost, LightGBM), neural regression heads. Evaluation uses RMSE, MAE, R² — not classification metrics.\n· A: Classification predicts categorical labels (spam / not spam, fraud / not fraud).\n· B: Clustering groups without labels.\n· D: RL is sequential decisions under reward.",
+      "explanations": {
+        "A": "Classification predicts categorical labels (spam / not spam, fraud / not fraud).",
+        "B": "Clustering groups without labels.",
+        "C": "Correct. Regression predicts a continuous numeric target — prices, temperatures, energy demand. Common algorithms: linear regression, gradient-boosted trees (XGBoost, LightGBM), neural regression heads. Evaluation uses RMSE, MAE, R² — not classification metrics.",
+        "D": "RL is sequential decisions under reward."
+      }
+    },
+    {
+      "id": "epso_duty_147",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 7",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Bias in ML",
+      "figures": [],
+      "question": "Under AI Act Art. 10, which action best addresses bias in training data for a high-risk AI system intended to score job applicants?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Ignore demographic attributes and assume the model is fair"
+        },
+        {
+          "letter": "B",
+          "text": "Examine possible biases likely to affect fundamental rights, apply appropriate detection / prevention / mitigation measures, and document the choices"
+        },
+        {
+          "letter": "C",
+          "text": "Publish the training data openly to all applicants"
+        },
+        {
+          "letter": "D",
+          "text": "Exclude the model entirely — the AI Act bans all applicant-scoring systems"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. AI Act Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. Art. 10(5) even allows processing of special-category data strictly for bias monitoring and correction. Documentation of design choices is mandatory (Art. 10(2)(h)), feeding the technical documentation under Annex IV.\n· A: 'Fairness through unawareness' is a well-known failure mode: proxy features (postal code, school name) reintroduce the protected attribute implicitly. Ignoring is not mitigating.\n· C: Publishing training data openly would typically breach GDPR and other protections. It is not an AI Act requirement.\n· D: Applicant-scoring AI is high-risk (Annex III), not prohibited. Ban applies only to Art. 5 practices.",
+      "explanations": {
+        "A": "'Fairness through unawareness' is a well-known failure mode: proxy features (postal code, school name) reintroduce the protected attribute implicitly. Ignoring is not mitigating.",
+        "B": "Correct. AI Act Art. 10(2)(f) requires examination of possible biases likely to affect health, safety or fundamental rights, with appropriate detection, prevention and mitigation measures. Art. 10(5) even allows processing of special-category data strictly for bias monitoring and correction. Documentation of design choices is mandatory (Art. 10(2)(h)), feeding the technical documentation under Annex IV.",
+        "C": "Publishing training data openly would typically breach GDPR and other protections. It is not an AI Act requirement.",
+        "D": "Applicant-scoring AI is high-risk (Annex III), not prohibited. Ban applies only to Art. 5 practices."
+      }
+    },
+    {
+      "id": "epso_duty_148",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 8",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data augmentation",
+      "figures": [],
+      "question": "'Data augmentation' in ML typically refers to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Generating synthetic or transformed variants of training examples (e.g. image rotations, text paraphrases) to improve robustness and coverage"
+        },
+        {
+          "letter": "B",
+          "text": "Adding new labelled records by manual annotation"
+        },
+        {
+          "letter": "C",
+          "text": "Buying more data from an external vendor"
+        },
+        {
+          "letter": "D",
+          "text": "Encrypting the training set"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.\n· B: Manual annotation is data labelling, not augmentation.\n· C: Procurement of external data is data acquisition, not augmentation.\n· D: Encryption is a security control, not a data-augmentation technique.",
+      "explanations": {
+        "A": "Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.",
+        "B": "Manual annotation is data labelling, not augmentation.",
+        "C": "Procurement of external data is data acquisition, not augmentation.",
+        "D": "Encryption is a security control, not a data-augmentation technique."
+      }
+    },
+    {
+      "id": "epso_duty_149",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 9",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "MLOps",
+      "figures": [],
+      "question": "A model in production shows degraded accuracy several months after deployment. The most likely cause is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Data drift or concept drift — input distribution or the relationship between inputs and target has shifted"
+        },
+        {
+          "letter": "B",
+          "text": "The code was mis-compiled"
+        },
+        {
+          "letter": "C",
+          "text": "The training set was too large"
+        },
+        {
+          "letter": "D",
+          "text": "Unit tests failed at release time"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.\n· B: A compilation issue would typically produce immediate errors, not gradual accuracy decay.\n· C: Large training sets generally help, not hurt, unless they introduce noise or bias.\n· D: Failed tests would have blocked release.",
+      "explanations": {
+        "A": "Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.",
+        "B": "A compilation issue would typically produce immediate errors, not gradual accuracy decay.",
+        "C": "Large training sets generally help, not hurt, unless they introduce noise or bias.",
+        "D": "Failed tests would have blocked release."
+      }
+    },
+    {
+      "id": "epso_duty_150",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 10",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Federated learning",
+      "figures": [],
+      "question": "'Federated learning' trains ML models while:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Collecting all raw data in a central cloud store"
+        },
+        {
+          "letter": "B",
+          "text": "Keeping raw data on the devices / nodes and exchanging only model updates with a central aggregator"
+        },
+        {
+          "letter": "C",
+          "text": "Requiring every node to share its training set openly"
+        },
+        {
+          "letter": "D",
+          "text": "Preventing any collaborative model building"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.\n· A: Central data collection is the classical centralised paradigm — exactly what federated learning avoids.\n· C: That would defeat the privacy purpose — federated learning specifically keeps data local.\n· D: Federated learning is explicitly designed to enable collaborative model building across organisations.",
+      "explanations": {
+        "A": "Central data collection is the classical centralised paradigm — exactly what federated learning avoids.",
+        "B": "Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.",
+        "C": "That would defeat the privacy purpose — federated learning specifically keeps data local.",
+        "D": "Federated learning is explicitly designed to enable collaborative model building across organisations."
+      }
+    },
+    {
+      "id": "epso_duty_151",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 11",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Active vs passive collection",
+      "figures": [],
+      "question": "A public administration gathers citizen feedback through an online survey explicitly filled in by respondents. This is best described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Passive data collection from telemetry"
+        },
+        {
+          "letter": "B",
+          "text": "Change Data Capture from an operational database"
+        },
+        {
+          "letter": "C",
+          "text": "Web scraping of third-party sites"
+        },
+        {
+          "letter": "D",
+          "text": "Active data collection where the subject knowingly provides the data"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Active (or 'reactive') collection happens when the subject knowingly and deliberately provides data — surveys, forms, interviews, application submissions. It typically benefits from high semantic quality (the person knows what they mean) but suffers from response bias and limited scale. Passive collection, by contrast, observes behaviour without asking, with the opposite trade-offs.\n· A: Passive collection means data is captured without the subject actively supplying it — server logs, cookies, IoT telemetry, clickstreams. A survey is the opposite: the respondent deliberately submits answers.\n· B: CDC streams insert/update/delete events from a database log. It is a pipeline-level ingestion pattern, not a primary-collection method from human respondents.\n· C: Web scraping extracts data from third-party websites, usually without the data subject's direct involvement — a passive / secondary-source technique, not an online survey.",
+      "explanations": {
+        "A": "Passive collection means data is captured without the subject actively supplying it — server logs, cookies, IoT telemetry, clickstreams. A survey is the opposite: the respondent deliberately submits answers.",
+        "B": "CDC streams insert/update/delete events from a database log. It is a pipeline-level ingestion pattern, not a primary-collection method from human respondents.",
+        "C": "Web scraping extracts data from third-party websites, usually without the data subject's direct involvement — a passive / secondary-source technique, not an online survey.",
+        "D": "Correct. Active (or 'reactive') collection happens when the subject knowingly and deliberately provides data — surveys, forms, interviews, application submissions. It typically benefits from high semantic quality (the person knows what they mean) but suffers from response bias and limited scale. Passive collection, by contrast, observes behaviour without asking, with the opposite trade-offs."
+      }
+    },
+    {
+      "id": "epso_duty_152",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 12",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "API ingestion",
+      "figures": [],
+      "question": "An EU agency wants to pull new case decisions from an external partner every night. The partner exposes an HTTPS endpoint returning JSON. The most appropriate ingestion mechanism is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A scheduled job calling the partner's REST API and persisting the JSON responses"
+        },
+        {
+          "letter": "B",
+          "text": "Manually downloading PDFs and retyping them into a spreadsheet"
+        },
+        {
+          "letter": "C",
+          "text": "Mailing encrypted USB sticks on a weekly basis"
+        },
+        {
+          "letter": "D",
+          "text": "Installing a keylogger on the partner's workstation"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Scheduled API ingestion is the canonical pattern for periodic pulls from an external system: an orchestrator (Airflow, Dagster, cron) triggers a job at the agreed cadence, calls the REST endpoint with the right authentication, handles pagination and retries, and lands the raw JSON in the staging zone of the lake / warehouse. Incremental logic (since-last-run watermark) keeps the load light.\n· B: Manual retyping is slow, error-prone and breaks any data-quality guarantee. It is the antithesis of a modern ingestion pipeline and should never be the default answer.\n· C: Physical media exchange is a fallback only for air-gapped environments. For a partner already exposing an HTTPS API it adds latency, cost and security-handling overhead with no benefit.\n· D: Covert data capture on someone else's hardware is illegal and unethical — a CFAA-style offence in many jurisdictions and a breach of GDPR. It is never a legitimate ingestion method.",
+      "explanations": {
+        "A": "Correct. Scheduled API ingestion is the canonical pattern for periodic pulls from an external system: an orchestrator (Airflow, Dagster, cron) triggers a job at the agreed cadence, calls the REST endpoint with the right authentication, handles pagination and retries, and lands the raw JSON in the staging zone of the lake / warehouse. Incremental logic (since-last-run watermark) keeps the load light.",
+        "B": "Manual retyping is slow, error-prone and breaks any data-quality guarantee. It is the antithesis of a modern ingestion pipeline and should never be the default answer.",
+        "C": "Physical media exchange is a fallback only for air-gapped environments. For a partner already exposing an HTTPS API it adds latency, cost and security-handling overhead with no benefit.",
+        "D": "Covert data capture on someone else's hardware is illegal and unethical — a CFAA-style offence in many jurisdictions and a breach of GDPR. It is never a legitimate ingestion method."
+      }
+    },
+    {
+      "id": "epso_duty_153",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 13",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Web scraping legality",
+      "figures": [],
+      "question": "An analytics team plans to scrape publicly visible pages of an EU-based commercial website to build a market dataset. Which consideration best captures the primary legal / ethical risks?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Scraping publicly visible content is always lawful regardless of terms of service, robots.txt or copyright"
+        },
+        {
+          "letter": "B",
+          "text": "Only latency against the target server matters"
+        },
+        {
+          "letter": "C",
+          "text": "Scraping is forbidden across the EU by the Data Act"
+        },
+        {
+          "letter": "D",
+          "text": "Robots.txt, the site's terms of service, copyright / sui generis database rights, and GDPR (if the pages contain personal data) all have to be checked before scraping"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. A compliant scraping plan checks at least four layers: (1) robots.txt and the site's ToS (contractual constraints); (2) copyright on the content itself; (3) the sui generis database right that protects substantial investment in a database even when individual items aren't copyrighted; (4) GDPR lawful basis if the pages include personal data (names, contact details, reviews). Ignoring any of them risks injunctions, fines and reputational damage.\n· A: Public visibility is not the same as unlimited permission. Courts (CJEU · hiQ-style US cases) and DPAs have repeatedly underlined that ToS, copyright (Directive 2001/29), the sui generis database right (Dir. 96/9) and GDPR all still apply. The 'if I can see it, I can take it' heuristic is wrong.\n· B: Polite crawling (rate-limits, caching, off-peak) is good citizenship but it is not the main legal question. The legal analysis above dominates.\n· C: The Data Act does not blanket-ban web scraping. It targets product/service data-access rights and cloud-switching, not third-party site harvesting.",
+      "explanations": {
+        "A": "Public visibility is not the same as unlimited permission. Courts (CJEU · hiQ-style US cases) and DPAs have repeatedly underlined that ToS, copyright (Directive 2001/29), the sui generis database right (Dir. 96/9) and GDPR all still apply. The 'if I can see it, I can take it' heuristic is wrong.",
+        "B": "Polite crawling (rate-limits, caching, off-peak) is good citizenship but it is not the main legal question. The legal analysis above dominates.",
+        "C": "The Data Act does not blanket-ban web scraping. It targets product/service data-access rights and cloud-switching, not third-party site harvesting.",
+        "D": "Correct. A compliant scraping plan checks at least four layers: (1) robots.txt and the site's ToS (contractual constraints); (2) copyright on the content itself; (3) the sui generis database right that protects substantial investment in a database even when individual items aren't copyrighted; (4) GDPR lawful basis if the pages include personal data (names, contact details, reviews). Ignoring any of them risks injunctions, fines and reputational damage."
+      }
+    },
+    {
+      "id": "epso_duty_154",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 14",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Sensor / IoT logs",
+      "figures": [],
+      "question": "An environmental-monitoring network across EU Member States streams temperature, humidity and CO2 readings every 10 seconds from thousands of sensors. The primary challenge for the ingestion layer is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Handling high-volume, high-velocity semi-structured telemetry with out-of-order and late-arriving events"
+        },
+        {
+          "letter": "B",
+          "text": "Converting every reading to PDF for archival"
+        },
+        {
+          "letter": "C",
+          "text": "Running OLTP-style two-phase-commit transactions for each reading"
+        },
+        {
+          "letter": "D",
+          "text": "Forcing all sensors to synchronise on a single SQL Server instance"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. IoT / sensor feeds are the textbook high-volume / high-velocity case: many producers, short payloads, frequent network hiccups, events that arrive out of order because of battery-saving buffering or connectivity loss. The ingestion layer (Kafka, MQTT broker, Kinesis) must scale horizontally and the stream-processing layer (Flink, Spark Structured Streaming) needs proper event-time semantics, watermarks and late-event handling.\n· B: PDF is a document-presentation format, not a telemetry pipeline. It would be absurdly heavy for a 10-second cadence.\n· C: Two-phase commit is designed for strict OLTP consistency across a few systems. It scales poorly and would collapse under IoT throughput. Telemetry is typically append-only with at-least-once semantics.\n· D: A single SQL Server instance cannot absorb sensor streams from thousands of devices at sub-minute cadence. Distributed brokers and horizontally scalable stores exist precisely for this workload.",
+      "explanations": {
+        "A": "Correct. IoT / sensor feeds are the textbook high-volume / high-velocity case: many producers, short payloads, frequent network hiccups, events that arrive out of order because of battery-saving buffering or connectivity loss. The ingestion layer (Kafka, MQTT broker, Kinesis) must scale horizontally and the stream-processing layer (Flink, Spark Structured Streaming) needs proper event-time semantics, watermarks and late-event handling.",
+        "B": "PDF is a document-presentation format, not a telemetry pipeline. It would be absurdly heavy for a 10-second cadence.",
+        "C": "Two-phase commit is designed for strict OLTP consistency across a few systems. It scales poorly and would collapse under IoT throughput. Telemetry is typically append-only with at-least-once semantics.",
+        "D": "A single SQL Server instance cannot absorb sensor streams from thousands of devices at sub-minute cadence. Distributed brokers and horizontally scalable stores exist precisely for this workload."
+      }
+    },
+    {
+      "id": "epso_duty_155",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 15",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Internal vs external",
+      "figures": [],
+      "question": "A European agency's data platform ingests (a) transactions from its own case-management system and (b) Eurostat reference indicators. These two feeds are best classified as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Both external sources"
+        },
+        {
+          "letter": "B",
+          "text": "Both internal sources"
+        },
+        {
+          "letter": "C",
+          "text": "Internal (case-management) and external (Eurostat) sources"
+        },
+        {
+          "letter": "D",
+          "text": "External (case-management) and internal (Eurostat) sources"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The classical taxonomy splits sources by who owns and operates them relative to the consuming organisation. Internal sources are under the organisation's own control (ERP, CRM, case systems, intranet logs). External sources are operated by someone else (partners, open-data portals, commercial data providers, social media). The distinction drives governance decisions: licensing, data-sharing agreements, SLA expectations, refresh cadence.\n· A: The case-management system belongs to the agency itself — it is under the agency's control, governance and ownership. Treating it as external misses the key distinction, which is who operates and governs the source.\n· B: Eurostat is a separate EU body with its own data ownership and governance. It is external to the agency even though both are EU institutions.\n· D: Reversed. The agency's own case system is internal; Eurostat is external.",
+      "explanations": {
+        "A": "The case-management system belongs to the agency itself — it is under the agency's control, governance and ownership. Treating it as external misses the key distinction, which is who operates and governs the source.",
+        "B": "Eurostat is a separate EU body with its own data ownership and governance. It is external to the agency even though both are EU institutions.",
+        "C": "Correct. The classical taxonomy splits sources by who owns and operates them relative to the consuming organisation. Internal sources are under the organisation's own control (ERP, CRM, case systems, intranet logs). External sources are operated by someone else (partners, open-data portals, commercial data providers, social media). The distinction drives governance decisions: licensing, data-sharing agreements, SLA expectations, refresh cadence.",
+        "D": "Reversed. The agency's own case system is internal; Eurostat is external."
+      }
+    },
+    {
+      "id": "epso_duty_156",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 16",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Structured vs semi vs unstructured",
+      "figures": [],
+      "question": "Which triple of data sources is correctly classified as structured · semi-structured · unstructured?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "JSON API payload · CSV export · PostgreSQL table"
+        },
+        {
+          "letter": "B",
+          "text": "PostgreSQL table · scanned PDF contracts · JSON API payload"
+        },
+        {
+          "letter": "C",
+          "text": "Scanned PDF contracts · CSV export · PostgreSQL table"
+        },
+        {
+          "letter": "D",
+          "text": "PostgreSQL table · JSON API payload · scanned PDF contracts"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Structured data has a predefined, rigid schema where every record fits the same fields — relational tables (PostgreSQL, Oracle) are the archetype. Semi-structured data carries self-describing markup / keys but allows flexible shapes — JSON, XML, Avro. Unstructured data has no inherent record schema — free-text documents, scanned PDFs, images, audio, video. The three have very different storage, processing and search requirements.\n· A: Wrong labelling. A CSV export is structured (tabular with a fixed schema), not semi-structured. JSON is semi-structured. A PostgreSQL table is structured, not unstructured.\n· B: A PostgreSQL table is structured (not semi-structured); a scanned PDF is unstructured (not structured). Two labels are swapped.\n· C: Scanned PDFs are unstructured, not structured. The order here is reversed.",
+      "explanations": {
+        "A": "Wrong labelling. A CSV export is structured (tabular with a fixed schema), not semi-structured. JSON is semi-structured. A PostgreSQL table is structured, not unstructured.",
+        "B": "A PostgreSQL table is structured (not semi-structured); a scanned PDF is unstructured (not structured). Two labels are swapped.",
+        "C": "Scanned PDFs are unstructured, not structured. The order here is reversed.",
+        "D": "Correct. Structured data has a predefined, rigid schema where every record fits the same fields — relational tables (PostgreSQL, Oracle) are the archetype. Semi-structured data carries self-describing markup / keys but allows flexible shapes — JSON, XML, Avro. Unstructured data has no inherent record schema — free-text documents, scanned PDFs, images, audio, video. The three have very different storage, processing and search requirements."
+      }
+    },
+    {
+      "id": "epso_duty_157",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 17",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Streaming vs batch sources",
+      "figures": [],
+      "question": "Which statement best distinguishes a streaming source from a batch source at ingestion time?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Streaming sources deliver events continuously as they occur, typically via a log or message queue; batch sources expose bounded snapshots or extracts at discrete intervals"
+        },
+        {
+          "letter": "B",
+          "text": "Streaming sources produce only CSV; batch sources produce only JSON"
+        },
+        {
+          "letter": "C",
+          "text": "Streaming sources are always internal; batch sources are always external"
+        },
+        {
+          "letter": "D",
+          "text": "Streaming sources use HTTPS; batch sources use FTP"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. The defining difference is not format or transport but arrival pattern. Streaming sources emit events continuously, event-by-event (Kafka topics, CDC logs, webhook feeds, sensor streams). Batch sources expose bounded chunks at discrete intervals (nightly dumps, hourly file drops, scheduled extracts). This shapes every downstream choice: ingest mechanism, storage layout, latency SLA, and recovery strategy.\n· B: Format is orthogonal to the batch / streaming dichotomy. Kafka topics carry JSON / Avro / Protobuf; batch extracts come in CSV / Parquet / JSON alike.\n· C: Internality is orthogonal. A partner may push a webhook stream (external streaming); an internal finance system may drop nightly CSVs (internal batch).\n· D: Protocol is orthogonal. Streaming might ride on Kafka, MQTT, gRPC, or HTTP; batch on SFTP, S3 object listing, or an API.",
+      "explanations": {
+        "A": "Correct. The defining difference is not format or transport but arrival pattern. Streaming sources emit events continuously, event-by-event (Kafka topics, CDC logs, webhook feeds, sensor streams). Batch sources expose bounded chunks at discrete intervals (nightly dumps, hourly file drops, scheduled extracts). This shapes every downstream choice: ingest mechanism, storage layout, latency SLA, and recovery strategy.",
+        "B": "Format is orthogonal to the batch / streaming dichotomy. Kafka topics carry JSON / Avro / Protobuf; batch extracts come in CSV / Parquet / JSON alike.",
+        "C": "Internality is orthogonal. A partner may push a webhook stream (external streaming); an internal finance system may drop nightly CSVs (internal batch).",
+        "D": "Protocol is orthogonal. Streaming might ride on Kafka, MQTT, gRPC, or HTTP; batch on SFTP, S3 object listing, or an API."
+      }
+    },
+    {
+      "id": "epso_duty_158",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 11",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Simple random sampling",
+      "figures": [],
+      "question": "In 'simple random sampling' from a population of 10 000 citizens, each individual has:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A probability depending on their age group"
+        },
+        {
+          "letter": "B",
+          "text": "Zero probability unless they volunteer"
+        },
+        {
+          "letter": "C",
+          "text": "An equal, known probability of being selected, independently of other selections"
+        },
+        {
+          "letter": "D",
+          "text": "A probability fixed at exactly 10%"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Simple Random Sampling (SRS) gives every unit in the population a known and equal probability of selection, independently of any other unit. It is the baseline probability-sampling method against which stratified, systematic and cluster sampling are compared. Its main strengths are unbiasedness and straightforward variance estimation; its main weakness is that rare subgroups may be under-represented by chance.\n· A: That describes stratified or disproportionate sampling — probabilities vary by subgroup. In simple random sampling, probability does not depend on demographic attributes.\n· B: Self-selection produces a volunteer / opt-in sample, which is non-probability and typically biased. Simple random sampling is an equal-chance, probability-based method.\n· D: 10% is just a possible sampling fraction — SRS works at any fraction, chosen to meet the desired margin of error and confidence level.",
+      "explanations": {
+        "A": "That describes stratified or disproportionate sampling — probabilities vary by subgroup. In simple random sampling, probability does not depend on demographic attributes.",
+        "B": "Self-selection produces a volunteer / opt-in sample, which is non-probability and typically biased. Simple random sampling is an equal-chance, probability-based method.",
+        "C": "Correct. Simple Random Sampling (SRS) gives every unit in the population a known and equal probability of selection, independently of any other unit. It is the baseline probability-sampling method against which stratified, systematic and cluster sampling are compared. Its main strengths are unbiasedness and straightforward variance estimation; its main weakness is that rare subgroups may be under-represented by chance.",
+        "D": "10% is just a possible sampling fraction — SRS works at any fraction, chosen to meet the desired margin of error and confidence level."
+      }
+    },
+    {
+      "id": "epso_duty_159",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 12",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Stratified sampling",
+      "figures": [],
+      "question": "A statistics team studying EU labour-market outcomes has a population where one age bracket represents only 5% of individuals but is a priority for analysis. The best sampling strategy to ensure sufficient precision in that bracket is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Simple random sampling with a smaller total sample size"
+        },
+        {
+          "letter": "B",
+          "text": "Stratified sampling with over-representation (higher sampling fraction) of the small bracket"
+        },
+        {
+          "letter": "C",
+          "text": "Convenience sampling from one national office"
+        },
+        {
+          "letter": "D",
+          "text": "Systematic sampling with a fixed interval of 20"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Stratified sampling divides the population into non-overlapping strata (here, age brackets) and samples within each stratum. When a small stratum needs precise estimates, the design uses disproportionate allocation — a higher sampling fraction in that stratum — and results are reweighted afterwards for unbiased population estimates. This is the textbook fix for sparse but analytically important subgroups.\n· A: Shrinking the sample reduces precision everywhere, and SRS leaves the rare bracket under-powered because only ~5% of the sample falls into it. This is the classical case where SRS is not the right tool.\n· C: Convenience sampling (nearest office, willing respondents) is non-probabilistic, typically biased and cannot support generalisable inference.\n· D: Systematic sampling with interval k replaces random draws with a fixed periodic pick. It does not address sparsity in an important subgroup — a small bracket will still be under-sampled in proportion to its size.",
+      "explanations": {
+        "A": "Shrinking the sample reduces precision everywhere, and SRS leaves the rare bracket under-powered because only ~5% of the sample falls into it. This is the classical case where SRS is not the right tool.",
+        "B": "Correct. Stratified sampling divides the population into non-overlapping strata (here, age brackets) and samples within each stratum. When a small stratum needs precise estimates, the design uses disproportionate allocation — a higher sampling fraction in that stratum — and results are reweighted afterwards for unbiased population estimates. This is the textbook fix for sparse but analytically important subgroups.",
+        "C": "Convenience sampling (nearest office, willing respondents) is non-probabilistic, typically biased and cannot support generalisable inference.",
+        "D": "Systematic sampling with interval k replaces random draws with a fixed periodic pick. It does not address sparsity in an important subgroup — a small bracket will still be under-sampled in proportion to its size."
+      }
+    },
+    {
+      "id": "epso_duty_160",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 13",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Sample size",
+      "figures": [],
+      "question": "For a given population, which change will (all else equal) require a LARGER sample size to maintain the same margin of error?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Moving from 95% to 99% confidence level"
+        },
+        {
+          "letter": "B",
+          "text": "Accepting a wider margin of error"
+        },
+        {
+          "letter": "C",
+          "text": "Decreasing the target precision"
+        },
+        {
+          "letter": "D",
+          "text": "Using simple random sampling instead of stratified"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Sample size grows with (z · σ / E)² — where z is the critical value, σ the population standard deviation, E the margin of error. A higher confidence level means a larger z (95% → 1.96; 99% → 2.58), so the required sample size grows roughly with the square of the ratio of z-values (about 1.7× more). Precision has a cost.\n· B: A wider margin of error (larger E) means less precision, which reduces the required sample size.\n· C: Lower target precision is a wider E — again, fewer respondents needed. Increasing precision is what drives the sample up.\n· D: Stratified sampling typically reduces variance for the same total size compared to SRS — switching back to SRS doesn't automatically require a larger sample unless you explicitly want to match stratified precision.",
+      "explanations": {
+        "A": "Correct. Sample size grows with (z · σ / E)² — where z is the critical value, σ the population standard deviation, E the margin of error. A higher confidence level means a larger z (95% → 1.96; 99% → 2.58), so the required sample size grows roughly with the square of the ratio of z-values (about 1.7× more). Precision has a cost.",
+        "B": "A wider margin of error (larger E) means less precision, which reduces the required sample size.",
+        "C": "Lower target precision is a wider E — again, fewer respondents needed. Increasing precision is what drives the sample up.",
+        "D": "Stratified sampling typically reduces variance for the same total size compared to SRS — switching back to SRS doesn't automatically require a larger sample unless you explicitly want to match stratified precision."
+      }
+    },
+    {
+      "id": "epso_duty_161",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 14",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Selection / survivorship bias",
+      "figures": [],
+      "question": "An agency studies successful public-procurement procedures by analysing records of contracts that were awarded. The main bias threatening the conclusions is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Recall bias"
+        },
+        {
+          "letter": "B",
+          "text": "Measurement bias from sensor drift"
+        },
+        {
+          "letter": "C",
+          "text": "Survivorship bias — failed or cancelled procedures are excluded, distorting the picture of what drives success"
+        },
+        {
+          "letter": "D",
+          "text": "Response bias from online surveys"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Survivorship bias (a form of selection bias) arises when the sample includes only the 'survivors' of some process — here, awarded contracts — and ignores the cases that never made it (withdrawn, cancelled, unsuccessful bids). Any inference about 'what makes procurement succeed' is then anchored on a truncated distribution and may miss critical failure modes. The classical WW2 example is Abraham Wald's bullet-hole analysis on returning aircraft. The fix: include the missing stratum, or restrict claims carefully.\n· A: Recall bias affects self-reported retrospective data (interviews, surveys asking about past events). It is not the primary issue here because the data is administrative records, not respondent memory.\n· B: Measurement / sensor drift applies to physical instruments in longitudinal studies. Procurement records are not sensor data.\n· D: Response bias arises when respondents give inaccurate answers (socially desirable, non-response). It is a survey phenomenon, not the dominant risk in an admin-records analysis.",
+      "explanations": {
+        "A": "Recall bias affects self-reported retrospective data (interviews, surveys asking about past events). It is not the primary issue here because the data is administrative records, not respondent memory.",
+        "B": "Measurement / sensor drift applies to physical instruments in longitudinal studies. Procurement records are not sensor data.",
+        "C": "Correct. Survivorship bias (a form of selection bias) arises when the sample includes only the 'survivors' of some process — here, awarded contracts — and ignores the cases that never made it (withdrawn, cancelled, unsuccessful bids). Any inference about 'what makes procurement succeed' is then anchored on a truncated distribution and may miss critical failure modes. The classical WW2 example is Abraham Wald's bullet-hole analysis on returning aircraft. The fix: include the missing stratum, or restrict claims carefully.",
+        "D": "Response bias arises when respondents give inaccurate answers (socially desirable, non-response). It is a survey phenomenon, not the dominant risk in an admin-records analysis."
+      }
+    },
+    {
+      "id": "epso_duty_162",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 15",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Domain validation",
+      "figures": [],
+      "question": "A field 'country_code' in an incoming feed is validated against the ISO 3166-1 alpha-2 list. This is an example of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Referential-integrity validation in a relational database"
+        },
+        {
+          "letter": "B",
+          "text": "Domain validation — checking that a value belongs to an allowed set"
+        },
+        {
+          "letter": "C",
+          "text": "Cross-field validation between two columns"
+        },
+        {
+          "letter": "D",
+          "text": "Statistical outlier detection"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Domain validation (also called 'value-list' or 'enumeration' validation) checks that a field's value belongs to an authoritative set of permitted values — ISO 3166 countries, ISO 4217 currencies, NUTS regions, Gender enumerations. It is one of the most common and easily automated validation checks and is typically wired into the DQ framework with a reference-data table or a controlled list.\n· A: Referential integrity specifically enforces foreign-key relationships between tables (order.customer_id must exist in customer.id). Checking a value against a reference list is conceptually related but operates on a code list, not on a parent / child table in the same database. The two terms are not interchangeable.\n· C: Cross-field validation compares two or more attributes of the same record (end_date > start_date, sum(lines) == total). That is different.\n· D: Outlier detection uses statistics (z-scores, IQR) to flag extreme numeric values — not categorical-value list membership.",
+      "explanations": {
+        "A": "Referential integrity specifically enforces foreign-key relationships between tables (order.customer_id must exist in customer.id). Checking a value against a reference list is conceptually related but operates on a code list, not on a parent / child table in the same database. The two terms are not interchangeable.",
+        "B": "Correct. Domain validation (also called 'value-list' or 'enumeration' validation) checks that a field's value belongs to an authoritative set of permitted values — ISO 3166 countries, ISO 4217 currencies, NUTS regions, Gender enumerations. It is one of the most common and easily automated validation checks and is typically wired into the DQ framework with a reference-data table or a controlled list.",
+        "C": "Cross-field validation compares two or more attributes of the same record (end_date > start_date, sum(lines) == total). That is different.",
+        "D": "Outlier detection uses statistics (z-scores, IQR) to flag extreme numeric values — not categorical-value list membership."
+      }
+    },
+    {
+      "id": "epso_duty_163",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 16",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Referential integrity",
+      "figures": [],
+      "question": "A pipeline loads daily orders into a warehouse. A rule states: 'every order's customer_id must correspond to an existing customer in the customer dimension'. This rule enforces:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Referential integrity"
+        },
+        {
+          "letter": "B",
+          "text": "Entity integrity"
+        },
+        {
+          "letter": "C",
+          "text": "Domain validation"
+        },
+        {
+          "letter": "D",
+          "text": "Completeness at dataset level"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Referential integrity guarantees that every foreign-key value in a child table matches an existing primary-key value in the referenced parent table. In a warehouse, this rule protects fact-to-dimension joins: orphan facts (customer_id pointing to a non-existent customer) break reports and silently misstate KPIs. Relational databases enforce it with FK constraints; ELT pipelines usually express it as a DQ test (dbt's relationships test, Great Expectations' expect_column_values_to_be_in_set_of_values, Soda's reference check).\n· B: Entity integrity says that every row must have a valid, non-null primary key. It is about the uniqueness and non-nullability of the key within its own table, not about links between tables.\n· C: Domain validation checks against a controlled list of permitted values (countries, currencies). Customers are a changing set of business entities, not a fixed enumeration — this is referential integrity.\n· D: Completeness checks whether all required attributes are populated and all expected records are present. That is different from checking that a reference points somewhere valid.",
+      "explanations": {
+        "A": "Correct. Referential integrity guarantees that every foreign-key value in a child table matches an existing primary-key value in the referenced parent table. In a warehouse, this rule protects fact-to-dimension joins: orphan facts (customer_id pointing to a non-existent customer) break reports and silently misstate KPIs. Relational databases enforce it with FK constraints; ELT pipelines usually express it as a DQ test (dbt's relationships test, Great Expectations' expect_column_values_to_be_in_set_of_values, Soda's reference check).",
+        "B": "Entity integrity says that every row must have a valid, non-null primary key. It is about the uniqueness and non-nullability of the key within its own table, not about links between tables.",
+        "C": "Domain validation checks against a controlled list of permitted values (countries, currencies). Customers are a changing set of business entities, not a fixed enumeration — this is referential integrity.",
+        "D": "Completeness checks whether all required attributes are populated and all expected records are present. That is different from checking that a reference points somewhere valid."
+      }
+    },
+    {
+      "id": "epso_duty_164",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 17",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Cross-field rules",
+      "figures": [],
+      "question": "A validation rule states 'if status = COMPLETED then closure_date must be populated AND not in the future'. This is best categorised as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A domain check"
+        },
+        {
+          "letter": "B",
+          "text": "A referential-integrity check"
+        },
+        {
+          "letter": "C",
+          "text": "A cross-field / conditional business rule combining existence and range logic"
+        },
+        {
+          "letter": "D",
+          "text": "A statistical distribution test"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Cross-field (also 'intra-record' or 'conditional') rules express business logic that spans two or more attributes within the same record. They capture the nuances domain / referential / completeness checks cannot: 'if X then Y', arithmetic invariants (sum of lines = total), temporal ordering (start < end). They are where most bespoke DQ expectations live and where a data engineer earns their domain-knowledge stripes.\n· A: Domain checks look at a single attribute against a permitted list. This rule touches two attributes (status and closure_date) with conditional logic — it goes beyond a single-column domain check.\n· B: Referential integrity is about foreign-key links between tables. This rule stays within a single record.\n· D: Distribution tests look for shifts in summary statistics (mean, variance, null rate). This rule targets a specific combination of attribute values, not a distribution.",
+      "explanations": {
+        "A": "Domain checks look at a single attribute against a permitted list. This rule touches two attributes (status and closure_date) with conditional logic — it goes beyond a single-column domain check.",
+        "B": "Referential integrity is about foreign-key links between tables. This rule stays within a single record.",
+        "C": "Correct. Cross-field (also 'intra-record' or 'conditional') rules express business logic that spans two or more attributes within the same record. They capture the nuances domain / referential / completeness checks cannot: 'if X then Y', arithmetic invariants (sum of lines = total), temporal ordering (start < end). They are where most bespoke DQ expectations live and where a data engineer earns their domain-knowledge stripes.",
+        "D": "Distribution tests look for shifts in summary statistics (mean, variance, null rate). This rule targets a specific combination of attribute values, not a distribution."
+      }
+    },
+    {
+      "id": "epso_duty_165",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 18",
+      "topic": "data_quality",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Constraints NOT NULL / UNIQUE / CHECK",
+      "figures": [],
+      "question": "Which set of database-level constraints best implements the rule 'every employee has exactly one non-null, valid European social-security number unique across the organisation'?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "NOT NULL on ssn + a CHECK constraint validating format + a UNIQUE index on ssn"
+        },
+        {
+          "letter": "B",
+          "text": "FOREIGN KEY on ssn referencing a country table"
+        },
+        {
+          "letter": "C",
+          "text": "PRIMARY KEY on employee_name"
+        },
+        {
+          "letter": "D",
+          "text": "A nightly Python script that emails the HR team if duplicates are found"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. The three database-native constraints combine to enforce the full rule declaratively, at commit time, on every row. NOT NULL ensures 'every employee has one'; CHECK (e.g. a regex or function test) validates format; UNIQUE (or a UNIQUE index) enforces the cross-employee uniqueness. Declarative constraints are preferable to application-level checks because they cannot be bypassed by stray writes and are documented in the schema.\n· B: A foreign key links ssn to another table's primary key. That doesn't check format, nullability or uniqueness on its own.\n· C: Names are not unique (thousands of people share the same full name) and are a terrible primary key. Primary keys should be immutable surrogates or genuine unique identifiers like ssn itself.\n· D: A nightly detect-and-email job catches violations hours too late, after corrupt data has already been read by downstream systems. Detective controls have their place but cannot replace preventive constraints.",
+      "explanations": {
+        "A": "Correct. The three database-native constraints combine to enforce the full rule declaratively, at commit time, on every row. NOT NULL ensures 'every employee has one'; CHECK (e.g. a regex or function test) validates format; UNIQUE (or a UNIQUE index) enforces the cross-employee uniqueness. Declarative constraints are preferable to application-level checks because they cannot be bypassed by stray writes and are documented in the schema.",
+        "B": "A foreign key links ssn to another table's primary key. That doesn't check format, nullability or uniqueness on its own.",
+        "C": "Names are not unique (thousands of people share the same full name) and are a terrible primary key. Primary keys should be immutable surrogates or genuine unique identifiers like ssn itself.",
+        "D": "A nightly detect-and-email job catches violations hours too late, after corrupt data has already been read by downstream systems. Detective controls have their place but cannot replace preventive constraints."
+      }
+    },
+    {
+      "id": "epso_duty_166",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 19",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Duplicate detection",
+      "figures": [],
+      "question": "A customer dataset has many rows where the same person appears with slight variations ('John Smith' vs 'J. Smith' vs 'John  Smith'). The most appropriate preprocessing step is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Deletion of all customers named Smith"
+        },
+        {
+          "letter": "B",
+          "text": "Converting the table to Parquet"
+        },
+        {
+          "letter": "C",
+          "text": "Encrypting the name column"
+        },
+        {
+          "letter": "D",
+          "text": "Normalising the strings (trim, case-fold, standardise initials) and then applying deduplication / record-linkage techniques"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The standard pipeline is (1) normalise strings — trim whitespace, collapse multiple spaces, case-fold, standardise accents, expand or normalise initials — then (2) apply deduplication: exact-match on the normalised key when possible, and fuzzy matching / record linkage (Levenshtein, Jaro-Winkler, phonetic codes like Soundex / Metaphone, or ML classifiers) when variation persists. Tools such as dedupe, Splink and OpenRefine encapsulate this workflow.\n· A: Mass deletion destroys valid records and disproportionately affects one surname. Never the right answer.\n· B: Parquet is a storage format. It doesn't change the logical content of duplicate records.\n· C: Encryption protects confidentiality but does not resolve duplicates — encrypted variants of the same name remain different ciphertexts.",
+      "explanations": {
+        "A": "Mass deletion destroys valid records and disproportionately affects one surname. Never the right answer.",
+        "B": "Parquet is a storage format. It doesn't change the logical content of duplicate records.",
+        "C": "Encryption protects confidentiality but does not resolve duplicates — encrypted variants of the same name remain different ciphertexts.",
+        "D": "Correct. The standard pipeline is (1) normalise strings — trim whitespace, collapse multiple spaces, case-fold, standardise accents, expand or normalise initials — then (2) apply deduplication: exact-match on the normalised key when possible, and fuzzy matching / record linkage (Levenshtein, Jaro-Winkler, phonetic codes like Soundex / Metaphone, or ML classifiers) when variation persists. Tools such as dedupe, Splink and OpenRefine encapsulate this workflow."
+      }
+    },
+    {
+      "id": "epso_duty_167",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 20",
+      "topic": "data_quality",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Missing values",
+      "figures": [],
+      "question": "Which of the following is NOT a standard strategy for handling missing numeric values during preprocessing?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Imputation with the column mean or median"
+        },
+        {
+          "letter": "B",
+          "text": "Row deletion when missingness is rare and random"
+        },
+        {
+          "letter": "C",
+          "text": "Model-based imputation (e.g. KNN or iterative imputer)"
+        },
+        {
+          "letter": "D",
+          "text": "Silently inserting zeros everywhere without documentation"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Silent zero-filling conflates 'I don't know' with 'the value is zero' and biases every downstream statistic — means, sums, correlations. It also leaves no audit trail. If zero imputation is actually justified (business rule), it must be explicitly documented; otherwise a dedicated missing-indicator or an NA-aware store is the right choice.\n· A: Mean / median imputation is a standard simple baseline. It preserves sample size but dampens variance and can bias estimates when data is not MCAR — acceptable when missingness is limited.\n· B: Listwise deletion is legitimate when missingness is rare (few percent) and plausibly random (MCAR). It is simple and unbiased under MCAR but wastes data.\n· C: Model-based imputation (KNN, MICE, iterative imputer) predicts the missing value from correlated features. It is more sophisticated and typically better than the mean / median when relationships exist.",
+      "explanations": {
+        "A": "Mean / median imputation is a standard simple baseline. It preserves sample size but dampens variance and can bias estimates when data is not MCAR — acceptable when missingness is limited.",
+        "B": "Listwise deletion is legitimate when missingness is rare (few percent) and plausibly random (MCAR). It is simple and unbiased under MCAR but wastes data.",
+        "C": "Model-based imputation (KNN, MICE, iterative imputer) predicts the missing value from correlated features. It is more sophisticated and typically better than the mean / median when relationships exist.",
+        "D": "Correct. Silent zero-filling conflates 'I don't know' with 'the value is zero' and biases every downstream statistic — means, sums, correlations. It also leaves no audit trail. If zero imputation is actually justified (business rule), it must be explicitly documented; otherwise a dedicated missing-indicator or an NA-aware store is the right choice."
+      }
+    },
+    {
+      "id": "epso_duty_168",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 21",
+      "topic": "data_quality",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Outliers · IQR / z-score",
+      "figures": [],
+      "question": "Which statement about outlier treatment is MOST accurate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "All outliers should be removed automatically before modelling"
+        },
+        {
+          "letter": "B",
+          "text": "Outliers can only be found using z-scores, never IQR-based methods"
+        },
+        {
+          "letter": "C",
+          "text": "Outliers should first be investigated — they may be data-entry errors, legitimate extremes, or rare but important signals (fraud, anomalies) — and treated (remove, cap, transform, keep) based on that diagnosis"
+        },
+        {
+          "letter": "D",
+          "text": "Outliers always follow a normal distribution by definition"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Outlier treatment is a judgement call that depends on (1) the cause — typo, sensor glitch, genuine rare event — and (2) the downstream use — robust statistics may tolerate outliers; regressions may not. Options include: remove (only if clearly erroneous and traceable), cap / winsorise (clip at 1st / 99th percentile), transform (log, Box-Cox) to reduce skew, impute, or explicitly flag and keep. The first step is always investigation, not automated deletion.\n· A: Blanket removal is a classic beginner mistake. In fraud detection or network monitoring, the outliers ARE the signal. In distribution-based metrics you may want to cap or winsorise rather than drop.\n· B: Both z-score (for approximately normal data) and IQR / Tukey fences (for non-normal) are standard methods. IQR is often preferred because it is robust to the outliers it is trying to detect.\n· D: By definition outliers are values that deviate from the bulk of the distribution. Their own distribution is usually sparse and heavy-tailed, not normal.",
+      "explanations": {
+        "A": "Blanket removal is a classic beginner mistake. In fraud detection or network monitoring, the outliers ARE the signal. In distribution-based metrics you may want to cap or winsorise rather than drop.",
+        "B": "Both z-score (for approximately normal data) and IQR / Tukey fences (for non-normal) are standard methods. IQR is often preferred because it is robust to the outliers it is trying to detect.",
+        "C": "Correct. Outlier treatment is a judgement call that depends on (1) the cause — typo, sensor glitch, genuine rare event — and (2) the downstream use — robust statistics may tolerate outliers; regressions may not. Options include: remove (only if clearly erroneous and traceable), cap / winsorise (clip at 1st / 99th percentile), transform (log, Box-Cox) to reduce skew, impute, or explicitly flag and keep. The first step is always investigation, not automated deletion.",
+        "D": "By definition outliers are values that deviate from the bulk of the distribution. Their own distribution is usually sparse and heavy-tailed, not normal."
+      }
+    },
+    {
+      "id": "epso_duty_169",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Quality · 22",
+      "topic": "data_quality",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Normalisation vs standardisation vs encoding",
+      "figures": [],
+      "question": "A data scientist is preparing a mixed dataset (numeric features with very different ranges, plus categorical fields) for logistic regression. Which preprocessing combination is most appropriate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Leave numeric features as-is; drop categorical fields"
+        },
+        {
+          "letter": "B",
+          "text": "Standardise numerics (z-score) or min-max normalise them, and one-hot encode (or target / ordinal encode where appropriate) the categorical fields"
+        },
+        {
+          "letter": "C",
+          "text": "Hash every record to a single integer"
+        },
+        {
+          "letter": "D",
+          "text": "Encrypt numerics and one-hot encode categoricals"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. The canonical preprocessing for distance / gradient-based models on mixed data is: (1) bring numerics onto a comparable scale — either z-score standardisation (mean 0, sd 1) or min-max normalisation (0–1); (2) turn categoricals into numeric representations — one-hot (sklearn's OneHotEncoder) for low-cardinality, ordinal encoding when the variable has a natural order, target / mean encoding or embeddings for high-cardinality. This keeps the linear decision surface meaningful and regularisation fair.\n· A: Logistic regression is sensitive to feature scale because the objective is based on linear combinations of features; features with much larger ranges dominate coefficients and regularisation penalties. Dropping categoricals also throws away useful signal. This is the worst option.\n· C: Global record hashing destroys feature-level information. It's not a preprocessing pipeline.\n· D: Encrypting numerics makes them cryptographically random-looking — impossible for the model to learn from. Encryption protects confidentiality, not learnability (except under homomorphic encryption, which is a specialised setting).",
+      "explanations": {
+        "A": "Logistic regression is sensitive to feature scale because the objective is based on linear combinations of features; features with much larger ranges dominate coefficients and regularisation penalties. Dropping categoricals also throws away useful signal. This is the worst option.",
+        "B": "Correct. The canonical preprocessing for distance / gradient-based models on mixed data is: (1) bring numerics onto a comparable scale — either z-score standardisation (mean 0, sd 1) or min-max normalisation (0–1); (2) turn categoricals into numeric representations — one-hot (sklearn's OneHotEncoder) for low-cardinality, ordinal encoding when the variable has a natural order, target / mean encoding or embeddings for high-cardinality. This keeps the linear decision surface meaningful and regularisation fair.",
+        "C": "Global record hashing destroys feature-level information. It's not a preprocessing pipeline.",
+        "D": "Encrypting numerics makes them cryptographically random-looking — impossible for the model to learn from. Encryption protects confidentiality, not learnability (except under homomorphic encryption, which is a specialised setting)."
+      }
+    },
+    {
+      "id": "epso_duty_170",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Governance · 11",
+      "topic": "data_governance",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Data contracts",
+      "figures": [],
+      "question": "A 'data contract' between a producing team and downstream consumers primarily defines:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The encryption algorithm used in transit"
+        },
+        {
+          "letter": "B",
+          "text": "The AI-Act conformity assessment"
+        },
+        {
+          "letter": "C",
+          "text": "A financial invoice for data purchase"
+        },
+        {
+          "letter": "D",
+          "text": "A negotiated, versioned agreement on schema, semantics, SLAs (freshness, latency, completeness) and ownership for a data product"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Data contracts (popularised by Chad Sanderson, Andrew Jones and the data-mesh community) are explicit, versioned agreements between a producing team ('source of truth') and its consumers. They specify (1) the schema (columns, types, nullability); (2) semantics (what each field means, business definitions); (3) SLAs on freshness, latency, completeness and accuracy; (4) ownership, on-call responsibility and change-management process. They shift responsibility for data quality upstream to the producer and enable downstream teams to build with confidence.\n· A: Transport security is a separate concern handled at network / platform level — not the substance of a data contract.\n· B: AI-Act conformity assessment applies to high-risk AI systems under Reg. 2024/1689 — a different regulatory instrument, not what a data contract is.\n· C: Data contracts are technical / governance agreements, not commercial invoices. Payment may or may not exist separately.",
+      "explanations": {
+        "A": "Transport security is a separate concern handled at network / platform level — not the substance of a data contract.",
+        "B": "AI-Act conformity assessment applies to high-risk AI systems under Reg. 2024/1689 — a different regulatory instrument, not what a data contract is.",
+        "C": "Data contracts are technical / governance agreements, not commercial invoices. Payment may or may not exist separately.",
+        "D": "Correct. Data contracts (popularised by Chad Sanderson, Andrew Jones and the data-mesh community) are explicit, versioned agreements between a producing team ('source of truth') and its consumers. They specify (1) the schema (columns, types, nullability); (2) semantics (what each field means, business definitions); (3) SLAs on freshness, latency, completeness and accuracy; (4) ownership, on-call responsibility and change-management process. They shift responsibility for data quality upstream to the producer and enable downstream teams to build with confidence."
+      }
+    },
+    {
+      "id": "epso_duty_171",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 18",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "DataOps",
+      "figures": [],
+      "question": "'DataOps' is best described as:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A synonym for DevOps applied exclusively to database administrators"
+        },
+        {
+          "letter": "B",
+          "text": "A set of practices adapting DevOps, Agile and lean manufacturing to data pipelines — automation, CI/CD, testing, observability, collaboration across data teams"
+        },
+        {
+          "letter": "C",
+          "text": "A cloud service offered only by AWS"
+        },
+        {
+          "letter": "D",
+          "text": "A replacement for data governance"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. DataOps (Lenny Liebmann, DataKitchen, et al.) applies the cultural and technical practices of DevOps, Agile and lean manufacturing to data-analytics workflows: version-controlled code and configuration, automated testing (data-quality tests, schema tests), CI/CD for pipeline deployments, data observability (lineage, freshness, volume, distribution monitors), fast feedback loops, and close collaboration between data engineers, analysts and data consumers. It tackles the 'it works on my laptop' and 'who broke the dashboard' problems that plague ungoverned analytics stacks.\n· A: DataOps is broader than DBA work. It spans ingestion, transformation, testing, deployment and monitoring across the whole pipeline and is cross-functional by design.\n· C: DataOps is a discipline and set of practices, independent of any cloud vendor.\n· D: DataOps complements governance — it does not replace it. Governance defines policies, standards and accountabilities; DataOps is the operational practice that delivers those policies day to day.",
+      "explanations": {
+        "A": "DataOps is broader than DBA work. It spans ingestion, transformation, testing, deployment and monitoring across the whole pipeline and is cross-functional by design.",
+        "B": "Correct. DataOps (Lenny Liebmann, DataKitchen, et al.) applies the cultural and technical practices of DevOps, Agile and lean manufacturing to data-analytics workflows: version-controlled code and configuration, automated testing (data-quality tests, schema tests), CI/CD for pipeline deployments, data observability (lineage, freshness, volume, distribution monitors), fast feedback loops, and close collaboration between data engineers, analysts and data consumers. It tackles the 'it works on my laptop' and 'who broke the dashboard' problems that plague ungoverned analytics stacks.",
+        "C": "DataOps is a discipline and set of practices, independent of any cloud vendor.",
+        "D": "DataOps complements governance — it does not replace it. Governance defines policies, standards and accountabilities; DataOps is the operational practice that delivers those policies day to day."
+      }
+    },
+    {
+      "id": "epso_duty_172",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 11",
+      "topic": "data_architecture",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Data fabric",
+      "figures": [],
+      "question": "In the Gartner sense, a 'data fabric' is primarily:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A physical network cable standard"
+        },
+        {
+          "letter": "B",
+          "text": "A synonym for data mesh with no distinct characteristics"
+        },
+        {
+          "letter": "C",
+          "text": "An integrated architecture that combines metadata, semantic layer, active catalogue and AI-driven automation to provide unified access to data across distributed environments"
+        },
+        {
+          "letter": "D",
+          "text": "A container orchestration platform"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Data fabric (Gartner) is a metadata-driven integration architecture that weaves distributed data assets into a coherent whole. Its defining traits: active metadata collection and analysis; a knowledge graph linking assets; AI / ML assisting with data discovery, matching, lineage and quality; unified semantic layer; and policy-driven access across on-prem, cloud and edge. Unlike data mesh (which is primarily an organisational / domain-driven approach), data fabric is primarily a technical / metadata-first approach. The two can coexist.\n· A: Despite the textile metaphor, a data fabric is a software / architecture concept, not a physical networking standard.\n· B: Data fabric and data mesh are often conflated but differ: mesh emphasises domain ownership and data-as-a-product decentralisation; fabric emphasises metadata-driven automation of access and integration. They address different levers of the same problem.\n· D: Container orchestration is Kubernetes / Nomad territory — unrelated.",
+      "explanations": {
+        "A": "Despite the textile metaphor, a data fabric is a software / architecture concept, not a physical networking standard.",
+        "B": "Data fabric and data mesh are often conflated but differ: mesh emphasises domain ownership and data-as-a-product decentralisation; fabric emphasises metadata-driven automation of access and integration. They address different levers of the same problem.",
+        "C": "Correct. Data fabric (Gartner) is a metadata-driven integration architecture that weaves distributed data assets into a coherent whole. Its defining traits: active metadata collection and analysis; a knowledge graph linking assets; AI / ML assisting with data discovery, matching, lineage and quality; unified semantic layer; and policy-driven access across on-prem, cloud and edge. Unlike data mesh (which is primarily an organisational / domain-driven approach), data fabric is primarily a technical / metadata-first approach. The two can coexist.",
+        "D": "Container orchestration is Kubernetes / Nomad territory — unrelated."
+      }
+    },
+    {
+      "id": "epso_duty_173",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 11",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Synthetic data",
+      "figures": [],
+      "question": "'Synthetic data' generation produces data that:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Is copied verbatim from production and pseudonymised"
+        },
+        {
+          "letter": "B",
+          "text": "Is a regulatory term for open-data publications"
+        },
+        {
+          "letter": "C",
+          "text": "Is real data stored on magnetic tape for archival"
+        },
+        {
+          "letter": "D",
+          "text": "Is artificially generated to mimic the statistical properties of real data — useful for testing, ML training under data-scarcity or privacy constraints, and bias mitigation"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Synthetic data is artificially generated to reproduce the statistical distribution, correlations and — ideally — edge cases of real data, without exposing any real individual. Techniques range from simple rule-based fabrication to GANs, variational autoencoders, diffusion models and agent-based simulators. Key use cases: (1) testing / development when production data is sensitive; (2) augmenting scarce or imbalanced training sets; (3) bias mitigation (Art. 10 AI Act); (4) data sharing when even pseudonymisation is insufficient. Privacy guarantees vary — strong synthetic data combines generative modelling with differential privacy.\n· A: Pseudonymised production data is real data with identifiers replaced — still personal data under GDPR. Synthetic data is not a verbatim copy; it is statistically generated from scratch (or from a model trained on real data).\n· B: Open-data is about legal / licence status of published datasets — a distinct concept.\n· C: Archival tape storage is an infrastructure concept, unrelated to synthetic generation.",
+      "explanations": {
+        "A": "Pseudonymised production data is real data with identifiers replaced — still personal data under GDPR. Synthetic data is not a verbatim copy; it is statistically generated from scratch (or from a model trained on real data).",
+        "B": "Open-data is about legal / licence status of published datasets — a distinct concept.",
+        "C": "Archival tape storage is an infrastructure concept, unrelated to synthetic generation.",
+        "D": "Correct. Synthetic data is artificially generated to reproduce the statistical distribution, correlations and — ideally — edge cases of real data, without exposing any real individual. Techniques range from simple rule-based fabrication to GANs, variational autoencoders, diffusion models and agent-based simulators. Key use cases: (1) testing / development when production data is sensitive; (2) augmenting scarce or imbalanced training sets; (3) bias mitigation (Art. 10 AI Act); (4) data sharing when even pseudonymisation is insufficient. Privacy guarantees vary — strong synthetic data combines generative modelling with differential privacy."
+      }
+    },
+    {
+      "id": "epso_duty_174",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Architecture · 12",
+      "topic": "data_architecture",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Data mesh self-serve platform",
+      "figures": [],
+      "question": "Among the four foundational principles of data mesh (domain ownership, data-as-a-product, self-serve data platform, federated computational governance), which principle MOST directly addresses the developer-experience concern that every domain team would otherwise have to re-build ingestion, storage, lineage and access tooling?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Domain ownership"
+        },
+        {
+          "letter": "B",
+          "text": "Data-as-a-product"
+        },
+        {
+          "letter": "C",
+          "text": "Self-serve data platform"
+        },
+        {
+          "letter": "D",
+          "text": "Federated computational governance"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. The self-serve data platform (Dehghani, 2019–2022) is a thin, domain-agnostic layer that provides reusable capabilities — ingestion, storage, compute, catalogue, lineage, access control, observability — so each domain team can ship data products quickly without re-inventing infrastructure. It is the principle that makes the other three economically feasible, because without it domain ownership collapses under the weight of duplicated engineering effort.\n· A: Domain ownership assigns responsibility for data to the business domains that know it best. It frames accountability but does not on its own save each domain from duplicating platform work.\n· B: Data-as-a-product defines the quality attributes of published datasets — discoverable, addressable, trustworthy, self-describing, interoperable, secure. It raises the bar for each domain but doesn't provide the shared tooling to meet it.\n· D: Federated computational governance codifies global rules (naming, security, interoperability) enforced automatically across domains. It reduces policy drift but doesn't provide the self-serve building blocks.",
+      "explanations": {
+        "A": "Domain ownership assigns responsibility for data to the business domains that know it best. It frames accountability but does not on its own save each domain from duplicating platform work.",
+        "B": "Data-as-a-product defines the quality attributes of published datasets — discoverable, addressable, trustworthy, self-describing, interoperable, secure. It raises the bar for each domain but doesn't provide the shared tooling to meet it.",
+        "C": "Correct. The self-serve data platform (Dehghani, 2019–2022) is a thin, domain-agnostic layer that provides reusable capabilities — ingestion, storage, compute, catalogue, lineage, access control, observability — so each domain team can ship data products quickly without re-inventing infrastructure. It is the principle that makes the other three economically feasible, because without it domain ownership collapses under the weight of duplicated engineering effort.",
+        "D": "Federated computational governance codifies global rules (naming, security, interoperability) enforced automatically across domains. It reduces policy drift but doesn't provide the self-serve building blocks."
+      }
+    },
+    {
+      "id": "epso_duty_175",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 11",
+      "topic": "data_platforms",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Concurrent writes in lakehouse",
+      "figures": [],
+      "question": "Two jobs write to the same Apache Iceberg table at roughly the same time. The table format handles this by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Corrupting both files silently"
+        },
+        {
+          "letter": "B",
+          "text": "Falling back to pessimistic row-level locking across all object-store files"
+        },
+        {
+          "letter": "C",
+          "text": "Serialising writes with optimistic concurrency control at the metadata layer — each commit produces a new snapshot, and conflicting commits are retried or fail explicitly"
+        },
+        {
+          "letter": "D",
+          "text": "Requiring the user to stop one of the jobs manually before starting the other"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Iceberg (and Delta / Hudi) implements ACID on object storage through optimistic concurrency control over an immutable metadata log: each successful write creates a new snapshot pointing at the data files that make it up, and commits go through an atomic 'swap the current snapshot pointer' step. If two writers race, the second to commit detects that the base snapshot changed, and the engine either retries (recomputing against the new snapshot) or fails with a commit-conflict so the application can decide. This works without pessimistic locks and without coordination outside the metadata layer.\n· A: Silent corruption would defeat the purpose of an ACID table format. Iceberg, Delta and Hudi exist precisely to avoid this.\n· B: Pessimistic row-level locking across object storage is impractical at scale — object stores are eventually consistent and don't expose row locks. The design choice is precisely optimistic, not pessimistic.\n· D: Manual coordination is exactly what an ACID table format removes. That would make lakehouses unusable in production.",
+      "explanations": {
+        "A": "Silent corruption would defeat the purpose of an ACID table format. Iceberg, Delta and Hudi exist precisely to avoid this.",
+        "B": "Pessimistic row-level locking across object storage is impractical at scale — object stores are eventually consistent and don't expose row locks. The design choice is precisely optimistic, not pessimistic.",
+        "C": "Correct. Iceberg (and Delta / Hudi) implements ACID on object storage through optimistic concurrency control over an immutable metadata log: each successful write creates a new snapshot pointing at the data files that make it up, and commits go through an atomic 'swap the current snapshot pointer' step. If two writers race, the second to commit detects that the base snapshot changed, and the engine either retries (recomputing against the new snapshot) or fails with a commit-conflict so the application can decide. This works without pessimistic locks and without coordination outside the metadata layer.",
+        "D": "Manual coordination is exactly what an ACID table format removes. That would make lakehouses unusable in production."
+      }
+    },
+    {
+      "id": "epso_duty_176",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 12",
+      "topic": "advanced_analytics",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Univariate EDA",
+      "figures": [],
+      "question": "Computing mean, median, standard deviation and plotting a histogram of a single variable is an example of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Univariate exploratory data analysis (EDA)"
+        },
+        {
+          "letter": "B",
+          "text": "Bivariate correlation analysis"
+        },
+        {
+          "letter": "C",
+          "text": "Multivariate PCA"
+        },
+        {
+          "letter": "D",
+          "text": "Time-series decomposition"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Univariate EDA looks at one variable at a time to characterise its distribution — centre (mean, median, mode), spread (standard deviation, IQR, range), shape (skewness, kurtosis), and visuals like histograms, density plots and box plots. It is the first step before any bivariate or multivariate analysis, and the simplest way to catch gross issues (wrong units, wrong scale, obvious outliers, unexpected modes).\n· B: Bivariate analysis studies the relationship between two variables — scatter plots, correlation, contingency tables.\n· C: Multivariate methods (PCA, clustering, factor analysis) examine many variables simultaneously.\n· D: Time-series decomposition splits a series into trend, seasonality and residual — different object of study.",
+      "explanations": {
+        "A": "Correct. Univariate EDA looks at one variable at a time to characterise its distribution — centre (mean, median, mode), spread (standard deviation, IQR, range), shape (skewness, kurtosis), and visuals like histograms, density plots and box plots. It is the first step before any bivariate or multivariate analysis, and the simplest way to catch gross issues (wrong units, wrong scale, obvious outliers, unexpected modes).",
+        "B": "Bivariate analysis studies the relationship between two variables — scatter plots, correlation, contingency tables.",
+        "C": "Multivariate methods (PCA, clustering, factor analysis) examine many variables simultaneously.",
+        "D": "Time-series decomposition splits a series into trend, seasonality and residual — different object of study."
+      }
+    },
+    {
+      "id": "epso_duty_177",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 13",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Correlation vs causation",
+      "figures": [],
+      "question": "A Pearson correlation coefficient of r = 0.85 between two variables X and Y indicates:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "A strong linear association; X causes Y"
+        },
+        {
+          "letter": "B",
+          "text": "A strong LINEAR association — but on its own it does NOT establish causation, direction, or non-linear effects"
+        },
+        {
+          "letter": "C",
+          "text": "No statistical relationship"
+        },
+        {
+          "letter": "D",
+          "text": "A perfect deterministic relationship"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Pearson's r measures the strength and sign of a LINEAR association between two numeric variables, ranging from -1 to +1. r = 0.85 is indeed strong, but: (1) it only captures linear dependence — two variables can have r = 0 and still be perfectly related non-linearly (Anscombe's quartet, U-shapes); (2) correlation doesn't tell you which variable causes which (or whether a third variable causes both); (3) outliers can inflate or deflate it; (4) r depends on scale / distribution. Causal claims require additional evidence — experiments, instrumental variables, causal inference methods.\n· A: Classical trap. Correlation measures association, not causation. The correlation could reflect a confounder influencing both variables, reverse causation, selection effect, or pure coincidence on a small sample. 'Ice cream sales and drowning' correlate because temperature drives both.\n· C: r = 0.85 signals a strong association, not absence of relationship. r = 0 would signal no linear association.\n· D: A perfect deterministic relationship has r = +1 or -1 exactly. 0.85 is strong but not perfect.",
+      "explanations": {
+        "A": "Classical trap. Correlation measures association, not causation. The correlation could reflect a confounder influencing both variables, reverse causation, selection effect, or pure coincidence on a small sample. 'Ice cream sales and drowning' correlate because temperature drives both.",
+        "B": "Correct. Pearson's r measures the strength and sign of a LINEAR association between two numeric variables, ranging from -1 to +1. r = 0.85 is indeed strong, but: (1) it only captures linear dependence — two variables can have r = 0 and still be perfectly related non-linearly (Anscombe's quartet, U-shapes); (2) correlation doesn't tell you which variable causes which (or whether a third variable causes both); (3) outliers can inflate or deflate it; (4) r depends on scale / distribution. Causal claims require additional evidence — experiments, instrumental variables, causal inference methods.",
+        "C": "r = 0.85 signals a strong association, not absence of relationship. r = 0 would signal no linear association.",
+        "D": "A perfect deterministic relationship has r = +1 or -1 exactly. 0.85 is strong but not perfect."
+      }
+    },
+    {
+      "id": "epso_duty_178",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 14",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Multivariate EDA · Simpson's paradox",
+      "figures": [],
+      "question": "An aggregate analysis shows that treatment A has a higher success rate than treatment B overall. When broken down by patient severity, treatment B is better in every severity subgroup. This is an example of:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Overfitting"
+        },
+        {
+          "letter": "B",
+          "text": "Label noise"
+        },
+        {
+          "letter": "C",
+          "text": "Simpson's paradox — the direction of the association reverses when a confounding variable is taken into account"
+        },
+        {
+          "letter": "D",
+          "text": "Data drift"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. Simpson's paradox arises when subgroup trends go the opposite way to the aggregate trend. In the medical example, severity is a confounder: severe cases disproportionately receive one treatment, so when you average across severities without controlling for it, the treatment that is applied more often to milder cases looks better overall — even though within each severity level the other treatment is genuinely better. The paradox highlights why multivariate / stratified EDA matters: aggregated statistics without the right covariate adjustments can actively mislead. It is the core intuition behind observational-study bias and a central motivation for randomised trials or causal-inference methods.\n· A: Overfitting is a model-fitting phenomenon (memorising training data). It does not describe a reversal of direction across aggregation levels.\n· B: Label noise is incorrect target values in training data. Not what this example shows.\n· D: Data drift is a distribution shift over time. This example is about a cross-sectional analysis, not temporal change.",
+      "explanations": {
+        "A": "Overfitting is a model-fitting phenomenon (memorising training data). It does not describe a reversal of direction across aggregation levels.",
+        "B": "Label noise is incorrect target values in training data. Not what this example shows.",
+        "C": "Correct. Simpson's paradox arises when subgroup trends go the opposite way to the aggregate trend. In the medical example, severity is a confounder: severe cases disproportionately receive one treatment, so when you average across severities without controlling for it, the treatment that is applied more often to milder cases looks better overall — even though within each severity level the other treatment is genuinely better. The paradox highlights why multivariate / stratified EDA matters: aggregated statistics without the right covariate adjustments can actively mislead. It is the core intuition behind observational-study bias and a central motivation for randomised trials or causal-inference methods.",
+        "D": "Data drift is a distribution shift over time. This example is about a cross-sectional analysis, not temporal change."
+      }
+    },
+    {
+      "id": "epso_duty_179",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 19",
+      "topic": "data_engineering",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Full vs incremental load",
+      "figures": [],
+      "question": "A nightly ETL job currently extracts the full source table of 500 million rows every night, most of which hasn't changed. The most appropriate optimisation is to switch to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "An incremental / delta load that only extracts new or updated rows since the last successful run"
+        },
+        {
+          "letter": "B",
+          "text": "A smaller extract window by running every hour"
+        },
+        {
+          "letter": "C",
+          "text": "Dropping the target table each night and re-loading"
+        },
+        {
+          "letter": "D",
+          "text": "Turning the job off and waiting for users to complain"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Incremental (delta) loading extracts only the rows that have changed since the last successful run — identified by a timestamp column (updated_at), a monotonic sequence (id), or a CDC feed (transaction log). The downstream target is kept current either by appending new records (for immutable events) or by merging / upserting (for mutable master data). This dramatically reduces extract time, network cost and compute, and is the standard pattern for any large source once the process has been tested.\n· B: Running a full extract more often doesn't reduce the total work — it multiplies it.\n· C: Drop-and-reload makes the target unavailable during the reload and remains full-load in volume. It is usually avoided except for small dimension tables.\n· D: Letting a known inefficiency pile up is never a pipeline-engineering answer.",
+      "explanations": {
+        "A": "Correct. Incremental (delta) loading extracts only the rows that have changed since the last successful run — identified by a timestamp column (updated_at), a monotonic sequence (id), or a CDC feed (transaction log). The downstream target is kept current either by appending new records (for immutable events) or by merging / upserting (for mutable master data). This dramatically reduces extract time, network cost and compute, and is the standard pattern for any large source once the process has been tested.",
+        "B": "Running a full extract more often doesn't reduce the total work — it multiplies it.",
+        "C": "Drop-and-reload makes the target unavailable during the reload and remains full-load in volume. It is usually avoided except for small dimension tables.",
+        "D": "Letting a known inefficiency pile up is never a pipeline-engineering answer."
+      }
+    },
+    {
+      "id": "epso_duty_180",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 20",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Slowly-changing dimensions",
+      "figures": [],
+      "question": "A dimension table must keep history of customer address changes so a historical sales report always shows the address valid at the time of each sale. The appropriate SCD pattern is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "SCD Type 1 — overwrite the address on change"
+        },
+        {
+          "letter": "B",
+          "text": "Delete the customer row each time the address changes"
+        },
+        {
+          "letter": "C",
+          "text": "SCD Type 0 — never allow the address to be populated"
+        },
+        {
+          "letter": "D",
+          "text": "SCD Type 2 — keep historical rows with valid-from / valid-to and an 'is_current' flag"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. SCD Type 2 (Kimball) preserves history by adding a new dimension row each time a tracked attribute changes, with valid-from / valid-to timestamps and typically an is_current boolean. Facts reference the dimension row that was current at event time (time-travel join), so historical reports always resolve to the historically-correct attribute value. It is the canonical pattern for dimensions where history matters (customer address, employee grade, product price list). Trade-off: more rows and slightly more complex joins.\n· A: Type 1 overwrites the old value with the new. It loses history and makes the scenario's historical report impossible — sales from 2020 would join to the 2025 address.\n· B: Deleting customers on every change destroys all record of the relationship and breaks referential integrity with existing sales.\n· C: Type 0 freezes the attribute at its first value — useful for immutable fields (date of birth, original acquisition source) but wrong when the attribute legitimately changes.",
+      "explanations": {
+        "A": "Type 1 overwrites the old value with the new. It loses history and makes the scenario's historical report impossible — sales from 2020 would join to the 2025 address.",
+        "B": "Deleting customers on every change destroys all record of the relationship and breaks referential integrity with existing sales.",
+        "C": "Type 0 freezes the attribute at its first value — useful for immutable fields (date of birth, original acquisition source) but wrong when the attribute legitimately changes.",
+        "D": "Correct. SCD Type 2 (Kimball) preserves history by adding a new dimension row each time a tracked attribute changes, with valid-from / valid-to timestamps and typically an is_current boolean. Facts reference the dimension row that was current at event time (time-travel join), so historical reports always resolve to the historically-correct attribute value. It is the canonical pattern for dimensions where history matters (customer address, employee grade, product price list). Trade-off: more rows and slightly more complex joins."
+      }
+    },
+    {
+      "id": "epso_duty_181",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 21",
+      "topic": "data_engineering",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Airflow DAG idempotency",
+      "figures": [],
+      "question": "An Airflow DAG processes one partition per day. After a logic bug, the team needs to reprocess 90 days of history safely. The design practice that makes this 'backfill' safe is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Storing credentials in the DAG code"
+        },
+        {
+          "letter": "B",
+          "text": "Writing tasks so that each partition's output depends only on that partition's inputs and re-running a task produces the same result (idempotency + partition isolation)"
+        },
+        {
+          "letter": "C",
+          "text": "Running all tasks in parallel without dependencies"
+        },
+        {
+          "letter": "D",
+          "text": "Turning off retries"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Safe backfill requires two properties: (1) idempotency — running the same task for the same logical partition yields the same output whether it runs once or ten times (typically via MERGE / overwrite-partition semantics keyed on business date, not APPEND); (2) partition isolation — each day's task reads only that day's inputs and writes only that day's outputs, so reprocessing day D does not corrupt day D±1. Airflow's 'execution_date' / logical-date templating plus idempotent sinks (Iceberg partition overwrite, dbt incremental with unique_key, S3 prefix-per-day) are the standard implementation. This is exactly the design that lets you reprocess 90 days by re-triggering the DAG runs or using `airflow dags backfill`.\n· A: Hard-coding credentials is a security antipattern unrelated to backfill safety (use connections, secrets backends or managed identity).\n· C: Parallel execution without dependencies doesn't ensure correctness — tasks with non-idempotent sinks would duplicate data regardless of parallelism.\n· D: Disabling retries makes the pipeline less, not more, robust. Retries handle transient failures; idempotency is what makes retries safe.",
+      "explanations": {
+        "A": "Hard-coding credentials is a security antipattern unrelated to backfill safety (use connections, secrets backends or managed identity).",
+        "B": "Correct. Safe backfill requires two properties: (1) idempotency — running the same task for the same logical partition yields the same output whether it runs once or ten times (typically via MERGE / overwrite-partition semantics keyed on business date, not APPEND); (2) partition isolation — each day's task reads only that day's inputs and writes only that day's outputs, so reprocessing day D does not corrupt day D±1. Airflow's 'execution_date' / logical-date templating plus idempotent sinks (Iceberg partition overwrite, dbt incremental with unique_key, S3 prefix-per-day) are the standard implementation. This is exactly the design that lets you reprocess 90 days by re-triggering the DAG runs or using `airflow dags backfill`.",
+        "C": "Parallel execution without dependencies doesn't ensure correctness — tasks with non-idempotent sinks would duplicate data regardless of parallelism.",
+        "D": "Disabling retries makes the pipeline less, not more, robust. Retries handle transient failures; idempotency is what makes retries safe."
+      }
+    },
+    {
+      "id": "epso_duty_182",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 22",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Kafka consumer groups · offsets",
+      "figures": [],
+      "question": "In Apache Kafka, three application instances share the workload of a topic with 6 partitions using the same 'consumer group'. Which statement is correct?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Each partition is read by exactly one instance of the group at a time; Kafka tracks the committed offset per (group, partition) so restarts resume from the last committed position"
+        },
+        {
+          "letter": "B",
+          "text": "All three instances receive every message"
+        },
+        {
+          "letter": "C",
+          "text": "Messages are delivered in global order across partitions"
+        },
+        {
+          "letter": "D",
+          "text": "Consumer groups are a security construct that encrypt messages"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. Within a consumer group, Kafka assigns each partition to exactly one consumer instance at any moment (balanced by the group coordinator). With 6 partitions and 3 instances, each instance handles 2 partitions; adding a 4th instance triggers a rebalance. Kafka commits offsets per (consumer-group, topic, partition), so a restart resumes from the last committed offset. To broadcast the same message to multiple applications, use different consumer groups.\n· B: 'All three receive every message' is the broadcast semantics of pub-sub with multiple consumer groups, not within a single group.\n· C: Kafka guarantees order within a partition only, not across partitions. Global ordering would require a single-partition topic, which sacrifices throughput.\n· D: Consumer groups are a load-balancing / offset-tracking abstraction. Encryption is a transport-level (TLS) and storage-level concern.",
+      "explanations": {
+        "A": "Correct. Within a consumer group, Kafka assigns each partition to exactly one consumer instance at any moment (balanced by the group coordinator). With 6 partitions and 3 instances, each instance handles 2 partitions; adding a 4th instance triggers a rebalance. Kafka commits offsets per (consumer-group, topic, partition), so a restart resumes from the last committed offset. To broadcast the same message to multiple applications, use different consumer groups.",
+        "B": "'All three receive every message' is the broadcast semantics of pub-sub with multiple consumer groups, not within a single group.",
+        "C": "Kafka guarantees order within a partition only, not across partitions. Global ordering would require a single-partition topic, which sacrifices throughput.",
+        "D": "Consumer groups are a load-balancing / offset-tracking abstraction. Encryption is a transport-level (TLS) and storage-level concern."
+      }
+    },
+    {
+      "id": "epso_duty_183",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Engineering · 23",
+      "topic": "data_engineering",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Event time vs processing time",
+      "figures": [],
+      "question": "In a stream-processing engine (Flink or Spark Structured Streaming), 'event time' refers to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "The wall-clock time the engine observes the event"
+        },
+        {
+          "letter": "B",
+          "text": "The timestamp the event actually happened in the real world (embedded in the record), used together with watermarks to handle out-of-order and late data"
+        },
+        {
+          "letter": "C",
+          "text": "The time the SQL query is compiled"
+        },
+        {
+          "letter": "D",
+          "text": "The TTL of a Kafka message"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Event time is the timestamp carried in the record itself, representing when the event actually occurred at the source (sensor reading, click, transaction). Modern stream engines (Flink, Spark Structured Streaming, Kafka Streams) compute windows and aggregations on event time, using 'watermarks' to estimate how late events are allowed to be before the engine closes a window. Event-time processing gives correct results even when events arrive out of order or after a connectivity outage — processing-time logic would bucket them incorrectly.\n· A: That describes 'processing time' — when the engine sees the event. Event time and processing time diverge whenever there is network delay, batching at source, or replay of historical data.\n· C: Query-compilation time is a DBMS internal, unrelated to stream windowing.\n· D: Kafka message TTL is a retention configuration on the broker side, not a stream-processing concept.",
+      "explanations": {
+        "A": "That describes 'processing time' — when the engine sees the event. Event time and processing time diverge whenever there is network delay, batching at source, or replay of historical data.",
+        "B": "Correct. Event time is the timestamp carried in the record itself, representing when the event actually occurred at the source (sensor reading, click, transaction). Modern stream engines (Flink, Spark Structured Streaming, Kafka Streams) compute windows and aggregations on event time, using 'watermarks' to estimate how late events are allowed to be before the engine closes a window. Event-time processing gives correct results even when events arrive out of order or after a connectivity outage — processing-time logic would bucket them incorrectly.",
+        "C": "Query-compilation time is a DBMS internal, unrelated to stream windowing.",
+        "D": "Kafka message TTL is a retention configuration on the broker side, not a stream-processing concept."
+      }
+    },
+    {
+      "id": "epso_duty_184",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 12",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "RPO vs RTO",
+      "figures": [],
+      "question": "A disaster-recovery plan states: 'in a regional outage, we can lose at most 15 minutes of data, and services must be back up within 2 hours'. The two quantities map to:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "RPO = 2 hours; RTO = 15 minutes"
+        },
+        {
+          "letter": "B",
+          "text": "They both refer to the same metric"
+        },
+        {
+          "letter": "C",
+          "text": "RPO = 0; RTO = 15 minutes + 2 hours"
+        },
+        {
+          "letter": "D",
+          "text": "RPO = 15 minutes (acceptable data loss) and RTO = 2 hours (acceptable downtime)"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. RPO (Recovery Point Objective) is the maximum acceptable amount of DATA loss measured in time — 'how far back can we afford our last good copy to be?'. RTO (Recovery Time Objective) is the maximum acceptable DOWNTIME — 'how long can we afford the service to be unavailable?'. RPO drives backup frequency / replication lag; RTO drives failover automation, standby capacity and run-books. Both feed the Business Continuity Plan and influence cost-of-resilience decisions.\n· A: Reversed. RPO and RTO are commonly swapped by mistake — the exam favourite trap. RPO is about DATA loss tolerance; RTO is about DOWNTIME tolerance.\n· B: They are distinct objectives and are typically quoted as a pair.\n· C: RPO = 0 implies synchronous replication with zero data loss — a costly posture, not what the scenario describes.",
+      "explanations": {
+        "A": "Reversed. RPO and RTO are commonly swapped by mistake — the exam favourite trap. RPO is about DATA loss tolerance; RTO is about DOWNTIME tolerance.",
+        "B": "They are distinct objectives and are typically quoted as a pair.",
+        "C": "RPO = 0 implies synchronous replication with zero data loss — a costly posture, not what the scenario describes.",
+        "D": "Correct. RPO (Recovery Point Objective) is the maximum acceptable amount of DATA loss measured in time — 'how far back can we afford our last good copy to be?'. RTO (Recovery Time Objective) is the maximum acceptable DOWNTIME — 'how long can we afford the service to be unavailable?'. RPO drives backup frequency / replication lag; RTO drives failover automation, standby capacity and run-books. Both feed the Business Continuity Plan and influence cost-of-resilience decisions."
+      }
+    },
+    {
+      "id": "epso_duty_185",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 13",
+      "topic": "data_platforms",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "Hot / warm / cold storage tiers",
+      "figures": [],
+      "question": "A data team designs a retention strategy for 10 years of transaction data. Recent 3 months are queried daily by BI; months 4–24 are queried a few times a month; years 3–10 are kept only for legal audit. The best-fit tiering is:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "All 10 years in the warehouse's hot tier"
+        },
+        {
+          "letter": "B",
+          "text": "Recent 3 months on hot columnar storage for BI; months 4–24 on warm object storage (standard) queryable via external tables; years 3–10 on cold / archival storage (Glacier / Archive) with policy-driven retrieval"
+        },
+        {
+          "letter": "C",
+          "text": "All data deleted after 30 days regardless of legal requirements"
+        },
+        {
+          "letter": "D",
+          "text": "All data on tape, restoring for every BI query"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. A lifecycle-based tiering matches access pattern to cost: (1) HOT — low-latency columnar storage (Snowflake / BigQuery / Redshift / lakehouse silver/gold) for the 3 months used daily; (2) WARM — object storage (S3 / Azure Blob / GCS Standard) queryable via external tables / federation for months 4–24, trading a little latency for much lower cost; (3) COLD / ARCHIVE — S3 Glacier / Archive Tier / Azure Archive for years 3–10, with restore SLAs measured in hours and rock-bottom storage cost. Cloud lifecycle policies can transition objects automatically as they age. This preserves legal retention while controlling spend.\n· A: Keeping ten years of cold legal-audit data in the warehouse's hot tier is wildly uneconomic. Hot-tier storage costs one or two orders of magnitude more than archival, and most of that data will never be read.\n· C: Blanket 30-day deletion ignores the 10-year legal requirement and creates regulatory exposure.\n· D: Tape-only storage would make BI queries impossible. Tape still exists for deep archive but isn't the right tier for data used daily.",
+      "explanations": {
+        "A": "Keeping ten years of cold legal-audit data in the warehouse's hot tier is wildly uneconomic. Hot-tier storage costs one or two orders of magnitude more than archival, and most of that data will never be read.",
+        "B": "Correct. A lifecycle-based tiering matches access pattern to cost: (1) HOT — low-latency columnar storage (Snowflake / BigQuery / Redshift / lakehouse silver/gold) for the 3 months used daily; (2) WARM — object storage (S3 / Azure Blob / GCS Standard) queryable via external tables / federation for months 4–24, trading a little latency for much lower cost; (3) COLD / ARCHIVE — S3 Glacier / Archive Tier / Azure Archive for years 3–10, with restore SLAs measured in hours and rock-bottom storage cost. Cloud lifecycle policies can transition objects automatically as they age. This preserves legal retention while controlling spend.",
+        "C": "Blanket 30-day deletion ignores the 10-year legal requirement and creates regulatory exposure.",
+        "D": "Tape-only storage would make BI queries impossible. Tape still exists for deep archive but isn't the right tier for data used daily."
+      }
+    },
+    {
+      "id": "epso_duty_186",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 14",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "ACID properties",
+      "figures": [],
+      "question": "The letters of the ACID acronym for database transactions stand for:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Atomicity, Concurrency, Isolation, Durability"
+        },
+        {
+          "letter": "B",
+          "text": "Authentication, Confidentiality, Integrity, Decentralisation"
+        },
+        {
+          "letter": "C",
+          "text": "Atomicity, Consistency, Isolation, Durability"
+        },
+        {
+          "letter": "D",
+          "text": "Accuracy, Completeness, Independence, Data-quality"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct. ACID = Atomicity (all or nothing — a transaction either fully commits or fully rolls back), Consistency (a transaction moves the database from one valid state to another, respecting integrity constraints), Isolation (concurrent transactions behave as if they ran serially, to a degree set by the isolation level), Durability (once committed, changes survive crashes). Coined by Härder and Reuter (1983). Modern OLTP databases implement ACID at the transaction boundary; lakehouses (Iceberg / Delta / Hudi) bring ACID to object storage. BASE (Basically Available, Soft-state, Eventual consistency) is the classic contrast of some distributed / NoSQL systems.\n· A: Close but wrong. The 'C' stands for Consistency, not Concurrency (though concurrency is implicitly managed by Isolation).\n· B: Those are security / architecture properties, not transactional guarantees.\n· D: Those are data-quality dimensions — ISO/IEC 25012 territory, not transactional semantics.",
+      "explanations": {
+        "A": "Close but wrong. The 'C' stands for Consistency, not Concurrency (though concurrency is implicitly managed by Isolation).",
+        "B": "Those are security / architecture properties, not transactional guarantees.",
+        "C": "Correct. ACID = Atomicity (all or nothing — a transaction either fully commits or fully rolls back), Consistency (a transaction moves the database from one valid state to another, respecting integrity constraints), Isolation (concurrent transactions behave as if they ran serially, to a degree set by the isolation level), Durability (once committed, changes survive crashes). Coined by Härder and Reuter (1983). Modern OLTP databases implement ACID at the transaction boundary; lakehouses (Iceberg / Delta / Hudi) bring ACID to object storage. BASE (Basically Available, Soft-state, Eventual consistency) is the classic contrast of some distributed / NoSQL systems.",
+        "D": "Those are data-quality dimensions — ISO/IEC 25012 territory, not transactional semantics."
+      }
+    },
+    {
+      "id": "epso_duty_187",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Data Platforms · 15",
+      "topic": "data_platforms",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Indexes · query plans",
+      "figures": [],
+      "question": "A slow OLTP query repeatedly filters a 50-million-row table on 'customer_email'. The most effective optimisation is usually:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Creating an index on customer_email so the optimiser can seek instead of full-scanning"
+        },
+        {
+          "letter": "B",
+          "text": "Dropping the primary key of the table"
+        },
+        {
+          "letter": "C",
+          "text": "Switching from SSD to HDD storage"
+        },
+        {
+          "letter": "D",
+          "text": "Adding more columns to every SELECT *"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. When a frequently used filter predicate touches a column that lacks a supporting index, the optimiser falls back to a full table scan — O(N) work that becomes unacceptable on 50M rows. An index on customer_email (B-tree for equality / range, hash for pure equality in some engines) lets the optimiser perform a fast lookup — O(log N). You can inspect the effect via `EXPLAIN` / query plan, which should switch from 'Seq Scan' to 'Index Scan' / 'Index Seek'. Trade-offs: indexes cost storage and slow down writes, so over-indexing is its own problem; covering / composite indexes can help when several columns are queried together.\n· B: Dropping the primary key removes uniqueness and breaks other indexes / FK relations. It won't speed up a non-PK filter and it will break things.\n· C: Moving from SSD to HDD makes all I/O slower. The proposed direction is exactly backwards.\n· D: `SELECT *` retrieves more columns than needed, increasing I/O and network cost. That is a pessimisation, not an optimisation.",
+      "explanations": {
+        "A": "Correct. When a frequently used filter predicate touches a column that lacks a supporting index, the optimiser falls back to a full table scan — O(N) work that becomes unacceptable on 50M rows. An index on customer_email (B-tree for equality / range, hash for pure equality in some engines) lets the optimiser perform a fast lookup — O(log N). You can inspect the effect via `EXPLAIN` / query plan, which should switch from 'Seq Scan' to 'Index Scan' / 'Index Seek'. Trade-offs: indexes cost storage and slow down writes, so over-indexing is its own problem; covering / composite indexes can help when several columns are queried together.",
+        "B": "Dropping the primary key removes uniqueness and breaks other indexes / FK relations. It won't speed up a non-PK filter and it will break things.",
+        "C": "Moving from SSD to HDD makes all I/O slower. The proposed direction is exactly backwards.",
+        "D": "`SELECT *` retrieves more columns than needed, increasing I/O and network cost. That is a pessimisation, not an optimisation."
+      }
+    },
+    {
+      "id": "epso_duty_188",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 11",
+      "topic": "bi_reporting",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Chart-type selection",
+      "figures": [],
+      "question": "Which pairing of communication goal and chart type is MOST appropriate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "'Compare magnitudes across a few categories' → 3D pie chart"
+        },
+        {
+          "letter": "B",
+          "text": "'Show change of a single metric over time' → line chart"
+        },
+        {
+          "letter": "C",
+          "text": "'Convey exact numbers in a dashboard' → word cloud"
+        },
+        {
+          "letter": "D",
+          "text": "'Compare two numeric variables for correlation' → stacked area chart"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. Line charts are the canonical choice for trend over time on a single continuous metric: the eye follows slope and direction, and multiple lines on the same chart support direct comparison. Alternatives for time series include area charts (when stacking is part of the story) and sparklines (when space is tight).\n· A: 3D pies introduce perspective distortion — area and angle no longer map faithfully to value. Flat bar charts outperform pies almost universally for magnitude comparison.\n· C: Word clouds suggest frequency qualitatively but are terrible for exact numbers — area is hard to compare visually and font size conflates multiple dimensions.\n· D: Correlation of two numeric variables is the textbook use case for a scatter plot, not a stacked area chart. Stacked areas over time work for part-to-whole evolution.",
+      "explanations": {
+        "A": "3D pies introduce perspective distortion — area and angle no longer map faithfully to value. Flat bar charts outperform pies almost universally for magnitude comparison.",
+        "B": "Correct. Line charts are the canonical choice for trend over time on a single continuous metric: the eye follows slope and direction, and multiple lines on the same chart support direct comparison. Alternatives for time series include area charts (when stacking is part of the story) and sparklines (when space is tight).",
+        "C": "Word clouds suggest frequency qualitatively but are terrible for exact numbers — area is hard to compare visually and font size conflates multiple dimensions.",
+        "D": "Correlation of two numeric variables is the textbook use case for a scatter plot, not a stacked area chart. Stacked areas over time work for part-to-whole evolution."
+      }
+    },
+    {
+      "id": "epso_duty_189",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 12",
+      "topic": "bi_reporting",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Pre-attentive attributes",
+      "figures": [],
+      "question": "In data visualisation, 'pre-attentive attributes' (Treisman, Ware, Few) are visual properties that:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Can only be processed through lengthy mental calculation"
+        },
+        {
+          "letter": "B",
+          "text": "Are banned by accessibility guidelines"
+        },
+        {
+          "letter": "C",
+          "text": "Refer exclusively to 3D rendering and animation"
+        },
+        {
+          "letter": "D",
+          "text": "The brain processes in roughly 200 ms or less, without conscious effort — position, length, colour hue, colour intensity, size, shape, orientation"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. Pre-attentive attributes are visual properties detected by the human perceptual system in the first ~200 ms of looking at a scene, before conscious attention engages. They include position (most accurate for quantitative comparison), length (bar charts), angle, slope, area, colour hue, colour intensity, size, shape and orientation. Choosing the right pre-attentive attribute for the most important message is one of the most powerful tools in data visualisation (Few, Tufte, Munzner). Using multiple weak attributes instead of the one right one is why bad charts fail: a pie with 30 slices fights pre-attention.\n· A: The whole point of pre-attentive processing is that it is automatic — it precedes conscious attention. Processes that require effort are called attentive, not pre-attentive.\n· B: Accessibility guidelines actually leverage pre-attentive attributes (contrast, size) — they are not banned.\n· C: Pre-attentive attributes apply to any visual medium, including static 2D charts — they have nothing specifically to do with 3D or animation.",
+      "explanations": {
+        "A": "The whole point of pre-attentive processing is that it is automatic — it precedes conscious attention. Processes that require effort are called attentive, not pre-attentive.",
+        "B": "Accessibility guidelines actually leverage pre-attentive attributes (contrast, size) — they are not banned.",
+        "C": "Pre-attentive attributes apply to any visual medium, including static 2D charts — they have nothing specifically to do with 3D or animation.",
+        "D": "Correct. Pre-attentive attributes are visual properties detected by the human perceptual system in the first ~200 ms of looking at a scene, before conscious attention engages. They include position (most accurate for quantitative comparison), length (bar charts), angle, slope, area, colour hue, colour intensity, size, shape and orientation. Choosing the right pre-attentive attribute for the most important message is one of the most powerful tools in data visualisation (Few, Tufte, Munzner). Using multiple weak attributes instead of the one right one is why bad charts fail: a pie with 30 slices fights pre-attention."
+      }
+    },
+    {
+      "id": "epso_duty_190",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · BI & Reporting · 13",
+      "topic": "bi_reporting",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Visualisation pitfalls",
+      "figures": [],
+      "question": "Which of the following is NOT a common visualisation pitfall that DISTORTS the reader's perception of the data?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Truncating the y-axis of a bar chart so small differences look huge"
+        },
+        {
+          "letter": "B",
+          "text": "Using dual y-axes to imply a correlation between two unrelated series"
+        },
+        {
+          "letter": "C",
+          "text": "Adding a clear, concise chart title that names the metric and the time range"
+        },
+        {
+          "letter": "D",
+          "text": "Using 3D perspective on a pie chart to exaggerate the slice nearest the viewer"
+        }
+      ],
+      "correct": "C",
+      "explanation": "Correct: C — Correct — the odd one out. A clear, concise title naming the metric and the time range is good practice, not a pitfall. It provides context, prevents misreading and is recommended by Tufte, Few, Knaflic and every style guide. It is the opposite of a distortion.\n· A: Truncated y-axis is the textbook distortion: a bar chart starting at, say, 90 instead of 0 makes a move from 95 to 100 look enormous. Accepted when ranges would otherwise be illegible — but then it must be flagged honestly.\n· B: Dual y-axes are a perennial trap: you can rescale two unrelated series to look synchronised or anti-correlated, and readers will infer causal stories that aren't there. Use only with very good reason and clear labelling.\n· D: 3D perspective on pie charts distorts areas and angles — the slice tilted toward the viewer looks bigger than it is. Alongside exploded pies, this is the single most maligned chart-junk in the literature.",
+      "explanations": {
+        "A": "Truncated y-axis is the textbook distortion: a bar chart starting at, say, 90 instead of 0 makes a move from 95 to 100 look enormous. Accepted when ranges would otherwise be illegible — but then it must be flagged honestly.",
+        "B": "Dual y-axes are a perennial trap: you can rescale two unrelated series to look synchronised or anti-correlated, and readers will infer causal stories that aren't there. Use only with very good reason and clear labelling.",
+        "C": "Correct — the odd one out. A clear, concise title naming the metric and the time range is good practice, not a pitfall. It provides context, prevents misreading and is recommended by Tufte, Few, Knaflic and every style guide. It is the opposite of a distortion.",
+        "D": "3D perspective on pie charts distorts areas and angles — the slice tilted toward the viewer looks bigger than it is. Alongside exploded pies, this is the single most maligned chart-junk in the literature."
+      }
+    },
+    {
+      "id": "epso_duty_191",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 15",
+      "topic": "advanced_analytics",
+      "difficulty": "easy",
+      "target_sec": 80,
+      "ref": "Named Entity Recognition",
+      "figures": [],
+      "question": "Named Entity Recognition (NER) is an NLP task that:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Ranks search results by relevance"
+        },
+        {
+          "letter": "B",
+          "text": "Identifies and classifies spans of text into categories such as Person, Organisation, Location, Date, Money"
+        },
+        {
+          "letter": "C",
+          "text": "Generates summaries of long documents"
+        },
+        {
+          "letter": "D",
+          "text": "Translates text between languages"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. NER extracts and labels entity mentions in unstructured text — classical labels include PER (Person), ORG (Organisation), LOC (Location), DATE, MONEY, and domain-specific extensions (LAW, PRODUCT, DISEASE, CASE-NUMBER). It is a foundational step in information extraction, knowledge-graph construction, and downstream pipelines like legal-document analysis, clinical-records mining and regulatory-text annotation. Modern implementations use fine-tuned transformer models (spaCy, Stanza, Hugging Face) that outperform older CRF / HMM approaches.\n· A: Ranking search results is information retrieval — BM25, neural rankers, vector similarity.\n· C: Summarisation is a separate NLP task — abstractive or extractive.\n· D: Translation is machine translation — a different task, handled by dedicated models (Helsinki-NLP, Marian, NLLB).",
+      "explanations": {
+        "A": "Ranking search results is information retrieval — BM25, neural rankers, vector similarity.",
+        "B": "Correct. NER extracts and labels entity mentions in unstructured text — classical labels include PER (Person), ORG (Organisation), LOC (Location), DATE, MONEY, and domain-specific extensions (LAW, PRODUCT, DISEASE, CASE-NUMBER). It is a foundational step in information extraction, knowledge-graph construction, and downstream pipelines like legal-document analysis, clinical-records mining and regulatory-text annotation. Modern implementations use fine-tuned transformer models (spaCy, Stanza, Hugging Face) that outperform older CRF / HMM approaches.",
+        "C": "Summarisation is a separate NLP task — abstractive or extractive.",
+        "D": "Translation is machine translation — a different task, handled by dedicated models (Helsinki-NLP, Marian, NLLB)."
+      }
+    },
+    {
+      "id": "epso_duty_192",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 16",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Sentiment analysis · embeddings",
+      "figures": [],
+      "question": "Which statement about modern sentiment analysis on customer feedback is MOST accurate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "It relies exclusively on hand-coded lexicons of positive / negative words"
+        },
+        {
+          "letter": "B",
+          "text": "It replaces the need for qualitative research entirely"
+        },
+        {
+          "letter": "C",
+          "text": "It only works for English"
+        },
+        {
+          "letter": "D",
+          "text": "Contemporary systems typically classify text using language-model embeddings — the input is encoded into a dense vector that captures meaning and is fed to a classifier, outperforming pure lexicon approaches on nuance, negation and sarcasm"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Correct: D — Correct. The modern pipeline encodes text with a pre-trained language model (BERT, RoBERTa, XLM-R, multilingual transformers) into a dense embedding, then either uses the model itself as a classifier (fine-tuning) or passes the embedding to a downstream classifier. This captures context, syntax and subtle semantic cues better than lexicon counts. Trade-offs: less interpretability, compute cost, and the need for careful handling of bias in the pre-training data.\n· A: Lexicon-based methods (VADER, SentiWordNet, AFINN) are simple, explainable and still useful baselines. But they fail on negation ('not good'), intensifiers ('really bad'), sarcasm ('great, another delay') and domain-specific vocabulary.\n· B: Sentiment scores give a quantitative signal — they complement, not replace, qualitative interviews and open-coding analyses, which still surface root causes and new themes.\n· C: Multilingual and cross-lingual transformer models (XLM-R, mBERT, NLLB-family) support sentiment analysis across many languages, including all 24 EU official languages, though quality varies by language and domain.",
+      "explanations": {
+        "A": "Lexicon-based methods (VADER, SentiWordNet, AFINN) are simple, explainable and still useful baselines. But they fail on negation ('not good'), intensifiers ('really bad'), sarcasm ('great, another delay') and domain-specific vocabulary.",
+        "B": "Sentiment scores give a quantitative signal — they complement, not replace, qualitative interviews and open-coding analyses, which still surface root causes and new themes.",
+        "C": "Multilingual and cross-lingual transformer models (XLM-R, mBERT, NLLB-family) support sentiment analysis across many languages, including all 24 EU official languages, though quality varies by language and domain.",
+        "D": "Correct. The modern pipeline encodes text with a pre-trained language model (BERT, RoBERTa, XLM-R, multilingual transformers) into a dense embedding, then either uses the model itself as a classifier (fine-tuning) or passes the embedding to a downstream classifier. This captures context, syntax and subtle semantic cues better than lexicon counts. Trade-offs: less interpretability, compute cost, and the need for careful handling of bias in the pre-training data."
+      }
+    },
+    {
+      "id": "epso_duty_193",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 17",
+      "topic": "advanced_analytics",
+      "difficulty": "medium",
+      "target_sec": 80,
+      "ref": "Time series · trend & seasonality",
+      "figures": [],
+      "question": "A monthly EU tourism series shows a steady upward climb with a regular pattern of peaks in July-August every year. The two components that best describe what is observed are:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Trend (long-term direction) and seasonality (regular, calendar-based repeating pattern)"
+        },
+        {
+          "letter": "B",
+          "text": "Stationarity and cointegration"
+        },
+        {
+          "letter": "C",
+          "text": "Heteroscedasticity and autocorrelation"
+        },
+        {
+          "letter": "D",
+          "text": "Noise and drift only"
+        }
+      ],
+      "correct": "A",
+      "explanation": "Correct: A — Correct. The classical additive decomposition of a time series is Y(t) = Trend(t) + Seasonality(t) + Residual(t). Trend captures the long-term direction (tourism growing year over year); Seasonality is the regular calendar pattern that repeats within a known period (summer peaks every July-August); Residual (or 'remainder') is what's left over. Tools like STL (Seasonal-Trend decomposition using LOESS), classical decomposition and Prophet's additive components visualise these parts explicitly and are a standard first step before forecasting.\n· B: Stationarity is a property of the series (constant mean / variance over time), and cointegration is a relationship between two non-stationary series. Neither describes the qualitative pattern in the question.\n· C: Heteroscedasticity is non-constant variance; autocorrelation is a residual property. Useful concepts, but not what the question asks to NAME.\n· D: 'Noise and drift only' ignores the clearly visible seasonal pattern.",
+      "explanations": {
+        "A": "Correct. The classical additive decomposition of a time series is Y(t) = Trend(t) + Seasonality(t) + Residual(t). Trend captures the long-term direction (tourism growing year over year); Seasonality is the regular calendar pattern that repeats within a known period (summer peaks every July-August); Residual (or 'remainder') is what's left over. Tools like STL (Seasonal-Trend decomposition using LOESS), classical decomposition and Prophet's additive components visualise these parts explicitly and are a standard first step before forecasting.",
+        "B": "Stationarity is a property of the series (constant mean / variance over time), and cointegration is a relationship between two non-stationary series. Neither describes the qualitative pattern in the question.",
+        "C": "Heteroscedasticity is non-constant variance; autocorrelation is a residual property. Useful concepts, but not what the question asks to NAME.",
+        "D": "'Noise and drift only' ignores the clearly visible seasonal pattern."
+      }
+    },
+    {
+      "id": "epso_duty_194",
+      "type": "mcq",
+      "source": "EPSO_AD426_DATA",
+      "book_ref": "EPSO AD/426/25 · Advanced Analytics · 18",
+      "topic": "advanced_analytics",
+      "difficulty": "hard",
+      "target_sec": 80,
+      "ref": "ARIMA vs Prophet · stationarity",
+      "figures": [],
+      "question": "Which statement about classical ARIMA and Facebook Prophet is MOST accurate?",
+      "options": [
+        {
+          "letter": "A",
+          "text": "ARIMA can be applied to any series without checking stationarity; Prophet is a subtype of ARIMA"
+        },
+        {
+          "letter": "B",
+          "text": "ARIMA typically requires the series to be (made) stationary — often via differencing (the 'I' for Integrated) — and is a good statistical baseline; Prophet uses an additive decomposition with trend changepoints, seasonalities and holidays, is more robust to missing data and easy to tune, but is not always the most accurate model"
+        },
+        {
+          "letter": "C",
+          "text": "Both models forbid any form of seasonality"
+        },
+        {
+          "letter": "D",
+          "text": "ARIMA and Prophet are only available for stock-price forecasting"
+        }
+      ],
+      "correct": "B",
+      "explanation": "Correct: B — Correct. ARIMA (p, d, q) is the classical Box-Jenkins model: the 'AR' captures autoregressive dependence on past values, the 'I' is the order of differencing needed to make the series stationary (tested with ADF / KPSS), and the 'MA' captures moving-average dependence on past errors. SARIMA adds seasonal terms. Prophet takes a different route: Y(t) = trend(t) + seasonality(t) + holidays(t) + ε, with piecewise-linear or logistic growth, automatic changepoints and Fourier-series seasonality. It is quick to fit, handles missing data gracefully and exposes interpretable components, but often loses to well-tuned ARIMA or gradient-boosted baselines on accuracy. The right choice depends on dataset characteristics, required interpretability and the team's tuning capacity.\n· A: ARIMA's assumptions include (weak) stationarity after differencing and (for some variants) no explicit seasonality unless SARIMA is used. Prophet is not a subtype of ARIMA — it is a separate generalised-additive-model-style approach (Taylor & Letham, 2017), internally unrelated to Box-Jenkins methodology.\n· C: SARIMA and Prophet both explicitly model seasonality. Seasonality is a first-class concept in both toolkits.\n· D: Both models are general time-series tools — they apply to any univariate series (tourism, energy demand, web traffic, hospital admissions), not just financial prices.",
+      "explanations": {
+        "A": "ARIMA's assumptions include (weak) stationarity after differencing and (for some variants) no explicit seasonality unless SARIMA is used. Prophet is not a subtype of ARIMA — it is a separate generalised-additive-model-style approach (Taylor & Letham, 2017), internally unrelated to Box-Jenkins methodology.",
+        "B": "Correct. ARIMA (p, d, q) is the classical Box-Jenkins model: the 'AR' captures autoregressive dependence on past values, the 'I' is the order of differencing needed to make the series stationary (tested with ADF / KPSS), and the 'MA' captures moving-average dependence on past errors. SARIMA adds seasonal terms. Prophet takes a different route: Y(t) = trend(t) + seasonality(t) + holidays(t) + ε, with piecewise-linear or logistic growth, automatic changepoints and Fourier-series seasonality. It is quick to fit, handles missing data gracefully and exposes interpretable components, but often loses to well-tuned ARIMA or gradient-boosted baselines on accuracy. The right choice depends on dataset characteristics, required interpretability and the team's tuning capacity.",
+        "C": "SARIMA and Prophet both explicitly model seasonality. Seasonality is a first-class concept in both toolkits.",
+        "D": "Both models are general time-series tools — they apply to any univariate series (tourism, energy demand, web traffic, hospital admissions), not just financial prices."
+      }
     }
   ]
 };
