@@ -112,6 +112,20 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:600;opacity:0;transition:opacity .25s;z-index:100;pointer-events:none}
 .toast.show{opacity:.95}
 
+/* Modal (pretty confirm dialog replacing native window.confirm) */
+.modal-backdrop{position:fixed;inset:0;background:rgba(26,26,24,0.48);display:flex;align-items:center;justify-content:center;z-index:1000;padding:16px;opacity:0;pointer-events:none;transition:opacity .18s ease-out}
+.modal-backdrop[data-open]{opacity:1;pointer-events:auto}
+.modal-card{background:var(--card);border-radius:16px;max-width:360px;width:100%;padding:22px 22px 16px;box-shadow:0 16px 50px rgba(0,0,0,0.3),0 2px 8px rgba(0,0,0,0.1);border:1px solid var(--border);transform:translateY(8px) scale(0.97);transition:transform .18s ease-out;opacity:0}
+.modal-backdrop[data-open] .modal-card{transform:translateY(0) scale(1);opacity:1}
+.modal-icon{width:48px;height:48px;border-radius:50%;background:var(--accentbg);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;margin:0 auto 10px;line-height:1}
+.modal-icon.danger{background:var(--redbg);color:var(--red)}
+.modal-title{font-size:16px;font-weight:800;text-align:center;margin-bottom:6px;color:var(--text)}
+.modal-body{font-size:13.5px;color:var(--sub);line-height:1.55;text-align:center;margin-bottom:18px}
+.modal-hint{font-size:11.5px;color:var(--muted);margin-top:8px;font-style:italic}
+.modal-actions{display:flex;gap:8px}
+.modal-actions .btn{flex:1;padding:12px 10px;font-size:14px}
+.btn-danger{background:var(--red);color:#fff}
+
 /* Per-type stats */
 .type-stats-section .stats-row{margin:6px 0 0}
 .type-stats-section .stat-chip{min-width:70px;padding:8px 10px}
@@ -444,6 +458,7 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .trap-body ul{padding-left:14px;margin:3px 0 0}
 .trap-body li{margin-bottom:2px;font-size:12px}
 @media(max-width:500px){.trap-body{grid-template-columns:1fr}.trap-body > div:first-child{border-right:0;border-bottom:1px solid var(--border)}}
+.trap-row .tl-viz{margin:0;border-radius:0;border:none;border-top:1px solid var(--border);background:#fafaf7;padding:10px 12px}
 </style>
 </head>
 <body>
@@ -693,10 +708,15 @@ function pickStatsFile(){
   input.click();
 }
 
-function resetStatsForPlaylist(key){
+async function resetStatsForPlaylist(key){
   const p = playlistByKey(key);
   const label = p ? p.label : key;
-  if(!confirm(`Reset all stats for "${label}"? This cannot be undone.`)) return;
+  const ok = await confirmModal({
+    title: `Reset stats for "${label}"?`,
+    body: `This clears every answer and score recorded for this test type.<div class="modal-hint">This cannot be undone.</div>`,
+    icon: '↺', danger: true, okLabel: 'Reset', cancelLabel: 'Keep',
+  });
+  if(!ok) return;
   const stats = loadStats();
   const ids = DB.questions.filter(q => q.source === key).map(q => q.id);
   for(const id of ids) delete stats[id];
@@ -705,8 +725,13 @@ function resetStatsForPlaylist(key){
   toast(`Stats reset for ${label}`);
   render();
 }
-function resetAllStats(){
-  if(!confirm('Reset ALL stats for every test type? This cannot be undone.')) return;
+async function resetAllStats(){
+  const ok = await confirmModal({
+    title: 'Reset ALL stats?',
+    body: `This wipes every answer and score across every test type.<div class="modal-hint">This cannot be undone.</div>`,
+    icon: '↺', danger: true, okLabel: 'Reset everything', cancelLabel: 'Keep',
+  });
+  if(!ok) return;
   saveStats({});
   clearSession();
   toast('All stats reset');
@@ -778,7 +803,12 @@ async function fsaEnsurePermission(handle, mode){
 
 // Called at app startup. User can cancel; returns quickly in that case.
 async function promptLoadStats(){
-  if(!confirm('Load stats from saved file?\n(default: iCloud PsycoTrain/stats.json)')) return;
+  const ok = await confirmModal({
+    title: 'Load your saved stats?',
+    body: `Restore previously saved progress from disk.<div class="modal-hint">Default location: iCloud · PsycoTrain / stats.json</div>`,
+    icon: '⇣', okLabel: 'Load', cancelLabel: 'Skip',
+  });
+  if(!ok) return;
   if(!hasFSA()){ pickStatsFile(); return; }
   try {
     let handle = await fsaGetHandle();
@@ -807,7 +837,12 @@ async function promptLoadStats(){
 // session didn't change any stats.
 async function promptSaveStats(){
   if(!STATS_DIRTY) return;
-  if(!confirm('Save stats to file?\n(default: iCloud PsycoTrain/stats.json)')) return;
+  const ok = await confirmModal({
+    title: 'Save your stats?',
+    body: `Write your progress to disk so you can restore it later.<div class="modal-hint">Default location: iCloud · PsycoTrain / stats.json</div>`,
+    icon: '⇡', okLabel: 'Save', cancelLabel: 'Not now',
+  });
+  if(!ok) return;
   if(!hasFSA()){ downloadStats(); STATS_DIRTY = false; return; }
   try {
     let handle = await fsaGetHandle();
@@ -897,6 +932,59 @@ function toast(msg){
   t.classList.add('show');
   clearTimeout(toast._t);
   toast._t = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+// In-app confirmation modal — replaces window.confirm().
+// Usage: await confirmModal({ title, body, icon, okLabel, cancelLabel, danger }).
+// Resolves to true on OK, false on Cancel / Esc / backdrop click.
+let __MODAL_EL__ = null;
+function confirmModal({ title, body = '', icon = '?', okLabel = 'OK', cancelLabel = 'Cancel', danger = false }){
+  if(!__MODAL_EL__){
+    const el = document.createElement('div');
+    el.className = 'modal-backdrop';
+    el.innerHTML = `
+      <div class="modal-card" role="dialog" aria-modal="true">
+        <div class="modal-icon"></div>
+        <div class="modal-title"></div>
+        <div class="modal-body"></div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" data-action="cancel"></button>
+          <button class="btn btn-primary" data-action="ok"></button>
+        </div>
+      </div>`;
+    document.body.appendChild(el);
+    __MODAL_EL__ = el;
+  }
+  const el = __MODAL_EL__;
+  const iconEl = el.querySelector('.modal-icon');
+  iconEl.textContent = icon;
+  iconEl.classList.toggle('danger', !!danger);
+  el.querySelector('.modal-title').textContent = title;
+  el.querySelector('.modal-body').innerHTML = body;
+  const okBtn = el.querySelector('[data-action="ok"]');
+  const cancelBtn = el.querySelector('[data-action="cancel"]');
+  okBtn.textContent = okLabel;
+  cancelBtn.textContent = cancelLabel;
+  okBtn.classList.toggle('btn-danger', !!danger);
+  okBtn.classList.toggle('btn-primary', !danger);
+  return new Promise(resolve => {
+    const done = (v) => {
+      el.removeAttribute('data-open');
+      okBtn.onclick = null; cancelBtn.onclick = null; el.onclick = null;
+      document.removeEventListener('keydown', keyHandler);
+      resolve(v);
+    };
+    const keyHandler = (e) => {
+      if(e.key === 'Escape'){ e.preventDefault(); done(false); }
+      else if(e.key === 'Enter'){ e.preventDefault(); done(true); }
+    };
+    requestAnimationFrame(() => el.setAttribute('data-open', ''));
+    okBtn.onclick = () => done(true);
+    cancelBtn.onclick = () => done(false);
+    el.onclick = (e) => { if(e.target === el) done(false); };
+    document.addEventListener('keydown', keyHandler);
+    setTimeout(() => okBtn.focus(), 80);
+  });
 }
 
 let SCROLL_TARGET = 'top'; // 'top' | 'explanation' | 'none'
@@ -2733,6 +2821,56 @@ function renderEpsoExplorer(root){
       <!-- TAB 2 · 11 DUTIES WHEEL -->
       <div class="tab-body" data-body="duties">
         <p class="intro">The job profile lists <strong>11 typical duties</strong>. Data Governance sits at the hub — it binds the other 10 through policy, roles and compliance.</p>
+        <div class="tl-viz"><svg viewBox="0 0 600 340" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#85B7EB" stroke-width="1.3" stroke-dasharray="4 3" opacity="0.55">
+            <line x1="300" y1="170" x2="300" y2="56"/>
+            <line x1="300" y1="170" x2="376" y2="81"/>
+            <line x1="300" y1="170" x2="424" y2="146"/>
+            <line x1="300" y1="170" x2="424" y2="194"/>
+            <line x1="300" y1="170" x2="376" y2="259"/>
+            <line x1="300" y1="170" x2="300" y2="284"/>
+            <line x1="300" y1="170" x2="224" y2="259"/>
+            <line x1="300" y1="170" x2="176" y2="194"/>
+            <line x1="300" y1="170" x2="176" y2="146"/>
+            <line x1="300" y1="170" x2="224" y2="81"/>
+          </g>
+          <circle cx="300" cy="170" r="64" fill="#E6F1FB" stroke="#185FA5" stroke-width="2.5"/>
+          <text x="300" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5" letter-spacing="1">HUB</text>
+          <text x="300" y="176" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">DATA</text>
+          <text x="300" y="191" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">GOVERNANCE</text>
+          <g font-family="-apple-system,sans-serif">
+            <rect x="250" y="22" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="262" y="43" font-size="11" font-weight="800" fill="#185FA5">1</text>
+            <text x="300" y="43" text-anchor="middle" font-size="10" fill="#1a1a18">Architecture</text>
+            <rect x="326" y="47" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="338" y="68" font-size="11" font-weight="800" fill="#185FA5">2</text>
+            <text x="376" y="68" text-anchor="middle" font-size="10" fill="#1a1a18">Policies</text>
+            <rect x="374" y="112" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="386" y="133" font-size="11" font-weight="800" fill="#185FA5">3</text>
+            <text x="424" y="133" text-anchor="middle" font-size="10" fill="#1a1a18">Engineering</text>
+            <rect x="374" y="192" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="386" y="213" font-size="11" font-weight="800" fill="#185FA5">4</text>
+            <text x="424" y="213" text-anchor="middle" font-size="10" fill="#1a1a18">Platforms</text>
+            <rect x="326" y="257" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="338" y="278" font-size="11" font-weight="800" fill="#185FA5">5</text>
+            <text x="376" y="278" text-anchor="middle" font-size="10" fill="#1a1a18">BI &amp; reporting</text>
+            <rect x="250" y="283" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="262" y="304" font-size="11" font-weight="800" fill="#185FA5">6</text>
+            <text x="300" y="304" text-anchor="middle" font-size="10" fill="#1a1a18">Master data</text>
+            <rect x="174" y="257" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="186" y="278" font-size="11" font-weight="800" fill="#185FA5">7</text>
+            <text x="224" y="278" text-anchor="middle" font-size="10" fill="#1a1a18">Metadata</text>
+            <rect x="126" y="192" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="138" y="213" font-size="11" font-weight="800" fill="#185FA5">8</text>
+            <text x="176" y="213" text-anchor="middle" font-size="10" fill="#1a1a18">Quality</text>
+            <rect x="126" y="112" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="138" y="133" font-size="11" font-weight="800" fill="#185FA5">9</text>
+            <text x="176" y="133" text-anchor="middle" font-size="10" fill="#1a1a18">Security</text>
+            <rect x="174" y="47" width="100" height="34" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="186" y="68" font-size="11" font-weight="800" fill="#185FA5">10</text>
+            <text x="224" y="68" text-anchor="middle" font-size="10" fill="#1a1a18">AI prep</text>
+          </g>
+        </svg><div class="tl-vcap">Policies radiate outward from Governance; quality, lineage and compliance flow back.</div></div>
         <div class="duty-wheel">
 
           <div class="duty-card" data-open>
@@ -2811,6 +2949,23 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>DAMA-DMBOK</h4>
             <div class="desc">Data Management Body of Knowledge — the industry-standard reference model. 11 Knowledge Areas arranged in a wheel, with <strong>Data Governance at the centre</strong> because every other area feeds policy into it and consumes policy from it.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 170" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <g font-family="-apple-system,sans-serif">
+                <rect x="10" y="12" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="65" y="30" text-anchor="middle" font-size="10.5" fill="#1a1a18">Architecture</text>
+                <rect x="125" y="12" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="180" y="30" text-anchor="middle" font-size="10.5" fill="#1a1a18">Modeling</text>
+                <rect x="240" y="12" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="295" y="30" text-anchor="middle" font-size="10.5" fill="#1a1a18">Storage &amp; Ops</text>
+                <rect x="355" y="12" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="410" y="30" text-anchor="middle" font-size="10.5" fill="#1a1a18">Security</text>
+                <rect x="470" y="12" width="120" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="530" y="30" text-anchor="middle" font-size="10.5" fill="#1a1a18">Integration</text>
+                <rect x="180" y="65" width="240" height="40" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="2.5"/>
+                <text x="300" y="82" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">HUB</text>
+                <text x="300" y="98" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">DATA GOVERNANCE</text>
+                <rect x="10" y="130" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="65" y="148" text-anchor="middle" font-size="10.5" fill="#1a1a18">Doc &amp; Content</text>
+                <rect x="125" y="130" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="180" y="148" text-anchor="middle" font-size="10.5" fill="#1a1a18">Ref &amp; Master</text>
+                <rect x="240" y="130" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="295" y="148" text-anchor="middle" font-size="10.5" fill="#1a1a18">Metadata</text>
+                <rect x="355" y="130" width="110" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="410" y="148" text-anchor="middle" font-size="10.5" fill="#1a1a18">DW &amp; BI</text>
+                <rect x="470" y="130" width="120" height="28" rx="5" fill="#fff" stroke="#85B7EB"/><text x="530" y="148" text-anchor="middle" font-size="10.5" fill="#1a1a18">Quality</text>
+              </g>
+            </svg><div class="tl-vcap">11 knowledge areas · Governance binds the other 10.</div></div>
             <ul>
               <li><strong>Data Governance (hub)</strong></li>
               <li>Data Architecture · Data Modeling &amp; Design</li>
@@ -2826,6 +2981,28 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>FAIR principles</h4>
             <div class="desc">A 4-letter checklist (Wilkinson et al., 2016) for making datasets research-community-ready. Adopted wholesale by the EU Open Data programme and by data.europa.eu as the default yardstick.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 125" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="15" width="140" height="95" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="80" y="46" text-anchor="middle" font-size="28" font-weight="900" fill="#185FA5">F</text>
+              <text x="80" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">findable</text>
+              <text x="80" y="88" text-anchor="middle" font-size="9.5" fill="#3d3d3a">persistent ID</text>
+              <text x="80" y="101" text-anchor="middle" font-size="9.5" fill="#3d3d3a">rich metadata</text>
+              <rect x="160" y="15" width="140" height="95" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="230" y="46" text-anchor="middle" font-size="28" font-weight="900" fill="#185FA5">A</text>
+              <text x="230" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">accessible</text>
+              <text x="230" y="88" text-anchor="middle" font-size="9.5" fill="#3d3d3a">open protocol</text>
+              <text x="230" y="101" text-anchor="middle" font-size="9.5" fill="#3d3d3a">auth if needed</text>
+              <rect x="310" y="15" width="140" height="95" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="380" y="46" text-anchor="middle" font-size="28" font-weight="900" fill="#185FA5">I</text>
+              <text x="380" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">interoperable</text>
+              <text x="380" y="88" text-anchor="middle" font-size="9.5" fill="#3d3d3a">shared vocab.</text>
+              <text x="380" y="101" text-anchor="middle" font-size="9.5" fill="#3d3d3a">formal language</text>
+              <rect x="460" y="15" width="130" height="95" rx="10" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="525" y="46" text-anchor="middle" font-size="28" font-weight="900" fill="#185FA5">R</text>
+              <text x="525" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">reusable</text>
+              <text x="525" y="88" text-anchor="middle" font-size="9.5" fill="#3d3d3a">clear licence</text>
+              <text x="525" y="101" text-anchor="middle" font-size="9.5" fill="#3d3d3a">provenance</text>
+            </svg></div>
             <ul>
               <li><strong>F</strong>indable — persistent ID, rich metadata, indexed</li>
               <li><strong>A</strong>ccessible — standardised open protocol, authentication where needed</li>
@@ -2838,6 +3015,22 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>EIF · 4 layers</h4>
             <div class="desc">European Interoperability Framework — the reference model used by every EU public-administration interoperability initiative, and the backbone of the Interoperable Europe Act (2024/903).</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 160" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="10" width="560" height="22" rx="5" fill="#EEEDFE" stroke="#534AB7" stroke-dasharray="3 2"/>
+              <text x="300" y="26" text-anchor="middle" font-size="10.5" font-weight="700" fill="#534AB7">Integrated Public Service Governance</text>
+              <rect x="20" y="38" width="560" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="34" y="56" font-size="11" font-weight="800" fill="#185FA5">LEGAL</text>
+              <text x="570" y="56" text-anchor="end" font-size="10" fill="#3d3d3a">aligned frameworks</text>
+              <rect x="20" y="68" width="560" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="34" y="86" font-size="11" font-weight="800" fill="#185FA5">ORGANISATIONAL</text>
+              <text x="570" y="86" text-anchor="end" font-size="10" fill="#3d3d3a">processes &amp; roles</text>
+              <rect x="20" y="98" width="560" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="34" y="116" font-size="11" font-weight="800" fill="#185FA5">SEMANTIC</text>
+              <text x="570" y="116" text-anchor="end" font-size="10" fill="#3d3d3a">meaning preserved</text>
+              <rect x="20" y="128" width="560" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="34" y="146" font-size="11" font-weight="800" fill="#185FA5">TECHNICAL</text>
+              <text x="570" y="146" text-anchor="end" font-size="10" fill="#3d3d3a">systems &amp; infra</text>
+            </svg></div>
             <ul>
               <li><strong>Legal</strong> — aligned legal frameworks</li>
               <li><strong>Organisational</strong> — business processes &amp; responsibilities</li>
@@ -2851,6 +3044,20 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>DCAT-AP · SKOS · RDF</h4>
             <div class="desc">The EU open-data metadata stack. DCAT-AP describes the <em>datasets</em>; SKOS structures the <em>vocabularies</em> used to classify them; RDF/OWL/SPARQL is the underlying semantic-web plumbing.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 155" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="110" y="10" width="380" height="32" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+              <text x="300" y="29" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">DCAT-AP</text>
+              <text x="300" y="39" text-anchor="middle" font-size="9" fill="#3d3d3a">describes datasets on data.europa.eu</text>
+              <rect x="60" y="55" width="220" height="32" rx="8" fill="#fff" stroke="#85B7EB"/>
+              <text x="170" y="74" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">SKOS</text>
+              <text x="170" y="84" text-anchor="middle" font-size="9" fill="#3d3d3a">vocabularies · EuroVoc</text>
+              <rect x="320" y="55" width="220" height="32" rx="8" fill="#fff" stroke="#85B7EB"/>
+              <text x="430" y="74" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Dublin Core</text>
+              <text x="430" y="84" text-anchor="middle" font-size="9" fill="#3d3d3a">15 core elements</text>
+              <rect x="60" y="100" width="480" height="42" rx="8" fill="#F8F7F4" stroke="#E4E2DA"/>
+              <text x="300" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="#3d3d3a">RDF · OWL · SPARQL</text>
+              <text x="300" y="132" text-anchor="middle" font-size="9.5" fill="#888">triples · ontology · query — the plumbing</text>
+            </svg><div class="tl-vcap">Application profiles sit on top of the semantic-web stack.</div></div>
             <ul>
               <li><strong>DCAT-AP</strong> — EU application profile of DCAT; powers data.europa.eu</li>
               <li>Extensions: StatDCAT-AP (statistics) · GeoDCAT-AP (geospatial) · HVD profile</li>
@@ -2864,6 +3071,19 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>5-star Open Data</h4>
             <div class="desc">Tim Berners-Lee's deployment scheme (2010). A simple 1-to-5 ladder for how 'open' an open dataset really is — each star adds reusability on top of the previous.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 160" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="132" width="96" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+              <text x="58" y="147" text-anchor="middle" font-size="11" fill="#1a1a18">★  on web</text>
+              <rect x="120" y="106" width="116" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+              <text x="178" y="121" text-anchor="middle" font-size="11" fill="#1a1a18">★★  structured</text>
+              <rect x="250" y="80" width="130" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+              <text x="315" y="95" text-anchor="middle" font-size="11" fill="#1a1a18">★★★  open format</text>
+              <rect x="394" y="54" width="130" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+              <text x="459" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">★★★★  URIs</text>
+              <rect x="394" y="28" width="196" height="22" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+              <text x="492" y="43" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">★★★★★  linked data</text>
+              <text x="10" y="20" font-size="9.5" fill="#888" font-style="italic">openness ↑ reusability ↑</text>
+            </svg></div>
             <ul>
               <li>★ on web, open license</li>
               <li>★★ machine-readable structured data</li>
@@ -2877,6 +3097,21 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>CIA triad</h4>
             <div class="desc">The classical objectives of information security. Predates GDPR by decades but remains the backbone of any security control set. Often extended with Authenticity and Non-repudiation ('AIC' + N/R in some textbooks).</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 180" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="300,20 520,160 80,160" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+              <circle cx="300" cy="20" r="26" fill="#185FA5"/>
+              <text x="300" y="28" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">C</text>
+              <text x="300" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Confidentiality</text>
+              <text x="300" y="74" text-anchor="middle" font-size="9.5" fill="#3d3d3a">only authorised see it</text>
+              <circle cx="80" cy="160" r="26" fill="#185FA5"/>
+              <text x="80" y="168" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">I</text>
+              <text x="80" y="125" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Integrity</text>
+              <text x="80" y="139" text-anchor="middle" font-size="9.5" fill="#3d3d3a">not altered</text>
+              <circle cx="520" cy="160" r="26" fill="#185FA5"/>
+              <text x="520" y="168" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">A</text>
+              <text x="520" y="125" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Availability</text>
+              <text x="520" y="139" text-anchor="middle" font-size="9.5" fill="#3d3d3a">accessible when needed</text>
+            </svg></div>
             <ul>
               <li><strong>C</strong>onfidentiality — only authorised can access</li>
               <li><strong>I</strong>ntegrity — data not altered improperly</li>
@@ -2889,6 +3124,41 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>Roles cheatsheet</h4>
             <div class="desc">Two role families are often blurred in exam questions. <strong>Data-management roles</strong> (Owner, Steward, Custodian) come from DAMA. <strong>GDPR roles</strong> (Controller, Processor, DPO) come from the regulation. CDO is an org-level leadership role; don't confuse with DPO.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="190" height="22" rx="4" fill="#185FA5"/>
+              <text x="105" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">DAMA (data mgmt)</text>
+              <rect x="10" y="38" width="190" height="26" rx="4" fill="#fff" stroke="#85B7EB"/>
+              <text x="20" y="55" font-size="10.5" font-weight="700" fill="#1a1a18">Owner</text>
+              <text x="195" y="55" text-anchor="end" font-size="9.5" fill="#888">accountable</text>
+              <rect x="10" y="68" width="190" height="26" rx="4" fill="#fff" stroke="#85B7EB"/>
+              <text x="20" y="85" font-size="10.5" font-weight="700" fill="#1a1a18">Steward</text>
+              <text x="195" y="85" text-anchor="end" font-size="9.5" fill="#888">quality · def.</text>
+              <rect x="10" y="98" width="190" height="26" rx="4" fill="#fff" stroke="#85B7EB"/>
+              <text x="20" y="115" font-size="10.5" font-weight="700" fill="#1a1a18">Custodian</text>
+              <text x="195" y="115" text-anchor="end" font-size="9.5" fill="#888">IT-operational</text>
+              <rect x="205" y="10" width="190" height="22" rx="4" fill="#A32D2D"/>
+              <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">GDPR (privacy)</text>
+              <rect x="205" y="38" width="190" height="26" rx="4" fill="#fff" stroke="#F09595"/>
+              <text x="215" y="55" font-size="10.5" font-weight="700" fill="#1a1a18">Controller</text>
+              <text x="390" y="55" text-anchor="end" font-size="9.5" fill="#888">purpose &amp; means</text>
+              <rect x="205" y="68" width="190" height="26" rx="4" fill="#fff" stroke="#F09595"/>
+              <text x="215" y="85" font-size="10.5" font-weight="700" fill="#1a1a18">Processor</text>
+              <text x="390" y="85" text-anchor="end" font-size="9.5" fill="#888">on controller's behalf</text>
+              <rect x="205" y="98" width="190" height="26" rx="4" fill="#fff" stroke="#F09595"/>
+              <text x="215" y="115" font-size="10.5" font-weight="700" fill="#1a1a18">DPO</text>
+              <text x="390" y="115" text-anchor="end" font-size="9.5" fill="#888">advises</text>
+              <rect x="400" y="10" width="190" height="22" rx="4" fill="#0F6E56"/>
+              <text x="495" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">Leadership</text>
+              <rect x="400" y="38" width="190" height="86" rx="4" fill="#fff" stroke="#5DCAA5"/>
+              <text x="410" y="55" font-size="10.5" font-weight="700" fill="#1a1a18">CDO</text>
+              <text x="495" y="55" text-anchor="middle" font-size="9.5" fill="#888">org-level strategy</text>
+              <text x="495" y="85" text-anchor="middle" font-size="9.5" fill="#3d3d3a">≠ DPO</text>
+              <text x="495" y="105" text-anchor="middle" font-size="9" fill="#888">(CDO sets direction,</text>
+              <text x="495" y="117" text-anchor="middle" font-size="9" fill="#888">DPO audits compliance)</text>
+              <rect x="10" y="140" width="580" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+              <text x="300" y="158" text-anchor="middle" font-size="11" font-weight="700" fill="#854F0B">Controller vs Processor — the most-tested pair</text>
+              <text x="300" y="170" text-anchor="middle" font-size="10" fill="#3d3d3a">"Decides purposes and means" → Controller, always.</text>
+            </svg></div>
             <ul>
               <li><strong>Data Owner</strong> — accountable, sets policy</li>
               <li><strong>Data Steward</strong> — executes policy, quality, definitions</li>
@@ -2904,6 +3174,25 @@ function renderEpsoExplorer(root){
           <div class="fw-card">
             <h4>ISO quality standards</h4>
             <div class="desc">Two complementary ISO families. ISO 8000 focuses on master-data exchange and provenance. ISO/IEC 25012 (part of the 25000 series) lists the characteristics that make up 'quality' in a more generic sense.</div>
+            <div class="tl-viz"><svg viewBox="0 0 600 145" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="10" width="285" height="125" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+              <text x="152" y="32" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">ISO 8000</text>
+              <text x="152" y="49" text-anchor="middle" font-size="10" fill="#3d3d3a">master-data focus</text>
+              <line x1="30" y1="58" x2="275" y2="58" stroke="#85B7EB"/>
+              <text x="152" y="76" text-anchor="middle" font-size="10.5" fill="#1a1a18">• data exchange</text>
+              <text x="152" y="94" text-anchor="middle" font-size="10.5" fill="#1a1a18">• provenance / lineage</text>
+              <text x="152" y="112" text-anchor="middle" font-size="10.5" fill="#1a1a18">• fitness-for-purpose</text>
+              <text x="152" y="128" text-anchor="middle" font-size="9.5" fill="#888" font-style="italic">"did the data come from somewhere trustworthy?"</text>
+              <rect x="305" y="10" width="285" height="125" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+              <text x="447" y="32" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">ISO/IEC 25012</text>
+              <text x="447" y="49" text-anchor="middle" font-size="10" fill="#3d3d3a">15 quality characteristics</text>
+              <line x1="325" y1="58" x2="570" y2="58" stroke="#85B7EB"/>
+              <text x="447" y="74" text-anchor="middle" font-size="9.5" fill="#1a1a18">accuracy · completeness · consistency</text>
+              <text x="447" y="88" text-anchor="middle" font-size="9.5" fill="#1a1a18">credibility · currentness · accessibility</text>
+              <text x="447" y="102" text-anchor="middle" font-size="9.5" fill="#1a1a18">compliance · confidentiality · efficiency</text>
+              <text x="447" y="116" text-anchor="middle" font-size="9.5" fill="#1a1a18">precision · traceability · understandability</text>
+              <text x="447" y="130" text-anchor="middle" font-size="9.5" fill="#1a1a18">availability · portability · recoverability</text>
+            </svg><div class="tl-vcap">"Which ISO lists quality characteristics?" → 25012, never 8000.</div></div>
             <ul>
               <li><strong>ISO 8000</strong> — data quality, esp. master data + provenance</li>
               <li><strong>ISO/IEC 25012</strong> — 15 quality characteristics (accuracy, completeness, consistency, credibility, currentness, accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability, availability, portability, recoverability)</li>
@@ -2940,6 +3229,29 @@ function renderEpsoExplorer(root){
               </ul>
             </div>
           </div>
+          <div class="tl-viz"><svg viewBox="0 0 600 175" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect x="185" y="10" width="230" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+            <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">WHO IS THE SUBJECT?</text>
+            <text x="300" y="40" text-anchor="middle" font-size="10" fill="#3d3d3a">the actor processing personal data</text>
+            <line x1="300" y1="48" x2="150" y2="72" stroke="#854F0B"/>
+            <line x1="300" y1="48" x2="450" y2="72" stroke="#854F0B"/>
+            <rect x="20" y="72" width="260" height="36" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="150" y="88" text-anchor="middle" font-size="10.5" fill="#1a1a18">Hospital · school · bank · airline</text>
+            <text x="150" y="102" text-anchor="middle" font-size="10" fill="#888" font-style="italic">— Member-State private or public</text>
+            <rect x="320" y="72" width="260" height="36" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="450" y="88" text-anchor="middle" font-size="10.5" fill="#1a1a18">Commission · Parliament · ECB · Frontex</text>
+            <text x="450" y="102" text-anchor="middle" font-size="10" fill="#888" font-style="italic">— EU institution / body / agency</text>
+            <line x1="150" y1="108" x2="150" y2="128" stroke="#185FA5"/>
+            <polygon points="150,132 146,124 154,124" fill="#185FA5"/>
+            <line x1="450" y1="108" x2="450" y2="128" stroke="#185FA5"/>
+            <polygon points="450,132 446,124 454,124" fill="#185FA5"/>
+            <rect x="20" y="132" width="260" height="36" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="150" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">GDPR · 2016/679</text>
+            <text x="150" y="163" text-anchor="middle" font-size="10" fill="#3d3d3a">Supervisor: National DPA + EDPB</text>
+            <rect x="320" y="132" width="260" height="36" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="450" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">Reg 2018/1725</text>
+            <text x="450" y="163" text-anchor="middle" font-size="10" fill="#3d3d3a">Supervisor: EDPS</text>
+          </svg></div>
           <div class="trap-signal"><strong>Signal:</strong> watch who the subject is. Hospital · school · airline · bank → GDPR. Commission · Parliament · EDPS · Agency · ECB → 2018/1725. Same principles, different regulator.</div>
         </div>
 
@@ -2965,6 +3277,38 @@ function renderEpsoExplorer(root){
               </ul>
             </div>
           </div>
+          <div class="tl-viz"><svg viewBox="0 0 600 180" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect x="185" y="10" width="230" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+            <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">WHICH KEYWORD APPEARS?</text>
+            <text x="300" y="40" text-anchor="middle" font-size="10" fill="#3d3d3a">in the question stem</text>
+            <line x1="260" y1="48" x2="100" y2="72" stroke="#854F0B"/>
+            <line x1="300" y1="48" x2="300" y2="72" stroke="#854F0B"/>
+            <line x1="340" y1="48" x2="500" y2="72" stroke="#854F0B"/>
+            <rect x="20" y="72" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="100" y="89" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">"altruism"</text>
+            <text x="100" y="102" text-anchor="middle" font-size="10" fill="#3d3d3a">"intermediary" · "EDIB"</text>
+            <rect x="220" y="72" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="300" y="89" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">"IoT" · "FRAND"</text>
+            <text x="300" y="102" text-anchor="middle" font-size="10" fill="#3d3d3a">"connected product"</text>
+            <rect x="420" y="72" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="500" y="89" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">"cloud switching"</text>
+            <text x="500" y="102" text-anchor="middle" font-size="10" fill="#3d3d3a">"egress" · "public emergency"</text>
+            <line x1="100" y1="110" x2="100" y2="132" stroke="#185FA5"/>
+            <polygon points="100,136 96,128 104,128" fill="#185FA5"/>
+            <line x1="300" y1="110" x2="300" y2="132" stroke="#185FA5"/>
+            <polygon points="300,136 296,128 304,128" fill="#185FA5"/>
+            <line x1="500" y1="110" x2="500" y2="132" stroke="#185FA5"/>
+            <polygon points="500,136 496,128 504,128" fill="#185FA5"/>
+            <rect x="20" y="136" width="160" height="38" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="100" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">DGA · 2022/868</text>
+            <text x="100" y="167" text-anchor="middle" font-size="9.5" fill="#3d3d3a">mechanisms &amp; roles</text>
+            <rect x="220" y="136" width="160" height="38" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="300" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">Data Act · Ch II/III</text>
+            <text x="300" y="167" text-anchor="middle" font-size="9.5" fill="#3d3d3a">IoT + B2B rights</text>
+            <rect x="420" y="136" width="160" height="38" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="500" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">Data Act · Ch V/VI</text>
+            <text x="500" y="167" text-anchor="middle" font-size="9.5" fill="#3d3d3a">cloud + B2G</text>
+          </svg></div>
           <div class="trap-signal"><strong>Signal:</strong> DGA = who and how (mechanisms &amp; roles). Data Act = what (user rights). If you see 'altruism' or 'intermediary' → DGA. If you see 'IoT' or 'cloud switching' → Data Act.</div>
         </div>
 
@@ -2990,6 +3334,29 @@ function renderEpsoExplorer(root){
               </ul>
             </div>
           </div>
+          <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect x="160" y="10" width="280" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+            <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">CAN RE-IDENTIFICATION HAPPEN?</text>
+            <text x="300" y="40" text-anchor="middle" font-size="10" fill="#3d3d3a">is there a way back to the data subject?</text>
+            <line x1="300" y1="48" x2="150" y2="72" stroke="#854F0B"/>
+            <line x1="300" y1="48" x2="450" y2="72" stroke="#854F0B"/>
+            <rect x="20" y="72" width="260" height="40" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="150" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">YES — with a separate key</text>
+            <text x="150" y="105" text-anchor="middle" font-size="10" fill="#3d3d3a">kept secure, held elsewhere</text>
+            <rect x="320" y="72" width="260" height="40" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="450" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">NO — irreversible</text>
+            <text x="450" y="105" text-anchor="middle" font-size="10" fill="#3d3d3a">even combined with other datasets</text>
+            <line x1="150" y1="112" x2="150" y2="132" stroke="#185FA5"/>
+            <polygon points="150,136 146,128 154,128" fill="#185FA5"/>
+            <line x1="450" y1="112" x2="450" y2="132" stroke="#185FA5"/>
+            <polygon points="450,136 446,128 454,128" fill="#185FA5"/>
+            <rect x="20" y="136" width="260" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="150" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">PSEUDONYMISATION</text>
+            <text x="150" y="168" text-anchor="middle" font-size="10" fill="#3d3d3a">still personal data · GDPR applies</text>
+            <rect x="320" y="136" width="260" height="42" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2"/>
+            <text x="450" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#0F6E56">ANONYMISATION</text>
+            <text x="450" y="168" text-anchor="middle" font-size="10" fill="#3d3d3a">no longer personal · OUT of GDPR</text>
+          </svg></div>
           <div class="trap-signal"><strong>Signal:</strong> one-way function vs two-way. If there's a 'key' that can re-identify — pseudonymisation, GDPR still applies. If the identifiers are gone for good with no re-ID path — anonymisation, out of scope.</div>
         </div>
 
@@ -3015,6 +3382,29 @@ function renderEpsoExplorer(root){
               </ul>
             </div>
           </div>
+          <div class="tl-viz"><svg viewBox="0 0 600 175" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect x="165" y="10" width="270" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+            <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">WHAT KIND OF PSI?</text>
+            <text x="300" y="40" text-anchor="middle" font-size="10" fill="#3d3d3a">public-sector information</text>
+            <line x1="300" y1="48" x2="150" y2="72" stroke="#854F0B"/>
+            <line x1="300" y1="48" x2="450" y2="72" stroke="#854F0B"/>
+            <rect x="20" y="72" width="260" height="40" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="150" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">OPEN / non-sensitive</text>
+            <text x="150" y="105" text-anchor="middle" font-size="10" fill="#3d3d3a">weather · statistics · companies · mobility</text>
+            <rect x="320" y="72" width="260" height="40" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="450" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">PROTECTED</text>
+            <text x="450" y="105" text-anchor="middle" font-size="10" fill="#3d3d3a">confidential · IP · personal (health)</text>
+            <line x1="150" y1="112" x2="150" y2="132" stroke="#185FA5"/>
+            <polygon points="150,136 146,128 154,128" fill="#185FA5"/>
+            <line x1="450" y1="112" x2="450" y2="132" stroke="#185FA5"/>
+            <polygon points="450,136 446,128 454,128" fill="#185FA5"/>
+            <rect x="20" y="136" width="260" height="36" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="150" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">Open Data Dir. 2019/1024</text>
+            <text x="150" y="166" text-anchor="middle" font-size="10" fill="#3d3d3a">open by default · HVDs · free</text>
+            <rect x="320" y="136" width="260" height="36" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="450" y="154" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">DGA · 2022/868</text>
+            <text x="450" y="166" text-anchor="middle" font-size="10" fill="#3d3d3a">conditions · intermediaries · altruism</text>
+          </svg></div>
           <div class="trap-signal"><strong>Signal:</strong> Open = default. DGA = with conditions. If the data is open public-sector info → Directive. If it's confidential / IP / personal → DGA.</div>
         </div>
 
@@ -3040,6 +3430,38 @@ function renderEpsoExplorer(root){
               </ul>
             </div>
           </div>
+          <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect x="170" y="10" width="260" height="36" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+            <text x="300" y="26" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">WHEN IS SCHEMA APPLIED?</text>
+            <text x="300" y="40" text-anchor="middle" font-size="10" fill="#3d3d3a">and do you need ACID?</text>
+            <line x1="260" y1="48" x2="100" y2="74" stroke="#854F0B"/>
+            <line x1="300" y1="48" x2="300" y2="74" stroke="#854F0B"/>
+            <line x1="340" y1="48" x2="500" y2="74" stroke="#854F0B"/>
+            <rect x="20" y="74" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="100" y="91" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">on WRITE</text>
+            <text x="100" y="104" text-anchor="middle" font-size="10" fill="#3d3d3a">structured only · curated</text>
+            <rect x="220" y="74" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="300" y="91" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">on READ · no ACID</text>
+            <text x="300" y="104" text-anchor="middle" font-size="10" fill="#3d3d3a">raw files · any format</text>
+            <rect x="420" y="74" width="160" height="38" rx="6" fill="#fff" stroke="#85B7EB"/>
+            <text x="500" y="91" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">on READ + ACID</text>
+            <text x="500" y="104" text-anchor="middle" font-size="10" fill="#3d3d3a">open table format</text>
+            <line x1="100" y1="112" x2="100" y2="134" stroke="#185FA5"/>
+            <polygon points="100,138 96,130 104,130" fill="#185FA5"/>
+            <line x1="300" y1="112" x2="300" y2="134" stroke="#185FA5"/>
+            <polygon points="300,138 296,130 304,130" fill="#185FA5"/>
+            <line x1="500" y1="112" x2="500" y2="134" stroke="#185FA5"/>
+            <polygon points="500,138 496,130 504,130" fill="#185FA5"/>
+            <rect x="20" y="138" width="160" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="100" y="156" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">WAREHOUSE</text>
+            <text x="100" y="170" text-anchor="middle" font-size="9.5" fill="#3d3d3a">Snowflake · BigQuery</text>
+            <rect x="220" y="138" width="160" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="300" y="156" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">LAKE</text>
+            <text x="300" y="170" text-anchor="middle" font-size="9.5" fill="#3d3d3a">S3 · HDFS · Parquet</text>
+            <rect x="420" y="138" width="160" height="42" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+            <text x="500" y="156" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">LAKEHOUSE</text>
+            <text x="500" y="170" text-anchor="middle" font-size="9.5" fill="#3d3d3a">Delta · Iceberg · Hudi</text>
+          </svg></div>
           <div class="trap-signal"><strong>Signal:</strong> 'schema-on-write' → Warehouse. 'open table format' / 'Delta / Iceberg / Hudi' / 'ACID on object storage' → Lakehouse. Plain 'schema-on-read' with no ACID → Lake.</div>
         </div>
 
@@ -3059,6 +3481,28 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Why DM matters: data is an asset. When managed well, it drives decisions, operational efficiency and compliance. Badly managed, it becomes liability — risk, cost, lost trust.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 170" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">DATA LIFECYCLE · 6 STAGES</text>
+                <rect x="10" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="51" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Create</text>
+                <text x="100" y="51" text-anchor="middle" font-size="14" fill="#185FA5">→</text>
+                <rect x="108" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="149" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Store</text>
+                <text x="198" y="51" text-anchor="middle" font-size="14" fill="#185FA5">→</text>
+                <rect x="206" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="247" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Use</text>
+                <text x="296" y="51" text-anchor="middle" font-size="14" fill="#185FA5">→</text>
+                <rect x="304" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="345" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Share</text>
+                <text x="394" y="51" text-anchor="middle" font-size="14" fill="#185FA5">→</text>
+                <rect x="402" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="443" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Archive</text>
+                <text x="492" y="51" text-anchor="middle" font-size="14" fill="#185FA5">→</text>
+                <rect x="500" y="30" width="82" height="34" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="541" y="52" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">Destroy</text>
+                <rect x="10" y="76" width="572" height="28" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-dasharray="3 2"/>
+                <text x="296" y="94" text-anchor="middle" font-size="10.5" font-weight="700" fill="#534AB7">Governance · Security · Quality — touch every stage</text>
+                <text x="10" y="128" font-size="10.5" font-weight="700" fill="#185FA5">KEY ROLES</text>
+                <rect x="10" y="136" width="112" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="66" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Owner · accountable</text>
+                <rect x="126" y="136" width="112" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="182" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Steward · quality</text>
+                <rect x="242" y="136" width="112" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="298" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Custodian · IT ops</text>
+                <rect x="358" y="136" width="112" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="414" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">CDO · strategy</text>
+                <rect x="474" y="136" width="112" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="530" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">DPO · privacy</text>
+              </svg><div class="tl-vcap">Owner (accountable) ≠ DPO (privacy advisor) ≠ CDO (strategy).</div></div>
               <dl>
                 <dt>Definition</dt><dd>Systematic practice of collecting, organising, protecting and using data throughout its lifecycle.</dd>
                 <dt>Benefits</dt><dd>Better decisions · operational efficiency · reduced risk · regulatory compliance · innovation velocity · competitive edge.</dd>
@@ -3081,6 +3525,27 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Every downstream quality problem starts (or is prevented) at collection. The job is to gather the right data, from trustworthy sources, under a consent and validation regime that survives audit.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 195" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">SOURCES &amp; SAMPLING</text>
+                <text x="10" y="36" font-size="10" font-weight="700" fill="#185FA5">ORIGIN</text>
+                <rect x="10" y="42" width="130" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/><text x="75" y="58" text-anchor="middle" font-size="10" fill="#1a1a18">Internal (CRM · ERP)</text>
+                <rect x="10" y="70" width="130" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/><text x="75" y="86" text-anchor="middle" font-size="10" fill="#1a1a18">External (API · open)</text>
+                <text x="150" y="36" font-size="10" font-weight="700" fill="#185FA5">FORMAT</text>
+                <rect x="150" y="42" width="130" height="24" rx="5" fill="#fff" stroke="#85B7EB"/><text x="215" y="58" text-anchor="middle" font-size="10" fill="#1a1a18">Structured (RDB)</text>
+                <rect x="150" y="70" width="130" height="24" rx="5" fill="#fff" stroke="#85B7EB"/><text x="215" y="86" text-anchor="middle" font-size="10" fill="#1a1a18">Semi (JSON · XML)</text>
+                <rect x="150" y="98" width="130" height="24" rx="5" fill="#fff" stroke="#85B7EB"/><text x="215" y="114" text-anchor="middle" font-size="10" fill="#1a1a18">Unstructured (text · img)</text>
+                <text x="290" y="36" font-size="10" font-weight="700" fill="#185FA5">CADENCE</text>
+                <rect x="290" y="42" width="130" height="24" rx="5" fill="#E1F5EE" stroke="#5DCAA5"/><text x="355" y="58" text-anchor="middle" font-size="10" fill="#1a1a18">Batch (ETL)</text>
+                <rect x="290" y="70" width="130" height="24" rx="5" fill="#E1F5EE" stroke="#5DCAA5"/><text x="355" y="86" text-anchor="middle" font-size="10" fill="#1a1a18">Streaming (Kafka)</text>
+                <text x="430" y="36" font-size="10" font-weight="700" fill="#185FA5">SAMPLING (4 TYPES)</text>
+                <rect x="430" y="42" width="160" height="22" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="510" y="57" text-anchor="middle" font-size="10" fill="#1a1a18">Random — equal chance</text>
+                <rect x="430" y="66" width="160" height="22" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="510" y="81" text-anchor="middle" font-size="10" fill="#1a1a18">Stratified — keep ratios</text>
+                <rect x="430" y="90" width="160" height="22" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="510" y="105" text-anchor="middle" font-size="10" fill="#1a1a18">Systematic — every Nth</text>
+                <rect x="430" y="114" width="160" height="22" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="510" y="129" text-anchor="middle" font-size="10" fill="#1a1a18">Cluster — whole groups</text>
+                <rect x="10" y="152" width="580" height="34" rx="8" fill="#FCEBEB" stroke="#F09595"/>
+                <text x="300" y="168" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A32D2D">VALIDATE AT INGESTION — not later</text>
+                <text x="300" y="180" text-anchor="middle" font-size="9.5" fill="#3d3d3a">syntax · domain · referential · cross-field · business rules</text>
+              </svg><div class="tl-vcap">Stratified ≠ systematic. Anonymisation is a privacy control, not a validation step.</div></div>
               <dl>
                 <dt>Types of sources</dt><dd><strong>Internal vs external</strong> (CRM/ERP vs third-party feeds). <strong>Structured</strong> (RDB, tabular) vs <strong>semi-structured</strong> (JSON, XML, logs) vs <strong>unstructured</strong> (text, images, audio, video). <strong>Streaming vs batch</strong>.</dd>
                 <dt>Practical examples</dt><dd>Operational systems (CRM, ERP), IoT sensors, clickstream logs, third-party APIs, social media, surveys, censuses, open data portals.</dd>
@@ -3103,6 +3568,33 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Raw data becomes usable here. Three goals: standardise (same format), reconcile (same meaning across sources), enrich (add derived signal). Every transformation is documented lineage.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">ETL vs ELT</text>
+                <text x="150" y="36" text-anchor="middle" font-size="10.5" font-weight="800" fill="#185FA5">ETL · classic / on-prem</text>
+                <rect x="20" y="44" width="78" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="59" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">Extract</text>
+                <text x="104" y="63" text-anchor="middle" font-size="12" fill="#185FA5">→</text>
+                <rect x="112" y="44" width="88" height="30" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="156" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#854F0B">Transform</text>
+                <text x="206" y="63" text-anchor="middle" font-size="12" fill="#185FA5">→</text>
+                <rect x="214" y="44" width="60" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="244" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">Load</text>
+                <text x="150" y="90" text-anchor="middle" font-size="9.5" fill="#888">transform in dedicated engine BEFORE landing</text>
+                <text x="450" y="36" text-anchor="middle" font-size="10.5" font-weight="800" fill="#185FA5">ELT · modern cloud / dbt</text>
+                <rect x="310" y="44" width="78" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="349" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">Extract</text>
+                <text x="394" y="63" text-anchor="middle" font-size="12" fill="#185FA5">→</text>
+                <rect x="402" y="44" width="60" height="30" rx="6" fill="#E6F1FB" stroke="#185FA5"/><text x="432" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">Load</text>
+                <text x="468" y="63" text-anchor="middle" font-size="12" fill="#185FA5">→</text>
+                <rect x="476" y="44" width="98" height="30" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="525" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#854F0B">Transform</text>
+                <text x="450" y="90" text-anchor="middle" font-size="9.5" fill="#888">transform INSIDE warehouse via SQL</text>
+                <rect x="10" y="105" width="280" height="72" rx="8" fill="#F8F7F4" stroke="#E4E2DA"/>
+                <text x="150" y="124" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">REAL-TIME / STREAMING</text>
+                <text x="150" y="140" text-anchor="middle" font-size="10" fill="#3d3d3a">Kafka · Kinesis — producer · topic · consumer</text>
+                <text x="150" y="156" text-anchor="middle" font-size="10" fill="#3d3d3a">processing: Flink · Spark Structured</text>
+                <text x="150" y="170" text-anchor="middle" font-size="9.5" fill="#888" font-style="italic">latency goals in ms–seconds</text>
+                <rect x="310" y="105" width="280" height="72" rx="8" fill="#F8F7F4" stroke="#E4E2DA"/>
+                <text x="450" y="124" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">CDC — Change Data Capture</text>
+                <text x="450" y="140" text-anchor="middle" font-size="10" fill="#3d3d3a">propagate source changes via log mining</text>
+                <text x="450" y="156" text-anchor="middle" font-size="10" fill="#3d3d3a">near-real-time replication</text>
+                <text x="450" y="170" text-anchor="middle" font-size="9.5" fill="#A32D2D" font-style="italic">NOT batch loading</text>
+              </svg><div class="tl-vcap">Keywords: 'on-prem engine' → ETL · 'cloud warehouse / dbt / SQL-native' → ELT.</div></div>
               <dl>
                 <dt>Data cleaning</dt><dd>Handle <strong>missing values</strong> (drop · impute mean/median · forward-fill · model-predict) · <strong>outliers</strong> (investigate vs cap) · <strong>duplicates</strong> (dedup keys) · <strong>encoding</strong> (UTF-8, one-hot, label-encode).</dd>
                 <dt>Transformation techniques</dt><dd><strong>Normalisation</strong> (0–1 min-max · z-score standardise) · <strong>aggregation</strong> · <strong>pivoting</strong> · joining · type casting · derived features (e.g. rolling average).</dd>
@@ -3126,6 +3618,39 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Choice of storage engine follows the access pattern. OLTP (many small transactions) and OLAP (few large scans) have opposite optimal designs. Lakehouses try to bridge both.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 210" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">STORAGE CHOICES</text>
+                <rect x="10" y="26" width="280" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="150" y="44" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">OLTP</text>
+                <text x="150" y="58" text-anchor="middle" font-size="9.5" fill="#3d3d3a">many small transactions</text>
+                <text x="150" y="76" text-anchor="middle" font-size="10" fill="#1a1a18">row-oriented · ACID · CRUD</text>
+                <text x="150" y="91" text-anchor="middle" font-size="10" fill="#1a1a18">order entry · transactional apps</text>
+                <text x="150" y="104" text-anchor="middle" font-size="9.5" fill="#888">PostgreSQL · MySQL · Oracle</text>
+                <rect x="310" y="26" width="280" height="80" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="450" y="44" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">OLAP</text>
+                <text x="450" y="58" text-anchor="middle" font-size="9.5" fill="#3d3d3a">few large scans</text>
+                <text x="450" y="76" text-anchor="middle" font-size="10" fill="#1a1a18">columnar · MPP · bulk</text>
+                <text x="450" y="91" text-anchor="middle" font-size="10" fill="#1a1a18">analytics · BI reporting</text>
+                <text x="450" y="104" text-anchor="middle" font-size="9.5" fill="#888">Snowflake · BigQuery · Redshift</text>
+                <text x="10" y="128" font-size="10.5" font-weight="700" fill="#185FA5">NOSQL · 5 CATEGORIES</text>
+                <rect x="10" y="136" width="110" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="65" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Key-value</text>
+                <rect x="124" y="136" width="110" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="179" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Document</text>
+                <rect x="238" y="136" width="110" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="293" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Column-family</text>
+                <rect x="352" y="136" width="110" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="407" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Graph</text>
+                <rect x="466" y="136" width="124" height="26" rx="4" fill="#fff" stroke="#85B7EB"/><text x="528" y="153" text-anchor="middle" font-size="10" fill="#1a1a18">Time-series</text>
+                <text x="65" y="174" text-anchor="middle" font-size="9" fill="#888">Redis</text>
+                <text x="179" y="174" text-anchor="middle" font-size="9" fill="#888">MongoDB</text>
+                <text x="293" y="174" text-anchor="middle" font-size="9" fill="#888">Cassandra</text>
+                <text x="407" y="174" text-anchor="middle" font-size="9" fill="#888">Neo4j</text>
+                <text x="528" y="174" text-anchor="middle" font-size="9" fill="#888">InfluxDB</text>
+                <text x="10" y="200" font-size="10.5" font-weight="700" fill="#185FA5">TIERS</text>
+                <rect x="70" y="188" width="130" height="18" rx="4" fill="#FCEBEB" stroke="#F09595"/><text x="135" y="201" text-anchor="middle" font-size="9.5" font-weight="700" fill="#A32D2D">HOT · frequent</text>
+                <text x="205" y="201" font-size="10" fill="#3d3d3a">→</text>
+                <rect x="220" y="188" width="130" height="18" rx="4" fill="#FAEEDA" stroke="#854F0B"/><text x="285" y="201" text-anchor="middle" font-size="9.5" font-weight="700" fill="#854F0B">WARM · infrequent</text>
+                <text x="355" y="201" font-size="10" fill="#3d3d3a">→</text>
+                <rect x="370" y="188" width="150" height="18" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="445" y="201" text-anchor="middle" font-size="9.5" font-weight="700" fill="#185FA5">ARCHIVE · rare</text>
+                <text x="528" y="201" font-size="9" fill="#888">↓ cost</text>
+              </svg><div class="tl-vcap">ACID (A · C · I · D). RPO = data loss tolerance, RTO = downtime tolerance.</div></div>
               <dl>
                 <dt>Types of storage</dt><dd><strong>Relational</strong> (RDBMS — PostgreSQL, MySQL, Oracle, SQL Server) · <strong>NoSQL</strong>: key-value (Redis), document (MongoDB), column-family (Cassandra), graph (Neo4j), time-series (InfluxDB, Timestream). <strong>Object storage</strong> (S3, Azure Blob, GCS). <strong>File systems</strong> (HDFS).</dd>
                 <dt>DBMS</dt><dd>Software layer over storage providing transactions, queries, concurrency control. <strong>OLTP</strong> (row-oriented, ACID, small transactions — order entry) vs <strong>OLAP</strong> (columnar, bulk scans — analytics). <strong>ACID</strong>: Atomicity, Consistency, Isolation, Durability.</dd>
@@ -3147,6 +3672,29 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Extract insight from prepared data. The maturity ladder: descriptive (what happened) → diagnostic (why) → predictive (what will) → prescriptive (what to do).
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 200" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">ANALYTICS MATURITY LADDER</text>
+                <rect x="10" y="115" width="140" height="38" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="80" y="133" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Descriptive</text>
+                <text x="80" y="147" text-anchor="middle" font-size="9.5" fill="#3d3d3a">what happened?</text>
+                <text x="155" y="136" font-size="12" fill="#185FA5">→</text>
+                <rect x="170" y="90" width="140" height="38" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="240" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Diagnostic</text>
+                <text x="240" y="122" text-anchor="middle" font-size="9.5" fill="#3d3d3a">why did it?</text>
+                <text x="315" y="111" font-size="12" fill="#185FA5">→</text>
+                <rect x="330" y="65" width="140" height="38" rx="6" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="400" y="83" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Predictive</text>
+                <text x="400" y="97" text-anchor="middle" font-size="9.5" fill="#3d3d3a">what will happen?</text>
+                <text x="475" y="86" font-size="12" fill="#185FA5">→</text>
+                <rect x="450" y="30" width="140" height="38" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+                <text x="520" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">Prescriptive</text>
+                <text x="520" y="62" text-anchor="middle" font-size="9.5" fill="#3d3d3a">what to do?</text>
+                <text x="10" y="42" font-size="9.5" fill="#888" font-style="italic">value ↑ complexity ↑</text>
+                <text x="10" y="175" font-size="10.5" font-weight="700" fill="#185FA5">ML TYPES</text>
+                <rect x="10" y="183" width="180" height="20" rx="4" fill="#fff" stroke="#85B7EB"/><text x="100" y="197" text-anchor="middle" font-size="10" fill="#1a1a18">Supervised — labels</text>
+                <rect x="200" y="183" width="180" height="20" rx="4" fill="#fff" stroke="#85B7EB"/><text x="290" y="197" text-anchor="middle" font-size="10" fill="#1a1a18">Unsupervised — clusters</text>
+                <rect x="390" y="183" width="200" height="20" rx="4" fill="#fff" stroke="#85B7EB"/><text x="490" y="197" text-anchor="middle" font-size="10" fill="#1a1a18">Reinforcement — agent + reward</text>
+              </svg><div class="tl-vcap">EDA precedes modelling. ARIMA requires stationarity. Correlation ≠ causation.</div></div>
               <dl>
                 <dt>EDA</dt><dd>Exploratory Data Analysis — first pass on a new dataset. Summary stats (mean, median, std, min/max), distributions, correlations (Pearson/Spearman), quick visualisations (histogram, scatter, box plot). Goal: understand shape before modeling.</dd>
                 <dt>Predictive analytics</dt><dd><strong>Regression</strong> (linear, logistic, polynomial) · <strong>trees</strong> (decision tree, Random Forest, Gradient Boosting — XGBoost, LightGBM) · <strong>neural networks</strong> (deep learning). Workflow: train / validate / test split, cross-validation, hyperparameter tuning.</dd>
@@ -3168,6 +3716,40 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Visualisation is translation. Good visuals transmit insight in seconds; bad ones mislead. The rule: the chart serves the message, not the other way round.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 215" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">CHOOSE THE RIGHT CHART</text>
+                <rect x="10" y="28" width="140" height="60" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <g transform="translate(24,46)"><rect x="0" y="18" width="10" height="18" fill="#185FA5"/><rect x="14" y="8" width="10" height="28" fill="#185FA5"/><rect x="28" y="14" width="10" height="22" fill="#185FA5"/><rect x="42" y="0" width="10" height="36" fill="#185FA5"/></g>
+                <text x="108" y="57" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">BAR</text>
+                <text x="108" y="72" text-anchor="middle" font-size="9.5" fill="#3d3d3a">categorical</text>
+                <text x="108" y="83" text-anchor="middle" font-size="9.5" fill="#3d3d3a">comparison</text>
+                <rect x="160" y="28" width="140" height="60" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <polyline points="174,78 186,62 200,68 214,50 228,56 242,40" fill="none" stroke="#185FA5" stroke-width="2"/>
+                <text x="258" y="57" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">LINE</text>
+                <text x="258" y="72" text-anchor="middle" font-size="9.5" fill="#3d3d3a">trend over time</text>
+                <rect x="310" y="28" width="140" height="60" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <g fill="#185FA5"><circle cx="325" cy="75" r="2.5"/><circle cx="335" cy="60" r="2.5"/><circle cx="345" cy="70" r="2.5"/><circle cx="355" cy="55" r="2.5"/><circle cx="365" cy="65" r="2.5"/><circle cx="340" cy="48" r="2.5"/></g>
+                <text x="408" y="57" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">SCATTER</text>
+                <text x="408" y="72" text-anchor="middle" font-size="9.5" fill="#3d3d3a">correlation</text>
+                <rect x="460" y="28" width="130" height="60" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <g><rect x="472" y="45" width="10" height="10" fill="#185FA5" opacity="0.3"/><rect x="482" y="45" width="10" height="10" fill="#185FA5" opacity="0.7"/><rect x="492" y="45" width="10" height="10" fill="#185FA5" opacity="0.9"/><rect x="472" y="55" width="10" height="10" fill="#185FA5" opacity="0.5"/><rect x="482" y="55" width="10" height="10" fill="#185FA5" opacity="0.2"/><rect x="492" y="55" width="10" height="10" fill="#185FA5" opacity="0.6"/><rect x="472" y="65" width="10" height="10" fill="#185FA5" opacity="0.8"/><rect x="482" y="65" width="10" height="10" fill="#185FA5" opacity="0.4"/><rect x="492" y="65" width="10" height="10" fill="#185FA5" opacity="1"/></g>
+                <text x="547" y="57" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">HEATMAP</text>
+                <text x="547" y="72" text-anchor="middle" font-size="9.5" fill="#3d3d3a">matrices</text>
+                <text x="10" y="112" font-size="10.5" font-weight="700" fill="#185FA5">PRE-ATTENTIVE ACCURACY RANKING</text>
+                <rect x="10" y="120" width="100" height="22" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/><text x="60" y="135" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">1 · Position</text>
+                <text x="118" y="135" font-size="11" fill="#185FA5">▶</text>
+                <rect x="132" y="120" width="100" height="22" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="182" y="135" text-anchor="middle" font-size="10" fill="#185FA5">2 · Length</text>
+                <text x="240" y="135" font-size="11" fill="#185FA5">▶</text>
+                <rect x="254" y="120" width="100" height="22" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="304" y="135" text-anchor="middle" font-size="10" fill="#185FA5">3 · Angle</text>
+                <text x="362" y="135" font-size="11" fill="#185FA5">▶</text>
+                <rect x="376" y="120" width="100" height="22" rx="4" fill="#fff" stroke="#85B7EB"/><text x="426" y="135" text-anchor="middle" font-size="10" fill="#3d3d3a">4 · Area</text>
+                <text x="484" y="135" font-size="11" fill="#185FA5">▶</text>
+                <rect x="498" y="120" width="92" height="22" rx="4" fill="#fff" stroke="#85B7EB"/><text x="544" y="135" text-anchor="middle" font-size="10" fill="#3d3d3a">5 · Colour</text>
+                <rect x="10" y="155" width="580" height="50" rx="8" fill="#FCEBEB" stroke="#F09595"/>
+                <text x="300" y="172" text-anchor="middle" font-size="10.5" font-weight="700" fill="#A32D2D">COMMON PITFALLS</text>
+                <text x="300" y="186" text-anchor="middle" font-size="9.5" fill="#3d3d3a">pie &gt; 7 slices · truncated y-axis · 3-D perspective</text>
+                <text x="300" y="198" text-anchor="middle" font-size="9.5" fill="#3d3d3a">rainbow colourmap for ordered data (use viridis)</text>
+              </svg></div>
               <dl>
                 <dt>Principles</dt><dd>Chart matches the data: <strong>bar</strong> for categorical comparisons · <strong>line</strong> for trends over time · <strong>scatter</strong> for correlation · <strong>heatmap</strong> for matrices. Use <strong>pre-attentive attributes</strong> (position, length, colour, size) — the brain processes these before conscious thought. Minimise chartjunk (Tufte).</dd>
                 <dt>Tools</dt><dd><strong>Power BI</strong> (Microsoft, integrated with Microsoft Fabric — unified lakehouse + BI) · <strong>Tableau</strong> · <strong>Metabase</strong> (open source) · <strong>Looker</strong> · code-first: Matplotlib, Plotly, Seaborn, Altair.</dd>
@@ -3189,6 +3771,28 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Governance is the operating system for data: who owns what, what can be done with it, how quality is measured, and how violations are detected. EU regs (Timeline tab) give the legal framing; operational frameworks give the implementation.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 215" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">POLICY → STANDARD → PROCEDURE</text>
+                <rect x="100" y="28" width="400" height="32" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+                <text x="300" y="44" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">POLICY</text>
+                <text x="300" y="56" text-anchor="middle" font-size="9.5" fill="#3d3d3a">"personal data must be encrypted at rest"</text>
+                <line x1="300" y1="60" x2="300" y2="70" stroke="#185FA5" stroke-width="2"/>
+                <polygon points="300,74 295,66 305,66" fill="#185FA5"/>
+                <rect x="100" y="74" width="400" height="32" rx="8" fill="#fff" stroke="#85B7EB" stroke-width="1.5"/>
+                <text x="300" y="90" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">STANDARD</text>
+                <text x="300" y="102" text-anchor="middle" font-size="9.5" fill="#3d3d3a">"AES-256 · KMS-managed keys · 90-day rotation"</text>
+                <line x1="300" y1="106" x2="300" y2="116" stroke="#185FA5" stroke-width="2"/>
+                <polygon points="300,120 295,112 305,112" fill="#185FA5"/>
+                <rect x="100" y="120" width="400" height="32" rx="8" fill="#fff" stroke="#85B7EB"/>
+                <text x="300" y="136" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">PROCEDURE</text>
+                <text x="300" y="148" text-anchor="middle" font-size="9.5" fill="#3d3d3a">"1. create KMS key · 2. enable encryption · 3. log"</text>
+                <text x="10" y="170" font-size="10.5" font-weight="700" fill="#185FA5">NIST CSF · 5 FUNCTIONS (in order)</text>
+                <rect x="10" y="178" width="112" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="66" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">1 · Identify</text>
+                <rect x="126" y="178" width="112" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="182" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">2 · Protect</text>
+                <rect x="242" y="178" width="112" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="298" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">3 · Detect</text>
+                <rect x="358" y="178" width="112" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="414" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">4 · Respond</text>
+                <rect x="474" y="178" width="116" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/><text x="532" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#185FA5">5 · Recover</text>
+              </svg><div class="tl-vcap">DPIA trigger = "likely to result in high risk to rights and freedoms" (GDPR Art 35).</div></div>
               <dl>
                 <dt>Policies vs standards</dt><dd><strong>Policy</strong> = the rule ("personal data must be encrypted at rest"). <strong>Standard</strong> = the specific implementation ("AES-256, KMS-managed keys, rotation every 90 days"). <strong>Procedure</strong> = the steps. Policies are stable; standards evolve.</dd>
                 <dt>Regulatory compliance</dt><dd>EU: GDPR (2016/679), Reg 2018/1725, DGA, Data Act, AI Act, EHDS (see Timeline). Regional: HIPAA (US health), CCPA (California), PIPEDA (Canada). Sector: PCI-DSS (cards), SOX (financial reporting).</dd>
@@ -3209,6 +3813,24 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 AI is now both a consumer and a contributor to the data stack. The interesting pattern: AI tools accelerate each DM phase, and AI systems need DM rigor (Art 10) to be safe.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 200" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">AI AUGMENTS EACH DM PHASE</text>
+                <rect x="10" y="28" width="140" height="26" rx="5" fill="#185FA5"/><text x="80" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">Collection</text>
+                <text x="170" y="45" font-size="12" fill="#185FA5">→</text>
+                <rect x="190" y="28" width="400" height="26" rx="5" fill="#E6F1FB" stroke="#185FA5"/><text x="390" y="45" text-anchor="middle" font-size="10" fill="#1a1a18">OCR · synthetic data (GANs/LLMs) · smart scrapers</text>
+                <rect x="10" y="60" width="140" height="26" rx="5" fill="#185FA5"/><text x="80" y="77" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">Processing</text>
+                <text x="170" y="77" font-size="12" fill="#185FA5">→</text>
+                <rect x="190" y="60" width="400" height="26" rx="5" fill="#E6F1FB" stroke="#185FA5"/><text x="390" y="77" text-anchor="middle" font-size="10" fill="#1a1a18">anomaly detection · entity resolution · auto-imputation</text>
+                <rect x="10" y="92" width="140" height="26" rx="5" fill="#185FA5"/><text x="80" y="109" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">Visualisation</text>
+                <text x="170" y="109" font-size="12" fill="#185FA5">→</text>
+                <rect x="190" y="92" width="400" height="26" rx="5" fill="#E6F1FB" stroke="#185FA5"/><text x="390" y="109" text-anchor="middle" font-size="10" fill="#1a1a18">NL-to-chart · auto-insight · narrative generation</text>
+                <rect x="10" y="124" width="140" height="26" rx="5" fill="#185FA5"/><text x="80" y="141" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fff">Governance</text>
+                <text x="170" y="141" font-size="12" fill="#185FA5">→</text>
+                <rect x="190" y="124" width="400" height="26" rx="5" fill="#E6F1FB" stroke="#185FA5"/><text x="390" y="141" text-anchor="middle" font-size="10" fill="#1a1a18">auto-classification · PII detection · drift monitoring</text>
+                <rect x="10" y="158" width="580" height="40" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/>
+                <text x="300" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#854F0B">AI ACT · Art 10 returns here (high-risk training data)</text>
+                <text x="300" y="189" text-anchor="middle" font-size="9.5" fill="#3d3d3a">relevance · representativeness · bias detection · provenance</text>
+              </svg><div class="tl-vcap">Synthetic data is ALLOWED by AI Act, not mandated.</div></div>
               <dl>
                 <dt>AI-assisted collection</dt><dd>OCR + form recognisers turn paper/PDF into structured data. Synthetic data generation (GANs, diffusion, LLMs) creates realistic samples that protect privacy. Smart web scrapers handle JavaScript, CAPTCHAs.</dd>
                 <dt>AI in processing</dt><dd>Auto-cleaning (anomaly detection, duplicate resolution via embeddings) · entity resolution (matching records across systems) · schema inference from raw files · auto-imputation of missing values with predictive models.</dd>
