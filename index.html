@@ -405,6 +405,9 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .tl-context strong{color:var(--text)}
 .tl-exam{font-size:11.5px;line-height:1.55;color:var(--accent);background:var(--accentbg);padding:6px 10px;border-radius:8px;margin-top:8px;border-left:3px solid var(--accent)}
 .tl-exam strong{color:var(--accent)}
+.tl-viz{margin:10px 0 8px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 6px}
+.tl-svg{display:block;width:100%;height:auto;max-width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.tl-vcap{font-size:10.5px;color:var(--muted);text-align:center;margin-top:2px;font-style:italic}
 .fw-when{font-size:11.5px;color:var(--muted);margin-top:7px;padding-top:6px;border-top:1px dashed var(--border);font-style:italic;line-height:1.5}
 .trap-signal{padding:8px 12px;background:var(--amberbg);color:var(--amber);font-size:11.5px;font-weight:600;border-top:1px solid #e0b860;line-height:1.5}
 .trap-signal strong{color:var(--amber)}
@@ -2307,6 +2310,23 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 GDPR replaced the 1995 Data Protection Directive with a single, directly applicable regulation — same rules in all 27 Member States, no more national fragmentation. It also went extra-territorial: any non-EU company targeting EU residents is in scope. Everything you'll see about the DGA, Data Act, AI Act and EHDS is built on top of this foundation.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 150" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="15" width="280" height="120" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+                <text x="150" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">IN SCOPE · GDPR</text>
+                <rect x="25" y="50" width="120" height="28" rx="5" fill="#fff" stroke="#85B7EB"/>
+                <text x="85" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">Private sector</text>
+                <rect x="155" y="50" width="120" height="28" rx="5" fill="#fff" stroke="#85B7EB"/>
+                <text x="215" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">Public sector (MS)</text>
+                <text x="150" y="100" text-anchor="middle" font-size="10" fill="#888">supervisor</text>
+                <text x="150" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#185FA5">National DPA + EDPB</text>
+                <line x1="300" y1="20" x2="300" y2="130" stroke="#E4E2DA" stroke-dasharray="4 3"/>
+                <rect x="310" y="15" width="280" height="120" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <text x="450" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="#854F0B">OUT · Reg 2018/1725</text>
+                <rect x="325" y="50" width="250" height="28" rx="5" fill="#fff" stroke="#854F0B" stroke-opacity="0.5"/>
+                <text x="450" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">EU institutions · bodies · agencies</text>
+                <text x="450" y="100" text-anchor="middle" font-size="10" fill="#888">supervisor</text>
+                <text x="450" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#854F0B">EDPS</text>
+              </svg><div class="tl-vcap">GDPR covers everything left of the line. EU institutions sit outside it.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>27 Apr 2016</dd>
                 <dt>Applicable</dt><dd>25 May 2018 — Art. 99 gave a two-year transition period.</dd>
@@ -2325,6 +2345,23 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 A near-carbon-copy of GDPR, written because Article 2 GDPR deliberately excludes EU institutions. Same data-subject rights, same lawful-basis model, same DPIA logic — only the supervisor changes: the European Data Protection Supervisor (EDPS) instead of national DPAs. Same principles, different regulator.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 150" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="15" width="280" height="120" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5" stroke-dasharray="5 3"/>
+                <text x="150" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="#854F0B">OUT · GDPR territory</text>
+                <rect x="25" y="50" width="120" height="28" rx="5" fill="#fff" stroke="#854F0B" stroke-opacity="0.4"/>
+                <text x="85" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">Private sector</text>
+                <rect x="155" y="50" width="120" height="28" rx="5" fill="#fff" stroke="#854F0B" stroke-opacity="0.4"/>
+                <text x="215" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">Public sector (MS)</text>
+                <text x="150" y="100" text-anchor="middle" font-size="10" fill="#888">supervisor</text>
+                <text x="150" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#854F0B">National DPA + EDPB</text>
+                <line x1="300" y1="20" x2="300" y2="130" stroke="#E4E2DA" stroke-dasharray="4 3"/>
+                <rect x="310" y="15" width="280" height="120" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+                <text x="450" y="34" text-anchor="middle" font-size="12" font-weight="800" fill="#185FA5">IN SCOPE · 2018/1725</text>
+                <rect x="325" y="50" width="250" height="28" rx="5" fill="#fff" stroke="#85B7EB"/>
+                <text x="450" y="69" text-anchor="middle" font-size="11" fill="#1a1a18">EU institutions · bodies · agencies</text>
+                <text x="450" y="100" text-anchor="middle" font-size="10" fill="#888">supervisor</text>
+                <text x="450" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#185FA5">EDPS</text>
+              </svg><div class="tl-vcap">Same obligations as GDPR — different regulator.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>23 Oct 2018</dd>
                 <dt>Applicable</dt><dd>11 Dec 2018</dd>
@@ -2343,6 +2380,35 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Replaces the older 2003 PSI Directive. The core logic: public-sector information was paid for by taxpayers, so it should be reusable by everyone — for free, in machine-readable formats, via APIs where possible. Publicly funded research data gets the same treatment. This is the Union's most explicit commitment to open-by-default.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="110" y="18" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">5-STAR LADDER</text>
+                <rect x="10" y="26" width="105" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+                <text x="18" y="41" font-size="11" fill="#1a1a18">★ on web + license</text>
+                <rect x="10" y="52" width="125" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+                <text x="18" y="67" font-size="11" fill="#1a1a18">★★ structured</text>
+                <rect x="10" y="78" width="145" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+                <text x="18" y="93" font-size="11" fill="#1a1a18">★★★ open format</text>
+                <rect x="10" y="104" width="165" height="22" rx="4" fill="#fff" stroke="#E4E2DA"/>
+                <text x="18" y="119" font-size="11" fill="#1a1a18">★★★★ URIs</text>
+                <rect x="10" y="130" width="185" height="22" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="18" y="145" font-size="11" font-weight="700" fill="#185FA5">★★★★★ linked open data</text>
+
+                <text x="400" y="18" text-anchor="middle" font-size="10.5" font-weight="700" fill="#185FA5">6 HIGH-VALUE DATASET CATEGORIES</text>
+                <rect x="215" y="26" width="175" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="302" y="42" text-anchor="middle" font-size="10.5" fill="#1a1a18">Geospatial</text>
+                <rect x="400" y="26" width="190" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="495" y="42" text-anchor="middle" font-size="10.5" fill="#1a1a18">Earth obs. &amp; environment</text>
+                <rect x="215" y="54" width="175" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="302" y="70" text-anchor="middle" font-size="10.5" fill="#1a1a18">Meteorology</text>
+                <rect x="400" y="54" width="190" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="495" y="70" text-anchor="middle" font-size="10.5" fill="#1a1a18">Statistics</text>
+                <rect x="215" y="82" width="175" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="302" y="98" text-anchor="middle" font-size="10.5" fill="#1a1a18">Companies &amp; ownership</text>
+                <rect x="400" y="82" width="190" height="24" rx="5" fill="#E6F1FB" stroke="#85B7EB"/>
+                <text x="495" y="98" text-anchor="middle" font-size="10.5" fill="#1a1a18">Mobility</text>
+                <rect x="280" y="130" width="260" height="32" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-dasharray="4 3"/>
+                <text x="410" y="150" text-anchor="middle" font-size="11" font-weight="700" fill="#A32D2D">Health is NOT an HVD → EHDS</text>
+              </svg><div class="tl-vcap">HVDs delivered under Implementing Reg. 2023/138 — free, machine-readable, via APIs.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>20 Jun 2019</dd>
                 <dt>Transposition</dt><dd>17 Jul 2021 (it's a <em>directive</em>, so Member States had to transpose — not directly applicable like a regulation).</dd>
@@ -2361,6 +2427,30 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Not a law — a Commission roadmap proposing a 'single market for data' where EU firms compete on data as a resource. This document is the political source of almost everything that came next: the DGA (2022), the Data Act (2023), the AI Act (2024), plus the Common European Data Spaces programme.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 160" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect x="160" y="12" width="280" height="42" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+                <text x="300" y="31" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">EUROPEAN STRATEGY FOR DATA</text>
+                <text x="300" y="46" text-anchor="middle" font-size="10" fill="#3d3d3a">Feb 2020 · COM(2020) 66 · non-binding</text>
+                <line x1="300" y1="54" x2="300" y2="72" stroke="#185FA5" stroke-width="1.5"/>
+                <line x1="60" y1="72" x2="540" y2="72" stroke="#185FA5" stroke-width="1.5"/>
+                <line x1="60" y1="72" x2="60" y2="90" stroke="#185FA5" stroke-width="1.5"/>
+                <line x1="190" y1="72" x2="190" y2="90" stroke="#185FA5" stroke-width="1.5"/>
+                <line x1="410" y1="72" x2="410" y2="90" stroke="#185FA5" stroke-width="1.5"/>
+                <line x1="540" y1="72" x2="540" y2="90" stroke="#185FA5" stroke-width="1.5"/>
+                <rect x="15" y="90" width="90" height="44" rx="6" fill="#fff" stroke="#85B7EB"/>
+                <text x="60" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a18">DGA</text>
+                <text x="60" y="125" text-anchor="middle" font-size="10" fill="#888">2022/868</text>
+                <rect x="140" y="90" width="100" height="44" rx="6" fill="#fff" stroke="#85B7EB"/>
+                <text x="190" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a18">Data Act</text>
+                <text x="190" y="125" text-anchor="middle" font-size="10" fill="#888">2023/2854</text>
+                <rect x="360" y="90" width="100" height="44" rx="6" fill="#fff" stroke="#85B7EB"/>
+                <text x="410" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a18">AI Act</text>
+                <text x="410" y="125" text-anchor="middle" font-size="10" fill="#888">2024/1689</text>
+                <rect x="490" y="90" width="100" height="44" rx="6" fill="#fff" stroke="#85B7EB"/>
+                <text x="540" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1a18">14 Data Spaces</text>
+                <text x="540" y="125" text-anchor="middle" font-size="10" fill="#888">EHDS first</text>
+                <text x="300" y="152" text-anchor="middle" font-size="10" fill="#888" font-style="italic">a policy document that seeded all the binding rules that followed</text>
+              </svg><div class="tl-vcap">Strategy = the root node. The legislation is the branches.</div></div>
               <dl>
                 <dt>Type</dt><dd>Commission Communication — a policy document, not legally binding.</dd>
                 <dt>Date</dt><dd>19 Feb 2020</dd>
@@ -2379,6 +2469,32 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 The DGA is horizontal plumbing: it creates <em>roles</em> and <em>mechanisms</em>, not individual rights. Public bodies sitting on valuable but protected data (health records, confidential commercial info, IP-protected data) finally have a legal path to let others reuse it. Data intermediation services get a notification regime so people can trust neutral go-betweens. Data altruism becomes a formal category with a standard consent form.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 175" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">DGA · 4 PILLARS · horizontal enabler</text>
+                <rect x="20" y="26" width="560" height="12" rx="3" fill="#185FA5"/>
+                <rect x="30" y="46" width="125" height="92" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="92" y="68" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">1</text>
+                <text x="92" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">Protected PSI</text>
+                <text x="92" y="104" text-anchor="middle" font-size="10.5" fill="#3d3d3a">reuse</text>
+                <text x="92" y="124" text-anchor="middle" font-size="9.5" fill="#888">health · IP · confid.</text>
+                <rect x="170" y="46" width="125" height="92" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="232" y="68" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">2</text>
+                <text x="232" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">Intermediation</text>
+                <text x="232" y="104" text-anchor="middle" font-size="10.5" fill="#3d3d3a">services (Ch III)</text>
+                <text x="232" y="124" text-anchor="middle" font-size="9.5" fill="#888">neutral · notified</text>
+                <rect x="310" y="46" width="125" height="92" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="372" y="68" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">3</text>
+                <text x="372" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">Data altruism</text>
+                <text x="372" y="104" text-anchor="middle" font-size="10.5" fill="#3d3d3a">(Ch IV)</text>
+                <text x="372" y="124" text-anchor="middle" font-size="9.5" fill="#888">standard consent</text>
+                <rect x="450" y="46" width="125" height="92" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="512" y="68" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">4</text>
+                <text x="512" y="90" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">EDIB</text>
+                <text x="512" y="104" text-anchor="middle" font-size="10.5" fill="#3d3d3a">advisory board</text>
+                <text x="512" y="124" text-anchor="middle" font-size="9.5" fill="#888">data-spaces</text>
+                <rect x="20" y="142" width="560" height="10" rx="2" fill="#185FA5"/>
+                <text x="300" y="170" text-anchor="middle" font-size="10" fill="#888" font-style="italic">applicable 24 Sep 2023 — mechanisms &amp; roles, not individual rights</text>
+              </svg><div class="tl-vcap">Traps: cloud switching is NOT a DGA pillar (that's Data Act Ch VI).</div></div>
               <dl>
                 <dt>Adopted</dt><dd>30 May 2022</dd>
                 <dt>Applicable</dt><dd>24 Sep 2023</dd>
@@ -2399,6 +2515,29 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Where the DGA built mechanisms, the Data Act hands out actual rights. If you own a connected coffee machine, tractor or car, you can demand the data it generates — and pass that data to the repair shop or service of your choice (Ch II). If you're a cloud customer, you can move to another provider without paying ransom fees (Ch VI). Public bodies get emergency access in crises (Ch V). It's the IoT + cloud rights package.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 185" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">DATA ACT · chapters by use-case keyword</text>
+                <rect x="15" y="28" width="280" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="30" y="48" font-size="11" font-weight="800" fill="#185FA5">Ch II · IoT user rights</text>
+                <text x="30" y="65" font-size="10.5" fill="#3d3d3a">User of a connected product accesses</text>
+                <text x="30" y="79" font-size="10.5" fill="#3d3d3a">its data · can share with a 3rd party</text>
+                <text x="30" y="93" font-size="9.5" fill="#888">keywords: connected product · IoT</text>
+                <rect x="305" y="28" width="280" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="320" y="48" font-size="11" font-weight="800" fill="#185FA5">Ch III · B2B (FRAND)</text>
+                <text x="320" y="65" font-size="10.5" fill="#3d3d3a">When a legal duty to share exists,</text>
+                <text x="320" y="79" font-size="10.5" fill="#3d3d3a">terms must be Fair / Reasonable / ND</text>
+                <text x="320" y="93" font-size="9.5" fill="#888">keywords: FRAND · data holder</text>
+                <rect x="15" y="105" width="280" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="30" y="125" font-size="11" font-weight="800" fill="#185FA5">Ch V · B2G emergency access</text>
+                <text x="30" y="142" font-size="10.5" fill="#3d3d3a">Public bodies access private data</text>
+                <text x="30" y="156" font-size="10.5" fill="#3d3d3a">in 'exceptional need' only</text>
+                <text x="30" y="170" font-size="9.5" fill="#888">keywords: public emergency · crisis</text>
+                <rect x="305" y="105" width="280" height="70" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="320" y="125" font-size="11" font-weight="800" fill="#185FA5">Ch VI · Cloud switching</text>
+                <text x="320" y="142" font-size="10.5" fill="#3d3d3a">No egress / switching fees by 2027</text>
+                <text x="320" y="156" font-size="10.5" fill="#3d3d3a">Functional equivalence required</text>
+                <text x="320" y="170" font-size="9.5" fill="#888">keywords: egress fees · provider switch</text>
+              </svg><div class="tl-vcap">Spot the keyword in the question → you already know the chapter.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>13 Dec 2023</dd>
                 <dt>Applicable</dt><dd>12 Sep 2025</dd>
@@ -2420,6 +2559,23 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Focused narrowly on public-sector digital services that cross borders — the tech stack behind eIDAS wallets, pan-European health services, cross-border tax or social-security exchanges. Its new weapon: mandatory interoperability assessments (Art. 3) before spending money on new public IT. It also blesses the EIF (Legal / Organisational / Semantic / Technical) as <em>the</em> reference model.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 180" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">EIF · 4-LAYER REFERENCE MODEL</text>
+                <rect x="40" y="26" width="520" height="24" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-dasharray="3 2"/>
+                <text x="300" y="43" text-anchor="middle" font-size="10.5" font-weight="700" fill="#534AB7">Integrated Public Service Governance (overarching)</text>
+                <rect x="40" y="56" width="520" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="52" y="74" font-size="11" font-weight="800" fill="#185FA5">LEGAL</text>
+                <text x="550" y="74" text-anchor="end" font-size="10.5" fill="#3d3d3a">aligned legal frameworks</text>
+                <rect x="40" y="86" width="520" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="52" y="104" font-size="11" font-weight="800" fill="#185FA5">ORGANISATIONAL</text>
+                <text x="550" y="104" text-anchor="end" font-size="10.5" fill="#3d3d3a">business processes &amp; responsibilities</text>
+                <rect x="40" y="116" width="520" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="52" y="134" font-size="11" font-weight="800" fill="#185FA5">SEMANTIC</text>
+                <text x="550" y="134" text-anchor="end" font-size="10.5" fill="#3d3d3a">meaning of exchanged data preserved</text>
+                <rect x="40" y="146" width="520" height="26" rx="4" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="52" y="164" font-size="11" font-weight="800" fill="#185FA5">TECHNICAL</text>
+                <text x="550" y="164" text-anchor="end" font-size="10.5" fill="#3d3d3a">systems · applications · infrastructure</text>
+              </svg><div class="tl-vcap">Reg (EU) 2024/903 makes EIF assessments mandatory before new public IT spend.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>13 Mar 2024</dd>
                 <dt>Applicable</dt><dd>12 Jul 2024</dd>
@@ -2439,6 +2595,25 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 Classifies AI by <em>risk</em>, not by technology. Unacceptable uses (government social scoring, real-time biometric ID in public for police) are banned outright. High-risk AI (in hiring, credit scoring, medical devices, migration, critical infrastructure) needs conformity assessment — a CE-mark-style regime. Generative AI and foundation models fall under the new GPAI chapter. Article 10 spells out the data-governance rules you must satisfy when training, validating or testing a high-risk model.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 180" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">AI ACT · 4-TIER RISK PYRAMID</text>
+                <polygon points="240,28 360,28 378,58 222,58" fill="#FCEBEB" stroke="#A32D2D" stroke-width="1.5"/>
+                <text x="300" y="49" text-anchor="middle" font-size="11" font-weight="800" fill="#A32D2D">UNACCEPTABLE · Art 5</text>
+                <text x="390" y="44" font-size="10" fill="#3d3d3a">→ BANNED</text>
+                <text x="390" y="57" font-size="9.5" fill="#888">social scoring · biometric ID</text>
+                <polygon points="222,58 378,58 396,94 204,94" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"/>
+                <text x="300" y="81" text-anchor="middle" font-size="11" font-weight="800" fill="#854F0B">HIGH-RISK · Annex I + III</text>
+                <text x="402" y="78" font-size="10" fill="#3d3d3a">→ conformity assessment</text>
+                <text x="402" y="91" font-size="9.5" fill="#888">Art 10 data-governance applies</text>
+                <polygon points="204,94 396,94 414,126 186,126" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+                <text x="300" y="115" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">LIMITED</text>
+                <text x="420" y="112" font-size="10" fill="#3d3d3a">→ transparency duty</text>
+                <text x="420" y="125" font-size="9.5" fill="#888">chatbot must disclose</text>
+                <polygon points="186,126 414,126 432,158 168,158" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+                <text x="300" y="147" text-anchor="middle" font-size="11" font-weight="800" fill="#0F6E56">MINIMAL</text>
+                <text x="440" y="144" font-size="10" fill="#3d3d3a">→ voluntary codes</text>
+                <text x="300" y="175" text-anchor="middle" font-size="10" fill="#888" font-style="italic">GPAI sits in a parallel chapter (Ch V) · authority = EU AI Office</text>
+              </svg><div class="tl-vcap">Two hot spots: Art 5 (banned) and Art 10 (training-data governance).</div></div>
               <dl>
                 <dt>Adopted</dt><dd>13 Jun 2024</dd>
                 <dt>Applicable</dt><dd>Staggered: prohibited practices from Feb 2025 · GPAI from Aug 2025 · high-risk general Aug 2026 · embedded high-risk Aug 2027.</dd>
@@ -2459,6 +2634,33 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 The first of the 14 Common European Data Spaces to become a binding regulation — health led the way because it was the most politically ready, and the business case was clear: secondary use of health data unlocks research, drug development and public-health policy. Patients get portable access to their own records across borders; researchers get a safe path to anonymised / pseudonymised datasets through 'Health Data Access Bodies'.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 175" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">EHDS · PRIMARY vs SECONDARY USE</text>
+                <rect x="15" y="35" width="100" height="46" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+                <text x="65" y="56" text-anchor="middle" font-size="11" font-weight="800" fill="#185FA5">PATIENT</text>
+                <text x="65" y="72" text-anchor="middle" font-size="10" fill="#3d3d3a">EHR records</text>
+                <line x1="120" y1="58" x2="236" y2="58" stroke="#185FA5" stroke-width="2"/>
+                <polygon points="242,58 232,53 232,63" fill="#185FA5"/>
+                <text x="178" y="50" text-anchor="middle" font-size="9.5" font-weight="700" fill="#185FA5">PRIMARY USE</text>
+                <rect x="245" y="35" width="340" height="46" rx="8" fill="#fff" stroke="#85B7EB"/>
+                <text x="415" y="56" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">Direct care</text>
+                <text x="415" y="72" text-anchor="middle" font-size="10" fill="#3d3d3a">access · portability · cross-border MyHealth@EU</text>
+                <rect x="15" y="107" width="100" height="46" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+                <text x="65" y="128" text-anchor="middle" font-size="11" font-weight="800" fill="#0F6E56">RESEARCHER</text>
+                <text x="65" y="144" text-anchor="middle" font-size="10" fill="#3d3d3a">regulator · industry</text>
+                <line x1="120" y1="130" x2="226" y2="130" stroke="#0F6E56" stroke-width="2"/>
+                <polygon points="232,130 222,125 222,135" fill="#0F6E56"/>
+                <rect x="232" y="107" width="100" height="46" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-dasharray="5 3"/>
+                <text x="282" y="128" text-anchor="middle" font-size="11" font-weight="800" fill="#0F6E56">HDAB</text>
+                <text x="282" y="144" text-anchor="middle" font-size="9.5" fill="#3d3d3a">gatekeeper</text>
+                <line x1="337" y1="130" x2="438" y2="130" stroke="#0F6E56" stroke-width="2"/>
+                <polygon points="444,130 434,125 434,135" fill="#0F6E56"/>
+                <text x="388" y="122" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0F6E56">SECONDARY USE</text>
+                <rect x="447" y="107" width="138" height="46" rx="8" fill="#fff" stroke="#5DCAA5"/>
+                <text x="516" y="128" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a1a18">Anonymised dataset</text>
+                <text x="516" y="144" text-anchor="middle" font-size="10" fill="#3d3d3a">research · policy</text>
+                <text x="300" y="170" text-anchor="middle" font-size="10" fill="#888" font-style="italic">first operational Common European Data Space · template for the other 13</text>
+              </svg><div class="tl-vcap">Secondary use goes through an HDAB — not via a DGA data intermediary.</div></div>
               <dl>
                 <dt>Adopted</dt><dd>11 Feb 2025</dd>
                 <dt>Applicable</dt><dd>First obligations from 26 Mar 2027 (staggered).</dd>
@@ -2478,6 +2680,33 @@ function renderEpsoExplorer(root){
               <div class="tl-context">
                 A Commission Communication published in November 2025 to update the 2020 European Strategy for Data. After five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act), the emphasis shifts from <em>making laws</em> to <em>consolidating</em>: simplifying where rules overlap, accelerating data-space roll-out, maturing the ecosystem. Think of it as 'Strategy 2.0'.
               </div>
+              <div class="tl-viz"><svg viewBox="0 0 600 140" class="tl-svg" xmlns="http://www.w3.org/2000/svg">
+                <text x="300" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#185FA5">STRATEGY 1.0 → STRATEGY 2.0</text>
+                <circle cx="80" cy="72" r="30" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+                <text x="80" y="70" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">2020</text>
+                <text x="80" y="84" text-anchor="middle" font-size="9" fill="#3d3d3a">Strategy 1.0</text>
+                <text x="80" y="116" text-anchor="middle" font-size="9.5" fill="#888">COM(2020) 66</text>
+                <text x="80" y="128" text-anchor="middle" font-size="9.5" fill="#888">"make laws"</text>
+                <line x1="113" y1="72" x2="485" y2="72" stroke="#185FA5" stroke-width="2"/>
+                <polygon points="492,72 480,66 480,78" fill="#185FA5"/>
+                <circle cx="180" cy="72" r="3" fill="#185FA5"/>
+                <text x="180" y="55" text-anchor="middle" font-size="9.5" fill="#3d3d3a">DGA</text>
+                <text x="180" y="92" text-anchor="middle" font-size="9" fill="#888">2022</text>
+                <circle cx="260" cy="72" r="3" fill="#185FA5"/>
+                <text x="260" y="55" text-anchor="middle" font-size="9.5" fill="#3d3d3a">Data Act</text>
+                <text x="260" y="92" text-anchor="middle" font-size="9" fill="#888">2023</text>
+                <circle cx="340" cy="72" r="3" fill="#185FA5"/>
+                <text x="340" y="55" text-anchor="middle" font-size="9.5" fill="#3d3d3a">AI Act · IEA</text>
+                <text x="340" y="92" text-anchor="middle" font-size="9" fill="#888">2024</text>
+                <circle cx="420" cy="72" r="3" fill="#185FA5"/>
+                <text x="420" y="55" text-anchor="middle" font-size="9.5" fill="#3d3d3a">EHDS</text>
+                <text x="420" y="92" text-anchor="middle" font-size="9" fill="#888">Feb 2025</text>
+                <circle cx="520" cy="72" r="30" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+                <text x="520" y="70" text-anchor="middle" font-size="13" font-weight="800" fill="#185FA5">2025</text>
+                <text x="520" y="84" text-anchor="middle" font-size="9" fill="#3d3d3a">Strategy 2.0</text>
+                <text x="520" y="116" text-anchor="middle" font-size="9.5" fill="#888">COM(2025) 835</text>
+                <text x="520" y="128" text-anchor="middle" font-size="9.5" fill="#888">"consolidate"</text>
+              </svg><div class="tl-vcap">Five years of lawmaking sit between the two Communications.</div></div>
               <dl>
                 <dt>Type</dt><dd>Commission Communication — non-binding.</dd>
                 <dt>Date</dt><dd>November 2025</dd>
@@ -3010,11 +3239,20 @@ function renderEpsoExplorer(root){
     });
   });
 
-  // Open/close on cards
+  // Open/close on cards — accordion scoped per tab-body
   root.querySelectorAll('.tl-card, .duty-card').forEach(c => {
-    c.addEventListener('click', () => c.classList.toggle('open'));
-    // If the card has [data-open], start open
-    if(c.hasAttribute('data-open')) c.classList.add('open');
+    c.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // let inline links work
+      const wasOpen = c.classList.contains('open');
+      const scope = c.closest('.tab-body') || root;
+      scope.querySelectorAll('.tl-card.open, .duty-card.open').forEach(x => {
+        if (x !== c) x.classList.remove('open');
+      });
+      c.classList.toggle('open', !wasOpen);
+      // When opening, scroll the header into view so body isn't below fold
+      if (!wasOpen) setTimeout(() => c.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    });
+    if (c.hasAttribute('data-open')) c.classList.add('open');
   });
 }
 
