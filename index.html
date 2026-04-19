@@ -989,8 +989,22 @@ function confirmModal({ title, body = '', icon = '?', okLabel = 'OK', cancelLabe
 
 let SCROLL_TARGET = 'top'; // 'top' | 'explanation' | 'none'
 let PLAYLIST_SCROLL_X = 0; // preserves horizontal scroll of #playlist-chips across re-renders
+
+// Keep the browser history API in sync with MODE so the browser back button
+// navigates between screens (instead of leaving the site). Each MODE transition
+// pushes a new entry; internal re-renders within the same mode do nothing.
+function syncHistory(){
+  const state = history.state;
+  if(!state){
+    history.replaceState({ mode: MODE }, '', '#' + MODE);
+  } else if(state.mode !== MODE){
+    history.pushState({ mode: MODE }, '', '#' + MODE);
+  }
+}
+
 function render(){
   const root = document.getElementById('root');
+  syncHistory();
   root.innerHTML = '';
   if(MODE === 'home') renderHome(root);
   else if(MODE === 'guide') renderGuide(root);
@@ -4844,6 +4858,33 @@ async function init(){
   // start the session with a clean slate so we don't prompt to save on exit
   // unless the user actually answered something.
   STATS_DIRTY = false;
+
+  // Browser back/forward → sync MODE. Mid-quiz back is guarded by a confirm.
+  window.addEventListener('popstate', async (e) => {
+    const newMode = (e.state && e.state.mode) || 'home';
+    if(newMode === MODE) return;
+
+    // Leaving an in-progress quiz: ask before discarding the screen.
+    // Session itself is kept in localStorage so the user can resume from home.
+    const midQuiz = MODE === 'practice' && SESSION &&
+      ((SESSION.answered_count || 0) > 0 || SESSION.picked_letter);
+    if(midQuiz){
+      const ok = await confirmModal({
+        title: 'Leave this exercise?',
+        body: `Your progress is saved — you can resume later from the home screen.<div class="modal-hint">Use the in-app Exit button if you want to finish the quiz properly.</div>`,
+        icon: '←', okLabel: 'Leave', cancelLabel: 'Stay',
+      });
+      if(!ok){
+        // Re-push a matching entry so the URL reflects where we actually are.
+        history.pushState({ mode: MODE }, '', '#' + MODE);
+        return;
+      }
+    }
+
+    MODE = newMode;
+    SCROLL_TARGET = 'top';
+    render();
+  });
 
   render();
 }
