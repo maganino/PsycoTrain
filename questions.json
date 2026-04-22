@@ -17512,7 +17512,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "27 April 2016"
+          "text": "27 Apr 2016"
         },
         {
           "letter": "B",
@@ -17520,20 +17520,20 @@
         },
         {
           "letter": "C",
-          "text": "11 December 2018"
+          "text": "11 Dec 2018"
         },
         {
           "letter": "D",
-          "text": "24 September 2023"
+          "text": "24 Sep 2023"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.\n· A: 27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.\n· C: 11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.\n· D: 24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks.",
+      "explanation": "Correct: B — Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.\n· A: 27 Apr 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.\n· C: 11 Dec 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.\n· D: 24 Sep 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks.",
       "explanations": {
-        "A": "27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
+        "A": "27 Apr 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
         "B": "Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.",
-        "C": "11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
-        "D": "24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
+        "C": "11 Dec 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
+        "D": "24 Sep 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
       }
     },
     {
@@ -17550,7 +17550,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Regulation (EU) 2016/679 (GDPR)"
+          "text": "Reg. (EU) 2016/679 — GDPR"
         },
         {
           "letter": "B",
@@ -17558,20 +17558,20 @@
         },
         {
           "letter": "C",
-          "text": "Directive (EU) 2019/1024 (Open Data)"
+          "text": "Dir. (EU) 2019/1024 — Open Data"
         },
         {
           "letter": "D",
-          "text": "Regulation (EU) 2022/868 (DGA)"
+          "text": "Reg. (EU) 2022/868 — DGA"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.\n· A: GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.\n· C: The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.\n· D: The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies.",
+      "explanation": "Correct: B — Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.\n· A: GDPR (Reg. 2016/679) explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.\n· C: The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.\n· D: The DGA (Reg. 2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies.",
       "explanations": {
-        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
+        "A": "GDPR (Reg. 2016/679) explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
         "B": "Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.",
         "C": "The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.",
-        "D": "The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
+        "D": "The DGA (Reg. 2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
       }
     },
     {
@@ -17588,11 +17588,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Geospatial"
+          "text": "Geo"
         },
         {
           "letter": "B",
-          "text": "Meteorological"
+          "text": "Meteo"
         },
         {
           "letter": "C",
@@ -17600,16 +17600,16 @@
         },
         {
           "letter": "D",
-          "text": "Mobility"
+          "text": "Transit"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.\n· D: Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
+      "explanation": "Correct: C — Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial (abbreviated 'Geo') is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological (abbreviated 'Meteo') is one of the six categories — weather observations, forecasts, radar feeds, warnings.\n· D: Mobility (labelled 'Transit' here) is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
       "explanations": {
-        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
-        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
+        "A": "Geospatial (abbreviated 'Geo') is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
+        "B": "Meteorological (abbreviated 'Meteo') is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
         "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
-        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
+        "D": "Mobility (labelled 'Transit' here) is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
       }
     },
     {
@@ -17702,11 +17702,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Minimal risk"
+          "text": "Minimal risk — no mandatory obligations beyond voluntary codes"
         },
         {
           "letter": "B",
-          "text": "Limited risk"
+          "text": "Limited risk — transparency obligations apply but no ban"
         },
         {
           "letter": "C",
@@ -17740,7 +17740,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Mandatory open-data publication of all training datasets"
+          "text": "Mandatory open-data publication of every training dataset used to build a high-risk AI system"
         },
         {
           "letter": "B",
@@ -17748,11 +17748,11 @@
         },
         {
           "letter": "C",
-          "text": "Exclusive use of synthetic data"
+          "text": "Exclusive use of synthetic data — no real-world observations allowed in training or test sets"
         },
         {
           "letter": "D",
-          "text": "Blanket prohibition of any personal data in training sets"
+          "text": "Blanket prohibition of any personal data appearing in training, validation or test datasets"
         }
       ],
       "correct": "B",
@@ -17778,11 +17778,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A binding regulation on Common European Data Spaces"
+          "text": "A binding regulation on Common European Data Spaces adopted by the Council"
         },
         {
           "letter": "B",
-          "text": "A directive transposing the Data Act into national law"
+          "text": "A directive implementing the Data Act"
         },
         {
           "letter": "C",
@@ -17790,14 +17790,14 @@
         },
         {
           "letter": "D",
-          "text": "A joint statement of the European Data Protection Board"
+          "text": "A joint statement from the EDPB"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).\n· A: It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.\n· B: The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.\n· D: The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee.",
+      "explanation": "Correct: C — Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).\n· A: It's not a regulation — a regulation would be directly applicable EU law adopted by the Council and Parliament. 'Strategy' signals a policy document (a Communication), not binding law.\n· B: The Data Act is itself a regulation, directly applicable without national transposition. No implementing directive exists either, so no transposition is needed.\n· D: The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee.",
       "explanations": {
-        "A": "It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.",
-        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.",
+        "A": "It's not a regulation — a regulation would be directly applicable EU law adopted by the Council and Parliament. 'Strategy' signals a policy document (a Communication), not binding law.",
+        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No implementing directive exists either, so no transposition is needed.",
         "C": "Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).",
         "D": "The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee."
       }
@@ -17934,7 +17934,7 @@
         },
         {
           "letter": "B",
-          "text": "Compliance, Integrity, Auditability"
+          "text": "Compliance, Integrity, Auditability, Resilience"
         },
         {
           "letter": "C",
@@ -17946,10 +17946,10 @@
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.\n· B: Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.\n· C: Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.\n· D: Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely.",
+      "explanation": "Correct: A — Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.\n· B: 'Compliance, Integrity, Auditability, Resilience' looks close but swaps the real pillars. Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three CIA objectives. Compliance is a goal, not a security pillar.\n· C: Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.\n· D: Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely.",
       "explanations": {
         "A": "Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.",
-        "B": "Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.",
+        "B": "'Compliance, Integrity, Auditability, Resilience' looks close but swaps the real pillars. Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three CIA objectives. Compliance is a goal, not a security pillar.",
         "C": "Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.",
         "D": "Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely."
       }
@@ -17968,7 +17968,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "The data controller, because it physically handles the data"
+          "text": "The data controller, because it physically handles the payroll salary data in its systems"
         },
         {
           "letter": "B",
@@ -17976,11 +17976,11 @@
         },
         {
           "letter": "C",
-          "text": "Jointly controller and processor by default"
+          "text": "Jointly controller and processor by default under any outsourcing"
         },
         {
           "letter": "D",
-          "text": "Outside GDPR scope since pay slips are considered public"
+          "text": "Outside GDPR scope since pay slips are treated as public information"
         }
       ],
       "correct": "B",
@@ -18006,7 +18006,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A machine-learning model registry for EU projects"
+          "text": "A machine-learning model registry for EU-funded AI projects and systems"
         },
         {
           "letter": "B",
@@ -18014,11 +18014,11 @@
         },
         {
           "letter": "C",
-          "text": "A file format for personal-data export requests under GDPR"
+          "text": "A file format used for personal-data export requests submitted under GDPR Art. 20"
         },
         {
           "letter": "D",
-          "text": "A public directory of SaaS cloud providers"
+          "text": "A public directory of SaaS cloud providers available to EU administrations"
         }
       ],
       "correct": "B",
@@ -18044,7 +18044,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Transformations happen before loading into the target store"
+          "text": "Transformations happen before loading, inside a dedicated ETL engine"
         },
         {
           "letter": "B",
@@ -18052,11 +18052,11 @@
         },
         {
           "letter": "C",
-          "text": "No transformations are applied at all"
+          "text": "No transformations are applied to the data at any stage"
         },
         {
           "letter": "D",
-          "text": "Data is loaded but never queried"
+          "text": "Data is loaded into storage but never queried downstream"
         }
       ],
       "correct": "B",
@@ -18082,7 +18082,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Both fall outside GDPR scope once processed"
+          "text": "Both anonymised and pseudonymised data fall outside GDPR scope once applied"
         },
         {
           "letter": "B",
@@ -18094,7 +18094,7 @@
         },
         {
           "letter": "D",
-          "text": "Both are always in GDPR scope regardless of technique"
+          "text": "Both are always in GDPR scope regardless of technique applied"
         }
       ],
       "correct": "C",
@@ -18120,11 +18120,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A classic data warehouse with nightly batch ingestion"
+          "text": "A classic proprietary data warehouse with nightly batch-ingestion pipelines"
         },
         {
           "letter": "B",
-          "text": "A Hadoop-era data lake with schema-on-read only"
+          "text": "A Hadoop-era data lake relying on schema-on-read only"
         },
         {
           "letter": "C",
@@ -18132,7 +18132,7 @@
         },
         {
           "letter": "D",
-          "text": "A relational OLTP database with read replicas"
+          "text": "A relational OLTP database with read replicas as the back-end"
         }
       ],
       "correct": "C",
@@ -18158,7 +18158,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A KPI must always be expressed as a percentage"
+          "text": "A KPI must always be expressed as a percentage of some fixed reference total value baseline"
         },
         {
           "letter": "B",
@@ -18166,20 +18166,20 @@
         },
         {
           "letter": "C",
-          "text": "A KPI is only valid if refreshed in real time"
+          "text": "A KPI is only valid if refreshed in real time from streaming source systems"
         },
         {
           "letter": "D",
-          "text": "A KPI is a synonym for a dashboard"
+          "text": "A KPI and a dashboard are just interchangeable labels for the same monitoring artefact"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.\n· A: KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.\n· C: Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.\n· D: A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous.",
+      "explanation": "Correct: B — Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.\n· A: KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.\n· C: Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.\n· D: A KPI and a dashboard are not the same thing. A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous.",
       "explanations": {
         "A": "KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.",
         "B": "Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.",
         "C": "Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.",
-        "D": "A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
+        "D": "A KPI and a dashboard are not the same thing. A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
       }
     },
     {
@@ -18196,7 +18196,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Assigning the 'fraud / not fraud' ground-truth to each historical record"
+          "text": "Assigning the 'fraud / not fraud' ground-truth label to each historical transaction record in the dataset"
         },
         {
           "letter": "B",
@@ -18204,11 +18204,11 @@
         },
         {
           "letter": "C",
-          "text": "Evaluating model performance on a held-out test set"
+          "text": "Evaluating the trained model's predictive performance on a held-out test set of unseen transactions"
         },
         {
           "letter": "D",
-          "text": "Defining role-based access controls for the model's training data"
+          "text": "Defining role-based access controls that govern which analysts can read the model's training data"
         }
       ],
       "correct": "B",
@@ -18234,11 +18234,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU terminology database"
+          "text": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU inter-institutional terminology database"
         },
         {
           "letter": "B",
-          "text": "EuroVoc — the EU's inter-institutional terminology database; IATE — a multilingual thesaurus"
+          "text": "EuroVoc — the EU inter-institutional terminology database; IATE — a multilingual thesaurus for EU documents"
         },
         {
           "letter": "C",
@@ -18246,7 +18246,7 @@
         },
         {
           "letter": "D",
-          "text": "IATE — a public-procurement catalogue; EuroVoc — the EU's translation memory"
+          "text": "IATE — a public-procurement catalogue for EU tenders; EuroVoc — the EU translation memory used by translators"
         }
       ],
       "correct": "C",
@@ -18348,7 +18348,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Any of the six lawful bases in Art. 6"
+          "text": "Any of the six lawful bases in Article 6 of the GDPR"
         },
         {
           "letter": "B",
@@ -18356,11 +18356,11 @@
         },
         {
           "letter": "C",
-          "text": "Legitimate interest only"
+          "text": "Legitimate interest, exclusively, with no other basis admitted"
         },
         {
           "letter": "D",
-          "text": "A legal obligation imposed on the controller"
+          "text": "A legal obligation imposed on the controller by Union or Member State law"
         }
       ],
       "correct": "B",
@@ -18424,15 +18424,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Protection of personal data in the Union"
+          "text": "The protection of personal data of natural persons in the Union"
         },
         {
           "letter": "B",
-          "text": "Cross-border electronic identification"
+          "text": "Cross-border electronic identification and mutual recognition"
         },
         {
           "letter": "C",
-          "text": "Data sharing obligations between private companies"
+          "text": "Mandatory data-sharing obligations imposed on private companies in the EU"
         },
         {
           "letter": "D",
@@ -18500,11 +18500,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Replace the standard GDPR consent requirements for all processing"
+          "text": "Replace the standard GDPR consent requirements for all processing of personal data"
         },
         {
           "letter": "B",
-          "text": "Serve as an intra-institutional authorisation within the Commission"
+          "text": "Serve as an intra-institutional authorisation form used within the Commission services"
         },
         {
           "letter": "C",
@@ -18512,7 +18512,7 @@
         },
         {
           "letter": "D",
-          "text": "Operate as a commercial licence template for paid data transactions"
+          "text": "Operate as a commercial licence template for paid data transactions between firms"
         }
       ],
       "correct": "C",
@@ -18576,11 +18576,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Biometric identification in public spaces"
+          "text": "Biometric identification in publicly accessible spaces"
         },
         {
           "letter": "B",
-          "text": "Reuse of protected public-sector data"
+          "text": "Reuse of protected public-sector data held by bodies"
         },
         {
           "letter": "C",
@@ -18588,7 +18588,7 @@
         },
         {
           "letter": "D",
-          "text": "Data altruism and the European consent form"
+          "text": "Data altruism and the standardised European consent form"
         }
       ],
       "correct": "C",
@@ -18690,11 +18690,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Unacceptable risk — prohibited"
+          "text": "Unacceptable risk — the system is prohibited outright with no market access allowed"
         },
         {
           "letter": "B",
-          "text": "High risk — conformity assessment required"
+          "text": "High risk — subject to a full conformity assessment before being placed on the market"
         },
         {
           "letter": "C",
@@ -18702,7 +18702,7 @@
         },
         {
           "letter": "D",
-          "text": "Minimal risk — no obligation"
+          "text": "Minimal risk — no obligation applies and no transparency notice needs to be shown"
         }
       ],
       "correct": "C",

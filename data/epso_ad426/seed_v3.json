@@ -14,17 +14,17 @@
       "ref": "GDPR Art. 99",
       "question": "When did the General Data Protection Regulation (Reg. (EU) 2016/679) become applicable?",
       "options": {
-        "A": "27 April 2016",
+        "A": "27 Apr 2016",
         "B": "25 May 2018",
-        "C": "11 December 2018",
-        "D": "24 September 2023"
+        "C": "11 Dec 2018",
+        "D": "24 Sep 2023"
       },
       "correct": "B",
       "explanations": {
-        "A": "27 April 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
+        "A": "27 Apr 2016 is the adoption date — the day the Council and Parliament signed off. Adoption is not the same as application: Art. 99 GDPR gave everyone a two-year grace period, so the rules only started applying two years later.",
         "B": "Correct. GDPR became applicable on 25 May 2018 (Art. 99), two years after adoption. The deliberate two-year gap gave companies, national DPAs and Member-State lawmakers time to prepare. From that date onward, the same rules apply in all 27 Member States.",
-        "C": "11 December 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
-        "D": "24 September 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
+        "C": "11 Dec 2018 is the application date of Regulation (EU) 2018/1725 — the 'GDPR for EU institutions' (Commission, Parliament, agencies, EDPS itself). Different regulation, different scope.",
+        "D": "24 Sep 2023 is the application date of the Data Governance Act (DGA, Reg. 2022/868). A useful DGA fact to remember, but not what this question asks."
       }
     },
     {
@@ -34,17 +34,17 @@
       "ref": "Reg 2018/1725",
       "question": "Which regulation governs the processing of personal data by EU institutions, bodies, offices and agencies?",
       "options": {
-        "A": "Regulation (EU) 2016/679 (GDPR)",
+        "A": "Reg. (EU) 2016/679 — GDPR",
         "B": "Regulation (EU) 2018/1725",
-        "C": "Directive (EU) 2019/1024 (Open Data)",
-        "D": "Regulation (EU) 2022/868 (DGA)"
+        "C": "Dir. (EU) 2019/1024 — Open Data",
+        "D": "Reg. (EU) 2022/868 — DGA"
       },
       "correct": "B",
       "explanations": {
-        "A": "GDPR explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
+        "A": "GDPR (Reg. 2016/679) explicitly excludes EU institutions from its material scope (Art. 2 GDPR). That carve-out is precisely why Regulation 2018/1725 had to exist — without it, the Commission, Parliament, ECB and agencies would have no personal-data rulebook at all.",
         "B": "Correct. Regulation 2018/1725 is the 'EU-institutions GDPR': same principles (lawful basis, data-subject rights, DPIA, DPO) but supervised by the European Data Protection Supervisor (EDPS) instead of national DPAs. If an exam question names an EU body — Commission, Parliament, Frontex, ECB — this regulation applies.",
         "C": "The Open Data Directive (2019/1024) concerns the reuse of public-sector information — it's a data-sharing rulebook, not a personal-data protection one.",
-        "D": "The DGA (2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
+        "D": "The DGA (Reg. 2022/868) builds horizontal mechanisms for data reuse, intermediation and altruism on top of the existing personal-data regime. It doesn't replace the protection rules for EU bodies."
       }
     },
     {
@@ -54,17 +54,17 @@
       "ref": "Open Data Dir. + Impl. Reg. 2023/138",
       "question": "Under the Open Data Directive (2019/1024), High-Value Datasets are defined in an Implementing Regulation with six thematic categories. Which of the following is NOT one of them?",
       "options": {
-        "A": "Geospatial",
-        "B": "Meteorological",
+        "A": "Geo",
+        "B": "Meteo",
         "C": "Health",
-        "D": "Mobility"
+        "D": "Transit"
       },
       "correct": "C",
       "explanations": {
-        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
-        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
+        "A": "Geospatial (abbreviated 'Geo') is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
+        "B": "Meteorological (abbreviated 'Meteo') is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
         "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
-        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
+        "D": "Mobility (labelled 'Transit' here) is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
       }
     },
     {
@@ -114,8 +114,8 @@
       "ref": "AI Act Art. 5",
       "question": "Under the AI Act (Reg. (EU) 2024/1689), a real-time remote biometric identification system used in public spaces for law-enforcement purposes is categorised as:",
       "options": {
-        "A": "Minimal risk",
-        "B": "Limited risk",
+        "A": "Minimal risk — no mandatory obligations beyond voluntary codes",
+        "B": "Limited risk — transparency obligations apply but no ban",
         "C": "High risk (subject to conformity assessment)",
         "D": "Unacceptable risk (banned, with narrow exceptions)"
       },
@@ -134,10 +134,10 @@
       "ref": "AI Act Art. 10",
       "question": "Article 10 of the AI Act imposes data-governance requirements on training, validation and test datasets of high-risk AI systems. Which obligation is specifically listed by Article 10?",
       "options": {
-        "A": "Mandatory open-data publication of all training datasets",
+        "A": "Mandatory open-data publication of every training dataset used to build a high-risk AI system",
         "B": "Examination of possible biases and appropriate measures to detect, prevent and mitigate them",
-        "C": "Exclusive use of synthetic data",
-        "D": "Blanket prohibition of any personal data in training sets"
+        "C": "Exclusive use of synthetic data — no real-world observations allowed in training or test sets",
+        "D": "Blanket prohibition of any personal data appearing in training, validation or test datasets"
       },
       "correct": "B",
       "explanations": {
@@ -154,15 +154,15 @@
       "ref": "COM(2025) 835",
       "question": "The 'Data Union Strategy' announced in November 2025 is:",
       "options": {
-        "A": "A binding regulation on Common European Data Spaces",
-        "B": "A directive transposing the Data Act into national law",
+        "A": "A binding regulation on Common European Data Spaces adopted by the Council",
+        "B": "A directive implementing the Data Act",
         "C": "A Commission Communication (COM(2025) 835 final)",
-        "D": "A joint statement of the European Data Protection Board"
+        "D": "A joint statement from the EDPB"
       },
       "correct": "C",
       "explanations": {
-        "A": "It's not a regulation — a regulation would be directly applicable EU law. 'Strategy' signals a policy document (a Communication), not binding law.",
-        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No transposing directive exists, so nothing needs to be transposed into national law.",
+        "A": "It's not a regulation — a regulation would be directly applicable EU law adopted by the Council and Parliament. 'Strategy' signals a policy document (a Communication), not binding law.",
+        "B": "The Data Act is itself a regulation, directly applicable without national transposition. No implementing directive exists either, so no transposition is needed.",
         "C": "Correct. The Data Union Strategy is a Commission Communication, reference COM(2025) 835 final, published in November 2025. It's the successor policy framework to the 2020 European Strategy for Data, emphasising simplification and consolidation after five years of legislating (DGA, Data Act, AI Act, EHDS, Interoperable Europe Act).",
         "D": "The EDPB (European Data Protection Board) issues guidelines on GDPR and related personal-data matters. EU data-market strategies come from the Commission, not from a supervisory-body coordination committee."
       }
@@ -235,14 +235,14 @@
       "question": "The CIA triad in information security refers to:",
       "options": {
         "A": "Confidentiality, Integrity, Availability",
-        "B": "Compliance, Integrity, Auditability",
+        "B": "Compliance, Integrity, Auditability, Resilience",
         "C": "Control, Identification, Access",
         "D": "Consent, Isolation, Accountability"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Confidentiality · Integrity · Availability — the three pillars of the CIA model, foundational for every major security control framework (ISO 27001, NIST CSF, etc.). Modern treatments often extend it with Authenticity and Non-repudiation.",
-        "B": "Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three core CIA objectives. Compliance is a goal, not a security pillar.",
+        "B": "'Compliance, Integrity, Auditability, Resilience' looks close but swaps the real pillars. Auditability is a control practice (logs, traceability) that supports Integrity but isn't one of the three CIA objectives. Compliance is a goal, not a security pillar.",
         "C": "Control / Identification / Access sound like access-management concepts — relevant for designing RBAC/ABAC systems, but not what CIA stands for.",
         "D": "Consent is a GDPR lawful basis (Art. 6(1)(a)) — a privacy concept, not a security triad. Wrong domain entirely."
       }
@@ -254,10 +254,10 @@
       "ref": "GDPR Art. 4, 26, 28",
       "question": "Under the GDPR, a payroll service running employee salaries on behalf of a company is typically:",
       "options": {
-        "A": "The data controller, because it physically handles the data",
+        "A": "The data controller, because it physically handles the payroll salary data in its systems",
         "B": "The data processor, because it processes data on behalf of the controller",
-        "C": "Jointly controller and processor by default",
-        "D": "Outside GDPR scope since pay slips are considered public"
+        "C": "Jointly controller and processor by default under any outsourcing",
+        "D": "Outside GDPR scope since pay slips are treated as public information"
       },
       "correct": "B",
       "explanations": {
@@ -274,10 +274,10 @@
       "ref": "DCAT-AP",
       "question": "What is DCAT-AP primarily used for on the EU data.europa.eu portal?",
       "options": {
-        "A": "A machine-learning model registry for EU projects",
+        "A": "A machine-learning model registry for EU-funded AI projects and systems",
         "B": "An application profile of the DCAT vocabulary to describe datasets and catalogues",
-        "C": "A file format for personal-data export requests under GDPR",
-        "D": "A public directory of SaaS cloud providers"
+        "C": "A file format used for personal-data export requests submitted under GDPR Art. 20",
+        "D": "A public directory of SaaS cloud providers available to EU administrations"
       },
       "correct": "B",
       "explanations": {
@@ -294,10 +294,10 @@
       "ref": "ETL vs ELT",
       "question": "A data team adopts ELT instead of ETL when ingesting logs into a modern cloud warehouse. The key difference is that in ELT:",
       "options": {
-        "A": "Transformations happen before loading into the target store",
+        "A": "Transformations happen before loading, inside a dedicated ETL engine",
         "B": "Transformations happen inside the target store after loading",
-        "C": "No transformations are applied at all",
-        "D": "Data is loaded but never queried"
+        "C": "No transformations are applied to the data at any stage",
+        "D": "Data is loaded into storage but never queried downstream"
       },
       "correct": "B",
       "explanations": {
@@ -314,10 +314,10 @@
       "ref": "GDPR Recital 26, Art. 4(5)",
       "question": "Which statement about the GDPR treatment of anonymised vs pseudonymised data is correct?",
       "options": {
-        "A": "Both fall outside GDPR scope once processed",
+        "A": "Both anonymised and pseudonymised data fall outside GDPR scope once applied",
         "B": "Pseudonymised data falls outside GDPR; anonymised data stays in scope",
         "C": "Anonymised data falls outside GDPR; pseudonymised data remains in scope",
-        "D": "Both are always in GDPR scope regardless of technique"
+        "D": "Both are always in GDPR scope regardless of technique applied"
       },
       "correct": "C",
       "explanations": {
@@ -334,10 +334,10 @@
       "ref": "Lakehouse",
       "question": "An analytics team needs ACID transactions, schema enforcement and time-travel directly on object storage holding raw Parquet files, while still supporting BI dashboards and ML feature pipelines. Which architecture best fits?",
       "options": {
-        "A": "A classic data warehouse with nightly batch ingestion",
-        "B": "A Hadoop-era data lake with schema-on-read only",
+        "A": "A classic proprietary data warehouse with nightly batch-ingestion pipelines",
+        "B": "A Hadoop-era data lake relying on schema-on-read only",
         "C": "A lakehouse using an open table format such as Delta, Iceberg or Hudi",
-        "D": "A relational OLTP database with read replicas"
+        "D": "A relational OLTP database with read replicas as the back-end"
       },
       "correct": "C",
       "explanations": {
@@ -354,17 +354,17 @@
       "ref": "KPI",
       "question": "Which statement best distinguishes a KPI from an ordinary metric?",
       "options": {
-        "A": "A KPI must always be expressed as a percentage",
+        "A": "A KPI must always be expressed as a percentage of some fixed reference total value baseline",
         "B": "A KPI is a metric chosen for its strategic link to an objective and used to track progress",
-        "C": "A KPI is only valid if refreshed in real time",
-        "D": "A KPI is a synonym for a dashboard"
+        "C": "A KPI is only valid if refreshed in real time from streaming source systems",
+        "D": "A KPI and a dashboard are just interchangeable labels for the same monitoring artefact"
       },
       "correct": "B",
       "explanations": {
         "A": "KPIs can take many forms — counts (users onboarded), ratios (conversion rate), currency (revenue), percentages (uptime). Format doesn't define whether something is a KPI.",
         "B": "Correct. A KPI (Key Performance Indicator) is a metric that has been deliberately selected because it ties to an organisational objective. 'Key' means someone thought about it and decided this metric tells us whether we're making progress. Without that strategic link, it's just a metric. Good KPIs are SMART — specific, measurable, achievable, relevant, time-bound.",
         "C": "Refresh cadence depends on the business context — many important KPIs are tracked monthly, quarterly or even annually (customer satisfaction, market share). Real-time is a nice-to-have, not a defining requirement.",
-        "D": "A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
+        "D": "A KPI and a dashboard are not the same thing. A dashboard is the visualisation layer that may display KPIs alongside other charts and filters. They're complementary, not synonymous."
       }
     },
     {
@@ -374,10 +374,10 @@
       "ref": "Feature engineering vs labelling",
       "question": "In a supervised machine-learning pipeline for fraud detection, 'feature engineering' refers to which activity?",
       "options": {
-        "A": "Assigning the 'fraud / not fraud' ground-truth to each historical record",
+        "A": "Assigning the 'fraud / not fraud' ground-truth label to each historical transaction record in the dataset",
         "B": "Creating predictive variables (e.g. rolling-average amount, device-country mismatch flag) from raw data",
-        "C": "Evaluating model performance on a held-out test set",
-        "D": "Defining role-based access controls for the model's training data"
+        "C": "Evaluating the trained model's predictive performance on a held-out test set of unseen transactions",
+        "D": "Defining role-based access controls that govern which analysts can read the model's training data"
       },
       "correct": "B",
       "explanations": {
@@ -394,10 +394,10 @@
       "ref": "IATE · EuroVoc",
       "question": "Which of the following correctly pairs EU multilingual reference resources with their primary purpose?",
       "options": {
-        "A": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU terminology database",
-        "B": "EuroVoc — the EU's inter-institutional terminology database; IATE — a multilingual thesaurus",
+        "A": "IATE — a controlled thesaurus used to index EU publications; EuroVoc — the EU inter-institutional terminology database",
+        "B": "EuroVoc — the EU inter-institutional terminology database; IATE — a multilingual thesaurus for EU documents",
         "C": "IATE — the EU's inter-institutional terminology database; EuroVoc — a multilingual thesaurus for indexing EU documents",
-        "D": "IATE — a public-procurement catalogue; EuroVoc — the EU's translation memory"
+        "D": "IATE — a public-procurement catalogue for EU tenders; EuroVoc — the EU translation memory used by translators"
       },
       "correct": "C",
       "explanations": {
@@ -454,10 +454,10 @@
       "ref": "GDPR Art. 20",
       "question": "The GDPR right to data portability (Art. 20) applies specifically when processing is based on:",
       "options": {
-        "A": "Any of the six lawful bases in Art. 6",
+        "A": "Any of the six lawful bases in Article 6 of the GDPR",
         "B": "Consent or a contract, and is carried out by automated means",
-        "C": "Legitimate interest only",
-        "D": "A legal obligation imposed on the controller"
+        "C": "Legitimate interest, exclusively, with no other basis admitted",
+        "D": "A legal obligation imposed on the controller by Union or Member State law"
       },
       "correct": "B",
       "explanations": {
@@ -494,9 +494,9 @@
       "ref": "Open Data Dir. Art. 1",
       "question": "The Open Data Directive (EU) 2019/1024 primarily governs:",
       "options": {
-        "A": "Protection of personal data in the Union",
-        "B": "Cross-border electronic identification",
-        "C": "Data sharing obligations between private companies",
+        "A": "The protection of personal data of natural persons in the Union",
+        "B": "Cross-border electronic identification and mutual recognition",
+        "C": "Mandatory data-sharing obligations imposed on private companies in the EU",
         "D": "Reuse of public-sector information and publicly funded research data"
       },
       "correct": "D",
@@ -534,10 +534,10 @@
       "ref": "DGA Ch IV",
       "question": "The European Data Altruism Consent Form introduced by the DGA (Ch IV) is designed to:",
       "options": {
-        "A": "Replace the standard GDPR consent requirements for all processing",
-        "B": "Serve as an intra-institutional authorisation within the Commission",
+        "A": "Replace the standard GDPR consent requirements for all processing of personal data",
+        "B": "Serve as an intra-institutional authorisation form used within the Commission services",
         "C": "Standardise how individuals and companies donate data for causes of general interest",
-        "D": "Operate as a commercial licence template for paid data transactions"
+        "D": "Operate as a commercial licence template for paid data transactions between firms"
       },
       "correct": "C",
       "explanations": {
@@ -574,10 +574,10 @@
       "ref": "Data Act Ch VI",
       "question": "Chapter VI of the Data Act (Reg. 2023/2854) addresses:",
       "options": {
-        "A": "Biometric identification in public spaces",
-        "B": "Reuse of protected public-sector data",
+        "A": "Biometric identification in publicly accessible spaces",
+        "B": "Reuse of protected public-sector data held by bodies",
         "C": "Switching between cloud or edge data-processing services",
-        "D": "Data altruism and the European consent form"
+        "D": "Data altruism and the standardised European consent form"
       },
       "correct": "C",
       "explanations": {
@@ -634,10 +634,10 @@
       "ref": "AI Act risk pyramid",
       "question": "Under the AI Act, a chatbot deployed by a retailer to answer customer questions typically falls into which risk tier?",
       "options": {
-        "A": "Unacceptable risk — prohibited",
-        "B": "High risk — conformity assessment required",
+        "A": "Unacceptable risk — the system is prohibited outright with no market access allowed",
+        "B": "High risk — subject to a full conformity assessment before being placed on the market",
         "C": "Limited risk — transparency obligation (user must know they are interacting with AI)",
-        "D": "Minimal risk — no obligation"
+        "D": "Minimal risk — no obligation applies and no transparency notice needs to be shown"
       },
       "correct": "C",
       "explanations": {
