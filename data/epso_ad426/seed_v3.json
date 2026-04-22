@@ -654,15 +654,15 @@
       "ref": "AI Act Ch V (GPAI)",
       "question": "Under Chapter V of the AI Act, General-Purpose AI (GPAI) models with 'systemic risk' are subject to:",
       "options": {
-        "A": "Only a light-touch code of conduct",
-        "B": "Full Annex III high-risk obligations by default",
+        "A": "Only a light-touch voluntary code of conduct, similar to ordinary GPAI obligations",
+        "B": "Full Annex III high-risk obligations applied by default to every systemic-risk foundation GPAI model on the market",
         "C": "Specific obligations including model evaluations, systemic-risk assessment and cybersecurity protection",
-        "D": "A blanket prohibition on EU deployment"
+        "D": "A blanket prohibition on deployment of systemic-risk GPAI anywhere in the Union"
       },
       "correct": "C",
       "explanations": {
-        "A": "Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on frontier models.",
-        "B": "GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model as such.",
+        "A": "Ordinary GPAI gets transparency, copyright and technical-documentation duties. Systemic-risk GPAI has stricter obligations than a code of conduct — the point of the tier is to impose binding duties on the largest models.",
+        "B": "GPAI is governed by its own chapter (Ch V), not by the Annex III high-risk regime. High-risk obligations apply where a GPAI model is integrated into a high-risk AI system, not to the foundation model by default.",
         "C": "Correct. Art. 55 imposes additional obligations on GPAI with systemic risk: state-of-the-art model evaluations (including adversarial testing), assessment and mitigation of systemic risks at Union level, incident reporting, and adequate cybersecurity of the model and its infrastructure. The tier is triggered by capability thresholds (cumulative training compute > 10^25 FLOPs) or Commission designation.",
         "D": "GPAI is not banned. The AI Act regulates it, staggered by capability and risk — prohibition is reserved for Art. 5 practices."
       }
@@ -674,9 +674,9 @@
       "ref": "Interoperable Europe Act",
       "question": "The Interoperable Europe Act (Reg. (EU) 2024/903) primarily targets interoperability of:",
       "options": {
-        "A": "Private-sector B2B data exchanges",
-        "B": "Consumer IoT devices sold within the internal market",
-        "C": "Internal Commission HR systems only",
+        "A": "Private-sector B2B data exchanges across the single market",
+        "B": "Consumer IoT devices sold within the EU internal market",
+        "C": "Internal Commission HR systems and service-wide intranets",
         "D": "Cross-border public services delivered in or by the Union"
       },
       "correct": "D",
@@ -695,14 +695,14 @@
       "question": "Art. 3 of the Interoperable Europe Act introduces a mandatory 'interoperability assessment'. It must be carried out:",
       "options": {
         "A": "Before Union entities or public-sector bodies make binding decisions on new or substantially modified trans-European IT solutions",
-        "B": "After a new cross-border public service has gone live",
-        "C": "Only for private-sector software procurements exceeding €10 million",
-        "D": "Only on systems that process special categories of personal data"
+        "B": "After a new cross-border public service has already been deployed and gone live across Member States, once operational feedback has been collected",
+        "C": "Only for private-sector software procurements exceeding €10 million in contract value",
+        "D": "Only on IT systems that process special categories of personal data under GDPR Art. 9"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Art. 3 requires Union entities and public-sector bodies to carry out an interoperability assessment before binding decisions on trans-European digital public services, to identify cross-border effects and plan around the EIF layers. The assessment feeds the Interoperable Europe Portal, creating a searchable library for reuse.",
-        "B": "Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante.",
+        "B": "Post-deployment assessment would defeat the purpose — you can't un-spend money on an incompatible system. The assessment is ex ante, specifically to avoid building incompatible systems in the first place.",
         "C": "There is no €10 million threshold — the obligation applies to trans-European public-service IT regardless of procurement value.",
         "D": "Special-category personal data triggers a GDPR DPIA (Art. 35), not an interoperability assessment. Different instruments, different focus."
       }
@@ -734,14 +734,14 @@
       "ref": "COM(2020) 66",
       "question": "The 'European Strategy for Data' (Feb 2020, COM(2020) 66) is best described as:",
       "options": {
-        "A": "A binding EU regulation",
-        "B": "A Council conclusion on cybersecurity",
-        "C": "An EDPB opinion on cross-border processing",
+        "A": "A binding EU regulation directly applicable across all Member States without national transposition",
+        "B": "A Council conclusion adopted on cybersecurity policy priorities",
+        "C": "An EDPB opinion on cross-border processing of personal data",
         "D": "A Commission Communication setting out a vision for a single market for data"
       },
       "correct": "D",
       "explanations": {
-        "A": "Regulations are binding legal acts. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.",
+        "A": "Regulations are binding legal acts directly applicable without transposition. The 2020 Strategy is not a regulation — the documents it inspired (DGA, Data Act, AI Act) are.",
         "B": "Council conclusions are another instrument; the 2020 Strategy came from the Commission, not the Council.",
         "C": "EDPB opinions focus on personal-data questions, not on broad data-market strategy.",
         "D": "Correct. The European Strategy for Data is a Commission Communication (policy document, non-binding) published in February 2020. It articulated the vision of a single market for data and a programme of Common European Data Spaces. The 2025 Data Union Strategy (COM(2025) 835) is its update."
@@ -775,9 +775,9 @@
       "question": "In the FAIR principles, 'Accessible' means specifically that data:",
       "options": {
         "A": "Are retrievable via a standardised, open communication protocol that allows authentication / authorisation where needed",
-        "B": "Must always be freely available to anyone without authentication",
-        "C": "Are stored only on EU-based servers",
-        "D": "Are available in at least 24 EU languages"
+        "B": "Must always be freely and openly available to anyone on the internet without any authentication",
+        "C": "Must always be physically stored on servers located inside the European Union and its territory",
+        "D": "Must always be made available in at least the 24 official EU languages at the point of initial publication and subsequent updates"
       },
       "correct": "A",
       "explanations": {
@@ -794,16 +794,16 @@
       "ref": "EIF overlay",
       "question": "On top of the four EIF layers, what additional element binds them together and coordinates cross-layer decisions?",
       "options": {
-        "A": "Data Protection Impact Assessment",
-        "B": "Architectural Reference Model",
-        "C": "Common Procurement Vocabulary",
+        "A": "DPIA (Data Protection Impact Assessment)",
+        "B": "Architectural Ref.",
+        "C": "Common Procur. Voc.",
         "D": "Interoperability Governance"
       },
       "correct": "D",
       "explanations": {
         "A": "A DPIA is a GDPR (Art. 35) obligation for high-risk personal-data processing. It has no structural role in the EIF.",
         "B": "There is no separate 'Architectural Reference Model' in EIF — the EIF itself is the reference model.",
-        "C": "The CPV is a classification for public procurement notices. Unrelated to EIF structure.",
+        "C": "The CPV (Common Procurement Vocabulary) is a classification for public procurement notices. Unrelated to EIF structure.",
         "D": "Correct. The EIF explicitly adds an 'Interoperability Governance' overlay across the four layers (Legal, Organisational, Semantic, Technical), plus 'Integrated Public Service Governance' as an overarching principle for jointly designing public services. Without governance, decisions at each layer drift apart."
       }
     },
@@ -814,16 +814,16 @@
       "ref": "SKOS",
       "question": "SKOS (Simple Knowledge Organization System) is primarily used to:",
       "options": {
-        "A": "Encrypt RDF triples at rest",
+        "A": "Encrypt RDF triples at rest in a triple-store backend",
         "B": "Represent thesauri, taxonomies and classification schemes on the Semantic Web",
-        "C": "Query relational databases using SQL",
-        "D": "Define ACID transaction boundaries in lakehouses"
+        "C": "Query relational database tables using the standard SQL syntax across vendors",
+        "D": "Define ACID transaction boundaries in cloud lakehouses"
       },
       "correct": "B",
       "explanations": {
         "A": "SKOS is a modelling vocabulary, not an encryption scheme. RDF at rest is typically protected by storage-level or transport-level encryption, not by SKOS.",
         "B": "Correct. SKOS is a W3C recommendation for representing thesauri, taxonomies and subject-heading systems as RDF data, so that vocabularies like EuroVoc can be published on the Semantic Web with consistent structure (concept, prefLabel, altLabel, broader, narrower, related).",
-        "C": "SQL queries relational tables. SPARQL — not SKOS — is the query language for RDF graphs.",
+        "C": "SQL queries relational tables across vendors. SPARQL — not SKOS — is the query language for RDF graphs.",
         "D": "ACID in lakehouses is provided by open table formats (Delta, Iceberg, Hudi). SKOS has nothing to do with transaction semantics."
       }
     },
@@ -834,9 +834,9 @@
       "ref": "RDF / OWL / SPARQL",
       "question": "Which statement about the Semantic Web stack is correct?",
       "options": {
-        "A": "OWL is a query language for RDF graphs",
-        "B": "RDF is a relational database management system",
-        "C": "SPARQL is an ontology formalism equivalent to OWL",
+        "A": "OWL is the query language for RDF graphs; SPARQL defines class hierarchies and property restrictions on top of RDF triples",
+        "B": "RDF is a relational database management system; OWL is a physical storage format for triples",
+        "C": "SPARQL is an ontology formalism equivalent to OWL; RDF is a transport format for ontologies",
         "D": "RDF represents facts as subject-predicate-object triples; SPARQL is the query language; OWL is an ontology language"
       },
       "correct": "D",
@@ -854,10 +854,10 @@
       "ref": "Berners-Lee 2010",
       "question": "Tim Berners-Lee's 5-star Open Data scheme awards the top rating (★★★★★) to data that:",
       "options": {
-        "A": "Is published as a PDF with an open licence",
-        "B": "Uses non-proprietary formats",
+        "A": "Is published as a PDF document with an openly available Creative Commons licence",
+        "B": "Uses non-proprietary file formats such as CSV or JSON for structured data",
         "C": "Uses URIs to identify things and is linked to other data (Linked Open Data)",
-        "D": "Is available through a paywalled API with OAuth"
+        "D": "Is available through a paywalled commercial API protected by OAuth authentication"
       },
       "correct": "C",
       "explanations": {
@@ -874,10 +874,10 @@
       "ref": "Data Owner vs Steward",
       "question": "In data-management role models, the Data Owner is distinguished from the Data Steward because the Owner:",
       "options": {
-        "A": "Physically stores and backs up the data",
+        "A": "Physically stores and backs up the data in an IT operations capacity",
         "B": "Is accountable for the data domain and sets policy for its use",
         "C": "Writes the SQL queries used to extract the data",
-        "D": "Acts as the GDPR data subject"
+        "D": "Acts as the GDPR data subject whose personal data is being processed"
       },
       "correct": "B",
       "explanations": {
@@ -894,10 +894,10 @@
       "ref": "CDO vs DPO",
       "question": "Which statement correctly contrasts the Chief Data Officer (CDO) with the Data Protection Officer (DPO)?",
       "options": {
-        "A": "CDO and DPO are synonyms in the EU institutions",
-        "B": "CDO is a GDPR-mandated role; DPO is a voluntary strategic function",
+        "A": "CDO and DPO are synonymous roles in the EU institutions and perform exactly the same tasks day to day",
+        "B": "CDO is a role mandated by GDPR; DPO is a voluntary strategic function defined only by Commission practice",
         "C": "CDO is an organisation-level strategic data-leadership role; DPO is a GDPR / 2018/1725 compliance role independent from management",
-        "D": "CDO reports to the DPO in all GDPR-regulated entities"
+        "D": "The CDO reports directly to the DPO in every GDPR-regulated entity by default in order to ensure the strategic compliance alignment"
       },
       "correct": "C",
       "explanations": {
@@ -934,15 +934,15 @@
       "ref": "ISO 8000",
       "question": "ISO 8000 on data quality is particularly associated with:",
       "options": {
-        "A": "Cybersecurity incident response",
-        "B": "Continuous-integration pipeline testing",
-        "C": "Multilingual machine translation evaluation",
+        "A": "Cybersecurity incident response and CSIRT coordination",
+        "B": "Continuous-integration pipeline testing and DevOps / DevSecOps tooling",
+        "C": "Multilingual machine-translation evaluation metrics",
         "D": "Master-data exchange, provenance and syntactic / semantic encoding"
       },
       "correct": "D",
       "explanations": {
         "A": "Cybersecurity incident response is the domain of ISO/IEC 27035 and equivalents — not ISO 8000.",
-        "B": "CI pipelines are tested using software-engineering practices, not ISO data-quality standards.",
+        "B": "CI pipelines are tested using software-engineering and DevOps practices, not ISO data-quality standards.",
         "C": "Machine-translation evaluation has its own metrics (BLEU, chrF) — nothing to do with ISO 8000.",
         "D": "Correct. ISO 8000 is oriented toward master-data exchange: it specifies how data is encoded (syntactic quality), how it matches an agreed vocabulary (semantic quality), and how its provenance is recorded. Parts of the standard cover portable master data, data provenance, and quality measurement for master data."
       }
@@ -954,14 +954,14 @@
       "ref": "Logical vs physical",
       "question": "Which of the following best describes a logical data model?",
       "options": {
-        "A": "Tablespaces, index types and partitioning chosen for a specific DBMS",
-        "B": "The encryption-at-rest configuration for a storage bucket",
-        "C": "The UML deployment diagram of a production cluster",
+        "A": "Tablespaces, index types and partitioning chosen for a specific DBMS product release",
+        "B": "The encryption-at-rest configuration applied to a storage bucket by default",
+        "C": "The UML deployment diagram of a production cluster with its nodes and links",
         "D": "A technology-neutral representation of entities, attributes and relationships"
       },
       "correct": "D",
       "explanations": {
-        "A": "Those are physical-model concerns — choices tied to a specific DBMS product. The logical model precedes physical implementation.",
+        "A": "Those are physical-model concerns — choices tied to a specific DBMS product release. The logical model precedes physical implementation.",
         "B": "Encryption-at-rest is a data-security control, not a modelling concept.",
         "C": "Deployment diagrams belong in infrastructure architecture, not data modelling.",
         "D": "Correct. A logical model captures what the data means — entities, attributes, relationships, cardinalities — independently of the DBMS chosen. It sits between the conceptual (very high level, business terms only) and the physical (DBMS-specific structures, indexes, storage). Separating the three is a classical Zachman / DAMA practice."
@@ -1014,10 +1014,10 @@
       "ref": "Data mesh",
       "question": "In a 'data mesh' architecture, which of the following is a defining principle?",
       "options": {
-        "A": "A single centralised team owns all enterprise data",
-        "B": "All data must be stored in a single relational warehouse",
+        "A": "A single centralised team owns all enterprise data as the sole authoritative source",
+        "B": "All enterprise data must be stored in one monolithic warehouse",
         "C": "Domain-oriented decentralised ownership with data treated as a product",
-        "D": "No governance is applied; teams choose their own tools freely"
+        "D": "No data governance is applied at all; teams freely choose any tool or store they want"
       },
       "correct": "C",
       "explanations": {
@@ -1035,9 +1035,9 @@
       "question": "EU 'Core Vocabularies' (Core Person, Core Business, Core Location, Core Public Service) are maintained by the SEMIC initiative to:",
       "options": {
         "A": "Provide a minimum set of reusable, simplified, extensible data models for cross-border public services",
-        "B": "Serve as the legal basis for cross-border transfers of personal data",
-        "C": "Replace the DCAT-AP application profile on data.europa.eu",
-        "D": "Act as the official EU translation memory"
+        "B": "Serve as the legal basis for cross-border transfers of personal data under GDPR Chapter V",
+        "C": "Replace the DCAT-AP application profile used on the data.europa.eu portal for dataset metadata descriptions",
+        "D": "Act as the official EU translation memory for administrative and legal texts across languages"
       },
       "correct": "A",
       "explanations": {
@@ -1054,9 +1054,9 @@
       "ref": "Normalisation",
       "question": "In relational design, the third normal form (3NF) aims to eliminate:",
       "options": {
-        "A": "Primary keys",
-        "B": "Any form of indexing",
-        "C": "Foreign-key constraints",
+        "A": "Primary keys on normalised tables",
+        "B": "Any form of indexing applied physically to the relational tables",
+        "C": "Foreign-key integrity constraints",
         "D": "Transitive dependencies between non-key attributes"
       },
       "correct": "D",
@@ -1074,14 +1074,14 @@
       "ref": "Star vs snowflake",
       "question": "A dimensional-modelling team chooses a 'star schema' over a 'snowflake schema' primarily because:",
       "options": {
-        "A": "Star schemas normalise dimension tables to reduce storage",
-        "B": "Snowflake schemas are only legal for government data",
+        "A": "Star schemas normalise their dimension tables to reduce redundant storage overhead",
+        "B": "Snowflake schemas are only legal for government-sector data workloads",
         "C": "Star schemas keep dimensions denormalised, making BI queries simpler and faster",
-        "D": "Snowflake is a file format, not a schema design"
+        "D": "Snowflake is strictly a file format, not a schema-design pattern at all"
       },
       "correct": "C",
       "explanations": {
-        "A": "It's the opposite. Snowflake schemas normalise dimensions into multiple related tables. Stars keep them flat.",
+        "A": "It's the opposite. Snowflake schemas normalise dimensions into multiple related tables to reduce redundant storage. Stars keep them flat.",
         "B": "Nothing in data law constrains schema design to stars or snowflakes.",
         "C": "Correct. A star schema has a central fact table surrounded by denormalised dimension tables — simpler joins, faster BI queries, easier for business users to understand. Snowflake schemas normalise dimensions (e.g. splitting 'Product → Category → Department'), saving storage but adding joins that slow typical reporting queries.",
         "D": "Snowflake is the name of both a dimensional design pattern and a cloud data warehouse product. The question is about the schema pattern."
@@ -1094,10 +1094,10 @@
       "ref": "Event-driven architecture",
       "question": "In an event-driven architecture using Apache Kafka, a consumer 'replays' events by:",
       "options": {
-        "A": "Deleting the topic and re-producing from the source",
+        "A": "Deleting the existing topic and re-producing all events from the original source",
         "B": "Resetting its offset on the relevant partitions to an earlier position",
-        "C": "Requesting a new stream from the cluster administrator",
-        "D": "Creating a new broker in the cluster"
+        "C": "Requesting a fresh stream from the cluster administrator",
+        "D": "Creating a brand-new broker in the Kafka cluster to host the replay traffic"
       },
       "correct": "B",
       "explanations": {
@@ -1115,14 +1115,14 @@
       "question": "Under the CAP theorem, in the presence of a network partition a distributed system must choose between:",
       "options": {
         "A": "Cost and Performance",
-        "B": "Compression and Parallelism",
+        "B": "Compression and Parallelisation",
         "C": "Clarity and Portability",
         "D": "Consistency and Availability"
       },
       "correct": "D",
       "explanations": {
         "A": "CAP concerns correctness and responsiveness trade-offs, not cost optimisation.",
-        "B": "Compression and parallelism are performance techniques, not the CAP trade-off.",
+        "B": "Compression and parallelisation are performance techniques, not the CAP trade-off.",
         "C": "Not CAP letters — these sound plausible but don't correspond.",
         "D": "Correct. Brewer's CAP theorem states that a distributed data system can provide at most two of Consistency, Availability and Partition-tolerance. Because partitions (network failures) are a fact of life, real designs must choose C or A during a partition. CP systems prefer correctness (reject writes / reads that might be stale); AP systems prefer responsiveness (serve possibly stale data)."
       }
@@ -1134,17 +1134,17 @@
       "ref": "Reference architecture",
       "question": "A 'reference architecture' for a data platform is primarily:",
       "options": {
-        "A": "A deployed production system",
-        "B": "A single vendor's proprietary product catalogue",
+        "A": "A fully deployed, running production system already serving users in real time",
+        "B": "A single vendor's proprietary product catalogue of licensed tools and services",
         "C": "A standard set of components, patterns and principles to guide the design of concrete systems",
-        "D": "A detailed cost estimate per cloud region"
+        "D": "A detailed per-cloud-region cost estimate used to build a financial business case for the deployment"
       },
       "correct": "C",
       "explanations": {
         "A": "Reference architectures describe the template; deployed systems are instances built from the template.",
         "B": "A vendor catalogue maps onto an architecture; it isn't one.",
         "C": "Correct. A reference architecture is a blueprint — named components (ingest, storage, processing, serving, catalogue, governance), interaction patterns, technology-agnostic principles. Teams use it to avoid reinventing the wheel and to keep designs consistent across projects. The EU Big-Data Value Reference Model and DAMA's architecture area are good examples.",
-        "D": "Cost estimates support a business case. They aren't the architectural design."
+        "D": "Cost estimates support a business case for a deployment. They aren't the architectural design."
       }
     },
     {
