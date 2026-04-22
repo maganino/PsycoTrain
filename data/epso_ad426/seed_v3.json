@@ -1614,17 +1614,17 @@
       "ref": "Airflow DAG",
       "question": "Apache Airflow represents a scheduled data-processing workflow as a:",
       "options": {
-        "A": "Cyclic finite-state machine",
+        "A": "Cyclic finite-state machine with recurring state transitions",
         "B": "Directed Acyclic Graph (DAG) of tasks with dependencies",
-        "C": "Single monolithic SQL script",
+        "C": "A single monolithic SQL script schedule",
         "D": "Recursive tree of monadic transformations"
       },
       "correct": "B",
       "explanations": {
-        "A": "Cycles would prevent deterministic scheduling. Airflow's graph is explicitly acyclic.",
+        "A": "Airflow DAGs are acyclic by design — cycles would cause infinite loops in scheduling. FSMs with recurring transitions are a different abstraction.",
         "B": "Correct. Airflow models a workflow as a DAG: nodes are tasks (extract, transform, load, publish), edges are dependencies (task B runs after A succeeds). The scheduler runs tasks when their upstream dependencies are met, with retries, SLAs, and backfills. Alternatives include Prefect, Dagster, Argo Workflows.",
-        "C": "A DAG can include SQL tasks but isn't itself SQL.",
-        "D": "Not an Airflow concept. Airflow's model is the DAG — pragmatic, not monadic."
+        "C": "A single SQL script can be a task inside a DAG, but the workflow itself is the DAG, not one script.",
+        "D": "That describes a functional-programming pipeline abstraction, not Airflow's task-graph model."
       }
     },
     {
@@ -1634,17 +1634,17 @@
       "ref": "APIs",
       "question": "Compared to REST, a GraphQL API typically lets the client:",
       "options": {
-        "A": "Receive push notifications when data changes",
+        "A": "Receive asynchronous push notifications whenever data items on the server side change over time",
         "B": "Ask for exactly the fields it needs in a single request, avoiding over- or under-fetching",
-        "C": "Skip authentication by default",
-        "D": "Commit database transactions on the server"
+        "C": "Skip authentication by default because GraphQL assumes trusted internal networks only",
+        "D": "Commit multi-statement database transactions directly on the server via the endpoint"
       },
       "correct": "B",
       "explanations": {
-        "A": "Real-time push is provided by subscriptions, WebSockets or Server-Sent Events — supported in GraphQL but not unique to it.",
+        "A": "Push notifications via subscriptions are a separate GraphQL feature, and not the typical pattern vs REST.",
         "B": "Correct. GraphQL exposes a single endpoint and a strongly typed schema. Clients compose queries that specify exactly the fields they want across nested relationships, avoiding REST's over-fetching (too many fields) and under-fetching (needing multiple calls). Trade-offs: caching and rate limiting are trickier than with REST.",
-        "C": "Authentication is orthogonal to the query language — both REST and GraphQL need it.",
-        "D": "Committing transactions is a server-side database concern; GraphQL mutations describe intent but do not bypass the server's transaction logic."
+        "C": "GraphQL is authentication-agnostic. Skipping auth is a security failure, not a feature.",
+        "D": "Transaction management is a server-side implementation concern, independent of the API style."
       }
     },
     {
@@ -1654,16 +1654,16 @@
       "ref": "CDC",
       "question": "Change Data Capture (CDC) is a pattern in which:",
       "options": {
-        "A": "The full table is re-extracted on every run",
-        "B": "Machine-learning models retrain on every new record",
-        "C": "Data is encrypted at the source before leaving the network",
+        "A": "The full table is re-extracted in its entirety on every run of the pipeline, regardless of what changed at source",
+        "B": "Machine-learning models are retrained on every single new record that arrives from the operational source system",
+        "C": "All the source data is encrypted at the source system before it leaves the operational network boundary to downstream",
         "D": "Only inserts, updates and deletes on the source are captured (often from the database log) and propagated downstream"
       },
       "correct": "D",
       "explanations": {
-        "A": "Full re-extraction is the opposite of CDC — it's inefficient for large tables and is precisely what CDC avoids.",
-        "B": "Retraining strategy is an ML-ops concern, not what CDC defines.",
-        "C": "Encryption at source is a separate security control.",
+        "A": "Full-table re-extraction is the opposite of CDC — it ignores change signals and wastes I/O. CDC exists precisely to capture deltas.",
+        "B": "Retraining models on each record is an online-learning concept, unrelated to the CDC extraction pattern.",
+        "C": "Encryption in transit is a security concern, not a change-tracking mechanism.",
         "D": "Correct. CDC tools (Debezium, Oracle GoldenGate, AWS DMS, Fivetran) tail the database transaction log (WAL / binlog / redo log) and stream every insert / update / delete as an event. This keeps downstream systems (warehouses, lakes, search indexes) in near-real-time sync with source OLTP stores, without heavy re-extracts."
       }
     },
@@ -1675,16 +1675,16 @@
       "question": "An idempotent data pipeline is one where:",
       "options": {
         "A": "Running it multiple times with the same input produces the same result as running it once",
-        "B": "It can only be run once per day",
-        "C": "It requires manual approval between stages",
-        "D": "It transforms data into a new format every run"
+        "B": "It can be executed only once per day and refuses to run a second time on the same date",
+        "C": "It requires a manual human approval step between each stage of its data-processing flow",
+        "D": "It transforms the source data into an entirely new format on every individual run it performs"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. An idempotent operation yields the same state no matter how many times it runs. For pipelines this typically means using merge / upsert (not append) semantics keyed on natural keys, deterministic partitioning, and replayable ingestion. Idempotency is essential for robustness — retries, backfills and failure recovery all depend on it.",
-        "B": "Scheduling frequency doesn't define idempotency.",
-        "C": "Manual gates are governance controls, not idempotency.",
-        "D": "Changing format each run is actually the opposite of reproducible, deterministic behaviour."
+        "B": "Once-per-day is a scheduling constraint, not idempotency. An idempotent pipeline can be run many times without harm.",
+        "C": "Manual approval gates are a governance / release control, unrelated to idempotent re-runnability.",
+        "D": "Changing the output format on every run is non-deterministic — the opposite of idempotent."
       }
     },
     {
@@ -1694,17 +1694,17 @@
       "ref": "dbt",
       "question": "The tool 'dbt' (data build tool) is used primarily to:",
       "options": {
-        "A": "Orchestrate container deployments in Kubernetes",
-        "B": "Ingest Kafka topics into a lakehouse",
+        "A": "Orchestrate container deployments across a Kubernetes cluster with declarative YAML manifests and rollbacks",
+        "B": "Ingest streaming Kafka topic data directly into the cloud lakehouse storage via connectors",
         "C": "Define, test and version-control SQL transformations that run inside a data warehouse (the 'T' in ELT)",
-        "D": "Label training data for supervised machine learning"
+        "D": "Label training data for supervised machine-learning pipelines using human-in-the-loop review"
       },
       "correct": "C",
       "explanations": {
-        "A": "Kubernetes orchestration is done by Helm / Argo / Kustomize, not dbt.",
-        "B": "Ingestion is the job of tools like Fivetran, Airbyte, Kafka Connect — not dbt.",
+        "A": "Kubernetes deployments (with rollback logic) are managed by tools like Argo CD, Flux, Helm. dbt doesn't orchestrate containers.",
+        "B": "Kafka ingestion is done by Kafka Connect, Debezium, Flink — not by dbt. dbt operates on data already landed.",
         "C": "Correct. dbt is a SQL-first transformation framework: engineers define models (SELECTs), tests, documentation and lineage in version-controlled files; dbt compiles and runs them in the warehouse (Snowflake, BigQuery, Redshift, Postgres). It is the de-facto standard for the 'T' in modern ELT stacks.",
-        "D": "Labelling is an ML-ops concern (Labelbox, Scale, Prodigy). dbt is about SQL transformations."
+        "D": "Data labelling uses platforms like Label Studio, Snorkel, Prodigy — not dbt."
       }
     },
     {
@@ -1714,17 +1714,17 @@
       "ref": "Data pipeline",
       "question": "In a data pipeline, 'backfilling' refers to:",
       "options": {
-        "A": "Adding encryption to an existing stream",
+        "A": "Adding encryption-at-rest to an existing streaming event pipeline retroactively across all its retained topics and partitions",
         "B": "Re-running historical computations for a past date range, typically after a code fix or new feature",
-        "C": "Forwarding every record to archive",
-        "D": "Deleting incorrect records from production"
+        "C": "Forwarding every single incoming record directly into the long-term cold archive tier",
+        "D": "Deleting incorrect records from production data stores in order to clean up bad state"
       },
       "correct": "B",
       "explanations": {
-        "A": "Encryption is a security control, not a scheduling pattern.",
+        "A": "Adding encryption is a security change, not a backfill. Backfills replay historical data logic, not encryption, regardless of topic or partition retention.",
         "B": "Correct. Backfilling replays a pipeline across a historical date range — commonly used after fixing a bug, introducing a new column, or onboarding a new source. Frameworks like Airflow, Dagster and dbt provide first-class support (`--backfill`, catch-up runs). Idempotent pipelines make backfills safe because re-runs don't duplicate data.",
-        "C": "Archiving is a lifecycle activity, not backfilling.",
-        "D": "Deleting records is 'cleanup' or 'reversal' — separate from reconstructing history."
+        "C": "Archiving every record is a retention-tier choice, not a backfill. Backfills target a specific past range.",
+        "D": "Deleting bad records is remediation / cleanup. Backfills compute historical results, not delete rows."
       }
     },
     {
@@ -1734,16 +1734,16 @@
       "ref": "Warehouse",
       "question": "A classical data warehouse typically employs:",
       "options": {
-        "A": "Schema-on-read with no structural constraints",
-        "B": "A graph database with SPARQL endpoints",
-        "C": "A document-oriented NoSQL store",
+        "A": "Schema-on-read over raw files with no structural column constraints",
+        "B": "A graph database accessed through SPARQL endpoints only",
+        "C": "A document-oriented NoSQL store holding JSON documents",
         "D": "Schema-on-write with curated, structured tables optimised for BI"
       },
       "correct": "D",
       "explanations": {
-        "A": "Schema-on-read is the lake pattern, where structure is applied at query time. Warehouses enforce schema when data is loaded.",
-        "B": "Graph databases serve different workloads (network analysis, knowledge graphs). SPARQL is an RDF query language, not a warehouse pattern.",
-        "C": "Document stores (MongoDB, Couchbase) are operational databases, not warehouses.",
+        "A": "Schema-on-read over raw files with no enforced column constraints is the data-lake pattern. Warehouses enforce schema at write time.",
+        "B": "Graph databases (Neo4j, Virtuoso) with SPARQL are used for RDF / property-graph workloads, not for classical BI.",
+        "C": "Document stores (MongoDB, CouchDB) hold JSON documents. Classical BI warehouses use relational tabular schemas.",
         "D": "Correct. A warehouse enforces schema-on-write: data is cleansed, conformed and loaded into dimensional structures (star / snowflake schemas) before it becomes queryable. This produces consistent, high-quality, analytics-optimised data at the cost of upfront modelling and ETL."
       }
     },
@@ -1755,16 +1755,16 @@
       "question": "A data lake is characterised by:",
       "options": {
         "A": "Schema-on-read storage of raw data in diverse formats on low-cost object / distributed storage",
-        "B": "Strictly normalised relational schemas",
-        "C": "Only structured tabular data",
-        "D": "Mandatory ACID transactions on every read"
+        "B": "Strictly normalised 3NF relational schemas enforced at every write to the lake",
+        "C": "Only structured tabular data stored in a predefined fixed schema at load time",
+        "D": "Mandatory ACID transactions wrapping every single read operation against every file stored in the lake"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. A data lake stores raw data in its native format (CSV, JSON, Parquet, Avro, images, logs) on cheap scalable storage (HDFS or object storage like S3, GCS, Azure ADLS). Schema is applied at query time ('schema-on-read'), which supports exploration and ML on diverse data but trades away the governance and ACID guarantees of a warehouse.",
-        "B": "Normalised relational schemas are OLTP or warehouse territory, not lakes.",
-        "C": "Lakes accept any format — including unstructured (audio, images, free text).",
-        "D": "Plain lakes lack ACID. Adding ACID via an open table format (Delta / Iceberg / Hudi) is what turns a lake into a lakehouse."
+        "B": "Strict normalisation to 3NF is a warehouse / OLTP trait. Lakes accept raw formats.",
+        "C": "Lakes are specifically for heterogeneous data — images, logs, JSON, Parquet — not just tabular.",
+        "D": "Classical lakes don't have ACID wrapping reads. Lakehouses add ACID via open table formats (Delta, Iceberg, Hudi), but not by wrapping every single read against every file in the lake."
       }
     },
     {
@@ -1775,16 +1775,16 @@
       "question": "What do Apache Iceberg, Delta Lake and Apache Hudi have in common?",
       "options": {
         "A": "They are open table formats that add ACID, schema evolution and time-travel on top of files (typically Parquet) in object storage",
-        "B": "They are proprietary storage engines bundled only with one cloud provider",
-        "C": "They are OLTP database systems replacing PostgreSQL",
-        "D": "They are classification taxonomies under the AI Act"
+        "B": "They are proprietary storage engines bundled only with one specific cloud provider's analytics offering and licensed per core, with closed internals",
+        "C": "They are OLTP relational database management systems designed as direct replacements for PostgreSQL or MySQL workloads",
+        "D": "They are formal classification taxonomies adopted as reference under the EU AI Act's high-risk Annex III schedule"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Iceberg, Delta and Hudi are the three major open table formats of the lakehouse era. They maintain metadata (snapshots, manifests) alongside Parquet data files and add warehouse-grade features: ACID transactions, schema evolution, partition evolution, time-travel, efficient upserts and deletes. They make BI and ML work on the same object-store dataset.",
-        "B": "All three are open-source and work on multiple clouds. Vendor lock-in is specifically what they push back against.",
-        "C": "None of the three is an OLTP engine. They target analytics workloads at scale.",
-        "D": "Nothing to do with AI Act tiers."
+        "B": "All three are open-source projects backed by multiple vendors. Proprietary bundling with closed internals is a distractor.",
+        "C": "They sit at the analytics / lakehouse layer on top of Parquet, not replacing OLTP databases.",
+        "D": "AI-Act classifications live in legal texts — not in table-format projects."
       }
     },
     {
@@ -1795,16 +1795,16 @@
       "question": "Parquet, ORC and Arrow are all examples of:",
       "options": {
         "A": "Columnar storage / memory formats optimised for analytics workloads",
-        "B": "Row-oriented OLTP table formats",
-        "C": "Encryption schemes for personal data",
-        "D": "Regulatory reporting XBRL taxonomies"
+        "B": "Row-oriented OLTP formats optimised for transactional workloads",
+        "C": "Encryption schemes used to protect personal data at rest and in transit",
+        "D": "XBRL taxonomies used in regulated financial-reporting submissions"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Parquet (on-disk), ORC (on-disk) and Arrow (in-memory) are columnar formats: values of each column are stored together, enabling compression, vectorised execution and efficient column-pruning for analytical queries. This is why lakehouses, warehouses and distributed SQL engines rely on them.",
-        "B": "Row-oriented layouts (typical of OLTP) store values of one record contiguously — inefficient for analytics that scan a few columns over many rows.",
-        "C": "They are not encryption schemes — encryption is a separate layer that can be applied on top of any of these formats.",
-        "D": "XBRL is a regulatory-reporting language; unrelated to these columnar formats."
+        "B": "These are columnar, not row-oriented. Row-oriented formats are optimised for transactional workloads, not analytics scans.",
+        "C": "They are storage formats, not encryption schemes. Encryption can be layered on top.",
+        "D": "XBRL is a specific financial-reporting taxonomy, not a general-purpose data format."
       }
     },
     {
@@ -1834,16 +1834,16 @@
       "ref": "Polyglot persistence",
       "question": "'Polyglot persistence' as a platform principle means:",
       "options": {
-        "A": "Every application must expose its data through a single REST endpoint",
-        "B": "Data must always be stored in plaintext so any language can read it",
-        "C": "All data is stored in multiple languages for translation purposes",
+        "A": "Every application must expose all of its data exclusively through one single uniform REST endpoint across the whole organisation regardless of workload",
+        "B": "All data must be stored in human-readable plaintext so that any programming language or tool can read it without special libraries or drivers",
+        "C": "Data must always be stored in multiple human languages (at least the 24 official EU languages) for translation and accessibility purposes across platforms",
         "D": "Different parts of a system use different data stores tailored to their workload (relational, document, key-value, graph, time-series, search…)"
       },
       "correct": "D",
       "explanations": {
-        "A": "A single endpoint is an API-layer pattern, not a persistence-layer one.",
-        "B": "Plaintext storage contradicts sound security practice and is unrelated to polyglot persistence.",
-        "C": "Despite the 'linguistic' name, polyglot persistence has nothing to do with human languages.",
+        "A": "Polyglot persistence is about diverse stores, not a single endpoint. One REST endpoint is an API uniformity concept.",
+        "B": "Storing in plaintext is a security failure, not a persistence philosophy.",
+        "C": "Polyglot refers to multiple storage paradigms (languages of data), not spoken human languages.",
         "D": "Correct. Polyglot persistence (Fowler, 2011) argues that a modern system is rarely best served by a single data store; instead, each capability uses the store best suited to its access pattern — relational for complex transactions, key-value (Redis) for caches, document (MongoDB) for flexible entities, search (Elasticsearch) for full-text, graph (Neo4j) for relationships, time-series (InfluxDB) for metrics."
       }
     },
@@ -1854,16 +1854,16 @@
       "ref": "Vector database",
       "question": "A 'vector database' (Pinecone, Weaviate, Milvus) is optimised for:",
       "options": {
-        "A": "Storing financial ledger transactions with strict ACID guarantees",
-        "B": "Running OLTP workloads at millisecond commit latency",
-        "C": "Serving static HTML pages with edge caching",
+        "A": "Storing financial-ledger transactions with strict ACID guarantees over many tables",
+        "B": "Running OLTP workloads at millisecond commit latency on high-volume writes",
+        "C": "Serving static HTML pages with edge caching close to end users globally",
         "D": "Performing approximate nearest-neighbour searches over high-dimensional embeddings"
       },
       "correct": "D",
       "explanations": {
-        "A": "Financial ledgers use traditional ACID OLTP databases.",
-        "B": "OLTP is served by row-oriented RDBMSs, not vector stores.",
-        "C": "Static-page serving is a CDN / edge-cache concern.",
+        "A": "Financial ledgers need ACID and strong consistency — typical OLTP territory. Vector stores aren't transactional.",
+        "B": "OLTP throughput and latency come from row-store transactional engines, not vector indexes.",
+        "C": "Static-page serving is a CDN / edge concern. Vector stores exist for similarity search.",
         "D": "Correct. Vector databases index high-dimensional embeddings (from LLMs or other ML models) and accept similarity queries — approximate nearest-neighbour (ANN) search using algorithms like HNSW or IVF. They power semantic search, retrieval-augmented generation (RAG) and recommendation systems that need similarity rather than exact matches."
       }
     },
@@ -1874,17 +1874,17 @@
       "ref": "OLAP cube",
       "question": "An 'OLAP cube' is best described as:",
       "options": {
-        "A": "A physical server form factor",
-        "B": "A container image format",
+        "A": "A physical server form factor designed for high-density analytics workloads in enterprise data-centre installations across regions",
+        "B": "A portable container image format used to ship analytical workloads to production runtimes across heterogeneous cluster managers today",
         "C": "A multi-dimensional data structure pre-aggregated along business dimensions (time, geography, product…) for fast slice-and-dice analysis",
-        "D": "A hardware encryption appliance"
+        "D": "A hardware encryption appliance certified for use with analytical data-warehouse installations handling regulated and sensitive datasets at scale"
       },
       "correct": "C",
       "explanations": {
-        "A": "Cube here is a logical / mathematical metaphor, not a server chassis.",
-        "B": "Container images are packaged by OCI formats (Docker, OCI), unrelated.",
+        "A": "OLAP cubes are a logical multi-dimensional construct, not server hardware.",
+        "B": "Container images (OCI / Docker) are a packaging format, not an analytical cube.",
         "C": "Correct. OLAP cubes (SSAS, Essbase, Mondrian) pre-aggregate measures (sales, counts) along dimensions so analysts can slice, dice, drill-down and roll-up interactively. Modern in-memory engines (Power BI / Tabular, ClickHouse, DuckDB, Druid) increasingly compute on the fly, blurring the classic cube concept but keeping the multi-dimensional mental model.",
-        "D": "Encryption appliances are HSMs / TPMs, unrelated."
+        "D": "HSMs and crypto appliances have nothing to do with multi-dimensional analysis."
       }
     },
     {
@@ -1894,16 +1894,16 @@
       "ref": "Compute-storage separation",
       "question": "Modern cloud warehouses (Snowflake, BigQuery, Redshift RA3) separate compute from storage primarily to:",
       "options": {
-        "A": "Reduce query latency to microseconds on small workloads",
-        "B": "Eliminate the need for SQL as a query language",
-        "C": "Guarantee strict ACID across transactional and analytical systems alike",
+        "A": "Reduce query latency to microseconds even on very small interactive analytical workloads",
+        "B": "Eliminate the need for SQL as the primary query language in the analytical warehouse",
+        "C": "Guarantee strict ACID guarantees across transactional and analytical systems at the same time",
         "D": "Scale compute and storage independently, enabling elasticity and isolating workloads"
       },
       "correct": "D",
       "explanations": {
-        "A": "Separation sometimes adds latency compared with shared-nothing local disks; the benefit is elsewhere.",
-        "B": "SQL remains the primary interface for all three systems.",
-        "C": "ACID is not the point — modern warehouses add it to analytics storage, but OLTP systems remain separate.",
+        "A": "Separation of compute and storage trades a small latency cost for large elasticity gains. Microsecond latency isn't its goal.",
+        "B": "SQL remains the main interface. Compute / storage separation is an architectural choice, not a query-language one.",
+        "C": "Transactional-and-analytical ACID guarantees come from HTAP systems, a different architecture.",
         "D": "Correct. Separating storage (object store, once-written, shared) from compute (ephemeral clusters / warehouses / slots) means you can scale each dimension independently. Different teams can get their own compute cluster on the same data without contention, and storage costs stay cheap. Snowflake's virtual warehouses, BigQuery slots and Redshift managed storage all embody this design."
       }
     },
@@ -1914,17 +1914,17 @@
       "ref": "Descriptive analytics",
       "question": "'Descriptive analytics' primarily answers the question:",
       "options": {
-        "A": "What should we do next?",
-        "B": "What will happen?",
+        "A": "What next and now?",
+        "B": "What if it goes?",
         "C": "What happened?",
-        "D": "Why did it happen?"
+        "D": "Why the fact?"
       },
       "correct": "C",
       "explanations": {
-        "A": "Prescriptive analytics answers 'what should we do?' — optimisation, decision support.",
-        "B": "Predictive analytics answers 'what will happen?' — forecasting, classification.",
+        "A": "'What next and now?' is prescriptive analytics — recommending actions.",
+        "B": "'What if it goes?' points to predictive analytics — forecasting future outcomes.",
         "C": "Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.",
-        "D": "Diagnostic analytics answers 'why did it happen?' — drill-downs, root-cause analysis."
+        "D": "'Why the fact?' is diagnostic analytics — uncovering causes after the fact."
       }
     },
     {
@@ -1935,16 +1935,16 @@
       "question": "Self-service BI is characterised by:",
       "options": {
         "A": "Business users building their own reports on governed datasets without an IT ticket",
-        "B": "IT exclusively preparing all analyses",
-        "C": "Purely manual paper-based reporting",
-        "D": "Deploying Kafka clusters by the finance team"
+        "B": "IT teams exclusively prepare every single analytical report in the organisation centrally",
+        "C": "Analytics is done manually on paper reports rather than in interactive software tools",
+        "D": "The finance team deploys and operates its own Apache Kafka clusters for reporting"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Self-service BI (Power BI, Tableau, Qlik, Metabase, Looker) empowers business users to build reports, slice/dice and share insights without waiting for an IT backlog. To stay safe, it needs governed semantic layers (certified datasets, shared measures) and good glossaries — otherwise multiple versions of the truth proliferate.",
-        "B": "Central IT prepping everything is the old waterfall model — the opposite of self-service.",
-        "C": "Paper reporting pre-dates BI altogether.",
-        "D": "Operating data infrastructure is a data-engineering task, not a BI user's role."
+        "B": "Exclusively IT-produced reports is the non-self-service model — the antithesis.",
+        "C": "Paper-based analytics pre-dates BI tools entirely and is unrelated to the 'self-service' concept.",
+        "D": "Deploying Kafka is infrastructure engineering, not BI. Self-service BI is about empowering analysts, not operations."
       }
     },
     {
@@ -1955,16 +1955,16 @@
       "question": "A BI 'semantic layer' (e.g. Power BI datasets, Looker's LookML, Cube, dbt Semantic Layer) primarily provides:",
       "options": {
         "A": "A shared, governed definition of metrics and dimensions that multiple tools and users can query consistently",
-        "B": "An encryption layer for in-transit data",
-        "C": "A visualisation theme for corporate dashboards",
-        "D": "A vector index for semantic search"
+        "B": "An encryption layer applied in transit between BI clients and the warehouse endpoint over TLS 1.3 and HTTPS pipes",
+        "C": "A visualisation theme used to standardise corporate dashboards across business units and reporting teams",
+        "D": "A vector-index-based semantic search feature used to find tables, columns and metrics in a catalogue"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. A semantic layer sits between raw data and consumers: it defines metrics ('net revenue'), dimensions ('region') and their relationships once, so every dashboard, ad-hoc query and embedded analytics uses the same formula. This solves the 'same term, different number' problem that plagues ungoverned self-service BI.",
-        "B": "TLS / encryption belongs to the transport / security layer.",
-        "C": "Themes are visual styling, not semantic definitions.",
-        "D": "'Semantic' overlaps with the ML world ('semantic search') but in BI it refers to the metrics-definition layer."
+        "B": "Encryption in transit over TLS 1.3 / HTTPS pipes is a security concern, not a semantic-definition layer.",
+        "C": "Theming is a cosmetic design concern, not a metric-definition layer.",
+        "D": "Semantic search via vectors helps discovery but isn't the BI 'semantic layer' concept."
       }
     },
     {
@@ -1975,16 +1975,16 @@
       "question": "The 'SMART' acronym applied to KPIs stands for:",
       "options": {
         "A": "Specific, Measurable, Achievable, Relevant, Time-bound",
-        "B": "Strategic, Measurable, Automated, Reported, Timely",
+        "B": "Strategic, Measurable, Automated, Reportable, Timely, Tracked",
         "C": "Simple, Managed, Aggregated, Reviewed, Transparent",
         "D": "Scalable, Modular, Abstract, Reliable, Tractable"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. SMART is Specific, Measurable, Achievable, Relevant, Time-bound — the classical goal-setting checklist, widely applied to KPI design. A KPI that is vague, not measurable, unattainable, irrelevant or lacks a time dimension will fail to drive behaviour.",
-        "B": "Contains 'automated' and 'strategic' — not the SMART letters.",
-        "C": "Reasonable-sounding but not SMART.",
-        "D": "Those are software-engineering qualities — unrelated."
+        "B": "Keeps 'Measurable' and adds 'Tracked' but invents the rest. Only the original 'S-M-A-R-T' words count.",
+        "C": "Plausible-sounding synonyms but not the SMART acronym.",
+        "D": "Software-design qualities, not KPI-setting criteria."
       }
     },
     {
@@ -1994,16 +1994,16 @@
       "ref": "Predictive vs prescriptive",
       "question": "A transport agency uses a model to recommend the optimal route given traffic, weather and accident probability. This is an example of:",
       "options": {
-        "A": "Descriptive analytics",
-        "B": "Diagnostic analytics",
-        "C": "Predictive analytics",
+        "A": "Descriptive (analytics)",
+        "B": "Diagnostic (analy.)",
+        "C": "Predictive (analy.)",
         "D": "Prescriptive analytics"
       },
       "correct": "D",
       "explanations": {
-        "A": "Descriptive would report past travel times — it doesn't recommend a course of action.",
-        "B": "Diagnostic would explain why a particular route was slow yesterday — a root-cause analysis, not a recommendation.",
-        "C": "Predictive would forecast the travel time or arrival probability. Recommending the optimal action is a step beyond prediction.",
+        "A": "Descriptive analytics summarises what happened — past traffic volume, accident counts. It doesn't recommend a route.",
+        "B": "Diagnostic analytics (shortened 'Diagnostic (analy.)') explains why something happened. It doesn't recommend the optimal route.",
+        "C": "Predictive analytics (shortened 'Predictive (analy.)') forecasts what will happen. By itself it doesn't recommend an action.",
         "D": "Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints)."
       }
     },
@@ -2015,16 +2015,16 @@
       "question": "Compared to a 'report', a 'dashboard' in BI typically:",
       "options": {
         "A": "Offers at-a-glance, visual summaries of KPIs with interactivity",
-        "B": "Provides a rich narrative with many pages of text",
-        "C": "Is delivered exclusively on paper",
-        "D": "Contains only raw tables with no visuals"
+        "B": "Provides a rich narrative with many pages of explanatory text",
+        "C": "Is delivered exclusively on printed paper reports to executives",
+        "D": "Contains only raw data tables with no charts or visualisations"
       },
       "correct": "A",
       "explanations": {
         "A": "Correct. Dashboards combine KPIs, charts and filters into a visual summary optimised for quick comprehension. They often support interactivity — drill-down, slicing — and refresh frequently. Reports tend to be longer, narrative and delivered on a schedule.",
-        "B": "Narrative reports (annual reports, audit reports) rely on prose; dashboards rely on visuals.",
-        "C": "Paper delivery is rare in modern BI; dashboards are typically interactive web artefacts.",
-        "D": "Raw tables are the opposite of a dashboard's visual summary."
+        "B": "Long-form narrative is a report, not a dashboard. Dashboards are visual-first and concise.",
+        "C": "Paper-only delivery is a report / publication style, not a dashboard format.",
+        "D": "No visuals means no dashboard. Dashboards are defined by their visualisation and interactivity."
       }
     },
     {
