@@ -19678,7 +19678,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Writing SQL transformations in dbt"
+          "text": "Writing SQL transformation logic using tools like dbt or Dataform in the data warehouse"
         },
         {
           "letter": "B",
@@ -19686,17 +19686,17 @@
         },
         {
           "letter": "C",
-          "text": "Configuring a Kafka cluster for high throughput"
+          "text": "Configuring an Apache Kafka cluster for high-throughput event ingestion workloads"
         },
         {
           "letter": "D",
-          "text": "Optimising a neural-network hyperparameter"
+          "text": "Optimising a deep neural-network hyperparameter search over validation datasets"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.\n· A: Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.\n· C: Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.\n· D: Hyperparameter tuning is ML / data science — governed by policy but not a governance activity.",
+      "explanation": "Correct: B — Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.\n· A: Writing transformations is data engineering in the warehouse, not governance. Governance sets the rules that engineering follows.\n· C: Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.\n· D: Hyperparameter tuning is ML / data science — governed by policy but not a governance activity.",
       "explanations": {
-        "A": "Writing transformations is data engineering, not governance. Governance sets the rules that engineering follows.",
+        "A": "Writing transformations is data engineering in the warehouse, not governance. Governance sets the rules that engineering follows.",
         "B": "Correct. DAMA defines data governance as the exercise of authority, control and shared decision-making over the management of data assets. Accountability for domains (Owner / Steward / Custodian), policies, standards and dispute resolution sit here. It's the hub of the DAMA wheel because every other area both contributes to and is constrained by governance.",
         "C": "Cluster tuning is operations / engineering. It follows governance's SLA and retention requirements but isn't governance itself.",
         "D": "Hyperparameter tuning is ML / data science — governed by policy but not a governance activity."
@@ -19754,15 +19754,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Approving budgets for data platform investments"
+          "text": "Approving annual budgets for all enterprise data-platform investments, tool purchases and staffing"
         },
         {
           "letter": "B",
-          "text": "Deciding whether GDPR applies to the organisation"
+          "text": "Deciding whether and how the GDPR applies to the organisation's overall processing scope and context"
         },
         {
           "letter": "C",
-          "text": "Backing up and restoring data in production"
+          "text": "Performing physical backup and restore of production data stores at the required operational cadence"
         },
         {
           "letter": "D",
@@ -19770,11 +19770,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper.\n· A: Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.\n· B: Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.\n· C: Backup and restore are Custodian / IT-operations tasks.",
+      "explanation": "Correct: D — Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper.\n· A: Budget approval with staffing implications is typically a CDO / executive sponsor responsibility, not a Steward's.\n· B: Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope and context.\n· C: Backup and restore are Custodian / IT-operations tasks driven by operational cadence, not by the Steward.",
       "explanations": {
-        "A": "Budget approval is typically a CDO / executive sponsor responsibility, not a Steward's.",
-        "B": "Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope.",
-        "C": "Backup and restore are Custodian / IT-operations tasks.",
+        "A": "Budget approval with staffing implications is typically a CDO / executive sponsor responsibility, not a Steward's.",
+        "B": "Whether GDPR applies is a legal question, answered by the DPO / legal counsel based on material and territorial scope and context.",
+        "C": "Backup and restore are Custodian / IT-operations tasks driven by operational cadence, not by the Steward.",
         "D": "Correct. Stewards are the operational arm of governance: they curate business glossary entries, enforce data-quality thresholds, triage data issues reported by consumers, and coordinate with Owners when policy changes are needed. Without Stewards, policies stay on paper."
       }
     },
@@ -19792,7 +19792,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Report to the line manager for daily tasks but not on compliance"
+          "text": "Report to the line manager both for daily tasks and for all compliance-related decisions and judgements"
         },
         {
           "letter": "B",
@@ -19800,17 +19800,17 @@
         },
         {
           "letter": "C",
-          "text": "Be a member of the executive board"
+          "text": "Be a formally appointed member of the entity's executive board or management committee"
         },
         {
           "letter": "D",
-          "text": "Hold Power of Attorney for all controller decisions"
+          "text": "Hold Power of Attorney on behalf of the controller for all decisions about processing"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.\n· A: Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).\n· C: The DPO is not required to be on the executive board — only to have direct access to it.\n· D: The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller.",
+      "explanation": "Correct: B — Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.\n· A: Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3). Reporting compliance decisions to a line manager contradicts that independence.\n· C: The DPO is not required to be on the executive board — only to have direct access to it.\n· D: The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller.",
       "explanations": {
-        "A": "Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3).",
+        "A": "Compliance is precisely the area where the DPO must be independent — hence the 'no instructions' rule of Art. 38(3). Reporting compliance decisions to a line manager contradicts that independence.",
         "B": "Correct. Art. 38(3) GDPR requires that the DPO does not receive any instructions regarding the performance of their tasks, cannot be dismissed or penalised for performing them, and reports directly to the highest management level. The same architecture applies to EU institutions under Art. 44 of Reg. 2018/1725.",
         "C": "The DPO is not required to be on the executive board — only to have direct access to it.",
         "D": "The DPO advises and monitors; they do not sign off on behalf of the controller. Decisional authority stays with the controller."
@@ -19834,24 +19834,24 @@
         },
         {
           "letter": "B",
-          "text": "Only the names of data subjects who consented"
+          "text": "Only the names and contact details of the data subjects who have given consent to be processed under Art. 6(1)(a), grouped by processing purpose and kept up to date as consents are renewed"
         },
         {
           "letter": "C",
-          "text": "The exact SQL queries used in the controller's databases"
+          "text": "The exact verbatim SQL query text used against each personal-data table in the controller's operational databases, including any runtime parameters"
         },
         {
           "letter": "D",
-          "text": "A daily log of every read operation on personal data"
+          "text": "A daily log entry for every single read, write or delete operation performed against any personal-data record held by the controller anywhere"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).\n· B: Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.\n· C: SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.\n· D: A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction.",
+      "explanation": "Correct: A — Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).\n· B: Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals grouped by purpose (no matter how meticulously the consent list is kept up to date).\n· C: SQL queries (including parameters) are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.\n· D: A per-operation audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction.",
       "explanations": {
         "A": "Correct. Art. 30(1) GDPR enumerates what a controller's RoPA must contain: purposes; categories of subjects and data; categories of recipients including in third countries; where applicable, identification of transfers and the safeguards; envisaged time limits; and a general description of technical and organisational security measures under Art. 32. It's the backbone of the accountability principle (Art. 5(2)).",
-        "B": "Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals.",
-        "C": "SQL queries are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.",
-        "D": "A per-read audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction."
+        "B": "Names of data subjects are personal data in themselves; a RoPA is about processing operations, not a list of consenting individuals grouped by purpose (no matter how meticulously the consent list is kept up to date).",
+        "C": "SQL queries (including parameters) are operational artefacts, not RoPA content. Records are conceptual descriptions at the processing-activity level.",
+        "D": "A per-operation audit log is an optional security control, not a GDPR RoPA requirement. RoPA sits at a higher level of abstraction."
       }
     },
     {
@@ -19868,11 +19868,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Physical table definitions and index types"
+          "text": "Physical table definitions, indexes and storage layout decided at the warehouse implementation level"
         },
         {
           "letter": "B",
-          "text": "A list of all data subjects with open GDPR requests"
+          "text": "A list of data subjects with open GDPR requests"
         },
         {
           "letter": "C",
@@ -19884,9 +19884,9 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem.\n· A: Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.\n· B: DSAR tracking is handled by a rights-management / compliance tool, not a glossary.\n· C: Key management belongs in security / HSM infrastructure, not in a glossary.",
+      "explanation": "Correct: D — Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem.\n· A: Physical definitions (tables, indexes, storage) belong in a data dictionary / catalogue at the warehouse implementation level — not in the business glossary.\n· B: DSAR tracking is handled by a rights-management / compliance tool, not a glossary.\n· C: Key management belongs in security / HSM infrastructure, not in a glossary.",
       "explanations": {
-        "A": "Physical definitions belong in a data dictionary / catalogue at the technical level — not in the business glossary.",
+        "A": "Physical definitions (tables, indexes, storage) belong in a data dictionary / catalogue at the warehouse implementation level — not in the business glossary.",
         "B": "DSAR tracking is handled by a rights-management / compliance tool, not a glossary.",
         "C": "Key management belongs in security / HSM infrastructure, not in a glossary.",
         "D": "Correct. The business glossary records agreed definitions for terms used by the business — 'customer', 'active user', 'churn rate', 'net revenue' — and their owners. It is the semantic source-of-truth that dashboards, reports and contracts refer back to, preventing the 'same word, different number' problem."
@@ -19910,15 +19910,15 @@
         },
         {
           "letter": "B",
-          "text": "Pay administrative fines before processing begins"
+          "text": "Pay any applicable administrative fines upfront before processing begins"
         },
         {
           "letter": "C",
-          "text": "Publish all processing activities publicly"
+          "text": "Publish the full list of processing activities on a public website"
         },
         {
           "letter": "D",
-          "text": "Report every processing activity to the Court of Justice"
+          "text": "Report every new processing activity directly to the Court of Justice"
         }
       ],
       "correct": "A",
@@ -19944,7 +19944,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Controller and processor"
+          "text": "Controller and processor, with one instructing the other on means and purposes"
         },
         {
           "letter": "B",
@@ -19952,11 +19952,11 @@
         },
         {
           "letter": "C",
-          "text": "Outside the scope of Reg. 2018/1725"
+          "text": "Outside the scope of Reg. 2018/1725 whenever joint processing is involved"
         },
         {
           "letter": "D",
-          "text": "Automatically subject to GDPR instead of Reg. 2018/1725"
+          "text": "Automatically subject to the GDPR instead of Reg. 2018/1725 for the shared activity"
         }
       ],
       "correct": "B",
@@ -19986,23 +19986,23 @@
         },
         {
           "letter": "B",
-          "text": "Encryption of all personal data in all circumstances"
+          "text": "Strong end-to-end encryption of every single item of personal data in every circumstance without any risk-based exception at any stage"
         },
         {
           "letter": "C",
-          "text": "A DPO regardless of scale, complexity or risk"
+          "text": "The appointment of a DPO regardless of scale, risk, complexity or the nature of the personal-data processing at any moment in time"
         },
         {
           "letter": "D",
-          "text": "Open publication of all processing code"
+          "text": "Open public publication of all processing code, algorithms and source code used in any personal-data handling operation inside the organisation"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.\n· B: Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.\n· C: DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.\n· D: Open-source publication is not a GDPR obligation; it may even conflict with security requirements.",
+      "explanation": "Correct: A — Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.\n· B: Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk, so risk-based exceptions are central.\n· C: DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories).\n· D: Open-source publication is not a GDPR obligation; it may even conflict with security requirements.",
       "explanations": {
         "A": "Correct. Art. 25(1) sets two moments: when determining the means (design time) and during processing (run time). The measures must be appropriate to the state of the art, costs, nature/scope/context/purposes of processing and risks. Art. 25(2) adds 'by default': only data necessary for each specific purpose may be processed.",
-        "B": "Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk.",
-        "C": "DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories). Not unconditional.",
+        "B": "Encryption is one possible measure but not legally mandatory in all cases — it must be 'appropriate' to the risk, so risk-based exceptions are central.",
+        "C": "DPO appointment is governed by Art. 37, with specific triggers (public authority; core activities involving regular and systematic monitoring on a large scale; large-scale processing of special categories).",
         "D": "Open-source publication is not a GDPR obligation; it may even conflict with security requirements."
       }
     },
@@ -20020,7 +20020,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Supervise EU institutions instead of the EDPS"
+          "text": "Supervise the EU institutions, bodies, offices and agencies instead of the European Data Protection Supervisor (EDPS) directly"
         },
         {
           "letter": "B",
@@ -20028,11 +20028,11 @@
         },
         {
           "letter": "C",
-          "text": "Draft EU data-market strategies"
+          "text": "Draft the EU's data-market strategies, communications and action plans on behalf of the European Commission's services"
         },
         {
           "letter": "D",
-          "text": "Adjudicate criminal cases related to data breaches"
+          "text": "Adjudicate criminal cases related to personal-data breaches and cross-border cybersecurity incidents across all Member States"
         }
       ],
       "correct": "B",
@@ -20096,15 +20096,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Regulations directly applicable to all Member States"
+          "text": "EU regulations directly applicable in all 27 Member States from a single effective date"
         },
         {
           "letter": "B",
-          "text": "Private blockchain networks"
+          "text": "Private blockchain-based networks operated under a common technical consortium protocol"
         },
         {
           "letter": "C",
-          "text": "A single cloud service operated by the Commission"
+          "text": "A single Commission-operated cloud service providing shared IT infrastructure for each sector domain centrally"
         },
         {
           "letter": "D",
@@ -20112,11 +20112,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre).\n· A: Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.\n· B: Data spaces are technology-neutral. Some pilots use blockchain; most do not.\n· C: Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
+      "explanation": "Correct: D — Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre).\n· A: Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives — so no uniform effective date exists.\n· B: Data spaces are technology-neutral. Some pilots use blockchain; most do not.\n· C: Not a single service — they are networks of participants using shared standards and governance, not a monolithic centrally operated cloud with shared IT infrastructure per sector domain.",
       "explanations": {
-        "A": "Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives.",
+        "A": "Only some data spaces are accompanied by binding regulations (EHDS for health). Others progress through pilots, implementing acts and sector-specific initiatives — so no uniform effective date exists.",
         "B": "Data spaces are technology-neutral. Some pilots use blockchain; most do not.",
-        "C": "Not a single service — they are networks of participants using shared standards and governance, not a monolithic cloud.",
+        "C": "Not a single service — they are networks of participants using shared standards and governance, not a monolithic centrally operated cloud with shared IT infrastructure per sector domain.",
         "D": "Correct. The 14 Common European Data Spaces cover Agriculture, Cultural heritage, Energy, Finance, Green Deal, Health (EHDS — first operational), Industry & manufacturing, Language, Media, Mobility, Public administration, Research & innovation, Skills, and Tourism. Each pools sector-specific data under common governance, technical building blocks (Simpl) and support (DSSC — Data Spaces Support Centre)."
       }
     },
@@ -20142,7 +20142,7 @@
         },
         {
           "letter": "C",
-          "text": "Data lineage"
+          "text": "Data lineage tracing"
         },
         {
           "letter": "D",
@@ -20150,11 +20150,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies.\n· A: Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.\n· B: Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.\n· C: Lineage traces data from origin through transformations to destinations. Different concept.",
+      "explanation": "Correct: D — Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies.\n· A: Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.\n· B: Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.\n· C: Lineage tracing tracks data from origin through transformations to destinations. Different concept.",
       "explanations": {
         "A": "Normalisation is a schema-design technique (1NF, 2NF, 3NF, BCNF). Unrelated to sensitivity tiers.",
         "B": "Anonymisation is an irreversible transformation of personal data — a technique, not a classification scheme.",
-        "C": "Lineage traces data from origin through transformations to destinations. Different concept.",
+        "C": "Lineage tracing tracks data from origin through transformations to destinations. Different concept.",
         "D": "Correct. Data classification assigns each dataset to a sensitivity tier that determines handling — who can access it, encryption requirements, retention, permitted export. It is a prerequisite for proportionate security controls and a recurring requirement in ISO 27001, EU RESTREINT / CONFIDENTIEL rules, and public-sector information-security policies."
       }
     },
@@ -20172,7 +20172,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Indefinitely, to ensure future auditability"
+          "text": "Indefinitely, in order to preserve future auditability of the processing"
         },
         {
           "letter": "B",
@@ -20180,11 +20180,11 @@
         },
         {
           "letter": "C",
-          "text": "For exactly seven years regardless of purpose"
+          "text": "For exactly seven years from collection, regardless of the purpose of processing"
         },
         {
           "letter": "D",
-          "text": "Forever if the controller obtained one-time consent"
+          "text": "Forever, provided the controller obtained one-time consent from the data subject"
         }
       ],
       "correct": "B",
@@ -20210,15 +20210,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Always comply with any foreign court order"
+          "text": "Always comply with any foreign court order received by the data holder, regardless of Union law"
         },
         {
           "letter": "B",
-          "text": "Notify the European Commission before each routine customer request"
+          "text": "Notify the European Commission in advance before each routine customer request for data arises"
         },
         {
           "letter": "C",
-          "text": "Store all data exclusively in a single Member State"
+          "text": "Store all EU-held non-personal data exclusively in one single nominated Member State's territory at all times"
         },
         {
           "letter": "D",
@@ -20248,7 +20248,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A regulatory body with enforcement powers"
+          "text": "A regulatory body endowed with binding enforcement powers over data-space participants across the Union, with the ability to issue fines"
         },
         {
           "letter": "B",
@@ -20256,17 +20256,17 @@
         },
         {
           "letter": "C",
-          "text": "A national certification body under the NIS2 Directive"
+          "text": "A national certification body operating under the NIS2 Directive's cybersecurity-assessment regime"
         },
         {
           "letter": "D",
-          "text": "A private data broker recognised under the DGA"
+          "text": "A private commercial data broker officially recognised under the Data Governance Act framework"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.\n· A: The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).\n· C: NIS2 certification bodies are national and focused on cybersecurity, not data spaces.\n· D: DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker.",
+      "explanation": "Correct: B — Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.\n· A: The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission), not with the DSSC itself.\n· C: NIS2 certification bodies are national and focused on cybersecurity, not data spaces.\n· D: DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker.",
       "explanations": {
-        "A": "The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission).",
+        "A": "The DSSC has no enforcement powers — enforcement under data-space-related law sits with regulators (DPAs, EDPS, national competent authorities, the Commission), not with the DSSC itself.",
         "B": "Correct. The DSSC is a Horizon-Europe-funded initiative whose mission is to support the roll-out of Common European Data Spaces — producing blueprints, reusable building blocks, governance templates, and convening stakeholders across sectors. It complements Simpl (the open-source middleware) and the data.europa.eu portal.",
         "C": "NIS2 certification bodies are national and focused on cybersecurity, not data spaces.",
         "D": "DGA intermediaries are notified private services; the DSSC is an EU-supported coordination initiative, not a broker."
@@ -20290,22 +20290,22 @@
         },
         {
           "letter": "B",
-          "text": "They are synonyms"
+          "text": "They are entirely synonymous terms used interchangeably in all EU data-governance documentation and standards"
         },
         {
           "letter": "C",
-          "text": "A strategy is signed by the DPO; a policy by the CDO"
+          "text": "A data strategy is always signed off by the DPO; a data policy is always signed off by the CDO in every organisation"
         },
         {
           "letter": "D",
-          "text": "A policy is a multi-year plan; a strategy is a one-page rule"
+          "text": "A data policy is a multi-year forward-looking plan; a data strategy is a short one-page operational rule handed to teams"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.\n· B: They play different roles in the governance stack.\n· C: Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.\n· D: Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules.",
+      "explanation": "Correct: A — Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.\n· B: They play different roles in the governance stack and are not interchangeable.\n· C: Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.\n· D: Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules.",
       "explanations": {
         "A": "Correct. A data strategy articulates vision, objectives, priorities, investments and roadmap for data over multiple years. A data policy is a binding rule on a specific topic (retention, classification, sharing, quality) that employees and systems must follow. Strategies inform which policies are needed; policies operationalise the strategy.",
-        "B": "They play different roles in the governance stack.",
+        "B": "They play different roles in the governance stack and are not interchangeable.",
         "C": "Neither sign-off is fixed by role. Strategies are typically owned by the CDO / executive; policies often by domain Owners with DPO advisory input on personal data.",
         "D": "Reversed and wrong in both directions. Strategies tend to be longer-horizon documents; policies are the operational rules."
       }
@@ -20324,15 +20324,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "A cryptocurrency launched by the Commission"
+          "text": "A cryptocurrency launched by the European Commission for administrative settlement"
         },
         {
           "letter": "B",
-          "text": "A national registry of data intermediaries"
+          "text": "A national-level registry listing all notified data-intermediation service providers"
         },
         {
           "letter": "C",
-          "text": "A directive replacing the DGA"
+          "text": "A recently adopted EU directive that effectively replaces the Data Governance Act across the Union"
         },
         {
           "letter": "D",
@@ -20362,11 +20362,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Running all governance processes on a single shared database"
+          "text": "Running all governance processes and policy-as-code on one single shared operational database across the whole data space with centralised write access"
         },
         {
           "letter": "B",
-          "text": "Delegating all governance to the Commission"
+          "text": "Delegating all governance authority, decision-making and enforcement upwards to the European Commission for every participating domain in a data space"
         },
         {
           "letter": "C",
@@ -20374,16 +20374,16 @@
         },
         {
           "letter": "D",
-          "text": "Removing all policies so that domains are free to decide"
+          "text": "Removing all policies, rules and shared standards so that each individual domain is entirely free to decide its own interfaces and governance unilaterally"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.\n· A: Federation is the opposite of centralising everything in one database.\n· B: Delegation to the Commission would centralise authority and defeat the federation design.\n· D: No policies would eliminate trust and interoperability — data spaces would not function.",
+      "explanation": "Correct: C — Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.\n· A: Federation is the opposite of centralising everything in one database with centralised write access.\n· B: Delegation to the Commission would centralise authority and defeat the federation design.\n· D: No policies would eliminate trust and interoperability — data spaces would not function without shared standards.",
       "explanations": {
-        "A": "Federation is the opposite of centralising everything in one database.",
+        "A": "Federation is the opposite of centralising everything in one database with centralised write access.",
         "B": "Delegation to the Commission would centralise authority and defeat the federation design.",
         "C": "Correct. Federated computational governance (a mesh principle that data spaces adopt) means global policies — interoperability, security, compliance, access — are defined once and enforced in code across distributed domain data products, while domain owners retain autonomy over domain-specific rules. The federated governance body typically includes representatives from each domain to ratify global policies.",
-        "D": "No policies would eliminate trust and interoperability — data spaces would not function."
+        "D": "No policies would eliminate trust and interoperability — data spaces would not function without shared standards."
       }
     },
     {
@@ -20438,15 +20438,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "POST"
+          "text": "PUT"
         },
         {
           "letter": "B",
-          "text": "PATCH"
+          "text": "POST"
         },
         {
           "letter": "C",
-          "text": "DELETE"
+          "text": "PUSH"
         },
         {
           "letter": "D",
@@ -20454,11 +20454,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET.\n· A: POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.\n· B: PATCH applies a partial update. It's for modification, not retrieval.\n· C: DELETE removes the resource. It would not be used to retrieve.",
+      "explanation": "Correct: D — Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET.\n· A: PUT replaces a resource at a known URI — it's a write, not a read.\n· B: POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.\n· C: 'PUSH' is not a standard HTTP verb; don't confuse with WebSocket or push notifications.",
       "explanations": {
-        "A": "POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.",
-        "B": "PATCH applies a partial update. It's for modification, not retrieval.",
-        "C": "DELETE removes the resource. It would not be used to retrieve.",
+        "A": "PUT replaces a resource at a known URI — it's a write, not a read.",
+        "B": "POST is used to create resources or submit data that doesn't naturally fit a specific resource URI.",
+        "C": "'PUSH' is not a standard HTTP verb; don't confuse with WebSocket or push notifications.",
         "D": "Correct. REST maps CRUD to HTTP verbs: GET retrieves (safe, idempotent), POST creates, PUT replaces, PATCH updates partially, DELETE removes. Fetching /employees/42 is a textbook GET."
       }
     },
@@ -20480,15 +20480,15 @@
         },
         {
           "letter": "B",
-          "text": "Stream processing operates on bounded, scheduled data sets while batch operates on unbounded data"
+          "text": "Stream processing operates on bounded, periodically scheduled data sets while batch operates on unbounded real-time events flowing in"
         },
         {
           "letter": "C",
-          "text": "Stream processing always uses SQL; batch never does"
+          "text": "Stream processing always uses SQL dialects whereas batch processing never uses SQL and relies purely on imperative code"
         },
         {
           "letter": "D",
-          "text": "Batch processing is always faster than stream processing"
+          "text": "Batch processing is always lower-latency and faster end-to-end than any stream-processing system available today"
         }
       ],
       "correct": "A",
@@ -20518,15 +20518,15 @@
         },
         {
           "letter": "B",
-          "text": "Automatic encryption-at-rest for each consumer"
+          "text": "Automatic encryption-at-rest of every record for each subscribed consumer group in the cluster"
         },
         {
           "letter": "C",
-          "text": "A built-in schema registry"
+          "text": "A built-in schema registry for message value and key definitions maintained by the broker"
         },
         {
           "letter": "D",
-          "text": "Exactly-once delivery to every consumer by default"
+          "text": "Exactly-once delivery semantics guaranteed by default for every consumer reading the partitions"
         }
       ],
       "correct": "A",
