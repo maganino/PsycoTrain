@@ -346,8 +346,7 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .tr-bar div.low{background:var(--red)}
 .tr-bar div.med{background:var(--amber)}
 
-/* MCQ per-option explanations on reveal */
-.mcq-expls{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+/* MCQ per-option explanations on reveal (now inlined under each option) */
 .mcq-expl{border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:10px 12px;background:var(--card);font-size:13px;line-height:1.5}
 .mcq-expl .lead{font-weight:700;margin-right:6px}
 .mcq-expl.ok{border-left-color:var(--green);background:var(--greenbg)}
@@ -356,6 +355,8 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .mcq-expl.ko .lead{color:var(--red)}
 .mcq-expl.neutral{border-left-color:var(--border)}
 .mcq-expl .txt{color:var(--sub)}
+/* Inline variant: sits directly under its option, pulled up and slightly indented */
+.mcq-expl.inline{margin:-3px 0 10px 22px;font-size:12.5px;padding:8px 11px}
 
 /* Global exam timer banner (timed mode) */
 .exam-banner{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--accentbg);border:1.5px solid var(--accentbdr);border-radius:12px;padding:10px 14px;margin-bottom:10px}
@@ -1023,9 +1024,12 @@ function renderHome(root){
   const settings = loadSettings();
   const stats = loadStats();
 
-  // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5)
+  // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5).
+  // Speed on correct answers: average best_time_ms across questions ever
+  // answered correctly. Uses existing data so no schema change needed.
   const total = DB.questions.length;
   let gAttempted = 0, gScoreSum = 0, gScoreInTimeSum = 0;
+  let gBestSum = 0, gBestCount = 0;
   for(const q of DB.questions){
     const s = stats[q.id];
     if(s && s.attempts > 0){
@@ -1034,12 +1038,17 @@ function renderHome(root){
       gScoreSum += sc;
       if(s.last_within_time) gScoreInTimeSum += sc;
     }
+    if(s && s.best_time_ms != null){
+      gBestSum += s.best_time_ms;
+      gBestCount++;
+    }
   }
   const globalStats = {
     attempted: gAttempted,
     total,
     accuracy: gAttempted > 0 ? Math.round(gScoreSum / gAttempted * 100) : 0,
     accuracyInTime: gAttempted > 0 ? Math.round(gScoreInTimeSum / gAttempted * 100) : 0,
+    avgCorrectMs: gBestCount > 0 ? gBestSum / gBestCount : null,
   };
 
   // Per-source counts + stats (one entry per playlist key).
@@ -1047,7 +1056,7 @@ function renderHome(root){
   const sourceStats = {};
   for(const q of DB.questions){
     sourceCounts[q.source] = (sourceCounts[q.source] || 0) + 1;
-    if(!sourceStats[q.source]) sourceStats[q.source] = {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
+    if(!sourceStats[q.source]) sourceStats[q.source] = {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0, bestSum:0, bestCount:0};
     sourceStats[q.source].total++;
     const s = stats[q.id];
     if(s && s.attempts > 0){
@@ -1055,6 +1064,10 @@ function renderHome(root){
       const sc = statScore(s);
       sourceStats[q.source].scoreSum += sc;
       if(s.last_within_time) sourceStats[q.source].scoreInTimeSum += sc;
+    }
+    if(s && s.best_time_ms != null){
+      sourceStats[q.source].bestSum += s.best_time_ms;
+      sourceStats[q.source].bestCount++;
     }
   }
 
@@ -1067,12 +1080,13 @@ function renderHome(root){
   // The dashboard row adapts to the active playlist.
   let dash;
   if(activePlaylist){
-    const ss = sourceStats[activePlaylist.key] || {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0};
+    const ss = sourceStats[activePlaylist.key] || {total:0, attempted:0, scoreSum:0, scoreInTimeSum:0, bestSum:0, bestCount:0};
     dash = {
       attempted: ss.attempted,
       total: ss.total,
       accuracy: ss.attempted > 0 ? Math.round(ss.scoreSum / ss.attempted * 100) : 0,
       accuracyInTime: ss.attempted > 0 ? Math.round(ss.scoreInTimeSum / ss.attempted * 100) : 0,
+      avgCorrectMs: ss.bestCount > 0 ? ss.bestSum / ss.bestCount : null,
     };
   } else {
     dash = globalStats;
@@ -1242,6 +1256,7 @@ function renderHome(root){
         <div class="stat-chip"><strong>${attemptedStr}</strong><div class="lbl">Attempted</div></div>
         <div class="stat-chip"><strong>${dash.accuracy}%</strong><div class="lbl">Accuracy</div></div>
         <div class="stat-chip"><strong>${dash.accuracyInTime}%</strong><div class="lbl">In time</div></div>
+        <div class="stat-chip" title="Average best time across questions answered correctly at least once"><strong>${dash.avgCorrectMs != null ? fmtTime(dash.avgCorrectMs) : '—'}</strong><div class="lbl">Avg ✓ time</div></div>
       </div>
 
       <!-- Horizontal swipe bar of playlists. -->
@@ -4569,6 +4584,10 @@ function renderPractice(root){
       displayOpts = q.options;
     }
     const letters = 'ABCDE';
+    // On reveal for MCQ, inline each option's explanation directly below the
+    // option so users can read rationale alongside the choice (not as a
+    // separate block at the bottom).
+    const showInlineExpl = SESSION.revealed && q.type === 'mcq' && !!q.explanations;
     optsHtml = displayOpts.map((o, i) => {
       const displayLetter = shouldShuffle ? letters[i] : o.letter;
       let cls = 'opt';
@@ -4580,10 +4599,19 @@ function renderPractice(root){
       } else if(o.letter === SESSION.picked_letter){
         cls += ' sel';
       }
+      let inlineExplHtml = '';
+      if(showInlineExpl){
+        const txt = q.explanations[o.letter] || '';
+        const isRight = o.letter === q.correct;
+        const isPicked = o.letter === SESSION.picked_letter;
+        const ecls = isRight ? 'ok' : (isPicked ? 'ko' : 'neutral');
+        const badge = isRight ? '✓' : (isPicked ? '✗' : '·');
+        inlineExplHtml = `<div class="mcq-expl inline ${ecls}"><span class="lead">${badge} ${esc(o.letter)}</span><span class="txt">${esc(txt)}</span></div>`;
+      }
       return `<div class="${cls}" data-letter="${esc(o.letter)}">
         <div class="ol">${displayLetter}</div>
         <div class="ot">${esc(o.text)}</div>
-      </div>`;
+      </div>${inlineExplHtml}`;
     }).join('');
   }
 
@@ -4614,25 +4642,11 @@ function renderPractice(root){
       else { head = `✗ Incorrect — answer: ${esc(correctText)} · ${timeStr}${lateTag}`; explCls = 'eko'; }
     }
 
-    // MCQ: show per-option explanations (one block per option)
-    let perOptHtml = '';
-    if(q.type === 'mcq' && q.explanations){
-      const blocks = q.options.map(o => {
-        const letter = o.letter;
-        const txt = q.explanations[letter] || '';
-        const isRight = letter === q.correct;
-        const isPicked = letter === SESSION.picked_letter;
-        const cls = isRight ? 'ok' : (isPicked ? 'ko' : 'neutral');
-        const badge = isRight ? '✓' : (isPicked ? '✗' : '·');
-        return `<div class="mcq-expl ${cls}"><span class="lead">${badge} ${esc(letter)}</span><span class="txt">${esc(txt)}</span></div>`;
-      }).join('');
-      perOptHtml = `<div class="mcq-expls">${blocks}</div>`;
-    }
-
     const expl = q.explanation ? `<br>${esc(q.explanation).replace(/\n/g, '<br>')}` : '';
-    // For MCQ, skip the old single-blob explanation (we show per-option blocks instead)
+    // MCQ: per-option explanations are now rendered inline under each option,
+    // so we only emit the header here.
     const explBody = q.type === 'mcq' ? '' : expl;
-    explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${explBody}</div>${perOptHtml}`;
+    explHtml = `<div class="expl ${explCls}"><strong>${head}</strong>${explBody}</div>`;
   }
 
   // Per-question history label (correct can be fractional for SJT partial credit)
