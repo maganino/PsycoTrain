@@ -24010,11 +24010,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A physical network cable standard"
+          "text": "A physical network-cable standard used to wire up data-centre racks on the fabric backplane interconnect in modern server farms deployed across regional hosting zones"
         },
         {
           "letter": "B",
-          "text": "A synonym for data mesh with no distinct characteristics"
+          "text": "A direct synonym for the data-mesh concept, with no distinct architectural characteristics of its own, and interchangeable wording in practitioner literature and vendor marketing"
         },
         {
           "letter": "C",
@@ -24022,16 +24022,16 @@
         },
         {
           "letter": "D",
-          "text": "A container orchestration platform"
+          "text": "A container orchestration platform for analytical workloads deployed across multiple availability zones using standard Kubernetes-style declarative scheduling and service-discovery features"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Data fabric (Gartner) is a metadata-driven integration architecture that weaves distributed data assets into a coherent whole. Its defining traits: active metadata collection and analysis; a knowledge graph linking assets; AI / ML assisting with data discovery, matching, lineage and quality; unified semantic layer; and policy-driven access across on-prem, cloud and edge. Unlike data mesh (which is primarily an organisational / domain-driven approach), data fabric is primarily a technical / metadata-first approach. The two can coexist.\n· A: Despite the textile metaphor, a data fabric is a software / architecture concept, not a physical networking standard.\n· B: Data fabric and data mesh are often conflated but differ: mesh emphasises domain ownership and data-as-a-product decentralisation; fabric emphasises metadata-driven automation of access and integration. They address different levers of the same problem.\n· D: Container orchestration is Kubernetes / Nomad territory — unrelated.",
+      "explanation": "Correct: C — Correct. Data fabric (Gartner) is a metadata-driven integration architecture that weaves distributed data assets into a coherent whole. Its defining traits: active metadata collection and analysis; a knowledge graph linking assets; AI / ML assisting with data discovery, matching, lineage and quality; unified semantic layer; and policy-driven access across on-prem, cloud and edge. Unlike data mesh (which is primarily an organisational / domain-driven approach), data fabric is primarily a technical / metadata-first approach. The two can coexist.\n· A: Data fabric is a logical architecture, not a physical cabling standard — despite the 'fabric' wording.\n· B: Fabric and mesh overlap but are not synonyms. Fabric emphasises integration via metadata / AI; mesh emphasises domain-oriented ownership.\n· D: Container orchestration is Kubernetes / Nomad territory — unrelated to the data-fabric concept.",
       "explanations": {
-        "A": "Despite the textile metaphor, a data fabric is a software / architecture concept, not a physical networking standard.",
-        "B": "Data fabric and data mesh are often conflated but differ: mesh emphasises domain ownership and data-as-a-product decentralisation; fabric emphasises metadata-driven automation of access and integration. They address different levers of the same problem.",
+        "A": "Data fabric is a logical architecture, not a physical cabling standard — despite the 'fabric' wording.",
+        "B": "Fabric and mesh overlap but are not synonyms. Fabric emphasises integration via metadata / AI; mesh emphasises domain-oriented ownership.",
         "C": "Correct. Data fabric (Gartner) is a metadata-driven integration architecture that weaves distributed data assets into a coherent whole. Its defining traits: active metadata collection and analysis; a knowledge graph linking assets; AI / ML assisting with data discovery, matching, lineage and quality; unified semantic layer; and policy-driven access across on-prem, cloud and edge. Unlike data mesh (which is primarily an organisational / domain-driven approach), data fabric is primarily a technical / metadata-first approach. The two can coexist.",
-        "D": "Container orchestration is Kubernetes / Nomad territory — unrelated."
+        "D": "Container orchestration is Kubernetes / Nomad territory — unrelated to the data-fabric concept."
       }
     },
     {
@@ -24048,15 +24048,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Is copied verbatim from production and pseudonymised"
+          "text": "Is real production data copied verbatim from the source systems and then pseudonymised with irreversible hashing functions for safe developer use in modern testing environments"
         },
         {
           "letter": "B",
-          "text": "Is a regulatory term for open-data publications"
+          "text": "Is a specific regulatory term that refers to open-data publications released under the Open Data Directive by the public sector"
         },
         {
           "letter": "C",
-          "text": "Is real data stored on magnetic tape for archival"
+          "text": "Is real production data stored on long-term magnetic-tape archival media, retrieved via batch restore operations on demand by the team"
         },
         {
           "letter": "D",
@@ -24064,11 +24064,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Synthetic data is artificially generated to reproduce the statistical distribution, correlations and — ideally — edge cases of real data, without exposing any real individual. Techniques range from simple rule-based fabrication to GANs, variational autoencoders, diffusion models and agent-based simulators. Key use cases: (1) testing / development when production data is sensitive; (2) augmenting scarce or imbalanced training sets; (3) bias mitigation (Art. 10 AI Act); (4) data sharing when even pseudonymisation is insufficient. Privacy guarantees vary — strong synthetic data combines generative modelling with differential privacy.\n· A: Pseudonymised production data is real data with identifiers replaced — still personal data under GDPR. Synthetic data is not a verbatim copy; it is statistically generated from scratch (or from a model trained on real data).\n· B: Open-data is about legal / licence status of published datasets — a distinct concept.\n· C: Archival tape storage is an infrastructure concept, unrelated to synthetic generation.",
+      "explanation": "Correct: D — Correct. Synthetic data is artificially generated to reproduce the statistical distribution, correlations and — ideally — edge cases of real data, without exposing any real individual. Techniques range from simple rule-based fabrication to GANs, variational autoencoders, diffusion models and agent-based simulators. Key use cases: (1) testing / development when production data is sensitive; (2) augmenting scarce or imbalanced training sets; (3) bias mitigation (Art. 10 AI Act); (4) data sharing when even pseudonymisation is insufficient. Privacy guarantees vary — strong synthetic data combines generative modelling with differential privacy.\n· A: Pseudonymised production data (even with irreversible hashing functions used for developer testing in modern test environments) remains real personal data under GDPR — not 'synthetic'.\n· B: Open-data publications are a legal category (Open Data Directive) released by the public sector; nothing to do with synthetic data generation.\n· C: Magnetic-tape archival is a storage-tier choice; the data remains real production data retrieved on demand, not artificially generated.",
       "explanations": {
-        "A": "Pseudonymised production data is real data with identifiers replaced — still personal data under GDPR. Synthetic data is not a verbatim copy; it is statistically generated from scratch (or from a model trained on real data).",
-        "B": "Open-data is about legal / licence status of published datasets — a distinct concept.",
-        "C": "Archival tape storage is an infrastructure concept, unrelated to synthetic generation.",
+        "A": "Pseudonymised production data (even with irreversible hashing functions used for developer testing in modern test environments) remains real personal data under GDPR — not 'synthetic'.",
+        "B": "Open-data publications are a legal category (Open Data Directive) released by the public sector; nothing to do with synthetic data generation.",
+        "C": "Magnetic-tape archival is a storage-tier choice; the data remains real production data retrieved on demand, not artificially generated.",
         "D": "Correct. Synthetic data is artificially generated to reproduce the statistical distribution, correlations and — ideally — edge cases of real data, without exposing any real individual. Techniques range from simple rule-based fabrication to GANs, variational autoencoders, diffusion models and agent-based simulators. Key use cases: (1) testing / development when production data is sensitive; (2) augmenting scarce or imbalanced training sets; (3) bias mitigation (Art. 10 AI Act); (4) data sharing when even pseudonymisation is insufficient. Privacy guarantees vary — strong synthetic data combines generative modelling with differential privacy."
       }
     },
@@ -24124,11 +24124,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Corrupting both files silently"
+          "text": "Silently corrupting both the data and the metadata files in the object store, leaving the table in an inconsistent state and requiring a manual recovery"
         },
         {
           "letter": "B",
-          "text": "Falling back to pessimistic row-level locking across all object-store files"
+          "text": "Falling back to pessimistic row-level locking across the object-store data and metadata files, serialising both of the jobs so that the first to arrive blocks the other's locks completely"
         },
         {
           "letter": "C",
@@ -24136,16 +24136,16 @@
         },
         {
           "letter": "D",
-          "text": "Requiring the user to stop one of the jobs manually before starting the other"
+          "text": "Requiring the end user to manually stop one of the two jobs before starting"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Iceberg (and Delta / Hudi) implements ACID on object storage through optimistic concurrency control over an immutable metadata log: each successful write creates a new snapshot pointing at the data files that make it up, and commits go through an atomic 'swap the current snapshot pointer' step. If two writers race, the second to commit detects that the base snapshot changed, and the engine either retries (recomputing against the new snapshot) or fails with a commit-conflict so the application can decide. This works without pessimistic locks and without coordination outside the metadata layer.\n· A: Silent corruption would defeat the purpose of an ACID table format. Iceberg, Delta and Hudi exist precisely to avoid this.\n· B: Pessimistic row-level locking across object storage is impractical at scale — object stores are eventually consistent and don't expose row locks. The design choice is precisely optimistic, not pessimistic.\n· D: Manual coordination is exactly what an ACID table format removes. That would make lakehouses unusable in production.",
+      "explanation": "Correct: C — Correct. Iceberg (and Delta / Hudi) implements ACID on object storage through optimistic concurrency control over an immutable metadata log: each successful write creates a new snapshot pointing at the data files that make it up, and commits go through an atomic 'swap the current snapshot pointer' step. If two writers race, the second to commit detects that the base snapshot changed, and the engine either retries (recomputing against the new snapshot) or fails with a commit-conflict so the application can decide. This works without pessimistic locks and without coordination outside the metadata layer.\n· A: Iceberg is designed precisely to avoid silent corruption of data and metadata files — the metadata layer guarantees atomic commits, no manual recovery.\n· B: Open table formats on object storage use optimistic concurrency, not pessimistic row locking across object-store files. Object stores don't support row locks natively that would block the other job.\n· D: Manual coordination is the pre-Iceberg world. Iceberg's table format exists precisely so concurrent writers work without human intervention.",
       "explanations": {
-        "A": "Silent corruption would defeat the purpose of an ACID table format. Iceberg, Delta and Hudi exist precisely to avoid this.",
-        "B": "Pessimistic row-level locking across object storage is impractical at scale — object stores are eventually consistent and don't expose row locks. The design choice is precisely optimistic, not pessimistic.",
+        "A": "Iceberg is designed precisely to avoid silent corruption of data and metadata files — the metadata layer guarantees atomic commits, no manual recovery.",
+        "B": "Open table formats on object storage use optimistic concurrency, not pessimistic row locking across object-store files. Object stores don't support row locks natively that would block the other job.",
         "C": "Correct. Iceberg (and Delta / Hudi) implements ACID on object storage through optimistic concurrency control over an immutable metadata log: each successful write creates a new snapshot pointing at the data files that make it up, and commits go through an atomic 'swap the current snapshot pointer' step. If two writers race, the second to commit detects that the base snapshot changed, and the engine either retries (recomputing against the new snapshot) or fails with a commit-conflict so the application can decide. This works without pessimistic locks and without coordination outside the metadata layer.",
-        "D": "Manual coordination is exactly what an ACID table format removes. That would make lakehouses unusable in production."
+        "D": "Manual coordination is the pre-Iceberg world. Iceberg's table format exists precisely so concurrent writers work without human intervention."
       }
     },
     {
@@ -24166,24 +24166,24 @@
         },
         {
           "letter": "B",
-          "text": "Bivariate correlation analysis"
+          "text": "Bivariate correlation analysis of variables"
         },
         {
           "letter": "C",
-          "text": "Multivariate PCA"
+          "text": "Multivariate PCA dimensionality reduction"
         },
         {
           "letter": "D",
-          "text": "Time-series decomposition"
+          "text": "Time-series seasonal decomposition work"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Univariate EDA looks at one variable at a time to characterise its distribution — centre (mean, median, mode), spread (standard deviation, IQR, range), shape (skewness, kurtosis), and visuals like histograms, density plots and box plots. It is the first step before any bivariate or multivariate analysis, and the simplest way to catch gross issues (wrong units, wrong scale, obvious outliers, unexpected modes).\n· B: Bivariate analysis studies the relationship between two variables — scatter plots, correlation, contingency tables.\n· C: Multivariate methods (PCA, clustering, factor analysis) examine many variables simultaneously.\n· D: Time-series decomposition splits a series into trend, seasonality and residual — different object of study.",
+      "explanation": "Correct: A — Correct. Univariate EDA looks at one variable at a time to characterise its distribution — centre (mean, median, mode), spread (standard deviation, IQR, range), shape (skewness, kurtosis), and visuals like histograms, density plots and box plots. It is the first step before any bivariate or multivariate analysis, and the simplest way to catch gross issues (wrong units, wrong scale, obvious outliers, unexpected modes).\n· B: Bivariate analysis involves two variables at a time — correlations, scatter plots. The question describes one variable.\n· C: PCA reduces many variables to principal components. Far beyond a single variable's histogram.\n· D: Time-series decomposition separates trend / seasonality / residual — needs a time-indexed series, not just a variable.",
       "explanations": {
         "A": "Correct. Univariate EDA looks at one variable at a time to characterise its distribution — centre (mean, median, mode), spread (standard deviation, IQR, range), shape (skewness, kurtosis), and visuals like histograms, density plots and box plots. It is the first step before any bivariate or multivariate analysis, and the simplest way to catch gross issues (wrong units, wrong scale, obvious outliers, unexpected modes).",
-        "B": "Bivariate analysis studies the relationship between two variables — scatter plots, correlation, contingency tables.",
-        "C": "Multivariate methods (PCA, clustering, factor analysis) examine many variables simultaneously.",
-        "D": "Time-series decomposition splits a series into trend, seasonality and residual — different object of study."
+        "B": "Bivariate analysis involves two variables at a time — correlations, scatter plots. The question describes one variable.",
+        "C": "PCA reduces many variables to principal components. Far beyond a single variable's histogram.",
+        "D": "Time-series decomposition separates trend / seasonality / residual — needs a time-indexed series, not just a variable."
       }
     },
     {
@@ -24200,7 +24200,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A strong linear association; X causes Y"
+          "text": "A strong linear association between X and Y; and therefore X clearly causes Y"
         },
         {
           "letter": "B",
@@ -24208,20 +24208,20 @@
         },
         {
           "letter": "C",
-          "text": "No statistical relationship"
+          "text": "No statistical relationship whatsoever between X and Y in this sample, and therefore no useful signal can be extracted from the coefficient's value for any analytical purpose whatsoever"
         },
         {
           "letter": "D",
-          "text": "A perfect deterministic relationship"
+          "text": "A perfect deterministic relationship between X and Y in this sample, implying that knowing the value of X uniquely and exactly determines the value of Y in every case in the dataset under study"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Pearson's r measures the strength and sign of a LINEAR association between two numeric variables, ranging from -1 to +1. r = 0.85 is indeed strong, but: (1) it only captures linear dependence — two variables can have r = 0 and still be perfectly related non-linearly (Anscombe's quartet, U-shapes); (2) correlation doesn't tell you which variable causes which (or whether a third variable causes both); (3) outliers can inflate or deflate it; (4) r depends on scale / distribution. Causal claims require additional evidence — experiments, instrumental variables, causal inference methods.\n· A: Classical trap. Correlation measures association, not causation. The correlation could reflect a confounder influencing both variables, reverse causation, selection effect, or pure coincidence on a small sample. 'Ice cream sales and drowning' correlate because temperature drives both.\n· C: r = 0.85 signals a strong association, not absence of relationship. r = 0 would signal no linear association.\n· D: A perfect deterministic relationship has r = +1 or -1 exactly. 0.85 is strong but not perfect.",
+      "explanation": "Correct: B — Correct. Pearson's r measures the strength and sign of a LINEAR association between two numeric variables, ranging from -1 to +1. r = 0.85 is indeed strong, but: (1) it only captures linear dependence — two variables can have r = 0 and still be perfectly related non-linearly (Anscombe's quartet, U-shapes); (2) correlation doesn't tell you which variable causes which (or whether a third variable causes both); (3) outliers can inflate or deflate it; (4) r depends on scale / distribution. Causal claims require additional evidence — experiments, instrumental variables, causal inference methods.\n· A: Correlation isn't causation. r = 0.85 shows association, not a directional cause-and-effect link saying X causes Y.\n· C: r = 0.85 is a strong, not zero, linear association.\n· D: Only r = ±1 indicates a perfect deterministic relationship. 0.85 is strong but not perfect.",
       "explanations": {
-        "A": "Classical trap. Correlation measures association, not causation. The correlation could reflect a confounder influencing both variables, reverse causation, selection effect, or pure coincidence on a small sample. 'Ice cream sales and drowning' correlate because temperature drives both.",
+        "A": "Correlation isn't causation. r = 0.85 shows association, not a directional cause-and-effect link saying X causes Y.",
         "B": "Correct. Pearson's r measures the strength and sign of a LINEAR association between two numeric variables, ranging from -1 to +1. r = 0.85 is indeed strong, but: (1) it only captures linear dependence — two variables can have r = 0 and still be perfectly related non-linearly (Anscombe's quartet, U-shapes); (2) correlation doesn't tell you which variable causes which (or whether a third variable causes both); (3) outliers can inflate or deflate it; (4) r depends on scale / distribution. Causal claims require additional evidence — experiments, instrumental variables, causal inference methods.",
-        "C": "r = 0.85 signals a strong association, not absence of relationship. r = 0 would signal no linear association.",
-        "D": "A perfect deterministic relationship has r = +1 or -1 exactly. 0.85 is strong but not perfect."
+        "C": "r = 0.85 is a strong, not zero, linear association.",
+        "D": "Only r = ±1 indicates a perfect deterministic relationship. 0.85 is strong but not perfect."
       }
     },
     {
@@ -24238,11 +24238,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Overfitting"
+          "text": "Overfitting of the machine-learning model trained on the available study sample across the cohort today once during"
         },
         {
           "letter": "B",
-          "text": "Label noise"
+          "text": "Label noise introduced during the annotation of the records by the clinical-data review team"
         },
         {
           "letter": "C",
@@ -24250,16 +24250,16 @@
         },
         {
           "letter": "D",
-          "text": "Data drift"
+          "text": "Data drift in the incoming distributions over the observation period of the trial period today"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Simpson's paradox arises when subgroup trends go the opposite way to the aggregate trend. In the medical example, severity is a confounder: severe cases disproportionately receive one treatment, so when you average across severities without controlling for it, the treatment that is applied more often to milder cases looks better overall — even though within each severity level the other treatment is genuinely better. The paradox highlights why multivariate / stratified EDA matters: aggregated statistics without the right covariate adjustments can actively mislead. It is the core intuition behind observational-study bias and a central motivation for randomised trials or causal-inference methods.\n· A: Overfitting is a model-fitting phenomenon (memorising training data). It does not describe a reversal of direction across aggregation levels.\n· B: Label noise is incorrect target values in training data. Not what this example shows.\n· D: Data drift is a distribution shift over time. This example is about a cross-sectional analysis, not temporal change.",
+      "explanation": "Correct: C — Correct. Simpson's paradox arises when subgroup trends go the opposite way to the aggregate trend. In the medical example, severity is a confounder: severe cases disproportionately receive one treatment, so when you average across severities without controlling for it, the treatment that is applied more often to milder cases looks better overall — even though within each severity level the other treatment is genuinely better. The paradox highlights why multivariate / stratified EDA matters: aggregated statistics without the right covariate adjustments can actively mislead. It is the core intuition behind observational-study bias and a central motivation for randomised trials or causal-inference methods.\n· A: Overfitting is an ML training issue; the aggregate vs subgroup reversal is a statistical paradox, not a model-fitting artefact.\n· B: Label noise can degrade models but doesn't produce direction-reversing aggregation effects.\n· D: Data drift concerns changing input distributions over time, not subgroup-vs-total reversals.",
       "explanations": {
-        "A": "Overfitting is a model-fitting phenomenon (memorising training data). It does not describe a reversal of direction across aggregation levels.",
-        "B": "Label noise is incorrect target values in training data. Not what this example shows.",
+        "A": "Overfitting is an ML training issue; the aggregate vs subgroup reversal is a statistical paradox, not a model-fitting artefact.",
+        "B": "Label noise can degrade models but doesn't produce direction-reversing aggregation effects.",
         "C": "Correct. Simpson's paradox arises when subgroup trends go the opposite way to the aggregate trend. In the medical example, severity is a confounder: severe cases disproportionately receive one treatment, so when you average across severities without controlling for it, the treatment that is applied more often to milder cases looks better overall — even though within each severity level the other treatment is genuinely better. The paradox highlights why multivariate / stratified EDA matters: aggregated statistics without the right covariate adjustments can actively mislead. It is the core intuition behind observational-study bias and a central motivation for randomised trials or causal-inference methods.",
-        "D": "Data drift is a distribution shift over time. This example is about a cross-sectional analysis, not temporal change."
+        "D": "Data drift concerns changing input distributions over time, not subgroup-vs-total reversals."
       }
     },
     {
@@ -24280,24 +24280,24 @@
         },
         {
           "letter": "B",
-          "text": "A smaller extract window by running every hour"
+          "text": "A smaller extract window by running the same full-table extract every hour across the network"
         },
         {
           "letter": "C",
-          "text": "Dropping the target table each night and re-loading"
+          "text": "Dropping the target warehouse table each night and then reloading it fully from scratch each run"
         },
         {
           "letter": "D",
-          "text": "Turning the job off and waiting for users to complain"
+          "text": "Turning the ETL job off entirely and simply waiting for downstream users to eventually complain"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Incremental (delta) loading extracts only the rows that have changed since the last successful run — identified by a timestamp column (updated_at), a monotonic sequence (id), or a CDC feed (transaction log). The downstream target is kept current either by appending new records (for immutable events) or by merging / upserting (for mutable master data). This dramatically reduces extract time, network cost and compute, and is the standard pattern for any large source once the process has been tested.\n· B: Running a full extract more often doesn't reduce the total work — it multiplies it.\n· C: Drop-and-reload makes the target unavailable during the reload and remains full-load in volume. It is usually avoided except for small dimension tables.\n· D: Letting a known inefficiency pile up is never a pipeline-engineering answer.",
+      "explanation": "Correct: A — Correct. Incremental (delta) loading extracts only the rows that have changed since the last successful run — identified by a timestamp column (updated_at), a monotonic sequence (id), or a CDC feed (transaction log). The downstream target is kept current either by appending new records (for immutable events) or by merging / upserting (for mutable master data). This dramatically reduces extract time, network cost and compute, and is the standard pattern for any large source once the process has been tested.\n· B: More-frequent full extracts increase load — the opposite of the fix. Delta loading is the standard solution.\n· C: Drop-and-reload is still a full load; it just adds teardown cost on top of the original problem.\n· D: Ignoring the problem doesn't solve it and risks user-facing outages.",
       "explanations": {
         "A": "Correct. Incremental (delta) loading extracts only the rows that have changed since the last successful run — identified by a timestamp column (updated_at), a monotonic sequence (id), or a CDC feed (transaction log). The downstream target is kept current either by appending new records (for immutable events) or by merging / upserting (for mutable master data). This dramatically reduces extract time, network cost and compute, and is the standard pattern for any large source once the process has been tested.",
-        "B": "Running a full extract more often doesn't reduce the total work — it multiplies it.",
-        "C": "Drop-and-reload makes the target unavailable during the reload and remains full-load in volume. It is usually avoided except for small dimension tables.",
-        "D": "Letting a known inefficiency pile up is never a pipeline-engineering answer."
+        "B": "More-frequent full extracts increase load — the opposite of the fix. Delta loading is the standard solution.",
+        "C": "Drop-and-reload is still a full load; it just adds teardown cost on top of the original problem.",
+        "D": "Ignoring the problem doesn't solve it and risks user-facing outages."
       }
     },
     {
@@ -24314,15 +24314,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "SCD Type 1 — overwrite the address on change"
+          "text": "Apply SCD Type 1 — overwrite the address on every single change to the record"
         },
         {
           "letter": "B",
-          "text": "Delete the customer row each time the address changes"
+          "text": "Delete the customer row each time the customer's address changes in the source system"
         },
         {
           "letter": "C",
-          "text": "SCD Type 0 — never allow the address to be populated"
+          "text": "Apply SCD Type 0 — never allow the address column to be populated on a row"
         },
         {
           "letter": "D",
@@ -24330,11 +24330,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. SCD Type 2 (Kimball) preserves history by adding a new dimension row each time a tracked attribute changes, with valid-from / valid-to timestamps and typically an is_current boolean. Facts reference the dimension row that was current at event time (time-travel join), so historical reports always resolve to the historically-correct attribute value. It is the canonical pattern for dimensions where history matters (customer address, employee grade, product price list). Trade-off: more rows and slightly more complex joins.\n· A: Type 1 overwrites the old value with the new. It loses history and makes the scenario's historical report impossible — sales from 2020 would join to the 2025 address.\n· B: Deleting customers on every change destroys all record of the relationship and breaks referential integrity with existing sales.\n· C: Type 0 freezes the attribute at its first value — useful for immutable fields (date of birth, original acquisition source) but wrong when the attribute legitimately changes.",
+      "explanation": "Correct: D — Correct. SCD Type 2 (Kimball) preserves history by adding a new dimension row each time a tracked attribute changes, with valid-from / valid-to timestamps and typically an is_current boolean. Facts reference the dimension row that was current at event time (time-travel join), so historical reports always resolve to the historically-correct attribute value. It is the canonical pattern for dimensions where history matters (customer address, employee grade, product price list). Trade-off: more rows and slightly more complex joins.\n· A: Overwriting loses history — the opposite requirement.\n· B: Deleting the row loses the customer entirely. The task is to preserve history, not destroy records in the source system.\n· C: Never populating the address means you have no address at all, let alone history.",
       "explanations": {
-        "A": "Type 1 overwrites the old value with the new. It loses history and makes the scenario's historical report impossible — sales from 2020 would join to the 2025 address.",
-        "B": "Deleting customers on every change destroys all record of the relationship and breaks referential integrity with existing sales.",
-        "C": "Type 0 freezes the attribute at its first value — useful for immutable fields (date of birth, original acquisition source) but wrong when the attribute legitimately changes.",
+        "A": "Overwriting loses history — the opposite requirement.",
+        "B": "Deleting the row loses the customer entirely. The task is to preserve history, not destroy records in the source system.",
+        "C": "Never populating the address means you have no address at all, let alone history.",
         "D": "Correct. SCD Type 2 (Kimball) preserves history by adding a new dimension row each time a tracked attribute changes, with valid-from / valid-to timestamps and typically an is_current boolean. Facts reference the dimension row that was current at event time (time-travel join), so historical reports always resolve to the historically-correct attribute value. It is the canonical pattern for dimensions where history matters (customer address, employee grade, product price list). Trade-off: more rows and slightly more complex joins."
       }
     },
@@ -24352,7 +24352,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Storing credentials in the DAG code"
+          "text": "Storing the database credentials directly in the DAG code committed to Git alongside the task definitions so they stay close to the logic that uses them"
         },
         {
           "letter": "B",
@@ -24360,20 +24360,20 @@
         },
         {
           "letter": "C",
-          "text": "Running all tasks in parallel without dependencies"
+          "text": "Running all processing tasks in parallel without any declared dependencies between them so that the scheduler can pick an arbitrary order and the pipeline finishes as quickly as possible"
         },
         {
           "letter": "D",
-          "text": "Turning off retries"
+          "text": "Turning off the Airflow task-level retry mechanism so that every transient failure immediately aborts the pipeline and no partial output is accidentally produced during a reprocessing window"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Safe backfill requires two properties: (1) idempotency — running the same task for the same logical partition yields the same output whether it runs once or ten times (typically via MERGE / overwrite-partition semantics keyed on business date, not APPEND); (2) partition isolation — each day's task reads only that day's inputs and writes only that day's outputs, so reprocessing day D does not corrupt day D±1. Airflow's 'execution_date' / logical-date templating plus idempotent sinks (Iceberg partition overwrite, dbt incremental with unique_key, S3 prefix-per-day) are the standard implementation. This is exactly the design that lets you reprocess 90 days by re-triggering the DAG runs or using `airflow dags backfill`.\n· A: Hard-coding credentials is a security antipattern unrelated to backfill safety (use connections, secrets backends or managed identity).\n· C: Parallel execution without dependencies doesn't ensure correctness — tasks with non-idempotent sinks would duplicate data regardless of parallelism.\n· D: Disabling retries makes the pipeline less, not more, robust. Retries handle transient failures; idempotency is what makes retries safe.",
+      "explanation": "Correct: B — Correct. Safe backfill requires two properties: (1) idempotency — running the same task for the same logical partition yields the same output whether it runs once or ten times (typically via MERGE / overwrite-partition semantics keyed on business date, not APPEND); (2) partition isolation — each day's task reads only that day's inputs and writes only that day's outputs, so reprocessing day D does not corrupt day D±1. Airflow's 'execution_date' / logical-date templating plus idempotent sinks (Iceberg partition overwrite, dbt incremental with unique_key, S3 prefix-per-day) are the standard implementation. This is exactly the design that lets you reprocess 90 days by re-triggering the DAG runs or using `airflow dags backfill`.\n· A: Storing credentials in code is a security antipattern (use a secrets backend instead). Doesn't address backfill safety.\n· C: Ignoring dependencies breaks correctness for any non-trivial DAG; parallelism without deps is chaos.\n· D: Disabling retries makes pipelines more brittle, not more reliable for reprocessing.",
       "explanations": {
-        "A": "Hard-coding credentials is a security antipattern unrelated to backfill safety (use connections, secrets backends or managed identity).",
+        "A": "Storing credentials in code is a security antipattern (use a secrets backend instead). Doesn't address backfill safety.",
         "B": "Correct. Safe backfill requires two properties: (1) idempotency — running the same task for the same logical partition yields the same output whether it runs once or ten times (typically via MERGE / overwrite-partition semantics keyed on business date, not APPEND); (2) partition isolation — each day's task reads only that day's inputs and writes only that day's outputs, so reprocessing day D does not corrupt day D±1. Airflow's 'execution_date' / logical-date templating plus idempotent sinks (Iceberg partition overwrite, dbt incremental with unique_key, S3 prefix-per-day) are the standard implementation. This is exactly the design that lets you reprocess 90 days by re-triggering the DAG runs or using `airflow dags backfill`.",
-        "C": "Parallel execution without dependencies doesn't ensure correctness — tasks with non-idempotent sinks would duplicate data regardless of parallelism.",
-        "D": "Disabling retries makes the pipeline less, not more, robust. Retries handle transient failures; idempotency is what makes retries safe."
+        "C": "Ignoring dependencies breaks correctness for any non-trivial DAG; parallelism without deps is chaos.",
+        "D": "Disabling retries makes pipelines more brittle, not more reliable for reprocessing."
       }
     },
     {
@@ -24394,24 +24394,24 @@
         },
         {
           "letter": "B",
-          "text": "All three instances receive every message"
+          "text": "All three application instances in the consumer group receive every single message on every partition of the topic, producing triplicated processing in all cases as the cluster runs"
         },
         {
           "letter": "C",
-          "text": "Messages are delivered in global order across partitions"
+          "text": "Messages are delivered in strict global order across all partitions of the topic, regardless of how many instances exist"
         },
         {
           "letter": "D",
-          "text": "Consumer groups are a security construct that encrypt messages"
+          "text": "Consumer groups are a security construct used to encrypt messages at rest and in flight across the Kafka cluster here"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Within a consumer group, Kafka assigns each partition to exactly one consumer instance at any moment (balanced by the group coordinator). With 6 partitions and 3 instances, each instance handles 2 partitions; adding a 4th instance triggers a rebalance. Kafka commits offsets per (consumer-group, topic, partition), so a restart resumes from the last committed offset. To broadcast the same message to multiple applications, use different consumer groups.\n· B: 'All three receive every message' is the broadcast semantics of pub-sub with multiple consumer groups, not within a single group.\n· C: Kafka guarantees order within a partition only, not across partitions. Global ordering would require a single-partition topic, which sacrifices throughput.\n· D: Consumer groups are a load-balancing / offset-tracking abstraction. Encryption is a transport-level (TLS) and storage-level concern.",
+      "explanation": "Correct: A — Correct. Within a consumer group, Kafka assigns each partition to exactly one consumer instance at any moment (balanced by the group coordinator). With 6 partitions and 3 instances, each instance handles 2 partitions; adding a 4th instance triggers a rebalance. Kafka commits offsets per (consumer-group, topic, partition), so a restart resumes from the last committed offset. To broadcast the same message to multiple applications, use different consumer groups.\n· B: Each partition is read by exactly one instance of the group — that's the whole point of consumer groups. Receiving every message in all instances would triplicate work.\n· C: Kafka provides ordering within a partition, not across a topic's partitions. Global ordering is not a default guarantee.\n· D: Consumer groups are a workload-distribution construct, not an encryption feature.",
       "explanations": {
         "A": "Correct. Within a consumer group, Kafka assigns each partition to exactly one consumer instance at any moment (balanced by the group coordinator). With 6 partitions and 3 instances, each instance handles 2 partitions; adding a 4th instance triggers a rebalance. Kafka commits offsets per (consumer-group, topic, partition), so a restart resumes from the last committed offset. To broadcast the same message to multiple applications, use different consumer groups.",
-        "B": "'All three receive every message' is the broadcast semantics of pub-sub with multiple consumer groups, not within a single group.",
-        "C": "Kafka guarantees order within a partition only, not across partitions. Global ordering would require a single-partition topic, which sacrifices throughput.",
-        "D": "Consumer groups are a load-balancing / offset-tracking abstraction. Encryption is a transport-level (TLS) and storage-level concern."
+        "B": "Each partition is read by exactly one instance of the group — that's the whole point of consumer groups. Receiving every message in all instances would triplicate work.",
+        "C": "Kafka provides ordering within a partition, not across a topic's partitions. Global ordering is not a default guarantee.",
+        "D": "Consumer groups are a workload-distribution construct, not an encryption feature."
       }
     },
     {
@@ -24428,7 +24428,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "The wall-clock time the engine observes the event"
+          "text": "The wall-clock time at which the stream-processing engine first observes the event (processing time), independent of when the event actually occurred in the domain"
         },
         {
           "letter": "B",
@@ -24436,20 +24436,20 @@
         },
         {
           "letter": "C",
-          "text": "The time the SQL query is compiled"
+          "text": "The compile time of the SQL query definition registered with the engine when the streaming job is first submitted to the cluster"
         },
         {
           "letter": "D",
-          "text": "The TTL of a Kafka message"
+          "text": "The time-to-live (TTL) configured on the Kafka message by the producer before the broker deletes it from the topic's log"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Event time is the timestamp carried in the record itself, representing when the event actually occurred at the source (sensor reading, click, transaction). Modern stream engines (Flink, Spark Structured Streaming, Kafka Streams) compute windows and aggregations on event time, using 'watermarks' to estimate how late events are allowed to be before the engine closes a window. Event-time processing gives correct results even when events arrive out of order or after a connectivity outage — processing-time logic would bucket them incorrectly.\n· A: That describes 'processing time' — when the engine sees the event. Event time and processing time diverge whenever there is network delay, batching at source, or replay of historical data.\n· C: Query-compilation time is a DBMS internal, unrelated to stream windowing.\n· D: Kafka message TTL is a retention configuration on the broker side, not a stream-processing concept.",
+      "explanation": "Correct: B — Correct. Event time is the timestamp carried in the record itself, representing when the event actually occurred at the source (sensor reading, click, transaction). Modern stream engines (Flink, Spark Structured Streaming, Kafka Streams) compute windows and aggregations on event time, using 'watermarks' to estimate how late events are allowed to be before the engine closes a window. Event-time processing gives correct results even when events arrive out of order or after a connectivity outage — processing-time logic would bucket them incorrectly.\n· A: Wall-clock time at which the engine first observes the event is 'processing time', a distinct concept from event time, independent of when the event actually occurred in the domain.\n· C: SQL compile time is a query-plan metadata, unrelated to event timestamps.\n· D: Kafka TTL is a retention parameter on the log, not an event's real-world timestamp.",
       "explanations": {
-        "A": "That describes 'processing time' — when the engine sees the event. Event time and processing time diverge whenever there is network delay, batching at source, or replay of historical data.",
+        "A": "Wall-clock time at which the engine first observes the event is 'processing time', a distinct concept from event time, independent of when the event actually occurred in the domain.",
         "B": "Correct. Event time is the timestamp carried in the record itself, representing when the event actually occurred at the source (sensor reading, click, transaction). Modern stream engines (Flink, Spark Structured Streaming, Kafka Streams) compute windows and aggregations on event time, using 'watermarks' to estimate how late events are allowed to be before the engine closes a window. Event-time processing gives correct results even when events arrive out of order or after a connectivity outage — processing-time logic would bucket them incorrectly.",
-        "C": "Query-compilation time is a DBMS internal, unrelated to stream windowing.",
-        "D": "Kafka message TTL is a retention configuration on the broker side, not a stream-processing concept."
+        "C": "SQL compile time is a query-plan metadata, unrelated to event timestamps.",
+        "D": "Kafka TTL is a retention parameter on the log, not an event's real-world timestamp."
       }
     },
     {
@@ -24466,15 +24466,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "RPO = 2 hours; RTO = 15 minutes"
+          "text": "RPO equals 2 hours and RTO equals 15 minutes across all covered systems of the org"
         },
         {
           "letter": "B",
-          "text": "They both refer to the same metric"
+          "text": "They are synonymous terms that refer to exactly the same covered metric"
         },
         {
           "letter": "C",
-          "text": "RPO = 0; RTO = 15 minutes + 2 hours"
+          "text": "RPO equals 0 minutes; RTO equals the sum of 15 minutes plus 2 hours"
         },
         {
           "letter": "D",
@@ -24482,11 +24482,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. RPO (Recovery Point Objective) is the maximum acceptable amount of DATA loss measured in time — 'how far back can we afford our last good copy to be?'. RTO (Recovery Time Objective) is the maximum acceptable DOWNTIME — 'how long can we afford the service to be unavailable?'. RPO drives backup frequency / replication lag; RTO drives failover automation, standby capacity and run-books. Both feed the Business Continuity Plan and influence cost-of-resilience decisions.\n· A: Reversed. RPO and RTO are commonly swapped by mistake — the exam favourite trap. RPO is about DATA loss tolerance; RTO is about DOWNTIME tolerance.\n· B: They are distinct objectives and are typically quoted as a pair.\n· C: RPO = 0 implies synchronous replication with zero data loss — a costly posture, not what the scenario describes.",
+      "explanation": "Correct: D — Correct. RPO (Recovery Point Objective) is the maximum acceptable amount of DATA loss measured in time — 'how far back can we afford our last good copy to be?'. RTO (Recovery Time Objective) is the maximum acceptable DOWNTIME — 'how long can we afford the service to be unavailable?'. RPO drives backup frequency / replication lag; RTO drives failover automation, standby capacity and run-books. Both feed the Business Continuity Plan and influence cost-of-resilience decisions.\n· A: RPO / RTO are swapped across the covered systems of the org. RPO is about data-loss tolerance; RTO is about downtime tolerance.\n· B: They are two distinct metrics of a recovery plan.\n· C: RPO = 0 means no data loss, which contradicts the stated 15-minute acceptable-loss tolerance. And RTO isn't 'a sum'.",
       "explanations": {
-        "A": "Reversed. RPO and RTO are commonly swapped by mistake — the exam favourite trap. RPO is about DATA loss tolerance; RTO is about DOWNTIME tolerance.",
-        "B": "They are distinct objectives and are typically quoted as a pair.",
-        "C": "RPO = 0 implies synchronous replication with zero data loss — a costly posture, not what the scenario describes.",
+        "A": "RPO / RTO are swapped across the covered systems of the org. RPO is about data-loss tolerance; RTO is about downtime tolerance.",
+        "B": "They are two distinct metrics of a recovery plan.",
+        "C": "RPO = 0 means no data loss, which contradicts the stated 15-minute acceptable-loss tolerance. And RTO isn't 'a sum'.",
         "D": "Correct. RPO (Recovery Point Objective) is the maximum acceptable amount of DATA loss measured in time — 'how far back can we afford our last good copy to be?'. RTO (Recovery Time Objective) is the maximum acceptable DOWNTIME — 'how long can we afford the service to be unavailable?'. RPO drives backup frequency / replication lag; RTO drives failover automation, standby capacity and run-books. Both feed the Business Continuity Plan and influence cost-of-resilience decisions."
       }
     },
@@ -24504,7 +24504,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "All 10 years in the warehouse's hot tier"
+          "text": "All 10 years of the transaction data kept continuously in the warehouse's expensive hot columnar tier with sub-second query latency end-to-end across all interactive analysts and BI users who access it"
         },
         {
           "letter": "B",
@@ -24512,20 +24512,20 @@
         },
         {
           "letter": "C",
-          "text": "All data deleted after 30 days regardless of legal requirements"
+          "text": "All the transaction data deleted after 30 days regardless of any legal, regulatory, contractual or audit retention obligation that might otherwise apply to the records held by the institution under Union or national law"
         },
         {
           "letter": "D",
-          "text": "All data on tape, restoring for every BI query"
+          "text": "All 10 years of the transaction data kept exclusively on long-term magnetic-tape archival media, retrieved individually for every single BI query including interactive dashboards driving business decisions at short notice"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. A lifecycle-based tiering matches access pattern to cost: (1) HOT — low-latency columnar storage (Snowflake / BigQuery / Redshift / lakehouse silver/gold) for the 3 months used daily; (2) WARM — object storage (S3 / Azure Blob / GCS Standard) queryable via external tables / federation for months 4–24, trading a little latency for much lower cost; (3) COLD / ARCHIVE — S3 Glacier / Archive Tier / Azure Archive for years 3–10, with restore SLAs measured in hours and rock-bottom storage cost. Cloud lifecycle policies can transition objects automatically as they age. This preserves legal retention while controlling spend.\n· A: Keeping ten years of cold legal-audit data in the warehouse's hot tier is wildly uneconomic. Hot-tier storage costs one or two orders of magnitude more than archival, and most of that data will never be read.\n· C: Blanket 30-day deletion ignores the 10-year legal requirement and creates regulatory exposure.\n· D: Tape-only storage would make BI queries impossible. Tape still exists for deep archive but isn't the right tier for data used daily.",
+      "explanation": "Correct: B — Correct. A lifecycle-based tiering matches access pattern to cost: (1) HOT — low-latency columnar storage (Snowflake / BigQuery / Redshift / lakehouse silver/gold) for the 3 months used daily; (2) WARM — object storage (S3 / Azure Blob / GCS Standard) queryable via external tables / federation for months 4–24, trading a little latency for much lower cost; (3) COLD / ARCHIVE — S3 Glacier / Archive Tier / Azure Archive for years 3–10, with restore SLAs measured in hours and rock-bottom storage cost. Cloud lifecycle policies can transition objects automatically as they age. This preserves legal retention while controlling spend.\n· A: Keeping 10 years on hot storage with sub-second access is wasteful — old data doesn't need that tier.\n· C: Blanket 30-day deletion ignores legal retention obligations. Retention must be justified and tiered.\n· D: Tape can't serve interactive dashboards. Archive tiers are for cold access, not BI latency.",
       "explanations": {
-        "A": "Keeping ten years of cold legal-audit data in the warehouse's hot tier is wildly uneconomic. Hot-tier storage costs one or two orders of magnitude more than archival, and most of that data will never be read.",
+        "A": "Keeping 10 years on hot storage with sub-second access is wasteful — old data doesn't need that tier.",
         "B": "Correct. A lifecycle-based tiering matches access pattern to cost: (1) HOT — low-latency columnar storage (Snowflake / BigQuery / Redshift / lakehouse silver/gold) for the 3 months used daily; (2) WARM — object storage (S3 / Azure Blob / GCS Standard) queryable via external tables / federation for months 4–24, trading a little latency for much lower cost; (3) COLD / ARCHIVE — S3 Glacier / Archive Tier / Azure Archive for years 3–10, with restore SLAs measured in hours and rock-bottom storage cost. Cloud lifecycle policies can transition objects automatically as they age. This preserves legal retention while controlling spend.",
-        "C": "Blanket 30-day deletion ignores the 10-year legal requirement and creates regulatory exposure.",
-        "D": "Tape-only storage would make BI queries impossible. Tape still exists for deep archive but isn't the right tier for data used daily."
+        "C": "Blanket 30-day deletion ignores legal retention obligations. Retention must be justified and tiered.",
+        "D": "Tape can't serve interactive dashboards. Archive tiers are for cold access, not BI latency."
       }
     },
     {
@@ -24584,24 +24584,24 @@
         },
         {
           "letter": "B",
-          "text": "Dropping the primary key of the table"
+          "text": "Dropping the primary key of the table as a performance optimisation strategy across the DB"
         },
         {
           "letter": "C",
-          "text": "Switching from SSD to HDD storage"
+          "text": "Switching the storage back from SSD to traditional HDD spinning disks every single time"
         },
         {
           "letter": "D",
-          "text": "Adding more columns to every SELECT *"
+          "text": "Adding many more columns to every SELECT * clause to return more rows of data per read"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. When a frequently used filter predicate touches a column that lacks a supporting index, the optimiser falls back to a full table scan — O(N) work that becomes unacceptable on 50M rows. An index on customer_email (B-tree for equality / range, hash for pure equality in some engines) lets the optimiser perform a fast lookup — O(log N). You can inspect the effect via `EXPLAIN` / query plan, which should switch from 'Seq Scan' to 'Index Scan' / 'Index Seek'. Trade-offs: indexes cost storage and slow down writes, so over-indexing is its own problem; covering / composite indexes can help when several columns are queried together.\n· B: Dropping the primary key removes uniqueness and breaks other indexes / FK relations. It won't speed up a non-PK filter and it will break things.\n· C: Moving from SSD to HDD makes all I/O slower. The proposed direction is exactly backwards.\n· D: `SELECT *` retrieves more columns than needed, increasing I/O and network cost. That is a pessimisation, not an optimisation.",
+      "explanation": "Correct: A — Correct. When a frequently used filter predicate touches a column that lacks a supporting index, the optimiser falls back to a full table scan — O(N) work that becomes unacceptable on 50M rows. An index on customer_email (B-tree for equality / range, hash for pure equality in some engines) lets the optimiser perform a fast lookup — O(log N). You can inspect the effect via `EXPLAIN` / query plan, which should switch from 'Seq Scan' to 'Index Scan' / 'Index Seek'. Trade-offs: indexes cost storage and slow down writes, so over-indexing is its own problem; covering / composite indexes can help when several columns are queried together.\n· B: Dropping the PK removes uniqueness + a key index, typically making queries worse, not better.\n· C: HDDs are slower than SSDs on random I/O — the opposite direction for OLTP performance.\n· D: SELECT * returns more bytes per row and doesn't help narrow lookups. Selecting only needed columns helps.",
       "explanations": {
         "A": "Correct. When a frequently used filter predicate touches a column that lacks a supporting index, the optimiser falls back to a full table scan — O(N) work that becomes unacceptable on 50M rows. An index on customer_email (B-tree for equality / range, hash for pure equality in some engines) lets the optimiser perform a fast lookup — O(log N). You can inspect the effect via `EXPLAIN` / query plan, which should switch from 'Seq Scan' to 'Index Scan' / 'Index Seek'. Trade-offs: indexes cost storage and slow down writes, so over-indexing is its own problem; covering / composite indexes can help when several columns are queried together.",
-        "B": "Dropping the primary key removes uniqueness and breaks other indexes / FK relations. It won't speed up a non-PK filter and it will break things.",
-        "C": "Moving from SSD to HDD makes all I/O slower. The proposed direction is exactly backwards.",
-        "D": "`SELECT *` retrieves more columns than needed, increasing I/O and network cost. That is a pessimisation, not an optimisation."
+        "B": "Dropping the PK removes uniqueness + a key index, typically making queries worse, not better.",
+        "C": "HDDs are slower than SSDs on random I/O — the opposite direction for OLTP performance.",
+        "D": "SELECT * returns more bytes per row and doesn't help narrow lookups. Selecting only needed columns helps."
       }
     },
     {
@@ -24656,15 +24656,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Can only be processed through lengthy mental calculation"
+          "text": "Can only be processed through lengthy conscious mental calculation by the viewer reading the chart over many seconds with deliberate focus and effort"
         },
         {
           "letter": "B",
-          "text": "Are banned by accessibility guidelines"
+          "text": "Are strictly banned from BI dashboards across the Union under EU accessibility guidelines, the EAA and the Web Content Accessibility Guidelines framework"
         },
         {
           "letter": "C",
-          "text": "Refer exclusively to 3D rendering and animation"
+          "text": "Refer exclusively to 3D rendering and animation effects used in modern visualisation libraries and cannot apply to static 2D charts in reporting"
         },
         {
           "letter": "D",
@@ -24672,11 +24672,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Pre-attentive attributes are visual properties detected by the human perceptual system in the first ~200 ms of looking at a scene, before conscious attention engages. They include position (most accurate for quantitative comparison), length (bar charts), angle, slope, area, colour hue, colour intensity, size, shape and orientation. Choosing the right pre-attentive attribute for the most important message is one of the most powerful tools in data visualisation (Few, Tufte, Munzner). Using multiple weak attributes instead of the one right one is why bad charts fail: a pie with 30 slices fights pre-attention.\n· A: The whole point of pre-attentive processing is that it is automatic — it precedes conscious attention. Processes that require effort are called attentive, not pre-attentive.\n· B: Accessibility guidelines actually leverage pre-attentive attributes (contrast, size) — they are not banned.\n· C: Pre-attentive attributes apply to any visual medium, including static 2D charts — they have nothing specifically to do with 3D or animation.",
+      "explanation": "Correct: D — Correct. Pre-attentive attributes are visual properties detected by the human perceptual system in the first ~200 ms of looking at a scene, before conscious attention engages. They include position (most accurate for quantitative comparison), length (bar charts), angle, slope, area, colour hue, colour intensity, size, shape and orientation. Choosing the right pre-attentive attribute for the most important message is one of the most powerful tools in data visualisation (Few, Tufte, Munzner). Using multiple weak attributes instead of the one right one is why bad charts fail: a pie with 30 slices fights pre-attention.\n· A: The whole point of pre-attentive attributes is that they require no conscious calculation — the brain reads them automatically.\n· B: Accessibility guidelines govern colour contrast and alt text — not a ban on pre-attentive attributes.\n· C: Pre-attentive attributes work on 2D static visuals; 3D is a separate (and often harmful) design dimension.",
       "explanations": {
-        "A": "The whole point of pre-attentive processing is that it is automatic — it precedes conscious attention. Processes that require effort are called attentive, not pre-attentive.",
-        "B": "Accessibility guidelines actually leverage pre-attentive attributes (contrast, size) — they are not banned.",
-        "C": "Pre-attentive attributes apply to any visual medium, including static 2D charts — they have nothing specifically to do with 3D or animation.",
+        "A": "The whole point of pre-attentive attributes is that they require no conscious calculation — the brain reads them automatically.",
+        "B": "Accessibility guidelines govern colour contrast and alt text — not a ban on pre-attentive attributes.",
+        "C": "Pre-attentive attributes work on 2D static visuals; 3D is a separate (and often harmful) design dimension.",
         "D": "Correct. Pre-attentive attributes are visual properties detected by the human perceptual system in the first ~200 ms of looking at a scene, before conscious attention engages. They include position (most accurate for quantitative comparison), length (bar charts), angle, slope, area, colour hue, colour intensity, size, shape and orientation. Choosing the right pre-attentive attribute for the most important message is one of the most powerful tools in data visualisation (Few, Tufte, Munzner). Using multiple weak attributes instead of the one right one is why bad charts fail: a pie with 30 slices fights pre-attention."
       }
     },
@@ -24732,7 +24732,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Ranks search results by relevance"
+          "text": "Ranks search-engine results by relevance to the query submitted by the user across the indexed corpus"
         },
         {
           "letter": "B",
@@ -24740,20 +24740,20 @@
         },
         {
           "letter": "C",
-          "text": "Generates summaries of long documents"
+          "text": "Generates short extractive or abstractive summaries of long documents for quick reading by human users"
         },
         {
           "letter": "D",
-          "text": "Translates text between languages"
+          "text": "Translates free-form source text between two different natural human languages using a machine-translation model"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. NER extracts and labels entity mentions in unstructured text — classical labels include PER (Person), ORG (Organisation), LOC (Location), DATE, MONEY, and domain-specific extensions (LAW, PRODUCT, DISEASE, CASE-NUMBER). It is a foundational step in information extraction, knowledge-graph construction, and downstream pipelines like legal-document analysis, clinical-records mining and regulatory-text annotation. Modern implementations use fine-tuned transformer models (spaCy, Stanza, Hugging Face) that outperform older CRF / HMM approaches.\n· A: Ranking search results is information retrieval — BM25, neural rankers, vector similarity.\n· C: Summarisation is a separate NLP task — abstractive or extractive.\n· D: Translation is machine translation — a different task, handled by dedicated models (Helsinki-NLP, Marian, NLLB).",
+      "explanation": "Correct: B — Correct. NER extracts and labels entity mentions in unstructured text — classical labels include PER (Person), ORG (Organisation), LOC (Location), DATE, MONEY, and domain-specific extensions (LAW, PRODUCT, DISEASE, CASE-NUMBER). It is a foundational step in information extraction, knowledge-graph construction, and downstream pipelines like legal-document analysis, clinical-records mining and regulatory-text annotation. Modern implementations use fine-tuned transformer models (spaCy, Stanza, Hugging Face) that outperform older CRF / HMM approaches.\n· A: That describes information retrieval / ranking, not NER. Different NLP task.\n· C: That describes summarisation (extractive or abstractive). Different NLP task.\n· D: That describes machine translation. Different NLP task again.",
       "explanations": {
-        "A": "Ranking search results is information retrieval — BM25, neural rankers, vector similarity.",
+        "A": "That describes information retrieval / ranking, not NER. Different NLP task.",
         "B": "Correct. NER extracts and labels entity mentions in unstructured text — classical labels include PER (Person), ORG (Organisation), LOC (Location), DATE, MONEY, and domain-specific extensions (LAW, PRODUCT, DISEASE, CASE-NUMBER). It is a foundational step in information extraction, knowledge-graph construction, and downstream pipelines like legal-document analysis, clinical-records mining and regulatory-text annotation. Modern implementations use fine-tuned transformer models (spaCy, Stanza, Hugging Face) that outperform older CRF / HMM approaches.",
-        "C": "Summarisation is a separate NLP task — abstractive or extractive.",
-        "D": "Translation is machine translation — a different task, handled by dedicated models (Helsinki-NLP, Marian, NLLB)."
+        "C": "That describes summarisation (extractive or abstractive). Different NLP task.",
+        "D": "That describes machine translation. Different NLP task again."
       }
     },
     {
@@ -24770,15 +24770,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "It relies exclusively on hand-coded lexicons of positive / negative words"
+          "text": "It relies exclusively on hand-coded lexicons of positive and negative words, together with simple rule-based scoring tables built up over years of manual analyst work across the institution, producing brittle results whenever customer expression diverges from vocabulary"
         },
         {
           "letter": "B",
-          "text": "It replaces the need for qualitative research entirely"
+          "text": "It fully replaces the need for qualitative research, focus groups, interviews and open-ended survey analysis because modern sentiment scoring is complete"
         },
         {
           "letter": "C",
-          "text": "It only works for English"
+          "text": "It only works reliably on English-language text at industrial quality; no modern systems can handle any of the other official EU languages with accuracy"
         },
         {
           "letter": "D",
@@ -24786,11 +24786,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. The modern pipeline encodes text with a pre-trained language model (BERT, RoBERTa, XLM-R, multilingual transformers) into a dense embedding, then either uses the model itself as a classifier (fine-tuning) or passes the embedding to a downstream classifier. This captures context, syntax and subtle semantic cues better than lexicon counts. Trade-offs: less interpretability, compute cost, and the need for careful handling of bias in the pre-training data.\n· A: Lexicon-based methods (VADER, SentiWordNet, AFINN) are simple, explainable and still useful baselines. But they fail on negation ('not good'), intensifiers ('really bad'), sarcasm ('great, another delay') and domain-specific vocabulary.\n· B: Sentiment scores give a quantitative signal — they complement, not replace, qualitative interviews and open-coding analyses, which still surface root causes and new themes.\n· C: Multilingual and cross-lingual transformer models (XLM-R, mBERT, NLLB-family) support sentiment analysis across many languages, including all 24 EU official languages, though quality varies by language and domain.",
+      "explanation": "Correct: D — Correct. The modern pipeline encodes text with a pre-trained language model (BERT, RoBERTa, XLM-R, multilingual transformers) into a dense embedding, then either uses the model itself as a classifier (fine-tuning) or passes the embedding to a downstream classifier. This captures context, syntax and subtle semantic cues better than lexicon counts. Trade-offs: less interpretability, compute cost, and the need for careful handling of bias in the pre-training data.\n· A: Pure lexicon-based systems have been superseded by language-model embeddings — although lexicons still exist as a baseline. They remain brittle when vocabulary diverges.\n· B: Sentiment scores are one signal; they complement, not replace, qualitative research.\n· C: Modern multilingual models (XLM-R, mBERT, modern LLMs) handle many languages — including EU-24.",
       "explanations": {
-        "A": "Lexicon-based methods (VADER, SentiWordNet, AFINN) are simple, explainable and still useful baselines. But they fail on negation ('not good'), intensifiers ('really bad'), sarcasm ('great, another delay') and domain-specific vocabulary.",
-        "B": "Sentiment scores give a quantitative signal — they complement, not replace, qualitative interviews and open-coding analyses, which still surface root causes and new themes.",
-        "C": "Multilingual and cross-lingual transformer models (XLM-R, mBERT, NLLB-family) support sentiment analysis across many languages, including all 24 EU official languages, though quality varies by language and domain.",
+        "A": "Pure lexicon-based systems have been superseded by language-model embeddings — although lexicons still exist as a baseline. They remain brittle when vocabulary diverges.",
+        "B": "Sentiment scores are one signal; they complement, not replace, qualitative research.",
+        "C": "Modern multilingual models (XLM-R, mBERT, modern LLMs) handle many languages — including EU-24.",
         "D": "Correct. The modern pipeline encodes text with a pre-trained language model (BERT, RoBERTa, XLM-R, multilingual transformers) into a dense embedding, then either uses the model itself as a classifier (fine-tuning) or passes the embedding to a downstream classifier. This captures context, syntax and subtle semantic cues better than lexicon counts. Trade-offs: less interpretability, compute cost, and the need for careful handling of bias in the pre-training data."
       }
     },
@@ -24812,24 +24812,24 @@
         },
         {
           "letter": "B",
-          "text": "Stationarity and cointegration"
+          "text": "Stationarity and cointegration properties of the series analysed statistically today too"
         },
         {
           "letter": "C",
-          "text": "Heteroscedasticity and autocorrelation"
+          "text": "Heteroscedasticity and autocorrelation of the residual errors after model fit"
         },
         {
           "letter": "D",
-          "text": "Noise and drift only"
+          "text": "Noise and drift components only, with no other visible structural pattern"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. The classical additive decomposition of a time series is Y(t) = Trend(t) + Seasonality(t) + Residual(t). Trend captures the long-term direction (tourism growing year over year); Seasonality is the regular calendar pattern that repeats within a known period (summer peaks every July-August); Residual (or 'remainder') is what's left over. Tools like STL (Seasonal-Trend decomposition using LOESS), classical decomposition and Prophet's additive components visualise these parts explicitly and are a standard first step before forecasting.\n· B: Stationarity is a property of the series (constant mean / variance over time), and cointegration is a relationship between two non-stationary series. Neither describes the qualitative pattern in the question.\n· C: Heteroscedasticity is non-constant variance; autocorrelation is a residual property. Useful concepts, but not what the question asks to NAME.\n· D: 'Noise and drift only' ignores the clearly visible seasonal pattern.",
+      "explanation": "Correct: A — Correct. The classical additive decomposition of a time series is Y(t) = Trend(t) + Seasonality(t) + Residual(t). Trend captures the long-term direction (tourism growing year over year); Seasonality is the regular calendar pattern that repeats within a known period (summer peaks every July-August); Residual (or 'remainder') is what's left over. Tools like STL (Seasonal-Trend decomposition using LOESS), classical decomposition and Prophet's additive components visualise these parts explicitly and are a standard first step before forecasting.\n· B: Stationarity / cointegration properties of a series are time-series model properties, not components of a trend-with-seasonality plot.\n· C: Heteroscedasticity / autocorrelation describe residual structure — useful for model diagnostics, not the visible pattern.\n· D: Noise and drift alone don't capture a regular calendar-based seasonal pattern. Trend + seasonality does.",
       "explanations": {
         "A": "Correct. The classical additive decomposition of a time series is Y(t) = Trend(t) + Seasonality(t) + Residual(t). Trend captures the long-term direction (tourism growing year over year); Seasonality is the regular calendar pattern that repeats within a known period (summer peaks every July-August); Residual (or 'remainder') is what's left over. Tools like STL (Seasonal-Trend decomposition using LOESS), classical decomposition and Prophet's additive components visualise these parts explicitly and are a standard first step before forecasting.",
-        "B": "Stationarity is a property of the series (constant mean / variance over time), and cointegration is a relationship between two non-stationary series. Neither describes the qualitative pattern in the question.",
-        "C": "Heteroscedasticity is non-constant variance; autocorrelation is a residual property. Useful concepts, but not what the question asks to NAME.",
-        "D": "'Noise and drift only' ignores the clearly visible seasonal pattern."
+        "B": "Stationarity / cointegration properties of a series are time-series model properties, not components of a trend-with-seasonality plot.",
+        "C": "Heteroscedasticity / autocorrelation describe residual structure — useful for model diagnostics, not the visible pattern.",
+        "D": "Noise and drift alone don't capture a regular calendar-based seasonal pattern. Trend + seasonality does."
       }
     },
     {
@@ -24846,7 +24846,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "ARIMA can be applied to any series without checking stationarity; Prophet is a subtype of ARIMA"
+          "text": "ARIMA can be applied to any time series without even checking stationarity first; Prophet is simply a subtype of ARIMA rebranded and distributed by Facebook under a new name for marketing purposes across analytics teams in industry and in public administrations, with no mathematical difference between the two beyond that marketing label given by each vendor to end-user teams in practice"
         },
         {
           "letter": "B",
@@ -24854,20 +24854,20 @@
         },
         {
           "letter": "C",
-          "text": "Both models forbid any form of seasonality"
+          "text": "Both ARIMA and Facebook Prophet models fundamentally forbid any form of seasonality at all, because the standard forecasting-model assumption of strict stationarity implies that periodic structure cannot be present in the inputs to the model's training pipeline and therefore neither model admits a seasonal term under the statistical assumptions generally made in the literature"
         },
         {
           "letter": "D",
-          "text": "ARIMA and Prophet are only available for stock-price forecasting"
+          "text": "ARIMA and Facebook Prophet are both only ever available commercially for the narrow purpose of financial-market or stock-price forecasting workflows and cannot be applied to any other kind of time-series problem or domain in the wider data-management field"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. ARIMA (p, d, q) is the classical Box-Jenkins model: the 'AR' captures autoregressive dependence on past values, the 'I' is the order of differencing needed to make the series stationary (tested with ADF / KPSS), and the 'MA' captures moving-average dependence on past errors. SARIMA adds seasonal terms. Prophet takes a different route: Y(t) = trend(t) + seasonality(t) + holidays(t) + ε, with piecewise-linear or logistic growth, automatic changepoints and Fourier-series seasonality. It is quick to fit, handles missing data gracefully and exposes interpretable components, but often loses to well-tuned ARIMA or gradient-boosted baselines on accuracy. The right choice depends on dataset characteristics, required interpretability and the team's tuning capacity.\n· A: ARIMA's assumptions include (weak) stationarity after differencing and (for some variants) no explicit seasonality unless SARIMA is used. Prophet is not a subtype of ARIMA — it is a separate generalised-additive-model-style approach (Taylor & Letham, 2017), internally unrelated to Box-Jenkins methodology.\n· C: SARIMA and Prophet both explicitly model seasonality. Seasonality is a first-class concept in both toolkits.\n· D: Both models are general time-series tools — they apply to any univariate series (tourism, energy demand, web traffic, hospital admissions), not just financial prices.",
+      "explanation": "Correct: B — Correct. ARIMA (p, d, q) is the classical Box-Jenkins model: the 'AR' captures autoregressive dependence on past values, the 'I' is the order of differencing needed to make the series stationary (tested with ADF / KPSS), and the 'MA' captures moving-average dependence on past errors. SARIMA adds seasonal terms. Prophet takes a different route: Y(t) = trend(t) + seasonality(t) + holidays(t) + ε, with piecewise-linear or logistic growth, automatic changepoints and Fourier-series seasonality. It is quick to fit, handles missing data gracefully and exposes interpretable components, but often loses to well-tuned ARIMA or gradient-boosted baselines on accuracy. The right choice depends on dataset characteristics, required interpretability and the team's tuning capacity.\n· A: ARIMA explicitly requires stationarity checks (the 'I' is for the integration used to achieve it). Prophet isn't a 'subtype of ARIMA'.\n· C: Both handle seasonality — ARIMA's SARIMA variant and Prophet's seasonality terms.\n· D: Both models are general-purpose and open-source; stock prices aren't their only use case.",
       "explanations": {
-        "A": "ARIMA's assumptions include (weak) stationarity after differencing and (for some variants) no explicit seasonality unless SARIMA is used. Prophet is not a subtype of ARIMA — it is a separate generalised-additive-model-style approach (Taylor & Letham, 2017), internally unrelated to Box-Jenkins methodology.",
+        "A": "ARIMA explicitly requires stationarity checks (the 'I' is for the integration used to achieve it). Prophet isn't a 'subtype of ARIMA'.",
         "B": "Correct. ARIMA (p, d, q) is the classical Box-Jenkins model: the 'AR' captures autoregressive dependence on past values, the 'I' is the order of differencing needed to make the series stationary (tested with ADF / KPSS), and the 'MA' captures moving-average dependence on past errors. SARIMA adds seasonal terms. Prophet takes a different route: Y(t) = trend(t) + seasonality(t) + holidays(t) + ε, with piecewise-linear or logistic growth, automatic changepoints and Fourier-series seasonality. It is quick to fit, handles missing data gracefully and exposes interpretable components, but often loses to well-tuned ARIMA or gradient-boosted baselines on accuracy. The right choice depends on dataset characteristics, required interpretability and the team's tuning capacity.",
-        "C": "SARIMA and Prophet both explicitly model seasonality. Seasonality is a first-class concept in both toolkits.",
-        "D": "Both models are general time-series tools — they apply to any univariate series (tourism, energy demand, web traffic, hospital admissions), not just financial prices."
+        "C": "Both handle seasonality — ARIMA's SARIMA variant and Prophet's seasonality terms.",
+        "D": "Both models are general-purpose and open-source; stock prices aren't their only use case."
       }
     }
   ]
