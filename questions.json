@@ -21354,7 +21354,7 @@
         },
         {
           "letter": "B",
-          "text": "Lagging indicator of past customer experience"
+          "text": "Lagging indicator of past customer experience measured again"
         },
         {
           "letter": "C",
@@ -21366,12 +21366,12 @@
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.\n· B: Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.\n· C: Customer satisfaction is a classical strategic KPI, not merely operational.\n· D: Any quantifiable measure can be a metric and, if tied to an objective, a KPI.",
+      "explanation": "Correct: A — Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.\n· B: Lagging indicators measure after-the-fact outcomes. Satisfaction today leads revenue tomorrow — it's a leading indicator.\n· C: Customer satisfaction directly informs strategic priorities. Labelling it merely operational misses the strategic tie.\n· D: Satisfaction scores are perfectly valid KPIs when tied to a strategic objective.",
       "explanations": {
         "A": "Correct. Customer-satisfaction scores measure current perception, which tends to precede (lead) retention and revenue outcomes — people who are unhappy today churn tomorrow. Leading indicators are action-oriented because you can still influence the downstream outcome. They are contrasted with lagging indicators (quarterly revenue, annual churn) which confirm what has already happened.",
-        "B": "Lagging indicators reflect results that have already crystallised — revenue, churn, completed projects.",
-        "C": "Customer satisfaction is a classical strategic KPI, not merely operational.",
-        "D": "Any quantifiable measure can be a metric and, if tied to an objective, a KPI."
+        "B": "Lagging indicators measure after-the-fact outcomes. Satisfaction today leads revenue tomorrow — it's a leading indicator.",
+        "C": "Customer satisfaction directly informs strategic priorities. Labelling it merely operational misses the strategic tie.",
+        "D": "Satisfaction scores are perfectly valid KPIs when tied to a strategic objective."
       }
     },
     {
@@ -21388,11 +21388,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A pie chart with 30 slices"
+          "text": "Pie x 30o"
         },
         {
           "letter": "B",
-          "text": "A stacked line chart over time"
+          "text": "Line x 3s"
         },
         {
           "letter": "C",
@@ -21400,16 +21400,16 @@
         },
         {
           "letter": "D",
-          "text": "A 3D rotating bar chart"
+          "text": "3D bars×"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.\n· B: Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.\n· D: 3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice.",
+      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: A pie with 30 slices is unreadable — pies work only for a few categories and don't show hierarchy.\n· B: A stacked line chart shows trends over time, not hierarchical share. Different visual intent.\n· D: 3D rotating bars distort perception — a notorious antipattern in BI design.",
       "explanations": {
-        "A": "Pie charts fail beyond a handful of categories. Thirty slices are impossible to compare visually.",
-        "B": "Stacked line charts are for time series with components. They don't handle a nested geographic hierarchy well.",
+        "A": "A pie with 30 slices is unreadable — pies work only for a few categories and don't show hierarchy.",
+        "B": "A stacked line chart shows trends over time, not hierarchical share. Different visual intent.",
         "C": "Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.",
-        "D": "3D bar charts distort perception and are widely discouraged (Tufte, Few). They are almost never the right choice."
+        "D": "3D rotating bars distort perception — a notorious antipattern in BI design."
       }
     },
     {
@@ -21438,16 +21438,16 @@
         },
         {
           "letter": "D",
-          "text": "The visualisation library used on the front-end"
+          "text": "The visualisation library used on the dashboard front-end rendering in the browser tab"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.\n· A: Network speed is a technical performance concern, not cadence.\n· B: Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.\n· D: Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence.",
+      "explanation": "Correct: C — Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.\n· A: Network speed is a technical performance metric, unrelated to how often reports are refreshed.\n· B: Encryption algorithms are a security concern, not a reporting cadence.\n· D: Front-end libraries (D3, ECharts, Highcharts) running in the browser tab are a tooling choice, independent of the refresh and review schedule.",
       "explanations": {
-        "A": "Network speed is a technical performance concern, not cadence.",
-        "B": "Encryption algorithms (TLS, AES) are orthogonal to reporting cadence.",
+        "A": "Network speed is a technical performance metric, unrelated to how often reports are refreshed.",
+        "B": "Encryption algorithms are a security concern, not a reporting cadence.",
         "C": "Correct. Reporting cadence is the agreed frequency — daily, weekly, monthly, quarterly — at which a report or KPI is refreshed and reviewed. Cadence must match the decision it supports: daily ops dashboards for production, monthly for financial close, quarterly for strategic reviews. Over-cadencing wastes effort; under-cadencing misses signals.",
-        "D": "Visualisation library choice (ECharts, D3, Plotly, Vega-Lite) is a technical/UX decision unrelated to cadence."
+        "D": "Front-end libraries (D3, ECharts, Highcharts) running in the browser tab are a tooling choice, independent of the refresh and review schedule."
       }
     },
     {
@@ -21464,15 +21464,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Master data = ISO country codes; reference data = customer records"
+          "text": "Master data = ISO country / currency tables; reference data = detailed per-customer transaction records from operational systems"
         },
         {
           "letter": "B",
-          "text": "Master data = training datasets; reference data = test datasets"
+          "text": "Master data = supervised-learning training dataset for a fraud model; reference data = the hold-out test dataset used for evaluation"
         },
         {
           "letter": "C",
-          "text": "Master data = transactional events; reference data = historical archives"
+          "text": "Master data = the stream of transactional events flowing through operational systems; reference data = the long-term historical archive"
         },
         {
           "letter": "D",
@@ -21480,11 +21480,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business.\n· A: Reversed. Country codes are reference data; customer records are master data.\n· B: ML training / test sets are unrelated to the master / reference distinction.\n· C: Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
+      "explanation": "Correct: D — Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business.\n· A: Reversed. Country / currency tables are classic reference data; customer records are master data.\n· B: Training / test split is a machine-learning concept, not an MDM concept.\n· C: Transactions vs archives is a very different distinction (current vs historical).",
       "explanations": {
-        "A": "Reversed. Country codes are reference data; customer records are master data.",
-        "B": "ML training / test sets are unrelated to the master / reference distinction.",
-        "C": "Transactions are transactional data, not master. Master data describes the entities transactions refer to.",
+        "A": "Reversed. Country / currency tables are classic reference data; customer records are master data.",
+        "B": "Training / test split is a machine-learning concept, not an MDM concept.",
+        "C": "Transactions vs archives is a very different distinction (current vs historical).",
         "D": "Correct. Master data = the nouns the business operates on (customer, product, employee, supplier, location). Reference data = closed, relatively static code lists used for classification (country ISO-3166 codes, currency ISO-4217 codes, ISIN, status enums). Both feed into other systems; master data is usually richer and changes with the business."
       }
     },
@@ -21502,15 +21502,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "The most recent edit of any record in any source system"
+          "text": "The most recent edit of any individual record made in any of the contributing source systems today"
         },
         {
           "letter": "B",
-          "text": "The training dataset used to retrain a fraud-detection model"
+          "text": "The training dataset used to retrain a fraud-detection machine-learning model daily"
         },
         {
           "letter": "C",
-          "text": "A copy of the production database kept for disaster recovery"
+          "text": "A full copy of the production master database kept on warm standby for recovery"
         },
         {
           "letter": "D",
@@ -21518,11 +21518,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth.\n· A: 'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.\n· B: Training datasets are ML artefacts, not MDM records.\n· C: DR copies are operational backups, unrelated.",
+      "explanation": "Correct: D — Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth.\n· A: 'Most recent' is one possible survivorship rule but it isn't by itself a golden record — the golden record is the reconciled entity view built across sources.\n· B: ML training sets are unrelated to MDM golden records.\n· C: DR copies are replicas of the whole database, not entity-level golden records.",
       "explanations": {
-        "A": "'Most recent edit' can still be wrong, incomplete or contradict another system — that's not what 'golden' means.",
-        "B": "Training datasets are ML artefacts, not MDM records.",
-        "C": "DR copies are operational backups, unrelated.",
+        "A": "'Most recent' is one possible survivorship rule but it isn't by itself a golden record — the golden record is the reconciled entity view built across sources.",
+        "B": "ML training sets are unrelated to MDM golden records.",
+        "C": "DR copies are replicas of the whole database, not entity-level golden records.",
         "D": "Correct. A golden record is the canonical, de-duplicated, reconciled view of a master entity (customer, product). MDM tools apply matching rules (deterministic and probabilistic), survivorship rules (which source wins for which attribute) and stewardship workflows to produce it. Downstream systems rely on the golden record as the source of truth."
       }
     },
@@ -21540,7 +21540,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Which records are archived to cold storage"
+          "text": "Which historical records are archived to the lake's cold long-term storage tier"
         },
         {
           "letter": "B",
@@ -21548,20 +21548,20 @@
         },
         {
           "letter": "C",
-          "text": "Which employees survive organisational restructuring"
+          "text": "Which employees in the organisation will survive an organisational restructuring move"
         },
         {
           "letter": "D",
-          "text": "Which node in a Kafka cluster handles the next message"
+          "text": "Which broker node in a Kafka cluster handles the next incoming partition message sent"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.\n· A: Archiving is a lifecycle task, unrelated to survivorship.\n· C: HR humour aside, it's not what MDM means.\n· D: Kafka partition assignment is a different technical topic.",
+      "explanation": "Correct: B — Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.\n· A: Archival tiering is a storage-lifecycle policy, not a survivorship rule.\n· C: Unrelated HR concept — 'survivorship' sounds similar but the MDM meaning is about attribute selection.\n· D: Kafka broker / partition assignment is a cluster-internal algorithm, not an MDM construct.",
       "explanations": {
-        "A": "Archiving is a lifecycle task, unrelated to survivorship.",
+        "A": "Archival tiering is a storage-lifecycle policy, not a survivorship rule.",
         "B": "Correct. When two or more source systems hold conflicting values for the same attribute of the same entity (e.g. customer address in CRM vs ERP), survivorship rules decide which one prevails in the golden record — most recent update, most trusted source, highest quality score, or manual steward decision.",
-        "C": "HR humour aside, it's not what MDM means.",
-        "D": "Kafka partition assignment is a different technical topic."
+        "C": "Unrelated HR concept — 'survivorship' sounds similar but the MDM meaning is about attribute selection.",
+        "D": "Kafka broker / partition assignment is a cluster-internal algorithm, not an MDM construct."
       }
     },
     {
@@ -21620,24 +21620,24 @@
         },
         {
           "letter": "B",
-          "text": "Machine-translation training corpora"
+          "text": "Machine-translation training corpora used by DGT translators in their daily work"
         },
         {
           "letter": "C",
-          "text": "A legal register of EU treaties"
+          "text": "A legal register of EU treaties, accession instruments and protocols signed in the Union"
         },
         {
           "letter": "D",
-          "text": "The public-procurement vocabulary (CPV)"
+          "text": "The Common Procurement Vocabulary (CPV) classification used for EU tenders and notices"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.\n· B: MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.\n· C: The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.\n· D: CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE.",
+      "explanation": "Correct: A — Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.\n· B: MT training corpora live in Euramis and other translation-memory systems, not in IATE.\n· C: EU treaties are published via EUR-Lex. IATE is concept / terminology focused.\n· D: The CPV is a procurement classification — unrelated to terminology.",
       "explanations": {
         "A": "Correct. IATE is the EU's inter-institutional terminology database, maintained collaboratively by translators and terminologists across Commission, Parliament, Council, Court of Justice, Committee of the Regions, ECB and other bodies. Each concept card carries definitions, context, sources and equivalents across the 24 official languages.",
-        "B": "MT corpora are separate linguistic resources (e.g. ELRC, OPUS, EuroParl). IATE is a terminology database, not a parallel corpus.",
-        "C": "The treaties register is separate (EUR-Lex). IATE is about terminology, not full legal texts.",
-        "D": "CPV (Common Procurement Vocabulary) is a classification for tenders, hosted on TED — distinct from IATE."
+        "B": "MT training corpora live in Euramis and other translation-memory systems, not in IATE.",
+        "C": "EU treaties are published via EUR-Lex. IATE is concept / terminology focused.",
+        "D": "The CPV is a procurement classification — unrelated to terminology."
       }
     },
     {
@@ -21654,7 +21654,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Serve as the EU's translation memory"
+          "text": "Serve as the EU's official inter-institutional translation memory for linguists"
         },
         {
           "letter": "B",
@@ -21662,20 +21662,20 @@
         },
         {
           "letter": "C",
-          "text": "Authenticate users on the Interoperable Europe Portal"
+          "text": "Authenticate users on the Interoperable Europe Portal via eIDAS"
         },
         {
           "letter": "D",
-          "text": "Provide SQL access to the Official Journal archive"
+          "text": "Provide SQL query access to the EU's Official Journal archive"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.\n· A: The EU translation memory is Euramis.\n· C: Authentication is handled by EU Login / eIDAS, not EuroVoc.\n· D: EuroVoc is a vocabulary, not a database engine or query interface.",
+      "explanation": "Correct: B — Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.\n· A: The EU's inter-institutional translation memory for linguists is Euramis, not EuroVoc.\n· C: Authentication uses EU Login and eIDAS. EuroVoc is a thesaurus, not an identity scheme.\n· D: SQL access to the Official Journal is not a EuroVoc feature — it's a different system.",
       "explanations": {
-        "A": "The EU translation memory is Euramis.",
+        "A": "The EU's inter-institutional translation memory for linguists is Euramis, not EuroVoc.",
         "B": "Correct. EuroVoc is the EU's multilingual, multidisciplinary thesaurus, structured according to SKOS, used to classify and index documents across EU institutions. It covers all EU policy fields and is available in 24 languages plus partner languages. Publications Office uses it to tag EUR-Lex content.",
-        "C": "Authentication is handled by EU Login / eIDAS, not EuroVoc.",
-        "D": "EuroVoc is a vocabulary, not a database engine or query interface."
+        "C": "Authentication uses EU Login and eIDAS. EuroVoc is a thesaurus, not an identity scheme.",
+        "D": "SQL access to the Official Journal is not a EuroVoc feature — it's a different system."
       }
     },
     {
@@ -21696,24 +21696,24 @@
         },
         {
           "letter": "B",
-          "text": "Registry is an open-data concept; repository is a closed-data concept"
+          "text": "A registry is a dedicated open-data concept; a repository is reserved for closed-data"
         },
         {
           "letter": "C",
-          "text": "Registry applies to customer data; repository to product data"
+          "text": "A registry applies only to customer master data; a repository applies only to products"
         },
         {
           "letter": "D",
-          "text": "Registry is legally required by the DGA; repository is optional"
+          "text": "A registry approach is legally required by the Data Governance Act; a repository is optional under EU law"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.\n· B: Not a meaningful distinction — neither style is tied to open vs closed data.\n· C: MDM styles apply to any master domain.\n· D: The DGA doesn't mandate either architecture.",
+      "explanation": "Correct: A — Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.\n· B: Neither approach is tied to open-vs-closed data. Both patterns exist in public and private settings.\n· C: Both architectures can serve any domain (customer, product, employee, asset).\n· D: The DGA does not mandate either MDM style. Architecture choice is technical, not legally prescribed.",
       "explanations": {
         "A": "Correct. In a registry-style MDM, the MDM hub holds only keys and cross-references (who holds what data about which entity) — source systems remain the system of record. In a repository (centralised) style, the MDM hub stores the golden record itself and systems consume from it. Registry is lighter but leaves survivorship distributed; repository is more authoritative but heavier to build.",
-        "B": "Not a meaningful distinction — neither style is tied to open vs closed data.",
-        "C": "MDM styles apply to any master domain.",
-        "D": "The DGA doesn't mandate either architecture."
+        "B": "Neither approach is tied to open-vs-closed data. Both patterns exist in public and private settings.",
+        "C": "Both architectures can serve any domain (customer, product, employee, asset).",
+        "D": "The DGA does not mandate either MDM style. Architecture choice is technical, not legally prescribed."
       }
     },
     {
@@ -21730,15 +21730,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "A mandatory ontology for banks under MiFID II"
+          "text": "A mandatory sector-specific ontology for European banks under MiFID II obligations"
         },
         {
           "letter": "B",
-          "text": "A catalogue of consulting firms recognised by the Commission"
+          "text": "A Commission-maintained catalogue of officially recognised consulting firms"
         },
         {
           "letter": "C",
-          "text": "A controlled list of business-sector NACE codes"
+          "text": "A controlled list of business-sector NACE codes for statistical work"
         },
         {
           "letter": "D",
@@ -21746,11 +21746,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically.\n· A: MiFID II has its own regulatory-reporting standards unrelated to Core Business.\n· B: No such catalogue is linked to Core Business.\n· C: NACE codes are a separate Eurostat classification.",
+      "explanation": "Correct: D — Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically.\n· A: MiFID II has its own data fields (LEI, instrument classifications) but no 'Core Business Vocabulary' under that name.\n· B: No such catalogue exists under the SEMIC Core Business Vocabulary umbrella.\n· C: NACE is a separate EU statistical taxonomy maintained by Eurostat, not SEMIC's Core Business Vocabulary.",
       "explanations": {
-        "A": "MiFID II has its own regulatory-reporting standards unrelated to Core Business.",
-        "B": "No such catalogue is linked to Core Business.",
-        "C": "NACE codes are a separate Eurostat classification.",
+        "A": "MiFID II has its own data fields (LEI, instrument classifications) but no 'Core Business Vocabulary' under that name.",
+        "B": "No such catalogue exists under the SEMIC Core Business Vocabulary umbrella.",
+        "C": "NACE is a separate EU statistical taxonomy maintained by Eurostat, not SEMIC's Core Business Vocabulary.",
         "D": "Correct. The Core Business Vocabulary is one of the SEMIC Core Vocabularies (alongside Core Person, Core Location, Core Public Service). It offers a minimum, reusable, extensible model to describe a legal entity — its name, identifiers, legal status, addresses — so cross-border public services interoperate semantically."
       }
     },
@@ -21768,7 +21768,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A 10-character alphanumeric code issued under eIDAS"
+          "text": "A 10-character alphanumeric code issued under the eIDAS framework for cross-border electronic identification"
         },
         {
           "letter": "B",
@@ -21776,20 +21776,20 @@
         },
         {
           "letter": "C",
-          "text": "A GDPR pseudonym for natural persons"
+          "text": "A GDPR-defined pseudonym for natural persons used in cross-controller data-sharing contexts across the Union"
         },
         {
           "letter": "D",
-          "text": "A registration scheme under the Open Data Directive"
+          "text": "A registration scheme established under the Open Data Directive for reusable public-sector datasets across EU Member States"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).\n· A: eIDAS concerns electronic identification and trust services, not LEI.\n· C: LEIs identify legal entities, not natural persons.\n· D: The Open Data Directive doesn't define the LEI.",
+      "explanation": "Correct: B — Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).\n· A: eIDAS concerns electronic identification of natural and legal persons for cross-border interactions — not the LEI scheme.\n· C: The LEI is for legal entities, not natural persons; pseudonymisation sits under GDPR, unrelated.\n· D: The Open Data Directive governs public-sector information reuse across Member States — unrelated to the LEI scheme.",
       "explanations": {
-        "A": "eIDAS concerns electronic identification and trust services, not LEI.",
+        "A": "eIDAS concerns electronic identification of natural and legal persons for cross-border interactions — not the LEI scheme.",
         "B": "Correct. The LEI is a 20-character alphanumeric identifier (ISO 17442) assigned through the Global Legal Entity Identifier System (GLEIS), administered by GLEIF. It uniquely identifies legal entities participating in financial transactions and is widely mandated in financial regulation (EMIR, MiFID II, SFTR).",
-        "C": "LEIs identify legal entities, not natural persons.",
-        "D": "The Open Data Directive doesn't define the LEI."
+        "C": "The LEI is for legal entities, not natural persons; pseudonymisation sits under GDPR, unrelated.",
+        "D": "The Open Data Directive governs public-sector information reuse across Member States — unrelated to the LEI scheme."
       }
     },
     {
@@ -21810,24 +21810,24 @@
         },
         {
           "letter": "B",
-          "text": "Data that has been encrypted"
+          "text": "Data that has been encrypted for confidentiality at rest in the storage backend"
         },
         {
           "letter": "C",
-          "text": "Data older than seven years"
+          "text": "Data older than seven years retained for regulatory-audit"
         },
         {
           "letter": "D",
-          "text": "Data exclusively about machine-learning models"
+          "text": "Data that exclusively describes machine-learning artefacts"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.\n· B: Encryption is a security operation, not a definition of metadata.\n· C: Age isn't part of the definition of metadata.\n· D: Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset).",
+      "explanation": "Correct: A — Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.\n· B: Encryption is a confidentiality control applied at rest in the storage backend, not a definition of metadata.\n· C: Retention age is a lifecycle concept; old data isn't metadata merely because it's old.\n· D: Model metadata is one kind of metadata, but the concept is much broader — not exclusively ML artefacts.",
       "explanations": {
         "A": "Correct. Metadata is descriptive, structural, administrative or provenance information about a data asset — title, author, creation date, schema, lineage, access rules, quality indicators. Good metadata makes data findable, understandable and trustworthy, which is why it anchors FAIR and modern data-catalogue practice.",
-        "B": "Encryption is a security operation, not a definition of metadata.",
-        "C": "Age isn't part of the definition of metadata.",
-        "D": "Metadata exists for any data — datasets, documents, images, ML models (model cards are a subset)."
+        "B": "Encryption is a confidentiality control applied at rest in the storage backend, not a definition of metadata.",
+        "C": "Retention age is a lifecycle concept; old data isn't metadata merely because it's old.",
+        "D": "Model metadata is one kind of metadata, but the concept is much broader — not exclusively ML artefacts."
       }
     },
     {
@@ -21848,24 +21848,24 @@
         },
         {
           "letter": "B",
-          "text": "Cybersecurity controls for EU institutions"
+          "text": "Cybersecurity controls used by the EU institutions to protect IT systems against threats"
         },
         {
           "letter": "C",
-          "text": "EU public-procurement categories"
+          "text": "Categories used to classify tender notices in EU public procurement"
         },
         {
           "letter": "D",
-          "text": "ML model evaluation metrics"
+          "text": "Evaluation metrics used to compare machine-learning model candidates"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.\n· B: Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.\n· C: Procurement codes live in CPV, not Dublin Core.\n· D: ML metrics (accuracy, precision, recall) are unrelated to metadata schemas.",
+      "explanation": "Correct: A — Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.\n· B: Cybersecurity controls against threats live in ISO 27001 Annex A and similar frameworks, not in Dublin Core.\n· C: Procurement categories come from the CPV vocabulary, not Dublin Core.\n· D: ML evaluation metrics belong to the ML literature (accuracy, F1, ROC-AUC), not Dublin Core.",
       "explanations": {
         "A": "Correct. Dublin Core (DCMI) specifies 15 generic metadata elements — title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights — widely used for cataloguing resources. It is a foundational schema referenced by DCAT and other metadata vocabularies.",
-        "B": "Cybersecurity controls come from ISO 27001, NIS2, etc. — not Dublin Core.",
-        "C": "Procurement codes live in CPV, not Dublin Core.",
-        "D": "ML metrics (accuracy, precision, recall) are unrelated to metadata schemas."
+        "B": "Cybersecurity controls against threats live in ISO 27001 Annex A and similar frameworks, not in Dublin Core.",
+        "C": "Procurement categories come from the CPV vocabulary, not Dublin Core.",
+        "D": "ML evaluation metrics belong to the ML literature (accuracy, F1, ROC-AUC), not Dublin Core."
       }
     },
     {
@@ -21886,24 +21886,24 @@
         },
         {
           "letter": "B",
-          "text": "The geographic origin of data-centre hardware"
+          "text": "The geographic origin of the data-centre hardware running the enterprise data stores"
         },
         {
           "letter": "C",
-          "text": "Only the login history of analysts"
+          "text": "Only the login history of analysts accessing data across the platform each day"
         },
         {
           "letter": "D",
-          "text": "The training runs of ML models"
+          "text": "Only the training runs of machine-learning models executed on labelled data"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.\n· B: Hardware origin is a supply-chain / sovereignty concern, not data lineage.\n· C: Login history is an audit log, not lineage.\n· D: ML-model provenance is related but a different layer (model lineage) from data lineage.",
+      "explanation": "Correct: A — Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.\n· B: Hardware origin is an infrastructure supply-chain fact, not data lineage.\n· C: Login history is an access log, not a transformation trail on the data itself.\n· D: Model training runs are MLOps metadata — lineage is broader, covering any data transformation.",
       "explanations": {
         "A": "Correct. Data lineage answers 'where did this number come from?' by tracing data through sources, pipelines, transformations and consuming reports. It is essential for impact analysis (what breaks if this table changes?), regulatory accountability and root-cause analysis. Modern catalogues auto-ingest lineage from dbt, Airflow, Spark and warehouse query logs.",
-        "B": "Hardware origin is a supply-chain / sovereignty concern, not data lineage.",
-        "C": "Login history is an audit log, not lineage.",
-        "D": "ML-model provenance is related but a different layer (model lineage) from data lineage."
+        "B": "Hardware origin is an infrastructure supply-chain fact, not data lineage.",
+        "C": "Login history is an access log, not a transformation trail on the data itself.",
+        "D": "Model training runs are MLOps metadata — lineage is broader, covering any data transformation."
       }
     },
     {
@@ -21920,7 +21920,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Only Commission departments"
+          "text": "Only the Commission departments' own internal public-data holdings across directorates-general"
         },
         {
           "letter": "B",
@@ -21928,20 +21928,20 @@
         },
         {
           "letter": "C",
-          "text": "Private-sector e-commerce platforms"
+          "text": "Private-sector e-commerce platforms operating across the EU single market for consumer trade"
         },
         {
           "letter": "D",
-          "text": "OECD and UN data repositories exclusively"
+          "text": "OECD and UN data repositories exclusively, without any EU Member-State or institutional datasets"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.\n· A: The portal aggregates far more than Commission DGs.\n· C: Private e-commerce is out of scope.\n· D: Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies.",
+      "explanation": "Correct: B — Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.\n· A: The portal is EU-wide (Member States + EU bodies), not limited to Commission DGs.\n· C: Private-sector e-commerce data isn't federated — the portal is a public-sector reuse portal.\n· D: The portal publishes EU-held data; it doesn't mirror OECD or UN repositories exclusively.",
       "explanations": {
-        "A": "The portal aggregates far more than Commission DGs.",
+        "A": "The portal is EU-wide (Member States + EU bodies), not limited to Commission DGs.",
         "B": "Correct. data.europa.eu harvests metadata from Member-State open-data portals (typically via DCAT-AP), EU institutions, bodies and agencies, and publishes a single searchable catalogue. It is the successor to the former European Data Portal and EU Open Data Portal, consolidated in 2021.",
-        "C": "Private e-commerce is out of scope.",
-        "D": "Non-EU international datasets are not the core of the portal, though interoperability with some is possible through shared vocabularies."
+        "C": "Private-sector e-commerce data isn't federated — the portal is a public-sector reuse portal.",
+        "D": "The portal publishes EU-held data; it doesn't mirror OECD or UN repositories exclusively."
       }
     },
     {
@@ -22000,24 +22000,24 @@
         },
         {
           "letter": "B",
-          "text": "Taxonomies are always richer than ontologies"
+          "text": "Taxonomies are strictly richer and more expressive than any equivalent ontologies in every case across the literature"
         },
         {
           "letter": "C",
-          "text": "They are synonyms"
+          "text": "Taxonomies and ontologies are strictly synonymous and fully interchangeable terms in the knowledge-modelling literature without any practical distinction in use"
         },
         {
           "letter": "D",
-          "text": "Ontologies always use JSON while taxonomies use XML"
+          "text": "Ontologies must always use the JSON serialisation while taxonomies must always be expressed in XML-based structured formats"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.\n· B: The opposite — ontologies are richer because they capture more semantics.\n· C: They are related but distinct. Using them interchangeably loses important precision.\n· D: Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction.",
+      "explanation": "Correct: A — Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.\n· B: Reversed. Ontologies are richer: they express relationships and axioms beyond hierarchy.\n· C: They are related but not synonymous — richness of semantics differs fundamentally between the two approaches.\n· D: Both can be serialised in many syntaxes (Turtle, RDF/XML, JSON-LD).",
       "explanations": {
         "A": "Correct. A taxonomy is a hierarchy — broader/narrower relations, classifying items into classes (think biological Linnaean classification, or NACE). An ontology adds formal relationships (partOf, hasRole, inverseOf), classes, properties, cardinalities and logical axioms that an automated reasoner (Pellet, HermiT) can use to infer new facts. OWL is the canonical ontology language.",
-        "B": "The opposite — ontologies are richer because they capture more semantics.",
-        "C": "They are related but distinct. Using them interchangeably loses important precision.",
-        "D": "Serialisation (RDF/XML, Turtle, JSON-LD) is orthogonal to the taxonomy-vs-ontology distinction."
+        "B": "Reversed. Ontologies are richer: they express relationships and axioms beyond hierarchy.",
+        "C": "They are related but not synonymous — richness of semantics differs fundamentally between the two approaches.",
+        "D": "Both can be serialised in many syntaxes (Turtle, RDF/XML, JSON-LD)."
       }
     },
     {
@@ -22034,15 +22034,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Only physical table definitions"
+          "text": "Only physical table definitions extracted from the target warehouse database engine at refresh time"
         },
         {
           "letter": "B",
-          "text": "A container orchestration platform"
+          "text": "A Kubernetes-style container orchestration platform used to run analytical workloads elastically in the enterprise cluster"
         },
         {
           "letter": "C",
-          "text": "An encryption key rotation service"
+          "text": "An encryption-key rotation and management service used by the warehouse to protect personal data records"
         },
         {
           "letter": "D",
@@ -22050,11 +22050,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes.\n· A: Physical definitions are only part of what a catalogue provides.\n· B: Container orchestration is Kubernetes's job.\n· C: Key rotation belongs to a KMS / HSM, not a catalogue.",
+      "explanation": "Correct: D — Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes.\n· A: A catalogue includes physical definitions but also business definitions, ownership, lineage, quality — much broader.\n· B: Container orchestration is Kubernetes / Nomad / ECS territory in the enterprise cluster, not a data catalogue.\n· C: Key rotation belongs in KMS / HSM infrastructure, not the catalogue.",
       "explanations": {
-        "A": "Physical definitions are only part of what a catalogue provides.",
-        "B": "Container orchestration is Kubernetes's job.",
-        "C": "Key rotation belongs to a KMS / HSM, not a catalogue.",
+        "A": "A catalogue includes physical definitions but also business definitions, ownership, lineage, quality — much broader.",
+        "B": "Container orchestration is Kubernetes / Nomad / ECS territory in the enterprise cluster, not a data catalogue.",
+        "C": "Key rotation belongs in KMS / HSM infrastructure, not the catalogue.",
         "D": "Correct. Modern data catalogues are the 'Google for your data' — users search for datasets, see definitions, owners, certified vs experimental status, lineage, quality scores and related glossary terms. They are anchor points for self-service analytics and for governance programmes."
       }
     },
@@ -22072,7 +22072,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Exact keyword matching with Boolean operators"
+          "text": "Exact keyword matching using Boolean AND / OR / NOT operators against the indexed corpus of documents at enterprise scale"
         },
         {
           "letter": "B",
@@ -22080,20 +22080,20 @@
         },
         {
           "letter": "C",
-          "text": "SQL full-text LIKE queries"
+          "text": "Simple SQL LIKE queries with wildcard patterns against document-text columns in a warehouse"
         },
         {
           "letter": "D",
-          "text": "Regex substitutions in the documents"
+          "text": "Regex substitutions applied directly inside the body of documents before comparing them"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.\n· A: Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.\n· C: LIKE is lexical and pattern-based — not semantic.\n· D: Regex is pattern matching, not meaning-based retrieval.",
+      "explanation": "Correct: B — Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.\n· A: Boolean keyword search against an indexed corpus is the traditional IR baseline — useful, but not 'semantic' in the embeddings sense.\n· C: SQL LIKE is a substring match; it doesn't capture semantic similarity.\n· D: Regex substitutions transform text, they don't retrieve semantically similar items.",
       "explanations": {
-        "A": "Keyword / Boolean search is lexical, not semantic — it misses synonyms, paraphrases and cross-language matches.",
+        "A": "Boolean keyword search against an indexed corpus is the traditional IR baseline — useful, but not 'semantic' in the embeddings sense.",
         "B": "Correct. Semantic search encodes documents and queries as dense vector embeddings (from language models), and retrieves by similarity (cosine, inner product). In production it is typically hybrid: lexical (BM25) + semantic, often with a re-ranker. This gives recall on paraphrases while keeping exact-match precision.",
-        "C": "LIKE is lexical and pattern-based — not semantic.",
-        "D": "Regex is pattern matching, not meaning-based retrieval."
+        "C": "SQL LIKE is a substring match; it doesn't capture semantic similarity.",
+        "D": "Regex substitutions transform text, they don't retrieve semantically similar items."
       }
     },
     {
@@ -22110,15 +22110,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Encryption key types"
+          "text": "Types of encryption keys used to secure personal-data storage at rest in the EU"
         },
         {
           "letter": "B",
-          "text": "European public-procurement codes"
+          "text": "European public-procurement classification codes used for tender notices and related Official Journal awards"
         },
         {
           "letter": "C",
-          "text": "Data-warehouse storage formats"
+          "text": "Data-warehouse storage formats optimised for analytical columnar storage at scale"
         },
         {
           "letter": "D",
@@ -22126,11 +22126,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier).\n· A: Keys are secrets, not identifiers.\n· B: Procurement codes live in CPV.\n· C: Storage formats are Parquet, ORC, Avro, etc.",
+      "explanation": "Correct: D — Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier).\n· A: These are identifiers for resources / researchers / datasets, not cryptographic key types.\n· B: Procurement codes come from the CPV vocabulary — a different standard used for tender notices, not persistent identifiers for resources.\n· C: Storage formats (Parquet, ORC) are unrelated to persistent identifiers.",
       "explanations": {
-        "A": "Keys are secrets, not identifiers.",
-        "B": "Procurement codes live in CPV.",
-        "C": "Storage formats are Parquet, ORC, Avro, etc.",
+        "A": "These are identifiers for resources / researchers / datasets, not cryptographic key types.",
+        "B": "Procurement codes come from the CPV vocabulary — a different standard used for tender notices, not persistent identifiers for resources.",
+        "C": "Storage formats (Parquet, ORC) are unrelated to persistent identifiers.",
         "D": "Correct. DOI (Digital Object Identifier), ORCID (researcher IDs) and Handle.net are persistent identifier systems. They guarantee that a reference resolves to the same (or updated) resource over time, surviving URL changes and institutional reorganisations. Persistent IDs directly support the 'Findable' principle of FAIR (F1: unique persistent identifier)."
       }
     },
@@ -22148,7 +22148,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Availability"
+          "text": "Availab."
         },
         {
           "letter": "B",
@@ -22156,20 +22156,20 @@
         },
         {
           "letter": "C",
-          "text": "Portability"
+          "text": "Portab."
         },
         {
           "letter": "D",
-          "text": "Recoverability"
+          "text": "Recov."
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability is system-dependent — it depends on infrastructure uptime, not the data itself.\n· C: Portability depends on the surrounding system (formats, migration tools).\n· D: Recoverability depends on backup and restore mechanisms — system-dependent.",
+      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability ('Availab.') is a system-dependent quality, not inherent to the data values themselves.\n· C: Portability ('Portab.') is system-dependent — depends on formats and surrounding systems.\n· D: Recoverability ('Recov.') is a system-dependent quality under ISO/IEC 25012.",
       "explanations": {
-        "A": "Availability is system-dependent — it depends on infrastructure uptime, not the data itself.",
+        "A": "Availability ('Availab.') is a system-dependent quality, not inherent to the data values themselves.",
         "B": "Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.",
-        "C": "Portability depends on the surrounding system (formats, migration tools).",
-        "D": "Recoverability depends on backup and restore mechanisms — system-dependent."
+        "C": "Portability ('Portab.') is system-dependent — depends on formats and surrounding systems.",
+        "D": "Recoverability ('Recov.') is a system-dependent quality under ISO/IEC 25012."
       }
     },
     {
