@@ -23,9 +23,16 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .home h1{font-size:24px;font-weight:800;margin:6px 0 2px}
 .home .sub{font-size:13px;color:var(--muted);margin-bottom:14px}
 .stats-row{display:flex;gap:8px;margin:10px 0 14px;flex-wrap:wrap}
-.stat-chip{flex:1;min-width:90px;background:var(--card);border:1px solid var(--border);padding:10px 12px;border-radius:12px;text-align:center}
+.stat-chip{flex:1;min-width:90px;background:var(--card);border:1px solid var(--border);padding:10px 12px;border-radius:12px;text-align:center;transition:background .2s,border-color .2s}
 .stat-chip strong{display:block;font-size:18px;color:var(--accent)}
 .stat-chip .lbl{font-size:11px;color:var(--muted);margin-top:2px}
+.stat-chip .trend-arrow{font-size:12px;margin-left:4px;vertical-align:1px;font-weight:700}
+/* Progress-trend tints: compared to the last saved-stats snapshot */
+.stat-chip.trend-up{background:var(--greenbg);border-color:var(--green)}
+.stat-chip.trend-up strong{color:var(--green)}
+.stat-chip.trend-down{background:var(--redbg);border-color:var(--red)}
+.stat-chip.trend-down strong{color:var(--red)}
+.stat-chip.trend-flat .trend-arrow{color:var(--muted)}
 
 .section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px}
 .section h3{font-size:13px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
@@ -531,6 +538,10 @@ document.getElementById('lock-pw').addEventListener('keydown', e => { if (e.key 
 const LS_STATS    = 'pt_stats_v1';
 const LS_SESSION  = 'pt_session_v1';
 const LS_SETTINGS = 'pt_settings_v1';
+// Progress snapshot: per-playlist {accuracy, accuracyInTime, avgCorrectMs}
+// captured at the last explicit "save stats" action. Used by renderHome to
+// color the dashboard chips (up/down/flat) so users see trend at a glance.
+const LS_SNAPSHOT = 'pt_dash_snapshot_v1';
 
 let DB = null;       // {version, types, sources, questions: [...]}
 let MODE = 'home';   // 'home' | 'guide' | 'practice'
@@ -578,6 +589,68 @@ function saveSettings(s){ return lsSet(LS_SETTINGS, s); }
 function loadSession(){ return lsGet(LS_SESSION); }
 function saveSession(s){ return lsSet(LS_SESSION, s); }
 function clearSession(){ lsDel(LS_SESSION); }
+
+// ----- Progress snapshot -----
+// Shape: { global: {accuracy, accuracyInTime, avgCorrectMs},
+//          byPlaylist: { [key]: {accuracy, accuracyInTime, avgCorrectMs} } }
+function loadDashSnapshot(){ return lsGet(LS_SNAPSHOT) || { global: null, byPlaylist: {} }; }
+function saveDashSnapshot(snap){ return lsSet(LS_SNAPSHOT, snap); }
+// Re-aggregate stats to produce the same numbers renderHome shows, so a later
+// diff against the live dashboard is apples-to-apples.
+function computeDashSnapshot(){
+  const stats = loadStats();
+  const out = { global: null, byPlaylist: {} };
+  let gA = 0, gSum = 0, gSumIT = 0, gBestSum = 0, gBestCount = 0;
+  const bySrc = {};
+  for(const q of (DB && DB.questions) || []){
+    const s = stats[q.id];
+    if(s && s.attempts > 0){
+      gA++;
+      const sc = statScore(s);
+      gSum += sc;
+      if(s.last_within_time) gSumIT += sc;
+    }
+    if(s && s.best_time_ms != null){
+      gBestSum += s.best_time_ms;
+      gBestCount++;
+    }
+    if(!bySrc[q.source]) bySrc[q.source] = {a:0, sum:0, sumIT:0, bestSum:0, bestCount:0};
+    if(s && s.attempts > 0){
+      bySrc[q.source].a++;
+      const sc = statScore(s);
+      bySrc[q.source].sum += sc;
+      if(s.last_within_time) bySrc[q.source].sumIT += sc;
+    }
+    if(s && s.best_time_ms != null){
+      bySrc[q.source].bestSum += s.best_time_ms;
+      bySrc[q.source].bestCount++;
+    }
+  }
+  out.global = {
+    accuracy: gA > 0 ? Math.round(gSum / gA * 100) : 0,
+    accuracyInTime: gA > 0 ? Math.round(gSumIT / gA * 100) : 0,
+    avgCorrectMs: gBestCount > 0 ? gBestSum / gBestCount : null,
+  };
+  for(const k of Object.keys(bySrc)){
+    const v = bySrc[k];
+    out.byPlaylist[k] = {
+      accuracy: v.a > 0 ? Math.round(v.sum / v.a * 100) : 0,
+      accuracyInTime: v.a > 0 ? Math.round(v.sumIT / v.a * 100) : 0,
+      avgCorrectMs: v.bestCount > 0 ? v.bestSum / v.bestCount : null,
+    };
+  }
+  return out;
+}
+// Classify delta: higher-is-better for accuracy, lower-is-better for time.
+// Returns 'up' | 'down' | 'flat' | 'new' (no baseline yet).
+function trendClass(current, baseline, lowerIsBetter){
+  if(baseline == null || current == null) return 'new';
+  const eps = lowerIsBetter ? 500 : 1;  // 0.5s or 1 percentage point
+  const diff = current - baseline;
+  if(Math.abs(diff) < eps) return 'flat';
+  const better = lowerIsBetter ? diff < 0 : diff > 0;
+  return better ? 'up' : 'down';
+}
 
 // ----- Per-question stats -----
 function qStat(qid){
@@ -700,6 +773,7 @@ function pickStatsFile(){
       try{
         const obj = JSON.parse(reader.result);
         mergeStatsFromObject(obj);
+        saveDashSnapshot(computeDashSnapshot());
       }catch(e){
         toast('Could not parse: ' + e.message);
       }
@@ -739,9 +813,27 @@ async function resetAllStats(){
   render();
 }
 
-function downloadStats(){
+// On iOS Safari there's no showSaveFilePicker, but navigator.share with a File
+// opens the system share sheet which includes "Save to Files" — that lets the
+// user pick any folder (including the one they loaded from). Falls back to the
+// classic anchor-download when share-with-files isn't supported either.
+async function downloadStats(){
   const stats = loadStats();
-  const blob = new Blob([JSON.stringify(stats, null, 2)], { type: 'application/json' });
+  const json = JSON.stringify(stats, null, 2);
+  const file = new File([json], 'stats.json', { type: 'application/json' });
+
+  if(typeof navigator !== 'undefined' && navigator.canShare && navigator.canShare({ files: [file] })){
+    try {
+      await navigator.share({ files: [file], title: 'PsycoTrain stats', text: 'Save stats.json to Files (iCloud · PsycoTrain folder)' });
+      toast('Stats shared — tap "Save to Files" to keep them');
+      return;
+    } catch(e){
+      // User cancelled or share failed — fall through to anchor download.
+      if(e && e.name === 'AbortError') return;
+    }
+  }
+
+  const blob = new Blob([json], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -829,6 +921,9 @@ async function promptLoadStats(){
     const txt = await file.text();
     mergeStatsFromObject(JSON.parse(txt));
     STATS_DIRTY = false;
+    // Seed the dashboard baseline with the freshly loaded state so trend
+    // coloring compares "now vs last load" until the next explicit save.
+    saveDashSnapshot(computeDashSnapshot());
   } catch(e){
     toast('Load failed: ' + (e.message || e));
   }
@@ -844,7 +939,7 @@ async function promptSaveStats(){
     icon: '⇡', okLabel: 'Save', cancelLabel: 'Not now',
   });
   if(!ok) return;
-  if(!hasFSA()){ downloadStats(); STATS_DIRTY = false; return; }
+  if(!hasFSA()){ await downloadStats(); STATS_DIRTY = false; saveDashSnapshot(computeDashSnapshot()); return; }
   try {
     let handle = await fsaGetHandle();
     if(!handle){
@@ -860,6 +955,7 @@ async function promptSaveStats(){
     await w.write(JSON.stringify(loadStats(), null, 2));
     await w.close();
     STATS_DIRTY = false;
+    saveDashSnapshot(computeDashSnapshot());
     toast('Stats saved');
   } catch(e){
     toast('Save failed: ' + (e.message || e));
@@ -1246,17 +1342,29 @@ function renderHome(root){
   const attemptedStr = `${dash.attempted}/${dash.total}`;
   const dashSubLabel = activePlaylist ? esc(activePlaylist.label) : 'All playlists';
 
+  // Trend vs last-saved snapshot: tints each chip (green ↑ / red ↓ / neutral =)
+  // so users see progress at a glance. Only meaningful after first save; until
+  // then trendClass returns 'new' which shows no tint.
+  const snap = loadDashSnapshot();
+  const baseline = activePlaylist ? (snap.byPlaylist[activePlaylist.key] || null) : snap.global;
+  const trendAcc = trendClass(dash.accuracy, baseline ? baseline.accuracy : null, false);
+  const trendIT  = trendClass(dash.accuracyInTime, baseline ? baseline.accuracyInTime : null, false);
+  const trendAvg = trendClass(dash.avgCorrectMs, baseline ? baseline.avgCorrectMs : null, true);
+  const trendArrow = t => (t === 'up' ? '↑' : t === 'down' ? '↓' : t === 'flat' ? '' : '');
+
   root.appendChild($(`
     <div class="home">
       <h1>PsycoTrain</h1>
       <div class="sub">${total} questions · ${visiblePlaylists.length} playlists · <em>${dashSubLabel}</em></div>
 
-      <!-- Adaptive dashboard: shows global or active-playlist stats in the same slot. -->
+      <!-- Adaptive dashboard: shows global or active-playlist stats in the same slot.
+           Trend tint (trend-up/down/flat) compares each metric against the
+           last explicit "save stats" snapshot. -->
       <div class="dash-stats">
         <div class="stat-chip"><strong>${attemptedStr}</strong><div class="lbl">Attempted</div></div>
-        <div class="stat-chip"><strong>${dash.accuracy}%</strong><div class="lbl">Accuracy</div></div>
-        <div class="stat-chip"><strong>${dash.accuracyInTime}%</strong><div class="lbl">In time</div></div>
-        <div class="stat-chip" title="Average best time across questions answered correctly at least once"><strong>${dash.avgCorrectMs != null ? fmtTime(dash.avgCorrectMs) : '—'}</strong><div class="lbl">Avg ✓ time</div></div>
+        <div class="stat-chip trend-${trendAcc}" title="${baseline ? `Was ${baseline.accuracy}% at last save` : 'No saved baseline yet — save stats to start tracking'}"><strong>${dash.accuracy}%<span class="trend-arrow">${trendArrow(trendAcc)}</span></strong><div class="lbl">Accuracy</div></div>
+        <div class="stat-chip trend-${trendIT}" title="${baseline ? `Was ${baseline.accuracyInTime}% at last save` : 'No saved baseline yet — save stats to start tracking'}"><strong>${dash.accuracyInTime}%<span class="trend-arrow">${trendArrow(trendIT)}</span></strong><div class="lbl">In time</div></div>
+        <div class="stat-chip trend-${trendAvg}" title="${baseline && baseline.avgCorrectMs != null ? `Was ${fmtTime(baseline.avgCorrectMs)} at last save` : 'Average best time across questions answered correctly at least once'}"><strong>${dash.avgCorrectMs != null ? fmtTime(dash.avgCorrectMs) : '—'}<span class="trend-arrow">${trendArrow(trendAvg)}</span></strong><div class="lbl">Avg ✓ time</div></div>
       </div>
 
       <!-- Horizontal swipe bar of playlists. -->
@@ -1300,8 +1408,23 @@ function renderHome(root){
 
   // Restore horizontal scroll position (chip click triggers re-render, which would
   // otherwise reset the bar to scrollLeft=0 and hide the user's chosen chip).
+  // On a fresh page load PLAYLIST_SCROLL_X is 0, so the active chip may be
+  // off-screen — scroll it into view instead.
   const plBarEl = root.querySelector('#playlist-chips');
-  if(plBarEl) plBarEl.scrollLeft = PLAYLIST_SCROLL_X;
+  if(plBarEl){
+    if(PLAYLIST_SCROLL_X > 0){
+      plBarEl.scrollLeft = PLAYLIST_SCROLL_X;
+    } else {
+      const activeChip = plBarEl.querySelector('.chip.on');
+      if(activeChip){
+        const chipLeft = activeChip.offsetLeft;
+        const chipCenter = chipLeft + activeChip.offsetWidth / 2;
+        const target = Math.max(0, chipCenter - plBarEl.clientWidth / 2);
+        plBarEl.scrollLeft = target;
+        PLAYLIST_SCROLL_X = plBarEl.scrollLeft;
+      }
+    }
+  }
 
   // Wire up playlist chips → switch playlist.
   root.querySelectorAll('#playlist-chips .chip').forEach(c => {
@@ -1388,7 +1511,10 @@ function renderHome(root){
   });
 
   // Mini save / load
-  root.querySelector('#save-btn').addEventListener('click', downloadStats);
+  root.querySelector('#save-btn').addEventListener('click', async () => {
+    await downloadStats();
+    saveDashSnapshot(computeDashSnapshot());
+  });
   root.querySelector('#load-btn').addEventListener('click', pickStatsFile);
 }
 function chipHtml(cls, value, label, on){
