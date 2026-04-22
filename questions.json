@@ -23102,24 +23102,24 @@
         },
         {
           "letter": "B",
-          "text": "Adding new labelled records by manual annotation"
+          "text": "Adding genuinely new labelled records to the training set through paid manual human annotation by expert reviewers working in teams"
         },
         {
           "letter": "C",
-          "text": "Buying more data from an external vendor"
+          "text": "Buying additional bulk data from an external commercial vendor to supplement an in-house training corpus and enlarge the sample size"
         },
         {
           "letter": "D",
-          "text": "Encrypting the training set"
+          "text": "Encrypting the training set's files at rest using strong modern symmetric algorithms to protect training data against unauthorised access in transit"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.\n· B: Manual annotation is data labelling, not augmentation.\n· C: Procurement of external data is data acquisition, not augmentation.\n· D: Encryption is a security control, not a data-augmentation technique.",
+      "explanation": "Correct: A — Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.\n· B: Adding new hand-labelled data through manual annotation is labelling, not augmentation. Augmentation derives variants from existing examples.\n· C: Buying external data enlarges the dataset but doesn't derive synthetic variants from what you already have — different sourcing strategy.\n· D: Encryption at rest or in transit is a security control, not a model-training technique like data augmentation.",
       "explanations": {
         "A": "Correct. Augmentation enlarges the effective training set by applying label-preserving transformations — rotations, flips, crops, noise on images; synonym replacement, back-translation on text; mixup, cutmix for generalisation. It fights overfitting and can help mitigate bias where minority classes are under-represented — a mitigation measure compatible with AI Act Art. 10.",
-        "B": "Manual annotation is data labelling, not augmentation.",
-        "C": "Procurement of external data is data acquisition, not augmentation.",
-        "D": "Encryption is a security control, not a data-augmentation technique."
+        "B": "Adding new hand-labelled data through manual annotation is labelling, not augmentation. Augmentation derives variants from existing examples.",
+        "C": "Buying external data enlarges the dataset but doesn't derive synthetic variants from what you already have — different sourcing strategy.",
+        "D": "Encryption at rest or in transit is a security control, not a model-training technique like data augmentation."
       }
     },
     {
@@ -23140,24 +23140,24 @@
         },
         {
           "letter": "B",
-          "text": "The code was mis-compiled"
+          "text": "The compiled model binary was corrupted at build time on the CI server, producing invalid code paths"
         },
         {
           "letter": "C",
-          "text": "The training set was too large"
+          "text": "The original training set was simply too large in row count, causing slow batch inference on the server cluster"
         },
         {
           "letter": "D",
-          "text": "Unit tests failed at release time"
+          "text": "Unit tests in the CI pipeline started failing at release time and blocked the latest model version from being shipped"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.\n· B: A compilation issue would typically produce immediate errors, not gradual accuracy decay.\n· C: Large training sets generally help, not hurt, unless they introduce noise or bias.\n· D: Failed tests would have blocked release.",
+      "explanation": "Correct: A — Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.\n· B: A corrupt binary would fail immediately, not produce slow months-long degradation. Drift is the classic gradual-degradation cause.\n· C: Training-set size affects how a model is built; it doesn't explain slow post-deployment degradation on unseen data.\n· D: Failing unit tests would block the release, not cause silent gradual accuracy loss in production after months.",
       "explanations": {
         "A": "Correct. Data drift (P(X) changes — e.g. customer demographics shift) and concept drift (P(Y|X) changes — e.g. what counts as fraud evolves) are the canonical causes of post-deployment accuracy decay. MLOps practices monitor input / output distributions and model performance over time, alerting and triggering retraining when drift thresholds are crossed.",
-        "B": "A compilation issue would typically produce immediate errors, not gradual accuracy decay.",
-        "C": "Large training sets generally help, not hurt, unless they introduce noise or bias.",
-        "D": "Failed tests would have blocked release."
+        "B": "A corrupt binary would fail immediately, not produce slow months-long degradation. Drift is the classic gradual-degradation cause.",
+        "C": "Training-set size affects how a model is built; it doesn't explain slow post-deployment degradation on unseen data.",
+        "D": "Failing unit tests would block the release, not cause silent gradual accuracy loss in production after months."
       }
     },
     {
@@ -23174,7 +23174,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Collecting all raw data in a central cloud store"
+          "text": "Collecting every participant's raw data into one central cloud store before model training begins in any form"
         },
         {
           "letter": "B",
@@ -23182,20 +23182,20 @@
         },
         {
           "letter": "C",
-          "text": "Requiring every node to share its training set openly"
+          "text": "Requiring every participating node to publicly share its training data openly"
         },
         {
           "letter": "D",
-          "text": "Preventing any collaborative model building"
+          "text": "Preventing any form of collaborative model building across participating orgs"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.\n· A: Central data collection is the classical centralised paradigm — exactly what federated learning avoids.\n· C: That would defeat the privacy purpose — federated learning specifically keeps data local.\n· D: Federated learning is explicitly designed to enable collaborative model building across organisations.",
+      "explanation": "Correct: B — Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.\n· A: Centralising every participant's raw data defeats the main privacy motivation of federated learning.\n· C: Federated learning was designed to avoid raw-data sharing; only model updates travel.\n· D: Federated learning actively enables collaboration — it is not a ban on sharing model learnings.",
       "explanations": {
-        "A": "Central data collection is the classical centralised paradigm — exactly what federated learning avoids.",
+        "A": "Centralising every participant's raw data defeats the main privacy motivation of federated learning.",
         "B": "Correct. Federated learning keeps raw data at the edge (hospitals, mobile devices, participating institutions). Each node trains locally on its data; only model parameter updates are sent to a central aggregator that averages them (FedAvg) and ships the new model back. This reduces data-transfer burden and supports privacy / sovereignty goals — a promising approach for European Data Spaces where data can't easily leave the source organisation. Can be combined with differential privacy and secure aggregation for stronger privacy.",
-        "C": "That would defeat the privacy purpose — federated learning specifically keeps data local.",
-        "D": "Federated learning is explicitly designed to enable collaborative model building across organisations."
+        "C": "Federated learning was designed to avoid raw-data sharing; only model updates travel.",
+        "D": "Federated learning actively enables collaboration — it is not a ban on sharing model learnings."
       }
     },
     {
@@ -23212,15 +23212,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Passive data collection from telemetry"
+          "text": "Passive data collection gathered from background telemetry"
         },
         {
           "letter": "B",
-          "text": "Change Data Capture from an operational database"
+          "text": "Change Data Capture (CDC) from an operational database"
         },
         {
           "letter": "C",
-          "text": "Web scraping of third-party sites"
+          "text": "Web-scraping of third-party sites to harvest public-facing content online"
         },
         {
           "letter": "D",
@@ -23228,11 +23228,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Active (or 'reactive') collection happens when the subject knowingly and deliberately provides data — surveys, forms, interviews, application submissions. It typically benefits from high semantic quality (the person knows what they mean) but suffers from response bias and limited scale. Passive collection, by contrast, observes behaviour without asking, with the opposite trade-offs.\n· A: Passive collection means data is captured without the subject actively supplying it — server logs, cookies, IoT telemetry, clickstreams. A survey is the opposite: the respondent deliberately submits answers.\n· B: CDC streams insert/update/delete events from a database log. It is a pipeline-level ingestion pattern, not a primary-collection method from human respondents.\n· C: Web scraping extracts data from third-party websites, usually without the data subject's direct involvement — a passive / secondary-source technique, not an online survey.",
+      "explanation": "Correct: D — Correct. Active (or 'reactive') collection happens when the subject knowingly and deliberately provides data — surveys, forms, interviews, application submissions. It typically benefits from high semantic quality (the person knows what they mean) but suffers from response bias and limited scale. Passive collection, by contrast, observes behaviour without asking, with the opposite trade-offs.\n· A: Telemetry is gathered without explicit respondent participation — typical passive collection.\n· B: CDC captures changes in an operational database; no respondent is actively providing data.\n· C: Scraping harvests third-party content from public-facing sites, not directly provided survey responses.",
       "explanations": {
-        "A": "Passive collection means data is captured without the subject actively supplying it — server logs, cookies, IoT telemetry, clickstreams. A survey is the opposite: the respondent deliberately submits answers.",
-        "B": "CDC streams insert/update/delete events from a database log. It is a pipeline-level ingestion pattern, not a primary-collection method from human respondents.",
-        "C": "Web scraping extracts data from third-party websites, usually without the data subject's direct involvement — a passive / secondary-source technique, not an online survey.",
+        "A": "Telemetry is gathered without explicit respondent participation — typical passive collection.",
+        "B": "CDC captures changes in an operational database; no respondent is actively providing data.",
+        "C": "Scraping harvests third-party content from public-facing sites, not directly provided survey responses.",
         "D": "Correct. Active (or 'reactive') collection happens when the subject knowingly and deliberately provides data — surveys, forms, interviews, application submissions. It typically benefits from high semantic quality (the person knows what they mean) but suffers from response bias and limited scale. Passive collection, by contrast, observes behaviour without asking, with the opposite trade-offs."
       }
     },
@@ -23254,24 +23254,24 @@
         },
         {
           "letter": "B",
-          "text": "Manually downloading PDFs and retyping them into a spreadsheet"
+          "text": "Manually downloading PDF files and then retyping them into a shared spreadsheet tab"
         },
         {
           "letter": "C",
-          "text": "Mailing encrypted USB sticks on a weekly basis"
+          "text": "Mailing encrypted USB sticks on a weekly basis between the offices of the agency"
         },
         {
           "letter": "D",
-          "text": "Installing a keylogger on the partner's workstation"
+          "text": "Installing a keylogger on the partner's workstation to capture any text being typed"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. Scheduled API ingestion is the canonical pattern for periodic pulls from an external system: an orchestrator (Airflow, Dagster, cron) triggers a job at the agreed cadence, calls the REST endpoint with the right authentication, handles pagination and retries, and lands the raw JSON in the staging zone of the lake / warehouse. Incremental logic (since-last-run watermark) keeps the load light.\n· B: Manual retyping is slow, error-prone and breaks any data-quality guarantee. It is the antithesis of a modern ingestion pipeline and should never be the default answer.\n· C: Physical media exchange is a fallback only for air-gapped environments. For a partner already exposing an HTTPS API it adds latency, cost and security-handling overhead with no benefit.\n· D: Covert data capture on someone else's hardware is illegal and unethical — a CFAA-style offence in many jurisdictions and a breach of GDPR. It is never a legitimate ingestion method.",
+      "explanation": "Correct: A — Correct. Scheduled API ingestion is the canonical pattern for periodic pulls from an external system: an orchestrator (Airflow, Dagster, cron) triggers a job at the agreed cadence, calls the REST endpoint with the right authentication, handles pagination and retries, and lands the raw JSON in the staging zone of the lake / warehouse. Incremental logic (since-last-run watermark) keeps the load light.\n· B: Manual retyping from PDFs doesn't scale to nightly cadence and is error-prone; the partner offers a REST API.\n· C: Physical USB-stick mailing is slow, high-friction and unnecessary when a REST endpoint exists.\n· D: Keylogging is unlawful surveillance, not a data-ingestion technique.",
       "explanations": {
         "A": "Correct. Scheduled API ingestion is the canonical pattern for periodic pulls from an external system: an orchestrator (Airflow, Dagster, cron) triggers a job at the agreed cadence, calls the REST endpoint with the right authentication, handles pagination and retries, and lands the raw JSON in the staging zone of the lake / warehouse. Incremental logic (since-last-run watermark) keeps the load light.",
-        "B": "Manual retyping is slow, error-prone and breaks any data-quality guarantee. It is the antithesis of a modern ingestion pipeline and should never be the default answer.",
-        "C": "Physical media exchange is a fallback only for air-gapped environments. For a partner already exposing an HTTPS API it adds latency, cost and security-handling overhead with no benefit.",
-        "D": "Covert data capture on someone else's hardware is illegal and unethical — a CFAA-style offence in many jurisdictions and a breach of GDPR. It is never a legitimate ingestion method."
+        "B": "Manual retyping from PDFs doesn't scale to nightly cadence and is error-prone; the partner offers a REST API.",
+        "C": "Physical USB-stick mailing is slow, high-friction and unnecessary when a REST endpoint exists.",
+        "D": "Keylogging is unlawful surveillance, not a data-ingestion technique."
       }
     },
     {
@@ -23288,15 +23288,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Scraping publicly visible content is always lawful regardless of terms of service, robots.txt or copyright"
+          "text": "Scraping publicly visible web content is always automatically lawful regardless of terms of service, robots.txt or copyright on any given website hosted anywhere online"
         },
         {
           "letter": "B",
-          "text": "Only latency against the target server matters"
+          "text": "Only the network latency against the target web server genuinely matters; every other technical, legal and ethical consideration can simply be safely ignored by the team"
         },
         {
           "letter": "C",
-          "text": "Scraping is forbidden across the EU by the Data Act"
+          "text": "Scraping of any website hosted anywhere in the Union is outright forbidden across the whole EU under the provisions of the Data Act and its implementing instruments"
         },
         {
           "letter": "D",
@@ -23304,11 +23304,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. A compliant scraping plan checks at least four layers: (1) robots.txt and the site's ToS (contractual constraints); (2) copyright on the content itself; (3) the sui generis database right that protects substantial investment in a database even when individual items aren't copyrighted; (4) GDPR lawful basis if the pages include personal data (names, contact details, reviews). Ignoring any of them risks injunctions, fines and reputational damage.\n· A: Public visibility is not the same as unlimited permission. Courts (CJEU · hiQ-style US cases) and DPAs have repeatedly underlined that ToS, copyright (Directive 2001/29), the sui generis database right (Dir. 96/9) and GDPR all still apply. The 'if I can see it, I can take it' heuristic is wrong.\n· B: Polite crawling (rate-limits, caching, off-peak) is good citizenship but it is not the main legal question. The legal analysis above dominates.\n· C: The Data Act does not blanket-ban web scraping. It targets product/service data-access rights and cloud-switching, not third-party site harvesting.",
+      "explanation": "Correct: D — Correct. A compliant scraping plan checks at least four layers: (1) robots.txt and the site's ToS (contractual constraints); (2) copyright on the content itself; (3) the sui generis database right that protects substantial investment in a database even when individual items aren't copyrighted; (4) GDPR lawful basis if the pages include personal data (names, contact details, reviews). Ignoring any of them risks injunctions, fines and reputational damage.\n· A: 'Publicly visible' doesn't override ToS, robots.txt, copyright or GDPR — they all apply case by case.\n· B: Latency is an engineering concern; the legal layers above are what make a scraping operation lawful or not.\n· C: The Data Act doesn't contain a blanket scraping ban. Legality depends on specific safeguards and rights.",
       "explanations": {
-        "A": "Public visibility is not the same as unlimited permission. Courts (CJEU · hiQ-style US cases) and DPAs have repeatedly underlined that ToS, copyright (Directive 2001/29), the sui generis database right (Dir. 96/9) and GDPR all still apply. The 'if I can see it, I can take it' heuristic is wrong.",
-        "B": "Polite crawling (rate-limits, caching, off-peak) is good citizenship but it is not the main legal question. The legal analysis above dominates.",
-        "C": "The Data Act does not blanket-ban web scraping. It targets product/service data-access rights and cloud-switching, not third-party site harvesting.",
+        "A": "'Publicly visible' doesn't override ToS, robots.txt, copyright or GDPR — they all apply case by case.",
+        "B": "Latency is an engineering concern; the legal layers above are what make a scraping operation lawful or not.",
+        "C": "The Data Act doesn't contain a blanket scraping ban. Legality depends on specific safeguards and rights.",
         "D": "Correct. A compliant scraping plan checks at least four layers: (1) robots.txt and the site's ToS (contractual constraints); (2) copyright on the content itself; (3) the sui generis database right that protects substantial investment in a database even when individual items aren't copyrighted; (4) GDPR lawful basis if the pages include personal data (names, contact details, reviews). Ignoring any of them risks injunctions, fines and reputational damage."
       }
     },
@@ -23330,24 +23330,24 @@
         },
         {
           "letter": "B",
-          "text": "Converting every reading to PDF for archival"
+          "text": "Converting every individual sensor reading to a PDF document for long-term archival in a document system"
         },
         {
           "letter": "C",
-          "text": "Running OLTP-style two-phase-commit transactions for each reading"
+          "text": "Running OLTP-style two-phase-commit transactions for each incoming reading across distributed databases"
         },
         {
           "letter": "D",
-          "text": "Forcing all sensors to synchronise on a single SQL Server instance"
+          "text": "Forcing every sensor across Member States to synchronise writes on one central SQL Server relational host"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. IoT / sensor feeds are the textbook high-volume / high-velocity case: many producers, short payloads, frequent network hiccups, events that arrive out of order because of battery-saving buffering or connectivity loss. The ingestion layer (Kafka, MQTT broker, Kinesis) must scale horizontally and the stream-processing layer (Flink, Spark Structured Streaming) needs proper event-time semantics, watermarks and late-event handling.\n· B: PDF is a document-presentation format, not a telemetry pipeline. It would be absurdly heavy for a 10-second cadence.\n· C: Two-phase commit is designed for strict OLTP consistency across a few systems. It scales poorly and would collapse under IoT throughput. Telemetry is typically append-only with at-least-once semantics.\n· D: A single SQL Server instance cannot absorb sensor streams from thousands of devices at sub-minute cadence. Distributed brokers and horizontally scalable stores exist precisely for this workload.",
+      "explanation": "Correct: A — Correct. IoT / sensor feeds are the textbook high-volume / high-velocity case: many producers, short payloads, frequent network hiccups, events that arrive out of order because of battery-saving buffering or connectivity loss. The ingestion layer (Kafka, MQTT broker, Kinesis) must scale horizontally and the stream-processing layer (Flink, Spark Structured Streaming) needs proper event-time semantics, watermarks and late-event handling.\n· B: PDF archival is for regulatory documents, not high-velocity sensor telemetry streams.\n· C: 2PC across nodes for every reading would collapse under load — not how streaming telemetry is handled.\n· D: A single SQL Server hub creates a bottleneck and single point of failure — the opposite of streaming design.",
       "explanations": {
         "A": "Correct. IoT / sensor feeds are the textbook high-volume / high-velocity case: many producers, short payloads, frequent network hiccups, events that arrive out of order because of battery-saving buffering or connectivity loss. The ingestion layer (Kafka, MQTT broker, Kinesis) must scale horizontally and the stream-processing layer (Flink, Spark Structured Streaming) needs proper event-time semantics, watermarks and late-event handling.",
-        "B": "PDF is a document-presentation format, not a telemetry pipeline. It would be absurdly heavy for a 10-second cadence.",
-        "C": "Two-phase commit is designed for strict OLTP consistency across a few systems. It scales poorly and would collapse under IoT throughput. Telemetry is typically append-only with at-least-once semantics.",
-        "D": "A single SQL Server instance cannot absorb sensor streams from thousands of devices at sub-minute cadence. Distributed brokers and horizontally scalable stores exist precisely for this workload."
+        "B": "PDF archival is for regulatory documents, not high-velocity sensor telemetry streams.",
+        "C": "2PC across nodes for every reading would collapse under load — not how streaming telemetry is handled.",
+        "D": "A single SQL Server hub creates a bottleneck and single point of failure — the opposite of streaming design."
       }
     },
     {
@@ -23444,24 +23444,24 @@
         },
         {
           "letter": "B",
-          "text": "Streaming sources produce only CSV; batch sources produce only JSON"
+          "text": "Streaming sources always produce data exclusively in CSV format; batch sources always produce only JSON for delivery"
         },
         {
           "letter": "C",
-          "text": "Streaming sources are always internal; batch sources are always external"
+          "text": "Streaming sources are always internal to the organisation; batch sources are always external third-party partner systems for periodic delivery across trust boundaries in the enterprise"
         },
         {
           "letter": "D",
-          "text": "Streaming sources use HTTPS; batch sources use FTP"
+          "text": "Streaming sources always transport strictly over HTTPS endpoints; batch sources always rely on classic FTP servers"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. The defining difference is not format or transport but arrival pattern. Streaming sources emit events continuously, event-by-event (Kafka topics, CDC logs, webhook feeds, sensor streams). Batch sources expose bounded chunks at discrete intervals (nightly dumps, hourly file drops, scheduled extracts). This shapes every downstream choice: ingest mechanism, storage layout, latency SLA, and recovery strategy.\n· B: Format is orthogonal to the batch / streaming dichotomy. Kafka topics carry JSON / Avro / Protobuf; batch extracts come in CSV / Parquet / JSON alike.\n· C: Internality is orthogonal. A partner may push a webhook stream (external streaming); an internal finance system may drop nightly CSVs (internal batch).\n· D: Protocol is orthogonal. Streaming might ride on Kafka, MQTT, gRPC, or HTTP; batch on SFTP, S3 object listing, or an API.",
+      "explanation": "Correct: A — Correct. The defining difference is not format or transport but arrival pattern. Streaming sources emit events continuously, event-by-event (Kafka topics, CDC logs, webhook feeds, sensor streams). Batch sources expose bounded chunks at discrete intervals (nightly dumps, hourly file drops, scheduled extracts). This shapes every downstream choice: ingest mechanism, storage layout, latency SLA, and recovery strategy.\n· B: File format and source mode are orthogonal — a batch source can produce CSV / Parquet / Avro; streaming can produce JSON / Avro / protobuf.\n· C: Both internal and external partners exist in both modes. Internal-vs-external is a different dimension from streaming vs batch, regardless of how the trust boundaries are drawn in the enterprise.\n· D: Transport is an engineering choice; neither HTTPS nor FTP is tied to streaming vs batch.",
       "explanations": {
         "A": "Correct. The defining difference is not format or transport but arrival pattern. Streaming sources emit events continuously, event-by-event (Kafka topics, CDC logs, webhook feeds, sensor streams). Batch sources expose bounded chunks at discrete intervals (nightly dumps, hourly file drops, scheduled extracts). This shapes every downstream choice: ingest mechanism, storage layout, latency SLA, and recovery strategy.",
-        "B": "Format is orthogonal to the batch / streaming dichotomy. Kafka topics carry JSON / Avro / Protobuf; batch extracts come in CSV / Parquet / JSON alike.",
-        "C": "Internality is orthogonal. A partner may push a webhook stream (external streaming); an internal finance system may drop nightly CSVs (internal batch).",
-        "D": "Protocol is orthogonal. Streaming might ride on Kafka, MQTT, gRPC, or HTTP; batch on SFTP, S3 object listing, or an API."
+        "B": "File format and source mode are orthogonal — a batch source can produce CSV / Parquet / Avro; streaming can produce JSON / Avro / protobuf.",
+        "C": "Both internal and external partners exist in both modes. Internal-vs-external is a different dimension from streaming vs batch, regardless of how the trust boundaries are drawn in the enterprise.",
+        "D": "Transport is an engineering choice; neither HTTPS nor FTP is tied to streaming vs batch."
       }
     },
     {
@@ -23478,11 +23478,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A probability depending on their age group"
+          "text": "A probability that depends on the individual's particular age-bracket membership within the larger target survey population under consideration at the time"
         },
         {
           "letter": "B",
-          "text": "Zero probability unless they volunteer"
+          "text": "Zero unless they volunteer themselves first"
         },
         {
           "letter": "C",
@@ -23490,16 +23490,16 @@
         },
         {
           "letter": "D",
-          "text": "A probability fixed at exactly 10%"
+          "text": "A probability fixed at exactly 10% in pool"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Simple Random Sampling (SRS) gives every unit in the population a known and equal probability of selection, independently of any other unit. It is the baseline probability-sampling method against which stratified, systematic and cluster sampling are compared. Its main strengths are unbiasedness and straightforward variance estimation; its main weakness is that rare subgroups may be under-represented by chance.\n· A: That describes stratified or disproportionate sampling — probabilities vary by subgroup. In simple random sampling, probability does not depend on demographic attributes.\n· B: Self-selection produces a volunteer / opt-in sample, which is non-probability and typically biased. Simple random sampling is an equal-chance, probability-based method.\n· D: 10% is just a possible sampling fraction — SRS works at any fraction, chosen to meet the desired margin of error and confidence level.",
+      "explanation": "Correct: C — Correct. Simple Random Sampling (SRS) gives every unit in the population a known and equal probability of selection, independently of any other unit. It is the baseline probability-sampling method against which stratified, systematic and cluster sampling are compared. Its main strengths are unbiasedness and straightforward variance estimation; its main weakness is that rare subgroups may be under-represented by chance.\n· A: Age-bracket-dependent probability within the target population is stratified / weighted sampling, not simple random sampling.\n· B: Voluntary-only selection creates self-selection bias — it isn't random sampling.\n· D: A fixed 10% selection can be random, but simple random sampling has known equal probabilities that depend on sample size, not a fixed 10%.",
       "explanations": {
-        "A": "That describes stratified or disproportionate sampling — probabilities vary by subgroup. In simple random sampling, probability does not depend on demographic attributes.",
-        "B": "Self-selection produces a volunteer / opt-in sample, which is non-probability and typically biased. Simple random sampling is an equal-chance, probability-based method.",
+        "A": "Age-bracket-dependent probability within the target population is stratified / weighted sampling, not simple random sampling.",
+        "B": "Voluntary-only selection creates self-selection bias — it isn't random sampling.",
         "C": "Correct. Simple Random Sampling (SRS) gives every unit in the population a known and equal probability of selection, independently of any other unit. It is the baseline probability-sampling method against which stratified, systematic and cluster sampling are compared. Its main strengths are unbiasedness and straightforward variance estimation; its main weakness is that rare subgroups may be under-represented by chance.",
-        "D": "10% is just a possible sampling fraction — SRS works at any fraction, chosen to meet the desired margin of error and confidence level."
+        "D": "A fixed 10% selection can be random, but simple random sampling has known equal probabilities that depend on sample size, not a fixed 10%."
       }
     },
     {
@@ -23516,7 +23516,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Simple random sampling with a smaller total sample size"
+          "text": "Simple random sampling with a smaller total sample size than the full underlying population of the study"
         },
         {
           "letter": "B",
@@ -23524,20 +23524,20 @@
         },
         {
           "letter": "C",
-          "text": "Convenience sampling from one national office"
+          "text": "Convenience sampling drawn from the records of a single national office on the day"
         },
         {
           "letter": "D",
-          "text": "Systematic sampling with a fixed interval of 20"
+          "text": "Systematic sampling with a fixed interval of 20 individuals drawn from the register"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Stratified sampling divides the population into non-overlapping strata (here, age brackets) and samples within each stratum. When a small stratum needs precise estimates, the design uses disproportionate allocation — a higher sampling fraction in that stratum — and results are reweighted afterwards for unbiased population estimates. This is the textbook fix for sparse but analytically important subgroups.\n· A: Shrinking the sample reduces precision everywhere, and SRS leaves the rare bracket under-powered because only ~5% of the sample falls into it. This is the classical case where SRS is not the right tool.\n· C: Convenience sampling (nearest office, willing respondents) is non-probabilistic, typically biased and cannot support generalisable inference.\n· D: Systematic sampling with interval k replaces random draws with a fixed periodic pick. It does not address sparsity in an important subgroup — a small bracket will still be under-sampled in proportion to its size.",
+      "explanation": "Correct: B — Correct. Stratified sampling divides the population into non-overlapping strata (here, age brackets) and samples within each stratum. When a small stratum needs precise estimates, the design uses disproportionate allocation — a higher sampling fraction in that stratum — and results are reweighted afterwards for unbiased population estimates. This is the textbook fix for sparse but analytically important subgroups.\n· A: A smaller simple random sample from the underlying population makes the small bracket even harder to study, not easier — fewer draws mean even fewer rare-bracket observations.\n· C: Convenience sampling is a bias source, not a solution for under-represented groups.\n· D: Systematic sampling with a fixed interval doesn't guarantee adequate coverage of a rare bracket.",
       "explanations": {
-        "A": "Shrinking the sample reduces precision everywhere, and SRS leaves the rare bracket under-powered because only ~5% of the sample falls into it. This is the classical case where SRS is not the right tool.",
+        "A": "A smaller simple random sample from the underlying population makes the small bracket even harder to study, not easier — fewer draws mean even fewer rare-bracket observations.",
         "B": "Correct. Stratified sampling divides the population into non-overlapping strata (here, age brackets) and samples within each stratum. When a small stratum needs precise estimates, the design uses disproportionate allocation — a higher sampling fraction in that stratum — and results are reweighted afterwards for unbiased population estimates. This is the textbook fix for sparse but analytically important subgroups.",
-        "C": "Convenience sampling (nearest office, willing respondents) is non-probabilistic, typically biased and cannot support generalisable inference.",
-        "D": "Systematic sampling with interval k replaces random draws with a fixed periodic pick. It does not address sparsity in an important subgroup — a small bracket will still be under-sampled in proportion to its size."
+        "C": "Convenience sampling is a bias source, not a solution for under-represented groups.",
+        "D": "Systematic sampling with a fixed interval doesn't guarantee adequate coverage of a rare bracket."
       }
     },
     {
@@ -23592,11 +23592,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "Recall bias"
+          "text": "Recall bias in questionnaire-based respondent memory about past events in long-duration user surveys each year"
         },
         {
           "letter": "B",
-          "text": "Measurement bias from sensor drift"
+          "text": "Measurement bias introduced by sensor drift over long monitoring periods in environmental or industrial networks"
         },
         {
           "letter": "C",
@@ -23604,16 +23604,16 @@
         },
         {
           "letter": "D",
-          "text": "Response bias from online surveys"
+          "text": "Response bias observed in voluntary-participation online survey responses collected through self-selected samples"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Survivorship bias (a form of selection bias) arises when the sample includes only the 'survivors' of some process — here, awarded contracts — and ignores the cases that never made it (withdrawn, cancelled, unsuccessful bids). Any inference about 'what makes procurement succeed' is then anchored on a truncated distribution and may miss critical failure modes. The classical WW2 example is Abraham Wald's bullet-hole analysis on returning aircraft. The fix: include the missing stratum, or restrict claims carefully.\n· A: Recall bias affects self-reported retrospective data (interviews, surveys asking about past events). It is not the primary issue here because the data is administrative records, not respondent memory.\n· B: Measurement / sensor drift applies to physical instruments in longitudinal studies. Procurement records are not sensor data.\n· D: Response bias arises when respondents give inaccurate answers (socially desirable, non-response). It is a survey phenomenon, not the dominant risk in an admin-records analysis.",
+      "explanation": "Correct: C — Correct. Survivorship bias (a form of selection bias) arises when the sample includes only the 'survivors' of some process — here, awarded contracts — and ignores the cases that never made it (withdrawn, cancelled, unsuccessful bids). Any inference about 'what makes procurement succeed' is then anchored on a truncated distribution and may miss critical failure modes. The classical WW2 example is Abraham Wald's bullet-hole analysis on returning aircraft. The fix: include the missing stratum, or restrict claims carefully.\n· A: Recall bias concerns memory errors in respondents, not missing cases in the data.\n· B: Sensor-drift measurement bias affects instrument readings, not award-record selection.\n· D: Response bias affects who answers a survey; it isn't the mechanism where failures are absent.",
       "explanations": {
-        "A": "Recall bias affects self-reported retrospective data (interviews, surveys asking about past events). It is not the primary issue here because the data is administrative records, not respondent memory.",
-        "B": "Measurement / sensor drift applies to physical instruments in longitudinal studies. Procurement records are not sensor data.",
+        "A": "Recall bias concerns memory errors in respondents, not missing cases in the data.",
+        "B": "Sensor-drift measurement bias affects instrument readings, not award-record selection.",
         "C": "Correct. Survivorship bias (a form of selection bias) arises when the sample includes only the 'survivors' of some process — here, awarded contracts — and ignores the cases that never made it (withdrawn, cancelled, unsuccessful bids). Any inference about 'what makes procurement succeed' is then anchored on a truncated distribution and may miss critical failure modes. The classical WW2 example is Abraham Wald's bullet-hole analysis on returning aircraft. The fix: include the missing stratum, or restrict claims carefully.",
-        "D": "Response bias arises when respondents give inaccurate answers (socially desirable, non-response). It is a survey phenomenon, not the dominant risk in an admin-records analysis."
+        "D": "Response bias affects who answers a survey; it isn't the mechanism where failures are absent."
       }
     },
     {
@@ -23630,7 +23630,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Referential-integrity validation in a relational database"
+          "text": "Referential-integrity validation in a relational database using FKs"
         },
         {
           "letter": "B",
@@ -23638,20 +23638,20 @@
         },
         {
           "letter": "C",
-          "text": "Cross-field validation between two columns"
+          "text": "Cross-field validation between two columns within the same record"
         },
         {
           "letter": "D",
-          "text": "Statistical outlier detection"
+          "text": "Statistical outlier detection using z-score or IQR on numerics"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. Domain validation (also called 'value-list' or 'enumeration' validation) checks that a field's value belongs to an authoritative set of permitted values — ISO 3166 countries, ISO 4217 currencies, NUTS regions, Gender enumerations. It is one of the most common and easily automated validation checks and is typically wired into the DQ framework with a reference-data table or a controlled list.\n· A: Referential integrity specifically enforces foreign-key relationships between tables (order.customer_id must exist in customer.id). Checking a value against a reference list is conceptually related but operates on a code list, not on a parent / child table in the same database. The two terms are not interchangeable.\n· C: Cross-field validation compares two or more attributes of the same record (end_date > start_date, sum(lines) == total). That is different.\n· D: Outlier detection uses statistics (z-scores, IQR) to flag extreme numeric values — not categorical-value list membership.",
+      "explanation": "Correct: B — Correct. Domain validation (also called 'value-list' or 'enumeration' validation) checks that a field's value belongs to an authoritative set of permitted values — ISO 3166 countries, ISO 4217 currencies, NUTS regions, Gender enumerations. It is one of the most common and easily automated validation checks and is typically wired into the DQ framework with a reference-data table or a controlled list.\n· A: Referential integrity checks whether the value exists in a referenced table via FKs — a stronger guarantee than a domain list.\n· C: Cross-field validation involves multiple columns; here we check one column against a fixed list.\n· D: Outlier detection concerns numeric distributions, not membership in a categorical allow-list.",
       "explanations": {
-        "A": "Referential integrity specifically enforces foreign-key relationships between tables (order.customer_id must exist in customer.id). Checking a value against a reference list is conceptually related but operates on a code list, not on a parent / child table in the same database. The two terms are not interchangeable.",
+        "A": "Referential integrity checks whether the value exists in a referenced table via FKs — a stronger guarantee than a domain list.",
         "B": "Correct. Domain validation (also called 'value-list' or 'enumeration' validation) checks that a field's value belongs to an authoritative set of permitted values — ISO 3166 countries, ISO 4217 currencies, NUTS regions, Gender enumerations. It is one of the most common and easily automated validation checks and is typically wired into the DQ framework with a reference-data table or a controlled list.",
-        "C": "Cross-field validation compares two or more attributes of the same record (end_date > start_date, sum(lines) == total). That is different.",
-        "D": "Outlier detection uses statistics (z-scores, IQR) to flag extreme numeric values — not categorical-value list membership."
+        "C": "Cross-field validation involves multiple columns; here we check one column against a fixed list.",
+        "D": "Outlier detection concerns numeric distributions, not membership in a categorical allow-list."
       }
     },
     {
@@ -23706,11 +23706,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "A domain check"
+          "text": "A single-column domain-list value check validated at ingestion time on ingest"
         },
         {
           "letter": "B",
-          "text": "A referential-integrity check"
+          "text": "A classic referential-integrity check between two linked tables"
         },
         {
           "letter": "C",
@@ -23718,16 +23718,16 @@
         },
         {
           "letter": "D",
-          "text": "A statistical distribution test"
+          "text": "A statistical distribution-shape test applied to a numeric column"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Cross-field (also 'intra-record' or 'conditional') rules express business logic that spans two or more attributes within the same record. They capture the nuances domain / referential / completeness checks cannot: 'if X then Y', arithmetic invariants (sum of lines = total), temporal ordering (start < end). They are where most bespoke DQ expectations live and where a data engineer earns their domain-knowledge stripes.\n· A: Domain checks look at a single attribute against a permitted list. This rule touches two attributes (status and closure_date) with conditional logic — it goes beyond a single-column domain check.\n· B: Referential integrity is about foreign-key links between tables. This rule stays within a single record.\n· D: Distribution tests look for shifts in summary statistics (mean, variance, null rate). This rule targets a specific combination of attribute values, not a distribution.",
+      "explanation": "Correct: C — Correct. Cross-field (also 'intra-record' or 'conditional') rules express business logic that spans two or more attributes within the same record. They capture the nuances domain / referential / completeness checks cannot: 'if X then Y', arithmetic invariants (sum of lines = total), temporal ordering (start < end). They are where most bespoke DQ expectations live and where a data engineer earns their domain-knowledge stripes.\n· A: A domain check is a single-column value test validated at ingestion time. This rule spans status + closure_date — two columns.\n· B: Referential integrity is about foreign-key relations between tables. Not applicable here.\n· D: Distribution tests are statistical checks over many values; this is a per-record conditional rule.",
       "explanations": {
-        "A": "Domain checks look at a single attribute against a permitted list. This rule touches two attributes (status and closure_date) with conditional logic — it goes beyond a single-column domain check.",
-        "B": "Referential integrity is about foreign-key links between tables. This rule stays within a single record.",
+        "A": "A domain check is a single-column value test validated at ingestion time. This rule spans status + closure_date — two columns.",
+        "B": "Referential integrity is about foreign-key relations between tables. Not applicable here.",
         "C": "Correct. Cross-field (also 'intra-record' or 'conditional') rules express business logic that spans two or more attributes within the same record. They capture the nuances domain / referential / completeness checks cannot: 'if X then Y', arithmetic invariants (sum of lines = total), temporal ordering (start < end). They are where most bespoke DQ expectations live and where a data engineer earns their domain-knowledge stripes.",
-        "D": "Distribution tests look for shifts in summary statistics (mean, variance, null rate). This rule targets a specific combination of attribute values, not a distribution."
+        "D": "Distribution tests are statistical checks over many values; this is a per-record conditional rule."
       }
     },
     {
@@ -23748,24 +23748,24 @@
         },
         {
           "letter": "B",
-          "text": "FOREIGN KEY on ssn referencing a country table"
+          "text": "A FOREIGN KEY on the ssn column referencing a reference country table"
         },
         {
           "letter": "C",
-          "text": "PRIMARY KEY on employee_name"
+          "text": "A PRIMARY KEY declared on the employee_name column of the table"
         },
         {
           "letter": "D",
-          "text": "A nightly Python script that emails the HR team if duplicates are found"
+          "text": "A nightly Python script that emails the HR team whenever any duplicate ssn is detected"
         }
       ],
       "correct": "A",
-      "explanation": "Correct: A — Correct. The three database-native constraints combine to enforce the full rule declaratively, at commit time, on every row. NOT NULL ensures 'every employee has one'; CHECK (e.g. a regex or function test) validates format; UNIQUE (or a UNIQUE index) enforces the cross-employee uniqueness. Declarative constraints are preferable to application-level checks because they cannot be bypassed by stray writes and are documented in the schema.\n· B: A foreign key links ssn to another table's primary key. That doesn't check format, nullability or uniqueness on its own.\n· C: Names are not unique (thousands of people share the same full name) and are a terrible primary key. Primary keys should be immutable surrogates or genuine unique identifiers like ssn itself.\n· D: A nightly detect-and-email job catches violations hours too late, after corrupt data has already been read by downstream systems. Detective controls have their place but cannot replace preventive constraints.",
+      "explanation": "Correct: A — Correct. The three database-native constraints combine to enforce the full rule declaratively, at commit time, on every row. NOT NULL ensures 'every employee has one'; CHECK (e.g. a regex or function test) validates format; UNIQUE (or a UNIQUE index) enforces the cross-employee uniqueness. Declarative constraints are preferable to application-level checks because they cannot be bypassed by stray writes and are documented in the schema.\n· B: A foreign key links to another table. It doesn't enforce NOT NULL + format + uniqueness on ssn.\n· C: Primary keys on names fail because names can collide — many John Smiths. Also doesn't enforce ssn rules.\n· D: An email-the-HR-team script is reactive, not preventive. DB-level constraints enforce at write time.",
       "explanations": {
         "A": "Correct. The three database-native constraints combine to enforce the full rule declaratively, at commit time, on every row. NOT NULL ensures 'every employee has one'; CHECK (e.g. a regex or function test) validates format; UNIQUE (or a UNIQUE index) enforces the cross-employee uniqueness. Declarative constraints are preferable to application-level checks because they cannot be bypassed by stray writes and are documented in the schema.",
-        "B": "A foreign key links ssn to another table's primary key. That doesn't check format, nullability or uniqueness on its own.",
-        "C": "Names are not unique (thousands of people share the same full name) and are a terrible primary key. Primary keys should be immutable surrogates or genuine unique identifiers like ssn itself.",
-        "D": "A nightly detect-and-email job catches violations hours too late, after corrupt data has already been read by downstream systems. Detective controls have their place but cannot replace preventive constraints."
+        "B": "A foreign key links to another table. It doesn't enforce NOT NULL + format + uniqueness on ssn.",
+        "C": "Primary keys on names fail because names can collide — many John Smiths. Also doesn't enforce ssn rules.",
+        "D": "An email-the-HR-team script is reactive, not preventive. DB-level constraints enforce at write time."
       }
     },
     {
@@ -23782,15 +23782,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "Deletion of all customers named Smith"
+          "text": "Delete every customer whose surname happens to be 'Smith' regardless of the rest of the record or any independent evidence"
         },
         {
           "letter": "B",
-          "text": "Converting the table to Parquet"
+          "text": "Convert the customer table file format to Apache Parquet columnar storage to save space in the object-store layer of the lake"
         },
         {
           "letter": "C",
-          "text": "Encrypting the name column"
+          "text": "Encrypt the name column using column-level symmetric encryption so that only a few authorised analysts can read the values"
         },
         {
           "letter": "D",
@@ -23798,11 +23798,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. The standard pipeline is (1) normalise strings — trim whitespace, collapse multiple spaces, case-fold, standardise accents, expand or normalise initials — then (2) apply deduplication: exact-match on the normalised key when possible, and fuzzy matching / record linkage (Levenshtein, Jaro-Winkler, phonetic codes like Soundex / Metaphone, or ML classifiers) when variation persists. Tools such as dedupe, Splink and OpenRefine encapsulate this workflow.\n· A: Mass deletion destroys valid records and disproportionately affects one surname. Never the right answer.\n· B: Parquet is a storage format. It doesn't change the logical content of duplicate records.\n· C: Encryption protects confidentiality but does not resolve duplicates — encrypted variants of the same name remain different ciphertexts.",
+      "explanation": "Correct: D — Correct. The standard pipeline is (1) normalise strings — trim whitespace, collapse multiple spaces, case-fold, standardise accents, expand or normalise initials — then (2) apply deduplication: exact-match on the normalised key when possible, and fuzzy matching / record linkage (Levenshtein, Jaro-Winkler, phonetic codes like Soundex / Metaphone, or ML classifiers) when variation persists. Tools such as dedupe, Splink and OpenRefine encapsulate this workflow.\n· A: Deleting all Smiths destroys legitimate data. The goal is to merge duplicates, not wipe a surname.\n· B: Format change is a storage optimisation, not a deduplication strategy.\n· C: Encryption hides the data; it doesn't resolve duplicates.",
       "explanations": {
-        "A": "Mass deletion destroys valid records and disproportionately affects one surname. Never the right answer.",
-        "B": "Parquet is a storage format. It doesn't change the logical content of duplicate records.",
-        "C": "Encryption protects confidentiality but does not resolve duplicates — encrypted variants of the same name remain different ciphertexts.",
+        "A": "Deleting all Smiths destroys legitimate data. The goal is to merge duplicates, not wipe a surname.",
+        "B": "Format change is a storage optimisation, not a deduplication strategy.",
+        "C": "Encryption hides the data; it doesn't resolve duplicates.",
         "D": "Correct. The standard pipeline is (1) normalise strings — trim whitespace, collapse multiple spaces, case-fold, standardise accents, expand or normalise initials — then (2) apply deduplication: exact-match on the normalised key when possible, and fuzzy matching / record linkage (Levenshtein, Jaro-Winkler, phonetic codes like Soundex / Metaphone, or ML classifiers) when variation persists. Tools such as dedupe, Splink and OpenRefine encapsulate this workflow."
       }
     },
@@ -23820,7 +23820,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Imputation with the column mean or median"
+          "text": "Imputation with the column mean or median value"
         },
         {
           "letter": "B",
@@ -23828,7 +23828,7 @@
         },
         {
           "letter": "C",
-          "text": "Model-based imputation (e.g. KNN or iterative imputer)"
+          "text": "Model-based imputation, such as a KNN imputer or an iterative imputer that fits a model"
         },
         {
           "letter": "D",
@@ -23836,11 +23836,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Silent zero-filling conflates 'I don't know' with 'the value is zero' and biases every downstream statistic — means, sums, correlations. It also leaves no audit trail. If zero imputation is actually justified (business rule), it must be explicitly documented; otherwise a dedicated missing-indicator or an NA-aware store is the right choice.\n· A: Mean / median imputation is a standard simple baseline. It preserves sample size but dampens variance and can bias estimates when data is not MCAR — acceptable when missingness is limited.\n· B: Listwise deletion is legitimate when missingness is rare (few percent) and plausibly random (MCAR). It is simple and unbiased under MCAR but wastes data.\n· C: Model-based imputation (KNN, MICE, iterative imputer) predicts the missing value from correlated features. It is more sophisticated and typically better than the mean / median when relationships exist.",
+      "explanation": "Correct: D — Correct. Silent zero-filling conflates 'I don't know' with 'the value is zero' and biases every downstream statistic — means, sums, correlations. It also leaves no audit trail. If zero imputation is actually justified (business rule), it must be explicitly documented; otherwise a dedicated missing-indicator or an NA-aware store is the right choice.\n· A: Mean / median imputation is a classic basic strategy — documented and commonly used.\n· B: Dropping rare, random missings is acceptable when it doesn't meaningfully reduce the dataset.\n· C: KNN imputers and iterative imputers that fit a model are standard model-based approaches.",
       "explanations": {
-        "A": "Mean / median imputation is a standard simple baseline. It preserves sample size but dampens variance and can bias estimates when data is not MCAR — acceptable when missingness is limited.",
-        "B": "Listwise deletion is legitimate when missingness is rare (few percent) and plausibly random (MCAR). It is simple and unbiased under MCAR but wastes data.",
-        "C": "Model-based imputation (KNN, MICE, iterative imputer) predicts the missing value from correlated features. It is more sophisticated and typically better than the mean / median when relationships exist.",
+        "A": "Mean / median imputation is a classic basic strategy — documented and commonly used.",
+        "B": "Dropping rare, random missings is acceptable when it doesn't meaningfully reduce the dataset.",
+        "C": "KNN imputers and iterative imputers that fit a model are standard model-based approaches.",
         "D": "Correct. Silent zero-filling conflates 'I don't know' with 'the value is zero' and biases every downstream statistic — means, sums, correlations. It also leaves no audit trail. If zero imputation is actually justified (business rule), it must be explicitly documented; otherwise a dedicated missing-indicator or an NA-aware store is the right choice."
       }
     },
@@ -23858,11 +23858,11 @@
       "options": [
         {
           "letter": "A",
-          "text": "All outliers should be removed automatically before modelling"
+          "text": "All outliers should be removed automatically before any modelling is carried out, regardless of whether they are errors or meaningful rare events, because they always make models less accurate in every case"
         },
         {
           "letter": "B",
-          "text": "Outliers can only be found using z-scores, never IQR-based methods"
+          "text": "Outliers can only be found using z-score methods applied to a roughly normal distribution, never using IQR-based methods, because IQR does not account for the shape of the data distribution"
         },
         {
           "letter": "C",
@@ -23870,16 +23870,16 @@
         },
         {
           "letter": "D",
-          "text": "Outliers always follow a normal distribution by definition"
+          "text": "Outliers always follow a normal distribution by definition across all variables and domains, and therefore standard parametric assumptions automatically always apply to them whenever they appear in a dataset today"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Outlier treatment is a judgement call that depends on (1) the cause — typo, sensor glitch, genuine rare event — and (2) the downstream use — robust statistics may tolerate outliers; regressions may not. Options include: remove (only if clearly erroneous and traceable), cap / winsorise (clip at 1st / 99th percentile), transform (log, Box-Cox) to reduce skew, impute, or explicitly flag and keep. The first step is always investigation, not automated deletion.\n· A: Blanket removal is a classic beginner mistake. In fraud detection or network monitoring, the outliers ARE the signal. In distribution-based metrics you may want to cap or winsorise rather than drop.\n· B: Both z-score (for approximately normal data) and IQR / Tukey fences (for non-normal) are standard methods. IQR is often preferred because it is robust to the outliers it is trying to detect.\n· D: By definition outliers are values that deviate from the bulk of the distribution. Their own distribution is usually sparse and heavy-tailed, not normal.",
+      "explanation": "Correct: C — Correct. Outlier treatment is a judgement call that depends on (1) the cause — typo, sensor glitch, genuine rare event — and (2) the downstream use — robust statistics may tolerate outliers; regressions may not. Options include: remove (only if clearly erroneous and traceable), cap / winsorise (clip at 1st / 99th percentile), transform (log, Box-Cox) to reduce skew, impute, or explicitly flag and keep. The first step is always investigation, not automated deletion.\n· A: Automatically deleting all outliers erases fraud signals, rare disease cases, unusual market events — exactly the rows you may most care about.\n· B: Both z-score and IQR methods are valid; IQR is preferred when the distribution isn't normal.\n· D: Outliers by definition don't follow the bulk distribution; they are extreme values relative to the rest.",
       "explanations": {
-        "A": "Blanket removal is a classic beginner mistake. In fraud detection or network monitoring, the outliers ARE the signal. In distribution-based metrics you may want to cap or winsorise rather than drop.",
-        "B": "Both z-score (for approximately normal data) and IQR / Tukey fences (for non-normal) are standard methods. IQR is often preferred because it is robust to the outliers it is trying to detect.",
+        "A": "Automatically deleting all outliers erases fraud signals, rare disease cases, unusual market events — exactly the rows you may most care about.",
+        "B": "Both z-score and IQR methods are valid; IQR is preferred when the distribution isn't normal.",
         "C": "Correct. Outlier treatment is a judgement call that depends on (1) the cause — typo, sensor glitch, genuine rare event — and (2) the downstream use — robust statistics may tolerate outliers; regressions may not. Options include: remove (only if clearly erroneous and traceable), cap / winsorise (clip at 1st / 99th percentile), transform (log, Box-Cox) to reduce skew, impute, or explicitly flag and keep. The first step is always investigation, not automated deletion.",
-        "D": "By definition outliers are values that deviate from the bulk of the distribution. Their own distribution is usually sparse and heavy-tailed, not normal."
+        "D": "Outliers by definition don't follow the bulk distribution; they are extreme values relative to the rest."
       }
     },
     {
@@ -23896,7 +23896,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "Leave numeric features as-is; drop categorical fields"
+          "text": "Leave the numeric features as-is with their raw ranges and simply drop every categorical field before feeding to the logistic-regression model without any preprocessing at all"
         },
         {
           "letter": "B",
@@ -23904,20 +23904,20 @@
         },
         {
           "letter": "C",
-          "text": "Hash every record to a single integer"
+          "text": "Hash every individual record to a single integer identifier and use that as the only feature"
         },
         {
           "letter": "D",
-          "text": "Encrypt numerics and one-hot encode categoricals"
+          "text": "Encrypt all numeric features using column-level symmetric encryption and one-hot encode categoricals"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. The canonical preprocessing for distance / gradient-based models on mixed data is: (1) bring numerics onto a comparable scale — either z-score standardisation (mean 0, sd 1) or min-max normalisation (0–1); (2) turn categoricals into numeric representations — one-hot (sklearn's OneHotEncoder) for low-cardinality, ordinal encoding when the variable has a natural order, target / mean encoding or embeddings for high-cardinality. This keeps the linear decision surface meaningful and regularisation fair.\n· A: Logistic regression is sensitive to feature scale because the objective is based on linear combinations of features; features with much larger ranges dominate coefficients and regularisation penalties. Dropping categoricals also throws away useful signal. This is the worst option.\n· C: Global record hashing destroys feature-level information. It's not a preprocessing pipeline.\n· D: Encrypting numerics makes them cryptographically random-looking — impossible for the model to learn from. Encryption protects confidentiality, not learnability (except under homomorphic encryption, which is a specialised setting).",
+      "explanation": "Correct: B — Correct. The canonical preprocessing for distance / gradient-based models on mixed data is: (1) bring numerics onto a comparable scale — either z-score standardisation (mean 0, sd 1) or min-max normalisation (0–1); (2) turn categoricals into numeric representations — one-hot (sklearn's OneHotEncoder) for low-cardinality, ordinal encoding when the variable has a natural order, target / mean encoding or embeddings for high-cardinality. This keeps the linear decision surface meaningful and regularisation fair.\n· A: Logistic regression needs numeric features at comparable scales; dropping categorical fields loses information and leaving numerics raw hurts convergence even with preprocessing disabled.\n· C: Hashing records into a single integer destroys all useful signal — no model can learn from a single arbitrary ID.\n· D: Encryption is a security control — it doesn't prepare numeric features for logistic regression (scaling does).",
       "explanations": {
-        "A": "Logistic regression is sensitive to feature scale because the objective is based on linear combinations of features; features with much larger ranges dominate coefficients and regularisation penalties. Dropping categoricals also throws away useful signal. This is the worst option.",
+        "A": "Logistic regression needs numeric features at comparable scales; dropping categorical fields loses information and leaving numerics raw hurts convergence even with preprocessing disabled.",
         "B": "Correct. The canonical preprocessing for distance / gradient-based models on mixed data is: (1) bring numerics onto a comparable scale — either z-score standardisation (mean 0, sd 1) or min-max normalisation (0–1); (2) turn categoricals into numeric representations — one-hot (sklearn's OneHotEncoder) for low-cardinality, ordinal encoding when the variable has a natural order, target / mean encoding or embeddings for high-cardinality. This keeps the linear decision surface meaningful and regularisation fair.",
-        "C": "Global record hashing destroys feature-level information. It's not a preprocessing pipeline.",
-        "D": "Encrypting numerics makes them cryptographically random-looking — impossible for the model to learn from. Encryption protects confidentiality, not learnability (except under homomorphic encryption, which is a specialised setting)."
+        "C": "Hashing records into a single integer destroys all useful signal — no model can learn from a single arbitrary ID.",
+        "D": "Encryption is a security control — it doesn't prepare numeric features for logistic regression (scaling does)."
       }
     },
     {
@@ -23934,15 +23934,15 @@
       "options": [
         {
           "letter": "A",
-          "text": "The encryption algorithm used in transit"
+          "text": "The specific encryption algorithm used in transit between the producing team and the consumers of the data in use today across pipelines"
         },
         {
           "letter": "B",
-          "text": "The AI-Act conformity assessment"
+          "text": "The AI-Act conformity assessment required before deploying a high-risk AI system that relies on the produced data today"
         },
         {
           "letter": "C",
-          "text": "A financial invoice for data purchase"
+          "text": "A simple financial invoice for the purchase of data from an external commercial data provider operating inside the Union"
         },
         {
           "letter": "D",
@@ -23950,11 +23950,11 @@
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Data contracts (popularised by Chad Sanderson, Andrew Jones and the data-mesh community) are explicit, versioned agreements between a producing team ('source of truth') and its consumers. They specify (1) the schema (columns, types, nullability); (2) semantics (what each field means, business definitions); (3) SLAs on freshness, latency, completeness and accuracy; (4) ownership, on-call responsibility and change-management process. They shift responsibility for data quality upstream to the producer and enable downstream teams to build with confidence.\n· A: Transport security is a separate concern handled at network / platform level — not the substance of a data contract.\n· B: AI-Act conformity assessment applies to high-risk AI systems under Reg. 2024/1689 — a different regulatory instrument, not what a data contract is.\n· C: Data contracts are technical / governance agreements, not commercial invoices. Payment may or may not exist separately.",
+      "explanation": "Correct: D — Correct. Data contracts (popularised by Chad Sanderson, Andrew Jones and the data-mesh community) are explicit, versioned agreements between a producing team ('source of truth') and its consumers. They specify (1) the schema (columns, types, nullability); (2) semantics (what each field means, business definitions); (3) SLAs on freshness, latency, completeness and accuracy; (4) ownership, on-call responsibility and change-management process. They shift responsibility for data quality upstream to the producer and enable downstream teams to build with confidence.\n· A: Encryption choice is a security decision, not a contract between producer and consumer teams — regardless of pipeline scope.\n· B: Conformity assessment is an AI-Act obligation, not a data-contract concept.\n· C: An invoice is a procurement document, not a structured agreement on schema / SLAs / ownership.",
       "explanations": {
-        "A": "Transport security is a separate concern handled at network / platform level — not the substance of a data contract.",
-        "B": "AI-Act conformity assessment applies to high-risk AI systems under Reg. 2024/1689 — a different regulatory instrument, not what a data contract is.",
-        "C": "Data contracts are technical / governance agreements, not commercial invoices. Payment may or may not exist separately.",
+        "A": "Encryption choice is a security decision, not a contract between producer and consumer teams — regardless of pipeline scope.",
+        "B": "Conformity assessment is an AI-Act obligation, not a data-contract concept.",
+        "C": "An invoice is a procurement document, not a structured agreement on schema / SLAs / ownership.",
         "D": "Correct. Data contracts (popularised by Chad Sanderson, Andrew Jones and the data-mesh community) are explicit, versioned agreements between a producing team ('source of truth') and its consumers. They specify (1) the schema (columns, types, nullability); (2) semantics (what each field means, business definitions); (3) SLAs on freshness, latency, completeness and accuracy; (4) ownership, on-call responsibility and change-management process. They shift responsibility for data quality upstream to the producer and enable downstream teams to build with confidence."
       }
     },
@@ -23972,7 +23972,7 @@
       "options": [
         {
           "letter": "A",
-          "text": "A synonym for DevOps applied exclusively to database administrators"
+          "text": "A synonym for DevOps applied exclusively to DBAs running schema migrations"
         },
         {
           "letter": "B",
@@ -23980,20 +23980,20 @@
         },
         {
           "letter": "C",
-          "text": "A cloud service offered only by AWS"
+          "text": "A commercial cloud service offered exclusively by AWS under that brand name that competes directly with other vendor-specific data offerings across the hyperscaler market"
         },
         {
           "letter": "D",
-          "text": "A replacement for data governance"
+          "text": "A modern replacement for traditional data governance and the data-stewardship role defined by DAMA in the current enterprise data-management body of knowledge (DMBOK)"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. DataOps (Lenny Liebmann, DataKitchen, et al.) applies the cultural and technical practices of DevOps, Agile and lean manufacturing to data-analytics workflows: version-controlled code and configuration, automated testing (data-quality tests, schema tests), CI/CD for pipeline deployments, data observability (lineage, freshness, volume, distribution monitors), fast feedback loops, and close collaboration between data engineers, analysts and data consumers. It tackles the 'it works on my laptop' and 'who broke the dashboard' problems that plague ungoverned analytics stacks.\n· A: DataOps is broader than DBA work. It spans ingestion, transformation, testing, deployment and monitoring across the whole pipeline and is cross-functional by design.\n· C: DataOps is a discipline and set of practices, independent of any cloud vendor.\n· D: DataOps complements governance — it does not replace it. Governance defines policies, standards and accountabilities; DataOps is the operational practice that delivers those policies day to day.",
+      "explanation": "Correct: B — Correct. DataOps (Lenny Liebmann, DataKitchen, et al.) applies the cultural and technical practices of DevOps, Agile and lean manufacturing to data-analytics workflows: version-controlled code and configuration, automated testing (data-quality tests, schema tests), CI/CD for pipeline deployments, data observability (lineage, freshness, volume, distribution monitors), fast feedback loops, and close collaboration between data engineers, analysts and data consumers. It tackles the 'it works on my laptop' and 'who broke the dashboard' problems that plague ungoverned analytics stacks.\n· A: DataOps is broader than DBA work — it covers the whole data-pipeline lifecycle and cross-team collaboration.\n· C: DataOps is a practice, not a proprietary service from a single vendor.\n· D: DataOps complements governance; it doesn't replace governance's accountability and policy-setting role.",
       "explanations": {
-        "A": "DataOps is broader than DBA work. It spans ingestion, transformation, testing, deployment and monitoring across the whole pipeline and is cross-functional by design.",
+        "A": "DataOps is broader than DBA work — it covers the whole data-pipeline lifecycle and cross-team collaboration.",
         "B": "Correct. DataOps (Lenny Liebmann, DataKitchen, et al.) applies the cultural and technical practices of DevOps, Agile and lean manufacturing to data-analytics workflows: version-controlled code and configuration, automated testing (data-quality tests, schema tests), CI/CD for pipeline deployments, data observability (lineage, freshness, volume, distribution monitors), fast feedback loops, and close collaboration between data engineers, analysts and data consumers. It tackles the 'it works on my laptop' and 'who broke the dashboard' problems that plague ungoverned analytics stacks.",
-        "C": "DataOps is a discipline and set of practices, independent of any cloud vendor.",
-        "D": "DataOps complements governance — it does not replace it. Governance defines policies, standards and accountabilities; DataOps is the operational practice that delivers those policies day to day."
+        "C": "DataOps is a practice, not a proprietary service from a single vendor.",
+        "D": "DataOps complements governance; it doesn't replace governance's accountability and policy-setting role."
       }
     },
     {
