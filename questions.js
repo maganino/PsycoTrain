@@ -17584,32 +17584,32 @@ window.QUESTIONS_DB = {
       "target_sec": 80,
       "ref": "Open Data Dir. + Impl. Reg. 2023/138",
       "figures": [],
-      "question": "Under the Open Data Directive (2019/1024), High-Value Datasets are defined in an Implementing Regulation with six thematic categories. Which of the following is NOT one of them?",
+      "question": "Under the Open Data Directive (2019/1024) and its Implementing Regulation 2023/138, High-Value Datasets span six thematic categories. Which of the following categories is NOT one of them?",
       "options": [
         {
           "letter": "A",
-          "text": "Geo"
+          "text": "Geospatial data — maps, cadastral parcels, addresses and administrative boundaries"
         },
         {
           "letter": "B",
-          "text": "Meteo"
+          "text": "Meteorological data — weather observations, forecasts, radar feeds and warnings"
         },
         {
           "letter": "C",
-          "text": "Health"
+          "text": "Electronic health data — patient records, prescriptions and clinical registries"
         },
         {
           "letter": "D",
-          "text": "Transit"
+          "text": "Mobility data — transport schedules, traffic flows and public-transport timetables"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial (abbreviated 'Geo') is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological (abbreviated 'Meteo') is one of the six categories — weather observations, forecasts, radar feeds, warnings.\n· D: Mobility (labelled 'Transit' here) is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
+      "explanation": "Correct: C — Correct. Electronic health data is NOT an HVD category; it is governed by the European Health Data Space (Reg. 2025/327), a separate sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.\n· A: Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.\n· B: Meteorological is one of the six categories — weather observations, forecasts, radar feeds and warnings.\n· D: Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables.",
       "explanations": {
-        "A": "Geospatial (abbreviated 'Geo') is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
-        "B": "Meteorological (abbreviated 'Meteo') is one of the six categories — weather observations, forecasts, radar feeds, warnings.",
-        "C": "Correct. Health is NOT an HVD category. Electronic health data is governed by the EHDS (Reg. 2025/327), the first operational European Data Space — a separate, sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
-        "D": "Mobility (labelled 'Transit' here) is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
+        "A": "Geospatial is one of the six HVD categories (Implementing Reg. 2023/138) — maps, cadastral data, addresses, administrative boundaries.",
+        "B": "Meteorological is one of the six categories — weather observations, forecasts, radar feeds and warnings.",
+        "C": "Correct. Electronic health data is NOT an HVD category; it is governed by the European Health Data Space (Reg. 2025/327), a separate sectoral regime. The six HVD categories are: geospatial · earth observation & environment · meteorological · statistics · companies & company ownership · mobility.",
+        "D": "Mobility is one of the six categories — transport schedules, traffic data, charging-station locations, public-transport timetables."
       }
     },
     {
@@ -19370,32 +19370,32 @@ window.QUESTIONS_DB = {
       "target_sec": 80,
       "ref": "Semantic interoperability",
       "figures": [],
-      "question": "Two EU public administrations exchange documents where 'customer' means different things in each context. Which EIF layer must they reconcile to achieve semantic interoperability?",
+      "question": "Two EU public administrations exchange documents where 'customer' means different things in each context. Which interoperability layer of the European Interoperability Framework (EIF) must they reconcile to achieve semantic interoperability?",
       "options": [
         {
           "letter": "A",
-          "text": "Legal"
+          "text": "The layer that aligns legal bases and transfer rules so the data exchange itself is lawful"
         },
         {
           "letter": "B",
-          "text": "Organisational"
+          "text": "The layer that harmonises processes and responsibilities between the two administrations"
         },
         {
           "letter": "C",
-          "text": "Semantic"
+          "text": "The layer that aligns vocabularies, code lists and definitions so shared terms mean the same"
         },
         {
           "letter": "D",
-          "text": "Technical"
+          "text": "The layer that covers the network protocols, data formats and APIs used to transmit the payload"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.\n· A: Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.\n· B: Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.\n· D: Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean.",
+      "explanation": "Correct: C — Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.\n· A: The legal layer addresses whether the exchange is lawful — compatible bases, transfer rules — but does not settle the meaning of 'customer'.\n· B: The organisational layer harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.\n· D: The technical layer covers protocols, formats and APIs — how bytes move, not what they mean.",
       "explanations": {
-        "A": "Legal alignment addresses whether the exchange is lawful — compatible bases, transfer rules. It doesn't settle the meaning of 'customer'.",
-        "B": "Organisational alignment harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.",
+        "A": "The legal layer addresses whether the exchange is lawful — compatible bases, transfer rules — but does not settle the meaning of 'customer'.",
+        "B": "The organisational layer harmonises processes and responsibilities. It helps with 'who does what' but not with 'what the word means'.",
         "C": "Correct. The Semantic layer of EIF covers meaning: aligning vocabularies, code lists and definitions so that 'customer' in system A refers to the same concept in system B. Tools include SKOS thesauri, Core Vocabularies (Core Person, Core Business, Core Location) and DCAT-AP.",
-        "D": "Technical alignment covers protocols, formats and APIs — how bytes move, not what they mean."
+        "D": "The technical layer covers protocols, formats and APIs — how bytes move, not what they mean."
       }
     },
     {
@@ -21118,32 +21118,32 @@ window.QUESTIONS_DB = {
       "target_sec": 80,
       "ref": "Descriptive analytics",
       "figures": [],
-      "question": "'Descriptive analytics' primarily answers the question:",
+      "question": "Which statement best characterises 'descriptive analytics' as a maturity level?",
       "options": [
         {
           "letter": "A",
-          "text": "What next and now?"
+          "text": "It recommends the optimal action to take next given the relevant business constraints"
         },
         {
           "letter": "B",
-          "text": "What if it goes?"
+          "text": "It forecasts what is likely to happen next given current and historical data"
         },
         {
           "letter": "C",
-          "text": "What happened?"
+          "text": "It summarises what has happened — dashboards, KPIs and reports on past performance"
         },
         {
           "letter": "D",
-          "text": "Why the fact?"
+          "text": "It explains why something happened by drilling into root causes after the fact"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.\n· A: 'What next and now?' is prescriptive analytics — recommending actions.\n· B: 'What if it goes?' points to predictive analytics — forecasting future outcomes.\n· D: 'Why the fact?' is diagnostic analytics — uncovering causes after the fact.",
+      "explanation": "Correct: C — Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It is the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.\n· A: Recommending the optimal action is prescriptive analytics — the top rung of the maturity ladder, not descriptive.\n· B: Forecasting what is likely to happen is predictive analytics — it looks forward, whereas descriptive looks back.\n· D: Explaining causes after the fact is diagnostic analytics — drill-downs, correlation, root-cause analysis — not descriptive.",
       "explanations": {
-        "A": "'What next and now?' is prescriptive analytics — recommending actions.",
-        "B": "'What if it goes?' points to predictive analytics — forecasting future outcomes.",
-        "C": "Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It's the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.",
-        "D": "'Why the fact?' is diagnostic analytics — uncovering causes after the fact."
+        "A": "Recommending the optimal action is prescriptive analytics — the top rung of the maturity ladder, not descriptive.",
+        "B": "Forecasting what is likely to happen is predictive analytics — it looks forward, whereas descriptive looks back.",
+        "C": "Correct. Descriptive analytics answers 'what happened?' — dashboards, standard reports, KPIs summarising past performance. It is the bottom rung of the analytics-maturity ladder: descriptive → diagnostic → predictive → prescriptive.",
+        "D": "Explaining causes after the fact is diagnostic analytics — drill-downs, correlation, root-cause analysis — not descriptive."
       }
     },
     {
@@ -21270,31 +21270,31 @@ window.QUESTIONS_DB = {
       "target_sec": 80,
       "ref": "Predictive vs prescriptive",
       "figures": [],
-      "question": "A transport agency uses a model to recommend the optimal route given traffic, weather and accident probability. This is an example of:",
+      "question": "A transport agency uses a model that, given current traffic, weather and accident probability, recommends the optimal route to the driver. Which analytics maturity level best describes this use case?",
       "options": [
         {
           "letter": "A",
-          "text": "Descriptive (analytics)"
+          "text": "Descriptive analytics — summarising past traffic volumes and accident counts"
         },
         {
           "letter": "B",
-          "text": "Diagnostic (analy.)"
+          "text": "Diagnostic analytics — explaining why congestion occurred after the fact"
         },
         {
           "letter": "C",
-          "text": "Predictive (analy.)"
+          "text": "Predictive analytics — forecasting traffic or accident probability, without recommending an action"
         },
         {
           "letter": "D",
-          "text": "Prescriptive analytics"
+          "text": "Prescriptive analytics — recommending the optimal action under current constraints"
         }
       ],
       "correct": "D",
-      "explanation": "Correct: D — Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints).\n· A: Descriptive analytics summarises what happened — past traffic volume, accident counts. It doesn't recommend a route.\n· B: Diagnostic analytics (shortened 'Diagnostic (analy.)') explains why something happened. It doesn't recommend the optimal route.\n· C: Predictive analytics (shortened 'Predictive (analy.)') forecasts what will happen. By itself it doesn't recommend an action.",
+      "explanation": "Correct: D — Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints).\n· A: Descriptive analytics summarises what happened — past traffic volume, accident counts. It does not recommend a route.\n· B: Diagnostic analytics explains why something happened after the fact. It does not recommend the optimal route to take now.\n· C: Predictive analytics forecasts what will happen (e.g. traffic levels, accident probability). By itself it does not recommend an action.",
       "explanations": {
-        "A": "Descriptive analytics summarises what happened — past traffic volume, accident counts. It doesn't recommend a route.",
-        "B": "Diagnostic analytics (shortened 'Diagnostic (analy.)') explains why something happened. It doesn't recommend the optimal route.",
-        "C": "Predictive analytics (shortened 'Predictive (analy.)') forecasts what will happen. By itself it doesn't recommend an action.",
+        "A": "Descriptive analytics summarises what happened — past traffic volume, accident counts. It does not recommend a route.",
+        "B": "Diagnostic analytics explains why something happened after the fact. It does not recommend the optimal route to take now.",
+        "C": "Predictive analytics forecasts what will happen (e.g. traffic levels, accident probability). By itself it does not recommend an action.",
         "D": "Correct. Prescriptive analytics uses optimisation, simulation or decision-support techniques on top of predictive outputs to recommend the best action under constraints. Route-optimisation systems typically combine predictive models (traffic, weather) with an optimisation layer (shortest-time path under constraints)."
       }
     },
@@ -21384,32 +21384,32 @@ window.QUESTIONS_DB = {
       "target_sec": 80,
       "ref": "Chart choice",
       "figures": [],
-      "question": "You want to visualise how a single KPI varies across a hierarchy of categories (e.g. country → region → city) and show relative size. The most appropriate chart is:",
+      "question": "You want to visualise how a single KPI varies across a hierarchy of categories (country → region → city) and show each level's relative size. Which chart is most appropriate?",
       "options": [
         {
           "letter": "A",
-          "text": "Pie x 30o"
+          "text": "A pie chart with one slice per city — highlights share of total across many categories"
         },
         {
           "letter": "B",
-          "text": "Line x 3s"
+          "text": "A stacked line chart over time — highlights how each region's trend evolves"
         },
         {
           "letter": "C",
-          "text": "A treemap"
+          "text": "A treemap — nested rectangles sized by the KPI and grouped by the category hierarchy"
         },
         {
           "letter": "D",
-          "text": "3D bars×"
+          "text": "A 3D rotating bar chart — uses depth and perspective to add visual interest"
         }
       ],
       "correct": "C",
-      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: A pie with 30 slices is unreadable — pies work only for a few categories and don't show hierarchy.\n· B: A stacked line chart shows trends over time, not hierarchical share. Different visual intent.\n· D: 3D rotating bars distort perception — a notorious antipattern in BI design.",
+      "explanation": "Correct: C — Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.\n· A: A pie with many slices becomes unreadable — pies work only for a handful of categories and cannot express hierarchy.\n· B: A stacked line chart shows trends over time, not hierarchical share at a moment in time. Different visual intent.\n· D: 3D rotating bars distort perception — a notorious antipattern in BI design that sacrifices accuracy for visual effect.",
       "explanations": {
-        "A": "A pie with 30 slices is unreadable — pies work only for a few categories and don't show hierarchy.",
-        "B": "A stacked line chart shows trends over time, not hierarchical share. Different visual intent.",
+        "A": "A pie with many slices becomes unreadable — pies work only for a handful of categories and cannot express hierarchy.",
+        "B": "A stacked line chart shows trends over time, not hierarchical share at a moment in time. Different visual intent.",
         "C": "Correct. Treemaps display hierarchical data using nested rectangles sized by a metric — excellent for 'which countries / regions / cities contribute most' at a glance. They were designed precisely to visualise hierarchies with relative magnitudes on limited screen space.",
-        "D": "3D rotating bars distort perception — a notorious antipattern in BI design."
+        "D": "3D rotating bars distort perception — a notorious antipattern in BI design that sacrifices accuracy for visual effect."
       }
     },
     {
@@ -22148,28 +22148,28 @@ window.QUESTIONS_DB = {
       "options": [
         {
           "letter": "A",
-          "text": "Availab."
+          "text": "Availability — whether the data can be retrieved when needed by authorised users"
         },
         {
           "letter": "B",
-          "text": "Accuracy"
+          "text": "Accuracy — how closely recorded values match the real-world values they represent"
         },
         {
           "letter": "C",
-          "text": "Portab."
+          "text": "Portability — whether data can be moved between systems, platforms and formats"
         },
         {
           "letter": "D",
-          "text": "Recov."
+          "text": "Recoverability — whether data can be restored after a system failure or corruption"
         }
       ],
       "correct": "B",
-      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability ('Availab.') is a system-dependent quality, not inherent to the data values themselves.\n· C: Portability ('Portab.') is system-dependent — depends on formats and surrounding systems.\n· D: Recoverability ('Recov.') is a system-dependent quality under ISO/IEC 25012.",
+      "explanation": "Correct: B — Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.\n· A: Availability is a system-dependent quality under ISO/IEC 25012 — it depends on the systems hosting the data, not on the data values themselves.\n· C: Portability is system-dependent — it depends on formats and the surrounding systems, not on the values themselves.\n· D: Recoverability is a system-dependent quality under ISO/IEC 25012 — a property of the storage/backup system.",
       "explanations": {
-        "A": "Availability ('Availab.') is a system-dependent quality, not inherent to the data values themselves.",
+        "A": "Availability is a system-dependent quality under ISO/IEC 25012 — it depends on the systems hosting the data, not on the data values themselves.",
         "B": "Correct. ISO/IEC 25012 splits 15 characteristics into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (the other ten). Accuracy — the degree to which data correctly represents the real-world value — is an inherent property of the data regardless of the system storing it.",
-        "C": "Portability ('Portab.') is system-dependent — depends on formats and surrounding systems.",
-        "D": "Recoverability ('Recov.') is a system-dependent quality under ISO/IEC 25012."
+        "C": "Portability is system-dependent — it depends on formats and the surrounding systems, not on the values themselves.",
+        "D": "Recoverability is a system-dependent quality under ISO/IEC 25012 — a property of the storage/backup system."
       }
     },
     {
