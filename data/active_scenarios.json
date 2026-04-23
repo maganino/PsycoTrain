@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "purpose": "Allow-list of SJT BA scenarios that should be injected into questions.js / questions.json. Scenarios not listed here stay in their source JSON (questions_ba_samples.json / data/questions_ba_batch.json) but are NOT shipped to the UI. Re-enable a scenario by adding its set_id below.",
+    "rubric": "Scenarios listed here are the first curated batch for user practice. The remaining hidden scenarios will be regraded against §9 of SJT_BA_PROCESS.md in a second pass before activation.",
+    "coverage": "6 scenarios per stream, covering all 5 ONVA BA competencies (PC2, AG2, CO2, SO2, CL2) as primaries across CRIT and AGIL streams."
+  },
+  "active_set_ids": [
+    "sjt_crit_s01",
+    "sjt_crit_s05",
+    "sjt_crit_s10",
+    "sjt_crit_s15",
+    "sjt_crit_s20",
+    "sjt_crit_s25",
+    "sjt_agil_s01",
+    "sjt_agil_s05",
+    "sjt_agil_s10",
+    "sjt_agil_s15",
+    "sjt_agil_s20",
+    "sjt_agil_s25"
+  ]
+}

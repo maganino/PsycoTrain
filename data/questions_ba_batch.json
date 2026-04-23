@@ -497,9 +497,9 @@
         },
         {
           "letter_preshuffle": "B",
-          "expected_score": "-",
+          "expected_score": "--",
           "text": "« Je rédige la note favorable mais j'ajoute un paragraphe prudent sur les biais potentiels. Comme ça si quelqu'un soulève le sujet, on aura couvert. Pour le DPO on le saisira en phase d'implémentation, pas maintenant. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion fondée. Camille reconnaît le biais (positif) mais le traite comme une mention défensive plutôt que comme un élément de décision. Elle reporte le DPO à une phase où il sera trop tard pour influencer le design. L'analyse est faite mais ne sert pas la décision. Pourquoi - et non -- : elle ne dissimule pas frontalement, elle adoucit — ce qui est moins grave que le court-circuit assumé.",
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion fondée. Camille reconnaît le biais (positif) mais le traite comme une mention défensive plutôt que comme un élément de décision. Elle reporte le DPO à une phase où il sera trop tard pour influencer le design. L'analyse est faite mais ne sert pas la décision. Pourquoi -- et non - : étape 5 — reporter la saisine du DPO à la phase d'implémentation sur une règle dont elle sait qu'elle présente un biais indirect statistiquement sur-représenté (art. 22 RGPD) revient à couvrir une non-conformité probable ; le « paragraphe prudent défensif » est une traçabilité de façade, pas un élément de décision, et l'étape 5 verrouille à -- toute dissimulation d'un appui/problème. Alternativement (étape 2) : urgence haute + acceptation consciente du risque → descente de - à --.",
           "sub_behaviors": [
             "pc_recommend"
           ]
@@ -858,9 +858,9 @@
       "reactions": [
         {
           "letter_preshuffle": "A",
-          "expected_score": "-",
+          "expected_score": "--",
           "text": "« Je valide globalement, c'est cohérent avec l'instruction. Pour la FAQ du SPF qui dit le contraire, on verra au cas par cas quand ça remontera en ticket. Tu peux diffuser demain. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, détecter les contradictions. Romain voit l'alinéa 3 et la FAQ contradictoire, et ne les mentionne pas. Il renvoie la contradiction au traitement aval (tickets), ce qui signifie que 62 gestionnaires appliqueront pendant des mois une règle incomplète. Pourquoi - et non -- : il ne ment pas, il simplifie — l'absence de prise de parole ici est plus proche du non-dit que de la dissimulation consciente. Le niveau reste bas à cause de l'impact opérationnel direct.",
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — identifier les essentiels et sous-jacents, détecter les contradictions. Romain voit l'alinéa 3 et la FAQ contradictoire, et ne les mentionne pas. Il renvoie la contradiction au traitement aval (tickets), ce qui signifie que 62 gestionnaires appliqueront pendant des mois une règle incomplète. Pourquoi -- et non - : étape 5 — Romain détient deux éléments identifiés (alinéa 3 + FAQ SPF) qui impactent directement 62 gestionnaires dès la diffusion demain ; les taire revient à dissimuler un problème connu. Étape 2 : urgence haute (diffusion J+1, correction difficile a posteriori) + acceptation consciente du risque opérationnel → descente de - à --. La différence avec E est seulement la rationalisation : la conséquence factuelle est identique.",
           "sub_behaviors": [
             "pc_elements",
             "pc_credibility",
@@ -1227,9 +1227,9 @@
       "reactions": [
         {
           "letter_preshuffle": "A",
-          "expected_score": "-",
+          "expected_score": "--",
           "text": "« Oui Sébastien, 90 %, c'est au-dessus du seuil. Je te valide le « go ». Les 18 anomalies, on les traite en post-prod, comme d'habitude. Fabien est pointilleux, il trouvera toujours quelque chose. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — vérifier la crédibilité, identifier les essentiels. Adèle s'appuie sur un agrégat et délégitime le testeur le plus analytique au profit d'un consensus de surface. Elle ignore un défaut structurel (ordre des jours fériés) qu'elle a vu noir sur blanc. Pourquoi - et non -- : il y a un biais de confiance dans le dashboard, pas une dissimulation active — et les 18 seront « traitées » en post-prod, ce qui n'est pas un refus pur.",
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — vérifier la crédibilité, identifier les essentiels. Adèle s'appuie sur un agrégat et délégitime le testeur le plus analytique au profit d'un consensus de surface. Elle ignore un défaut structurel (ordre des jours fériés) qu'elle a vu noir sur blanc. Pourquoi -- et non - : étape 5 — valider un « go » de mise en production alors qu'Adèle a vu que 6 anomalies rendent le calcul juridiquement non-conforme (la loi ne dépend pas de l'ordre des jours fériés) équivaut à couvrir une non-conformité. Étape 2 : urgence haute + acceptation consciente du risque légal → descente de - à --. La différence avec E est uniquement la forme de la dévalorisation du testeur Fabien (insinuation ici, attaque frontale dans E) ; la conséquence fonctionnelle est identique.",
           "sub_behaviors": [
             "pc_credibility",
             "pc_elements"
@@ -1400,9 +1400,9 @@
         },
         {
           "letter_preshuffle": "B",
-          "expected_score": "+/-",
+          "expected_score": "-",
           "text": "« Laisse tourner le temps que je regarde avec Karine à son retour. En attendant, je prépare une note de synthèse du flux pour qu'elle ait tous les éléments. On décidera la semaine prochaine. »",
-          "explanation": "Score attendu : +/-\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion. Naïma documente (positif) mais laisse tourner un flux RGPD problématique pendant une semaine supplémentaire et n'active pas le DPO disponible. Pourquoi +/- et non + : un + saisirait le DPO dès maintenant (c'est son rôle) et proposerait au moins une suspension conservatoire du flux le temps de qualifier.",
+          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — formuler une conclusion. Naïma documente (positif) mais laisse tourner un flux RGPD problématique pendant une semaine supplémentaire et n'active pas le DPO disponible. Pourquoi - et non +/- : étape 2 — le problème est une non-conformité RGPD active (flux quotidien, données identifiantes, pas de base légale). Attendre Karine une semaine de plus alors que le DPO est disponible équivaut à une acceptation passive du risque. L'alerte documentée ne résout pas, même partiellement, le problème fonctionnel (qui est juridique) : il faut soit suspendre, soit saisir le DPO. Une remontée interne sans action descend donc à -.",
           "sub_behaviors": [
             "pc_recommend"
           ]
@@ -1552,9 +1552,9 @@
         },
         {
           "letter_preshuffle": "B",
-          "expected_score": "-",
+          "expected_score": "--",
           "text": "« OK je peux extraire, mais fais bien attention côté com — en 2021 on avait eu des plaintes. Je te livre jeudi avec des initiales à la place des noms, à toi de voir pour le reste. »",
-          "explanation": "Score attendu : -\nCompétence testée : Penser de manière critique (PC2) — évaluer les conséquences. Océane alerte sur le précédent (positif) mais livre quand même, avec une pseudo-anonymisation (initiales) qui n'empêche pas la ré-identification. Elle se rassure par un geste technique insuffisant. Pourquoi - et non -- : il y a une forme de vigilance et un signalement à Perrine, ce qui la distingue de la livraison aveugle.",
+          "explanation": "Score attendu : --\nCompétence testée : Penser de manière critique (PC2) — évaluer les conséquences. Océane alerte sur le précédent (positif) mais livre quand même, avec une pseudo-anonymisation (initiales) qui n'empêche pas la ré-identification. Elle se rassure par un geste technique insuffisant. Pourquoi -- et non - : étape 5 — Océane livre des données dont elle sait qu'elles permettront la ré-identification (tête de top 500 = personnalités publiques), sur la base d'une anonymisation (initiales) qu'elle sait insuffisante, et ignore un précédent 2021 documenté. C'est une dissimulation par geste technique cosmétique d'un problème RGPD identifié. Étape 2 : urgence haute + acceptation consciente du risque réputationnel → - devient --. La différence avec A est purement de forme ; la conséquence fonctionnelle (livraison risquée non-conforme) est identique.",
           "sub_behaviors": [
             "pc_causes",
             "pc_credibility"
@@ -3167,9 +3167,9 @@
       "reactions": [
         {
           "letter_preshuffle": "A",
-          "expected_score": "--",
+          "expected_score": "-",
           "text": "« Honnêtement Valérie, on laisse tomber. Raphaël n'est pas chaud, les managers ne se plaignent pas, et ce n'est pas notre priorité. Le rapport du consultant, on le range. Dans 2-3 ans on verra si la pression monte. »",
-          "explanation": "Score attendu : --\nCompétence testée : Faire preuve d'agilité (AG2) — alerte aux évolutions du domaine, intégrer les nouvelles technologies, ajuster la méthode. Malika écarte une évolution de fond du domaine reporting, sans investigation, en s'appuyant sur l'absence de plainte. L'agilité N2 attend une veille active, pas un rejet confortable. Pourquoi -- et non +/- : elle propose de ranger le rapport, ce qui est une fermeture active.",
+          "explanation": "Score attendu : -\nCompétence testée : Faire preuve d'agilité (AG2) — alerte aux évolutions du domaine, intégrer les nouvelles technologies, ajuster la méthode. Malika écarte une évolution de fond du domaine reporting, sans investigation, en s'appuyant sur l'absence de plainte. L'agilité N2 attend une veille active, pas un rejet confortable. Pourquoi - et non -- : étape 2 — l'urgence est basse (aucune plainte utilisateur, aucune deadline, rapport d'audit informatif). Le refus de veille et le « rangement » du rapport sont une anti-agilité mais sans acceptation consciente d'un risque immédiat. Le -- est réservé aux refus à fort enjeu ou aux red-flags (étape 5). Ici, absence de red-flag + urgence basse → -.",
           "sub_behaviors": [
             "ag_vigilance",
             "ag_tech",

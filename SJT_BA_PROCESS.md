@@ -165,7 +165,88 @@ dans la fenêtre allouée à `r1`.
 
 ---
 
-## 9. Repères de révision pour le candidat
+## 9. Rubrique de notation d'une réaction
+
+La note d'une réaction sur l'échelle `-- / - / +/- / + / ++` est produite en
+cinq étapes, appliquées dans l'ordre.
+
+```
+  ┌────────────────────────────────────────────────────────────────┐
+  │ 1. RÉSOLUTION FONCTIONNELLE (axe principal)                    │
+  │    L'action résout-elle le problème / l'objectif énoncé ?      │
+  │        oui → +          non → −                                │
+  └────────────────────────────────────────────────────────────────┘
+                                │
+  ┌────────────────────────────────────────────────────────────────┐
+  │ 2. URGENCE / GRAVITÉ (amplificateur — asymétrique)             │
+  │    Urgence haute + action cohérente avec l'enjeu :             │
+  │        +  →  ++         −  →  −−                               │
+  │    Urgence basse : pas d'upgrade automatique. Les notes         │
+  │    restent à + / − par défaut. ++ / −− restent atteignables    │
+  │    mais exigent une justification indépendante (qualité        │
+  │    intrinsèque de l'action, ou red-flag de l'étape 5).         │
+  └────────────────────────────────────────────────────────────────┘
+                                │
+  ┌────────────────────────────────────────────────────────────────┐
+  │ 3. DISCRIMINATION entre les 4 (ou 5) réactions                 │
+  │    Classer les réactions sur l'axe fonctionnel — soit en       │
+  │    descendant depuis ++, soit en remontant depuis −−.          │
+  │    Deux réactions partagent la même note UNIQUEMENT si leur    │
+  │    effet fonctionnel+urgence est littéralement identique.      │
+  │    Plafond d'égalités : ≤ 25 % des scénarios générés.          │
+  └────────────────────────────────────────────────────────────────┘
+                                │
+  ┌────────────────────────────────────────────────────────────────┐
+  │ 4. VOLET RELATIONNEL (modificateur secondaire, ±1 cran)        │
+  │    Comment l'humain a-t-il été traité ?                        │
+  │        ++ ↔ +      +/− ↔ +      +/− ↔ −      − ↔ −−            │
+  │    Exception : si l'objectif principal du scénario EST          │
+  │    relationnel (focus CL2 ou CO2), ce volet devient l'étape 1. │
+  └────────────────────────────────────────────────────────────────┘
+                                │
+  ┌────────────────────────────────────────────────────────────────┐
+  │ 5. RED-FLAG — override direct à −−                             │
+  │    Manque de respect, ne rien faire, dissimuler un appui /     │
+  │    un problème, couvrir une non-conformité.                    │
+  │    → note verrouillée à −−, quelles que soient les étapes 1-4. │
+  └────────────────────────────────────────────────────────────────┘
+```
+
+**Exemples (depuis `sjt_crit_s01` / PC2 — dilemme haute urgence : livrable
+bloquant, 45 000 ayants droit, contradictions entre 3 sources) :**
+
+- *Réaction A (−−)* : choisit une source sans vérifier + minimise le conflit.
+  Étape 1 → −. Étape 2 (urgence haute + acceptation consciente du risque) →
+  −−. Pas de red-flag, mais l'étape 2 a suffi.
+- *Réaction B (−)* : vérifie une seule source (Access), isole juridique et
+  Paul. Étape 1 → − (il y a un effort factuel, mais il confond exécution et
+  norme). Étape 2 : urgence haute mais action non-triviale → pas de descente
+  à −−. Reste à −.
+- *Réaction C (+/−)* : détecte la contradiction, remonte l'alerte, mais ne
+  tranche pas. Étape 1 ambiguë → entre + et − → +/−. Pas d'upgrade à −
+  puisque la remontée d'alerte résout *partiellement* le problème de
+  visibilité.
+- *Réaction D (++)* : triangule, chiffre l'impact, mobilise Paul + Juridique,
+  replanifie. Étape 1 → +. Étape 2 (urgence haute + action à la hauteur) →
+  ++. Étape 4 (relationnel : co-saisine respectueuse) : déjà à ++, pas de
+  montée.
+- *Réaction E (+)* : triangule et documente, propose un arbitrage mais sans
+  chiffrage ni co-saisine complète. Étape 1 → +. Étape 2 : urgence haute
+  mais action incomplète vs. D → pas d'upgrade. Reste à +.
+
+**Notes d'application pour la génération :**
+
+- Le champ `explanation` d'une réaction doit expliciter l'étape qui fait
+  basculer la note (par ex. « pourquoi −− et non − : acceptation consciente
+  du risque — étape 2 »), pas seulement citer la compétence.
+- Pour un scénario à focus relationnel (`competence_primary` ∈ {CO2, CL2}),
+  inverser les étapes 1 et 4.
+- Le plafond d'égalités (étape 3, ≤ 25 % des scénarios) se vérifie en QA
+  (`ingest/qa_sjt_ba.py`) à l'échelle du lot actif.
+
+---
+
+## 10. Repères de révision pour le candidat
 
 - **Critical Thinking N2** : "j'ai croisé plusieurs sources, j'ai vérifié la fiabilité,
   j'ai isolé la cause, j'ai formulé une recommandation, j'ai anticipé les conséquences".
