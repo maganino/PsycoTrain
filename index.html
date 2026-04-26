@@ -427,6 +427,19 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .tl-context strong{color:var(--text)}
 .tl-exam{font-size:11.5px;line-height:1.55;color:var(--accent);background:var(--accentbg);padding:6px 10px;border-radius:8px;margin-top:8px;border-left:3px solid var(--accent)}
 .tl-exam strong{color:var(--accent)}
+.tl-deep{margin-top:10px;border-top:1px dashed var(--border);padding-top:8px}
+.dd-toggle{display:inline-block;font-size:11.5px;font-weight:700;color:var(--accent);cursor:pointer;user-select:none;padding:4px 0;letter-spacing:.2px}
+.dd-toggle:hover{text-decoration:underline}
+.dd-toggle .dd-chev{display:inline-block;transition:transform .15s;margin-right:4px}
+.tl-deep.open .dd-toggle .dd-chev{transform:rotate(90deg)}
+.dd-body{display:none;margin-top:6px;padding:8px 10px;background:var(--bg);border:1px solid var(--border);border-radius:8px}
+.tl-deep.open .dd-body{display:block}
+.dd-term{padding:7px 0;border-bottom:1px dotted var(--border)}
+.dd-term:last-child{border-bottom:0}
+.dd-name{font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px}
+.dd-def{font-size:11.5px;color:var(--sub);line-height:1.5}
+.dd-ex{font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px;font-style:italic}
+.dd-ex strong{color:var(--text);font-style:normal}
 .tl-viz{margin:10px 0 8px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 6px}
 .tl-svg{display:block;width:100%;height:auto;max-width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 .tl-vcap{font-size:10.5px;color:var(--muted);text-align:center;margin-top:2px;font-style:italic}
@@ -3669,6 +3682,138 @@ function renderEpsoExplorer(root){
                 <dt>Emerging trends</dt><dd><strong>DataOps</strong> (CI/CD for data pipelines) · <strong>data mesh</strong> (domain-oriented decentralised ownership) · <strong>data fabric</strong> (metadata-driven auto-integration layer) · <strong>data contracts</strong> (producer/consumer schema agreements) · <strong>vector databases</strong> (AI-era storage of embeddings) · <strong>synthetic data</strong> · <strong>federated learning</strong> (train without centralising data).</dd>
               </dl>
               <div class="tl-exam"><strong>Exam signal:</strong> roles are the most-tested slice. Owner (accountable) vs Steward (executes) vs Custodian (IT) vs CDO (strategy) vs DPO (privacy).</div>
+              <div class="tl-deep">
+                <div class="dd-toggle"><span class="dd-chev">▸</span>Deep dive — definitions &amp; examples</div>
+                <div class="dd-body">
+
+                  <div class="dd-term">
+                    <div class="dd-name">Data lifecycle (6 stages)</div>
+                    <div class="dd-def">The cradle-to-grave path of any data item: Create → Store → Use → Share → Archive → Destroy. Governance, security and quality are not stages — they apply at every stage.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A worker's leave declaration is <em>created</em> in the portal, <em>stored</em> in the operational DB, <em>used</em> for pécule calculation, <em>shared</em> with the employer's payroll, <em>archived</em> after 7 years per Belgian tax law, then <em>destroyed</em>.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Master data</div>
+                    <div class="dd-def">The core business "nouns" shared across multiple systems: Customer, Product, Employee, Account. Slow-changing, high-value, must have one golden record.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> "Worker" at ONVA — same person referenced by the portal, payroll engine, and reporting cube. Master Data Management (MDM) is the discipline of keeping that record consistent.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Reference data</div>
+                    <div class="dd-def">Controlled code lists used to classify or qualify other data — country codes, currency codes, status enums. Smaller and more stable than master data.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> ISO 3166 country codes ("BE", "FR", "DE") used in worker addresses. NACE-BEL economic activity codes used to classify employers.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Metadata</div>
+                    <div class="dd-def">Data about data. Three flavours: <strong>technical</strong> (schema, types, sizes), <strong>business</strong> (definitions, owners, glossary), <strong>operational</strong> (load times, row counts, freshness).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The column <code>worker.birth_date</code> has metadata: type=DATE (technical), "Date of birth used for retirement-age check" (business), last refreshed 2026-04-25 02:14 UTC (operational).</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Lineage</div>
+                    <div class="dd-def">The end-to-end map of where a piece of data came from and every transformation it went through. Critical for trust, debugging, and GDPR audit.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A pécule figure on a worker's annual statement traces back to: source declaration → cleansing job → prorata calculation → aggregation → report. Tools: OpenLineage, Marquez, Microsoft Purview.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Stewardship</div>
+                    <div class="dd-def">The day-to-day practice of caring for data in a defined domain — fixing quality issues, maintaining definitions, approving access, enforcing standards.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The "Worker Domain" steward at ONVA owns the definition of "active worker", reviews quality dashboards weekly, and signs off on schema changes.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Owner (Data Owner)</div>
+                    <div class="dd-def"><strong>Accountable</strong> for a data domain — decides who can access it, what it's used for, retention rules. Usually a senior business person, not IT.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The Director of Operations at ONVA is the Owner of "Worker Data" — she signs the access request when a new analyst joins, even though IT actually grants the SQL grant.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Steward (Data Steward)</div>
+                    <div class="dd-def"><strong>Executes</strong> the rules the Owner sets. Maintains quality, glossary, lineage, and resolves day-to-day data issues. Operational, hands-on.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A business analyst at ONVA who flags 1 200 worker records with malformed national IDs, fixes the validation rule, and re-runs the load.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Custodian (Data Custodian)</div>
+                    <div class="dd-def">The <strong>IT-operational</strong> role — runs the database, applies backups, manages the storage, executes the access grants. Cares about uptime and security plumbing, not the data's meaning.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A DBA who restores the worker DB from snapshot after an outage, or applies the AES-256 encryption-at-rest setting on the production tablespace.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">CDO (Chief Data Officer)</div>
+                    <div class="dd-def">Executive responsible for data <strong>strategy</strong>: enterprise data vision, governance program, ROI on data initiatives. Reports to CEO/COO. Different from CIO (IT systems) and CTO (technology).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A CDO who launches the ONVA "Single Worker View" initiative to consolidate 4 legacy Access systems into one master record, with a 3-year roadmap and a board-level KPI.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">DPO (Data Protection Officer)</div>
+                    <div class="dd-def">GDPR-mandated role (Art 37) for public bodies and high-risk processors. Independent advisor on privacy compliance, contact point for the DPA. <strong>Advises</strong> — not accountable for the processing itself.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> ONVA's DPO reviews the DPIA for a new fraud-detection AI before go-live, and is the named contact for any data-subject access request the agency receives.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">ISO 8000</div>
+                    <div class="dd-def">International standard family for <strong>data quality</strong>, with a strong focus on master-data quality and exchange. Defines syntactic, semantic and pragmatic quality dimensions.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A supplier exchanging master-data records with ONVA can claim "ISO 8000-110 compliant" — meaning the records carry their own quality metadata (provenance, validation status).</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">ISO/IEC 25012</div>
+                    <div class="dd-def">Defines <strong>15 data-quality characteristics</strong> grouped into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (availability, portability, recoverability) plus shared (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> When ONVA scores its worker DB, "accuracy" = % records matching the source national register; "currentness" = max age of an address change before reload.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Data silo</div>
+                    <div class="dd-def">A dataset locked inside one team or system, invisible to the rest of the organisation. Causes duplicated work, inconsistent definitions, missed insight.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The legacy Access database in the inspection unit has employer-visit records nobody else can query — silo. Fix: expose via an API or load into the central warehouse.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">DataOps</div>
+                    <div class="dd-def">CI/CD principles applied to data pipelines: version-controlled SQL/transforms, automated testing, monitored deployments, fast iteration. Inspired by DevOps.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A pécule transformation script lives in Git, gets tested on a sample dataset by GitHub Actions on each PR, and only deploys to production after green checks.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Data mesh</div>
+                    <div class="dd-def"><strong>Decentralised</strong> ownership of data: each business domain (Worker, Employer, Inspection) owns its data products end-to-end, instead of a central data team being a bottleneck. Four principles: domain ownership · data-as-a-product · self-serve platform · federated governance.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Instead of one central ONVA warehouse team, the Inspection domain publishes a "visits" data product with its own SLA, schema and steward — other domains consume it like a product.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Data fabric</div>
+                    <div class="dd-def">A <strong>metadata-driven integration layer</strong> that uses active metadata + AI to auto-discover, connect, and orchestrate data across silos. Less about org structure (data mesh) than about technology glue.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Microsoft Purview / Talend Data Fabric scans every database in the agency, catalogues columns, infers PII, and lets analysts query across them with one semantic layer.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Data contract</div>
+                    <div class="dd-def">A formal, version-controlled agreement between a data <strong>producer</strong> and its <strong>consumers</strong>: schema, freshness, quality SLAs, breaking-change policy.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The portal team commits: "the <code>worker_event</code> stream emits a JSON record within 5 s of an event, with these 12 required fields; we'll give 30 days notice before any breaking change." Consumers code against that contract.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Vector database</div>
+                    <div class="dd-def">A database optimised for storing and querying <strong>embeddings</strong> — high-dimensional numeric vectors representing text, images or other unstructured content. Powers semantic search and RAG (Retrieval-Augmented Generation).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Pinecone, Weaviate, pgvector (PostgreSQL extension), Azure AI Search. ONVA could embed every internal circular and let staff ask "what's the rule for prorata in case of part-time work?" in natural language.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Synthetic data</div>
+                    <div class="dd-def">Artificially generated data that mimics the statistical properties of a real dataset without containing real records. Useful for testing, training models, and sharing without GDPR exposure.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> ONVA generates 100 000 fake worker records (using a GAN trained on real distributions) so a contractor can develop the new portal without ever touching real personal data. Allowed by AI Act, not mandated.</div>
+                  </div>
+
+                  <div class="dd-term">
+                    <div class="dd-name">Federated learning</div>
+                    <div class="dd-def">Train a machine-learning model across multiple data holders <strong>without centralising the data</strong>: each holder trains locally, only model updates (gradients) are aggregated. Strong privacy posture.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Several EU social-security agencies jointly train a fraud-detection model — each agency's worker data stays in its country, only the model weights cross borders.</div>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
 
@@ -4020,6 +4165,7 @@ function renderEpsoExplorer(root){
   root.querySelectorAll('.tl-card, .duty-card').forEach(c => {
     c.addEventListener('click', (e) => {
       if (e.target.closest('a')) return; // let inline links work
+      if (e.target.closest('.dd-toggle')) return; // deep-dive toggle handled separately
       const wasOpen = c.classList.contains('open');
       const scope = c.closest('.tab-body') || root;
       scope.querySelectorAll('.tl-card.open, .duty-card.open').forEach(x => {
@@ -4030,6 +4176,15 @@ function renderEpsoExplorer(root){
       if (!wasOpen) setTimeout(() => c.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
     });
     if (c.hasAttribute('data-open')) c.classList.add('open');
+  });
+
+  // Deep-dive toggles — independent of card accordion
+  root.querySelectorAll('.dd-toggle').forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const deep = t.closest('.tl-deep');
+      if (deep) deep.classList.toggle('open');
+    });
   });
 }
 
