@@ -3689,127 +3689,127 @@ function renderEpsoExplorer(root){
                   <div class="dd-term">
                     <div class="dd-name">Data lifecycle (6 stages)</div>
                     <div class="dd-def">The cradle-to-grave path of any data item: Create → Store → Use → Share → Archive → Destroy. Governance, security and quality are not stages — they apply at every stage.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A worker's leave declaration is <em>created</em> in the portal, <em>stored</em> in the operational DB, <em>used</em> for pécule calculation, <em>shared</em> with the employer's payroll, <em>archived</em> after 7 years per Belgian tax law, then <em>destroyed</em>.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A Horizon Europe grant application is <em>created</em> on the Funding &amp; Tenders Portal, <em>stored</em> in DG R&amp;I systems, <em>used</em> for evaluation and payment, <em>shared</em> with the project consortium, <em>archived</em> per Financial Regulation retention rules, then <em>destroyed</em> at the end of the retention window.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Master data</div>
                     <div class="dd-def">The core business "nouns" shared across multiple systems: Customer, Product, Employee, Account. Slow-changing, high-value, must have one golden record.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> "Worker" at ONVA — same person referenced by the portal, payroll engine, and reporting cube. Master Data Management (MDM) is the discipline of keeping that record consistent.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> "Beneficiary" at the Commission — the same legal entity (a university, an SME) is referenced across Horizon Europe, Erasmus+, and EAFRD. MDM keeps its PIC (Participant Identification Code) consistent across all DGs.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Reference data</div>
                     <div class="dd-def">Controlled code lists used to classify or qualify other data — country codes, currency codes, status enums. Smaller and more stable than master data.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> ISO 3166 country codes ("BE", "FR", "DE") used in worker addresses. NACE-BEL economic activity codes used to classify employers.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> ISO 3166 country codes ("BE", "FR", "DE") in beneficiary addresses. NUTS region codes (Eurostat) classifying cohesion-policy spending. CPV codes classifying procurement notices on TED.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Metadata</div>
                     <div class="dd-def">Data about data. Three flavours: <strong>technical</strong> (schema, types, sizes), <strong>business</strong> (definitions, owners, glossary), <strong>operational</strong> (load times, row counts, freshness).</div>
-                    <div class="dd-ex"><strong>Ex.</strong> The column <code>worker.birth_date</code> has metadata: type=DATE (technical), "Date of birth used for retirement-age check" (business), last refreshed 2026-04-25 02:14 UTC (operational).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The column <code>beneficiary.legal_status</code> has metadata: type=VARCHAR(20) (technical), "Public body / SME / Research org / NGO — drives funding rate" (business), last refreshed 2026-04-25 02:14 UTC (operational).</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Lineage</div>
-                    <div class="dd-def">The end-to-end map of where a piece of data came from and every transformation it went through. Critical for trust, debugging, and GDPR audit.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A pécule figure on a worker's annual statement traces back to: source declaration → cleansing job → prorata calculation → aggregation → report. Tools: OpenLineage, Marquez, Microsoft Purview.</div>
+                    <div class="dd-def">The end-to-end map of where a piece of data came from and every transformation it went through. Critical for trust, debugging, and Reg 2018/1725 audit.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A Eurostat unemployment figure traces back to: national statistical-office submission → SDMX validation → seasonal adjustment → aggregation → Eurobase publication. When a journalist queries it, every transformation can be shown. Tools: OpenLineage, Marquez, Microsoft Purview.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Stewardship</div>
                     <div class="dd-def">The day-to-day practice of caring for data in a defined domain — fixing quality issues, maintaining definitions, approving access, enforcing standards.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> The "Worker Domain" steward at ONVA owns the definition of "active worker", reviews quality dashboards weekly, and signs off on schema changes.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The "Beneficiary" domain steward in DG R&amp;I owns the definition of "active beneficiary", reviews quality dashboards on the participant register, and signs off on schema changes to the PIC.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Owner (Data Owner)</div>
                     <div class="dd-def"><strong>Accountable</strong> for a data domain — decides who can access it, what it's used for, retention rules. Usually a senior business person, not IT.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> The Director of Operations at ONVA is the Owner of "Worker Data" — she signs the access request when a new analyst joins, even though IT actually grants the SQL grant.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A Head of Unit in DG SANTE is the Owner of "Pharmacovigilance Data" — she signs the access request when EMA needs a new feed, even though DG DIGIT's DBAs actually grant the SQL access.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Steward (Data Steward)</div>
                     <div class="dd-def"><strong>Executes</strong> the rules the Owner sets. Maintains quality, glossary, lineage, and resolves day-to-day data issues. Operational, hands-on.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A business analyst at ONVA who flags 1 200 worker records with malformed national IDs, fixes the validation rule, and re-runs the load.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A data analyst in DG REGIO who flags 1 200 cohesion-fund payment records with malformed beneficiary IDs, fixes the validation rule with the IT team, and re-runs the load.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Custodian (Data Custodian)</div>
                     <div class="dd-def">The <strong>IT-operational</strong> role — runs the database, applies backups, manages the storage, executes the access grants. Cares about uptime and security plumbing, not the data's meaning.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A DBA who restores the worker DB from snapshot after an outage, or applies the AES-256 encryption-at-rest setting on the production tablespace.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A DBA at DG DIGIT who restores the CORDIS database from snapshot after an outage, or applies the AES-256 encryption-at-rest setting on a production tablespace.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">CDO (Chief Data Officer)</div>
                     <div class="dd-def">Executive responsible for data <strong>strategy</strong>: enterprise data vision, governance program, ROI on data initiatives. Reports to CEO/COO. Different from CIO (IT systems) and CTO (technology).</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A CDO who launches the ONVA "Single Worker View" initiative to consolidate 4 legacy Access systems into one master record, with a 3-year roadmap and a board-level KPI.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The Commission has a CDO since 2020, driving the "data-driven Commission" agenda — e.g. consolidating beneficiary data across DG R&amp;I, DG EAC and DG REGIO into one Single Beneficiary View, with a multi-year roadmap and College-level KPIs.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">DPO (Data Protection Officer)</div>
-                    <div class="dd-def">GDPR-mandated role (Art 37) for public bodies and high-risk processors. Independent advisor on privacy compliance, contact point for the DPA. <strong>Advises</strong> — not accountable for the processing itself.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> ONVA's DPO reviews the DPIA for a new fraud-detection AI before go-live, and is the named contact for any data-subject access request the agency receives.</div>
+                    <div class="dd-def">Mandated independent advisor on privacy compliance. For EU institutions, the legal basis is <strong>Reg 2018/1725 Art 43</strong> (not GDPR Art 37) — and the supervisor is the <strong>EDPS</strong>, not a national DPA.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> The Commission's DPO reviews the DPIA for a new OLAF fraud-detection AI before go-live, and is the named contact for any access request from a citizen.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">ISO 8000</div>
                     <div class="dd-def">International standard family for <strong>data quality</strong>, with a strong focus on master-data quality and exchange. Defines syntactic, semantic and pragmatic quality dimensions.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A supplier exchanging master-data records with ONVA can claim "ISO 8000-110 compliant" — meaning the records carry their own quality metadata (provenance, validation status).</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A Member State exchanging master-data records with the Commission (e.g. agricultural land parcels for CAP) can claim "ISO 8000-110 compliant" — each record carries its own quality metadata (provenance, validation status), so the receiving DG knows exactly what it's ingesting.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">ISO/IEC 25012</div>
                     <div class="dd-def">Defines <strong>15 data-quality characteristics</strong> grouped into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (availability, portability, recoverability) plus shared (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability).</div>
-                    <div class="dd-ex"><strong>Ex.</strong> When ONVA scores its worker DB, "accuracy" = % records matching the source national register; "currentness" = max age of an address change before reload.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> When DG R&amp;I scores its beneficiary register, "accuracy" = % of legal entities matching the national business register; "currentness" = max age of an address change before the PIC is flagged stale.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Data silo</div>
                     <div class="dd-def">A dataset locked inside one team or system, invisible to the rest of the organisation. Causes duplicated work, inconsistent definitions, missed insight.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> The legacy Access database in the inspection unit has employer-visit records nobody else can query — silo. Fix: expose via an API or load into the central warehouse.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A spreadsheet in one DG unit tracking infringement cases that no other DG can query — silo. Fix: expose via a Commission-internal API or load into the central data lake.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">DataOps</div>
                     <div class="dd-def">CI/CD principles applied to data pipelines: version-controlled SQL/transforms, automated testing, monitored deployments, fast iteration. Inspired by DevOps.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> A pécule transformation script lives in Git, gets tested on a sample dataset by GitHub Actions on each PR, and only deploys to production after green checks.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A CAP payment calculation lives in Git, gets tested on a sample dataset by the CI pipeline on each pull request, and only deploys to production after green checks.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Data mesh</div>
-                    <div class="dd-def"><strong>Decentralised</strong> ownership of data: each business domain (Worker, Employer, Inspection) owns its data products end-to-end, instead of a central data team being a bottleneck. Four principles: domain ownership · data-as-a-product · self-serve platform · federated governance.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> Instead of one central ONVA warehouse team, the Inspection domain publishes a "visits" data product with its own SLA, schema and steward — other domains consume it like a product.</div>
+                    <div class="dd-def"><strong>Decentralised</strong> ownership of data: each business domain owns its data products end-to-end, instead of a central data team being a bottleneck. Four principles: domain ownership · data-as-a-product · self-serve platform · federated governance.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Instead of one central Commission data team being a bottleneck, DG REGIO publishes a "cohesion-fund payments" data product with its own SLA, schema and steward — DG ECFIN consumes it like a product for macroeconomic analysis.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Data fabric</div>
                     <div class="dd-def">A <strong>metadata-driven integration layer</strong> that uses active metadata + AI to auto-discover, connect, and orchestrate data across silos. Less about org structure (data mesh) than about technology glue.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> Microsoft Purview / Talend Data Fabric scans every database in the agency, catalogues columns, infers PII, and lets analysts query across them with one semantic layer.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Microsoft Purview / Talend Data Fabric scans every database across the Commission, catalogues columns, auto-detects PII, and lets analysts query across them with one semantic layer — aligned with the Common European Data Spaces strategy.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Data contract</div>
                     <div class="dd-def">A formal, version-controlled agreement between a data <strong>producer</strong> and its <strong>consumers</strong>: schema, freshness, quality SLAs, breaking-change policy.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> The portal team commits: "the <code>worker_event</code> stream emits a JSON record within 5 s of an event, with these 12 required fields; we'll give 30 days notice before any breaking change." Consumers code against that contract.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Eurostat commits: "the GDP nowcast dataset is published by the 15th of every month, in this SDMX schema, with at most 0.2% revisions, and we'll give 60 days notice before any breaking change." Downstream DGs and external researchers code against that contract.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Vector database</div>
                     <div class="dd-def">A database optimised for storing and querying <strong>embeddings</strong> — high-dimensional numeric vectors representing text, images or other unstructured content. Powers semantic search and RAG (Retrieval-Augmented Generation).</div>
-                    <div class="dd-ex"><strong>Ex.</strong> Pinecone, Weaviate, pgvector (PostgreSQL extension), Azure AI Search. ONVA could embed every internal circular and let staff ask "what's the rule for prorata in case of part-time work?" in natural language.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Pinecone, Weaviate, pgvector (PostgreSQL extension), Azure AI Search. The Commission could embed the entire EUR-Lex corpus and let policy officers ask "which acts limit biometric ID in public spaces?" in natural language.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Synthetic data</div>
-                    <div class="dd-def">Artificially generated data that mimics the statistical properties of a real dataset without containing real records. Useful for testing, training models, and sharing without GDPR exposure.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> ONVA generates 100 000 fake worker records (using a GAN trained on real distributions) so a contractor can develop the new portal without ever touching real personal data. Allowed by AI Act, not mandated.</div>
+                    <div class="dd-def">Artificially generated data that mimics the statistical properties of a real dataset without containing real records. Useful for testing, training models, and sharing without privacy exposure.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> A DG generates 100 000 fake beneficiary records (model trained on real distributions) so an external contractor can develop a new portal without ever touching real personal data. Allowed by AI Act, not mandated.</div>
                   </div>
 
                   <div class="dd-term">
                     <div class="dd-name">Federated learning</div>
-                    <div class="dd-def">Train a machine-learning model across multiple data holders <strong>without centralising the data</strong>: each holder trains locally, only model updates (gradients) are aggregated. Strong privacy posture.</div>
-                    <div class="dd-ex"><strong>Ex.</strong> Several EU social-security agencies jointly train a fraud-detection model — each agency's worker data stays in its country, only the model weights cross borders.</div>
+                    <div class="dd-def">Train a machine-learning model across multiple data holders <strong>without centralising the data</strong>: each holder trains locally, only model updates (gradients) are aggregated. Strong privacy and data-sovereignty posture.</div>
+                    <div class="dd-ex"><strong>Ex.</strong> Several Member State tax administrations jointly train a VAT-fraud detection model — each MS's tax data stays in its own jurisdiction, only the model weights cross borders.</div>
                   </div>
 
                 </div>
