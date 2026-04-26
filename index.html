@@ -440,6 +440,10 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 .dd-def{font-size:11.5px;color:var(--sub);line-height:1.5}
 .dd-ex{font-size:11px;color:var(--muted);line-height:1.5;margin-top:3px;font-style:italic}
 .dd-ex strong{color:var(--text);font-style:normal}
+.term-link{color:var(--text);font-weight:700;border-bottom:1px dotted var(--accent);cursor:pointer;text-decoration:none}
+.term-link:hover{color:var(--accent);border-bottom-style:solid}
+.dd-term{transition:background-color .35s}
+.dd-term.flash{background-color:var(--accentbg);border-radius:6px;padding-left:6px;padding-right:6px}
 .tl-viz{margin:10px 0 8px;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 6px}
 .tl-svg{display:block;width:100%;height:auto;max-width:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 .tl-vcap{font-size:10.5px;color:var(--muted);text-align:center;margin-top:2px;font-style:italic}
@@ -3674,139 +3678,139 @@ function renderEpsoExplorer(root){
               <dl>
                 <dt>Definition</dt><dd>Systematic practice of collecting, organising, protecting and using data throughout its lifecycle.</dd>
                 <dt>Benefits</dt><dd>Better decisions · operational efficiency · reduced risk · regulatory compliance · innovation velocity · competitive edge.</dd>
-                <dt>Data lifecycle</dt><dd>Create → Store → Use → Share → Archive → Destroy. Governance and security touch every stage.</dd>
-                <dt>Key concepts</dt><dd>Master data (business nouns — Customer, Product) · reference data (code lists) · metadata (data about data) · lineage (origin + transformations) · stewardship.</dd>
-                <dt>QA &amp; cleansing</dt><dd>Profile → detect issues → correct → monitor continuously. Standards: ISO 8000 (MDM-oriented) · ISO/IEC 25012 (15 quality characteristics).</dd>
-                <dt>Roles</dt><dd>Owner (accountable) · Steward (executes, maintains quality) · Custodian (IT-operational) · CDO (strategy) · DPO (privacy compliance).</dd>
-                <dt>Challenges</dt><dd>Data silos · quality decay · compliance burden · skills gap · legacy integration.</dd>
-                <dt>Emerging trends</dt><dd><strong>DataOps</strong> (CI/CD for data pipelines) · <strong>data mesh</strong> (domain-oriented decentralised ownership) · <strong>data fabric</strong> (metadata-driven auto-integration layer) · <strong>data contracts</strong> (producer/consumer schema agreements) · <strong>vector databases</strong> (AI-era storage of embeddings) · <strong>synthetic data</strong> · <strong>federated learning</strong> (train without centralising data).</dd>
+                <dt>Data lifecycle</dt><dd><a class="term-link" data-target="dd-c1-lifecycle">Create → Store → Use → Share → Archive → Destroy</a>. Governance and security touch every stage.</dd>
+                <dt>Key concepts</dt><dd><a class="term-link" data-target="dd-c1-master-data">Master data</a> (business nouns — Customer, Product) · <a class="term-link" data-target="dd-c1-reference-data">reference data</a> (code lists) · <a class="term-link" data-target="dd-c1-metadata">metadata</a> (data about data) · <a class="term-link" data-target="dd-c1-lineage">lineage</a> (origin + transformations) · <a class="term-link" data-target="dd-c1-stewardship">stewardship</a>.</dd>
+                <dt>QA &amp; cleansing</dt><dd>Profile → detect issues → correct → monitor continuously. Standards: <a class="term-link" data-target="dd-c1-iso8000">ISO 8000</a> (MDM-oriented) · <a class="term-link" data-target="dd-c1-iso25012">ISO/IEC 25012</a> (15 quality characteristics).</dd>
+                <dt>Roles</dt><dd><a class="term-link" data-target="dd-c1-owner">Owner</a> (accountable) · <a class="term-link" data-target="dd-c1-steward">Steward</a> (executes, maintains quality) · <a class="term-link" data-target="dd-c1-custodian">Custodian</a> (IT-operational) · <a class="term-link" data-target="dd-c1-cdo">CDO</a> (strategy) · <a class="term-link" data-target="dd-c1-dpo">DPO</a> (privacy compliance).</dd>
+                <dt>Challenges</dt><dd><a class="term-link" data-target="dd-c1-silo">Data silos</a> · quality decay · compliance burden · skills gap · legacy integration.</dd>
+                <dt>Emerging trends</dt><dd><a class="term-link" data-target="dd-c1-dataops">DataOps</a> (CI/CD for data pipelines) · <a class="term-link" data-target="dd-c1-mesh">data mesh</a> (domain-oriented decentralised ownership) · <a class="term-link" data-target="dd-c1-fabric">data fabric</a> (metadata-driven auto-integration layer) · <a class="term-link" data-target="dd-c1-contract">data contracts</a> (producer/consumer schema agreements) · <a class="term-link" data-target="dd-c1-vector-db">vector databases</a> (AI-era storage of embeddings) · <a class="term-link" data-target="dd-c1-synthetic">synthetic data</a> · <a class="term-link" data-target="dd-c1-federated">federated learning</a> (train without centralising data).</dd>
               </dl>
               <div class="tl-exam"><strong>Exam signal:</strong> roles are the most-tested slice. Owner (accountable) vs Steward (executes) vs Custodian (IT) vs CDO (strategy) vs DPO (privacy).</div>
               <div class="tl-deep">
                 <div class="dd-toggle"><span class="dd-chev">▸</span>Deep dive — definitions &amp; examples</div>
                 <div class="dd-body">
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-lifecycle">
                     <div class="dd-name">Data lifecycle (6 stages)</div>
                     <div class="dd-def">The cradle-to-grave path of any data item: Create → Store → Use → Share → Archive → Destroy. Governance, security and quality are not stages — they apply at every stage.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A Horizon Europe grant application is <em>created</em> on the Funding &amp; Tenders Portal, <em>stored</em> in DG R&amp;I systems, <em>used</em> for evaluation and payment, <em>shared</em> with the project consortium, <em>archived</em> per Financial Regulation retention rules, then <em>destroyed</em> at the end of the retention window.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-master-data">
                     <div class="dd-name">Master data</div>
                     <div class="dd-def">The core business "nouns" shared across multiple systems: Customer, Product, Employee, Account. Slow-changing, high-value, must have one golden record.</div>
                     <div class="dd-ex"><strong>Ex.</strong> "Beneficiary" at the Commission — the same legal entity (a university, an SME) is referenced across Horizon Europe, Erasmus+, and EAFRD. MDM keeps its PIC (Participant Identification Code) consistent across all DGs.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-reference-data">
                     <div class="dd-name">Reference data</div>
                     <div class="dd-def">Controlled code lists used to classify or qualify other data — country codes, currency codes, status enums. Smaller and more stable than master data.</div>
                     <div class="dd-ex"><strong>Ex.</strong> ISO 3166 country codes ("BE", "FR", "DE") in beneficiary addresses. NUTS region codes (Eurostat) classifying cohesion-policy spending. CPV codes classifying procurement notices on TED.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-metadata">
                     <div class="dd-name">Metadata</div>
                     <div class="dd-def">Data about data. Three flavours: <strong>technical</strong> (schema, types, sizes), <strong>business</strong> (definitions, owners, glossary), <strong>operational</strong> (load times, row counts, freshness).</div>
                     <div class="dd-ex"><strong>Ex.</strong> The column <code>beneficiary.legal_status</code> has metadata: type=VARCHAR(20) (technical), "Public body / SME / Research org / NGO — drives funding rate" (business), last refreshed 2026-04-25 02:14 UTC (operational).</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-lineage">
                     <div class="dd-name">Lineage</div>
                     <div class="dd-def">The end-to-end map of where a piece of data came from and every transformation it went through. Critical for trust, debugging, and Reg 2018/1725 audit.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A Eurostat unemployment figure traces back to: national statistical-office submission → SDMX validation → seasonal adjustment → aggregation → Eurobase publication. When a journalist queries it, every transformation can be shown. Tools: OpenLineage, Marquez, Microsoft Purview.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-stewardship">
                     <div class="dd-name">Stewardship</div>
                     <div class="dd-def">The day-to-day practice of caring for data in a defined domain — fixing quality issues, maintaining definitions, approving access, enforcing standards.</div>
                     <div class="dd-ex"><strong>Ex.</strong> The "Beneficiary" domain steward in DG R&amp;I owns the definition of "active beneficiary", reviews quality dashboards on the participant register, and signs off on schema changes to the PIC.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-owner">
                     <div class="dd-name">Owner (Data Owner)</div>
                     <div class="dd-def"><strong>Accountable</strong> for a data domain — decides who can access it, what it's used for, retention rules. Usually a senior business person, not IT.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A Head of Unit in DG SANTE is the Owner of "Pharmacovigilance Data" — she signs the access request when EMA needs a new feed, even though DG DIGIT's DBAs actually grant the SQL access.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-steward">
                     <div class="dd-name">Steward (Data Steward)</div>
                     <div class="dd-def"><strong>Executes</strong> the rules the Owner sets. Maintains quality, glossary, lineage, and resolves day-to-day data issues. Operational, hands-on.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A data analyst in DG REGIO who flags 1 200 cohesion-fund payment records with malformed beneficiary IDs, fixes the validation rule with the IT team, and re-runs the load.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-custodian">
                     <div class="dd-name">Custodian (Data Custodian)</div>
                     <div class="dd-def">The <strong>IT-operational</strong> role — runs the database, applies backups, manages the storage, executes the access grants. Cares about uptime and security plumbing, not the data's meaning.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A DBA at DG DIGIT who restores the CORDIS database from snapshot after an outage, or applies the AES-256 encryption-at-rest setting on a production tablespace.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-cdo">
                     <div class="dd-name">CDO (Chief Data Officer)</div>
                     <div class="dd-def">Executive responsible for data <strong>strategy</strong>: enterprise data vision, governance program, ROI on data initiatives. Reports to CEO/COO. Different from CIO (IT systems) and CTO (technology).</div>
                     <div class="dd-ex"><strong>Ex.</strong> The Commission has a CDO since 2020, driving the "data-driven Commission" agenda — e.g. consolidating beneficiary data across DG R&amp;I, DG EAC and DG REGIO into one Single Beneficiary View, with a multi-year roadmap and College-level KPIs.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-dpo">
                     <div class="dd-name">DPO (Data Protection Officer)</div>
                     <div class="dd-def">Mandated independent advisor on privacy compliance. For EU institutions, the legal basis is <strong>Reg 2018/1725 Art 43</strong> (not GDPR Art 37) — and the supervisor is the <strong>EDPS</strong>, not a national DPA.</div>
                     <div class="dd-ex"><strong>Ex.</strong> The Commission's DPO reviews the DPIA for a new OLAF fraud-detection AI before go-live, and is the named contact for any access request from a citizen.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-iso8000">
                     <div class="dd-name">ISO 8000</div>
                     <div class="dd-def">International standard family for <strong>data quality</strong>, with a strong focus on master-data quality and exchange. Defines syntactic, semantic and pragmatic quality dimensions.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A Member State exchanging master-data records with the Commission (e.g. agricultural land parcels for CAP) can claim "ISO 8000-110 compliant" — each record carries its own quality metadata (provenance, validation status), so the receiving DG knows exactly what it's ingesting.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-iso25012">
                     <div class="dd-name">ISO/IEC 25012</div>
                     <div class="dd-def">Defines <strong>15 data-quality characteristics</strong> grouped into inherent (accuracy, completeness, consistency, credibility, currentness) and system-dependent (availability, portability, recoverability) plus shared (accessibility, compliance, confidentiality, efficiency, precision, traceability, understandability).</div>
                     <div class="dd-ex"><strong>Ex.</strong> When DG R&amp;I scores its beneficiary register, "accuracy" = % of legal entities matching the national business register; "currentness" = max age of an address change before the PIC is flagged stale.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-silo">
                     <div class="dd-name">Data silo</div>
                     <div class="dd-def">A dataset locked inside one team or system, invisible to the rest of the organisation. Causes duplicated work, inconsistent definitions, missed insight.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A spreadsheet in one DG unit tracking infringement cases that no other DG can query — silo. Fix: expose via a Commission-internal API or load into the central data lake.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-dataops">
                     <div class="dd-name">DataOps</div>
                     <div class="dd-def">CI/CD principles applied to data pipelines: version-controlled SQL/transforms, automated testing, monitored deployments, fast iteration. Inspired by DevOps.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A CAP payment calculation lives in Git, gets tested on a sample dataset by the CI pipeline on each pull request, and only deploys to production after green checks.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-mesh">
                     <div class="dd-name">Data mesh</div>
                     <div class="dd-def"><strong>Decentralised</strong> ownership of data: each business domain owns its data products end-to-end, instead of a central data team being a bottleneck. Four principles: domain ownership · data-as-a-product · self-serve platform · federated governance.</div>
                     <div class="dd-ex"><strong>Ex.</strong> Instead of one central Commission data team being a bottleneck, DG REGIO publishes a "cohesion-fund payments" data product with its own SLA, schema and steward — DG ECFIN consumes it like a product for macroeconomic analysis.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-fabric">
                     <div class="dd-name">Data fabric</div>
                     <div class="dd-def">A <strong>metadata-driven integration layer</strong> that uses active metadata + AI to auto-discover, connect, and orchestrate data across silos. Less about org structure (data mesh) than about technology glue.</div>
                     <div class="dd-ex"><strong>Ex.</strong> Microsoft Purview / Talend Data Fabric scans every database across the Commission, catalogues columns, auto-detects PII, and lets analysts query across them with one semantic layer — aligned with the Common European Data Spaces strategy.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-contract">
                     <div class="dd-name">Data contract</div>
                     <div class="dd-def">A formal, version-controlled agreement between a data <strong>producer</strong> and its <strong>consumers</strong>: schema, freshness, quality SLAs, breaking-change policy.</div>
                     <div class="dd-ex"><strong>Ex.</strong> Eurostat commits: "the GDP nowcast dataset is published by the 15th of every month, in this SDMX schema, with at most 0.2% revisions, and we'll give 60 days notice before any breaking change." Downstream DGs and external researchers code against that contract.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-vector-db">
                     <div class="dd-name">Vector database</div>
                     <div class="dd-def">A database optimised for storing and querying <strong>embeddings</strong> — high-dimensional numeric vectors representing text, images or other unstructured content. Powers semantic search and RAG (Retrieval-Augmented Generation).</div>
                     <div class="dd-ex"><strong>Ex.</strong> Pinecone, Weaviate, pgvector (PostgreSQL extension), Azure AI Search. The Commission could embed the entire EUR-Lex corpus and let policy officers ask "which acts limit biometric ID in public spaces?" in natural language.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-synthetic">
                     <div class="dd-name">Synthetic data</div>
                     <div class="dd-def">Artificially generated data that mimics the statistical properties of a real dataset without containing real records. Useful for testing, training models, and sharing without privacy exposure.</div>
                     <div class="dd-ex"><strong>Ex.</strong> A DG generates 100 000 fake beneficiary records (model trained on real distributions) so an external contractor can develop a new portal without ever touching real personal data. Allowed by AI Act, not mandated.</div>
                   </div>
 
-                  <div class="dd-term">
+                  <div class="dd-term" id="dd-c1-federated">
                     <div class="dd-name">Federated learning</div>
                     <div class="dd-def">Train a machine-learning model across multiple data holders <strong>without centralising the data</strong>: each holder trains locally, only model updates (gradients) are aggregated. Strong privacy and data-sovereignty posture.</div>
                     <div class="dd-ex"><strong>Ex.</strong> Several Member State tax administrations jointly train a VAT-fraud detection model — each MS's tax data stays in its own jurisdiction, only the model weights cross borders.</div>
@@ -4184,6 +4188,25 @@ function renderEpsoExplorer(root){
       e.stopPropagation();
       const deep = t.closest('.tl-deep');
       if (deep) deep.classList.toggle('open');
+    });
+  });
+
+  // Term-link clicks — jump to deep-dive entry, expand if needed, flash
+  root.querySelectorAll('.term-link').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const targetId = a.dataset.target;
+      if (!targetId) return;
+      const target = root.querySelector('#' + targetId);
+      if (!target) return;
+      const deep = target.closest('.tl-deep');
+      if (deep && !deep.classList.contains('open')) deep.classList.add('open');
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('flash');
+        setTimeout(() => target.classList.remove('flash'), 1600);
+      }, 50);
     });
   });
 }
