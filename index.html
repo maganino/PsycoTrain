@@ -637,9 +637,10 @@ function loadStats(){ return lsGet(LS_STATS) || {}; }
 // cleanup doesn't trigger a save prompt.
 let STATS_DIRTY = false;
 function saveStats(s){ STATS_DIRTY = true; return lsSet(LS_STATS, s); }
-// Default target times per question type (in seconds)
+// Default target times per question type (in seconds).
+// For SJT this is the *scenario* duration (situation + all reactions + submit).
 const DEFAULT_TARGET_SEC = {
-  'sjt': 55,                // ~75 min / ~80 reactions
+  'sjt': 240,               // 4 min per scenario — slider can override (e.g. 300 = 5 min)
   'numerical_bosa': 105,    // ~50 min / ~28 questions
   'numerical': 120,         // existing default
 };
@@ -655,7 +656,8 @@ function loadSettings(){
   return {
     playlist,
     weakOnly: s.weakOnly ?? false,
-    targetSec: s.targetSec ?? 120,   // only affects non-SJT; SJT uses per-question target_sec
+    // null means "not user-set" — callers resolve to the active playlist's type default.
+    targetSec: typeof s.targetSec === 'number' ? s.targetSec : null,
   };
 }
 function saveSettings(s){ return lsSet(LS_SETTINGS, s); }
@@ -1191,9 +1193,14 @@ function render(){
 // ----- Home -----
 function renderHome(root){
   const settings = loadSettings();
-  // Friend role is pinned to a single playlist. Force the in-memory value so
-  // the rest of the function picks it up; do NOT persist (would clobber owner's choice).
-  if(isFriend()) settings.playlist = FRIEND_PLAYLIST_KEY;
+  // Friend role is pinned to a single playlist. Friend uses her own browser
+  // (separate localStorage from owner's), so persisting is safe and lets her
+  // drag the time slider with the change surviving page reloads.
+  if(isFriend() && settings.playlist !== FRIEND_PLAYLIST_KEY){
+    settings.playlist = FRIEND_PLAYLIST_KEY;
+    settings.targetSec = defaultTargetForType('sjt');
+    saveSettings(settings);
+  }
   const stats = loadStats();
 
   // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5).
@@ -1248,6 +1255,11 @@ function renderHome(root){
   const isMcq = !!(activePlaylist && activePlaylist.type === 'mcq');
   const isSjt = !!(activePlaylist && activePlaylist.type === 'sjt');
   const hasGuide = isSjt || isMcq;
+  // Resolve null targetSec → type default (so the slider always shows a number,
+  // and a fresh friend lands on 240s instead of the legacy 120 fallback).
+  if(settings.targetSec == null){
+    settings.targetSec = activePlaylist ? defaultTargetForType(activePlaylist.type) : 120;
+  }
 
   // The dashboard row adapts to the active playlist.
   let dash;
@@ -1416,7 +1428,9 @@ function renderHome(root){
   const resetTitle = activePlaylist
     ? `Reset stats for “${activePlaylist.label}”`
     : 'Reset all practice stats';
-  const timeTitle = 'Target time per question · affects numerical only; SJT uses 120/40s, MCQ uses 80s';
+  const timeTitle = isSjt
+    ? 'Scenario duration (situation + reactions + submit). Default 240s · drag to e.g. 300s for 5 min.'
+    : 'Target time per question · numerical/MCQ use this value; default depends on playlist';
 
   // The dashboard always shows attempted/total to give a sense of coverage.
   const attemptedStr = `${dash.attempted}/${dash.total}`;
@@ -1512,11 +1526,11 @@ function renderHome(root){
       PLAYLIST_SCROLL_X = c.parentElement.scrollLeft;
       const newKey = c.dataset.value === '__null__' ? null : c.dataset.value;
       settings.playlist = newKey;
-      // Adjust default target time when switching: non-SJT playlists benefit
-      // from a type-tailored default; SJT ignores it (per-question override).
+      // Switching playlist seeds the time slider with that type's default
+      // (numerical / SJT scenario / MCQ). The user can then drag to override.
       if(newKey){
         const p = playlistByKey(newKey);
-        if(p && p.type !== 'sjt') settings.targetSec = defaultTargetForType(p.type);
+        if(p) settings.targetSec = defaultTargetForType(p.type);
       } else {
         settings.targetSec = 120;
       }
@@ -4730,11 +4744,12 @@ function startSjtScenario(siblings){
   const first = siblings[0];
   // Mark all siblings as picked so pickNext won't re-offer them until the scenario is done
   for(const s of siblings){ SESSION.picked.push(s.id); }
-  // Allow a scenario to carry its own duration via the first reaction's target_sec
-  // (interpreted as the scenario total, not per-reaction, in the new flow).
+  // Per-question scenario_sec wins; otherwise fall back to the user's slider
+  // (settings.targetSec) so home-screen "Time" tweaks the SJT scenario clock.
+  // SJT_SCENARIO_DURATION_SEC remains the safety net if neither is set.
   const durationSec = typeof first.scenario_sec === 'number'
     ? first.scenario_sec
-    : SJT_SCENARIO_DURATION_SEC;
+    : (loadSettings().targetSec || SJT_SCENARIO_DURATION_SEC);
   const now = Date.now();
   SESSION.sjt_scenario = {
     set_id: first.set_id,
