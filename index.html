@@ -504,47 +504,103 @@ html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;bac
 <div class="toast" id="toast"></div>
 <input type="file" id="stats-file-input" accept=".json,application/json" style="display:none">
 
-<!-- Load the question database via a script tag (works from file:// — fetch() does not). -->
-<script src="./questions.js"></script>
+<!-- Encrypted question bundles. Each is a small JS file assigning base64'd
+     {salt, iv, ct, iter} to window.__BUNDLES.<role>. The lock screen derives
+     a key from the typed password and decrypts the matching bundle in the
+     browser via WebCrypto. Plaintext questions.js is no longer shipped. -->
+<script src="./questions.owner.enc.js"></script>
+<script src="./questions.friend.enc.js"></script>
 <script>
 'use strict';
 
 // ============================================================================
-// Lock screen
+// Lock screen — password decrypts the matching bundle (no plaintext shipped)
 // ============================================================================
-const PASS_HASH = '50127e8f738d125f5be2b9db573261a21625065beca4a349747114230460719a';
-const LS_UNLOCK = 'pt_unlocked';
+// Each bundle is loaded as a separate <script> tag and lives at
+// window.__BUNDLES.<role> = { salt, iv, ct, iter } (all base64). Trying every
+// available bundle with the typed password is what determines the role: a
+// successful AES-GCM decrypt = right password = that role. Wrong passwords
+// fail with an auth error, which we surface as "Wrong password".
+const LS_UNLOCK = 'pt_unlocked';   // value: 'owner' | 'friend' (the unlocked role)
+const SS_PW     = 'pt_pw';         // session-only: cached password for tab reload
+const FRIEND_PLAYLIST_KEY = 'BOSA_SJT_BA_CRIT';
 
-async function sha256(str) {
-  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+function currentRole() {
+  const v = sessionStorage.getItem(LS_UNLOCK);
+  return (v === 'friend' || v === 'owner') ? v : null;
+}
+function isFriend() { return currentRole() === 'friend'; }
+
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
 }
 
-function unlockApp() {
+async function decryptBundle(bundle, password) {
+  const salt = b64ToBytes(bundle.salt);
+  const iv   = b64ToBytes(bundle.iv);
+  const ct   = b64ToBytes(bundle.ct);
+  const baseKey = await crypto.subtle.importKey(
+    'raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']
+  );
+  const key = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt, iterations: bundle.iter, hash: 'SHA-256' },
+    baseKey,
+    { name: 'AES-GCM', length: 256 },
+    false, ['decrypt']
+  );
+  const ptBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+  return JSON.parse(new TextDecoder().decode(ptBuf));
+}
+
+function showLockError(msg) {
+  document.getElementById('lock-err').textContent = msg;
+  const box = document.getElementById('lockbox');
+  box.classList.remove('shake'); void box.offsetWidth; box.classList.add('shake');
+}
+
+async function unlockApp(role, db) {
+  window.QUESTIONS_DB = db;
+  sessionStorage.setItem(LS_UNLOCK, role);
   document.getElementById('lockscreen').classList.add('hidden');
   document.getElementById('root').style.display = '';
-  sessionStorage.setItem(LS_UNLOCK, '1');
+  await init();
+}
+
+// Try every available bundle against the password; first one that decrypts wins.
+async function attemptUnlock(password) {
+  const bundles = window.__BUNDLES || {};
+  // Try friend before owner so a friend password isn't shadowed by an
+  // (incredibly unlikely) collision; matters zero in practice.
+  for (const role of ['friend', 'owner']) {
+    if (!bundles[role]) continue;
+    try {
+      const db = await decryptBundle(bundles[role], password);
+      sessionStorage.setItem(SS_PW, password);
+      await unlockApp(role, db);
+      return true;
+    } catch (_) { /* wrong key for this bundle — try next */ }
+  }
+  return false;
 }
 
 async function tryUnlock() {
   const pw = document.getElementById('lock-pw').value;
   if (!pw) return;
-  const hash = await sha256(pw);
-  if (hash === PASS_HASH) {
-    unlockApp();
-  } else {
-    document.getElementById('lock-err').textContent = 'Wrong password';
-    const box = document.getElementById('lockbox');
-    box.classList.remove('shake');
-    void box.offsetWidth;
-    box.classList.add('shake');
-  }
+  const ok = await attemptUnlock(pw);
+  if (!ok) showLockError('Wrong password');
 }
 
-// Auto-unlock if already authenticated this session
-if (sessionStorage.getItem(LS_UNLOCK) === '1') {
-  unlockApp();
-}
+// Auto-unlock on tab reload if password was cached this session.
+(async () => {
+  const cached = sessionStorage.getItem(SS_PW);
+  if (cached) {
+    const ok = await attemptUnlock(cached);
+    if (!ok) sessionStorage.removeItem(SS_PW);
+  }
+})();
 
 document.getElementById('lock-btn').addEventListener('click', tryUnlock);
 document.getElementById('lock-pw').addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
@@ -1135,6 +1191,9 @@ function render(){
 // ----- Home -----
 function renderHome(root){
   const settings = loadSettings();
+  // Friend role is pinned to a single playlist. Force the in-memory value so
+  // the rest of the function picks it up; do NOT persist (would clobber owner's choice).
+  if(isFriend()) settings.playlist = FRIEND_PLAYLIST_KEY;
   const stats = loadStats();
 
   // Aggregate stats — global (uses fractional scores: SJT neighbor = 0.5).
@@ -1343,8 +1402,12 @@ function renderHome(root){
     </div>`;
   }
 
-  const session = loadSession();
-  const visiblePlaylists = PLAYLISTS.filter(p => sourceCounts[p.key]);
+  // Friend role gets no resume button: a stale session from the owner could be
+  // for any playlist, and a single-playlist user can just re-start.
+  const session = isFriend() ? null : loadSession();
+  const visiblePlaylists = PLAYLISTS
+    .filter(p => sourceCounts[p.key])
+    .filter(p => !isFriend() || p.key === FRIEND_PLAYLIST_KEY);
 
   // Guide button title differs for MCQ (Content Explorer vs 'how to ace').
   const guideTitle = isMcq
@@ -5408,16 +5471,16 @@ function renderResults(root){
 // Init
 // ============================================================================
 async function init(){
-  // questions.js sets window.QUESTIONS_DB synchronously via the <script> tag
+  // QUESTIONS_DB is set by unlockApp() after a successful bundle decrypt.
   if(!window.QUESTIONS_DB){
     document.getElementById('root').innerHTML = `
       <div class="empty">
-        <h2>Could not load questions.js</h2>
+        <h2>No question bundle loaded</h2>
         <p style="font-size:13px;margin-top:8px">
-          Make sure <code>index.html</code>, <code>questions.js</code> and the
-          <code>images/</code> folder are in the same directory.<br><br>
-          To regenerate questions.js after editing data, run
-          <code>python3 ingest/build_questions_json.py</code>.
+          Make sure the encrypted bundles are next to <code>index.html</code>:
+          <code>questions.owner.enc.js</code> and <code>questions.friend.enc.js</code>.<br><br>
+          To regenerate after editing the source, run<br>
+          <code>PT_OWNER_PASS=… PT_FRIEND_PASS=… node tools/build-bundles.js</code>.
         </p>
       </div>`;
     return;
@@ -5474,7 +5537,7 @@ async function init(){
 
   render();
 }
-init();
+// init() is invoked from unlockApp() once a bundle has been decrypted.
 </script>
 </body>
 </html>

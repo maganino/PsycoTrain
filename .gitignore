@@ -3,9 +3,12 @@ __pycache__/
 .DS_Store
 
 # Proprietary content — keep local only
+# Plaintext question DBs and source data: only encrypted .enc.js bundles ship.
 ingest/
-data/*.pdf
-data/*.docx
+data/
+questions.js
+questions.json
+questions_ba_samples.json
 
 # User-generated stats — never commit personal progress
 app/stats.json
